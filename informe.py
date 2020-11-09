@@ -13,7 +13,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0,parentdir) 
 
 Par1 = sys.argv[1]
-#Par2 = sys.argv[2]   probando aun mas
+#Par2 = sys.argv[2]  
 endstring = Par1
 beginstring = "silo pull release nuevosiglo-homecast7582b0-secure-sdk-"
 allstring =beginstring + endstring
