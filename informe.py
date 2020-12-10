@@ -51,53 +51,59 @@ listofrepos = [
    ]
 
 for r in listofrepos:
-   orden = carpetafinal+r
-   os.chdir(orden)
-   repo = hgapi.Repo('.')
-   num = repo.hg_rev()
-   i = 1
-   wpath = './informe1.json'
-   mode = 'a' if os.path.exists(wpath) else 'w'
-   #mode = 'w'
-   listofrevisions = []
-   while  i <= 10:
-    temp = repo.revision(num)
-    del temp.parents
-    del temp.tags
-    del temp.author
-    del temp.date
-    txt = temp.desc
-    x = re.search("^[[]",txt)
-    if x :
-      start = "["
-      end = "]"
-      y = txt[txt.find(start)+len(start):txt.find(end)]
-    else :
-         y = "empty"
-    setattr(temp,'ticket',y)
-    json_data = json.dumps(temp.__dict__,indent=4,sort_keys=True,separators=(',', ': ')) 
-    listofrevisions.append(json_data)
-    num = num - 1
-    i += 1
-   with open(wpath,mode) as f:
-    f.writelines("[")
-    for l in listofrevisions:
-      if l != listofrevisions[-1]:
-       f.writelines("%s," % l)
-      else:
-         f.writelines("%s" % l)  
-         f.writelines("]")
+ orden = carpetafinal+r
+ os.chdir(orden)
+ repo = hgapi.Repo('.')
+ num = repo.hg_rev()
+ i = 1
+ wpath = './informe1.json'
+ #wpath = '../../../../informe.json'
+ mode = 'a' if os.path.exists(wpath) else 'w'
+ #mode = 'w'
+ listofrevisions = []
+ while  i <= 10:
+  temp = repo.revision(num)
+  del temp.parents
+  del temp.tags
+  del temp.author
+  del temp.date
+  txt = temp.desc
+  x = re.search("^[[]",txt)
+  if x :
+   start = "["
+   end = "]"
+   y = txt[txt.find(start)+len(start):txt.find(end)]
+  else :
+   y = "empty"
+   setattr(temp,'ticket',y)
+  json_data = json.dumps(temp.__dict__,indent=4,sort_keys=True,separators=(',', ': ')) 
+  listofrevisions.append(json_data)
+  num = num - 1
+  i += 1
+  with open(wpath,mode) as f:
+   f.writelines("[")
+   for l in listofrevisions:
+    if l != listofrevisions[-1]:
+     f.writelines("%s," % l)
+    else:
+     f.writelines("%s" % l)  
+     f.writelines("]")
    
   
     
        
     
     
-    mothertable = """<html>
-<head></head>
-<body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio neque est voluptate maiores commodi? Fuga optio, beatae harum numquam fugiat omnis tempore officia voluptas molestias, ipsum, quam accusamus iure eum.</p> 
- </body>
-</html>""" 
+ #  mothertable = """<html>
+#<head></head>
+#<body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio neque est voluptate maiores commodi? Fuga optio, beatae harum numquam fugiat omnis tempore officia voluptas molestias, ipsum, quam accusamus iure eum.</p> 
+# </body>
+#</html>""" 
   
-    with open ('/home/jonathan/workspace/script_python/VersionesCambio2.html','wb') as aa:
-      aa.write(mothertable)
+with open ('../../../../VersionesCambio.html','wb') as aa:
+ aa.write()
+  
+  
+  
+  
+   #os.system("rm -rf ../../../../nuevosiglo-homecast7582b0-secure-sdk-" + endstring)
