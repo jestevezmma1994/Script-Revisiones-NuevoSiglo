@@ -1,0 +1,2 @@
+Any platform specific upgrade procedure files should be placed in this directory. Each should have a configurable Makefile with targets clean and install. The install target should install the described in template platform specific file in path defined in variable PLATFORM_SPEC_PATH and any other executable in directory defined in variable DEST_DIR.
+Probably you will have a number of platform with the same or almost the same platform specific procedures. Be smart to avoid code dublication, join them in one platform dir and exclude differencies in separate file.

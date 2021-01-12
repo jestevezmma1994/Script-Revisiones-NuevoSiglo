@@ -1,0 +1,73 @@
+#!/bin/sh
+
+NETLINK_RUNTIME_DIR=/var/run/netlink
+NETLINK_LISTENERS_DIR=/var/run/netlink/listeners
+PIDFILE=$NETLINK_RUNTIME_DIR/netlink_daemon.pidfile
+DEVICEUSER=1002
+DEVICEGROUP=1002
+
+[ -f /etc/profile ] && . /etc/profile
+
+
+check_netlink_daemon_status() {
+    STATUS=0
+    if [ -e "$PIDFILE" ]; then
+        PID=$(cat $PIDFILE)
+        if [ -n "$PID" ]; then
+            STATUS=1
+        fi
+    fi
+}
+
+start_netlink_daemon() {
+    check_netlink_daemon_status
+    if [ $STATUS -ne 0 ]; then
+        exit 0
+    fi
+
+    mkdir -p $NETLINK_RUNTIME_DIR
+    mkdir -p $NETLINK_LISTENERS_DIR
+    mkdir -p /tmp/devices/serial /tmp/devices/mobile
+
+    chown $DEVICEUSER:$DEVICEGROUP /tmp/devices /tmp/devices/serial /tmp/devices/mobile $NETLINK_RUNTIME_DIR $NETLINK_LISTENERS_DIR
+
+    chmod -R 750 /tmp/devices/serial /tmp/devices/mobile $NETLINK_RUNTIME_DIR
+    chmod -R 770 $NETLINK_LISTENERS_DIR
+
+    /etc/netlink/run_netlink_daemon &
+}
+
+stop_netlink_daemon() {
+    check_netlink_daemon_status
+    if [ $STATUS -eq 0 ]; then
+        exit 0
+    fi
+
+    kill -KILL $(cat $NETLINK_RUNTIME_DIR/netlink_daemon.pidfile)
+    kill -KILL $(cat $NETLINK_RUNTIME_DIR/QBNetlinkDaemon.pidfile)
+    rm $NETLINK_RUNTIME_DIR/netlink_daemon.pidfile
+    rm $NETLINK_RUNTIME_DIR/QBNetlinkDaemon.pidfile
+}
+
+get_netlink_daemon_status() {
+    check_netlink_daemon_status
+    exit $STATUS
+}
+
+case "$1" in
+    start)
+        start_netlink_daemon
+    ;;
+    stop)
+        stop_netlink_daemon
+    ;;
+    restart)
+        $0 stop
+        $0 start
+    ;;
+    status)
+        get_netlink_daemon_status
+    ;;
+    *)
+esac
+

@@ -1,0 +1,117 @@
+#!/bin/sh
+
+umask 0007
+
+ACTION=$1
+shift 1
+
+REMOVE_CORE="yes"
+
+if [ $# -gt 0 ]; then
+  if [ "$1" == "keep_core" ]; then
+    REMOVE_CORE="no"
+    shift 1
+  fi
+fi
+
+
+log()
+{
+  echo QBConax2: $@ | logger
+  echo QBConax2: $@ 1>&2
+}
+
+MAJOR=
+
+check_module_inserted()
+{
+  NAME=$1
+  MOD_LINE=`lsmod | grep "^$NAME "`
+  RES=$?
+}
+
+find_major()
+{
+  DEV_LINE=`cat /proc/devices | grep QBConax2`
+  if [ $? -ne 0 ]; then
+    MAJOR=""
+  else
+    MAJOR=${DEV_LINE% *}
+  fi
+}
+
+
+rm -f /tmp/QBConax2
+
+check_module_inserted  QBConax2_ioctl
+if [ $RES -eq 0 ]; then
+  log QBConax2_ioctl is inserted - removing
+  rmmod QBConax2_ioctl
+  if [ $? -ne 0 ]; then
+    log "Could not unload module 'QBConax2_ioctl.ko'"
+    exit 1
+  fi
+fi
+
+
+CORE_INSERTED="no"
+check_module_inserted  QBConax2
+if [ $RES -eq 0 ]; then
+  log QBConax2 is inserted
+  CORE_INSERTED="yes"
+else
+  log QBConax2 is not inserted
+fi
+
+if [ "$REMOVE_CORE" == "yes" ]; then
+
+  if [ "$CORE_INSERTED" == "yes" ]; then
+    log QBConax2 is inserted - removing
+    rmmod QBConax2
+    if [ $? -ne 0 ]; then
+      log "Could not unload module 'QBConax2.ko'"
+      exit 1
+    fi
+    CORE_INSERTED="no"
+  fi
+
+fi
+
+
+if [ "$ACTION" != "start" ]; then
+  log stopped
+  exit 0
+fi
+
+
+if [ "$CORE_INSERTED" == "no" ]; then
+  log QBConax2 is not inserted - inserting
+  modprobe QBConax2
+  if [ $? -ne 0 ]; then
+    log "Could not load 'QBConax2.ko'"
+    exit 1
+  fi
+fi
+
+log inserting QBConax2_ioctl
+modprobe QBConax2_ioctl
+if [ $? -ne 0 ]; then
+  log "Could not load 'QBConax2_ioctl.ko'"
+  exit 1
+fi
+
+find_major;
+if [ -z "$MAJOR" ]; then
+  log "Could not find 'QBConax2' in /proc/devices"
+  exit 1
+fi
+
+mknod /tmp/QBConax2  c  $MAJOR  1
+if [ $? -ne 0 ]; then
+  log "Could not create node '/tmp/QBConax2'"
+  exit 1
+fi
+chown 0:1000 /tmp/QBConax2
+
+log restarted
+exit 0

@@ -1,0 +1,199 @@
+#!/bin/sh
+if [ -x /usr/bin/logger ]; then
+        LOGGER="/usr/bin/logger -s -p user.notice -t init_network"
+else
+        LOGGER=echo
+fi
+
+LOCK=/var/lock/network
+#do not do this for nfs boot
+MPT=`mount | grep '/ type nfs'`;
+if [ "$MPT" != "" ]; then
+	touch $LOCK
+    exit 0;
+fi
+#now we are sure the root is not NFS
+
+MEDIUM=$(svconf_ctl MEDIUM)
+NETWORK_TYPE=$(svconf_ctl NETWORK_TYPE)
+NETWORK_STATIC_IP=$(svconf_ctl NETWORK_STATIC_IP)
+NETWORK_STATIC_GATEWAY=$(svconf_ctl NETWORK_STATIC_GATEWAY)
+NETWORK_STATIC_MASK=$(svconf_ctl NETWORK_STATIC_MASK)
+NETWORK_STATIC_DNS=$(svconf_ctl NETWORK_STATIC_DNS)
+NETWORK_STATIC_DNS2=$(svconf_ctl NETWORK_STATIC_DNS2)
+NETWORK_STATIC_DOMAIN=$(svconf_ctl NETWORK_STATIC_DOMAIN)
+NETWORK_MTU=$(svconf_ctl NETWORK_MTU)
+WIFI_TYPE=$(svconf_ctl WIFI_TYPE)
+USE_CABLE_MODEM=$(svconf_ctl -n USE_CABLE_MODEM)
+
+#definition of primary network interface
+if [ "$MEDIUM" = "WIFI" ]; then
+    PRIMARY_IFACE=ra0
+else
+    if [ "$USE_CABLE_MODEM" = "YES" ]; then
+        PRIMARY_IFACE=S_INSTALL_CM_IFACE
+    else
+        PRIMARY_IFACE=eth0
+    fi
+fi
+#define secondary interface
+if [ -e /sys/class/net/ra0 ]; then
+    SCNDARY_IFACE=ra0
+fi
+
+#define current interface
+if [ "`cat /sys/class/net/$PRIMARY_IFACE/carrier`" != "0" ]; then
+    #current is primary if primary is not 0 (OFF)
+    IFACE=$PRIMARY_IFACE
+else
+    #otherwise if secondary interface defined and medium type is AUTO
+    if [ ! -z "$SCNDARY_IFACE" ] && [ "$MEDIUM" = "AUTO"  ]; then
+        #primary is OFF, so current interface is secondary
+        IFACE=$SCNDARY_IFACE
+    else
+        #never mind, we have to use primary
+        IFACE=$PRIMARY_IFACE
+    fi
+fi
+
+#default network type is AUTO
+if [ "$NETWORK_TYPE" != "DHCP" -a "$NETWORK_TYPE" != "STATIC" ]; then
+    NETWORK_TYPE="AUTO"
+fi
+
+#default STATIC configuration
+if [ "$NETWORK_STATIC_IP" = "" ]; then
+    NETWORK_STATIC_IP='192.168.16.225'
+    NETWORK_STATIC_GATEWAY='192.168.16.1'
+    NETWORK_STATIC_MASK='255.255.255.0'
+fi
+
+
+
+terminate_dhcp_now() {
+    $LOGGER "Terminating DHCP client...."
+    rm -f /var/run/dhclient.pid /var/run/dhclient.pids
+    killall -9 dhclient
+}
+
+ret=1
+case $1 in
+    stop)
+        $LOGGER "Stopping Network!!!"
+        #stop the dhcp client(s)
+        terminate_dhcp_now
+        #clear routing on all interfaces
+        for i in /sys/class/net/*; do
+            [ "$(basename $i)" = "lo" ] && continue #not for loop interface
+            ifconfig $(basename $i) 0.0.0.0
+            [ "$(basename $i)" = "ra0" ] && continue #not for WiFi
+            ifconfig $(basename $i) down
+        done
+        ret=$?
+        ;;
+    start)
+        echo "-----------------------------------START"
+        $0 stop #just to be sure it is stopped
+        $LOGGER "Starting Network!!!"
+        [ "$NETWORK_MTU" != "" ] && ifconfig $IFACE mtu $NETWORK_MTU
+        while true; do #break loop in case
+            case $NETWORK_TYPE in
+                DHCP|AUTO)
+                    ifconfig $IFACE up #make sure it is up
+
+                    if [ "$IFACE" = "ra0" ]; then
+                        wpa_state=`/usr/local/sbin/wpa_cli -i ra0 status | grep wpa_state`
+                        if [ "x$wpa_state" = "x" ] || [ $WIFI_TYPE = "WEP" -a $wpa_state != "wpa_state=ASSOCIATED" -a $wpa_state != "wpa_state=COMPLETED" ] || [ $WIFI_TYPE != "WEP" -a $wpa_state != "wpa_state=COMPLETED" ]; then
+                            $LOGGER "WIFI network not connected yet..."
+                            sleep 1
+                            break
+                        fi
+                    fi
+                    # wait for carrier setting
+                    sleepCount=0
+                    while [ "`cat /sys/class/net/$IFACE/carrier`" = "0" ]; do
+                        if [ $sleepCount -eq 10 ]; then
+                            $LOGGER "$IFACE link down"
+                            NETWORK_TYPE=STATIC
+                            break
+                        else
+                            $LOGGER "Wait 1s for carrier setup (max 10s)"
+                            sleep 1
+                            sleepCount=$((sleepCount+1))
+                        fi
+                    done
+                    if [ "$NETWORK_TYPE" = "STATIC" ]; then
+                        continue #with static
+                    fi
+
+                    $LOGGER "Requesting DHCP on $IFACE..."
+                    dhcp_timeout=0
+                    {
+                        sleep 25
+                        rm -f /var/run/dhclient.pid /var/run/dhclient.pids
+                        killall -9 dhclient
+                    } &
+                    WAIT_PID=$!
+                    dhclient -1 -cf /etc/dhclient.conf -sf /usr/sbin/dhclient-script -pf /var/run/dhclient.pid $IFACE
+                    ret=$?
+                    kill -9 $WAIT_PID
+                    if [ $ret -eq 2 ]; then
+                        dhcp_timeout=1
+                    fi
+                    $LOGGER "DHCP client on $IFACE returned with code: $ret"
+                    cat /var/run/dhclient.pid >> /var/run/dhclient.pids
+                    if [ $dhcp_timeout -ne 0 ]; then
+                        #change the network type STATIC and configure it
+                        NETWORK_TYPE=STATIC
+                        continue #with static
+                    else
+                        if [ "$ret" != "0" ]; then
+                            $LOGGER "Reseting $i main interface..."
+                            ifconfig $IFACE 0.0.0.0
+                        fi
+                        break
+                    fi
+                    ;;
+                STATIC)
+                    #set up IP
+                    ip="$NETWORK_STATIC_IP"
+                    $LOGGER "Setting static IP configuration ($ip) on $IFACE..."
+                    [ "$NETWORK_STATIC_MASK" != "" ] && ip="$ip netmask $NETWORK_STATIC_MASK"
+                    ifconfig $IFACE $ip
+                    #redefine /etc/resolv.conf
+                    rm -f /tmp/resolv.conf.new
+                    [ "$NETWORK_STATIC_DOMAIN" != "" ] && echo "search $NETWORK_STATIC_DOMAIN" >> /tmp/resolv.conf.new
+                    [ "$NETWORK_STATIC_DNS" != "" ] && echo "nameserver $NETWORK_STATIC_DNS" >> /tmp/resolv.conf.new
+                    [ "$NETWORK_STATIC_DNS2" != "" ] && echo "nameserver $NETWORK_STATIC_DNS2" >> /tmp/resolv.conf.new
+                    cat /tmp/resolv.conf.new > /etc/resolv.conf && rm -f /tmp/resolv.conf.new
+                    #redefine default route
+                    route del default
+                    if [ "$NETWORK_STATIC_GATEWAY" != "" ]; then
+                        route add default gw $NETWORK_STATIC_GATEWAY $IFACE
+                    else
+                        route add default $IFACE
+                    fi
+                    ret=0
+                    break
+                    ;;
+                *)
+                    break
+                    ;;
+            esac
+        done
+        ;;
+    restart)
+        $LOGGER "Restarting Network!!!"
+        $0 start
+        ret=$?
+        ;;
+    *)
+        echo "usage: $0 [stop|restart|start]"
+        ;;
+esac
+
+if [ $ret -eq 0 ]; then
+    touch $LOCK
+fi
+
+exit $ret

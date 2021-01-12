@@ -1,0 +1,161 @@
+#!/usr/bin/env python
+###############################################################################
+## Cubiware Sp. z o.o. Software License Version 1.0
+##
+## Copyright (C) 2008-2011 Cubiware Sp. z o.o. All rights reserved.
+##
+## Any rights which are not expressly granted in this License are entirely and
+## exclusively reserved to and by Cubiware Sp. z o.o. You may not rent, lease,
+## modify, translate, reverse engineer, decompile, disassemble, or create
+## derivative works based on this Software. You may not make access to this
+## Software available to others in connection with a service bureau,
+## application service provider, or similar business, or make any other use of
+## this Software without express written permission from Cubiware Sp. z o.o.
+##
+## Any User wishing to make use of this Software must contact
+## Cubiware Sp. z o.o. to arrange an appropriate license. Use of the Software
+## includes, but is not limited to:
+## (1) integrating or incorporating all or part of the code into a product for
+##     sale or license by, or on behalf of, User to third parties;
+## (2) distribution of the binary or source code to third parties for use with
+##     a commercial product sold or licensed by, or on behalf of, User.
+###############################################################################
+
+import sys, os, subprocess
+import re
+
+def perror(msg):
+    print >>sys.stdout, '%s:' % sys.argv[0], msg
+    sys.exit(1)
+
+def parse_file(src_file):
+    headers = list()
+    keymap = list()
+    lineno = 0
+    for line in src_file:
+        line = line.strip()
+        lineno += 1
+        if len(line) == 0 or line[0] == ';' or line[:2] == '//':
+            continue
+        elif line.startswith('#'):
+            headers.append(line)
+            continue
+        parts = re.sub('[ \t]+', ' ', line).split(' ')
+        if len(parts) >= 5 and line[:4] == 'key(' and parts[0][-1:] == ')':
+            values = [ parts[0][4:-1] ]
+            values += parts[1:]
+            keymap.append(values)
+        else:
+            raise Exception('syntax error [ line %d ]: invalid key entry' % lineno)
+
+    return (headers, keymap)
+
+prolog = ''
+epilog = ''
+
+def main():
+    if len(sys.argv) != 2:
+        perror('invalid usage')
+
+    try:
+        src_file = open(sys.argv[1])
+    except Exception, e:
+        perror("can't open file '%s'" % sys.argv[1])
+
+    try:
+        headers, keymap = parse_file(src_file)
+        src_file.close()
+    except Exception, e:
+        src_file.close()
+        perror(str(e))
+
+    print prolog
+    for h in headers:
+        print h
+    print '\nconst uint32_t keymap[][5] = {'
+    for values in keymap:
+        print '\t{ ' + ', '.join(values) + ' },';
+    print '};'
+    print epilog
+
+    return 0
+
+
+prolog += """\
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <QBInputKeyMapAPI.h>
+"""
+
+epilog += """
+const unsigned num_entries = sizeof(keymap) / sizeof(keymap[0]);
+
+static bool check_ht_size(unsigned int size)
+{
+    static uint32_t bitmap[1 << (16 - 5)];
+    unsigned int i, hash;
+
+    memset(bitmap, 0, (size + 31) / 8);
+    for (i = 0; i < num_entries; i++) {
+        hash = keymap[i][0] % size;
+        if (bitmap[hash / 32] & (1 << (hash % 32)))
+            return false;
+        else
+            bitmap[hash / 32] |= (1 << (hash % 32));
+    }
+
+    return true;
+}
+
+static int print_keymap(unsigned int size)
+{
+    uint32_t map[2 + size * 5];
+    unsigned int i, hash, offs;
+
+    memset(map, 0, sizeof(map));
+    map[0] = 0x514b4d50;
+    map[1] = size;
+    for (i = 0; i < num_entries; i++) {
+        hash = keymap[i][0] % size;
+        offs = 2 + hash * 5;
+        map[offs++] = keymap[i][0];
+        map[offs++] = keymap[i][1];
+        map[offs++] = keymap[i][2];
+        map[offs++] = keymap[i][3];
+        map[offs++] = keymap[i][4];
+    }
+
+    if (fwrite(map, 1, sizeof(map), stdout) != sizeof(map))
+        return 1;
+    return 0;
+}
+
+int main(void)
+{
+    unsigned int primes[1 << 16];
+    unsigned int p, i, cnt = 0;
+
+    primes[cnt++] = 2;
+    primes[cnt++] = 3;
+    primes[cnt++] = 5;
+    primes[cnt++] = 7;
+
+    for (p = 11; p < (1 << 16); p += 2) {
+        for (i = 0; i < cnt && primes[i] < p / 2 && p % primes[i] != 0; i++);
+        if (primes[i] >= p / 2) {
+             primes[cnt] = p;
+             if (primes[cnt] > num_entries && check_ht_size(primes[cnt]))
+                 return print_keymap(primes[cnt]);
+             cnt++;
+        }
+    }
+
+    return 0;
+}\
+"""
+
+
+if __name__ == '__main__':
+    sys.exit(main())

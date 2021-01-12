@@ -1,0 +1,64 @@
+#!/bin/sh
+
+ALL_DEVS=`ls /dev/sd??`
+for CUR_DEV in $ALL_DEVS; do
+	LABEL=`blkid -o value -s LABEL $CUR_DEV`
+	if [ "$LABEL" = "config" ]; then
+		CONFIG_DEV=$CUR_DEV
+	fi
+done
+
+u_reconfig() {
+	#reset partition
+	umount /etc/vod
+	mount -o sync,noexec $CONFIG_DEV /etc/vod/
+	echo Creating new config partition
+	rm -rf /etc/vod/*
+	cp -a /etc/default-conf/* /etc/vod/
+}
+
+verify_integrity () {
+	rm -f /etc/vod/integrity-test
+	cp /etc/default-conf/conf.xml /etc/vod/integrity-test 1>2 2>/dev/null
+	if [ $? -ne 0 ]; then
+		u_reconfig
+		return
+	fi
+	cmp /etc/default-conf/conf.xml /etc/vod/integrity-test 1>2 2>/dev/null
+	if [ $? -ne 0 ]; then
+		u_reconfig
+		return
+	fi
+	rm -f /etc/vod/integrity-test 1>2 2>/dev/null
+	if [ $? -ne 0 ]; then
+		u_reconfig
+		return
+	fi
+}
+
+if [ "$1" = "save" ]; then 
+  echo -n "storing configuration"
+  #check partition mount
+  mount | grep -q "$CONFIG_DEV\b" || u_reconfig
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+  echo " OK"
+else 
+  if [ "$1" = "start" ]; then 
+	mount | grep -q "$CONFIG_DEV\b" || mount -o sync,noexec $CONFIG_DEV /etc/vod/ || u_reconfig
+	verify_integrity
+	#restore default settings
+	[ ! -e /etc/vod/conf.xml ] && {
+		echo loading DEFAULT configuration
+		cp /etc/default-conf/* /etc/vod/
+		rm -f /etc/vod/LASTVERSION		# force on-upgrade cfg check
+		}
+  fi
+
+    for i in $(seq 1 5); do
+        /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+        [ $? -eq "0" ] && break
+        [ ! $? -eq "0" ]  && {
+            cp /etc/default-conf/* /etc/vod/
+        }
+    done
+fi

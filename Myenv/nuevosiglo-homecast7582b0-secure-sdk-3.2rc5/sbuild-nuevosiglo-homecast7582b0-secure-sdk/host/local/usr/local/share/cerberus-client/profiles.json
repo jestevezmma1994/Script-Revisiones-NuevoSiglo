@@ -1,0 +1,26 @@
+{
+    "mappings" : {
+        "digitalb-kaonCO1700D-secure-cubitv-conax-se-.*" : "ext_initramfs",
+        "mmp-cp7584a1-pd-secure-cubitv-.*" : "legacy_project"
+    },
+
+    "profiles": {
+        "UNKNOWN": {
+            "exceptions" : []
+        },
+        "ext_initramfs" : {
+            "exceptions": [
+                "CE600", "CE500", "CE400", "EN076", "EN004", "FS006", "FS007", "CONFIG_UNAME", "CONFIG_FEATURE_TAR_LONG_OPTIONS",
+                "CONFIG_LONG_OPTS", "CONFIG_FEATURE_SYSLOG", "CONFIG_FEATURE_BUFFERS_USE_MALLOC", "CONFIG_ATA_VERBOSE_ERROR",
+                "CONFIG_USB_NET", "CONFIG_SWAP", "CONFIG_UEVENT_HELPER_PATH", "CONFIG_USB_OTG_BLACKLIST_HUB"
+            ]
+        },
+        "legacy_project" : {
+            "exceptions": [
+                "EN012", "EN015", "EN016", "EN018", "EN020", "EN021", "EN030", "EN034", "EN052", "EN056", "EN076", "CE201", "CE202",
+                "CE301", "CE302", "CE401", "CE402", "EN062", "CONFIG_CC_STACKPROTECTOR"
+            ]
+        }
+    }
+}
+

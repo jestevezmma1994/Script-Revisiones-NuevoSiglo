@@ -1,0 +1,15 @@
+digraph MiscLogic {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    MiscLogic [root=true]
+    MiscLogic -> AccessLogic
+    MiscLogic -> DateTimeLogic
+    MiscLogic -> EventISLogic
+    MiscLogic -> EventsLogic
+    MiscLogic -> GlobalInputLogic
+    MiscLogic -> InitLogic
+    MiscLogic -> PurchaseLogic
+    MiscLogic -> TunerLogic
+    MiscLogic -> UpgradeLogic
+    MiscLogic -> timeFormat
+}

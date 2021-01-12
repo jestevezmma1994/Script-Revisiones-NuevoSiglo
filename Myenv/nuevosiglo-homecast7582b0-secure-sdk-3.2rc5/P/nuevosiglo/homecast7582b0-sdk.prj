@@ -1,0 +1,53 @@
+base (host=servinfo@devel.cubiware.com:22444) bold-homecast7582b0-cubitv-3.0rc30
+
+setenv S_INSTALL_CERT_LOCATION=PART
+subproject nuevosiglo-homecast7582b0-keys
+
+; Driver Pack
+include Src/driver-installer/c.comp
+include Src/license_checker/c.comp
+
+; Select proper resources for CUBITV component
+setenv Q_RESOURCES_CUBITV_CUSTOMER=nuevosiglo
+setenv Q_RESOURCES_CUBITV_USE_GENERIC=yes
+setenv Q_RESOURCES_CUBITV_SETTINGS=generic,qb,nuevosiglo
+;setenv Q_RESOURCES_CUBITV_FORMAT=720p
+
+setenv CUBITV_FACTORY_CONTEXT=HomecastFactory
+
+; Splash Screen
+setenv LOGO=nuevosiglo.jpg
+setenv SPLASH_PROJECT=bold
+include Platforms/BCM/logo/logo-nuevosiglo.comp
+
+; Subtitle Manager
+include App/Components/QBSubsManager/c.comp
+include App/Components/QBTextSubsManager/c.comp
+
+include App/Applications/CubiTV/CubiTV.comp
+include App/Applications/CubiTV-Generic/files.comp
+
+include App/Applications/CubiTV-Bold/logic.comp
+include App/Applications/CubiTV-Bold/exec.comp
+
+include App/Applications/CubiTV-NuevoSiglo/logic.comp
+include App/Applications/CubiTV-NuevoSiglo/exec.comp
+
+; Add images ('.jpg', etc.) to customized compilation
+include Files/Resources/CubiTV/c.comp
+; selectors for OTA upgrades
+include Files/Resources/Selectors/c.comp
+
+include Files/CubiTV/NuevoSiglo/c.comp
+
+; Component Translation-Merger
+include Src/TranslationMerger/c.comp
+include Src/TranslationMerger/extract.comp
+
+;include Harvest/bSpec/generic-homecast7582b0-debug/bspec.comp
+include Harvest/bSpec/nuevosiglo-homecast7582b0-debug/bspec.comp
+
+; suggested model certs catalog structure
+include Src/CxPlayReady-NuevoSiglo/homecast/7582/production.comp
+
+include Harvest/bInstall/install.comp

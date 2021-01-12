@@ -1,0 +1,6 @@
+Name: QBTeletextManager
+Version: 1.0.0
+Requires: QBTSParser QBTunerFilter SvCore SvPlayerManager 
+Description: Cubiware teletext manager library
+Libs: -lQBTeletextManager 
+CFlags: 

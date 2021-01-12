@@ -1,0 +1,24 @@
+digraph PlaybackWidgets {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    PlaybackWidgets [label="Playback" root=true]
+    tsosd
+    osd
+    QBTimeProgress
+    QBAnimatedBackground
+    miniFavoriteList
+    teleosd
+    extendedInfo
+    infoIcons
+    trailerPreview
+
+    PlaybackWidgets -> tsosd
+    PlaybackWidgets -> osd
+    PlaybackWidgets -> QBTimeProgress
+    PlaybackWidgets -> QBAnimatedBackground
+    PlaybackWidgets -> miniFavoriteList
+    PlaybackWidgets -> teleosd
+    PlaybackWidgets -> extendedInfo
+    PlaybackWidgets -> infoIcons
+    PlaybackWidgets -> trailerPreview
+}

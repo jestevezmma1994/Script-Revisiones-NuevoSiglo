@@ -1,0 +1,6 @@
+Name: QBDLNAClient
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvFoundation fibers libupnp 
+Description: DLNA client library
+Libs: -lQBDLNAClient 
+CFlags: 

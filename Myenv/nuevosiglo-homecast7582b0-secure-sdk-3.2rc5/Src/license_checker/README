@@ -1,0 +1,26 @@
+This script gets installed into host/cross (along with it's database) and is run by Harvest/bInstall.
+It checks cross-license compliance for all ELFs (applications, libraries, modules) present in target/root.
+
+When violation is detected it will return with error effectively interrupting Harvest's make and display the following message:
+
+                  !!! WARNING !!!
+
+                  There are critical errors detected by this script. There are some very specific steps you need to take to correct these errors:
+
+                  1. Please try to understand the nature of these errors. Likely some components violate Cubiware and/or third-party licenses,
+                     however errors may also be caused by missing licensing information for new (or previously undiscovered) components.
+                  2. Please contact Adam Dawidziuk (adam@cubiware.com) immediately! Please provide full debug log (above) or better yet a file
+                     sbuild*/host/local/usr/local/share/license_checker/db.json
+                  3. Please DO NOT continue building any software deliverables until all errors are corrected by Cubiware.
+                     This will usually mean pulling-in an updated Src/license_checker repo.
+                  4. Please DO NOT modify/remove this script from your build path and/or its data files in order to get around these errors. Contact Adam Dawidziuk first.
+                  5. Please DO NOT try to single-handedly define/modify licensing information for any new and existing components. Contact Adam Dawidziuk first.
+                  5. Please DO NOT under any circumstances release to ANYONE any software deliverables that were made while any errors from this script were present.
+
+It's then developer's responsibility to follow these instructions in order to SOLVE the problem.
+
+TODO:
+- Review all "BSD" like components and decide which flavor it actually is (2C, 3C, 4C)
+- Perhaps performance improvements (somewhat limited by pyelftools...)
+- Support not only for ELFs but other resources of various kinds (bitmaps, fonts, scripts, data files)
+- better python code :P

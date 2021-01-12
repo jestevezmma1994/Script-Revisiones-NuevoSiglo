@@ -1,0 +1,6 @@
+Name: error_log
+Version: 1.0.0
+Requires: SvCore 
+Description: Sentivision error reporting library
+Libs: -lerror_log -lpthread -lpthread 
+CFlags: 

@@ -1,0 +1,3 @@
+component CubiTV-NuevoSiglo-logic
+makefile=Makefile.logic
+translate=yes

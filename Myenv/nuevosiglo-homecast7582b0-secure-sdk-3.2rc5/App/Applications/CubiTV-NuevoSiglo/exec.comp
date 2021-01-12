@@ -1,0 +1,2 @@
+component CubiTV-NuevoSiglo-exec
+makefile=Makefile.exec

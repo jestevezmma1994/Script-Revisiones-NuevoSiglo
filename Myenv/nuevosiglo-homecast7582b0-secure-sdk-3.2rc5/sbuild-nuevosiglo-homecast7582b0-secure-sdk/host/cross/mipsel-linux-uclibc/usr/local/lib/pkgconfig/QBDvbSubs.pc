@@ -1,0 +1,6 @@
+Name: QBDvbSubs
+Version: 1.0.0
+Requires: SvCore SvFoundation SvPlayerKit mpeg2 
+Description: data structures for dvb subtitles
+Libs: -lQBDvbSubs 
+CFlags: 

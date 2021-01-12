@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+	<constant name="FontSize_VerySmall"><int>14</int></constant>
+    <constant name="FontSize_Small"><int>20</int></constant>
+    <constant name="FontSize_Normal"><int>24</int></constant>
+    <constant name="FontSize_Big"><int>30</int></constant>
+    <constant name="FontSize_Title"><int>36</int></constant>
+    <constant name="FontSize_Description"><int>22</int></constant>
+    <constant name="FontSize_Header"><int>44</int></constant>
+    <constant name="FontSize_Subtitle"><int>32</int></constant>
+
+    <constant name="NormalFont"><font aspect="1.0"><path>NaomiSansTT.ttf</path></font></constant>
+    <constant name="NarrowFont"><font aspect="0.75"><path>NaomiSansTT.ttf</path></font></constant>
+    <constant name="SemiWideFont"><font aspect="1.08"><path>NaomiSansTT.ttf</path></font></constant>
+    <constant name="BoldFont"><font aspect="1.0"><path>NaomiSansTTBold.ttf</path></font></constant>
+    <constant name="ItalicFont"><font aspect="1.0"><path>NaomiSansTTItalic.ttf</path></font></constant>
+    <constant name="BoldItalicFont"><font aspect="1.0"><path>NaomiSansTTBoldIt.ttf</path></font></constant>
+    <constant name="MediumFont"><font aspect="1.0"><path>NaomiSansTTMed.ttf</path></font></constant>
+    <constant name="MonoFont"><font aspect="1.0" hinting="off" subPixelPositioning="on"><path>NaomiSansTTClock.ttf</path></font></constant>
+</settings>

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$1" in 
+    start)
+	# biig socket buffers
+	echo "4096000" > /proc/sys/net/core/rmem_max
+	# limit the tcp connect timeout
+	echo "2" > /proc/sys/net/ipv4/tcp_syn_retries
+	# use NetIO accellerator
+	modprobe netio > /dev/null 2>&1
+	;;
+    stop)
+	;;
+    *)
+	echo "Usage: $0 [start|stop]"
+	;;
+esac

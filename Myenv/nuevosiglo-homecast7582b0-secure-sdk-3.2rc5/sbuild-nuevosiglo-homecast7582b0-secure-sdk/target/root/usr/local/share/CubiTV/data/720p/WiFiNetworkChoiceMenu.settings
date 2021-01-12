@@ -1,0 +1,51 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <xi:include href="ListPane.settings"/>
+    
+    <widget name="ListPane">
+    	<param tag="width"><int>420</int></param>
+    	
+    	<param tag="itemSpacing"><int>75</int></param>
+    	
+    	<!--widget name="Item">
+    	    <param tag="height"><int>200</int></param>
+        </widget-->
+    </widget>
+    
+    <widget name="WiFiNetworkChoiceName">
+        <param tag="width"><int>500</int></param>
+        <param tag="height"><int>65</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="subcaptionFontSize"><ref constant="FontSize_VerySmall"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="subcaptionLeftPadding"><int>30</int></param>
+        <param tag="subcaptionYOffset"><int>100</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="icon"><bitmap><path>white/iconw_settings.png</path></bitmap></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="focusFadeTime"><double>0.3</double></param>
+        <param tag="showTime"><double>0.3</double></param>
+        <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+        <param tag="focusMinWidth"><int>237</int></param>
+        <widget name="WiFiNetworkStatus">
+            <param tag="unknownIcon"><bitmap><path>icons_empty.png</path></bitmap></param>
+	        <param tag="rememberedIcon"><bitmap><path>symbol_pin.png</path></bitmap></param>
+	        <param tag="connectingIcon"><bitmap><path>connecting.png</path></bitmap></param>
+	        <param tag="connectedIcon"><bitmap><path>connected.png</path></bitmap></param>
+	        <param tag="securedIcon"><bitmap><path>Signal_padlock.png</path></bitmap></param>
+	        <param tag="openIcon"><bitmap><path>icons_unlock.png</path></bitmap></param>
+	        <param tag="signalStrength0"><bitmap><path>no-signal.png</path></bitmap></param>
+	    	<param tag="signalStrength1"><bitmap><path>signal-1.png</path></bitmap></param>
+	        <param tag="signalStrength2"><bitmap><path>signal-2.png</path></bitmap></param>
+	        <param tag="signalStrength3"><bitmap><path>signal-3.png</path></bitmap></param>
+	        <param tag="signalStrength4"><bitmap><path>signal-4.png</path></bitmap></param>
+        </widget>
+    </widget>
+</settings>

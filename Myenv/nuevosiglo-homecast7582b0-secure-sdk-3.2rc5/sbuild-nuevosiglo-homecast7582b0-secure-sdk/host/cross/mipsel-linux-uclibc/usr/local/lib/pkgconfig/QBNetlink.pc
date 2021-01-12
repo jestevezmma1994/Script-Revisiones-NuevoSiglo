@@ -1,0 +1,6 @@
+Name: QBNetlink
+Version: 1.0.0
+Requires: QBIPCSocket SvCore 
+Description: QBNetlink library
+Libs: -lQBNetlink 
+CFlags: 

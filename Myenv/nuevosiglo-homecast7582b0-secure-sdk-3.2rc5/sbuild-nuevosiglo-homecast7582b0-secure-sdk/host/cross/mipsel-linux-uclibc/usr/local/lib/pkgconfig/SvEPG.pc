@@ -1,0 +1,6 @@
+Name: SvEPG
+Version: 1.0.0
+Requires: CUIT QBAppKit QBPlatformHAL SvCore SvDataBucket2 SvEPGDataLayer SvFoundation SvSettingsManager swl 
+Description: Electronic Program Guide GUI
+Libs: -lSvEPG 
+CFlags: 

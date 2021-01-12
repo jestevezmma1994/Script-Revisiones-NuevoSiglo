@@ -1,0 +1,5 @@
+#!/bin/sh
+. ${BUILD_ROOT}/bin/srm-local-env
+cmd=$1
+shift
+$cmd "$@"

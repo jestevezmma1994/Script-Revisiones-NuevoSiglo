@@ -1,0 +1,7 @@
+digraph QBAdService {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBAdService [URL="\N.html" root=true]
+
+    QBAdService -> CubiMW
+}

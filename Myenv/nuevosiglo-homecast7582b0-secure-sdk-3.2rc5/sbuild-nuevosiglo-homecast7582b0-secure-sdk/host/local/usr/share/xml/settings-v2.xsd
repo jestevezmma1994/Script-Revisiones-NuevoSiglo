@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xi="http://www.w3.org/2001/XInclude"
+           targetNamespace="http://cubiware.com/settings-v2.xsd"
+           xmlns:svsettings="http://cubiware.com/settings-v2.xsd"
+           xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+           elementFormDefault="qualified">
+
+<xs:import namespace="http://www.w3.org/2001/XInclude"
+           schemaLocation="xinclude.xsd" />
+
+<xs:import namespace="http://cubiware.com/i18n-v1.xsd"
+           schemaLocation="i18n-v1.xsd" />
+
+<!-- simple types -->
+
+<xs:simpleType name="tag_t">
+		<xs:restriction base="xs:Name">
+				<xs:minLength value="2" />
+				<xs:maxLength value="30" />
+				<xs:pattern value="[a-z]([a-zA-Z0-9_])*"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="name_t">
+		<xs:restriction base="xs:Name">
+				<xs:minLength value="2" />
+				<xs:maxLength value="32" />
+				<xs:pattern value="[a-zA-Z]([-a-zA-Z0-9])*"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="constant_name_t">
+		<xs:restriction base="xs:Name">
+				<xs:minLength value="2" />
+				<xs:maxLength value="32" />
+				<xs:pattern value="[A-Z]([-a-zA-Z0-9_])*"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="full_name_t">
+		<xs:restriction base="xs:Name">
+				<xs:minLength value="2" />
+				<xs:maxLength value="112" />
+				<xs:pattern value="[a-zA-Z]([-a-zA-Z0-9\.])*"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="path_t">
+		<xs:restriction base="xs:token">
+				<xs:minLength value="1" />
+				<xs:maxLength value="255" />
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="size_t">
+		<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1" />
+				<xs:maxExclusive value="10000" />
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="aspect_t">
+		<xs:restriction base="xs:double">
+				<xs:minInclusive value="0.1" />
+				<xs:maxExclusive value="10.0" />
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="onoff_t">
+		<xs:restriction base="xs:string">
+				<xs:enumeration value="on"/>
+				<xs:enumeration value="yes"/>
+				<xs:enumeration value="off"/>
+				<xs:enumeration value="no"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="color_t">
+		<xs:restriction base="xs:string">
+				<xs:pattern value="(0[xX])?[0-9A-Fa-f]{8}" />
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="bmptype_t">
+		<xs:restriction base="xs:string">
+				<xs:enumeration value="local"/>
+				<xs:enumeration value="shadow"/>
+				<xs:enumeration value="static"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="bmpcsp_t">
+		<xs:restriction base="xs:string">
+				<xs:enumeration value="RGBA"/>
+				<xs:enumeration value="RGB"/>
+				<xs:enumeration value="ARGB"/>
+				<xs:enumeration value="ARGB_4444"/>
+				<xs:enumeration value="YUVA"/>
+				<xs:enumeration value="YUV"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="resourcepolicy_t">
+		<xs:restriction base="xs:string">
+				<xs:enumeration value="auto"/>
+				<xs:enumeration value="static"/>
+		</xs:restriction>
+</xs:simpleType>
+
+<!-- constants -->
+
+<xs:complexType name="constant_t">
+		<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="bool" type="xs:boolean" />
+				<xs:element name="int" type="xs:integer" />
+				<xs:element name="double" type="xs:double" />
+				<xs:element name="string" type="i18n:string_t" />
+				<xs:element name="color" type="svsettings:color_t" />
+				<xs:element name="bitmap" type="svsettings:bitmap_t" />
+				<xs:element name="font" type="svsettings:font_t" />
+		</xs:choice>
+		<xs:attribute name="name" use="required" type="svsettings:constant_name_t" />
+</xs:complexType>
+
+<xs:complexType name="ref_t">
+		<xs:sequence/>
+		<xs:attribute name="constant" use="required" type="svsettings:constant_name_t" />
+</xs:complexType>
+
+<!-- simple types with string keys -->
+
+<xs:complexType name="keyed_boolean_t">
+	<xs:simpleContent>
+		<xs:extension base="xs:boolean">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="keyed_integer_t">
+	<xs:simpleContent>
+		<xs:extension base="xs:integer">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="keyed_double_t">
+	<xs:simpleContent>
+		<xs:extension base="xs:double">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="keyed_string_t">
+	<xs:complexContent>
+		<xs:extension base="i18n:string_t">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="keyed_color_t">
+	<xs:simpleContent>
+		<xs:extension base="svsettings:color_t">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<!-- widget parameters -->
+
+<xs:complexType name="bitmap_t">
+		<xs:sequence>
+				<xs:element name="path" type="svsettings:path_t" />
+		</xs:sequence>
+		<xs:attribute name="width" use="optional" type="svsettings:size_t" />
+		<xs:attribute name="height" use="optional" type="svsettings:size_t" />
+		<xs:attribute name="type" use="optional" type="svsettings:bmptype_t" default="static" />
+		<xs:attribute name="colorspace" use="optional" type="svsettings:bmpcsp_t" default="RGBA" />
+</xs:complexType>
+
+<xs:complexType name="keyed_bitmap_t">
+	<xs:complexContent>
+		<xs:extension base="svsettings:bitmap_t">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="font_t">
+		<xs:sequence>
+				<xs:element name="path" type="svsettings:path_t" />
+		</xs:sequence>
+		<xs:attribute name="aspect" use="optional" type="svsettings:aspect_t" />
+		<xs:attribute name="hinting" use="optional" type="svsettings:onoff_t" />
+		<xs:attribute name="subPixelPositioning" use="optional" type="svsettings:onoff_t" />
+</xs:complexType>
+
+<xs:complexType name="keyed_font_t">
+	<xs:complexContent>
+		<xs:extension base="svsettings:font_t">
+			<xs:attribute name="key" use="optional" type="xs:Name" />
+		</xs:extension>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="array_t">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="bool" type="svsettings:keyed_boolean_t" />
+				<xs:element name="int" type="svsettings:keyed_integer_t" />
+				<xs:element name="double" type="svsettings:keyed_double_t" />
+				<xs:element name="string" type="svsettings:keyed_string_t" />
+				<xs:element name="color" type="svsettings:keyed_color_t" />
+				<xs:element name="bitmap" type="svsettings:keyed_bitmap_t" />
+				<xs:element name="font" type="svsettings:keyed_font_t" />
+		</xs:choice>
+</xs:complexType>
+
+<xs:complexType name="param_t">
+		<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="bool" type="xs:boolean" />
+				<xs:element name="int" type="xs:integer" />
+				<xs:element name="double" type="xs:double" />
+				<xs:element name="string" type="i18n:string_t" />
+				<xs:element name="color" type="svsettings:color_t" />
+				<xs:element name="bitmap" type="svsettings:bitmap_t" />
+				<xs:element name="font" type="svsettings:font_t" />
+				<xs:element name="ref" type="svsettings:ref_t" />
+				<xs:element name="array" type="svsettings:array_t" />
+		</xs:choice>
+		<xs:attribute name="tag" use="required" type="svsettings:tag_t" />
+</xs:complexType>
+
+<xs:group name="parameters">
+		<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="param" type="svsettings:param_t" />
+				</xs:choice>
+		</xs:sequence>
+</xs:group>
+
+<!-- widget type -->
+
+<xs:complexType name="widget_t">
+		<xs:sequence>
+				<xs:element name="common" minOccurs="0" maxOccurs="1">
+						<xs:complexType>
+								<xs:group ref="svsettings:parameters" />
+						</xs:complexType>
+						<xs:key name="widgetCommonParamName">
+								<xs:selector xpath="svsettings:param" />
+								<xs:field xpath="@tag" />
+						</xs:key>
+				</xs:element>
+				<xs:group ref="svsettings:parameters" minOccurs="0" />
+				<xs:element name="widget" minOccurs="0" maxOccurs="unbounded"
+							type="svsettings:widget_t">
+						<xs:key name="widgetChildParamName">
+								<xs:selector xpath="svsettings:param" />
+								<xs:field xpath="@tag" />
+						</xs:key>
+				</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="svsettings:name_t" use="required" />
+		<xs:attribute name="import" type="svsettings:full_name_t" use="optional" />
+</xs:complexType>
+
+<!-- top-level settings element -->
+
+<xs:element name="settings">
+		<xs:complexType>
+				<xs:sequence>
+						<xs:element name="constant" minOccurs="0" maxOccurs="unbounded"
+								type="svsettings:constant_t" />
+						<xs:element name="common" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+										<xs:group ref="svsettings:parameters" />
+								</xs:complexType>
+								<xs:key name="settingsCommonParamName">
+										<xs:selector xpath="svsettings:param" />
+										<xs:field xpath="@tag" />
+								</xs:key>
+						</xs:element>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element ref="xi:include" />
+								<xs:element name="widget" type="svsettings:widget_t">
+										<xs:key name="widgetParamName">
+												<xs:selector xpath="svsettings:param" />
+												<xs:field xpath="@tag" />
+										</xs:key>
+								</xs:element>
+						</xs:choice>
+				</xs:sequence>
+				<xs:attribute name="version" use="required" fixed="2.0" />
+				<xs:attribute name="resourcePolicy" type="svsettings:resourcepolicy_t" use="optional" default="static" />
+		</xs:complexType>
+
+		<xs:key name="constantName">
+				<xs:selector xpath="./svsettings:constant" />
+				<xs:field xpath="@name" />
+		</xs:key>
+
+<!--
+		<xs:keyref name="constantRef" refer="svsettings:constantName">
+				<xs:selector xpath=".//svsettings:param/svsettings:ref" />
+				<xs:field xpath="@constant" />
+		</xs:keyref>
+
+		<xs:key name="widgetName">
+				<xs:selector xpath=".//svsettings:widget" />
+				<xs:field xpath="@name" />
+		</xs:key>
+-->
+</xs:element>
+
+</xs:schema>

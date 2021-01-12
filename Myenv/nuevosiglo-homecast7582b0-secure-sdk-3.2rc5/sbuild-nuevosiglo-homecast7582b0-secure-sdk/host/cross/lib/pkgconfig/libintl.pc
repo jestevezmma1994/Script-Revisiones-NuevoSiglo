@@ -1,0 +1,8 @@
+prefix=$${CROSS_ROOT}/usr
+libdir=${prefix}/lib
+
+Name: libintl
+Description: Runtime library of the GNU gettext internationalization package
+Version: 0.19.2
+Libs: -L${libdir} -lintl
+Cflags:

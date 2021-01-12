@@ -1,0 +1,6 @@
+Name: QBOSD
+Version: 1.0.0
+Requires: CUIT QBAppKit SvCore SvEPGDataLayer SvFoundation SvPlayerKit SvPlayerManager 
+Description: Set of base classes for On Screen Display components
+Libs: -lQBOSD 
+CFlags: 

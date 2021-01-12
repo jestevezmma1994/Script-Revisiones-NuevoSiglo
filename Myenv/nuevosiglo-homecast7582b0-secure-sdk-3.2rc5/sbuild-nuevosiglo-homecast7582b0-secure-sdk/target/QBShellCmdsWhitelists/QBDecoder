@@ -1,0 +1,41 @@
+-e # QBDecoder: QBDecoder-common QBDemuxHAL-nexus QBPlatformHAL
+# QBDecoder-common: QBCAS QBPlatformHAL
+# QBCAS: QBCrypto QBDescramblerHAL
+# QBCrypto: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBDescramblerHAL: QBDemuxHAL-nexus
+# QBDemuxHAL-nexus: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBDemuxHAL-nexus: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+-e # QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$

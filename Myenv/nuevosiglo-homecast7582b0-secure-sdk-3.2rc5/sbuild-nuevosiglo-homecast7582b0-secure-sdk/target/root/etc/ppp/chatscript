@@ -1,0 +1,23 @@
+ABORT 'BUSY'
+ABORT 'NO CARRIER'
+ABORT 'VOICE'
+ABORT 'NO DIALTONE'
+ABORT 'NO DIAL TONE'
+ABORT 'NO ANSWER'
+ABORT 'DELAYED'
+REPORT CONNECT
+TIMEOUT 6
+'' 'ATQ0'
+TIMEOUT 60
+'OK-AT-OK' 'ATZ'
+'OK' @/tmp/devices/mobile/pin
+'OK\d-AT-OK' 'ATI'
+'OK' 'ATZ'
+'OK' 'ATQ0 V1 E1'
+'OK' @/tmp/devices/mobile/mode
+'OK-AT-OK' @/tmp/devices/mobile/apn
+'OK' 'AT+CSQ'
+'OK' 'AT+CREG?'
+'OK' 'ATDT*99***1#'
+TIMEOUT 30
+CONNECT ''

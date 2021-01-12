@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 13:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Checking if new firmware is available"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Downloading firmware package"
+msgstr ""
+
+msgid ""
+"Firmware upgrade can take 10 up to 15 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"The STB will restart automatically when the upgrade is complete."
+msgstr ""
+
+msgid "Formatting storage"
+msgstr ""
+
+msgid "Installing firmware"
+msgstr ""
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr ""
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr ""
+
+msgid "Processing KERNEL"
+msgstr ""
+
+msgid "Processing LOGO"
+msgstr ""
+
+msgid "Processing ROOTFS"
+msgstr ""
+
+msgid "Processing USR"
+msgstr ""
+
+#, c-format
+msgid "Scanning frequency: %d.%02d MHz"
+msgstr ""
+
+msgid "Verifying Flash partitions"
+msgstr ""
+
+msgid "Verifying installed file"
+msgstr ""
+
+msgid "Writing configuration"
+msgstr ""
+
+msgid "check"
+msgstr ""
+
+msgid "chkflash"
+msgstr ""
+
+msgid "config"
+msgstr ""
+
+msgid "done"
+msgstr ""
+
+msgid "download"
+msgstr ""
+
+msgid "formating"
+msgstr ""
+
+msgid "kernel"
+msgstr ""
+
+msgid "logo"
+msgstr ""
+
+msgid "rootfs"
+msgstr ""
+
+msgid "upgrade_long"
+msgstr ""
+
+msgid "usr"
+msgstr ""
+
+msgid "verify"
+msgstr ""
+
+msgid "writing"
+msgstr ""

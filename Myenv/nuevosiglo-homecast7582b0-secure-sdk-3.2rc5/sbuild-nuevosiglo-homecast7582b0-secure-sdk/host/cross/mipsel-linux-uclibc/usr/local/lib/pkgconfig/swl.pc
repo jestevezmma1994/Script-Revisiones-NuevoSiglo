@@ -1,0 +1,6 @@
+Name: swl
+Version: 1.0.0
+Requires: CAGE CUIT QBAppKit QBInput QBResourceManager QBStringUtils SvCore SvFoundation SvGfxHAL SvSettingsManager expat sv-list 
+Description: Sentivision Widget Library
+Libs: -lswl -lintl 
+CFlags: 

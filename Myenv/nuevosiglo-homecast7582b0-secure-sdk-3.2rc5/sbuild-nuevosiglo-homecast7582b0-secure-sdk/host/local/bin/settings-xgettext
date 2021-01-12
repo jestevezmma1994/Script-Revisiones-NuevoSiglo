@@ -1,0 +1,151 @@
+#!/bin/bash
+
+
+app=settings-xgettext
+
+function args_error()
+{
+	echo "$app: invalid usage, try --help" >&2
+	exit 1
+}
+
+function print_help()
+{
+	echo "usage: $app [ -d DOMAIN ] [ -o OUTPUTFILE ] INPUTFILE ..."
+}
+
+function unique_filter()
+{
+	script_file=$(mktemp -t ".${app}.XXXXXX")
+	cat <<EOT >$script_file
+import os, sys
+
+messages = dict()
+comments = ''
+msg = ''
+multilinemsgid = False
+
+for line in sys.stdin.readlines():
+	if multilinemsgid:
+		msg += '"' + line[0:-1]
+		if len(line) >= 2 and line[-2] == '"':
+			multilinemsgid = False
+		else:
+			msg += '\\\\n"'
+		msg += '\n'
+	elif line[0:1] == '#':
+		comments += line
+	elif line.startswith('msgid '):
+		if line[-2] != '"':
+			msg = '""\n' + line[6:-1]
+			msg += '\\\\n"\n'
+			multilinemsgid = True
+		else:
+			msg = line[6:]
+	elif line.startswith('msgstr '):
+		if not messages.has_key(msg):
+			trans = line[7:]
+			messages[msg] = trans
+			sys.stdout.write(comments + 'msgid ' + msg + 'msgstr ' + trans)
+		comments = ''
+		msg = ''
+	else:
+		sys.stdout.write(line)
+EOT
+
+	python $script_file
+	rm -f $script_file
+}
+
+
+domain=messages
+out_file=''
+in_files=''
+
+while [ $# -gt 0 ]; do
+	if [ ${1:0:1} == "-" ]; then
+		[ -z "${in_files}" ] || args_error
+		if [ ${1:0:2} == "--" ] && [ ${#1} -gt 2 ]; then
+			arg=${1/=*/}
+			arg=${arg:2}
+			value=${1/#--*=/}
+		elif [ ${#1} -eq 2 ]; then
+			arg=${1:1}
+			value=''
+		else
+			args_error
+		fi
+	else
+		in_files="$in_files $1"
+		shift 1
+		continue
+	fi
+
+	case $arg in
+		d)
+			[ $# -eq 1 ] && args_error
+			domain=$2
+			shift 1
+			;;
+		domain)
+			[ ${#value} -lt 1 ] && args_error
+			domain=$value
+			;;
+		s | sort-output)
+			;;
+		o)
+			[ $# -eq 1 ] && args_error
+			out_file=$2
+			shift 1
+			;;
+		output)
+			[ ${#value} -lt 1 ] && args_error
+			out_file=$value
+			;;
+		h | help)
+			print_help
+			exit 0
+			;;
+	esac
+	shift 1
+done
+
+[ -z "$in_files" ] && args_error
+[ -z "$out_file" ] && out_file="${domain}.po"
+
+
+stylesheet_file=$(mktemp -t ".${app}.XXXXXX")
+cat <<-EOT >$stylesheet_file
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.1"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:i18n="http://cubiware.com/i18n-v1.xsd">
+
+<xsl:output method="text" version="1.0" encoding="UTF-8"/>
+
+<xsl:param name="file-path"/>
+
+<xsl:template match="/">
+<xsl:for-each select="//i18n:gettext">
+#: <xsl:value-of select="\$file-path"/>
+msgid "<xsl:value-of select="."/>"
+msgstr ""
+</xsl:for-each>
+</xsl:template>
+
+</xsl:stylesheet>
+EOT
+
+
+cat <<-EOT >"$out_file"
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+EOT
+
+for f in $in_files; do
+	xsltproc --stringparam file-path $f $stylesheet_file $f
+done | unique_filter >>"$out_file"
+rm -f $stylesheet_file

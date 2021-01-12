@@ -1,0 +1,6 @@
+Name: QBCrypto-common
+Version: 1.0.0
+Requires: QBAppKit SvCore SvFoundation fibers openssl 
+Description: Hardware abstraction layer above platform crypto engines.
+Libs: -lQBCrypto-common 
+CFlags: 

@@ -1,0 +1,11 @@
+digraph Logic {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Logic [label="Logic" root=true]
+
+    Logic -> ContextsLogic
+    Logic -> OutputsLogic
+    Logic -> PlaybackLogic
+    Logic -> StorageLogic
+    Logic -> MiscLogic
+}

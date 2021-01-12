@@ -1,0 +1,81 @@
+[
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "automatic",
+        "name" : "DVB-C NIT Automatic",
+        "tunerType" : "cab",
+        "chaseMissingChannels" : true,
+        "readSDTOther" : "nonRecursive",
+        "onlyActual" : false,
+        "useStandardRasters" : true,
+        "range" : [
+            {
+                "freqMin" : 405000,
+                "freqMax" : 405000,
+                "freqJump" : 6000
+            }
+        ],
+        "symbolRate" : [
+            5360
+        ],
+        "extra" : "auto",
+        "modulation" : [
+            "QAM256"
+        ],
+        "dropAll" : true,
+        "needLcn" : false,
+        "needName" : true,
+        "automaticScanParams" : [
+            "range", "polarization", "symbolRate", "modulation"
+        ]
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "manual",
+        "name" : "DVB-C Manual",
+        "tunerType" : "cab",
+        "chaseMissingChannels" : true,
+        "onlyActual_comment" : "//RAL: parse 'actual' and 'other' PSI tables",
+        "onlyActual" : false,
+        "useStandardRasters" : true,
+        "readSDTOther" : "nonRecursive",
+        "needLcn" : false,
+        "needName" : true
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "id" : "factoryScan",
+        "name" : "DVB-C Manual",
+        "tunerType" : "cab",
+        "onlyActual" : false,
+        "needName" : true,
+        "lcnOverwrite" : false
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "id" : "background",
+        "name" : "DVB-C Background",
+        "tunerType" : "cab",
+        "chaseMissingChannels" : true,
+        "onlyActual" : false,
+        "readSDTOther" : "nonRecursive",
+        "dropNotFoundInNIT" : false,
+        "needName" : true,
+        "needLcn" : false,
+        "lcnOverwrite" : false
+    }
+]

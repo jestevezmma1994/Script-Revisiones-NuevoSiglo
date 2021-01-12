@@ -1,0 +1,6 @@
+Name: QBCatManager
+Version: 1.0.0
+Requires: QBCAS QBTextUtils QBTunerFilter SvCore SvPlayerKit fibers 
+Description: Cubiware manager for updating CAT/EMM section in CAS manager
+Libs: -lQBCatManager 
+CFlags: 

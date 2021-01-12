@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DIR=$SRM_CACHED_DIR/INSTALL_SRM
+
+if [ ! -d $DIR ]; then exit 1; fi
+
+if [ $UID != 0 -a -e $DIR/.fakeroot ]; then
+  cat $DIR/.fakeroot >> $FAKE_ROOT
+  fakeroot srm-install-bin $@
+else 
+  mkdir -p $1
+  tar -cpC $DIR --exclude .fakeroot . | tar -xpC $1
+fi 
+

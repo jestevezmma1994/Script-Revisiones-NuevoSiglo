@@ -1,0 +1,104 @@
+#!/bin/sh
+
+date INITIAL_DATE
+
+umask 027
+
+mount /proc
+echo 0 > /proc/sys/kernel/printk
+
+for CONF in $(ls /proc/sys/net/ipv4/conf/); do
+    echo 0 > /proc/sys/net/ipv4/conf/$CONF/accept_redirects
+    echo 0 > /proc/sys/net/ipv4/conf/$CONF/accept_source_route
+    echo 0 > /proc/sys/net/ipv4/conf/$CONF/forwarding
+    echo 2 > /proc/sys/net/ipv4/conf/$CONF/rp_filter
+    echo IGMP_PROTO_VERSION > /proc/sys/net/ipv4/conf/$CONF/force_igmp_version
+done
+
+echo 0    > /proc/sys/net/ipv4/ip_forward
+echo 60   > /proc/sys/kernel/panic
+echo 1    > /proc/sys/kernel/panic_on_oops
+echo 2048 > /proc/sys/kernel/pid_max
+echo 2    > /proc/sys/kernel/randomize_va_space
+
+mount -o noexec,nosuid /dev/shm
+chown 0:1000 /dev/shm
+chmod 770 /dev/shm
+mount /dev/pts
+mount sysfs -t sysfs /sys
+
+mkdir /tmp/var /tmp/root /tmp/vod /tmp/cache
+mkdir /var/lock /var/log /var/lib /var/run /var/lock/subsys
+chmod go+trwx /var/lock
+chown 1000:1000 /tmp/var /tmp/cache /var/log /var/run
+chmod ug+rwx /tmp/var /tmp/cache /var/log /var/run
+chmod o-rwx /tmp/var /tmp/cache /var/log /var/run
+
+ifconfig lo 127.0.0.1 netmask 255.255.255.0
+
+cd /tmp
+
+. /etc/profile
+
+if [ -x /etc/init.d/hwstash ]; then
+    /etc/init.d/hwstash
+fi
+
+/etc/init.d/config start
+rm -f /etc/vod/STB.cfg
+
+. /etc/profile
+
+if [ -x /etc/init.d/keys ]; then
+    /etc/init.d/keys
+fi
+
+if [ -f /tmp/factoryReset -o -f /etc/vod/factoryReset ]; then
+    /etc/init.d/factory_reset
+fi
+
+if [ -x /etc/init.d/netlink_daemon ]; then
+    /etc/init.d/netlink_daemon start
+fi
+
+if [ -x /usr/local/bin/migrator ]; then
+    /usr/local/bin/migrator
+fi
+
+if [ -x /etc/init.d/load.usb ]; then
+    /etc/init.d/load.usb
+fi
+
+if [ -x /etc/init.d/load.nls ]; then
+    /etc/init.d/load.nls
+fi
+
+if [ -x /etc/init.d/load.iptables ]; then
+    /etc/init.d/load.iptables
+fi
+
+if [ -x /etc/init.d/wifi ]; then
+    /etc/init.d/wifi start
+fi
+
+if [ -x /etc/init.d/cm.startup ]; then
+    /etc/init.d/cm.startup
+fi
+
+if [ -x /etc/init.d/multiuser ]; then
+    /etc/init.d/multiuser
+fi
+
+/etc/init.d/network start
+
+if [ -f /usr/local/sbin/qb_run_getty ]; then
+    /etc/init.d/load.serial
+else
+    /etc/init.d/usbserial
+fi
+
+if [ -x /etc/init.d/upgrade_monitor ]; then
+    /etc/init.d/upgrade_monitor start
+fi
+
+exec /etc/init.d/sysinit

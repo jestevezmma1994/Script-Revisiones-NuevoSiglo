@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="clock">
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="font"><ref constant="MonoFont"/></param>
+        <param tag="fontSize"><int>22</int></param>
+        <param tag="textAlign"><string>right</string></param>
+        <param tag="xOffset"><int>955</int></param>
+        <param tag="yOffset"><int>130</int></param>
+        <param tag="width"><int>260</int></param>
+        <param tag="height"><int>34</int></param>
+        <param tag="timeFormat"><string>%T %d/%m/%Y</string></param>
+<!--        <param tag="icon"><bitmap><path>icons_clock.png</path></bitmap></param> -->
+        <param tag="spacing"><int>0</int></param>
+    </widget>
+
+</settings>

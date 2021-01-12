@@ -1,0 +1,11 @@
+prefix=$${CROSS_ROOT}/usr
+exec_prefix=${prefix}
+libdir=$${CROSS_ROOT}/usr//lib
+includedir=${prefix}/include
+
+Name: libqrencode
+Description: A QR Code encoding library
+Version: 3.4.4
+Libs: -L${libdir} -lqrencode
+Libs.private: -lpthread
+Cflags: -I${includedir}

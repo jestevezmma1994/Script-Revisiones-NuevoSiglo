@@ -1,0 +1,8 @@
+digraph OutputsLogic {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    OutputsLogic [root=true]
+    OutputsLogic -> AudioOutputLogic
+    OutputsLogic -> HDMILogic
+    OutputsLogic -> VideoOutputLogic
+}

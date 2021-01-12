@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <constant name="TextColor_Active"><color>ffffffff</color></constant>
+    <constant name="TextColor_Inactive"><color>7f7f7fff</color></constant>
+    <constant name="TextColor_Disabled"><color>7f7f7fff</color></constant>
+</settings>

@@ -1,0 +1,372 @@
+#!/bin/sh
+
+. /etc/strings.txt
+
+ubi_create_ctrl() {
+	if [ ! -e /dev/shm/ubi_ctrl ]; then
+		UBICTRL_MAJOR=`cat /sys/class/misc/ubi_ctrl/dev | cut -d: -f1`
+		UBICTRL_MINOR=`cat /sys/class/misc/ubi_ctrl/dev | cut -d: -f2`
+		rm -f /dev/shm/ubi_ctrl
+		mknod /dev/shm/ubi_ctrl c $UBICTRL_MAJOR $UBICTRL_MINOR
+	fi
+}
+
+ubi_attach() {
+	ubidetach /dev/shm/ubi_ctrl -p /dev/$2 >/dev/null 2>&1
+	flash_eraseall /dev/$2 >/dev/null 2>&1
+	ubiformat -y -q /dev/$2 >/dev/null 2>&1 || exit_upgrade 103 "Cannot format UBI device "$2
+	ubiattach /dev/shm/ubi_ctrl -p /dev/$2 -d $1 >/dev/null 2>&1 || exit_upgrade 103 "Cannot attach UBI device "$1
+	rm -f /dev/shm/ubi$1
+	mknod /dev/shm/ubi$1 c `cat /sys/class/ubi/ubi$1/dev | cut -d: -f1` `cat /sys/class/ubi/ubi$1/dev | cut -d: -f2` || exit_upgrade 103 "Unable to create UBI volume node #"$1
+}
+
+#Error codes:
+# 102 - unable to get slot number
+# 104 - rootfs write error
+# 105 - kernel write error
+# 106 - logo write error
+
+#Platform string to identify your file, it should be uniq in each other:
+_UP_PLATFORM_NAME="bcm97xxx"
+
+#add number of your platform progress steps here (count all step_progress in the file)
+_UP_PLATFORM_STEP_CNT=0
+
+
+#Mandatory procedures operating on data, you should escape to "exit_upgrade" with error code if something goes criticaly wrong
+_up_get_hash () { #gets hash of current version, used to decide is upgrade is needed
+	setnv | grep "^SV_VERSION=" | cut -d'=' -f2
+}
+_up_get_status () { #gets current status of upgrade, you should print OK for confirmed firmware, RESTORED for restored firmware, or some other string for other states
+	setnv | grep "^SV_STATUS=" | cut -d'=' -f2
+}
+_up_set_status () {
+	setnv SV_STATUS "$1"
+}
+
+_up_check_version() { #if any additional version checking needed do it here, got a new version number in parameter
+	res="not needed in unsecure version"
+}
+
+_up_verify_firmware () { #check integrity, signatures, hashes or whatever you need, you got files names in parameter
+	res="not needed in unsecure version"
+}
+
+
+_up_before_main_fifo_create() { #prepare the _UP_PLATFORM_TAR_FILES/_UP_PLATFORM_TAR_PIPES variable
+	#set expected file names
+	#"ROOTFS.sqsh KERNEL.gz LOGO.bin USR.sqsh"
+	if [ -f image.sizes ]; then
+		_UP_PLATFORM_TAR_FILES=`cat image.sizes | sed -e "s/\.size.*//g"`
+	else
+		_UP_PLATFORM_TAR_FILES="_UPGRADE_FILES_"
+	fi
+	#set expected tar.gz pipe name, the tee will power them with the upgrade package stream.
+	#"rootfs kernel logo usr"
+	_UP_PLATFORM_TAR_PIPES=$(for i in  $_UP_PLATFORM_TAR_FILES; do echo $i.pipe; done)
+}
+
+#the most important function:
+_up_write_firmware () { #write firmware files on board, you got files name in parameter, after that stb should boot new firmware
+	HASH=$1
+	shift
+
+	SLOT=
+	#get current slot number from /proc/cmdline
+	for CMD in `cat /proc/cmdline`; do
+		#try to find slot=n kernel parameter
+		if [ "$(echo $CMD | cut -d'=' -f 1)" = "slot" ]; then
+			SLOT=$(echo $CMD | cut -d'=' -f 2)
+			echo "I:0980: Found slot number $SLOT in kernel commandline"
+			break
+		fi
+	done
+
+	if [ -z "$SLOT" ]; then
+		#we did not find slot in kernel commandline
+		echo "I:0980: Warning - falling back to slot selection based on NVRAM"
+		SLOT=`setnv | grep "^SV_SLOT=" | tail -n 1 | cut -d'=' -f2-`
+		if [ -z "$SLOT" ]; then
+			exit_upgrade 103 "Unable to get current slot number"
+		fi
+	fi
+
+	#upgrade to inverted slot number (0->1 or 1->0)
+	SLOT=$(( ! $SLOT ))
+	echo "I:0981: selected slot #$SLOT"
+
+	#set partiotion paths
+    SPART=`cat /proc/mtd | grep "\<slot$(( $SLOT ))\>" | cut -d':' -f1`
+	KPART=`cat /proc/mtd | grep "\<vmlinuz$(( $SLOT ))\>" | cut -d':' -f1`
+	RPART=`cat /proc/mtd | grep "\<rootfs$(( $SLOT ))\>" | cut -d':' -f1`
+	LPART=`cat /proc/mtd | grep "\<logo$(( $SLOT ))\>" | cut -d':' -f1`
+	[ -z "$LPART" ] && LPART=`cat /proc/mtd | grep "\<logo\>" | cut -d':' -f1`
+	UPART=`grep ".d.$" /proc/partitions | head -n1 | sed "s/.*\(.d.\)$/\1/g"`$(( _UPGRADE_USR_BASE_PART_NO_ + SLOT ));
+	if [ -z "$(echo '_UPGRADE_FILES_' | grep -s '\bROOTFS.vmx\b\|\bROOTFS.latens\b\|\bBOOTIMAGE.vmx\b\|\bBOOTIMAGE.qb\b')" ]; then
+		[ -z "$KPART" -o -z "$RPART" ] && exit_upgrade 103 "flash partition not found";
+	elif echo '_UPGRADE_FILES_' | grep -s '\bBOOTIMAGE.vmx\b\|\bBOOTIMAGE.qb\b'; then
+        [ -z "$SPART" ] && exit_upgrade 103 "flash partition not found";
+    else
+		[ -z "$KPART" ] && exit_upgrade 103 "flash partition not found";
+	fi
+
+    echo $SPART > SPART
+	echo $KPART > KPART
+	echo $RPART > RPART
+	echo $LPART > LPART
+	echo $UPART > UPART
+
+	#help function
+	_up_write_and_feedback () {
+		PIPE="$1.pipe"
+		FILE="$1"
+		WRITER="$2"
+		DEVICE="$3"
+		OPTIONAL="$4"
+
+		mkfifo $FILE.wc.pipe
+		{ #feedback
+			if [ ! -z "$DEVICE" -a -e "$DEVICE" ]; then #only if device defined
+				mkfifo $FILE
+				echo $WRITER | grep -q nandwrite
+				if [ $? -eq 0 ]; then
+					cat $FILE.wc.pipe | wc -c > $FILE.size && nandcat -l $(cat $FILE.size) $DEVICE > $FILE;
+				else
+					cat $FILE.wc.pipe | wc -c > $FILE.size && head -c $(cat $FILE.size) $DEVICE > $FILE;
+				fi
+			else
+				cat $FILE.wc.pipe > /dev/null;
+			fi
+		} & #feedback
+
+		cat $PIPE | tar xO $FILE | tee $FILE.wc.pipe | \
+			$WRITER >$PIPE.log 2>&1; \
+			res=$?;
+
+		if [ "$OPTIONAL" = "optional" ] && [ ! -e $FILE.size -o "$(cat $FILE.size)" = "0" ]; then #ok and erase
+			echo 0; [ ! -e "$DEVICE" ] ||  dd if=/dev/zero of=$DEVICE bs=32k count=1;
+		else
+			echo $res;
+		fi > $PIPE.?;
+	}
+
+	#process rootfs in background job, keep background job ID in file back_pids
+	{
+        if echo "_UPGRADE_FILES_" | grep -s "\bBOOTIMAGE.vmx\b"; then
+			if [ -f /sys/class/mtd/$SPART/type ]; then
+				if [ "$(cat /sys/class/mtd/$SPART/type)" = "nand" ]; then
+					flash_eraseall -q /dev/$SPART >/dev/null 2>&1
+					_up_write_and_feedback BOOTIMAGE.vmx "nandwrite -mp /dev/$SPART -" /dev/$SPART
+				else
+					_up_write_and_feedback BOOTIMAGE.vmx "flashcp -v - /dev/$SPART" /dev/$SPART
+				fi
+			else
+				_up_write_and_feedback BOOTIMAGE.vmx "flashcp -v - /dev/$SPART" /dev/$SPART
+			fi
+		elif echo "_UPGRADE_FILES_" | grep -s "\bBOOTIMAGE.qb\b"; then
+			if [ -f /sys/class/mtd/$SPART/type ]; then
+				if [ "$(cat /sys/class/mtd/$SPART/type)" = "nand" ]; then
+					flash_eraseall -q /dev/$SPART >/dev/null 2>&1
+					_up_write_and_feedback BOOTIMAGE.qb "nandwrite -mp /dev/$SPART -" /dev/$SPART
+				else
+					_up_write_and_feedback BOOTIMAGE.qb "flashcp -v - /dev/$SPART" /dev/$SPART
+				fi
+			else
+				_up_write_and_feedback BOOTIMAGE.qb "flashcp -v - /dev/$SPART" /dev/$SPART
+			fi
+		elif echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.sqsh\b"; then
+			if [ -f /sys/class/mtd/$RPART/type ]; then
+				if [ "$(cat /sys/class/mtd/$RPART/type)" = "nand" ]; then
+					flash_eraseall -q /dev/$RPART >/dev/null 2>&1
+					_up_write_and_feedback ROOTFS.sqsh "nandwrite -mp /dev/$RPART -" /dev/$RPART
+				else
+					_up_write_and_feedback ROOTFS.sqsh "flashcp -v - /dev/$RPART" /dev/$RPART
+				fi
+			else
+				_up_write_and_feedback ROOTFS.sqsh "flashcp -v - /dev/$RPART" /dev/$RPART
+			fi
+		elif echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.tgz\b"; then
+			umount /dev/$(echo $RPART | sed s/mtd/mtdblock/) 2>/dev/null
+			flash_eraseall -q /dev/$RPART >/dev/null 2>&1
+			mkdir -p ROOTFS.mountpoint
+			mount -t jffs2 /dev/$(echo $RPART | sed s/mtd/mtdblock/) ROOTFS.mountpoint
+			_up_write_and_feedback ROOTFS.tgz "tar zx -C ROOTFS.mountpoint"
+			umount ROOTFS.mountpoint
+			sync
+		elif echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.ubi\b"; then
+			ubi_create_ctrl
+			UBI_NUM=`echo $RPART | sed "s/mtd\([[:digit:]]*\)/\1/"`
+			umount `mount | grep "ubi$(($UBI_NUM)):UBI_rootfs$(( $SLOT ))" | cut -d' ' -f3` >/dev/null 2>&1
+			ubi_attach $UBI_NUM $RPART
+			UBI_SIZE=`grep ROOTFS.ubi image.sizes | sed -e 's/ROOTFS.*=//'`
+			ubimkvol /dev/shm/ubi$UBI_NUM -t static -N UBI_rootfs$(( $SLOT )) -s $UBI_SIZE >/dev/null 2>&1
+			UBI_VOL="ubi"$UBI_NUM"_0"
+			rm -rf /dev/shm/$UBI_VOL
+			mknod /dev/shm/$UBI_VOL c `cat "/sys/class/ubi/$UBI_VOL/dev" | cut -d: -f1` `cat "/sys/class/ubi/$UBI_VOL/dev" | cut -d: -f2`
+			_up_write_and_feedback ROOTFS.ubi "ubiupdatevol /dev/shm/$UBI_VOL -s $UBI_SIZE -"
+		elif echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.vmx\b"; then
+			if [ -f /sys/class/mtd/$KPART/type ]; then
+				if [ "$(cat /sys/class/mtd/$KPART/type)" = "nand" ]; then
+					flash_eraseall -q /dev/$KPART >/dev/null 2>&1
+					_up_write_and_feedback ROOTFS.vmx "nandwrite -mp /dev/$KPART -" /dev/$KPART
+				else
+					_up_write_and_feedback ROOTFS.vmx "flashcp -v - /dev/$KPART" /dev/$KPART
+				fi
+			else
+				_up_write_and_feedback ROOTFS.vmx "flashcp -v - /dev/$KPART" /dev/$KPART
+			fi
+		elif echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.latens\b"; then
+			_up_write_and_feedback ROOTFS.latens "dd of=/tmp/latens.img" /tmp/latens.img &
+		fi
+
+	} &
+
+	#process kernel in background job, keep background job ID in file back_pids
+	if [ -z "$(echo '_UPGRADE_FILES_' | grep -s '\bROOTFS.vmx\b\|\bROOTFS.latens\b\|\bBOOTIMAGE.vmx\b')" ]; then
+		if [ -f /sys/class/mtd/$KPART/type ]; then
+			if [ "$(cat /sys/class/mtd/$KPART/type)" = "nand" ]; then
+				flash_eraseall -q /dev/$KPART >/dev/null 2>&1
+				_up_write_and_feedback KERNEL.gz "nandwrite -mp /dev/$KPART -" /dev/$KPART &
+			else
+				_up_write_and_feedback KERNEL.gz "flashcp -v - /dev/$KPART" /dev/$KPART &
+			fi
+		else
+			_up_write_and_feedback KERNEL.gz "flashcp -v - /dev/$KPART" /dev/$KPART &
+		fi
+	fi
+
+	#process usr optional partition
+	_up_write_and_feedback USR.sqsh "dd of=" /dev/$UPART optional &
+
+	#process logo only if it different than current one
+	# the package may not contain logo
+	echo "I:0990: processing logo"
+	skip_logo () {
+		echo 0 > LOGO.bin.pipe.?; echo "I:0999: $1, skipped"; exit 0;
+	};
+
+	{
+		cat LOGO.bin.pipe | tar x LOGO.bin || skip_logo "logo not found in pack";
+		[ -z "$LPART" -o ! -e /dev/$LPART ] && skip_logo "logo partition not found";
+		[ ! -e LOGO.bin ] && skip_logo "logo partition not found";
+		if [ -f /sys/class/mtd/$LPART/type ]; then
+			if [ "$(cat /sys/class/mtd/$LPART/type)" = "nand" ]; then
+				nandcat -l `cat LOGO.bin | wc -c` /dev/$LPART | cmp -s LOGO.bin - && skip_logo "logo not changed"
+				flash_eraseall -q /dev/$LPART >/dev/null 2>&1
+				nandwrite -mp /dev/$LPART LOGO.bin >/dev/null 2>&1; echo $? > LOGO.bin.pipe.?;
+			else
+				head -c `cat LOGO.bin | wc -c` /dev/$LPART | cmp -s LOGO.bin - && skip_logo "logo not changed"
+				flashcp -v LOGO.bin /dev/$LPART >/dev/null 2>&1; echo $? > LOGO.bin.pipe.?;
+			fi
+		else
+			head -c `cat LOGO.bin | wc -c` /dev/$LPART | cmp -s LOGO.bin - && skip_logo "logo not changed"
+			flashcp -v LOGO.bin /dev/$LPART >/dev/null 2>&1; echo $? > LOGO.bin.pipe.?;
+		fi
+	} & echo $! >> back_pids
+
+	#keep slot it and HASH for firmware confirmation
+	echo $SLOT > SLOT;
+	echo $HASH > HASH;
+}
+
+_up_verify_firmware () {
+	res="empty" #no additional firmware verification is requared
+}
+
+_up_confirm_firmware () {
+	SLOT=`cat SLOT`
+	HASH=`cat HASH`
+	[ -z "$SLOT" ] && exit_upgrade 104 "slot number file not found"
+	[ -z "$HASH" ] && exit_upgrade 104 "hash file not found"
+	if [ -z "$(echo '_UPGRADE_FILES_' | grep -s '\bROOTFS.vmx\b\|\bROOTFS.latens\b\|\bBOOTIMAGE.vmx\b')" ]; then
+		setnv SV_SLOT "$SLOT" SV_STATUS "NEW" SV_VERSION "$HASH" \
+			$(cat $FW_NAME.sig | grep "KERNEL\|ROOTFS\|LOGO" | sed -e "s/KERNEL.*=/vmlinuz${SLOT}_sign /g" -e "s/ROOTFS.*=/rootfs${SLOT}_sign /" -e "s/LOGO.*=/splash_sign /") \
+			$(cat image.sizes | grep "KERNEL\|LOGO" | sed -e "s/KERNEL.*=/vmlinuz${SLOT}_size /g" -e "s/LOGO.*=/splash_size /g")
+	else
+		setnv SV_SLOT "$SLOT" SV_STATUS "NEW" SV_VERSION "$HASH" \
+			$(cat $FW_NAME.sig | grep "LOGO" | sed -e "s/LOGO.*=/splash_sign /") \
+			$(cat image.sizes | grep "LOGO" | sed -e "s/LOGO.*=/splash_size /g")
+	fi
+}
+
+_up_latens_verify_and_write () {
+        SLOT=`cat SLOT`
+        KPART=`cat KPART`
+        latens_sign_verifier /tmp/latens.img
+        if [ $? -ne 0 ]; then
+                return 1
+        else
+                if [[ -f /sys/class/mtd/$KPART/type ]]; then
+                        if [[ `cat /sys/class/mtd/$KPART/type` == "nand" ]]; then
+                                flash_eraseall -q /dev/$KPART >/dev/null 2>&1
+                                nandwrite -mp /dev/$KPART /tmp/latens.img
+                        else
+                                flashcp -v /tmp/latens.img /dev/$KPART
+                        fi
+                else
+                        flashcp -v /tmp/latens.img /dev/$KPART
+                fi
+                return 0
+        fi
+}
+
+#Optional variable which you may need in your procedures, will be initialized with initial environment
+#if you need to overwrite some already initialized variables this place is good for that purposes
+#SOME_VARIABLE="SOME VALUE"
+
+#Optional procedures calling before and after each phase of upgrade, shouldn't be implemented, but do not remove them from here
+_up_before_wait_for_network () {
+        res="empty"
+}
+_up_after_wait_for_network () {
+        res="empty"
+}
+
+_up_before_wait_for_upgrade_server () {
+        res="empty"
+}
+_up_after_wait_for_upgrade_server () {
+        res="empty"
+}
+
+_up_before_version_check () {
+	res="empty"
+}
+_up_after_version_check () {
+	res="empty"
+}
+
+_up_before_initiate_upgrade () {
+	res="empty"
+}
+_up_after_initiate_upgrade () {
+	res="empty"
+}
+
+_up_before_getting_firmware () {
+	res="empty"
+}
+_up_after_getting_firmware () {
+	res="empty"
+}
+
+_up_before_firmware_verification () {
+	res="empty"
+}
+_up_after_firmware_verification () {
+	res="empty"
+}
+
+_up_before_writting_firmware () {
+	res="empty"
+}
+_up_after_writting_firmware () {
+	res="empty"
+}
+
+_up_before_complete () {
+	res="empty"
+}
+_up_after_complete () {
+	res="empty"
+}

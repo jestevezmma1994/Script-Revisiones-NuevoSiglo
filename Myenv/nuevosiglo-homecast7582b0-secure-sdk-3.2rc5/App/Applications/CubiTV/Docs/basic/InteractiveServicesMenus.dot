@@ -1,0 +1,45 @@
+digraph InteractiveServicesMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    InteractiveServicesMenus [label="Interactive services menus" root=true]
+
+    dlna [label="DLNA"]
+    dlnaCarouselItemChoice
+    dlnaCarouselItemController
+    EventIS [label="Traxis/EventIS"]
+    EventISCarouselItemChoice
+    EventISCarouselItemController
+    innov8on [label="Innov8on/CubiMW"]
+    innov8onCarouselItemChoice
+    innov8onCarouselItemController
+    MStore
+    MStoreCarouselItemChoice
+    MStoreCarouselItemController
+    SocialMedia [label="Social Media/Facebook"]
+    QBSocialMediaRemoteAction
+    socialMediaCarouselItemChoice
+    socialMediaCarouselItemController
+    socialMediaInfo
+    socialMediaSlot
+    carouselMenu
+
+    InteractiveServicesMenus -> dlna
+    InteractiveServicesMenus -> EventIS
+    InteractiveServicesMenus -> innov8on
+    InteractiveServicesMenus -> MStore
+    InteractiveServicesMenus -> SocialMedia
+    InteractiveServicesMenus -> carouselMenu
+    dlna -> dlnaCarouselItemChoice
+    dlna -> dlnaCarouselItemController
+    EventIS -> EventISCarouselItemChoice
+    EventIS -> EventISCarouselItemController
+    innov8on -> innov8onCarouselItemChoice
+    innov8on -> innov8onCarouselItemController
+    MStore -> MStoreCarouselItemChoice
+    MStore -> MStoreCarouselItemController
+    SocialMedia -> QBSocialMediaRemoteAction
+    SocialMedia -> socialMediaCarouselItemChoice
+    SocialMedia -> socialMediaCarouselItemController
+    SocialMedia -> socialMediaInfo
+    SocialMedia -> socialMediaSlot
+}

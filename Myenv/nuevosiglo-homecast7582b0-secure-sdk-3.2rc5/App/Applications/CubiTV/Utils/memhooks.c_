@@ -1,0 +1,365 @@
+/*****************************************************************************
+** Cubiware Sp. z o.o. Software License Version 1.0
+**
+** Copyright (C) 2008-2010 Cubiware Sp. z o.o. All rights reserved.
+**
+** Any rights which are not expressly granted in this License are entirely and
+** exclusively reserved to and by Cubiware Sp. z o.o. You may not rent, lease,
+** modify, translate, reverse engineer, decompile, disassemble, or create
+** derivative works based on this Software. You may not make access to this
+** Software available to others in connection with a service bureau,
+** application service provider, or similar business, or make any other use of
+** this Software without express written permission from Cubiware Sp. z o.o.
+**
+** Any User wishing to make use of this Software must contact
+** Cubiware Sp. z o.o. to arrange an appropriate license. Use of the Software
+** includes, but is not limited to:
+** (1) integrating or incorporating all or part of the code into a product for
+**     sale or license by, or on behalf of, User to third parties;
+** (2) distribution of the binary or source code to third parties for use with
+**     a commercial product sold or licensed by, or on behalf of, User.
+******************************************************************************/
+
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <malloc.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <stdio.h>
+
+
+typedef struct memhooks_blk_ {
+    void *addr;
+    struct memhooks_blk_ *ht_next;
+    size_t size;
+    uint8_t flags;
+    uint8_t stack_trace_depth;
+    uint16_t generation;
+    const void *stack_trace[1];
+} memhooks_blk;
+
+// block flags
+#define MEMHOOKS_CLEARED    0x01
+#define MEMHOOKS_ALIGNED    0x02
+#define MEMHOOKS_REALLOC    0x04
+
+#define MEMHOOKS_HTSIZE     299993
+static void *memhooks_ht[MEMHOOKS_HTSIZE];
+
+static pthread_mutex_t memhooks_lock = PTHREAD_MUTEX_INITIALIZER;
+
+// global counters
+static long long int memhooks_total_mem = 0;
+static long long int memhooks_total_allocs = 0;
+static long long int memhooks_total_reallocs = 0;
+static long long int memhooks_total_frees = 0;
+
+// generation counters
+static unsigned int memhooks_generation = 0;
+static long long int memhooks_gen_mem = 0;
+static long long int memhooks_gen_allocs = 0;
+static long long int memhooks_gen_reallocs = 0;
+static long long int memhooks_gen_frees = 0;
+
+
+static void *memhooks_malloc_hook(size_t, const void *);
+static void *memhooks_realloc_hook(void *, size_t, const void *);
+static void memhooks_free_hook(void *, const void *);
+static void *memhooks_memalign_hook(size_t, size_t, const void *);
+
+extern void memhooks_dump_stats(void);
+extern void memhooks_dump_blocks(bool);
+
+
+static inline unsigned int memhooks_hash_address(void *addr)
+{
+    return (unsigned int)(((uintptr_t) addr) % MEMHOOKS_HTSIZE);
+}
+
+static void __attribute__ ((format (printf, 1, 2))) memhooks_log(const char *fmt, ...)
+{
+    static char buffer[4095];
+    va_list args;
+    size_t len;
+
+    va_start(args, fmt);
+    len = vsnprintf(buffer, sizeof(buffer) - 1, fmt, args);
+    va_end(args);
+    buffer[len++] = '\n';
+    write(STDERR_FILENO, buffer, len);
+}
+
+
+static void *memhooks_malloc_hook(size_t size, const void *caller)
+{
+    memhooks_blk *blk;
+    unsigned int i;
+    void *addr;
+    size_t s;
+
+    pthread_mutex_lock(&memhooks_lock);
+
+    s = ((size + 7U) & ~7U);
+    __malloc_hook = NULL;
+    addr = malloc(s + sizeof(memhooks_blk));
+    i = memhooks_hash_address(addr);
+    //memhooks_log("memhooks: allocated blk %p of size %zd B", addr, size);
+    __malloc_hook = memhooks_malloc_hook;
+
+    blk = (void *)((char *) addr + s);
+    blk->addr = addr;
+    blk->size = size;
+    blk->flags = 0;
+    blk->stack_trace_depth = 1;
+    blk->generation = (memhooks_generation % 0xffff) + 1;
+    blk->stack_trace[0] = caller;
+    blk->ht_next = memhooks_ht[i];
+    memhooks_ht[i] = blk;
+
+    memhooks_total_mem += size;
+    memhooks_total_allocs++;
+    memhooks_gen_mem += size;
+    memhooks_gen_allocs++;
+
+    pthread_mutex_unlock(&memhooks_lock);
+
+    return addr;
+}
+
+static void *memhooks_realloc_hook(void *addr, size_t size, const void *caller)
+{
+    memhooks_blk *blk, *new_blk;
+    void *new_addr;
+    unsigned int i;
+    size_t s;
+
+    if (!addr) {
+        return memhooks_malloc_hook(size, caller);
+    } else if (!size) {
+        memhooks_free_hook(addr, caller);
+        return NULL;
+    }
+
+    pthread_mutex_lock(&memhooks_lock);
+
+    i = memhooks_hash_address(addr);
+    blk = memhooks_ht[i];
+    while (blk && blk->addr != addr)
+        blk = blk->ht_next;
+    if (!blk) {
+        // sometimes that happens
+        memhooks_log("memhooks: reallocating non-allocated blk %p!", blk);
+        __realloc_hook = NULL;
+        addr = realloc(addr, size);
+        __realloc_hook = memhooks_realloc_hook;
+        pthread_mutex_unlock(&memhooks_lock);
+        return addr;
+    } else if ((blk->flags & MEMHOOKS_ALIGNED)) {
+        memhooks_log("memhooks: reallocating aligned blk %p!", blk);
+        abort();
+    } else if (size <= blk->size && (blk->size - size) < 256) {
+        // ignore
+        pthread_mutex_unlock(&memhooks_lock);
+        return addr;
+    }
+
+    s = ((size + 7U) & ~7U);
+    __malloc_hook = NULL;
+    new_addr = malloc(s + sizeof(memhooks_blk));
+    i = memhooks_hash_address(new_addr);
+    //memhooks_log("memhooks: reallocating blk %p of size %zd B to %p of size %zd B", addr, blk->size, new_addr, size);
+    __malloc_hook = memhooks_malloc_hook;
+    memcpy(new_addr, addr, size > blk->size ? blk->size : size);
+
+    new_blk = (void *)((char *) new_addr + s);
+    new_blk->addr = new_addr;
+    new_blk->size = size;
+    new_blk->flags = MEMHOOKS_REALLOC;
+    new_blk->stack_trace_depth = 1;
+    new_blk->generation = (memhooks_generation % 0xffff) + 1;
+    new_blk->stack_trace[0] = caller;
+    new_blk->ht_next = memhooks_ht[i];
+    memhooks_ht[i] = new_blk;
+
+    memhooks_total_mem += size;
+    memhooks_total_mem -= blk->size;
+    memhooks_total_reallocs++;
+    memhooks_gen_mem += size;
+    memhooks_gen_mem -= blk->size;
+    memhooks_gen_reallocs++;
+
+    pthread_mutex_unlock(&memhooks_lock);
+
+    memhooks_free_hook(addr, caller);
+
+    return new_addr;
+}
+
+static void memhooks_free_hook(void *addr, const void *caller)
+{
+    memhooks_blk *prev = NULL, *b;
+    unsigned int i;
+
+    if (!addr)
+        return;
+
+    pthread_mutex_lock(&memhooks_lock);
+
+    i = memhooks_hash_address(addr);
+    b = memhooks_ht[i];
+    while (b && b->addr != addr) {
+        prev = b;
+        b = b->ht_next;
+    }
+    if (!b) {
+        // sometimes that happens
+        memhooks_log("memhooks: freeing unknown blk %p!", addr);
+        pthread_mutex_unlock(&memhooks_lock);
+        return;
+    }
+
+    //memhooks_log("memhooks: freeing blk %p of size %zd B", addr, b->size);
+
+    if (!prev)
+        memhooks_ht[i] = b->ht_next;
+    else
+        prev->ht_next = b->ht_next;
+
+    memhooks_total_mem -= b->size;
+    memhooks_total_frees++;
+    memhooks_gen_mem -= b->size;
+    memhooks_gen_frees++;
+
+    // free block
+    __free_hook = NULL;
+    free(addr);
+    __free_hook = memhooks_free_hook;
+
+    pthread_mutex_unlock(&memhooks_lock);
+}
+
+static void *memhooks_memalign_hook(size_t alignment, size_t size, const void *caller)
+{
+    memhooks_blk *blk;
+    unsigned int i;
+    void *addr;
+    size_t s;
+
+    pthread_mutex_lock(&memhooks_lock);
+
+    s = ((size + 7U) & ~7U);
+    __memalign_hook = NULL;
+    addr = memalign(alignment, s + sizeof(memhooks_blk));
+    __memalign_hook = memhooks_memalign_hook;
+    i = memhooks_hash_address(addr);
+
+    //memhooks_log("memhooks: allocated blk %p of size %zd B aligned to %zd B", addr, size, alignment);
+
+    blk = (void *)((char *) addr + s);
+    blk->addr = addr;
+    blk->size = size;
+    blk->flags = MEMHOOKS_ALIGNED;
+    blk->stack_trace_depth = 1;
+    blk->generation = (memhooks_generation % 0xffff) + 1;
+    blk->stack_trace[0] = caller;
+    blk->ht_next = memhooks_ht[i];
+    memhooks_ht[i] = blk;
+
+    memhooks_total_mem += size;
+    memhooks_total_allocs++;
+    memhooks_gen_mem += size;
+    memhooks_gen_allocs++;
+
+    pthread_mutex_unlock(&memhooks_lock);
+
+    return addr;
+}
+
+static void memhooks_init_hook(void)
+{
+    __malloc_hook = memhooks_malloc_hook;
+    __realloc_hook = memhooks_realloc_hook;
+    __free_hook = memhooks_free_hook;
+    __memalign_hook = memhooks_memalign_hook;
+}
+
+void (*__malloc_initialize_hook)(void) = memhooks_init_hook;
+
+
+static void memhooks_dump_stats_(void)
+{
+    memhooks_log("         total: %9lld B in %6lld blocks (%lld allocs, %lld reallocs, %lld frees)",
+                 memhooks_total_mem, memhooks_total_allocs - memhooks_total_frees,
+                 memhooks_total_allocs, memhooks_total_reallocs, memhooks_total_frees);
+    memhooks_log("generation %3u: %9lld B in %6lld blocks (%lld allocs, %lld reallocs, %lld frees)",
+                 memhooks_generation + 1,
+                 memhooks_gen_mem, memhooks_gen_allocs - memhooks_gen_frees,
+                 memhooks_gen_allocs, memhooks_gen_reallocs, memhooks_gen_frees);
+}
+
+static void memhooks_dump_blocks_(bool incremental)
+{
+    unsigned int i, full_gen, curr_gen, next_gen;
+    memhooks_blk *blk;
+
+    curr_gen = memhooks_generation % 0xffff + 1;
+    next_gen = (memhooks_generation + 1) % 0xffff + 1;
+
+    for (i = 0; i < MEMHOOKS_HTSIZE; i++) {
+        for (blk = memhooks_ht[i]; blk; blk = blk->ht_next) {
+            if (!incremental) {
+                full_gen = memhooks_generation - memhooks_generation % 0xffff + blk->generation;
+                if (blk->generation > curr_gen)
+                    full_gen -= 0xffff;
+                memhooks_log("  %5u B @ %p  %p %2u %s%s",
+                             blk->size, blk->addr, blk->stack_trace[0], full_gen,
+                             ((blk->flags & MEMHOOKS_ALIGNED)) ? "A" : "",
+                             ((blk->flags & MEMHOOKS_REALLOC)) ? "R" : "");
+            } else {
+                if (blk->generation == curr_gen) {
+                    memhooks_log("  %5u B @ %p  %p %s%s",
+                                 blk->size, blk->addr, blk->stack_trace[0],
+                                 ((blk->flags & MEMHOOKS_ALIGNED)) ? "A" : "",
+                                 ((blk->flags & MEMHOOKS_REALLOC)) ? "R" : "");
+                } else if (blk->generation == next_gen) {
+                    // mark block as belonging to the oldest generation
+                    blk->generation = 0;
+                }
+            }
+        }
+    }
+
+    if (incremental) {
+        memhooks_generation++;
+        memhooks_gen_mem = 0;
+        memhooks_gen_allocs = 0;
+        memhooks_gen_reallocs = 0;
+        memhooks_gen_frees = 0;
+    }
+}
+
+void memhooks_dump_stats(void)
+{
+    pthread_mutex_lock(&memhooks_lock);
+
+    memhooks_log("-------- memhooks --------\n");
+    memhooks_dump_stats_();
+    memhooks_log("------------------------\n");
+
+    pthread_mutex_unlock(&memhooks_lock);
+}
+
+void memhooks_dump_blocks(bool incremental)
+{
+    pthread_mutex_lock(&memhooks_lock);
+
+    memhooks_log("-------- memhooks --------");
+    memhooks_dump_stats_();
+    memhooks_dump_blocks_(incremental);
+    memhooks_log("------------------------");
+
+    pthread_mutex_unlock(&memhooks_lock);
+}

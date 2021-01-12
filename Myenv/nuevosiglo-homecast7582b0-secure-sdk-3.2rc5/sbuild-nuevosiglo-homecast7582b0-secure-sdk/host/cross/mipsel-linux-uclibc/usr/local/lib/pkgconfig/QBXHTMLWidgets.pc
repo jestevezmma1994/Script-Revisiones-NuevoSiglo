@@ -1,0 +1,6 @@
+Name: QBXHTMLWidgets
+Version: 1.0.0
+Requires: CUIT QBAppKit QBContentManager QBDataModel3 QBResourceManager QBSmartCardMonitor QBStringUtils QBWidgets SvCore SvFoundation swl 
+Description: Library providing XHTML Widgets infrastructure
+Libs: -lQBXHTMLWidgets 
+CFlags: 

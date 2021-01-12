@@ -1,0 +1,6 @@
+Name: sv-list
+Version: 1.0.0
+Requires: 
+Description: Simple Intrusive List Library
+Libs: -lsv-list 
+CFlags: 

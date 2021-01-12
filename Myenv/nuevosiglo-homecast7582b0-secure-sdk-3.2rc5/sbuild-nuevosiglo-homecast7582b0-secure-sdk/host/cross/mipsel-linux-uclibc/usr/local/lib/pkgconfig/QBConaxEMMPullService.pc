@@ -1,0 +1,6 @@
+Name: QBConaxEMMPullService
+Version: 1.0.0
+Requires: QBAppKit QBContentSource QBSmartCardMonitor QBSmartcard2-interface QBTextUtils SvCore SvHTTPClient 
+Description: Service for performing Conax EMM pull
+Libs: -lQBConaxEMMPullService 
+CFlags: 

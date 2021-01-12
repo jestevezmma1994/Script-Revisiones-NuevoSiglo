@@ -1,0 +1,9 @@
+#!/bin/sh
+set -a
+. ${SRM_ENV}
+C_INCLUDE_PATH=${CROSS_ROOT}/lib/gcc-lib/${CROSS_ARCH}/${V_GCC}/include:${CROSS_ROOT}/usr/include
+CPLUS_INCLUDE_PATH=${CROSS_ROOT}/usr/include/c++/${V_GCC}:${CROSS_ROOT}/usr/include/c++/${V_GCC}/${CROSS_ARCH}:${CROSS_ROOT}/usr/include/c++/${V_GCC}/backward:${C_INCLUDE_PATH}
+LIBRARY_PATH=${CROSS_ROOT}/lib/gcc-lib/${CROSS_ARCH}/${V_GCC}:${CROSS_ROOT}/lib:${CROSS_ROOT}/usr/lib
+COMPILER_PATH=${CROSS_PATH}/bin
+unset CPATH
+set +a

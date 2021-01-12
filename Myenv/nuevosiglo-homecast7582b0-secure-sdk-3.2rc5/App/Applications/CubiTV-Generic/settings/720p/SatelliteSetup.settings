@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<settings version="2.0"
+          xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="Title.settings"/>
+    <xi:include href="CustomerLogo.settings"/>
+    <xi:include href="fonts.settings"/>
+
+    <widget name="VerticalMenu-template">
+        <common>
+            <param tag="width"><int>476</int></param>
+            <param tag="height"><int>400</int></param>
+        </common>
+        <param tag="xOffset"><int>274</int></param>
+        <param tag="yOffset"><int>112</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="activeItemYOffset"><int>148</int></param>
+        <param tag="itemSpacing"><int>54</int></param>
+        <param tag="scrollDuration"><double>0.2</double></param>
+        <param tag="vertPadding"><int>18</int></param>
+        <widget name="Bg">
+            <param tag="bg"><bitmap><path>bg_xmb_dark.png</path></bitmap></param>
+        </widget>
+        <widget name="ScrollBar">
+            <param tag="xOffset"><int>458</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>12</int></param>
+            <param tag="orientation"><string>vertical</string></param>
+            <param tag="hasArrows"><bool>false</bool></param>
+            <param tag="slider"><bitmap width="12" height="22"><path>rollover.png</path></bitmap></param>
+            <param tag="minSliderSize"><int>22</int></param>
+        </widget>
+    </widget>
+
+    <widget name="MenuItem">
+        <param tag="xOffset"><int>80</int></param>
+        <param tag="yOffset"><int>36</int></param>
+        <param tag="width"><int>800</int></param>
+        <param tag="height"><int>66</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="focusFadeTime"><double>0.3</double></param>
+        <param tag="showTime"><double>0.3</double></param>
+        <param tag="focusMinWidth"><int>237</int></param>
+        <param tag="hideInactiveText"><bool>true</bool></param>
+        <param tag="hideInactiveFocus"><bool>true</bool></param>
+        <widget name="focus">
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="minWidth"><int>100</int></param>
+            <param tag="maxWidth"><int>810</int></param>
+        </widget>  
+    </widget>
+
+    <widget name="Label-template">
+        <param tag="xOffset"><int>40</int></param>
+        <param tag="yOffset"><int>146</int></param>
+        <param tag="width"><int>588</int></param>
+        <param tag="height"><int>39</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+        <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+    </widget>
+
+    <widget name="ComboBox-template">
+        <common>
+            <param tag="width"><int>476</int></param>
+            <param tag="height"><int>39</int></param>
+        </common>
+        <param tag="xOffset"><int>677</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <widget name="Active">
+            <param tag="bg"><bitmap><path>combo_focus.png</path></bitmap></param>
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+        <widget name="Inactive">
+            <param tag="bg"><bitmap><path>combo_nonfocus.png</path></bitmap></param>
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+        <widget name="Label">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>6</int></param>
+            <param tag="width"><int>376</int></param>
+            <param tag="height"><int>27</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+        </widget>
+        <widget name="ChoiceIndicatorActive">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>28</int></param>
+            <param tag="height"><int>20</int></param>
+            <param tag="bg"><bitmap><path>arrow/arrow_full_down_active.png</path></bitmap></param>
+        </widget>
+        <widget name="ChoiceIndicatorInactive">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>28</int></param>
+            <param tag="height"><int>20</int></param>
+            <param tag="bg"><bitmap><path>arrow/arrow_full_down_inactive.png</path></bitmap></param>
+        </widget>
+    </widget>
+
+    <widget name="ComboBox-template-wide" import="ComboBox-template">
+        <common>
+            <param tag="width"><int>901</int></param>
+            <param tag="height"><int>46</int></param>
+        </common>
+        <widget name="Label">
+            <param tag="xOffset"><int>56</int></param>
+            <param tag="yOffset"><int>7</int></param>
+            <param tag="width"><int>786</int></param>
+            <param tag="height"><int>32</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+        </widget>
+        <widget name="ChoiceIndicatorActive">
+            <param tag="yOffset"><int>13</int></param>
+            <param tag="xOffset"><int>18</int></param>
+        </widget>
+        <widget name="ChoiceIndicatorInactive">
+            <param tag="yOffset"><int>13</int></param>
+            <param tag="xOffset"><int>18</int></param>
+        </widget>
+    </widget>
+
+    <widget name="Window">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+	</widget>
+
+    <widget name="Frame1">
+        <param tag="xOffset"><int>70</int></param>
+        <param tag="yOffset"><int>187</int></param>
+        <param tag="width"><int>549</int></param>
+        <param tag="height"><int>87</int></param>
+        <param tag="bg"><bitmap><path>bar_gradient.png</path></bitmap></param>
+    </widget>
+
+    <widget name="Frame2">
+        <param tag="xOffset"><int>654</int></param>
+        <param tag="yOffset"><int>187</int></param>
+        <param tag="width"><int>549</int></param>
+        <param tag="height"><int>87</int></param>
+        <param tag="bg"><bitmap><path>bar_gradient.png</path></bitmap></param>
+    </widget>
+
+    <widget name="LNBSetupLabel" import="Label-template">
+        <param tag="yOffset"><int>200</int></param>
+        <param tag="xOffset"><int>106</int></param>
+        <param tag="width"><int>460</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+        <param tag="text"><string><i18n:gettext>LNB Setup</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="SatelliteInfoLabel" import="Label-template">
+        <param tag="yOffset"><int>200</int></param>
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="width"><int>460</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+        <param tag="text"><string><i18n:gettext>Satellite Info</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="SatelliteLabel" import="Label-template">
+        <param tag="xOffset"><int>70</int></param>
+        <param tag="yOffset"><int>113</int></param>
+        <param tag="width"><int>460</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+        <param tag="text"><string><i18n:gettext>Satellite Name:</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="SatelliteBox" import="ComboBox-template-wide">
+        <param tag="xOffset"><int>278</int></param>
+        <param tag="yOffset"><int>112</int></param>
+    </widget>
+
+    <widget name="SatelliteMenu" import="VerticalMenu-template">
+        <common>
+            <param tag="width"><int>901</int></param>
+            <param tag="height"><int>474</int></param>
+        </common>
+        <param tag="xOffset"><int>278</int></param>
+        <param tag="yOffset"><int>112</int></param>
+        <param tag="activeItemYOffset"><int>140</int></param>
+        <widget name="Bg">
+            <param tag="width"><int>901</int></param>
+        </widget>
+    </widget>
+
+    <widget name="LNBTypeLabel" import="Label-template">
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>252</int></param>
+        <param tag="text"><string><i18n:gettext>LNB Type</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="LNBTypeBox" import="ComboBox-template">
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>292</int></param>
+    </widget>
+
+    <widget name="LNBTypeMenu" import="VerticalMenu-template">
+        <common>
+            <param tag="height"><int>248</int></param>
+        </common>
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>292</int></param>
+        <param tag="activeItemYOffset"><int>76</int></param>
+    </widget>
+
+    <widget name="DiSEqCPortLabel" import="Label-template">
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>350</int></param>
+        <param tag="text"><string><i18n:gettext>DiSEqC Switch</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="DiSEqCPortBox" import="ComboBox-template">
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>390</int></param>
+    </widget>
+
+    <widget name="DiSEqCPortMenu" import="VerticalMenu-template">
+        <common>
+            <param tag="height"><int>248</int></param>
+        </common>
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>390</int></param>
+        <param tag="activeItemYOffset"><int>76</int></param>
+    </widget>
+
+    <widget name="ToneSwitchLabel" import="Label-template">
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>448</int></param>
+        <param tag="text"><string><i18n:gettext>22 kHz Tone</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="ToneSwitchBox" import="ComboBox-template">
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>488</int></param>
+    </widget>
+
+    <widget name="ToneSwitchMenu" import="VerticalMenu-template">
+        <common>
+            <param tag="height"><int>190</int></param>
+        </common>
+        <param tag="xOffset"><int>105</int></param>
+        <param tag="yOffset"><int>488</int></param>
+        <param tag="activeItemYOffset"><int>76</int></param>
+    </widget>
+
+    <widget name="TranspondersCountLabel" import="Label-template">
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="yOffset"><int>252</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="text"><string><i18n:gettext>Available Transponders</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="TranspondersCountField" import="Label-template">
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="yOffset"><int>282</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="text"><string></string></param>
+    </widget>
+
+    <widget name="FreqRangeLabel" import="Label-template">
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="yOffset"><int>330</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="text"><string><i18n:gettext>Frequency Range</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="FreqRangeField" import="Label-template">
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="yOffset"><int>360</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="text"><string></string></param>
+    </widget>
+
+    <widget name="LOFLabel" import="Label-template">
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="yOffset"><int>408</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="text"><string><i18n:gettext>Local Oscillator Frequency</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="LOFField" import="Label-template">
+        <param tag="xOffset"><int>694</int></param>
+        <param tag="yOffset"><int>438</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="text"><string></string></param>
+    </widget>
+
+    <widget name="Strength">
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="height"><int>25</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </common>
+        <widget name="Title">
+            <param tag="width"><int>210</int></param>
+            <param tag="xOffset"><int>694</int></param>
+            <param tag="yOffset"><int>491</int></param>
+            <param tag="text"><string><i18n:gettext>Signal Strength</i18n:gettext></string></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+        <widget name="Gauge">
+            <param tag="width"><int>210</int></param>
+            <param tag="height"><int>29</int></param>
+            <param tag="xOffset"><int>694</int></param>
+            <param tag="bg"><bitmap><path>bar_indicator_empty.png</path></bitmap></param>
+            <param tag="bar"><bitmap><path>bar_indicator_full.png</path></bitmap></param>
+            <param tag="yOffset"><int>526</int></param>
+        </widget>
+    </widget>
+
+    <widget name="Quality">
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="height"><int>25</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </common>
+        <widget name="Title">
+            <param tag="width"><int>210</int></param>
+            <param tag="xOffset"><int>929</int></param>
+            <param tag="yOffset"><int>491</int></param>
+            <param tag="text"><string><i18n:gettext>Signal Quality</i18n:gettext></string></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+        <widget name="Gauge">
+            <param tag="width"><int>210</int></param>
+            <param tag="height"><int>29</int></param>
+            <param tag="xOffset"><int>929</int></param>
+            <param tag="yOffset"><int>526</int></param>
+            <param tag="bg"><bitmap><path>bar_indicator_empty.png</path></bitmap></param>
+            <param tag="bar"><bitmap><path>bar_indicator_full.png</path></bitmap></param>
+        </widget>
+    </widget>
+
+    <widget name="SaveButton">
+        <param tag="xOffset"><int>250</int></param>
+        <param tag="yOffset"><int>585</int></param>
+        <param tag="width"><int>180</int></param>
+        <param tag="height"><int>41</int></param>
+		<param tag="bg"><bitmap><path>button_focus.png</path></bitmap></param>
+		<param tag="inactiveBg"><bitmap><path>button_nonfocus.png</path></bitmap></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><int>26</int></param>
+        <param tag="textColor"><color>000000ff</color></param>
+        <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+        <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+    </widget>
+
+    <widget name="ChangeIndicator">
+        <param tag="xOffset"><int>1178</int></param>
+        <param tag="yOffset"><int>123</int></param>
+        <param tag="bg"><bitmap><path>icons_rec.png</path></bitmap></param>
+    </widget>
+
+    <widget name="ReservationInfo">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>200</int></param>
+        <param tag="width"><int>1180</int></param>
+        <param tag="height"><int>320</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+        <param tag="textAlign"><string>center</string></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+        <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+        <param tag="text"><string><i18n:gettext>Unable to change settings while recording is active</i18n:gettext></string></param>
+    </widget>
+</settings>

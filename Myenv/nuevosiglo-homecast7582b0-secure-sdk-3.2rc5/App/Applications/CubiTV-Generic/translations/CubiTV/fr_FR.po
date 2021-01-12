@@ -1,0 +1,2314 @@
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-20 14:38+0200\n"
+"PO-Revision-Date: 2012-02-02 15:40+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+msgid " / minute"
+msgstr " /minute"
+
+msgid " H"
+msgstr " H"
+
+msgid " V"
+msgstr " V"
+
+msgid "%A %x"
+msgstr "%A %x"
+
+#, c-format
+msgid "%A %x %X"
+msgstr "%A %x %X"
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "%d heure HD restante"
+msgstr[1] "%d heures HD restantes"
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "%d heure HD restante"
+msgstr[1] "%d heures HD restantes"
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "%d heure SD restante"
+msgstr[1] "%d heures SD restantes"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "%d tentative restante."
+msgstr[1] "%d tentatives restantes"
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d sur %d"
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i chaînes de radio (%i nouvelles ou mises à jour) "
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i chaînes de télévision (%i nouvelles ou mises à jour) "
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i chaîne de radio"
+msgstr[1] "%i chaînes de radio"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i enregistrement"
+msgstr[1] "%i enregistrements"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i rappel"
+msgstr[1] "%i rappels"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i chaîne de télévision"
+msgstr[1] "%i chaînes de télévision"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s : %i chaîne trouvée"
+msgstr[1] "%s : %i chaînes trouvées"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d jour %d h)"
+msgstr[1] "(%d jours %d h)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d jour)"
+msgstr[1] "(%d jours)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d heure)"
+msgstr[1] "(%d heures)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr "(%d h %d min)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%d min)"
+
+msgid "(all)"
+msgstr "(tous)"
+
+msgid "(hard of hearing)"
+msgstr "(malentendants)"
+
+msgid "(no label)"
+msgstr "(pas d'étiquette)"
+
+msgid "(none)"
+msgstr "(aucun)"
+
+msgid "(unsupported)"
+msgstr "(non pris en charge)"
+
+msgid "(visually impaired)"
+msgstr "(déficients visuels)"
+
+msgid "0 recordings"
+msgstr "0 enregistrement"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-ACTUEL"
+
+msgid "000 unknown"
+msgstr "000 inconnu"
+
+msgid "1 minute"
+msgstr "1 minute"
+
+msgid "10 minutes"
+msgstr "10 minutes"
+
+msgid "10 seconds"
+msgstr "10 secondes"
+
+msgid "100GB"
+msgstr "100 Go"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10 Go"
+
+msgid "15 minutes"
+msgstr "15 minutes"
+
+msgid "15 seconds"
+msgstr "15 secondes"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "2 minutes"
+msgstr "2 minutes"
+
+msgid "2 seconds"
+msgstr "2 secondes"
+
+msgid "20 minutes"
+msgstr "20 minutes"
+
+msgid "200GB"
+msgstr "200 Go"
+
+msgid "20GB"
+msgstr "20 Go"
+
+msgid "22 kHz Tone"
+msgstr "Ton 22 kHz"
+
+msgid "30 minutes"
+msgstr "30 minutes"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 minutes"
+
+msgid "5 seconds"
+msgstr "5 secondes"
+
+msgid "500GB"
+msgstr "500 Go"
+
+msgid "50GB"
+msgstr "50 Go"
+
+msgid "576p/480p"
+msgstr "576 p / 480 p"
+
+msgid "720p"
+msgstr "720p"
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+
+msgid "A problem occurred"
+msgstr ""
+
+msgid "A/V Output Settings"
+msgstr "Paramètres de sortie AV"
+
+msgid "A: Over 18"
+msgstr "A : plus de 18 ans"
+
+msgid "About Conax CA"
+msgstr "À propos du CA Conax"
+
+msgid "Access denied"
+msgstr ""
+
+msgid "All tuners are in use"
+msgstr "Aucun tuner n'est disponible"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr ""
+"Aucun tuner n'est disponible. Il y a sans doute trop d'enregistrements en "
+"cours."
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr ""
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Êtes-vous sûr de vouloir abandonner toutes les chaînes ?"
+
+msgid "Are you sure?"
+msgstr "Êtes-vous sûr ?"
+
+msgid "Arts/Culture"
+msgstr "Arts/Culture"
+
+msgid "Ask again later"
+msgstr "Redemander ultérieurement"
+
+msgid "Audio Track"
+msgstr "Bande son"
+
+msgid "Authentication failed. Try again."
+msgstr "Échec de l'authentification. Essayez à nouveau."
+
+msgid "Authentication required"
+msgstr "Authentification requise"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Auto Download"
+msgstr "Téléchargement automatique"
+
+msgid "Auto Install"
+msgstr "Installation automatique"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Suppression automatique des enregistrements les plus anciens"
+
+msgid "Automatic"
+msgstr "Automatique"
+
+msgid "Automatic Channel Scanning"
+msgstr "Recherche automatique des chaînes"
+
+#, c-format
+msgid "Automatic update will start in %u second."
+msgid_plural "Automatic update will start in %u seconds."
+msgstr[0] "La mise à jour automatique démarrera dans %u seconde."
+msgstr[1] "La mise à jour automatique démarrera dans %u secondes."
+
+msgid "Available Transponders"
+msgstr "Transpondeurs disponibles"
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr ""
+
+#, c-format
+msgid "Bad format: %d"
+msgstr ""
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr ""
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Solde : %d jeton"
+msgstr[1] "Solde : %d jetons"
+
+msgid "Band Select"
+msgstr "Sélection de bande"
+
+msgid "Bandwidth"
+msgstr "Bande passante"
+
+msgid "Bandwidth [MHz]"
+msgstr "Bande passante [MHz]"
+
+msgid "Begin format now"
+msgstr "Commencer le formatage maintenant"
+
+msgid "Block Channels"
+msgstr "Bloquer des chaînes"
+
+msgid "Buy"
+msgstr "Acheter"
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "C-band"
+msgstr "Bande C"
+
+msgid "CA PIN has been changed."
+msgstr "Le code PIN du CA a changé."
+
+msgid "CA SYS ID"
+msgstr "ID SYS CA"
+
+msgid "CET / CEST"
+msgstr "CET/CEST"
+
+msgid "CLT / CLST"
+msgstr "CLT/CLST"
+
+msgid "CVBS"
+msgstr "Vidéo composite"
+
+msgid "Cable"
+msgstr "Câble"
+
+msgid "Cable AnnexB"
+msgstr "Câble AnnexB"
+
+msgid "Cable DVB-C"
+msgstr "Câble DVB-C"
+
+msgid "Cable modem status"
+msgstr "État du modem câble"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Cancel scheduled recording"
+msgstr "Annuler l'enregistrement programmé"
+
+msgid "Card Inserted"
+msgstr "Carte insérée"
+
+msgid "Card Number"
+msgstr "Numéro de la carte"
+
+msgid "Card Problem - check card"
+msgstr "Problème sur la carte - vérifiez la carte"
+
+msgid "Card Type"
+msgstr "Type de carte"
+
+msgid "Card is correct"
+msgstr "La carte est correcte"
+
+msgid "Change CA PIN failed."
+msgstr "Échec de la modification du code PIN du CA."
+
+msgid "Change CA pin"
+msgstr "Modifier le code PIN du CA"
+
+msgid "Change PIN"
+msgstr "Modifier le code PIN"
+
+msgid "Changing pin failed."
+msgstr "La modification du code PIN a échoué."
+
+msgid "Changing skin requires box reboot"
+msgstr ""
+
+msgid "Channel"
+msgstr "Chaîne"
+
+msgid "Channel Frequency [kHz]"
+msgstr "Fréquence de la chaîne [kHz]"
+
+msgid "Channel Installation"
+msgstr "Installation des chaînes"
+
+msgid "Channel Scanning"
+msgstr "Recherche des chaînes"
+
+msgid "Channel Status"
+msgstr "État des chaînes"
+
+msgid "Channel not available"
+msgstr "Chaîne non disponible"
+
+msgid "Channel scanning"
+msgstr "Recherche des chaînes"
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Chaîne : %s\n"
+"Événement : %s\n"
+"Heure : %s-%s\n"
+
+msgid "Checking compatibility..."
+msgstr "Vérification de la compatibilité..."
+
+msgid "Children's/Youth Programmes"
+msgstr "Programmes enfants/jeunesse"
+
+msgid "Chip ID"
+msgstr "ID de la puce"
+
+msgid "Chip id"
+msgstr "ID de la puce"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Communication error"
+msgstr "Erreur de communication"
+
+msgid "Compatible with PVR"
+msgstr "Compatible avec le magnétoscope numérique"
+
+msgid "Completed Recordings"
+msgstr "Enregistrements terminés"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Configuration"
+msgstr "Configuration"
+
+msgid "Configure"
+msgstr "Configurer"
+
+msgid "Confirm"
+msgstr "Confirmer"
+
+msgid "Confirmation Required"
+msgstr "Confirmation requise"
+
+msgid "Continue"
+msgstr "Continuer"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr ""
+"Impossible de charger la liste des chaînes. Le fonctionnement risque d'être "
+"limité."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Impossible d'arrêter l'appareil, réessayez (erreur 2)"
+
+msgid "Create new directory"
+msgstr "Créer un répertoire"
+
+msgid "Custom LNB"
+msgstr "LNB personnalisé"
+
+msgid "DHCP"
+msgstr "DHCP"
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS1"
+msgstr "DNS1"
+
+msgid "DNS2"
+msgstr "DNS2"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr ""
+
+msgid "DVB-C Automatic"
+msgstr "DVB-C Automatique"
+
+msgid "DVB-C Manual"
+msgstr "DVB-C Manuelle"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT Automatique"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 Manuelle"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT Automatique"
+
+msgid "DVB-T Automatic full scan"
+msgstr "Recherche complète DVB-T automatique"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T Manuelle"
+
+msgid "Daily"
+msgstr "Chaque jour"
+
+msgid "Danish"
+msgstr "Danois"
+
+msgid "Date"
+msgstr "Date"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr ""
+
+msgid "Default"
+msgstr "Paramètre par défaut"
+
+msgid "Default PVR Quota"
+msgstr "Quota du magnétoscope numérique par défaut"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Retarder le début de l'enregistrement à %s"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Delete all"
+msgstr "Tout supprimer"
+
+msgid "Delete all active"
+msgstr "Supprimer tous les enregistrements actifs"
+
+msgid "Delete all failed"
+msgstr "La suppression de tous les enregistrements a échoué"
+
+msgid "Delete all scheduled"
+msgstr "Supprimer tous les enregistrements programmés"
+
+msgid "Delete file"
+msgstr "Supprimer le fichier"
+
+msgid "Device is not responding"
+msgstr ""
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "Port %c DiSEqC"
+
+msgid "DiSEqC Switch"
+msgstr "Basculer sur DiSEqC"
+
+msgid "Digital Audio"
+msgstr "Son numérique"
+
+msgid "Directory name already exists"
+msgstr ""
+
+msgid "Directory name cannot be empty"
+msgstr ""
+
+msgid "Disable"
+msgstr "Désactiver"
+
+msgid "Disabled"
+msgstr "Désactivé"
+
+msgid "Display Format (HDMI)"
+msgstr "Format d'affichage (HDMI)"
+
+msgid "Display Format (SCART)"
+msgstr "Format d'affichage (SCART)"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "N'éteignez pas le décodeur pendant la mise à jour du micrologiciel."
+
+msgid "Done"
+msgstr "Effectué"
+
+msgid "Download now"
+msgstr "Télécharger maintenant"
+
+msgid "Drop"
+msgstr "Abandonner"
+
+msgid "Drop channels?"
+msgstr "Abandonner les chaînes ?"
+
+msgid "Dropping..."
+msgstr "Abandon en cours..."
+
+msgid "EET / EEST"
+msgstr "EET/EEST"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "ERREUR : échec de l'envoi d'une question à la carte à puce"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Education/Science/Factual topics"
+msgstr "Éducation/Science/Documentaires"
+
+msgid "Empty folder"
+msgstr ""
+
+msgid "Enabled"
+msgstr "Activé"
+
+msgid "End Frequency"
+msgstr "Fréquence de fin"
+
+msgid "End time"
+msgstr "Heure de fin"
+
+msgid "English"
+msgstr "Anglais"
+
+msgid "Entitled"
+msgstr "Autorisé"
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "Error occured"
+msgstr ""
+
+msgid "Event Status"
+msgstr "État des événements"
+
+msgid "Extra"
+msgstr "Extra"
+
+msgid "Extras"
+msgstr "Extras"
+
+msgid "FATAL ERROR"
+msgstr "ERREUR FATALE"
+
+msgid "Failed Recordings"
+msgstr "Enregistrements non aboutis"
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Échec lors de la lecture des informations de la carte (erreur = 0x%x)"
+
+msgid "Favorites"
+msgstr "Favoris"
+
+msgid "Favourites Numbering"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+#, c-format
+msgid "File not found: %d"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+msgid "Finnish"
+msgstr "Finnois"
+
+msgid "Firmware Version"
+msgstr "Version du micrologiciel"
+
+msgid "Firmware update"
+msgstr "Mise à jour du micrologiciel"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr ""
+"Pour que le décodeur fonctionne correctement, le micrologiciel doit être mis "
+"à jour."
+
+msgid "First Time Installation"
+msgstr "Installation initiale"
+
+msgid "First time using VoD service?"
+msgstr ""
+
+msgid "For 12+ year old"
+msgstr "Plus de 12 ans"
+
+msgid "For 16+ year old"
+msgstr "Plus de 16 ans"
+
+msgid "For 18+ year old"
+msgstr "Plus de 18 ans"
+
+msgid "For 6+ year old"
+msgstr "Plus de 6 ans"
+
+msgid "Format Hard Disk"
+msgstr "Formater le disque dur"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr ""
+
+msgid "Format successful"
+msgstr "Formatage réussi"
+
+msgid ""
+"Formatting this disk will permanently erase all data on it. Do you want to "
+"continue?"
+msgstr ""
+
+msgid "Formatting..."
+msgstr "Formatage en cours..."
+
+msgid "Frequency"
+msgstr "Fréquence"
+
+msgid "Frequency Range"
+msgstr "Plage de fréquence"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Fréquence : %d.%02d MHz%s %s %s"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Horloge du panneau avant en veille"
+
+msgid "Fullscreen"
+msgstr "Plein écran"
+
+msgid "G: General Audience"
+msgstr "G : général"
+
+msgid "GMT"
+msgstr "GMT"
+
+msgid "GMT / BST"
+msgstr "GMT/BST"
+
+msgid "Gateway"
+msgstr "Passerelle"
+
+msgid "Go!"
+msgstr "Atteindre !"
+
+msgid "Greek"
+msgstr "Grec"
+
+msgid "Group Number"
+msgstr "Numéro du groupe"
+
+msgid "Guide"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "Format vidéo HDMI"
+
+msgid "HFC MAC ID"
+msgstr "ID MAC HFC"
+
+msgid "Hard of Hearing"
+msgstr "Malentendants"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Sous-titrages sourds et malentendants"
+
+msgid "Helsinki, Athens, Kaliningrad"
+msgstr "Helsinki, Athènes, Kaliningrad"
+
+msgid "Horizontal"
+msgstr "Horizontal"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Network"
+msgstr "Réseau IP"
+
+msgid ""
+"In order to record selected program you need to stop one of the following "
+"recordings/schedules"
+msgstr ""
+"Pour enregistrer le programme sélectionné, vous devez arrêter l'un des "
+"enregistrements/programmes suivants"
+
+msgid "Incorrect CA Card"
+msgstr "Carte CA incorrecte"
+
+msgid "Incorrect Card"
+msgstr "Carte incorrecte"
+
+msgid "Incorrect Conax Card"
+msgstr "Carte Conax incorrecte"
+
+msgid "Incorrect old PIN."
+msgstr "Ancien code PIN incorrect."
+
+msgid "Information"
+msgstr ""
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Installer\n"
+"\n"
+"Appuyez sur OK pour lancer la recherche automatique des chaînes."
+
+msgid "Install now"
+msgstr "Installer maintenant"
+
+msgid "Instant Timeshift"
+msgstr "Contrôle instantané du direct"
+
+msgid "Interface Version"
+msgstr "Version de l'interface"
+
+msgid "Internet Radio"
+msgstr "Radio Internet"
+
+msgid "Keyword"
+msgstr "Mot-clé"
+
+msgid "Ku-band"
+msgstr "Bande Ku"
+
+msgid "Ku-band BSS"
+msgstr "Bande Ku BSS"
+
+msgid "Ku-band FSS"
+msgstr "Bande Ku FSS"
+
+msgid "Ku-band Universal"
+msgstr "Bande Ku universelle"
+
+msgid "LNB Setup"
+msgstr "Configuration LNB"
+
+msgid "LNB Type"
+msgstr "Type LNB"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Languages"
+msgstr "Langues"
+
+msgid "Latvian"
+msgstr "Letton"
+
+msgid "Leisure hobbies"
+msgstr "Loisirs"
+
+msgid "Letterbox"
+msgstr "Letterbox"
+
+msgid "List name already exists"
+msgstr "Le nom de la liste existe déjà"
+
+msgid "List name cannot be empty"
+msgstr "Le nom de la liste ne peut pas être vide"
+
+#, c-format
+msgid "List no. %u"
+msgstr "List n° %u"
+
+msgid "Loading..."
+msgstr "Chargement en cours..."
+
+msgid "Local Oscillator Frequency"
+msgstr "Fréquence de l'oscillateur local"
+
+msgid "Lock"
+msgstr "Verrouiller"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "État du verrouillage - PAS DE SIGNAL"
+
+msgid "Lock status - OK"
+msgstr "État du verrouillage - OK"
+
+msgid "Login"
+msgstr ""
+
+msgid "London, Belfast"
+msgstr "Londres, Belfast"
+
+msgid "Lost tuner access"
+msgstr ""
+
+msgid "MAC address"
+msgstr "Adresse MAC"
+
+msgid "MSK"
+msgstr "MSK"
+
+msgid "Manual"
+msgstr "Manuelle"
+
+msgid "Manual Channel Scanning"
+msgstr "Recherche manuelle des chaînes"
+
+msgid "Manual Configuration"
+msgstr ""
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Verrouillage enfant\n"
+"\n"
+"Classification du programme : %s\n"
+"Niveau de la carte : %s\n"
+"Saisissez le code PIN du CA pour déverrouiller"
+
+msgid "Maturity Rating"
+msgstr "Classification des programmes"
+
+msgid "Menu Language"
+msgstr "Langue du menu"
+
+msgid "Menu Transparency"
+msgstr ""
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message - NEW!"
+msgstr "Message - NOUVEAU !"
+
+msgid "Messages"
+msgstr "Messages"
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr "Modulation"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Modulation : %s"
+
+msgid "More info"
+msgstr "Informations supplémentaires"
+
+msgid "Moscow, Saint Petersburg"
+msgstr "Moscou, Saint-Pétersbourg"
+
+msgid "Mounting..."
+msgstr "Installation en cours..."
+
+msgid "Move"
+msgstr "Déplacer"
+
+msgid "Movie/Drama"
+msgstr "Cinéma/Théâtre"
+
+msgid "Multichannel"
+msgstr "Multi-chaînes"
+
+msgid "Music/Ballet/Dance"
+msgstr "Musique/Ballet/Danse"
+
+msgid "My Rentals"
+msgstr ""
+
+msgid "N/A"
+msgstr "S/O"
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "PAS DE SIGNAL"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Netmask"
+msgstr ""
+
+msgid "Network Medium"
+msgstr ""
+
+msgid "Network Name"
+msgstr "Nom du réseau"
+
+msgid "Network Selection"
+msgstr ""
+
+msgid "Network Settings"
+msgstr "Paramètres du réseau"
+
+msgid "Network Type"
+msgstr ""
+
+msgid "Network mask"
+msgstr "Masque réseau"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New CA PIN field is not complete"
+msgstr ""
+
+msgid "New PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New PIN field is not complete."
+msgstr ""
+
+msgid "New PIN:"
+msgstr "Nouveau code PIN :"
+
+msgid "New application layout requires box reboot."
+msgstr ""
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr ""
+"La nouvelle version %s du micrologiciel est disponible sur le réseau %s."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "La nouvelle version %s du micrologiciel est disponible."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Nouvelle version du micrologiciel : %s"
+
+msgid "New pins don't match."
+msgstr "Les nouveaux codes PIN ne correspondent pas."
+
+msgid ""
+"New recording cannot be scheduled due to many conflicts with previously "
+"scheduled recordings"
+msgstr ""
+"Le nouvel enregistrement ne peut pas être programmé en raison de conflits "
+"avec des enregistrements déjà programmés"
+
+msgid "News/Cultural affairs"
+msgstr "Informations/Affaires culturelles"
+
+msgid "No Access (error code 1)"
+msgstr ""
+
+msgid "No Access (error code 10)"
+msgstr ""
+
+msgid "No Access (error code 11)"
+msgstr ""
+
+msgid "No Access (error code 12)"
+msgstr ""
+
+msgid "No Access (error code 2)"
+msgstr ""
+
+msgid "No Access (error code 3)"
+msgstr ""
+
+msgid "No Access (error code 4)"
+msgstr ""
+
+msgid "No Access (error code 5)"
+msgstr ""
+
+msgid "No Access (error code 6)"
+msgstr ""
+
+msgid "No Access (error code 7)"
+msgstr ""
+
+msgid "No Access (error code 8)"
+msgstr ""
+
+msgid "No Access (error code 9)"
+msgstr ""
+
+msgid "No Card Inserted"
+msgstr "Pas de carte insérée"
+
+msgid "No DiSEqC"
+msgstr "Aucun DiSEqC"
+
+msgid "No access"
+msgstr "Pas d'accès"
+
+#, c-format
+msgid "No access (error code %i)"
+msgstr ""
+
+msgid "No access - geographical blackout"
+msgstr "Pas d'accès - absence de couverture dans la zone géographique"
+
+msgid "No access - network block"
+msgstr "Pas d'accès - blocage du réseau"
+
+msgid "No channel"
+msgstr "Pas de chaîne"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Aucune chaîne installée.\n"
+"Effectuez une recherche de chaînes."
+
+msgid "No credits"
+msgstr "Pas de crédit"
+
+msgid "No debits"
+msgstr "Pas de débit"
+
+msgid "No entries"
+msgstr "Pas d'entrées"
+
+msgid "No events"
+msgstr "Pas d'événement"
+
+msgid "No items"
+msgstr ""
+
+msgid "No list"
+msgstr "Pas de liste"
+
+msgid "No messages"
+msgstr "Pas de message"
+
+msgid "No purses"
+msgstr "Pas de porte-monnaie"
+
+msgid "No results"
+msgstr "Pas de résultat"
+
+msgid "No subscriptions"
+msgstr "Pas d'abonnement"
+
+msgid "No title"
+msgstr "Pas de titre"
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "Périphérique de stockage non compatible détecté (erreur 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "Périphérique de stockage non compatible détecté (erreur 3)"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Norwegian"
+msgstr "Norvégien"
+
+msgid "Not Entitled"
+msgstr "Non autorisé"
+
+msgid "Not enough tokens - please recharge Your card"
+msgstr "Vous n'avez pas suffisamment de jetons - rechargez votre carte"
+
+msgid "Not entitled"
+msgstr "Non autorisé"
+
+msgid "Number of Sessions"
+msgstr "Nombre de sessions"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OSD/Banner Display Time"
+msgstr "OSD/Durée d'affichage du bandeau"
+
+msgid "Off"
+msgstr "Désactivé"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Old CA PIN field is not complete"
+msgstr ""
+
+msgid "Old PIN field is not complete."
+msgstr ""
+
+msgid "Old PIN:"
+msgstr "Ancien code PIN :"
+
+msgid "Old pin is invalid."
+msgstr "L'ancien code PIN n'est pas valide."
+
+msgid "On"
+msgstr "Activé"
+
+msgid "Ongoing Recordings"
+msgstr "Enregistrements en cours"
+
+msgid "Original Format"
+msgstr "Format original"
+
+msgid "Override"
+msgstr "Écraser"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PG: Parental Guidance"
+msgstr "APS : Accord parental souhaitable"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "Authentification PIN bloquée pendant %d minute"
+msgstr[1] "Authentification PIN bloquée pendant %d minutes"
+
+msgid "PIN change"
+msgstr "Modification du code PIN"
+
+msgid "PIN confirmation does not match."
+msgstr "Le code PIN de confirmation ne correspond pas."
+
+msgid "PIN:"
+msgstr "Code PIN :"
+
+msgid "PLPID"
+msgstr "PLPID"
+
+msgid "PVR"
+msgstr "Magnétoscope numérique"
+
+msgid "PVR End Margin"
+msgstr "Marge de fin du magnétoscope numérique"
+
+msgid "PVR Start Margin"
+msgstr "Marge de début du magnétoscope numérique"
+
+msgid "Parental control"
+msgstr "Contrôle parental"
+
+msgid "Paris, Berlin, Warsaw, Rome"
+msgstr "Paris, Berlin, Varsovie, Rome"
+
+msgid "Password"
+msgstr ""
+
+msgid "Pin change successful."
+msgstr "La modification du code PIN a réussi."
+
+msgid "Play"
+msgstr "Lire"
+
+msgid "Play Trailer"
+msgstr "Regarder la bande annonce"
+
+msgid "Play from the beginning"
+msgstr "Lire depuis le début"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr ""
+
+msgid "Playlist error"
+msgstr ""
+
+msgid "Please Wait"
+msgstr "Veuillez patienter"
+
+msgid "Please confirm new CA PIN:"
+msgstr "Confirmez le nouveau code PIN du CA :"
+
+msgid "Please enter CA PIN"
+msgstr "Saisissez le code PIN du CA"
+
+msgid "Please enter CA PIN:"
+msgstr "Saisissez le code PIN du CA :"
+
+msgid "Please enter Conax PIN"
+msgstr ""
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter Middleware PIN"
+msgstr ""
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter WEP key"
+msgstr "Saisissez votre clé WEP"
+
+msgid "Please enter WPA password"
+msgstr "Saisissez votre mot de passe WPA"
+
+msgid "Please enter WPA2 password"
+msgstr "Saisissez votre mot de passe WPA2"
+
+msgid "Please enter new CA PIN:"
+msgstr "Saisissez le nouveau code PIN du CA :"
+
+msgid "Please enter parental control PIN"
+msgstr "Saisissez le code PIN du contrôle parental"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr ""
+"Pour lire le contenu choisi, saisissez le code PIN du contrôle parental"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr ""
+"Pour pouvoir supprimer tous les enregistrements, entrez le code PIN du "
+"contrôle parental"
+
+msgid "Please wait"
+msgstr "Veuillez patienter"
+
+msgid "Please wait, loading…"
+msgstr "Chargement en cours, veuillez patienter…"
+
+msgid "Please wait."
+msgstr "Veuillez patienter."
+
+msgid "Please wait..."
+msgstr "Veuillez patienter..."
+
+msgid "Polarization"
+msgstr "Polarisation"
+
+msgid "Polish"
+msgstr "Polonais"
+
+msgid "Preferred Audio Track"
+msgstr "Bande son favorite"
+
+msgid "Press OK to browse"
+msgstr "Appuyez sur OK pour effectuer une recherche"
+
+msgid "Press OK to browse or OPT to format for PVR"
+msgstr ""
+"Appuyez sur OK pour effectuer une recherche ou sur OPT pour formater le "
+"magnétoscope numérique"
+
+msgid "Press OPT to format for PVR"
+msgstr "Appuyez sur OPT pour formater le magnétoscope numérique"
+
+msgid "Press Opt for more options"
+msgstr "Appuyez sur Opt pour obtenir plus d'options"
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Ancienne version du micrologiciel : %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Prix : %i,%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Prix : %i,%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Langue principale pour le son"
+
+msgid "Primary Subtitle Language"
+msgstr "Langue principale pour le sous-titrage"
+
+msgid "Proceed"
+msgstr "Continuer"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr ""
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Porte-monnaie : %s"
+
+msgid "Quality"
+msgstr "Qualité"
+
+msgid "Quota"
+msgstr "Quota"
+
+msgid "RGB"
+msgstr "RVB"
+
+msgid "Radio"
+msgstr "Radio"
+
+msgid "Record"
+msgstr "Enregistrer"
+
+msgid "Record always"
+msgstr "Toujours enregistrer"
+
+msgid "Record repeatedly"
+msgstr "Répéter l'enregistrement"
+
+msgid "Remind me"
+msgstr "Me rappeler"
+
+msgid "Reminder"
+msgstr "Rappel"
+
+msgid "Reminders"
+msgstr "Rappels"
+
+msgid "Remove"
+msgstr "Supprimer"
+
+msgid "Remove dir"
+msgstr "Supprimer le répertoire"
+
+msgid "Remove reminder"
+msgstr "Supprimer le rappel"
+
+msgid "Rename dir"
+msgstr "Renommer le répertoire"
+
+msgid "Rent"
+msgstr "Louer"
+
+msgid "Rental period expired"
+msgstr "La période de location a expiré"
+
+msgid "Rental period for this content has expired."
+msgstr "La période de location de ce contenu a expiré."
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Période de location : %i %s"
+
+msgid "Repeat"
+msgstr "Répéter"
+
+msgid "Repeat new PIN:"
+msgstr "Saisissez à nouveau le nouveau code PIN :"
+
+msgid "Requested EMM but not EMM was provided"
+msgstr ""
+
+msgid "Resolve conflicts"
+msgstr "Résoudre les conflits"
+
+msgid "Restart Device"
+msgstr "Redémarrer l'appareil"
+
+msgid "Restore Factory Defaults"
+msgstr "Restaurer les paramètres par défaut configurés en usine"
+
+msgid "Results - Failure"
+msgstr "Résultats - Échec"
+
+msgid "Results - Success"
+msgstr "Résultats - Réussite"
+
+msgid "Retrieving channel list"
+msgstr "Récupération en cours de la liste des chaînes"
+
+msgid "Reykjavík"
+msgstr "Reykjavík"
+
+msgid "Russian"
+msgstr "Russe"
+
+msgid "S/PDIF A/V Sync"
+msgstr "Synchronisation AV S/PDIF"
+
+msgid "SCART Signal Type"
+msgstr "Type de signal SCART"
+
+msgid "Santiago"
+msgstr "Santiago"
+
+msgid "Satellite"
+msgstr "Satellite"
+
+msgid "Satellite %s is not setup yet"
+msgstr "Le satellite %s n'a pas encore été configuré"
+
+msgid "Satellite Info"
+msgstr "Infos satellite"
+
+msgid "Satellite Name"
+msgstr "Nom du satellite"
+
+msgid "Satellite Name:"
+msgstr "Nom du satellite :"
+
+msgid "Satellite Setup"
+msgstr "Configuration du satellite"
+
+msgid "Save"
+msgstr "Sauvegarder"
+
+msgid "Saving..."
+msgstr "Sauvegarde en cours..."
+
+msgid "Scan Type"
+msgstr "Type de recherche"
+
+msgid "Scanning Standard"
+msgstr "Recherche Standard"
+
+msgid "Scanning channels"
+msgstr "Recherche des chaînes en cours"
+
+msgid "Schedule keyword recording"
+msgstr "Programmer un enregistrement par mot-clé"
+
+msgid "Schedule manual recording"
+msgstr "Programmer un enregistrement manuel"
+
+msgid "Scheduled Recordings"
+msgstr "Enregistrements programmés"
+
+msgid "Screensaver Timeout"
+msgstr "Délai de mise en veille de l'écran"
+
+msgid "Search"
+msgstr "Rechercher"
+
+msgid "Search in progress..."
+msgstr "Recherche en cours..."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "Recherche : %d résultat"
+msgstr[1] "Recherche : %d résultats"
+
+msgid "Searching for channels"
+msgstr "Recherche des chaînes"
+
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+msgid "Secondary Audio Language"
+msgstr "Langue secondaire pour le son"
+
+msgid "Secondary Subtitle Language"
+msgstr "Langue secondaire pour le sous-titrage"
+
+msgid "See all from"
+msgstr ""
+
+msgid "Select OK to remove all data from your disk."
+msgstr ""
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Sélectionnez le retard audio sur la sortie %s"
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Sélectionnez Classification des programmes (code PIN du CA requis)"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr ""
+
+msgid "Service Name"
+msgstr "Nom du service"
+
+msgid "Setup"
+msgstr "Configuration"
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Raccourcir l'enregistrement à %s"
+
+msgid "Show similar"
+msgstr "Afficher les contenus similaires"
+
+msgid "Show/Game show"
+msgstr "Spectacles/Jeux"
+
+msgid "Sign Off"
+msgstr ""
+
+msgid "Signal - OK"
+msgstr "Signal - OK"
+
+msgid "Signal Quality"
+msgstr "Qualité du signal"
+
+msgid "Signal Strength"
+msgstr "Intensité du signal"
+
+msgid "Signal lost - check cable"
+msgstr "Perte du signal - vérifiez le câble"
+
+msgid "Social Media"
+msgstr ""
+
+msgid "Social/Political issues/Economics"
+msgstr "Affaires sociales/Politique/Économie"
+
+msgid "Software"
+msgstr "Logiciel"
+
+msgid "Software Update"
+msgstr "Mise à jour du logiciel"
+
+msgid "Software Version"
+msgstr "Version du logiciel"
+
+msgid "Spanish"
+msgstr "Espagnol"
+
+msgid "Special"
+msgstr "Spécial"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Start"
+msgstr "Démarrer"
+
+msgid "Start Frequency"
+msgstr "Fréquence de début"
+
+msgid "Start date                End date"
+msgstr ""
+
+msgid "Start date      End date"
+msgstr ""
+
+msgid "Start time"
+msgstr "Heure de début"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Please enter CA PIN to start viewing:"
+msgstr ""
+"Démarrer le visionnage\n"
+"%s\n"
+"Minutes de visionnage restantes : %i\n"
+"Saisissez le code PIN du CA pour démarrer le visionnage :"
+
+msgid "Static"
+msgstr "Statique"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "État : %u%% téléchargé"
+
+msgid "Status: Download scheduled"
+msgstr "État : téléchargement programmé"
+
+msgid "Status: Not available"
+msgstr "État : non disponible"
+
+msgid "Stereo"
+msgstr "Stéréo"
+
+msgid "Stop"
+msgstr "Arrêter"
+
+msgid "Stop channel recording"
+msgstr "Interrompre l'enregistrement des chaînes"
+
+msgid "Stop keyword recording"
+msgstr "Arrêter l'enregistrement par mot-clé"
+
+msgid "Stop recording"
+msgstr "Arrêter l'enregistrement"
+
+msgid "Stop repeated recording"
+msgstr "Arrêter l'enregistrement répété"
+
+msgid "Stop using for PVR"
+msgstr "Ne pas utiliser avec le magnétoscope numérique"
+
+msgid "Strength"
+msgstr "Intensité"
+
+msgid "Stretched"
+msgstr "Étiré"
+
+msgid "Subscription Status"
+msgstr "État de l'abonnement"
+
+msgid "Subtitle Language"
+msgstr "Langue du sous-titrage"
+
+msgid "Swedish"
+msgstr "Suédois"
+
+msgid "Switch to channel"
+msgstr "Basculer sur la chaîne"
+
+msgid "Symbol Rate"
+msgstr "Débit de symboles"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Débit de symboles : %d"
+
+msgid "System Information"
+msgstr "Informations sur le système"
+
+msgid "System Settings"
+msgstr "Paramètres du système"
+
+msgid "TV"
+msgstr "Télévision"
+
+msgid "TV Aspect Ratio"
+msgstr "Format d'image télévision"
+
+msgid "TV Guide"
+msgstr "Guide de la télévision"
+
+msgid "TV System"
+msgstr "Système TV"
+
+msgid "Terrestrial"
+msgstr "Terrestre"
+
+msgid ""
+"There are too many ongoing recordings. Please stop some to watch this "
+"channel again."
+msgstr ""
+"Il y a trop d'enregistrements en cours. Pour pouvoir regarder cette chaîne, "
+"vous devez arrêter  des enregistrements."
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "Cette action entraînera le redémarrage de l'appareil. Continuer ?"
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Ce rappel écrasera les rappels suivants :\n"
+
+msgid "Time Zone"
+msgstr "Fuseau horaire"
+
+#, c-format
+msgid "Title: %s"
+msgstr "Titre : %s"
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Accès aux jetons\n"
+"%s\n"
+"%d jeton(s)%s\n"
+"Solde de votre porte-monnaie : %s %d jetons\n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "État des jetons"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Jetons : %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Last access: %s"
+msgstr ""
+"Jetons : %d\n"
+"Dernier accès : %s"
+
+msgid "Too many simultaneous recordings."
+msgstr "Trop d'enregistrements simultanés."
+
+#, c-format
+msgid "Track %d"
+msgstr "Piste %d"
+
+msgid "Trailer"
+msgstr "Bande annonce"
+
+msgid "Tuner Type"
+msgstr "Type de tuner"
+
+msgid "Tuner is not available"
+msgstr ""
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Unable to change settings while recording is active"
+msgstr "Impossible de modifier les paramètres si l'enregistrement est actif"
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Impossible de sauvegarder. Le mot-clé est trop court."
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr ""
+
+msgid "Unfortunately VoD service is not available."
+msgstr ""
+
+msgid "Unknown"
+msgstr "Inconnu"
+
+msgid "Unlimited"
+msgstr "Illimité"
+
+msgid "Unlock"
+msgstr "Déverrouiller"
+
+msgid "Unmounting..."
+msgstr "Désinstallation en cours..."
+
+msgid "Unread messages!"
+msgstr "Messages non lus !"
+
+msgid "Update now"
+msgstr "Mettre à jour maintenant"
+
+msgid ""
+"Update will take about 10 minutes. During this time screen may blink and you "
+"won't be able to use your STB."
+msgstr ""
+"La mise à jour prend environ 10 minutes. Pendant la mise à jour, il est "
+"possible que l'écran clignote et vous ne pourrez pas utiliser votre décodeur."
+
+msgid "Use NIT/SDT"
+msgstr "Utiliser la NIT/SDT"
+
+msgid "Use for PVR"
+msgstr "Utiliser avec le magnétoscope numérique"
+
+msgid "Used for PVR"
+msgstr "Utilisé avec le magnétoscope numérique"
+
+msgid "User Interface"
+msgstr "Interface utilisateur"
+
+msgid "VOD"
+msgstr "VOD"
+
+#, c-format
+msgid "Version: %s"
+msgstr "Version : %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Version : %s, Réseau : %s"
+
+msgid "Vertical"
+msgstr "Vertical"
+
+msgid "Visually Impaired"
+msgstr "Déficients visuels"
+
+msgid "VoD unavailable"
+msgstr ""
+
+msgid "WEB on TV"
+msgstr "Internet sur la télévision"
+
+msgid "Waiting for channels"
+msgstr "En attente des chaînes"
+
+msgid "Waiting for channels..."
+msgstr "En attente des chaînes..."
+
+msgid "Warning"
+msgstr ""
+
+msgid "Weekdays"
+msgstr "Du lundi au vendredi"
+
+msgid "Weekends"
+msgstr "Le week-end"
+
+msgid "Weekly"
+msgstr "Chaque semaine"
+
+msgid "WiFi Network Type"
+msgstr ""
+
+msgid "WiFi Password"
+msgstr ""
+
+msgid "WiFi Session ID"
+msgstr ""
+
+msgid "WiFi settings"
+msgstr ""
+
+msgid "Wired (Ethernet)"
+msgstr "Filaire (Ethernet)"
+
+msgid "Wireless (WiFi)"
+msgstr "Sans fil (WiFi)"
+
+msgid "Would You like to do it now?"
+msgstr "Souhaitez-vous le faire maintenant ?"
+
+msgid "Wrong CA PIN."
+msgstr "Code PIN du CA erroné."
+
+msgid "X: Erotic"
+msgstr "X : érotique"
+
+msgid "You are not entitled to view this channel"
+msgstr "Vous n'êtes pas autorisé à visionner cette chaîne"
+
+msgid "You are not entitled to view this content"
+msgstr "Vous n'êtes pas autorisé à visionner ce contenu"
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "L'espace libre est insuffisant pour un nouvel enregistrement"
+
+msgid "You got mail"
+msgstr "Vous avez du courrier"
+
+msgid "You have too many directories."
+msgstr "Vous avez trop de répertoires"
+
+msgid "You have too many favorites lists."
+msgstr "Vous avez trop de listes de favoris."
+
+msgid "You have too many keyword recordings."
+msgstr "Il y a trop d'enregistrements par mot-clé."
+
+msgid "You have too many recordings."
+msgstr "Il y a trop d'enregistrements."
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr ""
+
+#, c-format
+msgid "You will be soon zapped to %s."
+msgstr "Vous allez être transféré vers %s."
+
+#, c-format
+msgid ""
+"Your TV is currently connected to an inactive output on this set-top box. "
+"Please press VOUT button on your remote control to activate this output or "
+"connect your TV to the %s output."
+msgstr ""
+"Votre téléviseur est actuellement connecté à une sortie inactive de ce "
+"décodeur. Appuyez sur le bouton VOUT de la télécommande pour activer cette "
+"sortie ou connectez votre téléviseur à la sortie %s."
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would "
+"you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would "
+"you like to:\n"
+"\n"
+msgstr[0] ""
+"Votre nouvel enregistrement est en conflit avec %i enregistrement déjà "
+"programmé. Souhaitez-vous :\n"
+"\n"
+msgstr[1] ""
+"Votre nouvel enregistrement est en conflit avec %i enregistrements déjà "
+"programmés. Souhaitez-vous :\n"
+"\n"
+
+msgid "[completed]"
+msgstr "[terminé]"
+
+msgid "[failed]"
+msgstr "[échec]"
+
+msgid "[interrupted]"
+msgstr "[interrompu]"
+
+msgid "[missed]"
+msgstr "[manqué]"
+
+msgid "[recording]"
+msgstr "[enregistrement]"
+
+msgid "[scheduled]"
+msgstr "[programmé]"
+
+msgid "[stopped manually]"
+msgstr "[arrêté manuellement]"
+
+msgid "[stopped – no source]"
+msgstr "[arrêté – pas de source]"
+
+msgid "[stopped – no space]"
+msgstr "[arrêté – espace saturé]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "environ %d heure restante"
+msgstr[1] "environ %d heures restantes"
+
+msgid "automatic"
+msgstr "automatique"
+
+msgid "chkflash"
+msgstr "chkflash"
+
+msgid "config"
+msgstr "config"
+
+msgid "done"
+msgstr "terminé"
+
+msgid "download"
+msgstr "télécharger"
+
+msgid "element"
+msgstr ""
+
+msgid "format_long"
+msgstr "format_long"
+
+msgid "formating"
+msgstr "formatage"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "heure"
+msgstr[1] "heures"
+
+msgid "kernel"
+msgstr "noyau"
+
+msgid "less than HD hour left"
+msgstr "moins de heure HD restante"
+
+msgid "less than hour left"
+msgstr "moins de heure restante"
+
+msgid "logo"
+msgstr "logo"
+
+msgid "manual"
+msgstr "manuelle"
+
+msgid "new"
+msgstr "nouveau"
+
+msgid "off"
+msgstr "désactivé"
+
+msgid "prev"
+msgstr "préc"
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "résultat"
+msgstr[1] "résultats"
+
+msgid "rootfs"
+msgstr "rootfs"
+
+msgid "today"
+msgstr "aujourd'hui"
+
+msgid "tomorrow"
+msgstr "demain"
+
+msgid "unknown"
+msgstr "inconnu"
+
+msgid "unlimited"
+msgstr "illimité"
+
+msgid "upgrade_long"
+msgstr "upgrade_long"
+
+msgid "usr"
+msgstr "usr"
+
+msgid "verify"
+msgstr "vérifier"
+
+msgid "writing"
+msgstr "écriture"
+
+#~ msgid "(%d days %dh)"
+#~ msgstr "(%d jours %d h)"
+
+#~ msgid "576p"
+#~ msgstr "576p"
+
+#~ msgid "Add new list"
+#~ msgstr "Ajouter une nouvelle liste"
+
+#~ msgid "Add/remove channels"
+#~ msgstr "Ajouter/Supprimer des chaînes"
+
+#~ msgid "Available"
+#~ msgstr "Disponible"
+
+#~ msgid "Bad URL [%d]"
+#~ msgstr "Adresse URL incorrecte [%d]"
+
+#~ msgid "Bad server response [%d]"
+#~ msgstr "Réponse du serveur incorrecte [%d]"
+
+#~ msgid "Block channels"
+#~ msgstr "Bloquer des chaînes"
+
+#~ msgid "CA"
+#~ msgstr "CA"
+
+#~ msgid "CA Info"
+#~ msgstr "Infos sur le CA"
+
+#~ msgid "Cable modem"
+#~ msgstr "Modem câble"
+
+#~ msgid "Changing application mode requires device reboot. Are you sure?"
+#~ msgstr ""
+#~ "La modification du mode de l'application nécessite le redémarrage de "
+#~ "l'appareil. Continuer ?"
+
+#~ msgid "DRM error [%d]"
+#~ msgstr "Erreur DRM [%d]"
+
+#~ msgid "Decoder error [%d]"
+#~ msgstr "Erreur décodeur [%d]"
+
+#~ msgid "Deutsch"
+#~ msgstr "Deutsch"
+
+#~ msgid "Español"
+#~ msgstr "Español"
+
+#~ msgid "File not found [%d]"
+#~ msgstr "Fichier introuvable [%d]"
+
+#~ msgid "Format not supported [%d]"
+#~ msgstr "Format non pris en charge [%d]"
+
+#~ msgid "Française"
+#~ msgstr "Française"
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "German"
+#~ msgstr "Allemand"
+
+#~ msgid "HDTV"
+#~ msgstr "HDTV"
+
+#~ msgid "Latviešu"
+#~ msgstr "Latviešu"
+
+#~ msgid "Network settings"
+#~ msgstr "Paramètres du réseau"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %d)"
+#~ msgstr ""
+#~ "Pas d'accès\n"
+#~ "Non activé (code d'erreur %d)"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %i)"
+#~ msgstr ""
+#~ "Pas d'accès\n"
+#~ "Non activé (code d'erreur %i)"
+
+#~ msgid "OK to browse"
+#~ msgstr "OK pour naviguer"
+
+#~ msgid "OK to browse, OPT to format for PVR"
+#~ msgstr "OK pour naviguer, OPT pour formater le magnétoscope numérique"
+
+#~ msgid "PIN authentication blocked for %d minute(s)"
+#~ msgstr "Autentification PIN bloquée pendant %d minute(s)"
+
+#~ msgid "PLATFORM XXX:YYY:ZZZ"
+#~ msgstr "PLATE-FORME XXX:YYY:ZZZ"
+
+#~ msgid "PVR Margin"
+#~ msgstr "Marge du magnétoscope numérique"
+
+#~ msgid "Platform"
+#~ msgstr "Plate-forme"
+
+#~ msgid "Playback failed with error code %d"
+#~ msgstr "Erreur lors de la lecture sous le code %d"
+
+#~ msgid "Polski"
+#~ msgstr "Polski"
+
+#~ msgid "Portal TV"
+#~ msgstr "Portail de la télévision"
+
+#~ msgid "Protocol not supported [%d]"
+#~ msgstr "Protocole non pris en charge [%d]"
+
+#~ msgid "Rearrange list"
+#~ msgstr "Réorganiser la liste"
+
+#~ msgid "Remove channel"
+#~ msgstr "Supprimer une chaîne"
+
+#~ msgid "Remove list"
+#~ msgstr "Supprimer la liste"
+
+#~ msgid "Rename list"
+#~ msgstr "Renommer la liste"
+
+#~ msgid "Rent to watch"
+#~ msgstr "Location pour visionnage"
+
+#~ msgid "Scheduled recordings"
+#~ msgstr "Enregistrements programmés"
+
+#~ msgid "Search: %d results"
+#~ msgstr "Recherche : %d résultats"
+
+#~ msgid "Server communication error [%d]"
+#~ msgstr "Erreur de communication sur le serveur [%d]"
+
+#~ msgid "Subscription status"
+#~ msgstr "État de l'abonnement"
+
+#~ msgid "Suomi"
+#~ msgstr "Suomi"
+
+#~ msgid "Svenska"
+#~ msgstr "Svenska"
+
+#~ msgid "Transaction failed"
+#~ msgstr "Échec de la transaction"
+
+#~ msgid "Unknown error"
+#~ msgstr "Erreur inconnue"
+
+#~ msgid "You have too many recordings"
+#~ msgstr "Il y a trop d'enregistrements"
+
+#~ msgid "about %d SD hour"
+#~ msgid_plural "about %d SD hours"
+#~ msgstr[0] "environ %d heure SD"
+#~ msgstr[1] "environ %d heures SD"
+
+#~ msgid "day"
+#~ msgstr "jour"
+
+#~ msgid "days"
+#~ msgstr "jours"
+
+#~ msgid "hours"
+#~ msgstr "heures"
+
+#~ msgid "ελληνικά"
+#~ msgstr "ελληνικά"
+
+#~ msgid "Русский"
+#~ msgstr "Русский"

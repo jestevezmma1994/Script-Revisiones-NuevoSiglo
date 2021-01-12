@@ -1,0 +1,2573 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-11 12:01-0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid " / minute"
+msgstr ""
+
+msgid " H"
+msgstr ""
+
+msgid " V"
+msgstr ""
+
+#, c-format
+msgid " ep. %d"
+msgstr ""
+
+#, c-format
+msgid "%.2f %s - %.2f %s"
+msgstr ""
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d channel"
+msgid_plural "%d channels"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d min"
+msgstr ""
+
+#, c-format
+msgid "%d out of %d"
+msgstr ""
+
+#, c-format
+msgid "%dMHz"
+msgstr ""
+
+#, c-format
+msgid "%dMHz,%s,%d,%s"
+msgstr ""
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr ""
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr ""
+
+#, c-format
+msgid "%i hour "
+msgid_plural "%i hours "
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i min"
+msgstr ""
+
+#, c-format
+msgid "%i minute "
+msgid_plural "%i minutes "
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i percent left"
+msgstr ""
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i secs"
+msgstr ""
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i.%02i %s"
+msgstr ""
+
+#, c-format
+msgid "%i.%iMHz"
+msgstr ""
+
+#, c-format
+msgid "%iGB"
+msgstr ""
+
+#, c-format
+msgid "%ih"
+msgstr ""
+
+#, c-format
+msgid "%s (%d.%d%s)"
+msgstr ""
+
+#, c-format
+msgid "%s ep. %d"
+msgstr ""
+
+#, c-format
+msgid "%s not found"
+msgstr ""
+
+#, c-format
+msgid "%s%%i.%%.%ui"
+msgstr ""
+
+#, c-format
+msgid "%s, Available to: %s"
+msgstr ""
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr ""
+
+#, c-format
+msgid "(%dmin)"
+msgstr ""
+
+msgid "(Non smartcard)"
+msgstr ""
+
+msgid "(all)"
+msgstr ""
+
+msgid "(hard of hearing)"
+msgstr ""
+
+msgid "(none)"
+msgstr ""
+
+msgid "(unavailable)"
+msgstr ""
+
+msgid "(visually impaired)"
+msgstr ""
+
+msgid "-"
+msgstr ""
+
+msgid "000 unknown"
+msgstr ""
+
+msgid "8PSK"
+msgstr ""
+
+msgid "?"
+msgstr ""
+
+msgid "???"
+msgstr ""
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+
+msgid "A problem occurred"
+msgstr ""
+
+msgid "Accept"
+msgstr ""
+
+msgid "Access denied"
+msgstr ""
+
+msgid "Action ends with success."
+msgstr ""
+
+msgid "Action failed! Please try later."
+msgstr ""
+
+msgid "Action prohibited"
+msgstr ""
+
+#, c-format
+msgid "Active standby will start in %u second."
+msgid_plural "Active standby will start in %u seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Add & Connect"
+msgstr ""
+
+msgid "Adult"
+msgstr ""
+
+msgid "Advanced settings"
+msgstr ""
+
+msgid "Advanced..."
+msgstr ""
+
+msgid "All Episodes"
+msgstr ""
+
+msgid "All Music"
+msgstr ""
+
+msgid "All files"
+msgstr ""
+
+msgid "Alphabetically"
+msgstr ""
+
+msgid "An error has occurred.\n"
+msgstr ""
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr ""
+
+msgid "Analog Closed Captioning"
+msgstr ""
+
+msgid "Any"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Ask again later"
+msgstr ""
+
+msgid "At least one active transponder must exist."
+msgstr ""
+
+msgid "Audio Codec"
+msgstr ""
+
+msgid "Audio DMM"
+msgstr ""
+
+msgid "Audio Lang"
+msgstr ""
+
+msgid "Audio PID"
+msgstr ""
+
+msgid "Audio Track"
+msgstr ""
+
+msgid "Audio Type"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "Authentication failed - PIN is blocked."
+msgstr ""
+
+msgid "Authentication failed. Try again."
+msgstr ""
+
+msgid "Authentication failed. Wrong Pin was entered."
+msgstr ""
+
+msgid "Authentication required"
+msgstr ""
+
+#, c-format
+msgid "Authentication with %s failed"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Auto(DHCP)"
+msgstr ""
+
+msgid "Automatic Standby"
+msgstr ""
+
+#, c-format
+msgid "Automatic restart in %d second."
+msgid_plural "Automatic restart in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Automatic switch to standby in %u second."
+msgid_plural "Automatic switch to standby in %u seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Automatic update will start in %d second."
+msgid_plural "Automatic update will start in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Background music"
+msgstr ""
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr ""
+
+msgid "Bad certificate"
+msgstr ""
+
+#, c-format
+msgid "Bad format: %d"
+msgstr ""
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr ""
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Band Select"
+msgstr ""
+
+#, c-format
+msgid "Birth date: %s\n"
+msgstr ""
+
+#, c-format
+msgid "Birth place: %s\n"
+msgstr ""
+
+#, c-format
+msgid "Buying with %s"
+msgstr ""
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "By Longitude"
+msgstr ""
+
+msgid "C-band"
+msgstr ""
+
+msgid "CA SYS ID"
+msgstr ""
+
+msgid "CC Primary Channel"
+msgstr ""
+
+msgid "CC Primary Language"
+msgstr ""
+
+msgid "CC Secondary  Language"
+msgstr ""
+
+msgid "CC Secondary Channel"
+msgstr ""
+
+msgid "CC1"
+msgstr ""
+
+msgid "CC3"
+msgstr ""
+
+msgid "Cable modem status"
+msgstr ""
+
+msgid "Calling"
+msgstr ""
+
+msgid "Can't load skins list"
+msgstr ""
+
+msgid "Can't submit data form XHTMLWindows"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Cancel scheduled recording"
+msgstr ""
+
+msgid "Cannot remove last satellite.\n"
+msgstr ""
+
+msgid "Card Inserted"
+msgstr ""
+
+msgid "Card Number"
+msgstr ""
+
+msgid "Card Problem - check card"
+msgstr ""
+
+msgid "Card Type"
+msgstr ""
+
+msgid "Card configuration changed - please enter PIN"
+msgstr ""
+
+msgid "Card correct"
+msgstr ""
+
+msgid "Card incorrect"
+msgstr ""
+
+msgid "Card inserted"
+msgstr ""
+
+msgid "Card is correct"
+msgstr ""
+
+msgid "Card problem"
+msgstr ""
+
+msgid "Card problem - check card"
+msgstr ""
+
+msgid "Card removed"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Channel Scanning"
+msgstr ""
+
+msgid "Channel not available"
+msgstr ""
+
+#, c-format
+msgid "Channel scanning will start in %d second."
+msgid_plural "Channel scanning will start in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+
+msgid "Channels update"
+msgstr ""
+
+msgid "Charge my account"
+msgstr ""
+
+msgid "Checking compatibility..."
+msgstr ""
+
+msgid "Chip ID"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Closed Captioning"
+msgstr ""
+
+msgid "Closed Captioning Mode"
+msgstr ""
+
+msgid "Communication error"
+msgstr ""
+
+msgid "Compatible with PVR"
+msgstr ""
+
+msgid "Compatible with PVR and Timeshift"
+msgstr ""
+
+msgid "Compatible with Timeshift"
+msgstr ""
+
+msgid "Completed Recordings"
+msgstr ""
+
+msgid "Configure Network"
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirmation Required"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "Connect to hidden Wi-Fi..."
+msgstr ""
+
+msgid "Connected"
+msgstr ""
+
+msgid "Connected anonymously"
+msgstr ""
+
+msgid "Connected to"
+msgstr ""
+
+msgid "Connecting"
+msgstr ""
+
+msgid "Connecting to"
+msgstr ""
+
+msgid "Connecting..."
+msgstr ""
+
+msgid "Connection problem"
+msgstr ""
+
+#, c-format
+msgid "Connection with %s failed"
+msgstr ""
+
+msgid "Content blocked"
+msgstr ""
+
+msgid "Content could not be found in the server"
+msgstr ""
+
+msgid "Content expired"
+msgstr ""
+
+msgid "Content has time restrictions but time is not set"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Correct"
+msgstr ""
+
+msgid "Cost:"
+msgstr ""
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr ""
+
+msgid "Create new directory"
+msgstr ""
+
+msgid "Create playlist"
+msgstr ""
+
+msgid "Credit:"
+msgstr ""
+
+msgid "CryptoGuard Force Tune"
+msgstr ""
+
+msgid "Custom LNB"
+msgstr ""
+
+msgid "DNS is not setup"
+msgstr ""
+
+msgid "DNS1"
+msgstr ""
+
+msgid "DNS2"
+msgstr ""
+
+#, c-format
+msgid "DRM error [%d]"
+msgstr ""
+
+#, c-format
+msgid "DRM error: %d"
+msgstr ""
+
+msgid "DRM initialization error"
+msgstr ""
+
+msgid "DRM license error"
+msgstr ""
+
+msgid "DVB Channels parameters have changed."
+msgstr ""
+
+msgid "DVB error: no audio/video"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Dec"
+msgstr ""
+
+msgid "Decline"
+msgstr ""
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr ""
+
+msgid "Default directory"
+msgstr ""
+
+msgid "Default interface"
+msgstr ""
+
+msgid "Default satellite"
+msgstr ""
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete all"
+msgstr ""
+
+msgid "Delete all active"
+msgstr ""
+
+msgid "Delete all completed"
+msgstr ""
+
+msgid "Delete all failed"
+msgstr ""
+
+msgid "Delete all scheduled"
+msgstr ""
+
+msgid "Delete as needed"
+msgstr ""
+
+msgid "Delete directory"
+msgstr ""
+
+msgid "Delete manually"
+msgstr ""
+
+msgid "Delete recording"
+msgstr ""
+
+msgid "Device is not responding"
+msgstr ""
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr ""
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Digital Closed Captioning"
+msgstr ""
+
+#, c-format
+msgid "Directory '%s' already exists"
+msgstr ""
+
+msgid "Directory name already exists"
+msgstr ""
+
+msgid "Directory name cannot be empty"
+msgstr ""
+
+msgid "Directory name cannot start with a space"
+msgstr ""
+
+#, c-format
+msgid "Directory name must be at least %d characters"
+msgstr ""
+
+msgid "Disable PC"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Disabling not possible"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+#, c-format
+msgid "Disconnect %s"
+msgstr ""
+
+msgid "Disconnected"
+msgstr ""
+
+msgid "Do not eject your USB drive before the formatting is finished!"
+msgstr ""
+
+msgid "Do not eject your USB drive before the speed test is finished!"
+msgstr ""
+
+msgid "Do not turn off the STB during channel scanning."
+msgstr ""
+
+msgid "Do not turn off the STB during firmware update."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Download now"
+msgstr ""
+
+msgid "Drop"
+msgstr ""
+
+msgid ""
+"Due to Broadcaster's restrictions you do not have access to this content"
+msgstr ""
+
+msgid "Duplicate transponder"
+msgstr ""
+
+msgid "Duration"
+msgstr ""
+
+msgid "EPG"
+msgstr ""
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Empty folder"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "End Margin"
+msgstr ""
+
+msgid "End time"
+msgstr ""
+
+msgid "Enter Active Standby"
+msgstr ""
+
+msgid "Enter CA PIN to accept"
+msgstr ""
+
+msgid "Enter Standby"
+msgstr ""
+
+msgid "Entitled"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error description"
+msgstr ""
+
+msgid "Error occurred"
+msgstr ""
+
+msgid "Error while data submission"
+msgstr ""
+
+msgid "Error while formatting disk!"
+msgstr ""
+
+#, c-format
+msgid "Error: %d"
+msgstr ""
+
+msgid "Excellent"
+msgstr ""
+
+msgid "Exit"
+msgstr ""
+
+msgid "Exit to Home Page"
+msgstr ""
+
+#, c-format
+msgid "Expires at : %s"
+msgstr ""
+
+msgid "Extra"
+msgstr ""
+
+msgid "FATAL ERROR"
+msgstr ""
+
+msgid "FREE"
+msgstr ""
+
+msgid "FTA Blocking - Block"
+msgstr ""
+
+msgid "FTA Blocking - Ent Based"
+msgstr ""
+
+msgid "Failed Recordings"
+msgstr ""
+
+msgid "Failed to contact nPVR server."
+msgstr ""
+
+msgid "Failed to delete nPVR directory"
+msgstr ""
+
+msgid "Failed to delete nPVR recordings"
+msgstr ""
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr ""
+
+msgid "Failed to schedule nPVR recording"
+msgstr ""
+
+msgid "Fair"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+#, c-format
+msgid "File not found: %d"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+msgid "Firmware update"
+msgstr ""
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr ""
+
+msgid "First Time Installation"
+msgstr ""
+
+msgid "First time using VoD service?"
+msgstr ""
+
+#, c-format
+msgid "Forget %s"
+msgstr ""
+
+msgid "Forget the network"
+msgstr ""
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr ""
+
+msgid "Formatting finished!"
+msgstr ""
+
+msgid "Formatting..."
+msgstr ""
+
+msgid "Free with Subscription"
+msgstr ""
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "GHz"
+msgstr ""
+
+msgid "Gateway"
+msgstr ""
+
+msgid "Good"
+msgstr ""
+
+msgid "Group Number"
+msgstr ""
+
+msgid "Guide"
+msgstr ""
+
+msgid "H"
+msgstr ""
+
+msgid "HDCP ERROR"
+msgstr ""
+
+msgid "HFC MAC ID"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Horizontal"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "IPPV PIN"
+msgstr ""
+
+msgid ""
+"If you wish to purchase this asset,\n"
+"please enter your Purchase Pin"
+msgstr ""
+
+msgid "Ignore"
+msgstr ""
+
+msgid "In order to browse this category, please log in."
+msgstr ""
+
+msgid ""
+"In order to get access to VoD service, please contact your sales "
+"representative"
+msgstr ""
+
+msgid "In order to purchase products, please log in."
+msgstr ""
+
+msgid ""
+"In order to record selected program you need to stop one of the following "
+"recordings/schedules"
+msgstr ""
+
+msgid "In progress"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Incorrect Card"
+msgstr ""
+
+msgid "Incorrect Conax Card"
+msgstr ""
+
+msgid "Incorrect Conax card"
+msgstr ""
+
+msgid "Incorrect card"
+msgstr ""
+
+msgid "Incorrect message"
+msgstr ""
+
+#, c-format
+msgid "Incorrect network settings (%s)"
+msgstr ""
+
+msgid "Incorrect response status"
+msgstr ""
+
+msgid "Incorrect response type"
+msgstr ""
+
+msgid "Incorrect widget id"
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "Initialization Error"
+msgstr ""
+
+msgid "Inserted"
+msgstr ""
+
+msgid "Install now"
+msgstr ""
+
+msgid "Insufficient credit to purchase event."
+msgstr ""
+
+msgid "Interface Version"
+msgstr ""
+
+#, c-format
+msgid "Interface: %s"
+msgstr ""
+
+msgid "Internal error. Unknown state"
+msgstr ""
+
+msgid "Internal server error"
+msgstr ""
+
+msgid "Internet"
+msgstr ""
+
+msgid "Invalid password"
+msgstr ""
+
+msgid "Invalid server response"
+msgstr ""
+
+msgid "Invalid tranponder"
+msgstr ""
+
+msgid "Inverted"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "Keyword"
+msgstr ""
+
+msgid "Ku-band"
+msgstr ""
+
+msgid "Ku-band BSS"
+msgstr ""
+
+msgid "Ku-band FSS"
+msgstr ""
+
+msgid "Ku-band Universal"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Languages"
+msgstr ""
+
+msgid "Latest arrivals"
+msgstr ""
+
+msgid "Line"
+msgstr ""
+
+msgid "List is empty"
+msgstr ""
+
+msgid "List name already exists"
+msgstr ""
+
+msgid "List name cannot be empty"
+msgstr ""
+
+#, c-format
+msgid "List no. %u"
+msgstr ""
+
+msgid "Local"
+msgstr ""
+
+msgid "Lock"
+msgstr ""
+
+msgid "Lock status - NO SIGNAL"
+msgstr ""
+
+msgid "Lock status - OK"
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Lost tuner access"
+msgstr ""
+
+msgid "MAC address"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "MStore"
+msgstr ""
+
+msgid "Manual(Static)"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Message - NEW!"
+msgstr ""
+
+#, c-format
+msgid "Minimum Age %d"
+msgstr ""
+
+#, c-format
+msgid "Modulation: %s"
+msgstr ""
+
+msgid "More info"
+msgstr ""
+
+msgid "Mounting..."
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
+msgid "Movies"
+msgstr ""
+
+#, c-format
+msgid "Movies %s is in..."
+msgstr ""
+
+msgid "My Coupons"
+msgstr ""
+
+msgid "My List"
+msgstr ""
+
+msgid "My Recordings"
+msgstr ""
+
+msgid "My Rentals"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "NATStatus"
+msgstr ""
+
+msgid "NEW RELEASES"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr ""
+
+msgid "Network Problem Detected"
+msgstr ""
+
+msgid "Network mask"
+msgstr ""
+
+msgid "New Only"
+msgstr ""
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr ""
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr ""
+
+msgid ""
+"New recording cannot be scheduled due to many conflicts with previously "
+"scheduled recordings"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No Card Inserted"
+msgstr ""
+
+msgid "No Content"
+msgstr ""
+
+msgid "No DiSEqC"
+msgstr ""
+
+msgid "No Items"
+msgstr ""
+
+msgid "No Music"
+msgstr ""
+
+msgid "No STUN Server Connection"
+msgstr ""
+
+msgid "No Signal Lock"
+msgstr ""
+
+msgid "No SmartCard found. This movie can not be ordered"
+msgstr ""
+
+msgid "No access"
+msgstr ""
+
+#, c-format
+msgid "No access (%d)"
+msgstr ""
+
+msgid "No access (1)"
+msgstr ""
+
+msgid "No access (10)"
+msgstr ""
+
+msgid "No access (11)"
+msgstr ""
+
+msgid "No access (12)"
+msgstr ""
+
+msgid "No access (2)"
+msgstr ""
+
+msgid "No access (3)"
+msgstr ""
+
+msgid "No access (4)"
+msgstr ""
+
+msgid "No access (5)"
+msgstr ""
+
+msgid "No access (6)"
+msgstr ""
+
+msgid "No access (7)"
+msgstr ""
+
+msgid "No access (8)"
+msgstr ""
+
+msgid "No access (9)"
+msgstr ""
+
+msgid "No access (No pairing)"
+msgstr ""
+
+msgid "No access - geographical blackout"
+msgstr ""
+
+msgid "No access - network block"
+msgstr ""
+
+msgid "No card inserted"
+msgstr ""
+
+msgid "No channel"
+msgstr ""
+
+msgid "No credits"
+msgstr ""
+
+msgid "No debits"
+msgstr ""
+
+msgid "No entries"
+msgstr ""
+
+msgid "No events"
+msgstr ""
+
+msgid "No items"
+msgstr ""
+
+msgid "No list"
+msgstr ""
+
+msgid "No messages"
+msgstr ""
+
+msgid "No pairing"
+msgstr ""
+
+msgid "No purses"
+msgstr ""
+
+msgid "No results found"
+msgstr ""
+
+msgid ""
+"No results.\n"
+"Please enter new search criteria"
+msgstr ""
+
+msgid "No subscription"
+msgstr ""
+
+msgid "No subscriptions"
+msgstr ""
+
+msgid "No time limits"
+msgstr ""
+
+msgid "No title"
+msgstr ""
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr ""
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr ""
+
+msgid "Non smartcard"
+msgstr ""
+
+msgid "Non smartcard configuration changed - please enter PIN"
+msgstr ""
+
+msgid "Non smartcard mode"
+msgstr ""
+
+msgid "Non smartcard mode with card"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Not Available"
+msgstr ""
+
+msgid "Not Entitled"
+msgstr ""
+
+msgid "Not Possible"
+msgstr ""
+
+msgid "Not authorized"
+msgstr ""
+
+msgid "Not authorized."
+msgstr ""
+
+msgid "Not connected"
+msgstr ""
+
+msgid "Not enough tokens - please recharge your card"
+msgstr ""
+
+msgid "Not entitled"
+msgstr ""
+
+msgid "Not present"
+msgstr ""
+
+msgid "Not subscribed"
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "Number of Sessions"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Obtaining IP address..."
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Ongoing Recordings"
+msgstr ""
+
+msgid "Ongoing recording is unavilable due to parental control restrictions"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Operation Successful"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Order Now"
+msgstr ""
+
+msgid "Order by SMS"
+msgstr ""
+
+msgid "Order history"
+msgstr ""
+
+#, c-format
+msgid ""
+"Ordering\n"
+"%s \\%s\n"
+"Please contact your operator for further information."
+msgstr ""
+
+#, c-format
+msgid "Other error: [%d]"
+msgstr ""
+
+msgid "Out of quota on nPVR server."
+msgstr ""
+
+msgid "Override"
+msgstr ""
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "PIN change"
+msgstr ""
+
+msgid "PIN:"
+msgstr ""
+
+msgid "PVR"
+msgstr ""
+
+msgid "PVR end time setup - warning"
+msgstr ""
+
+msgid "Pairing Ok"
+msgstr ""
+
+msgid "Pairing bad"
+msgstr ""
+
+msgid "Parental control PIN"
+msgstr ""
+
+msgid "Parental control PIN (Non smartcard)"
+msgstr ""
+
+msgid "Parental control PIN required (CA)"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+#, c-format
+msgid "Password must contain between %d and %d characters"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Play Trailer"
+msgstr ""
+
+msgid "Play from the beginning"
+msgstr ""
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr ""
+
+msgid "Playlist error"
+msgstr ""
+
+msgid "Playlist name"
+msgstr ""
+
+msgid "Please enter CA PIN"
+msgstr ""
+
+msgid "Please enter parental control PIN"
+msgstr ""
+
+msgid "Please enter parental control PIN to enter this category"
+msgstr ""
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr ""
+
+msgid "Please wait"
+msgstr ""
+
+msgid "Please wait for result"
+msgstr ""
+
+msgid "Please wait, loading..."
+msgstr ""
+
+msgid "Please wait, loading…"
+msgstr ""
+
+msgid "Please wait."
+msgstr ""
+
+msgid "Please wait..."
+msgstr ""
+
+msgid "Poor"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Premiere"
+msgstr ""
+
+msgid "Preserved"
+msgstr ""
+
+msgid "Press 'Cancel' to abort automatic switch to standby."
+msgstr ""
+
+msgid "Press 'Configure Network' to see your network settings."
+msgstr ""
+
+msgid "Press 'Enter Standby' to immediately switch to standby."
+msgstr ""
+
+msgid "Press Cancel to stay on current channel or press OK to go to"
+msgstr ""
+
+msgid "Press OK button to start channel scanning."
+msgstr ""
+
+msgid "Press OK to browse"
+msgstr ""
+
+msgid "Press OK to browse or OPT to format"
+msgstr ""
+
+msgid "Press OPT to format"
+msgstr ""
+
+msgid "Press Opt for more options"
+msgstr ""
+
+msgid "Press Opt to add hidden SSID"
+msgstr ""
+
+msgid ""
+"Press and hold \"OK\" and \"MENU\" buttons until diode on remote blinks."
+msgstr ""
+
+#, c-format
+msgid "Press and hold power button for %u second to enter passive standby."
+msgid_plural ""
+"Press and hold power button for %u seconds to enter passive standby."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Press power button to cancel standby."
+msgstr ""
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr ""
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr ""
+
+msgid "Problem"
+msgstr ""
+
+msgid "Proceed"
+msgstr ""
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr ""
+
+msgid "Public IP"
+msgstr ""
+
+#, c-format
+msgid "Purse: %s"
+msgstr ""
+
+msgid "QAM128"
+msgstr ""
+
+msgid "QAM16"
+msgstr ""
+
+msgid "QAM256"
+msgstr ""
+
+msgid "QAM32"
+msgstr ""
+
+msgid "QAM64"
+msgstr ""
+
+msgid "QPSK"
+msgstr ""
+
+msgid "Quota"
+msgstr ""
+
+msgid "RECOMMENDED"
+msgstr ""
+
+msgid "Randomized"
+msgstr ""
+
+msgid "Recommended"
+msgstr ""
+
+#, c-format
+msgid "Recording channel %s is not available due to broadcaster's limitations"
+msgstr ""
+
+msgid "Recording schedule failed."
+msgstr ""
+
+msgid "Reminder"
+msgstr ""
+
+msgid "Removal not possible"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Removed"
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Rent"
+msgstr ""
+
+msgid "Rental Terms"
+msgstr ""
+
+msgid "Rental period expired"
+msgstr ""
+
+msgid "Rental period for this content has expired."
+msgstr ""
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr ""
+
+msgid "Renting Period Expired."
+msgstr ""
+
+msgid "Repeat"
+msgstr ""
+
+msgid "Resolve conflicts"
+msgstr ""
+
+msgid "Restart Now"
+msgstr ""
+
+msgid "Restored last working network configuration."
+msgstr ""
+
+msgid "Results - Failure"
+msgstr ""
+
+msgid "Results - Success"
+msgstr ""
+
+msgid "Resume event pin"
+msgstr ""
+
+msgid "SSID is unknown"
+msgstr ""
+
+msgid "SSID is unknown!"
+msgstr ""
+
+msgid "SSM Download"
+msgstr ""
+
+msgid "STUN IP restricted"
+msgstr ""
+
+msgid "STUN Port Restricted"
+msgstr ""
+
+msgid "Satellite Setup"
+msgstr ""
+
+msgid "Satellite name cannot be empty"
+msgstr ""
+
+msgid "Satellite with given name already exists"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Saving..."
+msgstr ""
+
+msgid "Scan now"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Schedule keyword recording"
+msgstr ""
+
+msgid "Schedule manual recording"
+msgstr ""
+
+msgid "Scheduled Recordings"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search Error"
+msgstr ""
+
+msgid "Search in progress..."
+msgstr ""
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Season: %zu"
+msgstr ""
+
+msgid "See all"
+msgstr ""
+
+msgid "See all from"
+msgstr ""
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr ""
+
+msgid "Select event"
+msgstr ""
+
+msgid "Select images"
+msgstr ""
+
+msgid "Select music"
+msgstr ""
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr ""
+
+msgid "Sent from remote device"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "Series directory name"
+msgstr ""
+
+msgid "Series directory name cannot be empty"
+msgstr ""
+
+#, c-format
+msgid "Series directory name must be at least %d characters"
+msgstr ""
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr ""
+
+msgid "Server error"
+msgstr ""
+
+msgid "Server error: forbidden"
+msgstr ""
+
+msgid "Server error: unsupported protocol"
+msgstr ""
+
+msgid "Service unavailable"
+msgstr ""
+
+msgid "Set Auto Relock Time"
+msgstr ""
+
+msgid "Set duration"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr ""
+
+msgid "Show selected"
+msgstr ""
+
+msgid "Sign Off"
+msgstr ""
+
+msgid "Signal - OK"
+msgstr ""
+
+msgid "Signal lost - check cable"
+msgstr ""
+
+msgid "Slideshow"
+msgstr ""
+
+msgid "Smartcard"
+msgstr ""
+
+msgid "Smartcard configuration changed - please enter PIN"
+msgstr ""
+
+msgid "Smartcard hardware error"
+msgstr ""
+
+msgid "Smartcard not present"
+msgstr ""
+
+msgid "Smartcard ok"
+msgstr ""
+
+msgid "Smartcard rejected"
+msgstr ""
+
+msgid "Software Version"
+msgstr ""
+
+msgid ""
+"Some services are unavailable due to lack of connectivity. Please check your "
+"network setup."
+msgstr ""
+
+msgid "Space Recovery"
+msgstr ""
+
+msgid "Space recovery"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Start Margin"
+msgstr ""
+
+msgid "Start date                           End date"
+msgstr ""
+
+msgid "Start date                End date                   Entitlement"
+msgstr ""
+
+msgid "Start time"
+msgstr ""
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Enter CA PIN to start viewing:"
+msgstr ""
+
+#, c-format
+msgid "Start: %s min, End: %s min"
+msgstr ""
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr ""
+
+msgid "Status: Download scheduled"
+msgstr ""
+
+msgid "Status: Not available"
+msgstr ""
+
+#, c-format
+msgid "Step %d out of %d"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "Stop keyword recording"
+msgstr ""
+
+msgid "Stop repeated recording"
+msgstr ""
+
+msgid "Stop time can not be set before current time"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "Subscription Info"
+msgstr ""
+
+msgid "Subtitle Language"
+msgstr ""
+
+msgid "Subtitles encoding"
+msgstr ""
+
+msgid "Subtitles: -"
+msgstr ""
+
+msgid "Successfully paired device with the remote controller."
+msgstr ""
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr ""
+
+msgid "System reboot is required to apply new application layout."
+msgstr ""
+
+#, c-format
+msgid "T: %dh%02d'"
+msgstr ""
+
+msgid "TSH disallowed"
+msgstr ""
+
+msgid ""
+"The access was not authorized (e.g. trying to update Cpe with a different "
+"customer id) or the supplied CpeId, CustomerId or ProfileId was incorrect."
+msgstr ""
+
+msgid "The custom data exceeds the allowed configured size."
+msgstr ""
+
+msgid "The movie is currently not available."
+msgstr ""
+
+msgid ""
+"The offer You are trying to access is a part of a package.\n"
+"Please contact operator for further instructions."
+msgstr ""
+
+msgid ""
+"The query was not ok, either the resource was not known or the requested "
+"resource id was not found or query parameters are unknown."
+msgstr ""
+
+msgid "The requested resource id was not found."
+msgstr ""
+
+msgid ""
+"There are too many ongoing recordings. Please stop some to watch this "
+"channel again."
+msgstr ""
+
+msgid ""
+"There is a technical problem with this movie, please contact Customer Care"
+msgstr ""
+
+msgid ""
+"There´s a connectivity problem, please try again, if the problem remains "
+"please call your provider"
+msgstr ""
+
+msgid "This device is used as PVR storage"
+msgstr ""
+
+msgid "This reminder will override the following reminders:\n"
+msgstr ""
+
+msgid "Title blocked"
+msgstr ""
+
+#, c-format
+msgid "Title: %s"
+msgstr ""
+
+msgid ""
+"To subscribe to this product (Traxis SVOD), please call Customer Support."
+msgstr ""
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+
+#, c-format
+msgid "Tokens: %d"
+msgstr ""
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Date: %s"
+msgstr ""
+
+msgid "Too many simultaneous recordings."
+msgstr ""
+
+#, c-format
+msgid "Track %d"
+msgstr ""
+
+msgid "Transponder has incorrect frequency value."
+msgstr ""
+
+msgid "Transponder has incorrect symbol rate value."
+msgstr ""
+
+msgid "Transponder is duplicate (has the same frequency as existing)."
+msgstr ""
+
+msgid "UDP port behind NAT"
+msgstr ""
+
+msgid "UDP receiving"
+msgstr ""
+
+msgid ""
+"USB Speed Test failed. Try to reinsert you USB drive and run the test again."
+msgstr ""
+
+msgid "Unable to connect to MW."
+msgstr ""
+
+msgid "Unable to pair device with a new remote controller."
+msgstr ""
+
+msgid "Unable to save. Directory name exists."
+msgstr ""
+
+msgid "Unable to save. Keyword is incorrect."
+msgstr ""
+
+msgid "Unable to save. Keyword is too short."
+msgstr ""
+
+msgid "Unavailable"
+msgstr ""
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr ""
+
+msgid "Unfortunately VoD service is not available."
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown card state"
+msgstr ""
+
+msgid "Unknown conflict found."
+msgstr ""
+
+msgid "Unknown error when processing transponder."
+msgstr ""
+
+msgid "Unknown message"
+msgstr ""
+
+msgid "Unknown nPVR error."
+msgstr ""
+
+msgid "Unknown state"
+msgstr ""
+
+msgid "Unlock"
+msgstr ""
+
+msgid "Unmounting..."
+msgstr ""
+
+#, c-format
+msgid "Unread messages! (%zu)"
+msgstr ""
+
+#, c-format
+msgid "Update Starts In %d Minute"
+msgid_plural "Update Starts In %d Minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Update Starts Soon"
+msgstr ""
+
+msgid "Update now"
+msgstr ""
+
+msgid "Update required"
+msgstr ""
+
+msgid ""
+"Update will take about 10 minutes. During this time screen may blink and you "
+"won't be able to use your STB."
+msgstr ""
+
+msgid "Upgrade triggered"
+msgstr ""
+
+msgid "Use Coupon"
+msgstr ""
+
+msgid "Used for PVR"
+msgstr ""
+
+msgid "Used for PVR and Timeshift"
+msgstr ""
+
+msgid "Used for Timeshift"
+msgstr ""
+
+msgid "V"
+msgstr ""
+
+msgid "VPN is not setup"
+msgstr ""
+
+#, c-format
+msgid "Version: %s"
+msgstr ""
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr ""
+
+msgid "Vertical"
+msgstr ""
+
+msgid "Video Codec"
+msgstr ""
+
+msgid "Video PID"
+msgstr ""
+
+msgid "Video Type"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View again"
+msgstr ""
+
+msgid "View from the beginning"
+msgstr ""
+
+msgid "VoD unavailable"
+msgstr ""
+
+msgid "WEP"
+msgstr ""
+
+msgid "WPA/WPA2"
+msgstr ""
+
+msgid "Waiting for nPVR server response..."
+msgstr ""
+
+msgid "Waiting for response"
+msgstr ""
+
+#, c-format
+msgid "Waiting for upgrade, (%zu) seconds left"
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Warning: All current recordings will be stopped!"
+msgstr ""
+
+msgid "Warning: Timeshift will be forsaken"
+msgstr ""
+
+msgid "Watched"
+msgstr ""
+
+msgid "We think you might like..."
+msgstr ""
+
+msgid "What People are Watching"
+msgstr ""
+
+msgid "WiFi Security"
+msgstr ""
+
+msgid "WiFi Session ID"
+msgstr ""
+
+msgid "Wired (DOCSIS)"
+msgstr ""
+
+msgid "Wired (Ethernet)"
+msgstr ""
+
+msgid "Wired (MoCa)"
+msgstr ""
+
+msgid "Wireless (3G)"
+msgstr ""
+
+msgid "Wireless (WiFi)"
+msgstr ""
+
+#, c-format
+msgid "Wrong key for %s"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "You are not entitled to view this channel"
+msgstr ""
+
+msgid "You can not remove nor modify default satellite."
+msgstr ""
+
+msgid "You don't have enough free space to make a new recording."
+msgstr ""
+
+msgid ""
+"You don’t have any content in your List yet.\n"
+"Please see what content other users are watching."
+msgstr ""
+
+msgid "You have too many directories and keyword recordings."
+msgstr ""
+
+msgid "You have too many directories and recordings."
+msgstr ""
+
+msgid "You have too many directories and scheduled recordings."
+msgstr ""
+
+msgid "You have too many directories."
+msgstr ""
+
+msgid "You have too many favorites lists."
+msgstr ""
+
+msgid "You have too many recordings."
+msgstr ""
+
+msgid "You have too many reminders."
+msgstr ""
+
+msgid ""
+"You haven't watched anything yet.\n"
+"Please see what content other users are watching."
+msgstr ""
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr ""
+
+msgid "You will be soon zapped to"
+msgstr ""
+
+msgid "Your drive is too slow to handle this recording."
+msgstr ""
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would "
+"you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would "
+"you like to:\n"
+"\n"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "[[stopped manually]"
+msgstr ""
+
+msgid "[active]"
+msgstr ""
+
+msgid "[completed]"
+msgstr ""
+
+msgid "[failed]"
+msgstr ""
+
+msgid "[missed]"
+msgstr ""
+
+msgid "[removed]"
+msgstr ""
+
+msgid "[scheduled]"
+msgstr ""
+
+msgid "[stopped – no source]"
+msgstr ""
+
+msgid "[stopped – no space]"
+msgstr ""
+
+msgid "[unknown]"
+msgstr ""
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "cannot connect to network"
+msgstr ""
+
+msgid "connected"
+msgstr ""
+
+#, c-format
+msgid "connecting (%d)"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "disconnected"
+msgstr ""
+
+msgid "dut"
+msgstr ""
+
+msgid "element"
+msgstr ""
+
+msgid "eng"
+msgstr ""
+
+msgid "enter"
+msgstr ""
+
+msgid "error"
+msgstr ""
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "hours"
+msgstr ""
+
+msgid "interrupted"
+msgstr ""
+
+msgid "less than HD hour left"
+msgstr ""
+
+msgid "less than hour left"
+msgstr ""
+
+msgid "nPVR action failed"
+msgstr ""
+
+msgid "nPVR margins"
+msgstr ""
+
+msgid "nPVR quota used"
+msgstr ""
+
+msgid "nPVR request has been canceled"
+msgstr ""
+
+msgid "nPVR server rejected recording request."
+msgstr ""
+
+msgid "network connected, but no Internet access"
+msgstr ""
+
+msgid "no interface connected"
+msgstr ""
+
+msgid "no quota limit"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "quota used"
+msgstr ""
+
+msgid "recording"
+msgid_plural "recordings"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "spa"
+msgstr ""
+
+msgid "space"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "today"
+msgstr ""
+
+msgid "tomorrow"
+msgstr ""
+
+msgid "unknown"
+msgstr ""
+
+msgid "unknown connection error"
+msgstr ""
+
+msgid "unknown quota"
+msgstr ""
+
+msgid "unknown test"
+msgstr ""
+
+msgid "unlimited"
+msgstr ""

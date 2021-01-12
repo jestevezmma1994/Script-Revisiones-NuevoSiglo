@@ -1,0 +1,28 @@
+digraph PVRServices {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    PVRServices [label="PVR" root=true]
+    epgWatcher
+    hotplugMounts
+    pvrAgent
+    QBHotplugNotifier
+    QBPVRConflictResolver
+    QBPVRMounter
+    QBPVRRepeatedRecordings
+    QBPVRSearchAgent
+    reminderAgent
+    reminder
+    schedManTunerReservation
+
+    PVRServices -> epgWatcher
+    PVRServices -> hotplugMounts
+    PVRServices -> QBHotplugNotifier
+    PVRServices -> pvrAgent
+    PVRServices -> QBPVRMounter
+    PVRServices -> QBPVRConflictResolver
+    PVRServices -> QBPVRRepeatedRecordings
+    PVRServices -> QBPVRSearchAgent
+    PVRServices -> reminderAgent
+    PVRServices -> reminder
+    PVRServices -> schedManTunerReservation
+}

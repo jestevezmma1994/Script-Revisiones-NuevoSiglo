@@ -1,0 +1,178 @@
+{
+    "lockedTime_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "tv_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Use numeric keyboard to navigate</item>\n  </row>\n</page>"
+    },
+    "blockedChannels_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Use numeric keyboard to navigate</item>\n  </row>\n</page>"
+    },
+    "radio_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Use numeric keyboard to navigate</item>\n  </row>\n</page>"
+    },
+    "favorites_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "pvr_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "npvr_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "filebrowser_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "hotplug_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "conax_maturity_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Select new Maturity Rating (CA PIN needed)</item>\n  </row>\n</page>"
+    },
+    "satelite_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "reminders_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for more options</item>\n  </row>\n</page>"
+    },
+    "unlock_my_rentals_hint" : {
+    "__jsonclass__": [
+            "QBHint",
+            []
+    ],
+    "displayDuration": 0,
+    "displayDelay": 1,
+    "type" : "normal",
+    "widgetDescription" :
+          "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt to unlock movie data</item>\n  </row>\n</page>"
+    },
+        "networkInterfaceSetup_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for advanced settings</item>\n  </row>\n</page>"
+    },
+    "commonOutputMode_hint" : {
+        "__jsonclass__": [
+                "QBHint",
+                []
+        ],
+        "displayDuration": 0,
+        "displayDelay": 0,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Display format is common for HDMI and analog outputs.</item>\n  </row>\n</page>"
+    },
+        "manual_hint" : { 
+        "__jsonclass__": [
+                "QBHint",
+                []  
+        ],  
+        "displayDuration": 0,
+        "displayDelay": 1,
+        "type" : "normal",
+        "widgetDescription" :
+              "<page align=\"left\" valign=\"top\" bgalpha=\"#00\" bgcolor=\"#000000\" color=\"#BCBEC0\">\n  <row align=\"left\">\n    <item height=\"40\" alpha=\"#FF\" color=\"#EBEEF2\" textalign=\"left\" maxlines=\"1\" gettext=\"enabled\" gettextDomain=\"CubiTV\">Press Opt for advanced settings</item>\n  </row>\n</page>"
+    }
+}

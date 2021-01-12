@@ -1,0 +1,103 @@
+#!/bin/sh
+COMMAND=$1
+IPSEC_XAUTH_CONF=vpn.strongswan.xauth-psk
+SERVER_ADDR=`qbnetconf_ctl $IPSEC_XAUTH_CONF.server_ip`
+SERVER_PSK_PASSWD=`qbnetconf_ctl $IPSEC_XAUTH_CONF.server_psk_passwd`
+XAUTH_LOGIN=`qbnetconf_ctl $IPSEC_XAUTH_CONF.xauth_login`
+XAUTH_PASSWD=`qbnetconf_ctl $IPSEC_XAUTH_CONF.xauth_passwd`
+PEERS_IDENTIFIER=`qbnetconf_ctl $IPSEC_XAUTH_CONF.peers_identifier`
+KEYLIFE=`qbnetconf_ctl $IPSEC_XAUTH_CONF.keylife`
+REKEYMARGIN=`qbnetconf_ctl $IPSEC_XAUTH_CONF.rekeymargin`
+IKELIFETIME=`qbnetconf_ctl $IPSEC_XAUTH_CONF.ikelifetime`
+LIFETIME=`qbnetconf_ctl $IPSEC_XAUTH_CONF.lifetime`
+STRONGSWAN_RUNTIME_DIR=/var/run/strongswan
+CONF_TEMPLATE=/usr/etc/ipsec.conf
+CONF=/tmp/ipsec.conf
+SECRETS_TEMPLATE=/usr/etc/ipsec.secrets
+SECRETS=/tmp/ipsec.secrets
+RUN_STRONGSWAN_PIDFILE=$STRONGSWAN_RUNTIME_DIR/run_strongswan
+IPCPATH="/var/run/networking/QBNetworkManager_api"
+
+stop_and_cleanup() {
+    ipsec down default
+    ipsec stop
+    
+    if [ -e $RUN_STRONGSWAN_PIDFILE ]; then
+        kill -KILL `cat $RUN_STRONGSWAN_PIDFILE` > /dev/null 2>&1
+        rm $RUN_STRONGSWAN_PIDFILE > /dev/null 2>&1
+    fi
+    
+    umount $CONF_TEMPLATE
+    umount $SECRETS_TEMPLATE
+}
+
+prepare_conf() {
+    cp $CONF_TEMPLATE $CONF
+    chmod +w $CONF
+    sed -i 's/SERVER_IP/'$SERVER_ADDR'/g' $CONF
+    sed -i 's/XAUTH_LOGIN/'$XAUTH_LOGIN'/g' $CONF
+    sed -i 's/PEERS_IDENTIFIER/'$PEERS_IDENTIFIER'/g' $CONF
+    sed -i 's/KEYLIFE/'$KEYLIFE'/g' $CONF
+    sed -i 's/REKEYMARGIN/'$REKEYMARGIN'/g' $CONF
+    sed -i 's/IKELIFETIME/'$IKELIFETIME'/g' $CONF
+    sed -i 's/LIFETIME/'$LIFETIME'/g' $CONF
+    mount -o bind $CONF $CONF_TEMPLATE
+}
+
+prepare_secrets() {
+    cp $SECRETS_TEMPLATE $SECRETS
+    chmod +w $SECRETS
+    sed -i 's/PEERS_IDENTIFIER/'$PEERS_IDENTIFIER'/g' $SECRETS
+    sed -i 's/XAUTH_LOGIN/'$XAUTH_LOGIN'/g' $SECRETS
+    sed -i 's/XAUTH_PASSWD/'$XAUTH_PASSWD'/g' $SECRETS
+    sed -i 's/SERVER_PSK_PASSWD/'$SERVER_PSK_PASSWD'/g' $SECRETS
+    mount -o bind $SECRETS $SECRETS_TEMPLATE
+}
+
+INITIAL_STATUS=initial
+DISCONNECTED_STATUS=disconnected
+CONNECTING_STATUS=connecting
+ESTABLISHED_STATUS=established
+
+parse_status() {
+	CONNECTION_STATUS=$INITIAL_STATUS
+	IPSEC_STATUS=`ipsec status`
+    IPSEC_STATUS=`echo $IPSEC_STATUS | sed 's/(\|)//g' | awk '{print $3 " " $5}'`
+    if [ "$IPSEC_STATUS" == "0 0" ]; then
+    	CONNECTION_STATUS=$DISCONNECTED_STATUS
+    elif [ "$IPSEC_STATUS" == "0 1" ]; then
+    	CONNECTION_STATUS=$CONNECTING_STATUS
+    elif [ "$IPSEC_STATUS" == "1 0" ]; then
+    	CONNECTION_STATUS=$ESTABLISHED_STATUS
+    fi
+}
+
+start() {
+    echo $$ > $RUN_STRONGSWAN_PIDFILE
+    CONNECTION_COUNTER=0
+    ipsec start
+    while true; do
+        IPSEC_STATUS_POLL_PERIOD=5
+        parse_status
+        if [ "$CONNECTION_STATUS" == "$INITIAL_STATUS" ]; then
+            IPSEC_STATUS_POLL_PERIOD=1
+        elif [ "$CONNECTION_STATUS" == "$DISCONNECTED_STATUS" ]; then
+            CONNECTION_COUNTER=$((CONNECTION_COUNTER + 1))
+            QBIPCSend $IPCPATH "#ipSecVPNStatusChanged#connecting########$CONNECTION_COUNTER#"
+            ipsec up default
+        elif [ "$CONNECTION_STATUS" == "$CONNECTING_STATUS" ]; then
+            QBIPCSend $IPCPATH "#ipSecVPNStatusChanged#connecting########$CONNECTION_COUNTER#"
+        fi
+        sleep $IPSEC_STATUS_POLL_PERIOD
+    done
+}
+
+if [ "$COMMAND" == "stop" ]; then
+    stop_and_cleanup
+    QBIPCSend $IPCPATH "#ipsecStopped#"
+elif [ "$COMMAND" == "start" ]; then
+    stop_and_cleanup
+    prepare_conf
+    prepare_secrets
+    start
+fi

@@ -1,0 +1,42 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop recording",
+        "text": "Stop recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop channel recording",
+        "text": "Stop channel recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop recording always",
+        "text": "Stop recording always",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop recording repeatedly",
+        "text": "Stop recording repeatedly",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    }
+]

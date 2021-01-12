@@ -1,0 +1,6 @@
+Name: XMB2
+Version: 1.0.0
+Requires: CAGE CUIT QBDataModel3 QBMenu QBSecureLogManager SvCore SvFoundation SvSettingsManager swl 
+Description: Cubiware Xross Media Bar
+Libs: -lXMB2 
+CFlags: 

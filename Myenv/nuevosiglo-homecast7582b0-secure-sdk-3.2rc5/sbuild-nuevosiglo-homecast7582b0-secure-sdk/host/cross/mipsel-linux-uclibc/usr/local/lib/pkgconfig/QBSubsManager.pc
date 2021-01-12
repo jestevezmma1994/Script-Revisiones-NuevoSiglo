@@ -1,0 +1,6 @@
+Name: QBSubsManager
+Version: 1.0.0
+Requires: CAGE CUIT QBDataModel3 SvCore SvFoundation SvPlayerControllers SvPlayerManager 
+Description: Subtitle manager
+Libs: -lQBSubsManager 
+CFlags: 

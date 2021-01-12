@@ -1,0 +1,162 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "scheduleKeywordRecording",
+        "text": "Schedule keyword recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "createNewDirectory",
+        "text": "Create new directory",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "scheduleSeriesRecording",
+        "text": "Schedule series recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all scheduled",
+        "text": "Delete all scheduled",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all active",
+        "text": "Delete all active",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all",
+        "text": "Delete all",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all failed",
+        "text": "Delete all failed",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "more info",
+        "text": "More info",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "deleteKeywordRecording",
+        "text": "Stop keyword recording",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "deleteSeriesRecording",
+        "text": "Stop series recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "renameDir",
+        "text": "Rename directory",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "removeDirKeepContents",
+        "text": "Remove directory & keep contents",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "removeDir",
+        "text": "Delete all recordings",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "quota",
+        "text": "Quota",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "deleteAll",
+        "text": "Delete All",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "dirPreferences",
+        "text": "Preferences",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    }
+]                                                                                 

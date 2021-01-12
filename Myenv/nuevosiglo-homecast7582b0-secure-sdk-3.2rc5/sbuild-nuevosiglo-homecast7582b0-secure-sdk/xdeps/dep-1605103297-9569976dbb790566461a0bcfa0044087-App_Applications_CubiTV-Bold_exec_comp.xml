@@ -1,0 +1,68 @@
+<perldata>
+ <hashref memory_address="0x18d7558">
+  <item key="deps">
+   <hashref memory_address="0x235e3b0">
+    <item key="App/Applications/CubiTV-Bold/logic.comp">1</item>
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x1b0c4a0">
+    <item key="CROSS_ROOT">${SRM_ROOT}/host/cross/mipsel-linux</item>
+    <item key="CUBITV_FACTORY_CONTEXT">HomecastFactory</item>
+    <item key="SvStandardMakefiles">${SRM_ROOT}/host/cross/mipsel-linux/usr/local/include/SvStandardMakefiles</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x231d390">
+    <item key="App/Applications/CubiTV-Bold/DVBScannerPlugins/SIDAsChannelNumberPlugin.c">9a13894ae62c50a8601b3e882cad1ffc</item>
+    <item key="App/Applications/CubiTV-Bold/DVBScannerPlugins/SIDAsChannelNumberPlugin.h">9c93045abcabf4f0bb6c2fb9899d51c5</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/AnyPlayerLogic.c">f7fd33957c30132f82f5224c66b5f81b</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/ChannelScanningLogic.c">e973c9b2d1e3314e7907b105a95cc7d6</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/InitLogic.c">2da8e4a820b2a5510d39fdd4c236567f</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/StandbyLogic.c">d8299e4a362f8288d760e23bb53e8c2c</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/TVLogic.c">cec41a488a2c13d14ce252c1bd05f162</item>
+    <item key="App/Applications/CubiTV-Bold/Makefile.exec">445fec3aaa42284f0ff85f8442a1cba1</item>
+    <item key="App/Applications/CubiTV-Bold/Makefile.logic">168e618117364856fa61c9196b89dc70</item>
+    <item key="App/Applications/CubiTV-Bold/Services/BackgroundScanner.c">a937d0ffb866eb4deb39b050a698b222</item>
+   </hashref>
+  </item>
+  <item key="string">App/Applications/CubiTV-Bold/exec.comp</item>
+  <item key="time">1605103297</item>
+  <item key="units">
+   <hashref memory_address="0x17a4968">
+    <item key="App/Applications/CubiTV-Bold/DVBScannerPlugins/SIDAsChannelNumberPlugin.c">a</item>
+    <item key="App/Applications/CubiTV-Bold/DVBScannerPlugins/SIDAsChannelNumberPlugin.h">a</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/AnyPlayerLogic.c">a</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/ChannelScanningLogic.c">a</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/InitLogic.c">a</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/StandbyLogic.c">a</item>
+    <item key="App/Applications/CubiTV-Bold/Logic/TVLogic.c">a</item>
+    <item key="App/Applications/CubiTV-Bold/Makefile.exec">a</item>
+    <item key="App/Applications/CubiTV-Bold/Makefile.logic">a</item>
+    <item key="App/Applications/CubiTV-Bold/Services/BackgroundScanner.c">a</item>
+    <item key="CROSS_ROOT">a</item>
+    <item key="CUBITV_FACTORY_CONTEXT">a</item>
+    <item key="SvStandardMakefiles">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/lib/crt1.o">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/lib/gcc/mipsel-linux-uclibc/4.5.3/crtbegin.o">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/lib/gcc/mipsel-linux-uclibc/4.5.3/crtend.o">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/lib/libtinfo.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/lib/libtinfo.so.6">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/lib/libtinfo.so.6.1">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libCubiTV-logic.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libCubiTV-logic.so.1.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libCubiTV-logic.so.1.0.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/pkgconfig/CubiTV-logic.pc">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/QBShellCmdsWhitelists/CubiTV-logic">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/QBShellCmdsWhitelists/cubitv.final">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/QBShellCmdsWhitelists/cubitv">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/bin/cubitv">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x16d25c8">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

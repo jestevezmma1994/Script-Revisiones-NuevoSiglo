@@ -1,0 +1,200 @@
+<perldata>
+ <arrayref>
+  <item key="0">
+   <arrayref>
+   </arrayref>
+  </item>
+  <item key="1">
+   <arrayref>
+    <item key="0">SRM_MAKE=make</item>
+    <item key="1">SRM_RELEASE=3.0</item>
+    <item key="2">SRM_RELEASE_CANDIDATE=30</item>
+    <item key="3">SRM_PROJECT=bold-homecast7582b0-secure-cubitv</item>
+    <item key="4">SRM_BOARD=garbage_srm_board</item>
+   </arrayref>
+  </item>
+  <item key="2">
+   <arrayref>
+    <item key="0">FAKE_LEVEL_FOR_SILO=fake1</item>
+   </arrayref>
+  </item>
+  <item key="3">
+   <arrayref>
+    <item key="0">FAKE_LEVEL_FOR_SILO=fake2</item>
+   </arrayref>
+  </item>
+  <item key="4">
+   <arrayref>
+    <item key="0">VANILLA_PATH=${PATH}</item>
+    <item key="1">VANILLA_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}</item>
+    <item key="2">AR=cross-ar</item>
+    <item key="3">ARCH=mipsel</item>
+    <item key="4">AS=cross-as</item>
+    <item key="5">BCM_MEMORY=0x08600000</item>
+    <item key="6">BCM_MEMORY_HIGHMEM=0x05000000</item>
+    <item key="7">BOARD=BCM97552</item>
+    <item key="8">BOARD_SOC=97552</item>
+    <item key="9">BUILD_ARCH=i686-linux</item>
+    <item key="10">BUILD_GCC=gcc</item>
+    <item key="11">BUILD_ROOT=${SRM_ROOT}/host/local</item>
+    <item key="12">CC=cross-gcc</item>
+    <item key="13">CFE_EXTRA_FLAGS=CFG_PROFILE=2 CFG_SDRAM_SCRAMBLING=1 CFG_DEBUG_LEVEL=0 CFG_CMD_LEVEL=0 CFG_SPLASH=1 CFG_SPLASH_PAL=0 CFG_FAT32FS=0 CFG_ENET=0 CFG_NETWORK=0 CFG_UI=0 CFG_MIN_CONSOLE=1 CFG_FAT32FS=0 CFG_USB=0 CFG_FATFS=0 CFG_SREC_LDR=0 CFG_RAW_LDR=0 CFG_USB_HID=0 CFG_USB_DISK=0 CFG_USB_SERIAL=0 CFG_USB_ETH=0 CFG_SECURE_BOOT=1 CFG_NOR_PLUS_NAND=1 CFG_MEMC_0_DEV_WIDTH=16 CFG_MEMC_0_DEV_TECH=4GBIT CFG_NAND_CHIP_SELECT=1 USB_PWRON_ACTIVE_HIGH=1 NAND_ECC_LEVEL=0xF CFG_OPTIONS="SPLASH_ON_NAND=1 HOMECAST_QUIRKS=1"</item>
+    <item key="14">CFE_FILES=</item>
+    <item key="15">CPP=cross-cpp</item>
+    <item key="16">CROSS_ARCH=mipsel-linux</item>
+    <item key="17">CROSS_COMPILE=${SRM_ROOT}/host/cross/bin/cross-</item>
+    <item key="18">CROSS_ENDIAN=LITTLE</item>
+    <item key="19">CROSS_PATH=${SRM_ROOT}/host/cross</item>
+    <item key="20">CROSS_PLATFORM=bcm97xxx</item>
+    <item key="21">CROSS_ROOT=${SRM_ROOT}/host/cross/mipsel-linux</item>
+    <item key="22">CUBITV_FACTORY_CONTEXT=HomecastFactory</item>
+    <item key="23">CUBITV_MALLOC_REPLACEMENT=jemalloc-replace</item>
+    <item key="24">CUBITV_STARTER_SCRIPT=scripts/starter-secure</item>
+    <item key="25">CXX=cross-g++</item>
+    <item key="26">CXXFILT=cross-c++filt</item>
+    <item key="27">FAKE_LEVEL_FOR_SILO=fake2</item>
+    <item key="28">FRONT_KEYPAD=yes</item>
+    <item key="29">GENERIC_STARTER_SCRIPT=scripts/starter-secure</item>
+    <item key="30">HOST_AR=local-ar</item>
+    <item key="31">HOST_AS=local-as</item>
+    <item key="32">HOST_CC=local-gcc</item>
+    <item key="33">HOST_CFLAGS="-I/usr/include -L/usr/lib"</item>
+    <item key="34">HOST_CPP=local-cpp</item>
+    <item key="35">HOST_CXX=local-g++</item>
+    <item key="36">HOST_CXXFILT=local-c++filt</item>
+    <item key="37">HOST_LD=local-ld</item>
+    <item key="38">HOST_NM=local-nm</item>
+    <item key="39">HOST_RANLIB=local-ranlib</item>
+    <item key="40">HOST_STRIP=local-strip</item>
+    <item key="41">KERNELARCH=mips</item>
+    <item key="42">KERNELDIR=${SRM_ROOT}/host/cross/linux</item>
+    <item key="43">KERNELVER=3.3.8-3.3</item>
+    <item key="44">KERNEL_BCHP_VER=B0</item>
+    <item key="45">KERNEL_PLATFORM=97552</item>
+    <item key="46">LD=cross-ld</item>
+    <item key="47">LD_LIBRARY_PATH=${SRM_ROOT}/host/local/lib:${SRM_ROOT}/host/local/usr/lib</item>
+    <item key="48">MAGNUM_ASF=n</item>
+    <item key="49">MAGNUM_BCHP_VER=B0</item>
+    <item key="50">MAGNUM_CHIPSET_PAIRING=yes</item>
+    <item key="51">MAGNUM_DEBUG=no</item>
+    <item key="52">MAGNUM_HD=yes</item>
+    <item key="53">MAGNUM_HDCP_SUPPORT=y</item>
+    <item key="54">MAGNUM_LIVEMEDIA=n</item>
+    <item key="55">MAGNUM_PLATFORM=97552</item>
+    <item key="56">MAGNUM_RAP_AC3=n</item>
+    <item key="57">MAGNUM_RAP_DDP=n</item>
+    <item key="58">MAGNUM_RAP_WMA=n</item>
+    <item key="59">MAGNUM_REFSW_PLATFORM=97552</item>
+    <item key="60">MAGNUM_SMP=n</item>
+    <item key="61">MAGNUM_VBI=yes</item>
+    <item key="62">MAGNUM_VERSION=20150326</item>
+    <item key="63">MAX_LOGO_CANVAS_SIZE=345600</item>
+    <item key="64">MERGE_TRANSLATIONS_DOMAIN_TAGS=core=CubiTV</item>
+    <item key="65">MERGE_TRANSLATIONS_ORDER_core=progress_settings,progress_sources,CubiTV_sources,CubiTV-logics,CubiTV-Generic_settings,CubiTV-Generic_json,cubitv_sources,QBUpgrade_sources</item>
+    <item key="66">NEXUS_AUDIO_ADD_VARIANTS=PROP_WITHOUT_DDP_DTSHD_WMA</item>
+    <item key="67">NEXUS_COMPONENTS_PACKS=refsw_release_unified_15.1_20150326.src.tgz</item>
+    <item key="68">NEXUS_MODE=proxy</item>
+    <item key="69">NEXUS_SECURITY_COMPONENTS_PACKS=refsw_release_unified_20150326_3pip_homecast.tgz</item>
+    <item key="70">NM=cross-nm</item>
+    <item key="71">PATH=${SRM_ROOT}/host/cross/bin:${SRM_ROOT}/host/local/bin:${SRM_ROOT}/host/local/usr/bin:${VANILLA_PATH}</item>
+    <item key="72">PKG_CONFIG=${SRM_ROOT}/host/local/bin/pkg-config</item>
+    <item key="73">PROTOCOL_TYPE=nec</item>
+    <item key="74">QBConaxModuleType=secure</item>
+    <item key="75">QBINPUT_KEYMAPS_VARIANT=homecast-rev3</item>
+    <item key="76">QUADRICAST_MSTORE_SOURCES=null</item>
+    <item key="77">Q_RESOURCES_CUBITV_CUSTOMER=generic</item>
+    <item key="78">Q_RESOURCES_CUBITV_FORMAT=720p</item>
+    <item key="79">Q_RESOURCES_CUBITV_SETTINGS=generic,qb</item>
+    <item key="80">Q_RESOURCES_CUBITV_USE_GENERIC=yes</item>
+    <item key="81">RANLIB=cross-ranlib</item>
+    <item key="82">SDK_VERSION=20110402</item>
+    <item key="83">SRM_BOARD=qb</item>
+    <item key="84">SRM_BUILD_DIR=${SRM_ROOT}/host/cross</item>
+    <item key="85">SRM_DRIVER_PACK=bold-homecast7582b0-secure-cubitv-driver-96eeaf8f98b7c2ed2143a0e823a5b109.tgz</item>
+    <item key="86">SRM_ENV=${SRM_ROOT}/SRM.environment</item>
+    <item key="87">SRM_GLOBAL_FLAGS=ARCH=mipsel V_GCC=4.5.3 V_UCLIBC=0.9.32.1 V_LINUX=2.6.37 V_BINUTILS=2.19 SDK_VERSION=20110402 BUILD_GCC=gcc</item>
+    <item key="88">SRM_NODES=${SRM_ROOT}/mknodes.sh</item>
+    <item key="89">STRIP=cross-strip</item>
+    <item key="90">SV_LOG_LEVEL=0</item>
+    <item key="91">S_BUSYBOX_CONFIG_FILE=busybox-1.22.1-conax</item>
+    <item key="92">S_BUSYBOX_VERSION=1.22.1</item>
+    <item key="93">S_GUI_HAVE_GETTEXT=yes</item>
+    <item key="94">S_INPUTDEV_DYNAMIC=yes</item>
+    <item key="95">S_INSTALL_AUTOUPGRADE=no</item>
+    <item key="96">S_INSTALL_BSPEC=${SRM_ROOT}/target/root/../bSpec/</item>
+    <item key="97">S_INSTALL_CERT_LOCATION=ROOTFS</item>
+    <item key="98">S_INSTALL_CONFIG_PASSWD=nologin</item>
+    <item key="99">S_INSTALL_CONFIG_SH=ubifs-encrypted.json</item>
+    <item key="100">S_INSTALL_CONFIG_USE_JSON=yes</item>
+    <item key="101">S_INSTALL_CREATE_RSA_UPGRADE=yes</item>
+    <item key="102">S_INSTALL_DISABLE_SSHD=yes</item>
+    <item key="103">S_INSTALL_DISABLE_TELNETD=yes</item>
+    <item key="104">S_INSTALL_DO_STRIP=yes</item>
+    <item key="105">S_INSTALL_DRIVER_VARIANT=PROP_WITHOUT_DDP_DTSHD_WMA</item>
+    <item key="106">S_INSTALL_DYNAMIC_PASSWD=none</item>
+    <item key="107">S_INSTALL_ENCRYPT_NVRAM=yes</item>
+    <item key="108">S_INSTALL_ENCRYPT_PVR_META=yes</item>
+    <item key="109">S_INSTALL_FIREWALL=yes</item>
+    <item key="110">S_INSTALL_KEYSERVER_RSA_BOOT_HASH=sha256</item>
+    <item key="111">S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID=52</item>
+    <item key="112">S_INSTALL_KEYSERVER_RSA_SKIN_KEY_ID=216</item>
+    <item key="113">S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH=sha256</item>
+    <item key="114">S_INSTALL_KEYSERVER_RSA_UPGRADE_INNER_KEY_ID=214</item>
+    <item key="115">S_INSTALL_KEYSERVER_RSA_UPGRADE_KEY_ID=53</item>
+    <item key="116">S_INSTALL_KEYSERVER_RSA_UPGRADE_OUTER_KEY_ID=214</item>
+    <item key="117">S_INSTALL_KEYSERVER_SWPK4_KEY_ID=217</item>
+    <item key="118">S_INSTALL_KEYSERVER_SYM_KERNEL_KEY_ID=54</item>
+    <item key="119">S_INSTALL_KEYSERVER_SYM_META_KEY_ID=218</item>
+    <item key="120">S_INSTALL_KEYSERVER_SYM_NVRAM_KEY_ID=219</item>
+    <item key="121">S_INSTALL_KEYSERVER_SYM_ROOTFS_KEY_ID=55</item>
+    <item key="122">S_INSTALL_LOCALES=pl_PL.utf8,en_US.utf8,ru_RU.utf8,es_ES.utf8,de_DE.utf8</item>
+    <item key="123">S_INSTALL_MKPART=configurable</item>
+    <item key="124">S_INSTALL_MULTI_USER=yes</item>
+    <item key="125">S_INSTALL_NETWORKING_2=yes</item>
+    <item key="126">S_INSTALL_NETWORKING_CONFIG_VERSION=qbconfig</item>
+    <item key="127">S_INSTALL_POLL_USB_DISK=no</item>
+    <item key="128">S_INSTALL_RCS_SCRIPT=rcS-secure</item>
+    <item key="129">S_INSTALL_SSHKEYS=no</item>
+    <item key="130">S_INSTALL_SVSTORAGE_CONFIG=generic</item>
+    <item key="131">S_INSTALL_SYSINIT_SCRIPT=sysinit-secure</item>
+    <item key="132">S_INSTALL_TFTPBIN=no</item>
+    <item key="133">S_INSTALL_UPGRADE_ARCH=homecast7582b0</item>
+    <item key="134">S_INSTALL_UPGRADE_OK=upgrade_ok_clean.sh</item>
+    <item key="135">S_INSTALL_UPGRADE_PLATFORM_SPEC=bcm97xxx</item>
+    <item key="136">S_INSTALL_UPGRADE_SECURE=yes</item>
+    <item key="137">S_INSTALL_USE_IMAGE_SIZES=yes</item>
+    <item key="138">S_INSTALL_USE_KEYSERVER=yes</item>
+    <item key="139">S_INSTALL_USE_RSA_UPGRADE=yes</item>
+    <item key="140">S_KERNEL_CONF=bcm7552b0_3.3-3.3_initramfs_secure</item>
+    <item key="141">S_KERNEL_INITRAMFS_FEATURES="UBI CRYPTO PANEL RAM CHAIN"</item>
+    <item key="142">S_KERNEL_PACK=stblinux-3.3-3.3</item>
+    <item key="143">S_KERNEL_QBPLATFORM=homecast7582b0-3.3-3.3</item>
+    <item key="144">S_KERNEL_USE_KEYCHAIN=yes</item>
+    <item key="145">S_LIBCAP_VERSION=2.22</item>
+    <item key="146">S_MAP_DIR=${SRM_ROOT}/target/root/../maps/</item>
+    <item key="147">S_MAP_NAME=homecast97582b0-nand128M-spi2M</item>
+    <item key="148">S_MTDUTILS_VERSION=2.0.2</item>
+    <item key="149">S_PLATFORMD_CONFIG=nexus-kernel</item>
+    <item key="150">S_SCRIPTS_GUI_START=gui-secure</item>
+    <item key="151">S_SECURE_BOOT=yes</item>
+    <item key="152">S_SECURE_BOOT_DRYRUN=no</item>
+    <item key="153">S_STB_REVISION=dev1</item>
+    <item key="154">S_STB_VENDOR=homecast</item>
+    <item key="155">S_WIFI_INTERFACE=ra0</item>
+    <item key="156">SvKeepStack=no</item>
+    <item key="157">SvStandardMakefiles=${SRM_ROOT}/host/cross/mipsel-linux/usr/local/include/SvStandardMakefiles</item>
+    <item key="158">TRANSPONDERS_SETS=generic</item>
+    <item key="159">UBIFS_LEB_SIZE=126976</item>
+    <item key="160">UBIFS_MIN_IO_SIZE=2048</item>
+    <item key="161">USE_AVI=1</item>
+    <item key="162">USE_MKV=1</item>
+    <item key="163">USE_PLAYREADY=1</item>
+    <item key="164">V_BINUTILS=2.19</item>
+    <item key="165">V_GCC=4.5.3</item>
+    <item key="166">V_LINUX=2.6.37</item>
+    <item key="167">V_UCLIBC=0.9.32.1</item>
+    <item key="168">cross_compiling=yes</item>
+   </arrayref>
+  </item>
+ </arrayref>
+</perldata>

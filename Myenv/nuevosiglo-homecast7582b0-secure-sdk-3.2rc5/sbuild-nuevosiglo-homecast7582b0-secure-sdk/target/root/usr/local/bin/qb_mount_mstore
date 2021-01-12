@@ -1,0 +1,83 @@
+#!/bin/sh
+
+log()
+{
+  echo "qb_mount_mstore[$HDX] > $@" 1>&2
+  echo "qb_mount_mstore[$HDX] > $@" >> /tmp/qb_mount_mstore.log
+  # logger "qb_mount_mstore[$DEV_NODE] > $@"
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR: (res=$RES)" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+
+if [ $# -ne 1 ]; then
+  log usage: "${0##*/} <partition_id>"
+  exit 1;
+fi
+
+HDX=$1
+#DEV_NODE=/tmp/automount/sda5/dev
+#DEV_DIR=/tmp/automount/sda5/root
+
+CONF_FILE=/tmp/automount/${HDX}1/root/.qb_partition_config
+if [ -f $CONF_FILE ]; then
+    # numbering of logical partitions starts from 5
+    # part=5
+    # We are no longer using logical partitions, so start from partition 3
+    part=3
+    regex="^label=[[:alnum:]_-]\+:type=[[:alnum:]]\+:size=[[:digit:]]\+$"
+    for line in $(grep $regex < $CONF_FILE) ; do
+        label=$(echo $line | cut -d: -f 1 | cut -d= -f 2)
+        #fs_type=$(echo $line | cut -d: -f 2 | cut -d= -f 2)
+        #size=$(echo $line | cut -d: -f 3 | cut -d= -f 2)
+
+        if [ "$label" == "MStoreVoD" ]; then
+
+            call_v  mount -o barrier=1,remount,rw,noexec /tmp/automount/${HDX}${part}/dev /tmp/automount/${HDX}${part}/root
+            [ $RES -ne 0 ] && exit 7
+
+            call_v  chown -R 1000:1000 /tmp/automount/${HDX}${part}/root
+            [ $RES -ne 0 ] && exit 7
+
+            call_v  chmod -R ug+rw /tmp/automount/${HDX}${part}/root
+            [ $RES -ne 0 ] && exit 7
+
+        fi
+
+        part=$((part + 1))
+    done
+else
+    log "Can't find config file [$CONF_FILE]"
+    exit 7
+fi
+
+log success

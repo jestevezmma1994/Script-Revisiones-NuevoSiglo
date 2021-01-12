@@ -1,0 +1,12 @@
+digraph ChannelScanParams {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+    manual [label=<\N<br/>Shows only widgets for attributes allowed by QBTunerProperties and QBChannelScanningConf>]
+    manual -> QBTuner [label=<Queries QBTunerProperties to know<br/>which attributes are needed to tune>]
+    manual -> channelScanningConf [label=<Uses QBChannelScanningConf to obtain<br/>parameters hardcoded by operator>]
+    manual -> channelScanning [label=<Provides QBDVBScannerParams with options provided by user<br/>It is filled with hardcoded paremeters from QBChannelScanningConf<br/>and then intersected with QBTunerProperties>]
+    channelScanning -> QBDVBScanner
+
+
+}

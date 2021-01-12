@@ -1,0 +1,6 @@
+Name: QBViewRightIPTV-common
+Version: 1.0.0
+Requires: QBCAS QBStringUtils SvCore SvFoundation 
+Description: Interface of QBViewRightIPTV.
+Libs: -lQBViewRightIPTV-common 
+CFlags: 

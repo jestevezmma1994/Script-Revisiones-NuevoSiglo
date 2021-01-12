@@ -1,0 +1,18 @@
+digraph ChannelsMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Channels [root=true]
+    QBChannelMenu
+    QBChannelChoiceMenu
+    QBFavoritesMenu
+    QBFavoritesMenuController
+    QBRadioChannelMenu
+    QBTVChannelMenu
+
+    Channels -> QBChannelMenu
+    Channels -> QBChannelChoiceMenu
+    Channels -> QBFavoritesMenu
+    Channels -> QBFavoritesMenuController
+    Channels -> QBRadioChannelMenu
+    Channels -> QBTVChannelMenu
+}

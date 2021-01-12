@@ -1,0 +1,235 @@
+[
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption", "en_US.UTF-8", "pl_PL.UTF-8", "ru_RU.UTF-8", "es_ES.UTF-8", "de_DE.UTF-8", "la.UTF-8"],
+        "id": "lang",
+        "screenNumber": 0,
+        "caption": "Language",
+        "default": "en_US.UTF-8",
+        "ids": {
+            "en_US.UTF-8": "English",
+            "pl_PL.UTF-8": "Polish",
+            "es_ES.UTF-8": "Spanish",
+            "de_DE.UTF-8": "German",
+            "la.UTF-8": "Latin"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption", "DVB", "IP", "HYBRID" ],
+        "id": "mode",
+        "screenNumber": 0,
+        "caption": "Mode",
+        "default": "HYBRID",
+        "ids": {
+            "DVB": "DVB Mode",
+            "IP": "IP Mode",
+            "HYBRID": "Hybrid Mode"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption", "cab", "cab annexb", "cab dvbc", "ter", "sat" ],
+        "id": "tuner",
+        "screenNumber": 1,
+        "caption": "Tuner Type",
+        "ids": {
+            "cab": "Cable",
+            "cab annexb": "Cable AnnexB",
+            "cab dvbc": "Cable DVB-C",
+            "ter": "Terrestrial",
+            "sat": "Satellite",
+            "unusedOption": "---"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "standard",
+        "screenNumber": 1,
+        "caption": "Scanning Standard",
+        "default": "dvbc",
+        "ids": {
+            "dvbc": "DVB-C",
+            "annexb": "Annex B",
+            "unusedOption": "---"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption", "automatic", "manual" ],
+        "id": "scan",
+        "screenNumber": 1,
+        "caption": "Scan Type",
+        "default": "automatic",
+        "ids": {
+            "automatic": "Automatic",
+            "manual": "Manual"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardBinaryOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "nidSelection",
+        "screenNumber": 1,
+        "caption": "NID selection",
+        "default": "disabled",
+        "ids": {
+            "disabled": "Disabled",
+            "enabled": "Enabled"
+        },
+        "subOption": {
+            "__jsonclass__": [
+                "QBWizardNumericSubOption",
+                []
+            ],
+            "default": -1,
+            "numericalMax": 65535
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardBinaryOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "onidSelection",
+        "screenNumber": 1,
+        "caption": "ONID selection",
+        "default": "disabled",
+        "ids": {
+            "disabled": "Disabled",
+            "enabled": "Enabled"
+        },
+        "subOption": {
+            "__jsonclass__": [
+                "QBWizardNumericSubOption",
+                []
+            ],
+            "default": -1,
+            "numericalMax": 65535
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "PROVIDERS.CHANNELS.DVB",
+        "screenNumber": 2,
+        "caption": "DVB channels",
+        "default": "enabled",
+        "ids": {
+            "enabled": "Enabled"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "PROVIDERS.CHANNELS.IP",
+        "screenNumber": 2,
+        "caption": "IP channels",
+        "default": "cubimw",
+        "ids": {
+            "cubimw": "CubiMW"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "PROVIDERS.EPG.IP",
+        "screenNumber": 2,
+        "caption": "EPG for IP channels",
+        "default": "cubimw",
+        "ids": {
+            "unusedOption": "---",
+            "cubimw": "CubiMW",
+            "traxis": "Traxis"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "id": "PROVIDERS.NPVR",
+        "screenNumber": 2,
+        "caption": "nPVR",
+        "default": "cubimw",
+        "ids": {
+            "unusedOption": "---",
+            "cubimw": "CubiMW",
+            "traxis": "Traxis"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "id": "PROVIDERS.CUTV",
+        "screenNumber": 2,
+        "caption": "CUTV",
+        "default": "cubimw",
+        "ids": {
+            "unusedOption": "---",
+            "cubimw": "CubiMW",
+            "traxis": "Traxis"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "id": "PROVIDERS.VOD",
+        "screenNumber": 3,
+        "caption": "VOD",
+        "default": "cubimw",
+        "ids": {
+            "unusedOption": "---",
+            "cubimw": "CubiMW",
+            "traxis": "Traxis"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "PROVIDERS.WEBSERVICES",
+        "screenNumber": 3,
+        "caption": "Web Services",
+        "default": "cubimw",
+        "ids": {
+            "unusedOption": "---",
+            "cubimw": "CubiMW"
+        }
+    }
+]

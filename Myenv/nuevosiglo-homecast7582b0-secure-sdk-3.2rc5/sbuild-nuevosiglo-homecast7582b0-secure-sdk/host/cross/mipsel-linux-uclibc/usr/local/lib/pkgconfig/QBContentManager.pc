@@ -1,0 +1,6 @@
+Name: QBContentManager
+Version: 1.0.0
+Requires: QBAppKit QBDLNAClient QBDataModel3 QBDataProvider QBSecureLogManager SvCore SvDataBucket2 SvFoundation SvHTTPClient SvXMLRPCClient fibers 
+Description: Cubiware Content Manager Library
+Libs: -lQBContentManager -lintl 
+CFlags: 

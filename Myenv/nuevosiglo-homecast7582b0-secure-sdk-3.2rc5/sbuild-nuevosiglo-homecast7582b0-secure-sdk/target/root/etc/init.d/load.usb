@@ -1,0 +1,9 @@
+#!/bin/sh
+
+modprobe usbcore
+modprobe ehci-hcd
+modprobe ohci-hcd
+
+modprobe usb-brcm
+modprobe ehci-brcm
+modprobe ohci-brcm

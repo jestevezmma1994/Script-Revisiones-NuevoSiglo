@@ -1,0 +1,32 @@
+digraph Misc {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Misc [label="Misc" root=true]
+
+
+    InputTranslator
+    JSONserializer
+    QBAutoTest
+    QBLogWindowManager
+    QBMainMenuMonitor
+    QBStandardRastersManager
+    QBSubtreeNotifier
+    QBTextRenderer
+    appState
+    cleaner
+    diskSchedulerChanger
+    prerenderer
+
+    Misc -> InputTranslator
+    Misc -> JSONserializer
+    Misc -> QBAutoTest
+    Misc -> QBLogWindowManager
+    Misc -> QBMainMenuMonitor
+    Misc -> QBStandardRastersManager
+    Misc -> QBSubtreeNotifier
+    Misc -> QBTextRenderer
+    Misc -> appState
+    Misc -> cleaner
+    Misc -> diskSchedulerChanger
+    Misc -> prerenderer
+}

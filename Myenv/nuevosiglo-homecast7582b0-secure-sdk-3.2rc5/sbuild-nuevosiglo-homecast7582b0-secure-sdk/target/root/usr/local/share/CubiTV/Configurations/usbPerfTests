@@ -1,0 +1,121 @@
+[
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "strings": 
+        {
+                "running" : "Measuring performance of idle system...",
+                "capable" : "Your USB drive is not capable neither of timeshift nor recording."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "strings": 
+        {
+                "running" : "Measuring timeshift performance...",
+                "capable" : "Your USB drive is capable of timeshift only."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "sd": 1,
+        "strings": 
+        {
+                "running" : "Measuring simultaneous timeshift and SD recording performance...",
+                "capable" : "Your USB drive is capable of simultaneous timeshift and one SD quality recording."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "hd": 1,
+        "strings": 
+        {
+                "running" : "Measuring simultaneous timeshift and HD recording performance...",
+                "capable" : "Your USB drive is capable of simultaneous timeshift and one HD quality recording."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "sd": 1,
+        "hd": 1,
+        "strings": 
+        {
+                "running" : "Measuring simultaneous timeshift, SD and HD recordings performance...",
+                "capable" : "Your USB drive is capable of simultaneous timeshift, one SD quality and one HD quality recording."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "hd": 2,
+        "strings": 
+        {
+                "running" : "Measuring simultaneous timeshift and two HD recordings performance...",
+                "capable" : "Your USB drive is capable of simultaneous timeshift and two HD quality recordings."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "sd": 3,
+        "strings": 
+        {
+                "running" : "Measuring simultaneous timeshift and three SD recordings performance...",
+                "capable" : "Your USB drive is capable of simultaneous timeshift and three SD quality recording."
+        }
+           
+    },
+    {
+        "__jsonclass__": [
+            "QBUSBPerfTest",
+            []
+        ],
+        "i18n_gettext": [ "running", "capable" ],
+        "ts": true,
+        "sd": 1,
+        "hd": 2,
+        "strings": 
+        {
+                "running" : "Measuring simultaneous timeshift, two HD recordings and one SD recording performance...",
+                "capable" : "Your USB drive is capable of simultaneous timeshift, one SD quality and two HD quality recordings."
+        }
+           
+    }
+]

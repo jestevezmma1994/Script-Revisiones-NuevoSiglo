@@ -1,0 +1,55 @@
+#!/bin/sh
+INTERFACE_ID=$1
+COMMAND=$2
+QB_NETWORK_MANAGER_WPA_SUPPLICANT_RUNTINME_PATH=/var/run/wpa_supplicant/
+WPA_SUPP_PIDFILE=$QB_NETWORK_MANAGER_WPA_SUPPLICANT_RUNTINME_PATH/$INTERFACE_ID.pidfile
+RUN_WPA_SUPP_PIDFILE=$QB_NETWORK_MANAGER_WPA_SUPPLICANT_RUNTINME_PATH/run_wpa_supplicant.$INTERFACE_ID.pidfile
+WPA_SUPP_CONF=/tmp/wpa_supplicant.conf
+CHECK_DELAY=5
+WPA_SUPP_CALL="/usr/local/sbin/wpa_supplicant -B -P$WPA_SUPP_PIDFILE -i$INTERFACE_ID -c$WPA_SUPP_CONF"
+
+stop_and_cleanup() {
+    if [ -e $RUN_WPA_SUPP_PIDFILE ]; then
+        kill -KILL `cat $RUN_WPA_SUPP_PIDFILE` > /dev/null 2>&1
+        rm $RUN_WPA_SUPP_PIDFILE > /dev/null 2>&1
+    fi
+
+    if [ -e $WPA_SUPP_PIDFILE ]; then
+        kill -KILL `cat $WPA_SUPP_PIDFILE` > /dev/null 2>&1
+        rm $WPA_SUPP_PIDFILE > /dev/null 2>&1
+    fi
+}
+
+start_and_watch() {
+    echo $$ > $RUN_WPA_SUPP_PIDFILE
+    while true ;
+    do
+        WPA_SUPP_IS_RUNNING=0
+        if [ -e $WPA_SUPP_PIDFILE ]; then
+            WPA_SUPP_IS_RUNNING=1
+            WPA_SUPP_CALL_STRIPPED=`echo $WPA_SUPP_CALL | tr -d " \t\n\r"`
+            PID=`cat $WPA_SUPP_PIDFILE`
+            PROC_CALL_STRIPPED=`cat /proc/$PID/cmdline`
+            if [ "$WPA_SUPP_CALL_STRIPPED" == "$PROC_CALL_STRIPPED" ]; then
+                kill -0 $PID > /dev/null 2>&1
+            else
+                WPA_SUPP_IS_RUNNING=0
+            fi
+        fi
+
+        if [ ${?} != 0 ] || [ $WPA_SUPP_IS_RUNNING == 0 ] ; then
+            rm -f $WPA_SUPP_PIDFILE > /dev/null 2>&1
+            $WPA_SUPP_CALL
+            chown netuser:netgroup $QB_NETWORK_MANAGER_WPA_SUPPLICANT_RUNTINME_PATH/$INTERFACE_ID
+            QBIPCSend /var/run/networking/QBNetworkManager_api "#wpaSupplicantReady#$INTERFACE_ID#"
+        fi
+        sleep $CHECK_DELAY
+    done
+}
+
+if [ "$COMMAND" == "stop" ]; then
+    stop_and_cleanup
+elif [ "$COMMAND" == "start" ]; then
+    stop_and_cleanup
+    start_and_watch
+fi

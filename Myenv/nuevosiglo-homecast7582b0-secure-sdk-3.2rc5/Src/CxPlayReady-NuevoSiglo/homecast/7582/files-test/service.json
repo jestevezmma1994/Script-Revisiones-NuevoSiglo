@@ -1,0 +1,6 @@
+{ "validationurl": "https://indsrv01.conax.com/stbvalidation",
+  "signatureurl": "https://indsrv01.conax.com/stbdevicesignature",
+  "drmclientversion":"1.0.1",
+  "drmclienttype" : "PR BCM7582",
+  "devicetype" : "Homecast NHCI2500CO - Id 2765"
+}

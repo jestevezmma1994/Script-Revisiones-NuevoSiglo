@@ -1,0 +1,8 @@
+1. Standby needs to turn off all players. Currently it only revokes tuner from radio/TV
+   and uses the fact that PVR player stops playing when its context is poped.
+2. Order of turning off players is important as turning of PVR player starts TV player.
+3. Traxis uses PC authentication domain instead of its own.
+4. Calculator widget scales its input background instead of using a special bitmap or cutting itself a proper one.
+5. ChannelScanning turns off tunerMonitor in order to not notify all others about constant changes in tuner.
+   It shouldn't be like that: tunerMonitor should know that it is uneeded to notify about changes now
+   or all other listeners must somehow know that current tuner changes can be ignored.

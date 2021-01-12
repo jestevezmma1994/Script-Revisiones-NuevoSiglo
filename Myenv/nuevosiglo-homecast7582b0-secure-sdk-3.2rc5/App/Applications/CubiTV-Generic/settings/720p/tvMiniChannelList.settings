@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+          
+    <xi:include href="fonts.settings"/>
+
+    <widget name="localWindow">
+        <param tag="hideDelay"><double>3.0</double></param>
+    </widget>
+    <widget name="verticalBar">
+        <param tag="xOffset"><int>274</int></param>
+        <param tag="yOffset"><int>112</int></param>
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>494</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="activeItemYOffset"><int>155</int></param>
+        <param tag="itemSpacing"><int>62</int></param>
+        <param tag="scrollDuration"><double>0.2</double></param>
+        <param tag="vertPadding"><int>28</int></param>
+        <widget name="bg">
+            <param tag="height"><int>496</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="bg"><bitmap><path>bg_xmb.png</path></bitmap></param>
+        </widget>
+    </widget>
+    <widget name="ChannelName">
+        <param tag="xOffset"><int>80</int></param>
+        <param tag="yOffset"><int>36</int></param>
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>66</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="disabledTextColor"><color>5f5f5fff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="subcaptionSpacing"><int>6</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="focusFadeTime"><double>0.2</double></param>
+        <param tag="showTime"><double>0.2</double></param>
+        <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="maxTextWidth"><int>236</int></param>
+        <param tag="icon"><bitmap><path>white/iconw_tv_big.png</path></bitmap></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="iconWidth"><int>44</int></param>
+        <param tag="iconHeight"><int>44</int></param>
+        <param tag="channelNameSpacing"><int>6</int></param>
+        <param tag="textEnd"><string>…</string></param>
+        <widget name="focus">
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="minWidth"><int>400</int></param>
+            <param tag="maxWidth"><int>400</int></param>
+        </widget>
+        <widget name="inactiveFocus">
+            <param tag="bg"><bitmap><path>frame_xmb_nonfocus.png</path></bitmap></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="minWidth"><int>400</int></param>
+            <param tag="maxWidth"><int>400</int></param>
+        </widget>
+    </widget>
+</settings>

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <constant name="DescriptionFontSize"><int>36</int></constant>
+    <constant name="ButtonFontSize"><int>26</int></constant>
+    <constant name="ButtonSelected"><bitmap><path>button_focus.png</path></bitmap></constant>
+    <constant name="ButtonUnselected"><bitmap><path>button_nonfocus.png</path></bitmap></constant>
+
+    <xi:include href="CustomerLogo.settings"/>
+    <xi:include href="Title.settings"/>
+    <xi:include href="fonts.settings"/>
+
+    <widget name="Factory">
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+        </common>
+        <widget name="bg">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+        </widget>
+        <widget name="Label">
+            <common>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>34</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Modulation</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </common>
+            <widget name="Reset">
+                <param tag="yOffset"><int>150</int></param>
+                <param tag="text"><string>Press to restore to factory settings : </string></param>
+            </widget>
+            <widget name="Scan">
+                <param tag="yOffset"><int>200</int></param>
+                <param tag="text"><string>Press to perform manual scan : </string></param>
+            </widget>
+            <widget name="ConaxModule">
+                <param tag="yOffset"><int>250</int></param>
+                <param tag="text"><string>Conax module version : </string></param>
+            </widget>
+            <widget name="ConaxModuleVersion">
+                <param tag="xOffset"><int>634</int></param>
+                <param tag="yOffset"><int>250</int></param>
+                <param tag="text"><string>not known</string></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+            <widget name="Middleware">
+                <param tag="yOffset"><int>300</int></param>
+                <param tag="text"><string>Middleware connectivity status : </string></param>
+            </widget>
+            <widget name="MiddlewareStatus">
+                <param tag="xOffset"><int>634</int></param>
+                <param tag="yOffset"><int>300</int></param>
+                <param tag="text"><string>not known</string></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+            <widget name="Chipid">
+                <param tag="yOffset"><int>350</int></param>
+                <param tag="text"><string>Chip id : </string></param>
+            </widget>
+            <widget name="ChipidStatus">
+                <param tag="xOffset"><int>634</int></param>
+                <param tag="yOffset"><int>350</int></param>
+                <param tag="text"><string>not known</string></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+            <widget name="MAC">
+                <param tag="yOffset"><int>400</int></param>
+                <param tag="text"><string>MAC : </string></param>
+            </widget>
+            <widget name="MACStatus">
+                <param tag="xOffset"><int>634</int></param>
+                <param tag="yOffset"><int>400</int></param>
+                <param tag="text"><string>not known</string></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+            <widget name="OTP">
+                <param tag="yOffset"><int>450</int></param>
+                <param tag="text"><string>OTP : </string></param>
+            </widget>
+            <widget name="OTPStatus">
+                <param tag="xOffset"><int>634</int></param>
+                <param tag="yOffset"><int>450</int></param>
+                <param tag="text"><string>not known</string></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+        </widget>
+        <widget name="Button">
+            <common>
+                <param tag="width"><int>180</int></param>
+                <param tag="height"><int>41</int></param>
+                <param tag="textColor"><color>000000ff</color></param>
+                <param tag="bg"><ref constant="ButtonSelected"/></param>
+                <param tag="inactiveBg"><ref constant="ButtonUnselected"/></param>
+                <param tag="fontSize"><ref constant="ButtonFontSize"/></param>
+                <param tag="xOffset"><int>634</int></param>
+            </common>
+            <widget name="Reset">
+                <param tag="yOffset"><int>150</int></param>
+                <param tag="caption"><string>OK</string></param>
+            </widget>
+            <widget name="Scan">
+                <param tag="yOffset"><int>200</int></param>
+                <param tag="caption"><string>OK</string></param>
+            </widget>
+        </widget>
+    </widget>
+</settings>

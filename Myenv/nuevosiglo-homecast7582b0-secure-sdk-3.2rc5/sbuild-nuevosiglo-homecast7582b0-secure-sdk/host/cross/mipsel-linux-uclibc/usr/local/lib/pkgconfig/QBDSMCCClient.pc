@@ -1,0 +1,6 @@
+Name: QBDSMCCClient
+Version: 1.0.0
+Requires: SvFoundation 
+Description: digital storage media command and control (DSM-CC) client
+Libs: -lQBDSMCCClient 
+CFlags: 

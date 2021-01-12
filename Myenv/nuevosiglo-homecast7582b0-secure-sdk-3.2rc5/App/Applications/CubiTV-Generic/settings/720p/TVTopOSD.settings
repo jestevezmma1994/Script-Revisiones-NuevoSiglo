@@ -1,0 +1,241 @@
+<?xml version="1.0" ?>
+<settings   version="2.0" 
+            xmlns="http://cubiware.com/settings-v2.xsd" 
+            xmlns:i18n="http://cubiware.com/i18n-v1.xsd" 
+            xmlns:xi="http://www.w3.org/2001/XInclude">
+   
+    <xi:include href="fonts.settings"/>
+ 
+    <widget name="OSD">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>133</int></param>
+        <param tag="noHideHeight"><int>45</int></param>
+        <param tag="bg"><bitmap><path>osd/bar_osd_top.png</path></bitmap></param>
+        <param tag="duration"><double>0.3</double></param>
+        <param tag="hideDelay"><double>3.0</double></param>
+        <param tag="mode"><string>top</string></param>
+
+        <widget name="Notification">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="bg"><bitmap><path>osd/bar_osd_notification.png</path></bitmap></param>
+            <!--param tag="bgColor"><color>ff0000ff</color></param-->
+            <param tag="duration"><double>0.3</double></param>
+            <param tag="hideDelay"><double>3.0</double></param>
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>103</int></param>
+            <param tag="mode"><string>fixed</string></param>
+
+            <widget name="Content">
+                <param tag="width"><int>1280</int></param>
+                <param tag="height"><int>30</int></param>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+            </widget>
+        </widget>
+    </widget>
+
+    <widget name="TVOSD">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>170</int></param>
+        <widget name="listName">
+            <param tag="width"><int>330</int></param>
+            <param tag="height"><int>42</int></param>
+            <param tag="xOffset"><int>45</int></param>
+            <param tag="yOffset"><int>36</int></param>
+            <param tag="bgColor"><color>00000000</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+        </widget>
+        <widget name="infoIcons">
+            <param tag="xOffset"><int>960</int></param>
+            <param tag="yOffset"><int>50</int></param>
+            <param tag="width"><int>1024</int></param>
+            <param tag="height"><int>40</int></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="fadeDuration"><double>0.3</double></param>
+            <widget name="recording">
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="xOffset"><int>6</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>empty.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>rec/iconr_topbar.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="aspect16x9">
+                <param tag="xOffset"><int>40</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_16-9_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_16-9_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="dolby">
+                <param tag="xOffset"><int>70</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_dolby_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_dolby_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="parental">
+                <param tag="xOffset"><int>100</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_parental_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_parental_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="subtitles">
+                <param tag="xOffset"><int>130</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_text_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_text_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="HD">
+                <param tag="xOffset"><int>160</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_hd_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_hd_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="audio">
+                <param tag="xOffset"><int>190</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_radio_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_radio_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="teletext">
+                <param tag="xOffset"><int>220</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bitmaps"><array>
+                    <bitmap key="bitmap0"><path>infoIcons/iconi_txt_inactive.png</path></bitmap>
+                    <bitmap key="bitmap1"><path>infoIcons/iconi_txt_active.png</path></bitmap>
+                </array></param>
+            </widget>
+            <widget name="rating">
+                <param tag="xOffset"><int>250</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>29</int></param>
+                <param tag="height"><int>29</int></param>
+
+                <param tag="bitmaps"><array>
+                    <bitmap key="AGE_NR"><path>infoIcons/iconi_nolimits_inactive.png</path></bitmap>
+                    <bitmap key="AGE_1"><path>infoIcons/iconi-1-active.png</path></bitmap>
+                    <bitmap key="AGE_2"><path>infoIcons/iconi-2-active.png</path></bitmap>
+                    <bitmap key="AGE_3"><path>infoIcons/iconi-3-active.png</path></bitmap>
+                    <bitmap key="AGE_4"><path>infoIcons/iconi-4-active.png</path></bitmap>
+                    <bitmap key="AGE_5"><path>infoIcons/iconi-5-active.png</path></bitmap>
+                    <bitmap key="AGE_6"><path>infoIcons/iconi-6-active.png</path></bitmap>
+                    <bitmap key="AGE_7"><path>infoIcons/iconi-7-active.png</path></bitmap>
+                    <bitmap key="AGE_8"><path>infoIcons/iconi-8-active.png</path></bitmap>
+                    <bitmap key="AGE_9"><path>infoIcons/iconi-9-active.png</path></bitmap>
+                    <bitmap key="AGE_10"><path>infoIcons/iconi-10-active.png</path></bitmap>
+                    <bitmap key="AGE_11"><path>infoIcons/iconi-11-active.png</path></bitmap>
+                    <bitmap key="AGE_12"><path>infoIcons/iconi-12-active.png</path></bitmap>
+                    <bitmap key="AGE_13"><path>infoIcons/iconi-13-active.png</path></bitmap>
+                    <bitmap key="AGE_14"><path>infoIcons/iconi-14-active.png</path></bitmap>
+                    <bitmap key="AGE_15"><path>infoIcons/iconi-15-active.png</path></bitmap>
+                    <bitmap key="AGE_16"><path>infoIcons/iconi-16-active.png</path></bitmap>
+                    <bitmap key="AGE_17"><path>infoIcons/iconi-17-active.png</path></bitmap>
+                    <bitmap key="AGE_18"><path>infoIcons/iconi-18-active.png</path></bitmap>
+                    <!-- MPAA -->
+                    <bitmap key="MPAA_NR"><path>infoIcons/iconi_NR_inactive.png</path></bitmap>
+                    <bitmap key="MPAA_NRA"><path>infoIcons/iconi_NRA_active.png</path></bitmap>
+                    <bitmap key="MPAA_G"><path>infoIcons/iconi_MPAA-G_active.png</path></bitmap>
+                    <bitmap key="MPAA_PG"><path>infoIcons/iconi_MPAA-PG_active.png</path></bitmap>
+                    <bitmap key="MPAA_PG13"><path>infoIcons/iconi_MPAA-PG-13_active.png</path></bitmap>
+                    <bitmap key="MPAA_R"><path>infoIcons/iconi_MPAA-R_active.png</path></bitmap>
+                    <bitmap key="MPAA_NC17"><path>infoIcons/iconi_MPAA-NC-17_active.png</path></bitmap>
+                    <!-- FCC -->
+                    <bitmap key="VCHIP_NR"><path>infoIcons/iconi_NR_inactive.png</path></bitmap>
+                    <bitmap key="VCHIP_NRA"><path>infoIcons/iconi_NRA_active.png</path></bitmap>
+                    <bitmap key="VCHIP_TV-Y"><path>infoIcons/iconi_TV-Y_active.png</path></bitmap>
+                    <bitmap key="VCHIP_TV-Y7"><path>infoIcons/iconi_TV-Y7_active.png</path></bitmap>
+                    <bitmap key="VCHIP_TV-G"><path>infoIcons/iconi_TV-G_active.png</path></bitmap>
+                    <bitmap key="VCHIP_TV-PG"><path>infoIcons/iconi_TV-PG_active.png</path></bitmap>
+                    <bitmap key="VCHIP_TV-14"><path>infoIcons/iconi_TV-14_active.png</path></bitmap>
+                    <bitmap key="VCHIP_TV-MA"><path>infoIcons/iconi_TV-MA_active.png</path></bitmap>
+                    <!-- Mexico -->
+                    <bitmap key="MEX_AA"><path>infoIcons/iconi_aa_active.png</path></bitmap>
+                    <bitmap key="MEX_A"><path>infoIcons/iconi_a_active.png</path></bitmap>
+                    <bitmap key="MEX_B"><path>infoIcons/iconi_b_active.png</path></bitmap>
+                    <bitmap key="MEX_B15"><path>infoIcons/iconi_b15_active.png</path></bitmap>
+                    <bitmap key="MEX_C"><path>infoIcons/iconi_c_active.png</path></bitmap>
+                    <bitmap key="MEX_D"><path>infoIcons/iconi_d_active.png</path></bitmap>
+                </array></param>
+            </widget>
+        </widget>
+
+        <widget name="frame">
+            <param tag="xOffset"><int>45</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="width"><int>600</int></param>
+            <param tag="height"><int>55</int></param>
+            <widget name="frame">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="minWidth"><int>200</int></param>
+                <param tag="maxWidth"><int>700</int></param>
+                <param tag="height"><int>55</int></param>
+                <param tag="bg"><bitmap><path>frame_channel.png</path></bitmap></param>
+                <param tag="rightMargin"><int>20</int></param>
+            </widget>
+            <widget name="logo">
+                <param tag="xOffset"><int>109</int></param>
+                <param tag="yOffset"><int>6</int></param>
+                <param tag="width"><int>44</int></param>
+                <param tag="height"><int>44</int></param>
+                <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+                <param tag="tmpBg"><bitmap><path>white/iconw_tv_big.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="name">
+                <param tag="width"><int>450</int></param>
+                <param tag="height"><int>45</int></param>
+                <param tag="xOffset"><int>169</int></param>
+                <param tag="yOffset"><int>6</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            </widget>
+            <widget name="number">
+                <param tag="width"><int>80</int></param>
+                <param tag="height"><int>45</int></param>
+                <param tag="xOffset"><int>18</int></param>
+                <param tag="yOffset"><int>6</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="textAlign"><string>right</string></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            </widget>
+        </widget>
+    </widget>
+
+</settings>

@@ -1,0 +1,6 @@
+Name: QBTunerFilter
+Version: 1.0.0
+Requires: SvCore SvPlayerKit fibers svtuner 
+Description: tuner readers with custom filters 
+Libs: -lQBTunerFilter 
+CFlags: 

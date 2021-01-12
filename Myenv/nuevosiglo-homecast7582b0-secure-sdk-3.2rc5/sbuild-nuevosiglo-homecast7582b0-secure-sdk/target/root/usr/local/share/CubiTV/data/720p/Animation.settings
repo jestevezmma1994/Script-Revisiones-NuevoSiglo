@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<settings version="2.0"
+          xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <widget name="animation-template">
+        <param tag="align"><string>center</string></param>
+        <param tag="width"><int>89</int></param>
+        <param tag="height"><int>89</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="stepDuration"><double>0.8</double></param>
+        <param tag="steps"><int>12</int></param>
+        <param tag="frame0">
+            <bitmap><path>animation/searching_10.png</path></bitmap>
+        </param>
+        <param tag="frame1">
+            <bitmap><path>animation/searching_20.png</path></bitmap>
+        </param>
+        <param tag="frame2">
+            <bitmap><path>animation/searching_30.png</path></bitmap>
+        </param>
+        <param tag="frame3">
+            <bitmap><path>animation/searching_40.png</path></bitmap>
+        </param>
+        <param tag="frame4">
+            <bitmap><path>animation/searching_50.png</path></bitmap>
+        </param>
+        <param tag="frame5">
+            <bitmap><path>animation/searching_60.png</path></bitmap>
+        </param>
+        <param tag="frame6">
+            <bitmap><path>animation/searching_70.png</path></bitmap>
+        </param>
+        <param tag="frame7">
+            <bitmap><path>animation/searching_80.png</path></bitmap>
+        </param>
+        <param tag="frame8">
+            <bitmap><path>animation/searching_90.png</path></bitmap>
+        </param>
+        <param tag="frame9">
+            <bitmap><path>animation/searching_100.png</path></bitmap>
+        </param>
+        <param tag="frame10">
+            <bitmap><path>animation/searching_110.png</path></bitmap>
+        </param>
+        <param tag="frame11">
+            <bitmap><path>animation/searching_120.png</path></bitmap>
+        </param>
+    </widget>
+</settings>

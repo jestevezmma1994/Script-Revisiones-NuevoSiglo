@@ -1,0 +1,7 @@
+digraph QBChannelMenu {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBChannelMenu [URL="\N.html" root=true]
+
+    QBChannelMenu -> Events
+}

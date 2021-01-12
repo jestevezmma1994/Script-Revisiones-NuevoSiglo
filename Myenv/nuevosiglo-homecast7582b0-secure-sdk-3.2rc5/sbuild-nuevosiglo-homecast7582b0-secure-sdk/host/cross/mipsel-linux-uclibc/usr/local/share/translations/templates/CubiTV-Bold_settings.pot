@@ -1,0 +1,783 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-10 15:22-0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "0 recordings"
+msgstr ""
+
+msgid "0.00-CURRENT"
+msgstr ""
+
+msgid "1 Hour"
+msgstr ""
+
+msgid "1 minute"
+msgstr ""
+
+msgid "10 minutes"
+msgstr ""
+
+msgid "10 seconds"
+msgstr ""
+
+msgid "100GB"
+msgstr ""
+
+msgid "1080i"
+msgstr ""
+
+msgid "10GB"
+msgstr ""
+
+msgid "120 minutes"
+msgstr ""
+
+msgid "15 minutes"
+msgstr ""
+
+msgid "15 seconds"
+msgstr ""
+
+msgid "150 minutes"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "180 minutes"
+msgstr ""
+
+msgid "2 Hours"
+msgstr ""
+
+msgid "2 minutes"
+msgstr ""
+
+msgid "2 seconds"
+msgstr ""
+
+msgid "20 minutes"
+msgstr ""
+
+msgid "200GB"
+msgstr ""
+
+msgid "20GB"
+msgstr ""
+
+msgid "30 minutes"
+msgstr ""
+
+msgid "4 Hours"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "5 minutes"
+msgstr ""
+
+msgid "5 seconds"
+msgstr ""
+
+msgid "500GB"
+msgstr ""
+
+msgid "50GB"
+msgstr ""
+
+msgid "576p/480p"
+msgstr ""
+
+msgid "6 Hours"
+msgstr ""
+
+msgid "60 minutes"
+msgstr ""
+
+msgid "720p"
+msgstr ""
+
+msgid "8 Hours"
+msgstr ""
+
+msgid "90 minutes"
+msgstr ""
+
+msgid "A/V Output Settings"
+msgstr ""
+
+msgid "A: Over 18"
+msgstr ""
+
+msgid "About Conax CA"
+msgstr ""
+
+msgid "Active Standby"
+msgstr ""
+
+msgid "Adult Content Blocking"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgid "Alternative font"
+msgstr ""
+
+msgid "Alternative font recommended"
+msgstr ""
+
+msgid "Always"
+msgstr ""
+
+msgid "Analog Closed Captioning"
+msgstr ""
+
+msgid "Analog Outputs"
+msgstr ""
+
+msgid "Application Font"
+msgstr ""
+
+msgid "Application Skin"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Auto Download"
+msgstr ""
+
+msgid "Auto Install"
+msgstr ""
+
+msgid "Auto Standby"
+msgstr ""
+
+msgid "Autodelete Oldest Recordings"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Automatic Channel Scanning"
+msgstr ""
+
+msgid "Automatic Frame Rate Selection"
+msgstr ""
+
+msgid "Block Channels"
+msgstr ""
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "CC Primary Channel"
+msgstr ""
+
+msgid "CC Primary Language"
+msgstr ""
+
+msgid "CC Secondary Channel"
+msgstr ""
+
+msgid "CC Secondary Language"
+msgstr ""
+
+msgid "CC1"
+msgstr ""
+
+msgid "CC2"
+msgstr ""
+
+msgid "CC3"
+msgstr ""
+
+msgid "CC4"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "Catchup TV"
+msgstr ""
+
+msgid "Central European"
+msgstr ""
+
+msgid "Change CA pin"
+msgstr ""
+
+msgid "Change PIN"
+msgstr ""
+
+msgid "Channel Installation"
+msgstr ""
+
+msgid "Channel Status"
+msgstr ""
+
+msgid "Chip id"
+msgstr ""
+
+msgid "Clear All"
+msgstr ""
+
+msgid "Clear all"
+msgstr ""
+
+msgid "Closed Captioning"
+msgstr ""
+
+msgid "Completed Recordings"
+msgstr ""
+
+msgid "Conax"
+msgstr ""
+
+msgid "Configuration"
+msgstr ""
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "DLNA"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "DVB Tables status"
+msgstr ""
+
+msgid "Danish"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Default Channel"
+msgstr ""
+
+msgid "Default PVR Quota"
+msgstr ""
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Digital Audio"
+msgstr ""
+
+msgid "Digital Closed Captioning"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Display Format"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Event Status"
+msgstr ""
+
+msgid "Extras"
+msgstr ""
+
+msgid "Failed Recordings"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Favorites Numbering"
+msgstr ""
+
+msgid "File Browser Character Set"
+msgstr ""
+
+msgid "Finnish"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr ""
+
+msgid "Follow Parental Control"
+msgstr ""
+
+msgid "Font with Cyryllic and Greek"
+msgstr ""
+
+msgid "For 12+ year old"
+msgstr ""
+
+msgid "For 16+ year old"
+msgstr ""
+
+msgid "For 18+ year old"
+msgstr ""
+
+msgid "For 6+ year old"
+msgstr ""
+
+msgid "For HD or Widescreen TV"
+msgstr ""
+
+msgid "For classic TV"
+msgstr ""
+
+msgid "Format Hard Disk"
+msgstr ""
+
+msgid "Front Panel Power Button"
+msgstr ""
+
+msgid "Frontpanel Clock In Standby"
+msgstr ""
+
+msgid "Fullscreen"
+msgstr ""
+
+msgid "G"
+msgstr ""
+
+msgid "G: General Audience"
+msgstr ""
+
+msgid "Greek"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr ""
+
+msgid "Hard of Hearing"
+msgstr ""
+
+msgid "Hard of Hearing Subtitles"
+msgstr ""
+
+msgid "Hide Adult Titles"
+msgstr ""
+
+msgid "IP Network"
+msgstr ""
+
+msgid "Instant Timeshift"
+msgstr ""
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Languages"
+msgstr ""
+
+msgid "Latin US"
+msgstr ""
+
+msgid "Latvian"
+msgstr ""
+
+msgid "Letterbox"
+msgstr ""
+
+msgid "Letterbox / Pillarbox"
+msgstr ""
+
+msgid "Locked Ratings"
+msgstr ""
+
+msgid "Locked Time"
+msgstr ""
+
+msgid "Locking Status"
+msgstr ""
+
+msgid "Low power consumption, slow recovery"
+msgstr ""
+
+msgid "MPAA"
+msgstr ""
+
+msgid "MPEG Statistics"
+msgstr ""
+
+msgid "Mailbox"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Manual Channel Scanning"
+msgstr ""
+
+msgid "Maturity Rating"
+msgstr ""
+
+msgid "Menu Language"
+msgstr ""
+
+msgid "Menu Transparency"
+msgstr ""
+
+msgid "Messages"
+msgstr ""
+
+msgid "Middleware Connectivity"
+msgstr ""
+
+msgid "Multichannel"
+msgstr ""
+
+msgid "NAT Status"
+msgstr ""
+
+msgid "NC-17"
+msgstr ""
+
+msgid "NPVR End Margin"
+msgstr ""
+
+msgid "NPVR Start Margin"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Name This Device"
+msgstr ""
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Normal power consumption, fast recovery"
+msgstr ""
+
+msgid "Norwegian"
+msgstr ""
+
+msgid "Not Rated (Adult)"
+msgstr ""
+
+msgid "Not Rated (General)"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Off (Auto Relock)"
+msgstr ""
+
+msgid "Off (Relock Manually)"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Ongoing Recordings"
+msgstr ""
+
+msgid "Original Format"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "PG"
+msgstr ""
+
+msgid "PG-13"
+msgstr ""
+
+msgid "PG: Parental Guidance"
+msgstr ""
+
+msgid "PVR"
+msgstr ""
+
+msgid "PVR End Margin"
+msgstr ""
+
+msgid "PVR Start Margin"
+msgstr ""
+
+msgid "Pan and Scan"
+msgstr ""
+
+msgid "Parental control"
+msgstr ""
+
+msgid "Passive Standby"
+msgstr ""
+
+msgid "Playback Settings"
+msgstr ""
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Preferred Audio Track"
+msgstr ""
+
+msgid "Primary Audio Language"
+msgstr ""
+
+msgid "Primary Subtitle Language"
+msgstr ""
+
+msgid "Prompt"
+msgstr ""
+
+msgid "Prompt when pressed"
+msgstr ""
+
+msgid "PushServer Connectivity"
+msgstr ""
+
+msgid "QR code"
+msgstr ""
+
+msgid "R"
+msgstr ""
+
+msgid "RCU Pairing"
+msgstr ""
+
+msgid "RCU Power Button"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "Radio Guide"
+msgstr ""
+
+msgid "Recording Settings"
+msgstr ""
+
+msgid "Reminders"
+msgstr ""
+
+msgid "Restart Device"
+msgstr ""
+
+msgid "Restore Factory Defaults"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "S/PDIF A/V Sync"
+msgstr ""
+
+msgid "SCART Signal Type"
+msgstr ""
+
+msgid "Scheduled Recordings"
+msgstr ""
+
+msgid "Screensaver Timeout"
+msgstr ""
+
+msgid "Search by category"
+msgstr ""
+
+msgid "Search by name"
+msgstr ""
+
+msgid "Secondary Audio Language"
+msgstr ""
+
+msgid "Secondary Subtitle Language"
+msgstr ""
+
+msgid "Select Time Zone"
+msgstr ""
+
+msgid "Social Media"
+msgstr ""
+
+msgid "Software"
+msgstr ""
+
+msgid "Software Update"
+msgstr ""
+
+msgid "Software Version"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Standby Settings"
+msgstr ""
+
+msgid "Start RCU Pairing"
+msgstr ""
+
+msgid "Status: Not available"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Stretched"
+msgstr ""
+
+msgid "Subscription Status"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Swedish"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "System Settings"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "TV Control"
+msgstr ""
+
+msgid "TV Guide"
+msgstr ""
+
+msgid "TV Size"
+msgstr ""
+
+msgid "TV System"
+msgstr ""
+
+msgid "TV-14"
+msgstr ""
+
+msgid "TV-G"
+msgstr ""
+
+msgid "TV-MA"
+msgstr ""
+
+msgid "TV-PG"
+msgstr ""
+
+msgid "TV-Y"
+msgstr ""
+
+msgid "TV-Y7"
+msgstr ""
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr ""
+
+msgid "Time Mode"
+msgstr ""
+
+msgid "Time Settings"
+msgstr ""
+
+msgid "Time Zone"
+msgstr ""
+
+msgid "Timer"
+msgstr ""
+
+msgid "Tokens Status"
+msgstr ""
+
+msgid "USB"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "User Interface"
+msgstr ""
+
+msgid "VCHIP"
+msgstr ""
+
+msgid "VOD"
+msgstr ""
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Visually Impaired"
+msgstr ""
+
+msgid "WEB on TV"
+msgstr ""
+
+msgid "Western European"
+msgstr ""
+
+msgid "X"
+msgstr ""
+
+msgid "X: Erotic"
+msgstr ""
+
+msgid "dut"
+msgstr ""
+
+msgid "eng"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "spa"
+msgstr ""

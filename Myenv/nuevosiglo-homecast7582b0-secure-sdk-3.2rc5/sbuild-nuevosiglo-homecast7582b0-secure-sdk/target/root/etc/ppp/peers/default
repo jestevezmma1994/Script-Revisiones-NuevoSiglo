@@ -1,0 +1,3 @@
+file /etc/ppp/options
+file /tmp/devices/mobile/auth
+connect "/sbin/chat -v -s -t15 -f /etc/ppp/chatscript"

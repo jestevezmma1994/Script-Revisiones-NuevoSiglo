@@ -1,0 +1,2156 @@
+# Norwegian Bokmal translations for PACKAGE package.
+# Copyright (C) 2012 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-03 15:05+0200\n"
+"PO-Revision-Date: 2012-07-05 14:55+0100\n"
+"Last-Translator: \n"
+"Language-Team: none\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " / minute"
+msgstr "/ minutt"
+
+msgid " H"
+msgstr "H"
+
+msgid " V"
+msgstr "V"
+
+msgid "%A %x"
+msgstr "%A %x"
+
+#, c-format
+msgid "%A %x %X"
+msgstr "%A %x %X"
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "%d HD time igjen"
+msgstr[1] "%d HD timer igjen"
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "%d HD time igjen"
+msgstr[1] "%d HD timer igjen"
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "%d SD time igjen"
+msgstr[1] "%d SD timer igjen"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "%d forsøk igjen."
+msgstr[1] "%d forsøk igjen."
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d av %d"
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i nye eller oppdaterte) radiokanaler"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i nye eller oppdaterte) TV-kanaler"
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i radiokanal"
+msgstr[1] "%i radiokanaler"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i opptak"
+msgstr[1] "%i opptak"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i påminnelse"
+msgstr[1] "%i påminnelser"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i TV-kanal"
+msgstr[1] "%i TV-kanaler"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s: %i kanal funnet"
+msgstr[1] "%s: %i kanaler funnet"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d dag %dh)"
+msgstr[1] "(%d dager %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d dag)"
+msgstr[1] "(%d dager)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d time)"
+msgstr[1] "(%d timer)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr "(%dt %dmin)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%dmin)"
+
+msgid "(all)"
+msgstr "(alle)"
+
+msgid "(hard of hearing)"
+msgstr "(hørselshemmede)"
+
+msgid "(no label)"
+msgstr "(ingen merking)"
+
+msgid "(none)"
+msgstr "(ingen)"
+
+msgid "(unsupported)"
+msgstr "(støttes ikke)"
+
+msgid "(visually impaired)"
+msgstr "(nedsatt syn)"
+
+msgid "0 recordings"
+msgstr "0 opptak"
+
+msgid "0%"
+msgstr "0%"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-gjeldende"
+
+msgid "000 unknown"
+msgstr "000 ukjent"
+
+msgid "1 minute"
+msgstr "1 minutt"
+
+msgid "10 minutes"
+msgstr "10 minutter"
+
+msgid "10 seconds"
+msgstr "10 sekunder"
+
+msgid "10%"
+msgstr "10%"
+
+msgid "100%"
+msgstr "100%"
+
+msgid "100GB"
+msgstr "100 GB"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10GB"
+
+msgid "15 minutes"
+msgstr "15 minutter"
+
+msgid "15 seconds"
+msgstr "15 sekunder"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "2 minutes"
+msgstr "2 minutter"
+
+msgid "2 seconds"
+msgstr "2 sekunder"
+
+msgid "20 minutes"
+msgstr "20 minutter"
+
+msgid "20%"
+msgstr "20%"
+
+msgid "200GB"
+msgstr "200GB"
+
+msgid "20GB"
+msgstr "20GB"
+
+msgid "22 kHz Tone"
+msgstr "22kHz Tone"
+
+msgid "30 minutes"
+msgstr "30 minutter"
+
+msgid "30%"
+msgstr "30%"
+
+msgid "40%"
+msgstr "40%"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 minutter"
+
+msgid "5 seconds"
+msgstr "5 sekunder"
+
+msgid "50%"
+msgstr "50%"
+
+msgid "500GB"
+msgstr "500GB"
+
+msgid "50GB"
+msgstr "50GB"
+
+msgid "576p/480p"
+msgstr "576p/480p"
+
+msgid "60%"
+msgstr "60%"
+
+msgid "70%"
+msgstr "70%"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "80%"
+msgstr "80%"
+
+msgid "90%"
+msgstr "90%"
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+"Ny disk oppdaget, %s %s.\n"
+"Trykk OK for å se tilgjengelige disker."
+
+msgid "A problem occurred"
+msgstr "Et problem oppstod"
+
+msgid "A/V Output Settings"
+msgstr "A/V innstillinger"
+
+msgid "A: Over 18"
+msgstr "A: Over 18"
+
+msgid "About Conax CA"
+msgstr "Om Conax CA"
+
+msgid "Access denied"
+msgstr "Ingen tilgang"
+
+msgid "Add new list"
+msgstr "Ny liste"
+
+msgid "Add/remove channels"
+msgstr "Endre kanaler"
+
+msgid "All tuners are in use"
+msgstr "Alle mottakere er i bruk"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr "Alle mottakere er i bruk. Det er muliges for mange samtidige opptak."
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr "En feil har oppstått. Kontakt din leverandør.\n"
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Ønsker du å slette samtlige kanaler?"
+
+msgid "Are you sure?"
+msgstr "Er du sikker?"
+
+msgid "Arts/Culture"
+msgstr "Kunst/Kultur"
+
+msgid "Ask again later"
+msgstr "Spørr igjen senere"
+
+msgid "Audio Track"
+msgstr "Lydspor"
+
+msgid "Authentication failed. Try again."
+msgstr "Autentisering feilet. Prøv igjen."
+
+msgid "Authentication required"
+msgstr "Autentisering påkrevet"
+
+msgid "Auto"
+msgstr "Automatisk"
+
+msgid "Auto Download"
+msgstr "Automatisk nedlasting"
+
+msgid "Auto Install"
+msgstr "Automatisk installasjon"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Automatisk sletting av eldste opptak"
+
+msgid "Automatic"
+msgstr "Automatisk"
+
+msgid "Automatic Channel Scanning"
+msgstr "Automatisk kanalsøk"
+
+#, c-format
+msgid "Automatic update will start in %u second."
+msgid_plural "Automatic update will start in %u seconds."
+msgstr[0] "Automatisk oppdatering vil starte om %u sekund."
+msgstr[1] "Automatisk oppdatering vil starte om %u sekunder."
+
+msgid "Available Transponders"
+msgstr "Tilgjengelige transpondere"
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr "Ugyldig URL: %d"
+
+#, c-format
+msgid "Bad format: %d"
+msgstr "Feil format: %d"
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr "Ugyldig serverrespons: %d"
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Saldo: %d token"
+msgstr[1] "Saldo: %d tokens"
+
+msgid "Band Select"
+msgstr "Båndvalg"
+
+msgid "Bandwidth"
+msgstr "Båndbredde"
+
+msgid "Bandwidth [MHz]"
+msgstr "Båndbredde (MHz)"
+
+msgid "Begin format now"
+msgstr "Start formatering nå"
+
+msgid "Block Channels"
+msgstr "Blokker kanaler"
+
+msgid "Buy"
+msgstr "Kjøp"
+
+msgid "By Channel Number"
+msgstr "Originalt kanalnummer"
+
+msgid "By Index"
+msgstr "Nummerert liste"
+
+msgid "C-band"
+msgstr "C-bånd"
+
+msgid "CA PIN has been changed."
+msgstr "CA PIN har blitt endret."
+
+msgid "CA SYS ID"
+msgstr "CA SYS ID"
+
+msgid "CET / CEST"
+msgstr "CET / CEST"
+
+msgid "CLT / CLST"
+msgstr "CLT / CLST"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "Cable"
+msgstr "Kabel"
+
+msgid "Cable AnnexB"
+msgstr "Kabelstandard B (USA)"
+
+msgid "Cable DVB-C"
+msgstr "Kabel (DVB-C)"
+
+msgid "Cable modem status"
+msgstr "Kabelmodemstatus"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Cancel scheduled recording"
+msgstr "Avbryt pågående opptak"
+
+msgid "Card Inserted"
+msgstr "Smartkort oppdaget"
+
+msgid "Card Number"
+msgstr "Kortnummer"
+
+msgid "Card Problem - check card"
+msgstr "Kortproblem - sjekk kort"
+
+msgid "Card Type"
+msgstr "Korttype"
+
+msgid "Card is correct"
+msgstr "Korrekt kort"
+
+msgid "Change CA PIN failed."
+msgstr "Endring av CA pin feilet"
+
+msgid "Change CA pin"
+msgstr "Endre CA pin"
+
+msgid "Change PIN"
+msgstr "Endre PIN"
+
+msgid "Change list numbering"
+msgstr "Nummerering"
+
+msgid "Changing pin failed."
+msgstr "Endring av PIN feilet."
+
+msgid "Changing skin requires box reboot"
+msgstr "Endring av menydrakt forutsetter omstart av dekoder"
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "Channel Frequency [kHz]"
+msgstr "Kanal frekvens [kHz]"
+
+msgid "Channel Installation"
+msgstr "Kanalinstallasjon"
+
+msgid "Channel Scanning"
+msgstr "Kanalsøk"
+
+msgid "Channel Status"
+msgstr "Kanalinfo"
+
+msgid "Channel not available"
+msgstr "Kanal ikke tilgjengelig"
+
+msgid "Channel scanning"
+msgstr "Kanalsøk"
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Kanal: %s\n"
+"Event: %s\n"
+"Tid: %s-%s\n"
+
+msgid "Checking compatibility..."
+msgstr "Undersøker kompatibilitet"
+
+msgid "Children's/Youth Programmes"
+msgstr "Barn/Ungdomsprogram"
+
+msgid "Chip ID"
+msgstr "Chip ID"
+
+msgid "Chip id"
+msgstr "Chip id"
+
+msgid "Close"
+msgstr "Lukk"
+
+msgid "Communication error"
+msgstr "Kommunikasjonsfeil"
+
+msgid "Compatible with PVR"
+msgstr "Kompatibel med PVR"
+
+msgid "Completed Recordings"
+msgstr "Fullførte opptak"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Configuration"
+msgstr "Konfigurering"
+
+msgid "Configure"
+msgstr "Konfigurer"
+
+msgid "Confirm"
+msgstr "Bekreft"
+
+msgid "Confirmation Required"
+msgstr "Bekreftelse"
+
+msgid "Continue"
+msgstr "Fortsett"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr "Kunne ikke laste kanalliste. Funksjonalitet kan være begrenset."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Enheten lot seg ikke stoppe, vennligst forsøk igjen (feilkode 2)"
+
+msgid "Create new directory"
+msgstr "Opprett ny mappe"
+
+msgid "Custom LNB"
+msgstr "Spesial LNB"
+
+msgid "DHCP"
+msgstr "DHCP"
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS1"
+msgstr "DNS1"
+
+msgid "DNS2"
+msgstr "DNS2"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr "DRM feil: %d"
+
+msgid "DVB-C Automatic"
+msgstr "DVB-C automatisk"
+
+msgid "DVB-C Manual"
+msgstr "DVB-C manuell"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT automatisk"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 manuell"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT automatisk"
+
+msgid "DVB-T Automatic full scan"
+msgstr "DVB-T automatisk søk (fullstendig)"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T manuelt"
+
+msgid "Daily"
+msgstr "Daglig"
+
+msgid "Danish"
+msgstr "Dansk"
+
+msgid "Date"
+msgstr "Dato"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr "Dekoderfeil: %d"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Default PVR Quota"
+msgstr "Standardkvote PVR"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Forsinket start av opptak til %s"
+
+msgid "Delete"
+msgstr "Slett"
+
+msgid "Delete all"
+msgstr "Slett alt"
+
+msgid "Delete all active"
+msgstr "Slett alle aktive"
+
+msgid "Delete all failed"
+msgstr "Total sletting feilet"
+
+msgid "Delete all scheduled"
+msgstr "Slett alt planlagt"
+
+msgid "Delete file"
+msgstr "Slett fil"
+
+msgid "Device is not responding"
+msgstr "Enheten reagerer ikke"
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "DiSEqC port %c"
+
+msgid "DiSEqC Switch"
+msgstr "DiSEqC switch"
+
+msgid "Digital Audio"
+msgstr "Digital lyd"
+
+msgid "Directory name already exists"
+msgstr "Mappenavnet finnes allerede"
+
+msgid "Directory name cannot be empty"
+msgstr "Mappenavnet må minimum innholde ett tegn"
+
+msgid "Disable"
+msgstr "Deaktivere"
+
+msgid "Disabled"
+msgstr "Deaktivert"
+
+msgid "Display Format (HDMI)"
+msgstr "Visningsformat (HDMI)"
+
+msgid "Display Format (SCART)"
+msgstr "Visningsformat (SCART)"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "Ikke slå av dekoderen under oppdatering"
+
+msgid "Done"
+msgstr "Ferdig"
+
+msgid "Download now"
+msgstr "Last ned nå"
+
+msgid "Drop"
+msgstr "Slett"
+
+msgid "Drop channels?"
+msgstr "Slett kanaler?"
+
+msgid "Dropping..."
+msgstr "Sletter.."
+
+msgid "EET / EEST"
+msgstr "EET / EEST"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "Feil: Forespørsel til smartkortet feilet"
+
+msgid "Edit"
+msgstr "Rediger"
+
+msgid "Education/Science/Factual topics"
+msgstr "Utdanning/vitenskap/fakta emner"
+
+msgid "Empty folder"
+msgstr "Tom mappe"
+
+msgid "Enabled"
+msgstr "Aktivert"
+
+msgid "End Frequency"
+msgstr "Stoppfrekvens"
+
+msgid "End time"
+msgstr "Sluttid"
+
+msgid "English"
+msgstr "Engelsk"
+
+msgid "Entitled"
+msgstr "Tilgang"
+
+msgid "Error"
+msgstr "Feil"
+
+msgid "Error occured"
+msgstr "En feil oppstod"
+
+msgid "Event Status"
+msgstr "Hendelsesstatus"
+
+msgid "Extra"
+msgstr "Ekstra"
+
+msgid "Extras"
+msgstr "Ekstra"
+
+msgid "FATAL ERROR"
+msgstr "Alvorlig feil"
+
+msgid "Failed Recordings"
+msgstr "Feilet opptak"
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Klarte ikke å lese ut informasjon fra kortet (feil = 0x%s)"
+
+msgid "Favorites"
+msgstr "Favoritter"
+
+msgid "Favourites Numbering"
+msgstr "Favorittnummerering"
+
+msgid "File not found"
+msgstr "Fil ikke funnet"
+
+#, c-format
+msgid "File not found: %d"
+msgstr "Fil ikke funnet: %d"
+
+msgid "Finish"
+msgstr "Ferdig"
+
+msgid "Finnish"
+msgstr "Finsk"
+
+msgid "Firmware Version"
+msgstr "Firmwareversjon"
+
+msgid "Firmware update"
+msgstr "Firmwareoppdatering"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr "Oppdatering av firmware er nødvendig."
+
+msgid "First Time Installation"
+msgstr "Førstegangsinstallasjon"
+
+msgid "First time using VoD service?"
+msgstr "Første gang VoD tjenesten benyttes?"
+
+msgid "For 12+ year old"
+msgstr "For 12+ år"
+
+msgid "For 16+ year old"
+msgstr "For 16+ år"
+
+msgid "For 18+ year old"
+msgstr "For 18+ år"
+
+msgid "For 6+ year old"
+msgstr "For 6+ år"
+
+msgid "Format Hard Disk"
+msgstr "Formater harddisk"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr "Formatet støttes ikke: %d"
+
+msgid "Format successful"
+msgstr "Formatering vellykket"
+
+msgid "Formatting this disk will permanently erase all data on it. Do you want to continue?"
+msgstr "Formatering av harddisken vil permanent fjerne all data på disken. Ønsker du å fortsette?"
+
+msgid "Formatting..."
+msgstr "Formaterer..."
+
+msgid "Frequency"
+msgstr "Frekvens"
+
+msgid "Frequency Range"
+msgstr "Frekvensområde"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Frekvens: %d.%02d MHz%s %s %s"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Klokkevisning i standbymodus"
+
+msgid "Fullscreen"
+msgstr "Fullskjerm"
+
+msgid "G: General Audience"
+msgstr "G: Generelt publikum "
+
+msgid "GMT"
+msgstr "GMT"
+
+msgid "GMT / BST"
+msgstr "GMT / BST"
+
+msgid "Gateway"
+msgstr "Gateway"
+
+msgid "Go!"
+msgstr "Start!"
+
+msgid "Greek"
+msgstr "Gresk"
+
+msgid "Group Number"
+msgstr "Gruppenummer"
+
+msgid "Guide"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "HDMI videoformat"
+
+msgid "HFC MAC ID"
+msgstr "HFC MAC ID"
+
+msgid "Hard of Hearing"
+msgstr "Hørselshemmede"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Teksting for hørselshemmede"
+
+msgid "Helsinki, Athens, Kaliningrad"
+msgstr "Helsinki, Athens, Kaliningrad"
+
+msgid "Horizontal"
+msgstr "Horisontal"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Network"
+msgstr "IP-nettverk"
+
+msgid "In order to record selected program you need to stop one of the following recordings/schedules"
+msgstr "For å muliggjøre opptak av valgt program må du avbryte en av følgende opptak/hendelser"
+
+msgid "Incorrect CA Card"
+msgstr "Feil smartkort"
+
+msgid "Incorrect Card"
+msgstr "Feil smartkort"
+
+msgid "Incorrect Conax Card"
+msgstr "Feil Conax kort"
+
+msgid "Incorrect old PIN."
+msgstr "Feil eksisterende PIN"
+
+msgid "Information"
+msgstr "Informasjon"
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Installasjon\n"
+"\n"
+"Trykk OK for å starte automatisk søk."
+
+msgid "Install now"
+msgstr "Installer nå"
+
+msgid "Instant Timeshift"
+msgstr "Kontinuerlig opptak"
+
+msgid "Interface Version"
+msgstr "Interfaceversjon"
+
+msgid "Internet Radio"
+msgstr "Internettradio"
+
+msgid "Keyword"
+msgstr "Nøkkelord"
+
+msgid "Ku-band"
+msgstr "Ku-band"
+
+msgid "Ku-band BSS"
+msgstr "Ku-band BSS"
+
+msgid "Ku-band FSS"
+msgstr "Ku-band FSS"
+
+msgid "Ku-band Universal"
+msgstr "Ku-band universal"
+
+msgid "LNB Setup"
+msgstr "LNB oppsett"
+
+msgid "LNB Type"
+msgstr "LNB type"
+
+msgid "Language"
+msgstr "Språk"
+
+msgid "Languages"
+msgstr "Språk"
+
+msgid "Latvian"
+msgstr "Latvisk"
+
+msgid "Leisure hobbies"
+msgstr "Fritid / hobby"
+
+msgid "Letterbox"
+msgstr "Letterbox"
+
+msgid "List name already exists"
+msgstr "Liste med samme navn eksisterer fra før"
+
+msgid "List name cannot be empty"
+msgstr "Listenavnet må minimum innholde ett tegn."
+
+#, c-format
+msgid "List no. %u"
+msgstr "Listenr. %u"
+
+msgid "Loading..."
+msgstr "Laster..."
+
+msgid "Local Oscillator Frequency"
+msgstr "Lokaloscillator frekvens"
+
+msgid "Lock"
+msgstr "Lås"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Låsstatus - intet signal"
+
+msgid "Lock status - OK"
+msgstr "Lås staus - OK"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "London, Belfast"
+msgstr "London, Belfast"
+
+msgid "Lost tuner access"
+msgstr "Mistet tilgang på mottaker"
+
+msgid "MAC address"
+msgstr "MAC adresse"
+
+msgid "MSK"
+msgstr "MSK"
+
+msgid "Manual"
+msgstr "Manuell"
+
+msgid "Manual Channel Scanning"
+msgstr "Manuelt kanalsøk"
+
+msgid "Manual Configuration"
+msgstr "Manuell konfigurering"
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Foreldrelås\n"
+"\n"
+"Aldersgrense program: %s\n"
+"Kortnivå: %s\n"
+"Skriv inn CA PIN for å låse opp"
+
+msgid "Maturity Rating"
+msgstr "Aldersgrense"
+
+msgid "Menu Language"
+msgstr "Menyspråk"
+
+msgid "Menu Transparency"
+msgstr "Menytransparens"
+
+msgid "Message"
+msgstr "Beskjed"
+
+msgid "Message - NEW!"
+msgstr "Ny melding!"
+
+msgid "Messages"
+msgstr "Meldinger"
+
+msgid "CubiTV Portal Connectivity"
+msgstr "Systemtilkobling"
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr "Modulasjon"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Moduasjon: %s"
+
+msgid "More info"
+msgstr "Programinfo"
+
+msgid "Moscow, Saint Petersburg"
+msgstr "Moskva, Saint Petersburg"
+
+msgid "Mounting..."
+msgstr "Kobler til.."
+
+msgid "Move"
+msgstr "Flytt"
+
+msgid "Movie/Drama"
+msgstr "Film/Drama"
+
+msgid "Multichannel"
+msgstr "Mutikanal"
+
+msgid "Music/Ballet/Dance"
+msgstr "Musikk/Ballett/Dans"
+
+msgid "My Rentals"
+msgstr "Mitt leieforhold"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "Intet signal"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Netmask"
+msgstr "Nettverksmaske"
+
+msgid "Network Medium"
+msgstr "Nettverksmedium"
+
+msgid "Network Name"
+msgstr "Nettverksnavn"
+
+msgid "Network Selection"
+msgstr "Nettverksvalg"
+
+msgid "Network Settings"
+msgstr "Netterksinnstillinger"
+
+msgid "Network Type"
+msgstr "Nettverkstype"
+
+msgid "Network mask"
+msgstr "Nettverksmaske"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr "Ny CA PIN bekreftelsesfelt ikke komplett."
+
+msgid "New CA PIN field is not complete"
+msgstr "Ny CA PIN ikke komplett"
+
+msgid "New PIN confirmation field is not complete."
+msgstr "Ny PIN bekreftelsesfelt ikke komplett."
+
+msgid "New PIN field is not complete."
+msgstr "Ny PIN ikke komplett."
+
+msgid "New PIN:"
+msgstr "Ny PIN:"
+
+msgid "New application layout requires box reboot."
+msgstr "Endring av meydrakt krever omstart av dekoder."
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Programvareoppdatering med versjon %s fra kilde %s er tilgjengelig."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Ny firmware versjon %s er tilgjengelig."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Ny firmware versjon: %s"
+
+msgid "New pins don't match."
+msgstr "Ny pin stemmer ikke"
+
+msgid "New recording cannot be scheduled due to many conflicts with previously scheduled recordings"
+msgstr "Opptaket lar seg ikke gjennomføre på grunn av konflikt med tidligere planlagte opptak"
+
+msgid "News/Cultural affairs"
+msgstr "Nyheter/Kultur"
+
+msgid "No Access (error code 1)"
+msgstr "Ingen tilgang (feilkode 1)"
+
+msgid "No Access (error code 10)"
+msgstr "Ingen tilgang (feilkode 10)"
+
+msgid "No Access (error code 11)"
+msgstr "Ingen tilgang (feilkode 11)"
+
+msgid "No Access (error code 12)"
+msgstr "Ingen tilgang (feilkode 12)"
+
+msgid "No Access (error code 2)"
+msgstr "Ingen tilgang (feilkode 2)"
+
+msgid "No Access (error code 3)"
+msgstr "Ingen tilgang (feilkode 3)"
+
+msgid "No Access (error code 4)"
+msgstr "Ingen tilgang (feilkode 4)"
+
+msgid "No Access (error code 5)"
+msgstr "Ingen tilgang (feilkode 5)"
+
+msgid "No Access (error code 6)"
+msgstr "Ingen tilgang (feilkode 6)"
+
+msgid "No Access (error code 7)"
+msgstr "Ingen tilgang (feilkode 7)"
+
+msgid "No Access (error code 8)"
+msgstr "Ingen tilgang (feilkode 8)"
+
+msgid "No Access (error code 9)"
+msgstr "Ingen tilgang (feilkode 9)"
+
+msgid "No Card Inserted"
+msgstr "Smartkort mangler"
+
+msgid "No DiSEqC"
+msgstr "Ingen DiSEqC"
+
+msgid "No access"
+msgstr "Ingen tilgang"
+
+#, c-format
+msgid "No access (error code %i)"
+msgstr ""
+"Ingen tilgang\n"
+"(feilkode %i)"
+
+msgid "No access - geographical blackout"
+msgstr "Ingen tilgang - ikke tilgjengelig i ditt område"
+
+msgid "No access - network block"
+msgstr "Ingen tilgang - nettverket stengt"
+
+msgid "No channel"
+msgstr "Ingen kanal"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Ingen kanaler tilgjengelig.\n"
+"Nytt kanalsøk må gjennomføres."
+
+msgid "No credits"
+msgstr "Saldo er null."
+
+msgid "No debits"
+msgstr "Ingen innbetalinger"
+
+msgid "No entries"
+msgstr "Ingen oppføringer"
+
+msgid "No events"
+msgstr "Ingen hendelser"
+
+msgid "No items"
+msgstr "Ingen oppføringer"
+
+msgid "No list"
+msgstr "Ingen liste"
+
+msgid "No messages"
+msgstr "Ingen beskjeder"
+
+msgid "No purses"
+msgstr "Ingen kreditt"
+
+msgid "No results"
+msgstr "Ingen treff"
+
+msgid "No subscriptions"
+msgstr "Ingen abonnement"
+
+msgid "No title"
+msgstr "Ingen tittel"
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "Enhet tilkoblet oppdaget - ikke kompatibel (feilkode 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "Enhet tilkoblet oppdaget - ikke kompatibel (feilkode 3)"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Norwegian"
+msgstr "Norsk"
+
+msgid "Not Entitled"
+msgstr "Ingen tilgang"
+
+msgid "Not enough tokens - please recharge Your card"
+msgstr "Ikke nok kreditt - vennligst fyll på ditt kort"
+
+msgid "Not entitled"
+msgstr "Ingen tilgang"
+
+msgid "Number of Sessions"
+msgstr "Antall sesjoner"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OSD/Banner Display Time"
+msgstr "Visningstid plakat"
+
+msgid "Off"
+msgstr "Av"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Old CA PIN field is not complete"
+msgstr "Eksistende CA PIN er ufullstendig"
+
+msgid "Old PIN field is not complete."
+msgstr "Eksisterende PIN er ufullstendig"
+
+msgid "Old PIN:"
+msgstr "Eksisterende PIN:"
+
+msgid "Old pin is invalid."
+msgstr "Eksisterende pin er ugyldig."
+
+msgid "On"
+msgstr "På"
+
+msgid "Ongoing Recordings"
+msgstr "Pågående opptak"
+
+msgid "Original Format"
+msgstr "Originalformat"
+
+msgid "Override"
+msgstr "Overstyr"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PG: Parental Guidance"
+msgstr "PG: Foreldrestyrt"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "Autentisering med PIN blokkert i % minutt"
+msgstr[1] "Autentisering med PIN blokkert i % minutter"
+
+msgid "PIN change"
+msgstr "Endre PIN"
+
+msgid "PIN confirmation does not match."
+msgstr "Bekreftelse av PIN stemmer ikke overens"
+
+msgid "PIN:"
+msgstr "PIN:"
+
+msgid "PLPID"
+msgstr "PLPID"
+
+msgid "PVR"
+msgstr "PVR"
+
+msgid "PVR End Margin"
+msgstr "PVR sluttmargin"
+
+msgid "PVR Start Margin"
+msgstr "PVR startmargin"
+
+msgid "Parental control"
+msgstr "Foreldrekontroll"
+
+msgid "Paris, Berlin, Oslo, Rome"
+msgstr "Paris, Berlin, Oslo, Roma"
+
+msgid "Paris, Berlin, Warsaw, Rome"
+msgstr "Paris, Berlin, Warszawa, Roma"
+
+msgid "Password"
+msgstr "Passord"
+
+msgid "Pin change successful."
+msgstr "Endring av PIN vellykket"
+
+msgid "Play"
+msgstr "Spill av"
+
+msgid "Play Trailer"
+msgstr "Vis trailer"
+
+msgid "Play from the beginning"
+msgstr "Vis fra start"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr "Visning feilet - feilkode: %d"
+
+msgid "Playlist error"
+msgstr "Feil på spilleliste"
+
+msgid "Please Wait"
+msgstr "Vennligst vent"
+
+msgid "Please confirm new CA PIN:"
+msgstr "Vennligst bekreft ny CA PIN:"
+
+msgid "Please enter CA PIN"
+msgstr "Vennligst oppgi CA PIN"
+
+msgid "Please enter CA PIN:"
+msgstr "Oppgi CA PIN:"
+
+msgid "Please enter Conax PIN"
+msgstr "Oppgi Conax PIN"
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr "Oppgi Conax PIN for å spille valgt innhold"
+
+msgid "Please enter Middleware PIN"
+msgstr "Vennligst oppgi PIN for overordnet system"
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr "Vennligst oppgi PIN for overordnet system for å starte avspilling av valgt innhold"
+
+msgid "Please enter WEP key"
+msgstr "Skriv inn WEP-nøkkel"
+
+msgid "Please enter WPA password"
+msgstr "Skriv inn WPA-passord"
+
+msgid "Please enter WPA2 password"
+msgstr "Skriv inn WPA2-passord"
+
+msgid "Please enter new CA PIN:"
+msgstr "Skriv inn ny CA PIN:"
+
+msgid "Please enter parental control PIN"
+msgstr "Vennligst oppgi PIN for foreldrekontroll"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr "Vennligst oppgi PIN for foreldrekontroll for å starte avspilling av valgt innhold"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr "Vennligst oppgi PIN for foreldrekontroll for å slette alle opptak"
+
+msgid "Please wait"
+msgstr "Vennligst vent"
+
+msgid "Please wait, loading…"
+msgstr "Vennligst vent, laster..."
+
+msgid "Please wait."
+msgstr "Vennligst vent."
+
+msgid "Please wait..."
+msgstr "Vennligst vent..."
+
+msgid "Polarization"
+msgstr "Polarisasjon"
+
+msgid "Polish"
+msgstr "Polsk"
+
+msgid "Preferred Audio Track"
+msgstr "Foretrukket lydspor"
+
+msgid "Press OK to browse"
+msgstr "Trykk OK for å bla igjennom"
+
+msgid "Press OK to browse or OPT to format for PVR"
+msgstr "Trykk OK for å bla igjennom eller Opt for å formatere til bruk med PVR"
+
+msgid "Press OPT to format for PVR"
+msgstr "Trykk Opt på fjernkontrollen for å formatere til bruk med PVR"
+
+msgid "Press Opt for more options"
+msgstr "Trykk Opt på fjernkontrollen for flere valg"
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Tidligere firmwareversjon: %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Pris: %i.%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Pris: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Første lydspråk"
+
+msgid "Primary Subtitle Language"
+msgstr "Første tekstpråk"
+
+msgid "Proceed"
+msgstr "Fortsett"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr "Protokoll ikke støttet: %d"
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Kreditt: %s"
+
+msgid "Quality"
+msgstr "Kvalitet"
+
+msgid "Quota"
+msgstr "Kvote"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Radio"
+msgstr "Radio"
+
+msgid "Rearrange list"
+msgstr "Endre rekkefølge"
+
+msgid "Record"
+msgstr "Ta opp"
+
+msgid "Record always"
+msgstr "Nøkkelordopptak"
+
+msgid "Record repeatedly"
+msgstr "Repeterende opptak"
+
+msgid "Remind me"
+msgstr "Påminnelse"
+
+msgid "Reminder"
+msgstr "Påminnelse"
+
+msgid "Reminders"
+msgstr "Påminnelser"
+
+msgid "Remove"
+msgstr "Fjern"
+
+msgid "Remove dir"
+msgstr "Fjerne mappe"
+
+msgid "Remove list"
+msgstr "Fjern listen"
+
+msgid "Remove reminder"
+msgstr "Fjern påminnelse"
+
+msgid "Rename dir"
+msgstr "Endre mappenavn"
+
+msgid "Rename list"
+msgstr "Endre navn"
+
+msgid "Rent"
+msgstr "Leie"
+
+msgid "Rental period expired"
+msgstr "Leieperiode utgått"
+
+msgid "Rental period for this content has expired."
+msgstr "Leieperiode for dette innholdet er utgått."
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Leieperiode: %i %s"
+
+msgid "Repeat"
+msgstr "Gjenta"
+
+msgid "Repeat new PIN:"
+msgstr "Gjenta ny PIN:"
+
+msgid "Requested EMM but not EMM was provided"
+msgstr "Forventet EMM ble ikke funnet"
+
+msgid "Resolve conflicts"
+msgstr "Løs konflikter"
+
+msgid "Restart Device"
+msgstr "Omstart av dekoder"
+
+msgid "Restore Factory Defaults"
+msgstr "Gjenopprett fabrikkinnstillinger"
+
+msgid "Results - Failure"
+msgstr "Resultat - feilet"
+
+msgid "Results - Success"
+msgstr "Resultat - suksess"
+
+msgid "Retrieving channel list"
+msgstr "Mottar kanalliste"
+
+msgid "Reykjavík"
+msgstr "Reykjavík"
+
+msgid "Russian"
+msgstr "Russisk"
+
+msgid "S/PDIF A/V Sync"
+msgstr "S/PDIF A/V Sync"
+
+msgid "SCART Signal Type"
+msgstr "SCART signaltype"
+
+msgid "Santiago"
+msgstr "Santiago"
+
+msgid "Satellite"
+msgstr "Satellitt"
+
+msgid "Satellite %s is not setup yet"
+msgstr "Satellitt %s er ikke konfiguret ennå"
+
+msgid "Satellite Info"
+msgstr "Satellittinfo"
+
+msgid "Satellite Name"
+msgstr "Satellittnavn"
+
+msgid "Satellite Name:"
+msgstr "Satellittnavn"
+
+msgid "Satellite Setup"
+msgstr "Satellittoppsett"
+
+msgid "Save"
+msgstr "Lagre"
+
+msgid "Saving..."
+msgstr "Lagrer..."
+
+msgid "Scan Type"
+msgstr "Søketype"
+
+msgid "Scanning Standard"
+msgstr "Søkestandard"
+
+msgid "Scanning channels"
+msgstr "Søker kanaler"
+
+msgid "Schedule keyword recording"
+msgstr "Nytt nøkkelordsopptak"
+
+msgid "Schedule manual recording"
+msgstr "Nytt manuelt opptak"
+
+msgid "Scheduled Recordings"
+msgstr "Planlagte opptak"
+
+msgid "Screensaver Timeout"
+msgstr "Skjermbeskytter"
+
+msgid "Search"
+msgstr "Søk"
+
+msgid "Search in progress..."
+msgstr "Søk pågår..."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "Søk: %d treff"
+msgstr[1] "Søk: %d treff"
+
+msgid "Searching for channels"
+msgstr "Søker etter kanaler"
+
+msgid "Searching..."
+msgstr "Søker..."
+
+msgid "Secondary Audio Language"
+msgstr "Andre lydspråk"
+
+msgid "Secondary Subtitle Language"
+msgstr "Andre tekstspråk"
+
+msgid "See all from"
+msgstr "Se alle fra"
+
+msgid "Select OK to remove all data from your disk."
+msgstr "Trykk OK for å slette alt lagret på disken."
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Juster lydforsinkelse på utgang %s."
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Velg ny aldersgrense (krever CA PIN)"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr "Feil ved kommunikasjon med server: %d"
+
+msgid "Service Name"
+msgstr "Kanalnavn"
+
+msgid "Setup"
+msgstr "Oppsett"
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Reduser opptak til %s"
+
+msgid "Show similar"
+msgstr "Alternative program"
+
+msgid "Show/Game show"
+msgstr "Show/Underholdning"
+
+msgid "Sign Off"
+msgstr "Logg av"
+
+msgid "Signal - OK"
+msgstr "Signal - OK"
+
+msgid "Signal Quality"
+msgstr "Signalkvalitet"
+
+msgid "Signal Strength"
+msgstr "Signalstyrke"
+
+msgid "Signal lost - check cable"
+msgstr "Mangler signal - undersøk kabler"
+
+msgid "Social Media"
+msgstr "Sosiale medier"
+
+msgid "Social/Political issues/Economics"
+msgstr "Samfunn/Politikk/Økonomi"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Software Update"
+msgstr "Programvareoppdatering"
+
+msgid "Software Version"
+msgstr "Software Versjon"
+
+msgid "Spanish"
+msgstr "Spansk"
+
+msgid "Special"
+msgstr "Spesiell"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Start Frequency"
+msgstr "Start Frekvens"
+
+msgid "Start date                End date"
+msgstr "Startdato                Sluttdato"
+
+msgid "Start date      End date"
+msgstr "Startdato       Sluttdato"
+
+msgid "Start time"
+msgstr "Starttid"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Please enter CA PIN to start viewing:"
+msgstr ""
+"Start visning\n"
+"%s\n"
+"Gjenværende visningstid: %i\n"
+"Vennligst oppgi CA PIN for å starte visning:"
+
+msgid "Static"
+msgstr "Statisk"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "Status: %u%% lastet ned"
+
+msgid "Status: Download scheduled"
+msgstr "Status: nedlasting planlagt"
+
+msgid "Status: Not available"
+msgstr "Status: ikke tilgjengelig"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Stop"
+msgstr "Stopp"
+
+msgid "Stop channel recording"
+msgstr "Stopp kanalopptak"
+
+msgid "Stop keyword recording"
+msgstr "Stopp nøkkelordopptak"
+
+msgid "Stop recording"
+msgstr "Stopp opptak"
+
+msgid "Stop repeated recording"
+msgstr "Stopp repeterende opptak"
+
+msgid "Stop using for PVR"
+msgstr "Avslutt bruk for PVR"
+
+msgid "Strength"
+msgstr "Styrke"
+
+msgid "Stretched"
+msgstr "Strukket"
+
+msgid "Subscription Status"
+msgstr "Abonnementsstatus"
+
+msgid "Subtitle Language"
+msgstr "Underteksting"
+
+msgid "Swedish"
+msgstr "Svensk"
+
+msgid "Switch to channel"
+msgstr "Skift til kanal"
+
+msgid "Symbol Rate"
+msgstr "Symbolrate"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Symbolrate: %d"
+
+msgid "System Information"
+msgstr "Systeminformasjon"
+
+msgid "System Settings"
+msgstr "Systeminnstillinger"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "TV Aspect Ratio"
+msgstr "Skjermformat"
+
+msgid "TV Guide"
+msgstr "Programguide"
+
+msgid "TV System"
+msgstr "TV-system"
+
+msgid "Terrestrial"
+msgstr "Bakkenett"
+
+msgid "There are too many ongoing recordings. Please stop some to watch this channel again."
+msgstr "For å se på valgt kanal må et av de pågående opptakene avsluttes."
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "Dette vil medføre omstart av dekoder, er du sikker?"
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Denne påminnelsen vil erstatte eksisterende påminnelser:\n"
+
+msgid "Time Zone"
+msgstr "Tidssone"
+
+#, c-format
+msgid "Title: %s"
+msgstr "Tittel: %s"
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Token\n"
+"%s\n"
+"%d token(s)%s\n"
+"Saldo: %s %d token(s)\n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "Tokenstatus"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Tokens: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Last access: %s"
+msgstr ""
+"Potelleter: %d\n"
+"Sist benyttet: %s"
+
+msgid "Too many simultaneous recordings."
+msgstr "For mange samtidige opptak."
+
+#, c-format
+msgid "Track %d"
+msgstr "Spor %d"
+
+msgid "Trailer"
+msgstr "Trailer"
+
+msgid "Tuner Type"
+msgstr "Mottakertype"
+
+msgid "Tuner is not available"
+msgstr "Mottaker er ikke tilgjengelig"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Unable to change settings while recording is active"
+msgstr "Kan ikke endre innstilling mens det pågår opptak"
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Lagring ikke mulig, nøkkelordet er for kort."
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr "Uventet serverrespons: %d"
+
+msgid "Unfortunately VoD service is not available."
+msgstr "VoD er dessverre ikke tilgjengelig"
+
+msgid "Unknown"
+msgstr "Ukjent"
+
+msgid "Unlimited"
+msgstr "Ubegrenset"
+
+msgid "Unlock"
+msgstr "Åpne"
+
+msgid "Unmounting..."
+msgstr "Kobler fra..."
+
+msgid "Unread messages!"
+msgstr "Uleste meldinger!"
+
+msgid "Update now"
+msgstr "Oppdater nå"
+
+msgid "Update will take about 10 minutes. During this time screen may blink and you won't be able to use your STB."
+msgstr "Oppdateringen vil gjennomføres i løpet av 10 minutter. Under denne prosessen vil dekoderen ikke være tilgjengelig for normalt bruk."
+
+msgid "Use NIT/SDT"
+msgstr "Benytt NIT/SDT"
+
+msgid "Use for PVR"
+msgstr "Benytt for PVR"
+
+msgid "Used for PVR"
+msgstr "Benyttes for PVR"
+
+msgid "User Interface"
+msgstr "Brukergrensesnitt"
+
+msgid "VOD"
+msgstr "VOD"
+
+#, c-format
+msgid "Version: %s"
+msgstr "Versjon: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Versjon: %s, nettverk: %s"
+
+msgid "Vertical"
+msgstr "Vertikal"
+
+msgid "Visually Impaired"
+msgstr "Nedsatt syn"
+
+msgid "VoD unavailable"
+msgstr "VoD utilgjengelig"
+
+msgid "WEB on TV"
+msgstr "WEB på TV"
+
+msgid "Waiting for channels"
+msgstr "Venter på kanaler"
+
+msgid "Waiting for channels..."
+msgstr "Venter på kanaler..."
+
+msgid "Warning"
+msgstr "Advarsel"
+
+msgid "Weekdays"
+msgstr "Ukedager"
+
+msgid "Weekends"
+msgstr "Helger"
+
+msgid "Weekly"
+msgstr "Ukentlig"
+
+msgid "WiFi Network Type"
+msgstr "WiFi nettverkstype"
+
+msgid "WiFi Password"
+msgstr "WiFi passord"
+
+msgid "WiFi Session ID"
+msgstr "WiFi sesjons-ID"
+
+msgid "WiFi settings"
+msgstr "WiFi innstillinger"
+
+msgid "Wired (Ethernet)"
+msgstr "Kablet (ethernet)"
+
+msgid "Wireless (WiFi)"
+msgstr "Trådløs (WiFi)"
+
+msgid "Would You like to do it now?"
+msgstr "Ønsker du å gjennomføre det nå?"
+
+msgid "Wrong CA PIN."
+msgstr "Feil CA PIN"
+
+msgid "X: Erotic"
+msgstr "X: Erotisk"
+
+msgid "You are not entitled to view this channel"
+msgstr "Ingen tilgang til denne kanalen"
+
+msgid "You are not entitled to view this content"
+msgstr "Ingen tilgang til dette innholdet"
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "Det er ikke tilgjengelig plass for gjennomføring av opptaket"
+
+msgid "You got mail"
+msgstr "Du har mottatt en melding"
+
+msgid "You have too many directories."
+msgstr "Maksimalt antall mapper nådd"
+
+msgid "You have too many favorites lists."
+msgstr "Maksimalt antall favorittlister nådd"
+
+msgid "You have too many keyword recordings."
+msgstr "Maksimalt antall nøkkelordopptak nådd"
+
+msgid "You have too many recordings."
+msgstr "Du har for mange opptak."
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr "For å benytte VoD tjenesten må et manuelt kanalsøk gjennomføres"
+
+#, c-format
+msgid "You will be soon zapped to %s."
+msgstr "Visning endres snart til %s."
+
+#, c-format
+msgid "Your TV is currently connected to an inactive output on this set-top box. Please press VOUT button on your remote control to activate this output or connect your TV to the %s output."
+msgstr "Din TV er for øyeblikket tilkoblet en deaktivert utgang på denne dekoderen. Trykk VOUT på fjernkontrollen for å aktivere utgangen, eller koble TVen til utgang %s."
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would you like to:\n"
+"\n"
+msgstr[0] ""
+"Nytt opptak er i konflikt med %i planlagt opptak. Ønsker du å: \n"
+"\n"
+msgstr[1] ""
+"Nytt opptak er i konflikt med %i planlagte opptak. Ønsker du å: \n"
+"\n"
+
+msgid "[completed]"
+msgstr "[ferdig]"
+
+msgid "[failed]"
+msgstr "[feilet]"
+
+msgid "[interrupted]"
+msgstr "[avbrutt]"
+
+msgid "[missed]"
+msgstr "[gått glipp av]"
+
+msgid "[recording]"
+msgstr "[opptak]"
+
+msgid "[scheduled]"
+msgstr "[planlagt]"
+
+msgid "[stopped manually]"
+msgstr "[manuelt stoppet]"
+
+msgid "[stopped – no source]"
+msgstr "[avbrutt - ingen kilde]"
+
+msgid "[stopped – no space]"
+msgstr "[avbrutt - ingen ledig lagringsplass]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] "omtrent %d SD time eller "
+msgstr[1] "omtrent %d SD timer eller "
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "omtrent %d time igjen"
+msgstr[1] "omtrent %d timer igjen"
+
+msgid "automatic"
+msgstr "automatisk"
+
+msgid "chkflash"
+msgstr "chkflash"
+
+msgid "config"
+msgstr "config"
+
+msgid "done"
+msgstr "ferdig"
+
+msgid "download"
+msgstr "last ned"
+
+msgid "element"
+msgstr "element"
+
+msgid "format_long"
+msgstr "format_long"
+
+msgid "formating"
+msgstr "formaterer"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "time"
+msgstr[1] "timer"
+
+msgid "kernel"
+msgstr "kjerne"
+
+msgid "less than HD hour left"
+msgstr "mindre enn HD timer igjen"
+
+msgid "less than hour left"
+msgstr "mindre enn én time igjen"
+
+msgid "logo"
+msgstr "logo"
+
+msgid "manual"
+msgstr "manuell"
+
+msgid "new"
+msgstr "ny"
+
+msgid "off"
+msgstr "av"
+
+msgid "prev"
+msgstr "forrige"
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "resultat"
+msgstr[1] "resultater"
+
+msgid "rootfs"
+msgstr "rootfs"
+
+msgid "today"
+msgstr "idag"
+
+msgid "tomorrow"
+msgstr "i morgen"
+
+msgid "unknown"
+msgstr "ukjent"
+
+msgid "unlimited"
+msgstr "ubegrenset"
+
+msgid "upgrade_long"
+msgstr "Dekoderen laster ned ny programvareoppdatering. Vennligst vent til oppgraderingen er gjennomført før vanlig bruk gjenopptas."
+
+msgid "usr"
+msgstr "usr"
+
+msgid "verify"
+msgstr "kontrollere"
+
+msgid "writing"
+msgstr "skriver"
+

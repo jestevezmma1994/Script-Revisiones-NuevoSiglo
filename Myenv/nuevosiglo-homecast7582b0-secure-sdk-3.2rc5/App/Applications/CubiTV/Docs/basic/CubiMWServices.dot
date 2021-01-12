@@ -1,0 +1,30 @@
+digraph CubiMWServices {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    CubiMWServices [label="Innov8on/CubiMW"]
+    Innov8onServiceMonitor [label="Innov8onServiceMonitor"]
+    QBAdService
+    QBAppVersion
+    QBAuthenticationService
+    QBCustomerInfoMonitor
+    QBMiddlewareIdManager
+    QBProductUsageController
+    QBProvidersControllerService
+    QBPushReceiver
+    QBRemoteControl
+    QBRemoteScheduler
+    QBSkinManager
+
+    CubiMWServices -> Innov8onServiceMonitor
+    CubiMWServices -> QBAdService
+    CubiMWServices -> QBAppVersion
+    CubiMWServices -> QBAuthenticationService
+    CubiMWServices -> QBCustomerInfoMonitor
+    CubiMWServices -> QBMiddlewareIdManager
+    CubiMWServices -> QBProductUsageController
+    CubiMWServices -> QBProvidersControllerService
+    CubiMWServices -> QBPushReceiver
+    CubiMWServices -> QBRemoteControl
+    CubiMWServices -> QBRemoteScheduler
+    CubiMWServices -> QBSkinManager
+}

@@ -1,0 +1,6 @@
+Name: QBServices
+Version: 1.0.0
+Requires: CAGE CUIT QBAppKit QBApplicationController QBConf QBCoreUtils QBDVBTableMonitor QBIPC QBInput QBLatens QBNetworkManager QBPlatformHAL-common QBSecureLogManager QBShellCmds QBSmartCardMonitor QBStaticStorage QBStringUtils QBViewport QBWebSocket SvCore SvEPGDataLayer SvFoundation SvGfxHAL-common SvHTTPClient SvJSON SvPlayerKit SvPlayerManager SvQuirks SvXMLRPCClient TranslationMergerHeaders fibers sv-list swl 
+Description: Cubiware services
+Libs: -lQBServices 
+CFlags: 

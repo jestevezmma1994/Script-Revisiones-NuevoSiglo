@@ -1,0 +1,11 @@
+prefix=$${CROSS_ROOT}/usr
+exec_prefix=$${CROSS_ROOT}/usr
+libdir=$${CROSS_ROOT}/usr//lib
+includedir=$${CROSS_ROOT}/usr/include
+
+Name: harfbuzz
+Description: HarfBuzz text shaping library
+Version: 0.9.40
+
+Libs: -L${libdir} -lharfbuzz
+Cflags: -I${includedir}/harfbuzz

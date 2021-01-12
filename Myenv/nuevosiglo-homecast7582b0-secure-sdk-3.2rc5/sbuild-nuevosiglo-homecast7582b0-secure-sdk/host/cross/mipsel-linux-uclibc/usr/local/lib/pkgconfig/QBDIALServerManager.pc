@@ -1,0 +1,6 @@
+Name: QBDIALServerManager
+Version: 1.0.0
+Requires: CUIT QBApplicationController QBAppsManager QBNetworkMonitor QBServices QBViewport QBWindows SvCore SvFoundation 
+Description: QBDIALServerManager enables launching and managing DIAL server applications. 
+Libs: -lQBDIALServerManager 
+CFlags: 

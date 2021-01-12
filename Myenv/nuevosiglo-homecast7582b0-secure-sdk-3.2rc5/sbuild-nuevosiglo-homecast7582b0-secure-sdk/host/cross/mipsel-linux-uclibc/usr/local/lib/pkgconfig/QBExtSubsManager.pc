@@ -1,0 +1,6 @@
+Name: QBExtSubsManager
+Version: 1.0.0
+Requires: CUIT QBSubsManager SvPlayerManager 
+Description: manager for printing external subtitles
+Libs: -lQBExtSubsManager 
+CFlags: 

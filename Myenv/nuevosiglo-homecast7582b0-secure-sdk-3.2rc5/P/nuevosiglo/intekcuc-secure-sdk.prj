@@ -1,0 +1,24 @@
+base (host=servinfo@devel.cubiware.com:22444)servinfo-intekcuc-secure-sdk-3.0rc12
+
+; Select proper resources for CUBITV component
+setenv S_INSTALL_CERT_LOCATION=PART
+setenv Q_RESOURCES_CUBITV_CUSTOMER=nuevosiglo
+setenv Q_RESOURCES_CUBITV_USE_GENERIC=yes
+setenv Q_RESOURCES_CUBITV_SETTINGS=generic,qb,nuevosiglo
+setenv Q_RESOURCES_CUBITV_FORMAT=720p
+
+; Add images ('.jpg', etc.) to customized compilation
+include Files/Resources/CubiTV/c.comp
+
+;include App/Applications/CubiTV-NuevoSiglo/logic.comp
+include App/Applications/CubiTV-NuevoSiglo/files.comp
+
+; Component Translation-Merger
+include Src/TranslationMerger/c.comp
+include Src/TranslationMerger/extract.comp
+
+; Install new default configuration
+include Harvest/bSpec/nuevosiglo-intekcuc-secure/bspec.comp
+
+include Harvest/bInstall/install.comp
+

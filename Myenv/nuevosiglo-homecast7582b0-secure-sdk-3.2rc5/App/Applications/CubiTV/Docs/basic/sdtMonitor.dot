@@ -1,0 +1,7 @@
+digraph sdtMonitor {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    sdtMonitor [URL="\N.html" root=true]
+
+    sdtMonitor -> Channels
+}

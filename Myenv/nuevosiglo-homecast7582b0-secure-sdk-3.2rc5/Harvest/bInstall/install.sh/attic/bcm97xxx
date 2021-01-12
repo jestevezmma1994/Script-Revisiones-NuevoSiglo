@@ -1,0 +1,17 @@
+#!/bin/sh
+[ -z $S_FLASHMAC_ADDR ] && S_FLASHMAC_ADDR=0x1CA0000
+SEEK=$((${S_FLASHMAC_ADDR}/1024/128))
+
+DEV="/dev/"`cat /proc/mtd | grep phys_mapped_flash | cut -d':' -f1`
+IMG="/firmware/image.bin"
+MAC='\x'`ifconfig eth0 | grep HWaddr | sed "s/.*HWaddr //" | sed 's/:/\\\\x/g'`
+
+[ ! -c "$DEV" ] && { echo "device file not found"; exit 1;}
+[ ! -e "$IMG" ] && { echo "image file not found"; exit 1;}
+[ -z "`which flashcp`" ] && { echo "flashcp tool not found"; exit 1;}
+
+flashcp -v $IMG $DEV || exit $?
+#restore mac address
+flash_erase $DEV $((128*1024*${SEEK})) 1 || exit $?
+printf "\x09\x74\x01xyyyyzzzz${MAC}abc" | dd of=$DEV bs=128k seek=$SEEK || exit $?
+exit 0

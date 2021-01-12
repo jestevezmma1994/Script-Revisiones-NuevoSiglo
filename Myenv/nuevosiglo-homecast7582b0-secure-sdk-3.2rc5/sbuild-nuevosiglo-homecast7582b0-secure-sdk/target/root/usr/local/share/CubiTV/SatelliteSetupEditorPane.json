@@ -1,0 +1,53 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "add satellite",
+        "text": "Add new satellite",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "remove satellite",
+        "text": "Remove satellite",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "edit",
+        "text": "Edit satellite",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "sort",
+        "text": "Sort satellites",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "transponders",
+        "text": "Transponders",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    }
+
+]

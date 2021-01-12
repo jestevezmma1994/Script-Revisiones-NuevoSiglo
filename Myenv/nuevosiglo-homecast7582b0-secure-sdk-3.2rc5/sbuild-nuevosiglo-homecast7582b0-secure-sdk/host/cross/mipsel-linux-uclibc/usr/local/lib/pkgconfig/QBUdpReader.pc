@@ -1,0 +1,6 @@
+Name: QBUdpReader
+Version: 1.0.0
+Requires: SvCore SvPlayerKit dataformat fibers ionet netio 
+Description: Cubiware UDP reader - using fibers
+Libs: -lQBUdpReader 
+CFlags: 

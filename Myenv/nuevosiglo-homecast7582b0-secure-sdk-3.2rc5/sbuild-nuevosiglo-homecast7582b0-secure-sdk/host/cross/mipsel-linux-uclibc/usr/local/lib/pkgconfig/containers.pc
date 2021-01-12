@@ -1,0 +1,6 @@
+Name: containers
+Version: 1.0.0
+Requires: QBContentSource QBHlsKeyProvider QBIPStreamClient QBId3Parser QBM3uParser QBMp4Parser QBSmoothStreaming QBStringUtils QBTSParser QBViewRightWeb SvCore SvPlayerControllers SvPlayerKit dataformat error_log kpParsers mpeg-common mpeg2 storage_input 
+Description: Player input plugins for reading data from containers, using storage_input
+Libs: -lcontainers 
+CFlags: 

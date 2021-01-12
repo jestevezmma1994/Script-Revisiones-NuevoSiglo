@@ -1,0 +1,6 @@
+Name: QBDemuxHAL-nexus
+Version: 1.0.0
+Requires: QBDemux QBPlatformHAL SvCore nexus 
+Description: Cubiware QBDemux Hardware Abstraction Layer for nexus library
+Libs: -lQBDemuxHAL-nexus 
+CFlags: 

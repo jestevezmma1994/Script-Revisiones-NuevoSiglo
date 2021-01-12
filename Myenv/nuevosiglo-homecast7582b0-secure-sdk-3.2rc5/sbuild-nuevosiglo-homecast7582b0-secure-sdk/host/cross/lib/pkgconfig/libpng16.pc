@@ -1,0 +1,11 @@
+prefix=$${CROSS_ROOT}/usr
+exec_prefix=${prefix}
+libdir=$${CROSS_ROOT}/usr//lib
+includedir=${prefix}/include/libpng16
+
+Name: libpng
+Description: Loads and saves PNG files
+Version: 1.6.16
+Libs: -L${libdir} -lpng16
+Libs.private: -lz -lm 
+Cflags: -I${includedir}

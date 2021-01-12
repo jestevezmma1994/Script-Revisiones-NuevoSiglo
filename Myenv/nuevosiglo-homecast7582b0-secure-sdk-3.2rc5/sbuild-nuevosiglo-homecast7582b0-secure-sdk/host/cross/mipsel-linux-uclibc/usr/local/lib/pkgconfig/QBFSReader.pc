@@ -1,0 +1,6 @@
+Name: QBFSReader
+Version: 1.0.0
+Requires: QBDataModel3 QBStringUtils SvCore SvFoundation fibers 
+Description: CubiTV directory reader
+Libs: -lQBFSReader 
+CFlags: 

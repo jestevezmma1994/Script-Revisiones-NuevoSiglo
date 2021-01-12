@@ -1,0 +1,7 @@
+digraph QBParentalControlLogic {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBParentalControlLogic [URL="\N.html" root=true]
+
+    QBParentalControlLogic -> ParentalControl
+}

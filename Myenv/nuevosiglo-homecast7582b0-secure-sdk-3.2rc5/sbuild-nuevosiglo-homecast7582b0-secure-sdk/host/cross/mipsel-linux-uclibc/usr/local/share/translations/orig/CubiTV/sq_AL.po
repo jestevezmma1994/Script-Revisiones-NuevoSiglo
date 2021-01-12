@@ -1,0 +1,2652 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-08 11:12+0100\n"
+"PO-Revision-Date: 2013-01-11 19:09+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: Albanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid " / minute"
+msgstr "/minute"
+
+msgid " H"
+msgstr "H"
+
+msgid " V"
+msgstr "V"
+
+#, c-format
+msgid "%A %x %X"
+msgstr "%A %x %X"
+
+# check singular and plural version
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "%d Orë e mbetur"
+msgstr[1] "%d Orë të mbetura"
+
+# check singular and plural version
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "%d Orë e mbetur"
+msgstr[1] "%d Orë të mbetura"
+
+# check singular and plural version
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "%d Orë e mbetur"
+msgstr[1] "%d Orë të mbetura"
+
+# check singular / plural
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "%d Tentativë e mbetur"
+msgstr[1] "%d Tentativa të mbetura"
+
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d orë"
+msgstr[1] "%d orë"
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d nga %d"
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i Kanale Radio (%i Të reja/Përditësuara)"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i Kanale TV (%i Të reja/Përditësuara)"
+
+#, c-format
+msgid "%i min"
+msgstr "%i min"
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i kanal radio"
+msgstr[1] "%i kanale radio"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i regjistrim"
+msgstr[1] "%i regjistrime"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i kanal TV"
+msgstr[1] "%i kanale TV"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s %i kanal i gjetur"
+msgstr[1] "%s %i kanale të gjetura"
+
+# question : %dh stands for %d hour ??
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d ditë %dh)"
+msgstr[1] "(%d ditë %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d ditë)"
+msgstr[1] "(%d ditë)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d orë)"
+msgstr[1] "(%d orë)"
+
+# %dh = %d hour ??
+# %dmin = %d minutes ???
+#, c-format
+msgid "(%dh %dmin)"
+msgstr ""
+
+#, c-format
+msgid "(%dmin)"
+msgstr ""
+
+msgid "(Description blocked by Parental Control)"
+msgstr "(Përshkrimi i bllokuar nga kontrolli prindëror)"
+
+msgid "(Title Blocked)"
+msgstr "(Titull i bllokuar)"
+
+msgid "(all)"
+msgstr "të gjithë"
+
+msgid "(hard of hearing)"
+msgstr "(vështiresi në dëgjim"
+
+# please specify where it is used ??
+msgid "(no label)"
+msgstr "(pa etiketim)"
+
+msgid "(none)"
+msgstr "(asnjë)"
+
+# where is this used ?
+msgid "(unsupported)"
+msgstr "( i papërshtatshëm)"
+
+msgid "(visually impaired)"
+msgstr "(vështirësi në shikim)"
+
+msgid "0 recordings"
+msgstr "0 regjistrime"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-AKTUAL"
+
+msgid "000 unknown"
+msgstr "000 i panjohur"
+
+msgid "1 minute"
+msgstr "1 minutë"
+
+msgid "10 minutes"
+msgstr "10 minuta"
+
+msgid "10 seconds"
+msgstr "10 sekonda"
+
+msgid "100GB"
+msgstr "100 GB"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10 GB"
+
+msgid "120 minutes"
+msgstr "120 minuta"
+
+msgid "15 minutes"
+msgstr "15 minuta "
+
+msgid "15 seconds"
+msgstr "15 sekonda"
+
+msgid "150 minutes"
+msgstr "150 minuta"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "180 minutes"
+msgstr "180 minuta"
+
+msgid "2 minutes"
+msgstr "2 minuta"
+
+msgid "2 seconds"
+msgstr "2 sekonda"
+
+msgid "20 minutes"
+msgstr "20 minuta"
+
+msgid "200GB"
+msgstr "200 GB"
+
+msgid "20GB"
+msgstr "20 GB"
+
+msgid "30 minutes"
+msgstr "30 minuta"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 minuta"
+
+msgid "5 seconds"
+msgstr "5 sekonda"
+
+msgid "500GB"
+msgstr "500 GB"
+
+msgid "50GB"
+msgstr "50 GB"
+
+msgid "576p/480p"
+msgstr "576p/480p"
+
+msgid "60 minutes"
+msgstr "60 minuta"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "90 minutes"
+msgstr "90 minuta"
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+"Një disk i ri %s %s u gjet.\n"
+"\vShtypni OK për të parë të gjithë disqet."
+
+msgid "A problem occurred"
+msgstr "U shfaq një problem"
+
+msgid "A/V Output Settings"
+msgstr "Parametrat e daljes A/V"
+
+msgid "A: Over 18"
+msgstr "A: Mbi 18"
+
+msgid "About Conax CA"
+msgstr "Rreth Conax CA"
+
+msgid "Access denied"
+msgstr "Ndalohet hyrja"
+
+msgid "Action prohibited"
+msgstr "Veprim i ndaluar"
+
+msgid "Active Standby"
+msgstr "Stanby aktiv"
+
+#, c-format
+msgid "Active standby will start in %u second."
+msgid_plural "Active standby will start in %u seconds."
+msgstr[0] "Standby aktiv do të fillojë për %u sekondë"
+msgstr[1] "Standby aktiv do të fillojë për %u sekonda"
+
+msgid "Add"
+msgstr "Shto"
+
+msgid "Add new list"
+msgstr "Shto listë të re"
+
+msgid "Add new satellite"
+msgstr "Shto satelit të ri"
+
+msgid "Add/remove channels"
+msgstr "Shto/hiq kanalet"
+
+msgid "Albanian"
+msgstr "Shqip"
+
+msgid "AllDays"
+msgstr "Gjithë ditët"
+
+msgid "Alphabetically"
+msgstr "Sipas alfabetit"
+
+msgid "Always"
+msgstr "Gjithmonë"
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr "U shfaq një problem. Ju lutemi kontaktoni shërbimin për klientin.\n"
+
+msgid "Analog Outputs"
+msgstr "Dalje Analoge"
+
+msgid "Apr"
+msgstr "Prill"
+
+msgid "Are you sure?"
+msgstr "Jeni të sigurt?"
+
+msgid "Arts/Culture"
+msgstr "Arte/Kulturë"
+
+msgid "Ask again later"
+msgstr "Kërko përsëri më vonë"
+
+msgid "Audio Settings"
+msgstr "Parametrat Audio"
+
+msgid "Audio Track"
+msgstr "Material Audio"
+
+msgid "Aug"
+msgstr "Gusht"
+
+msgid "Authentication failed. Try again."
+msgstr "Verifikimi dështoi. Provoni përsëri."
+
+msgid "Authentication required"
+msgstr "Kërkohet verifikim"
+
+msgid "Auto Download"
+msgstr "Shkarkim Automatik"
+
+msgid "Auto Install"
+msgstr "Instalim Automatik"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Fshi automatikisht regjistrimet e vjetra"
+
+msgid "Automatic"
+msgstr "Automatik"
+
+msgid "Automatic Channel Scanning"
+msgstr "Kërkimi automatik i kanaleve"
+
+#, c-format
+msgid "Automatic update will start in %d second."
+msgid_plural "Automatic update will start in %d seconds."
+msgstr[0] "Azhornimi automatik do të fillojë për %d sekondë."
+msgstr[1] "Azhornimi automatik do të fillojë për %d sekonda."
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr "URL e gabuar ; %d"
+
+#, c-format
+msgid "Bad format: %d"
+msgstr "Format i gabuar: %d"
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr "Përgjigje e gabuar e serverit: %d"
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Llogaria: %d kredit"
+msgstr[1] "Llogaria: %d kredite"
+
+msgid "Band Select"
+msgstr "Zgjedhja e Bandës"
+
+msgid "Begin format now"
+msgstr "Fillo formatimin tani"
+
+msgid "Block Channels"
+msgstr "Blloko kanalet"
+
+msgid "By Channel Number"
+msgstr "Sipas numrit të kanalit"
+
+msgid "By Index"
+msgstr "Sipas Indeksit "
+
+msgid "By Longitude"
+msgstr "Sipas gjatesisë"
+
+msgid "C-band"
+msgstr "C-band"
+
+msgid "CA SYS ID"
+msgstr "CA SYS ID"
+
+msgid "CC1"
+msgstr "CC1"
+
+msgid "CC2"
+msgstr "CC2"
+
+msgid "CC3"
+msgstr "CC3"
+
+msgid "CC4"
+msgstr "CC4"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "Cable"
+msgstr "Kabëll"
+
+msgid "Cable AnnexB"
+msgstr "Kabëll AnnexB"
+
+msgid "Cable DVB-C"
+msgstr "Kabëll DVB-C"
+
+msgid "Cable modem status"
+msgstr "Gjëndja e modemit kabllor"
+
+msgid "Can't load skins list"
+msgstr "Lista nuk mund te ngarkohet"
+
+msgid "Cancel"
+msgstr "Anullo"
+
+msgid "Cancel scheduled recording"
+msgstr "Anullo regjistrimin e rezervuar"
+
+msgid "Cannot remove last satellite.\n"
+msgstr "Sateliti i fundit nuk mund të fshihet. \n"
+
+msgid "Card Inserted"
+msgstr "Karta është futur"
+
+msgid "Card Number"
+msgstr "Numri i kartës"
+
+msgid "Card Problem - check card"
+msgstr "Problem i kartës - kontrolloni kartën"
+
+msgid "Card Type"
+msgstr "Lloji i kartës"
+
+msgid "Card is correct"
+msgstr "Karta është në rregull"
+
+msgid "Catch-up TV"
+msgstr "Catch-up TV"
+
+msgid "Catch-up TV - continue"
+msgstr "Catch-up TV - vazhdo "
+
+msgid "Catch-up TV - play"
+msgstr "Catch-up TV - luaj"
+
+msgid "Change CA pin"
+msgstr "Ndrysho kodin PIN të kartës"
+
+msgid "Change PIN"
+msgstr "Ndrysho kodin PIN"
+
+msgid "Change list numbering"
+msgstr "Ndrysho numertimin e listës"
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "Channel Installation"
+msgstr "Installimi i kanaleve"
+
+msgid "Channel Scanning"
+msgstr "Kërkimi i kanaleve"
+
+msgid "Channel Status"
+msgstr "Gjëndja e kanalit"
+
+msgid "Channel not available"
+msgstr "Kanali nuk është i disponueshëm"
+
+#, c-format
+msgid "Channel scanning will start in %d second."
+msgid_plural "Channel scanning will start in %d seconds."
+msgstr[0] "Kërkimi i kanaleve do të fillojë per %d sekondë."
+msgstr[1] "Kërkimi i kanaleve do të fillojë per %d sekonda."
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Kanali: %s\n"
+"Programi: %s\n"
+"Koha: %s-%s\n"
+
+msgid "Channels update"
+msgstr "Azhornimi i kanaleve"
+
+msgid "Checking compatibility..."
+msgstr "Duke kontrolluar përputhshmërinë..."
+
+msgid "Children's/Youth Programmes"
+msgstr "Programet për Fëmijë/të Rinj"
+
+msgid "Chip ID"
+msgstr "Chip ID"
+
+msgid "Chip id"
+msgstr "Chip id"
+
+msgid "Clear All"
+msgstr "Pastro të gjitha"
+
+msgid "Close"
+msgstr "Mbyll"
+
+msgid "Closed Captioning"
+msgstr "Titra për vështirësi në të dëgjuar"
+
+msgid "Communication error"
+msgstr "Gabim në komunikim"
+
+msgid "Compatible with PVR"
+msgstr "E përputhshme me PVR"
+
+msgid "Compatible with PVR and Timeshift"
+msgstr "E përputhshme me PVR dhe Timeshift"
+
+msgid "Compatible with Timeshift"
+msgstr "E përputhshme me Timeshift"
+
+msgid "Completed Recordings"
+msgstr "Regjistrimet e përfuduara"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Configuration"
+msgstr "Konfirgurimet"
+
+msgid "Confirm"
+msgstr "Konfirmo"
+
+msgid "Confirmation Required"
+msgstr "Kërkohet konfirmim"
+
+msgid "Connected"
+msgstr "i lidhur"
+
+msgid "Continue"
+msgstr "Vazhdo"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr ""
+"Lista e kanaleve nuk mund te shfaqet. Ky funksion mund te jete i limituar."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Pajisja nuk mund të ndalohet, ju lutemi provoni përsëri(error 2)"
+
+msgid "Create new directory"
+msgstr "Krijo direktori të re"
+
+msgid "Custom LNB"
+msgstr "LNB e personalizuar"
+
+msgid "DHCP"
+msgstr "DHCP"
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS1"
+msgstr "DNS1"
+
+msgid "DNS2"
+msgstr "DNS2"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr "Problem në DRM:%d"
+
+msgid "DVB Channels parameters have changed."
+msgstr "Parametrat e kanaleve DVB ndryshuan."
+
+msgid "DVB-C Manual"
+msgstr "DVB-C Manual"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT Automatik"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 Manual"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT Automatik"
+
+msgid "DVB-T Automatic full scan"
+msgstr "DVB-T Kërkim i plotë automatik"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T Manual"
+
+msgid "Daily"
+msgstr "Cdo ditë"
+
+msgid "Date"
+msgstr "Datë"
+
+msgid "Dec"
+msgstr "Dhjetor"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr "Problem i dekoderit : %d"
+
+msgid "Default"
+msgstr "E paracaktuar"
+
+msgid "Default Channel"
+msgstr "Kanali fillestar"
+
+msgid "Default PVR Quota"
+msgstr "Kuota PVR e paracktuar"
+
+msgid "Degrees"
+msgstr "Gradë"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Vono fillimin e regjistrimit me %s"
+
+msgid "Delete"
+msgstr "Fshi"
+
+msgid "Delete all"
+msgstr "Fshi të gjithë"
+
+msgid "Delete all active"
+msgstr "Fshi gjithë aktivet"
+
+msgid "Delete all failed"
+msgstr "Fshi gjithë të dështuarat"
+
+msgid "Delete all scheduled"
+msgstr "Fshi gjithë te rezervuarat"
+
+msgid "Delete file"
+msgstr "Fshi materialin"
+
+msgid "Device is not responding"
+msgstr "Pajisja nuk përgjigjet"
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "DiSEqC Port %c"
+
+msgid "Digital Audio"
+msgstr "Audio dixhitale"
+
+msgid "Directory name already exists"
+msgstr "Emri i direktorisë ekziston"
+
+msgid "Directory name cannot be empty"
+msgstr "Emri i direktorisë nuk mund të jetë bosh"
+
+msgid "Disabled"
+msgstr "i/e çaktivizuar"
+
+msgid "Display Format"
+msgstr "Formati i ekranit"
+
+msgid "Do not turn off the STB during channel scanning."
+msgstr "Mos e fik aparatin gjatë kerkimit të kanaleve"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "Mos e fik aparatin gjatë azhornimit të SW."
+
+msgid "Done"
+msgstr "U krye"
+
+msgid "Download now"
+msgstr "Shkarko tani"
+
+msgid "Drop"
+msgstr "Anullo"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "Gabim : Dërgimi i pyetjes tek karta smart dështoi"
+
+msgid "Edit"
+msgstr "Përpuno"
+
+msgid "Edit satellite"
+msgstr "Përpuno satelitin"
+
+msgid "Education/Science/Factual topics"
+msgstr "Edukim/Shkence/çështje faktike"
+
+msgid "Empty folder"
+msgstr "Direktori Bosh"
+
+msgid "Enable/Disable"
+msgstr "Aktivizo/Ç'aktivizo"
+
+msgid "Enabled"
+msgstr "i/e aktivizuar"
+
+msgid "End time"
+msgstr "Koha e mbarimit "
+
+msgid "English"
+msgstr "Anglisht"
+
+msgid "Enter Active Standby"
+msgstr "Futu në standby aktiv"
+
+msgid "Enter Standby"
+msgstr "Futu në stanby"
+
+msgid "Entitled"
+msgstr "e emërtuar"
+
+msgid "Error"
+msgstr "Problem"
+
+msgid "Error occured"
+msgstr "Ndodhi një problem"
+
+msgid "Event Status"
+msgstr "Abonimi me kartë"
+
+msgid "Extra"
+msgstr "Ekstra"
+
+msgid "Extras"
+msgstr "Ekstra"
+
+msgid "FATAL ERROR"
+msgstr "Gabim Fatal"
+
+msgid "Failed Recordings"
+msgstr "Regjistrime të dështuara"
+
+msgid "Failed to contact nPVR server."
+msgstr "Kontakti me serverin nPVR dështoi."
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Marrja e informacioneve nga karta dështoi ( error = 0x%x)"
+
+msgid "Failed to schedule nPVR recording"
+msgstr "Rezervimi i regjistrimit nPVR dështoi"
+
+msgid "Favorites"
+msgstr "Të preferuarat"
+
+msgid "Favorites Numbering"
+msgstr "Numërtimi i të preferuarave"
+
+msgid "Feb"
+msgstr "Shkurt"
+
+msgid "File not found"
+msgstr "Materiali nuk u gjend"
+
+#, c-format
+msgid "File not found: %d"
+msgstr "Materiali nuk u gjend: %d"
+
+msgid "Finish"
+msgstr "Fund"
+
+msgid "Firmware Version"
+msgstr "Versioni i firmware"
+
+msgid "Firmware update"
+msgstr "Azhornimi i firmware"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr ""
+"Azhornimi i firmware-it ështe i domosdoshëm në mënyrë që STB të funksionojë "
+"ne rregull."
+
+msgid "First Time Installation"
+msgstr "Instalimi i parë"
+
+msgid "First time using VoD service?"
+msgstr "Hera e parë që përdorni shërbimin VoD?"
+
+msgid "Follow Parental Control"
+msgstr "Ndiq kontrollin prindëror"
+
+msgid "For 12+ year old"
+msgstr "Për mosha 12+ vjeç"
+
+msgid "For 16+ year old"
+msgstr "Për mosha 16+ vjeç"
+
+msgid "For 18+ year old"
+msgstr "Për mosha 18+ vjeç"
+
+msgid "For 6+ year old"
+msgstr "Për mosha 6+vjeç"
+
+msgid "For HD or Widescreen TV"
+msgstr "Për televizorë HD ose me ekran të gjerë"
+
+msgid "For classic TV"
+msgstr "Për televizorë klasikë (CRT)"
+
+msgid "Format Hard Disk"
+msgstr "Formato Hard Disku-n"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr "Format i panjohur: %d"
+
+msgid "Formatting..."
+msgstr "Duke formatuar ..."
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Frekuenca: %d.%02d MHz%s %s %s"
+
+msgid "Fridays"
+msgstr "Të Premteve"
+
+msgid "Front Panel Power Button"
+msgstr "Butoni i ndezjes ne aparat"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Ora e panelit ballor në Standby"
+
+msgid "Fullscreen"
+msgstr "Ekran i plotë"
+
+msgid "G: General Audience"
+msgstr "G: Audiencë e përgjithshme"
+
+msgid "GB"
+msgstr "GB"
+
+msgid "GHz"
+msgstr "GHz"
+
+msgid "Gateway"
+msgstr "Gateway"
+
+msgid "Go!"
+msgstr "Vazhdo!"
+
+msgid "Group Number"
+msgstr "Numri i grupit"
+
+msgid "Guide"
+msgstr ""
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI Video Format"
+msgstr "Formati video i HDMI"
+
+msgid "HFC MAC ID"
+msgstr "HFC MAC ID"
+
+msgid "Hard of Hearing"
+msgstr "Vështirësi në dëgjim"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Subtitra për persona me vështirësi në të dëgjuar"
+
+msgid "Hemisphere"
+msgstr "Hemisferë"
+
+msgid "Hide"
+msgstr "Fshih"
+
+msgid "Hide Adult Titles"
+msgstr "Fshih titujt për të rritur"
+
+msgid "Horizontal"
+msgstr "Horizontal"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Network"
+msgstr "Rrjeti IP"
+
+msgid ""
+"In order to record selected program you need to stop one of the following "
+"recordings/schedules"
+msgstr ""
+"Për të regjistruar programin e zgjedhur ju duhet të ndaloni një nga "
+"regjistrimet/rezervimet e mëposhtme"
+
+msgid "Incorrect Card"
+msgstr "Kartë e Gabuar"
+
+msgid "Incorrect Conax Card"
+msgstr "Kartë Conax e Gabuar"
+
+msgid "Information"
+msgstr "Informacion"
+
+msgid "Install now"
+msgstr "Instalo tani"
+
+msgid "Instant Timeshift"
+msgstr "TimeShift i menjëhershëm"
+
+msgid "Interface Version"
+msgstr "Versioni i ndërfaqes"
+
+msgid "Internet Radio"
+msgstr "Radio nga Interneti"
+
+msgid "Jan"
+msgstr "Janar"
+
+msgid "Jul"
+msgstr "Korrik"
+
+msgid "Jun"
+msgstr "Qershor"
+
+msgid "Keyword"
+msgstr "Fjalë Kyçe"
+
+msgid "Ku-band"
+msgstr "Ku-band"
+
+msgid "Ku-band BSS"
+msgstr "Ku-band BSS"
+
+msgid "Ku-band FSS"
+msgstr "Ku-band FSS"
+
+msgid "Ku-band Universal"
+msgstr "Ku-band Universal"
+
+msgid "Language"
+msgstr "Gjuha"
+
+msgid "Languages"
+msgstr "Gjuhët"
+
+msgid "Leisure hobbies"
+msgstr "Koha e lirë, hobi"
+
+msgid "Letterbox"
+msgstr "Letterbox"
+
+msgid "List name already exists"
+msgstr "Emri i listës ekziston"
+
+msgid "List name cannot be empty"
+msgstr "Emri i listës nuk mund të jetë bosh"
+
+#, c-format
+msgid "List no. %u"
+msgstr "Lista nr. %u"
+
+msgid "Lock"
+msgstr "Lidhur"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Gjëndja e lidhjes - SKA SINJAL"
+
+msgid "Lock status - OK"
+msgstr "Gjëndja e lidhjes - OK"
+
+msgid "Locked Ratings"
+msgstr "Klasifikimet e bllokimit"
+
+msgid "Locked Time"
+msgstr "Hapësirë kohore e bllokuar"
+
+msgid "Locking Status"
+msgstr "Statusi i bllokimit"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Lost tuner access"
+msgstr "Aksesi i Tunerit humbi"
+
+msgid "Low power consumption, slow recovery"
+msgstr "Konsum i ulët i energjisë , rigjenerim i ngadaltë"
+
+msgid "MAC address"
+msgstr "MAC address"
+
+msgid "MB"
+msgstr "MB"
+
+msgid "MStore"
+msgstr ""
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "Manual Channel Scanning"
+msgstr "Kërkimi manual i kanaleve"
+
+msgid "Manual Configuration"
+msgstr "Konfigurimi manual"
+
+msgid "Mar"
+msgstr "Mars"
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Kontrolli i moshës\n"
+"\n"
+"Vlerësimi i programit: %s\n"
+"Niveli i kartës: %s\n"
+"Fusni kodin PIN për të hapur programin"
+
+msgid "Maturity Rating"
+msgstr "Mosha e lejuar"
+
+msgid "May"
+msgstr "Maj"
+
+msgid "Menu Language"
+msgstr "Gjuha e menusë"
+
+msgid "Menu Transparency"
+msgstr "Transparenca e menusë"
+
+msgid "Message"
+msgstr "Mesazh"
+
+msgid "Message - NEW!"
+msgstr "Mesazh - I RI !"
+
+msgid "Messages"
+msgstr "Mesazhet"
+
+msgid "CubiTV Portal Connectivity"
+msgstr "Konektiviteti i middleware"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Modulimi: %s"
+
+msgid "Mondays"
+msgstr "Të Hënave"
+
+msgid "More info"
+msgstr "Më shumë informacion"
+
+msgid "Mounting..."
+msgstr "Duke u montuar ..."
+
+msgid "Move"
+msgstr "Lëviz"
+
+msgid "Movie/Drama"
+msgstr "Film/Dramë"
+
+msgid "Multichannel"
+msgstr "Multikanal"
+
+msgid "Music/Ballet/Dance"
+msgstr "Musikë/Balet/Kërcim"
+
+msgid "My Rentals"
+msgstr "Rezervimet e mia"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "SKA SINJAL"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Name"
+msgstr "Emri"
+
+msgid "Netmask"
+msgstr "Netmask"
+
+msgid "Network Medium"
+msgstr "Mënyra e lidhjes me rrjetin"
+
+msgid "Network Selection"
+msgstr "Zgjedhja e Rrjetit"
+
+msgid "Network Settings"
+msgstr "Parametrat e Rrjetit"
+
+msgid "Network Type"
+msgstr "Lloji i Rrjetit"
+
+msgid "Network mask"
+msgstr "Network mask"
+
+msgid "Never"
+msgstr "Kurrë"
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Një version i ri Firmware %s është i gatshëm %s ne rrjet."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Një version i ri Firmware %s është i gatshëm."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Versioni i ri i Firmware : %s"
+
+msgid ""
+"New recording cannot be scheduled due to many conflicts with previously "
+"scheduled recordings"
+msgstr ""
+"Nuk mund të rezervohet nje regjistrim i ri pasi ka përplasje me regjistrime "
+"të rezervuara më parë"
+
+msgid "News/Cultural affairs"
+msgstr "Lajme/Cështje Kulturore"
+
+msgid "No Access (1)"
+msgstr "Nuk Keni të Drejta Hyrjeje (1)"
+
+msgid "No Access (10)"
+msgstr "Nuk Keni të Drejta Hyrjeje (10)"
+
+msgid "No Access (11)"
+msgstr "Nuk Keni të Drejta Hyrjeje (11)"
+
+msgid "No Access (12)"
+msgstr "Nuk Keni të Drejta Hyrjeje (12)"
+
+msgid "No Access (2)"
+msgstr "Nuk Keni të Drejta Hyrjeje (2)"
+
+msgid "No Access (3)"
+msgstr "Nuk Keni të Drejta Hyrjeje (3)"
+
+msgid "No Access (4)"
+msgstr "Nuk Keni të Drejta Hyrjeje (4)"
+
+msgid "No Access (5)"
+msgstr "Nuk Keni të Drejta Hyrjeje (5)"
+
+msgid "No Access (6)"
+msgstr "Nuk Keni të Drejta Hyrjeje (6)"
+
+msgid "No Access (7)"
+msgstr "Nuk Keni të Drejta Hyrjeje (7)"
+
+msgid "No Access (8)"
+msgstr "Nuk Keni të Drejta Hyrjeje (8)"
+
+msgid "No Access (9)"
+msgstr "Nuk Keni të Drejta Hyrjeje (9)"
+
+msgid "No Card Inserted"
+msgstr "Mungon Karta Smart"
+
+msgid "No DiSEqC"
+msgstr "Asnjë DiSEqC"
+
+msgid "No Items"
+msgstr "Nuk ka të dhëna"
+
+msgid "No access"
+msgstr "Nuk Keni të Drejta Hyrjeje"
+
+#, c-format
+msgid "No access (%d)"
+msgstr "Nuk keni të drejta hyrjeje (%d)"
+
+msgid "No access - geographical blackout"
+msgstr "Nuk keni të drejta hyrjeje - nuk ka mbulim gjeografik "
+
+msgid "No access - network block"
+msgstr "Nuk Keni të Drejta Hyrjeje - bllokim i rrjetit"
+
+msgid "No channel"
+msgstr "Asnjë Kanal"
+
+msgid "No credits"
+msgstr "Nuk ka kredit"
+
+msgid "No debits"
+msgstr "Nuk ka debit"
+
+msgid "No entries"
+msgstr "Nuk ka te dhena"
+
+msgid "No events"
+msgstr "Nuk ka evente"
+
+msgid "No items"
+msgstr "Nuk ka artikuj"
+
+msgid "No list"
+msgstr "Nuk ka liste"
+
+msgid "No messages"
+msgstr "Asnjë mesazh"
+
+msgid "No purses"
+msgstr "Nuk ka kredite"
+
+msgid "No results"
+msgstr "Nuk ka rezultate"
+
+msgid "No subscriptions"
+msgstr "Asnjë abonim"
+
+msgid "No title"
+msgstr "Asnjë titull "
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "HHD/USB e futur nuk është e përshtatshme (error 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "HHD/USB e futur nuk është e përshtatshme (error 3"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Normal power consumption, fast recovery"
+msgstr "Konsum normal i energjisë , rigjenerim i shpejtë"
+
+msgid "Not Entitled"
+msgstr "E pa Emërtuar"
+
+msgid "Not connected"
+msgstr "E palidhur"
+
+msgid "Not enough tokens - please recharge Your card"
+msgstr "Nuk ka kredite të mjaftueshme - Ju lutemi rimbushni kartën tuaj"
+
+msgid "Not entitled"
+msgstr "E pa emërtuar"
+
+msgid "Nov"
+msgstr "Nëntor"
+
+msgid "Number of Sessions"
+msgstr "Numri i sesioneve"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OSD/Banner Display Time"
+msgstr "Koha e shfaqjes së grafikave"
+
+msgid "Oct"
+msgstr "Tetor"
+
+msgid "Off"
+msgstr "Fikur"
+
+msgid "Off (Auto Relock)"
+msgstr "Fikur (riblloko automatikisht)"
+
+msgid "Off (Relock Manually)"
+msgstr "Fikur (riblloko manualisht)"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "On"
+msgstr "Ndezur"
+
+msgid "Ongoing Recordings"
+msgstr "Regjistrime në proces "
+
+msgid "Options"
+msgstr "Opsionet"
+
+msgid "Original Format"
+msgstr "Formati origjinal "
+
+msgid "Out of quota on nPVR server."
+msgstr "Nuk ka më hapësirë në serverin nPVR."
+
+msgid "Override"
+msgstr "Mbishkruaj"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PG: Parental Guidance"
+msgstr "PG: Kontroll nga prindërit"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "Verifikimi i kodit PIN është bllokuar për %d minutë"
+msgstr[1] "Verifikimi i kodit PIN është bllokuar për %d minuta"
+
+msgid "PIN change"
+msgstr "Ndrysho kodin PIN"
+
+msgid "PIN:"
+msgstr "Kodi PIN:"
+
+msgid "PVR"
+msgstr "PVR"
+
+msgid "PVR End Margin"
+msgstr "Toleranca fundore e PVR"
+
+msgid "PVR Start Margin"
+msgstr "Toleranca fillestare e PVR"
+
+msgid "Parental control"
+msgstr "Kontrolli Prindëror"
+
+msgid "Passive Standby"
+msgstr "Standby pasive"
+
+msgid "Password"
+msgstr "Fjalëkalimi"
+
+msgid "Play"
+msgstr "Luaj"
+
+msgid "Play Trailer"
+msgstr "Luaj Trailer-in"
+
+msgid "Play again"
+msgstr "Luaj përsëri"
+
+msgid "Play from the beginning"
+msgstr "Luaj nga fillimi "
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr "Luajtja Dështoi me error code: %d"
+
+msgid "Playlist error"
+msgstr "Gabim në Listë"
+
+msgid "Please enter CA PIN"
+msgstr "Ju lutemi futni kodin PIN të Kartës"
+
+msgid "Please enter WEP key"
+msgstr "Ju lutemi futni kodin WEP"
+
+msgid "Please enter WPA password"
+msgstr "Ju lutemi futni kodin WPA"
+
+msgid "Please enter WPA2 password"
+msgstr "Ju lutemi futni kodin WPA2"
+
+msgid "Please enter parental control PIN"
+msgstr "Ju lutemi futni kodin PIN të kontrollit prinderor"
+
+msgid "Please enter parental control PIN to enter this category"
+msgstr ""
+"Ju lutemi futni kodin PIN të kontrollit prindëror për të hyrë në këtë "
+"kategori"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr ""
+"Ju lutemi futni kodin PIN të kontrollit prindëror për të parë materialin e "
+"zgjedhur"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr ""
+"Ju lutemi futni kodin PIN të kontrollit prindëror për të anulluar gjithë "
+"regjistrimet"
+
+msgid "Please enter parental control PIN to rent chosen content"
+msgstr ""
+"Ju lutemi futni kodin PIN të kontrollit prindëror për të parë materialin e "
+"zgjedhur"
+
+msgid "Please wait"
+msgstr "Ju lutemi prisni"
+
+msgid "Please wait, loading..."
+msgstr "Duke u ngarkuar , ju lutemi prisni ..."
+
+msgid "Please wait, loading…"
+msgstr "Duke u ngarkuar , ju lutemi prisni ..."
+
+msgid "Please wait."
+msgstr "Ju lutemi prisni."
+
+msgid "Please wait..."
+msgstr "Ju lutemi prisni ..."
+
+msgid "Preferred Audio Track"
+msgstr "Audio e preferuar"
+
+msgid "Press OK button to start channel scanning."
+msgstr "Shtypni butonin OK për të filluar kërkimin e kanaleve."
+
+msgid "Press OK to browse"
+msgstr "Shtpni butonin OK për të shfletuar "
+
+msgid "Press OK to browse or OPT to format"
+msgstr "Shtpni butonin OK për të shfletuar  ose OPT për të formatuar"
+
+msgid "Press OPT to format"
+msgstr "Shtpni butonin OPT për të formatuar "
+
+msgid "Press Opt for more options"
+msgstr "Shtypni butonin OPT për më shumë opsione"
+
+#, c-format
+msgid "Press and hold power button for %u second to enter passive standby."
+msgid_plural "Press and hold power button for %u seconds to enter passive standby."
+msgstr[0] ""
+msgstr[1] ""
+"Shtypni dhe mbani shtypur për %u sekonda butonin e fikje/ndezje për të hyrë "
+"në standby pasiv."
+
+msgid "Press power button to cancel standby."
+msgstr "Shtypni butonin fikje/ndezje për të anulluar standby pasiv."
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Versioni i mëparshëm i SW : %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Çmimi: %i.%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Çmimi: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Gjuha Primare e Audios"
+
+msgid "Primary Subtitle Language"
+msgstr "Gjuha Primare e subtitrave"
+
+msgid "Proceed"
+msgstr "Vazhdo"
+
+msgid "Prompt"
+msgstr "Lajmëro"
+
+msgid "Prompt when pressed"
+msgstr "Lajmëro kur shtypet"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr "Protokolli nuk perputhet ; %d"
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Kreditet: %s"
+
+msgid "Push VOD"
+msgstr "Push VOD"
+
+msgid "Quota"
+msgstr "Kuota"
+
+msgid "RCU Power Button"
+msgstr "Butoni fikje/ndezje në telekomandë"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Radio"
+msgstr "Radio"
+
+msgid "Rearrange list"
+msgstr "Ri-sitemo listen"
+
+msgid "Record with nPVR"
+msgstr "Regjistro me nPVR"
+
+msgid "Reminder"
+msgstr ""
+
+msgid "Reminders"
+msgstr ""
+
+msgid "Remove"
+msgstr "Fshi"
+
+msgid "Remove channel"
+msgstr "Fshi Kanalin "
+
+msgid "Remove dir"
+msgstr "Fshi direktorine"
+
+msgid "Remove list"
+msgstr "Fshi listen "
+
+msgid "Remove satellite"
+msgstr "Fshi satelitin"
+
+msgid "Rename dir"
+msgstr "Riemero direktorine"
+
+msgid "Rename list"
+msgstr "Riemero Listen"
+
+msgid "Rent"
+msgstr "Mer me qera"
+
+msgid "Rental period expired"
+msgstr "Periudha e marrjes me qera mbaroi"
+
+msgid "Rental period for this content has expired."
+msgstr "Periudha e marrjes me qera për këtë material ka mbaruar."
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Periudha e marrjes me qera : %i %s"
+
+msgid "Repeat"
+msgstr "Perserit"
+
+msgid "Requested EMM but not EMM was provided"
+msgstr "U kërkua EMM por nuk u sigurua"
+
+msgid "Resolve conflicts"
+msgstr "Zgjidh konfliktet"
+
+msgid "Restart Device"
+msgstr "Ristarto pajisjen "
+
+msgid "Restore Factory Defaults"
+msgstr "Rikthim në gjëndjen fillestare"
+
+msgid "Restore defaults"
+msgstr "Rikthim në gjëndjen fillestare"
+
+msgid "Results - Failure"
+msgstr "Resultati - Deshtim "
+
+msgid "Results - Success"
+msgstr "Rezultati - Sukses"
+
+msgid "Retrieving channel list"
+msgstr "Duke azhornuar  listen e kaaleve"
+
+msgid "S/PDIF A/V Sync"
+msgstr "S/PDIF A/V Sync"
+
+msgid "SCART Signal Type"
+msgstr "Dalja SCART"
+
+msgid "Satellite"
+msgstr "Sateliti "
+
+msgid "Satellite Setup"
+msgstr "Konfigurimi i Satelitit"
+
+msgid "Satellite name cannot be empty"
+msgstr "Emri i satelitit nuk mund të jetë bosh"
+
+msgid "Satellite with given name already exists"
+msgstr "Sateliti me këte emër ekziston"
+
+msgid "Saturdays"
+msgstr "Të shtunave"
+
+msgid "Save"
+msgstr "Ruaj"
+
+msgid "Saving..."
+msgstr "Duke ruajtur..."
+
+msgid "Scan Type"
+msgstr "Lloji i kerkimit "
+
+msgid "Scan now"
+msgstr "Kërko tani "
+
+msgid "Scanning Standard"
+msgstr "Standard-i i kerkmimit "
+
+msgid "Schedule keyword recording"
+msgstr "Rezervo regjistrimin sipas fjalës kyce "
+
+msgid "Schedule manual recording"
+msgstr "Rezervo regjistrim manual"
+
+msgid "Scheduled Recordings"
+msgstr "Regjistrimet e rezervuara"
+
+msgid "Screensaver Timeout"
+msgstr "Kohëzgjatja e Screensaver"
+
+msgid "Search"
+msgstr "Kërko"
+
+msgid "Search by category"
+msgstr "Kërko sipas kategorisë"
+
+msgid "Search by name"
+msgstr "Kërko sipas emrit"
+
+msgid "Search in progress..."
+msgstr "Duke kërkuar ..."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "Kërkimi: %d rezultat"
+msgstr[1] "Kërkimi: %d rezultate"
+
+msgid "Secondary Audio Language"
+msgstr "Gjuha Sekondare e Audios"
+
+msgid "Secondary Subtitle Language"
+msgstr "Gjuha Sekondare e Subtitrave"
+
+msgid "See all from"
+msgstr "Shiko te gjitha nga "
+
+msgid "Select OK to remove all data from your disk."
+msgstr "Shtypni OK per te fshire te githe materialet nga disku."
+
+msgid "Select Time Zone"
+msgstr "Zgjidhni Oren lokale"
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Zgjidhni vonesen e audios ne %s "
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Zgjidh nivelin e ri te maturise ( nevojitet kodi PIN i kartes)"
+
+msgid "Selected offer has changed, please try again."
+msgstr "Oferta e zgjedhur ka ndryshuar, ju lutemi provoni perseri."
+
+msgid "Sep"
+msgstr "Shtator"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr "Problem ne komunikimin me serverin: %d"
+
+msgid "Set Auto Relock Time"
+msgstr "Vendos kohën e bllokimit automatik"
+
+msgid "Set Current Time"
+msgstr "Percakto oren aktuale "
+
+msgid "Setup"
+msgstr "Konfigurimi"
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Kufizo regjistrimin ne %s"
+
+msgid "Show/Game show"
+msgstr "Show/Lojë show"
+
+msgid "Sign Off"
+msgstr ""
+
+msgid "Signal - OK"
+msgstr "Sinjali - OK"
+
+msgid "Signal lost - check cable"
+msgstr "Sinjali mungon - kontrolloni kabllin"
+
+msgid "Social/Political issues/Economics"
+msgstr "Sociale/Çështje politike/Ekonomi"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Software Update"
+msgstr "Azhornimi i Software-it"
+
+msgid "Software Version"
+msgstr "Versioni i software-it"
+
+msgid "Sort satellites"
+msgstr "Rendit satelitët"
+
+msgid "Special"
+msgstr "Speciale"
+
+msgid "Sports"
+msgstr "Sporte"
+
+msgid "Standby Settings"
+msgstr "Parametrat e standby"
+
+msgid "Start"
+msgstr "Fillo"
+
+msgid "Start date                           End date"
+msgstr "Data e fillimit                           Data e mbarimit"
+
+msgid "Start date                End date                   Entitlement"
+msgstr ""
+"Data e fillimit                           Data e mbarimit                   "
+"Paketa"
+
+msgid "Start time"
+msgstr "Ora e fillimit "
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Please enter CA PIN to start viewing:"
+msgstr ""
+"Fillo shiko\n"
+"%s\n"
+"Koha e mbetur : %i\n"
+"Ju lutemi futni kodin PIN te kartes per te pare:"
+
+msgid "Static"
+msgstr "Statike"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "Gjëndja: %u%% e shkarkuar"
+
+msgid "Status: Download scheduled"
+msgstr "Statusi : Shkarkim i rezervuar"
+
+msgid "Status: Not available"
+msgstr "Gjëndja: E padisponueshme"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Stop"
+msgstr "Ndalo"
+
+msgid "Stop keyword recording"
+msgstr "Ndalo regjistrimin sipas fjaleve"
+
+msgid "Stop repeated recording"
+msgstr "Ndalo regjistrimin e përsëritur"
+
+msgid "Stop using for PVR"
+msgstr "Ndalo perdorimin per PVR"
+
+msgid "Stop using for PVR/TS"
+msgstr "Ndalo perdorimin per PVR/TS"
+
+msgid "Stop using for Timeshift"
+msgstr "Ndalo perdorimin per Timeshift"
+
+msgid "Stopped"
+msgstr "E ndaluar"
+
+msgid "Stretched"
+msgstr "E zgjatur"
+
+msgid "Subscription Status"
+msgstr "Gjëndja  e abonimit"
+
+msgid "Subtitle Language"
+msgstr "Gjuha e subtittrave"
+
+msgid "Sundays"
+msgstr "Të dielave"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Symbol Rate: %d"
+
+msgid "System Information"
+msgstr "Informacion per sistemin "
+
+msgid "System Settings"
+msgstr "Parametrat e sistemit"
+
+msgid "System reboot is required to apply new application layout."
+msgstr ""
+"Sistemi duhet te rindizet ne menyre qe te aplikohet paraqitja e re grafike"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "TV Guide"
+msgstr "Guida TV"
+
+msgid "TV Size"
+msgstr "Permasat e TV"
+
+msgid "TV System"
+msgstr "Sistemi TV"
+
+msgid "Terrestrial"
+msgstr "Tokesor"
+
+msgid ""
+"There are too many ongoing recordings. Please stop some to watch this "
+"channel again."
+msgstr ""
+"Jane duke u bërë shumë regjistrime. Ju lutemi ndaloni disa prej tyre që të "
+"shikoni kete kanal."
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "Ky veprim shkakton rindezje te pajisjes. A jeni te sigurt ?"
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Ky rezervim do te mbishkruaje keto rezervime:\n"
+
+msgid "Thursdays"
+msgstr "Të enjteve"
+
+msgid "Time"
+msgstr "Ora"
+
+msgid "Time Mode"
+msgstr "Mënyra e Orës"
+
+msgid "Time Settings"
+msgstr "Parametrat e Orës"
+
+msgid "Time Zone"
+msgstr "Ora Lokale"
+
+msgid "Timer"
+msgstr "Kohëmatësi"
+
+#, c-format
+msgid "Title: %s"
+msgstr "Titull: %s"
+
+msgid ""
+"To subscribe to this product (Traxis SVOD), please call Customer Support."
+msgstr ""
+"Për tu abonuar për këtë program (Traxis SVOD), ju lutemi kontaktoni me "
+"shërbimin e klientit."
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+
+msgid "Tokens Status"
+msgstr "Gjëndja e krediteve"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr ""
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Date: %s"
+msgstr ""
+
+msgid "Too many simultaneous recordings."
+msgstr "Shumë regjistrime në të njëjtën kohë."
+
+#, c-format
+msgid "Track %d"
+msgstr ""
+
+msgid "Transponders"
+msgstr "Transpondera"
+
+msgid "Tuesdays"
+msgstr "Të martave"
+
+msgid "Tuner Type"
+msgstr "Tipip i tunerit"
+
+msgid "Tuner is not available"
+msgstr "Tuneri nuk eshte i disponueshem"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Nuk mund te ruhet. Emertimi eshte shume i shkurter."
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr "Pergjigje e papritur e server-it: %d"
+
+msgid "Unfortunately VoD service is not available."
+msgstr "Fatkeqësisht shërbimi VoD nuk ështe i mundur."
+
+msgid "Unknown"
+msgstr "i/e panjohur"
+
+msgid "Unknown Device"
+msgstr "Pajisje e panjohur"
+
+msgid "Unknown nPVR error."
+msgstr "Error nPVR i panjohur"
+
+msgid "Unlimited"
+msgstr "i/e pakufizuar"
+
+msgid "Unlock"
+msgstr "i/e zhbllokuar"
+
+msgid "Unmounting..."
+msgstr "Duke cmontuar..."
+
+msgid "Unread messages!"
+msgstr "Mesazhe te palexuara"
+
+msgid "Update now"
+msgstr "Azhorno tani"
+
+msgid ""
+"Update will take about 10 minutes. During this time screen may blink and you "
+"won't be able to use your STB."
+msgstr ""
+"Azhornimi mund te zgjase reth 10 minuta. Gjate kesaj kohe ekrani mund te "
+"pulsoje dhe nuk do te jeni ne gjendje te perdorni STB."
+
+msgid "Use for PVR"
+msgstr "Perdor per PVR"
+
+msgid "Use for PVR/TS"
+msgstr "Perdor per PVR/TS"
+
+msgid "Use for Timeshift"
+msgstr "Perdor per Timeshift"
+
+msgid "Used for PVR"
+msgstr "i/e perdorur per PVR"
+
+msgid "Used for PVR and Timeshift"
+msgstr "Perdorur per PVR dhe Timeshift"
+
+msgid "Used for Timeshift"
+msgstr "Perdorur per Timeshift"
+
+msgid "User Interface"
+msgstr "Ndërfaqja e përdoruesit"
+
+msgid "VOD"
+msgstr "VOD"
+
+#, c-format
+msgid "Version: %s"
+msgstr "Versioni: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Version: %s, Rrjeti: %s"
+
+msgid "Vertical"
+msgstr "Vertikal"
+
+msgid "Video Settings"
+msgstr "Parametrat Video"
+
+msgid "View"
+msgstr "Shiko"
+
+msgid "View again"
+msgstr "Shiko perseri"
+
+msgid "View from the beginning"
+msgstr "Shiko nga fillimi"
+
+msgid "Visually Impaired"
+msgstr "Veshtiresi ne shikim"
+
+msgid "VoD unavailable"
+msgstr "VoD e pa disponueshme"
+
+msgid "WEB on TV"
+msgstr "WEB ne TV"
+
+msgid "Waiting for nPVR server response..."
+msgstr "Duke pritur për përgjigje nga serveri nPVR..."
+
+msgid "Waiting for response"
+msgstr "Duke pritur pergjigje"
+
+msgid "Warning"
+msgstr "Kujdes "
+
+msgid "Warning: All current recordings will be stopped!"
+msgstr "Kujdes: Gjithë regjistrimet e tanishme do të ndalen!"
+
+msgid "Warning: Timeshift will be forsaken"
+msgstr "Kujdes: TImeshift do te ndalet"
+
+msgid "Wednesdays"
+msgstr "Të mërkurave"
+
+msgid "Weekdays"
+msgstr "Ditet e javes"
+
+msgid "Weekends"
+msgstr "Fundjave"
+
+msgid "Weekly"
+msgstr "Javore"
+
+msgid "WiFi Encryption"
+msgstr "Enkriptimi i WiFi"
+
+msgid "WiFi Network Type"
+msgstr "Tipi i rrjetit WiFi"
+
+msgid "WiFi Password"
+msgstr "Fjalekalimi i WiFi"
+
+msgid "WiFi Session ID"
+msgstr "WiFi Session ID"
+
+msgid "WiFi settings"
+msgstr "Parametrat WiFi"
+
+msgid "Wired (Ethernet)"
+msgstr "Lidhje me tel (Ethernet)"
+
+msgid "Wireless (WiFi)"
+msgstr "Lidhje pa tel (WiFi)"
+
+msgid "X: Erotic"
+msgstr "X: Erotik"
+
+msgid "You are not entitled to view this channel"
+msgstr "Ju nuk jeni i lejuar te shikoni kete kanal"
+
+msgid "You are not entitled to view this content"
+msgstr "Ju nuk jeni i lejuar te shikoni kete permbajtje"
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "Ju nuk keni hapësirë të lirë për të bërë një rregjistrim të ri."
+
+msgid "You have too many directories."
+msgstr "Ju keni shume direktori"
+
+msgid "You have too many favorites lists."
+msgstr "Ju keni shume lista favorite"
+
+msgid "You have too many keyword recordings."
+msgstr "Ju keni shumë regjistrime sipas fjalë-ve."
+
+msgid "You have too many recordings."
+msgstr "Ju keni shumë regjistrime."
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr ""
+"Ju duhet të bëni kërkim manual të kanaleve që të përdorni shërbimin VoD."
+
+#, c-format
+msgid "You will be soon zapped to %s."
+msgstr "Se shpejti do te kaloni ne %s."
+
+#, c-format
+msgid ""
+"Your TV is currently connected to an inactive output on this set-top box. "
+"Please press VOUT button on your remote control to activate this output or "
+"connect your TV to the %s output."
+msgstr ""
+"TV juaj ështe lidhur me një dalje jo aktive te STB. Ju lutemi shtypni "
+"butonin VOUT në telekomandë për të aktivizuar këtë dalje ose lidhni TV tuaj "
+"me daljen %s. "
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would "
+"you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would "
+"you like to:\n"
+"\n"
+msgstr[0] ""
+"Regjistrimi i ri përplaset me regjistrimin e mëparshëm %i. Deshironi të :\n"
+"\n"
+msgstr[1] ""
+"Regjistrimi i ri përplaset me regjistrimet e mëparshme %i. Deshironi të :\n"
+"\n"
+
+msgid "[completed]"
+msgstr "[mbaroi]"
+
+msgid "[failed]"
+msgstr "[deshtoi]"
+
+msgid "[interrupted]"
+msgstr "[u nderpre]"
+
+msgid "[missed]"
+msgstr "[u humb]"
+
+msgid "[recording]"
+msgstr "[duke regjistruar]"
+
+msgid "[removed]"
+msgstr "[u fshi]"
+
+msgid "[scheduled]"
+msgstr "[e rezervuar]"
+
+msgid "[stopped manually]"
+msgstr "[u ndalua manualisht]"
+
+msgid "[stopped – no source]"
+msgstr "[u ndalua - ska burim]"
+
+msgid "[stopped – no space]"
+msgstr "[u ndalua - ska hapesirë]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] "rreth %d ore SD ose"
+msgstr[1] "rreth %d ore SD ose"
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "rreth %d ore te mbetura"
+msgstr[1] "rreth %d ore te mbetura"
+
+msgid "chkflash"
+msgstr "chkflash"
+
+msgid "config"
+msgstr "konfigurimi"
+
+msgid "done"
+msgstr "u krye"
+
+msgid "download"
+msgstr "shkarko"
+
+msgid "element"
+msgstr "element"
+
+msgid "format_long"
+msgstr "format_i gjate"
+
+msgid "formating"
+msgstr "duke formatuar"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "ore"
+msgstr[1] "ore"
+
+msgid "hours"
+msgstr "Orë"
+
+msgid "kernel"
+msgstr "kernel"
+
+msgid "less than HD hour left"
+msgstr "me pak se ore HD te mbetura"
+
+msgid "less than hour left"
+msgstr "me pak se ore te mbetura"
+
+msgid "logo"
+msgstr "logo"
+
+msgid "minutes"
+msgstr "minuta"
+
+msgid "nPVR server rejected recording request."
+msgstr "Serveri nPVR refuzoi kërkesën për regjistrim."
+
+msgid "nPvr quota used"
+msgstr "Hapësira nPVR është përdorur"
+
+msgid "new"
+msgstr "i/e re"
+
+msgid "off"
+msgstr "OFF"
+
+msgid "prev"
+msgstr "prev"
+
+msgid "recordings"
+msgstr "regjistrimet"
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "rezultati"
+msgstr[1] "rezultatet"
+
+msgid "rootfs"
+msgstr "rootfs"
+
+msgid "today"
+msgstr "sot"
+
+msgid "tomorrow"
+msgstr "neser"
+
+msgid "unknown"
+msgstr "i/e panjohur"
+
+msgid "unlimited"
+msgstr "e pa  kufizuar"
+
+msgid "upgrade_long"
+msgstr "azhorno_i gjate"
+
+msgid "usr"
+msgstr "usr"
+
+msgid "verify"
+msgstr "verifiko"
+
+msgid "writing"
+msgstr "duke shkruar"
+
+#~ msgid "%A %x"
+#~ msgstr "%A %x"
+
+#~ msgid "%a, %b %e, %Y %H:%M"
+#~ msgstr "%a, %b %e, %Y %H:%M"
+
+#~ msgid "22 kHz Tone"
+#~ msgstr "22 kHz Tone"
+
+#~ msgid "All tuners are in use"
+#~ msgstr "Të gjithe tuner-at janë te zënë"
+
+#~ msgid ""
+#~ "All tuners are in use. There are probably too many ongoing recordings."
+#~ msgstr ""
+#~ "Të gjithe tuner-at janë te zënë. Ka mundësi të jenë duke u bërë shumë "
+#~ "rregjistrime."
+
+#~ msgid "Are you sure that you want to drop all channels?"
+#~ msgstr "Jeni të sigurt që dëshironi të fshini gjithë kanalet?"
+
+#~ msgid "Available Transponders"
+#~ msgstr "Transpondera të mundshëm"
+
+#~ msgid "Bandwidth"
+#~ msgstr "Gjerësia e bandës "
+
+#~ msgid "Bandwidth [MHz]"
+#~ msgstr "Gjerësia e bandës [MHz]"
+
+#~ msgid "Buy"
+#~ msgstr "Ble"
+
+#~ msgid "CA PIN has been changed."
+#~ msgstr "Kodi PIN ndryshoi"
+
+#~ msgid "CET / CEST"
+#~ msgstr "CET / CEST"
+
+#~ msgid "CLT / CLST"
+#~ msgstr "CLT / CLST"
+
+#~ msgid "Change CA PIN failed."
+#~ msgstr "Ndryshimi i kodit PIN të kartës dështoi."
+
+#~ msgid "Changing pin failed."
+#~ msgstr "Ndryshimi i kodit PIN dështoi."
+
+#~ msgid "Channel Frequency [kHz]"
+#~ msgstr "Frekuenca e kanalit [kHz]"
+
+#~ msgid "Channel scanning"
+#~ msgstr "Kërkimi i kanaleve"
+
+#~ msgid "Configure"
+#~ msgstr "Konfiguro"
+
+#~ msgid "Danish"
+#~ msgstr "Daneze"
+
+#~ msgid "DiSEqC Switch"
+#~ msgstr "DiSEqC Switch"
+
+#~ msgid "Disable"
+#~ msgstr "çaktivizo"
+
+#~ msgid "Drop channels?"
+#~ msgstr "Anullo kanalet"
+
+#~ msgid "Dropping..."
+#~ msgstr "Duke anulluar ..."
+
+#~ msgid "EET / EEST"
+#~ msgstr "EET / EEST"
+
+#~ msgid "End Frequency"
+#~ msgstr "Frekuenca e fundit"
+
+#~ msgid "Finnish"
+#~ msgstr "Finlandeze"
+
+#~ msgid ""
+#~ "Formatting this disk will permanently erase all data on it. Do you want "
+#~ "to continue?"
+#~ msgstr ""
+#~ "Duke formatuar këtë disk gjithë të dhënat që ndodhen në të do të fshihen. "
+#~ "Doni të vazhdoni?"
+
+#~ msgid "Frequency"
+#~ msgstr "Frekuenca"
+
+#~ msgid "Frequency Range"
+#~ msgstr "Segmenti i frekuencave"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "GMT / BST"
+#~ msgstr "GMT / BST"
+
+#~ msgid "Greek"
+#~ msgstr "Greqisht"
+
+#~ msgid "Helsinki, Athens, Kaliningrad"
+#~ msgstr "Helsinki, Athinë, Kalingrad"
+
+#~ msgid "Incorrect CA Card"
+#~ msgstr "Kartë e Gabuar "
+
+#~ msgid "Incorrect old PIN."
+#~ msgstr "PIN i vjetër i Gabuar."
+
+#~ msgid ""
+#~ "Install\n"
+#~ "\n"
+#~ "In order to perform automatical channel scanning press OK."
+#~ msgstr ""
+#~ "Instalo\n"
+#~ "\n"
+#~ "Për t bërë kerkim automatik të  kanaleve shtypni OK."
+
+#~ msgid "LNB Setup"
+#~ msgstr "Konfigurimi i LNB"
+
+#~ msgid "LNB Type"
+#~ msgstr "Lloji i LNB"
+
+#~ msgid "Latvian"
+#~ msgstr "Letonisht"
+
+#~ msgid "Loading..."
+#~ msgstr "Duke ngarkuar..."
+
+#~ msgid "Local Oscillator Frequency"
+#~ msgstr "Frekuenca e oshilatorit lokal"
+
+#~ msgid "London, Belfast"
+#~ msgstr "Belfast, Londër"
+
+#~ msgid "MSK"
+#~ msgstr "MSK"
+
+#~ msgid "Modulation"
+#~ msgstr "Modulimi"
+
+#~ msgid "Moscow, Saint Petersburg"
+#~ msgstr "Shën Pjetërburg , Moskë"
+
+#~ msgid "Network Name"
+#~ msgstr "Emri i Rrjetit"
+
+#~ msgid "New CA PIN confirmation field is not complete."
+#~ msgstr "Fusha e konfirmimit te kodit të ri PIN të kartës nuk është mbushur."
+
+#~ msgid "New CA PIN field is not complete"
+#~ msgstr "Fusha e kodit të ri PIN të kartës nuk është mbushur."
+
+#~ msgid "New PIN confirmation field is not complete."
+#~ msgstr "Fusha e konfirmimit te kodit të ri PIN nuk është mbushur."
+
+#~ msgid "New PIN field is not complete."
+#~ msgstr "Fusha e kodit të ri PIN nuk është mbushur."
+
+#~ msgid "New PIN:"
+#~ msgstr "Kodi i ri PIN:"
+
+#~ msgid "New pins don't match."
+#~ msgstr "Kodet e reja PIN nuk përputhen."
+
+#~ msgid "No Access (error code 1)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 1)"
+
+#~ msgid "No Access (error code 10)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 10)"
+
+#~ msgid "No Access (error code 11)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 11)"
+
+#~ msgid "No Access (error code 12)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 12)"
+
+#~ msgid "No Access (error code 2)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 2)"
+
+#~ msgid "No Access (error code 3)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 3)"
+
+#~ msgid "No Access (error code 4)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 4)"
+
+#~ msgid "No Access (error code 5)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 5)"
+
+#~ msgid "No Access (error code 6)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 6)"
+
+#~ msgid "No Access (error code 7)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 7)"
+
+#~ msgid "No Access (error code 8)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 8)"
+
+#~ msgid "No Access (error code 9)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code 9)"
+
+#~ msgid "No access (error code %i)"
+#~ msgstr "Nuk Keni të Drejta Hyrjeje (error code %i)"
+
+#~ msgid ""
+#~ "No channels installed.\n"
+#~ "Channel scanning is needed."
+#~ msgstr ""
+#~ "Nuk ka asnjë kanal te instaluar.\n"
+#~ "Duhet bërë rregjistrimi i kanaleve."
+
+#~ msgid "Norwegian"
+#~ msgstr "Norvegjeze "
+
+#~ msgid "Old CA PIN field is not complete"
+#~ msgstr "Fusha e kodit të vjetër PIN të kartës nuk është e plotë"
+
+#~ msgid "Old PIN field is not complete."
+#~ msgstr "Fusha e kodit të vjetër PIN  nuk është e plotë"
+
+#~ msgid "Old PIN:"
+#~ msgstr "Kodi i vjetër PIN:"
+
+#~ msgid "Old pin is invalid."
+#~ msgstr "Kodi i vjetër PIN nuk është i saktë"
+
+#~ msgid "PIN confirmation does not match."
+#~ msgstr "Konfirmimi i kodit PIN nuk përputhet."
+
+#~ msgid "PLPID"
+#~ msgstr "PLPID"
+
+#~ msgid "Paris, Berlin, Warsaw, Rome"
+#~ msgstr "Paris, Berlin, Warsaw, Rome"
+
+#~ msgid "Pin change successful."
+#~ msgstr "Kodi PIN u ndryshua me sukses."
+
+#~ msgid "Please Wait"
+#~ msgstr "ju lutemi prisni "
+
+#~ msgid "Please confirm new CA PIN:"
+#~ msgstr "Ju lutemi konfirmoni kodin e ri PIN të Kartës"
+
+#~ msgid "Please enter CA PIN:"
+#~ msgstr "Ju lutemi futni kodin PIN të Kartës:"
+
+#~ msgid "Please enter Conax PIN"
+#~ msgstr "Ju lutemi futni kodin PIN të Conax-it"
+
+#~ msgid "Please enter Conax PIN to play choosen content"
+#~ msgstr "Ju lutemi futni kodin PIN të Conax-it për të luajtur përmbajtjen"
+
+#~ msgid "Please enter Middleware PIN"
+#~ msgstr "Ju lutemi futni kodin PIN të Middleware-it"
+
+#~ msgid "Please enter Middleware PIN to play choosen content"
+#~ msgstr ""
+#~ "Ju lutemi futni kodin PIN të Midlleware-it për të luajtur përmbajtjen "
+
+#~ msgid "Please enter new CA PIN:"
+#~ msgstr "Ju lutemi futni kodin e ri PIN të Kartës"
+
+#~ msgid "Polarization"
+#~ msgstr "Polarizimi"
+
+#~ msgid "Polish"
+#~ msgstr "Polonisht"
+
+#~ msgid "Press EPG to enter grid view"
+#~ msgstr "Shtypni butonin EPG për të hyrë në Guidën e kanaleve (grid)"
+
+#~ msgid "Press EPG to enter list view"
+#~ msgstr "Shtypni butonin EPG për të hyrë në Guidën e kanaleve (listë)"
+
+#~ msgid "Quality"
+#~ msgstr "Kualiteti"
+
+#~ msgid "Record"
+#~ msgstr "Rregjistro"
+
+#~ msgid "Record always"
+#~ msgstr "Rregjistro gjithmone"
+
+#~ msgid "Record repeatedly"
+#~ msgstr "Rregjistro vazhdimisht"
+
+#~ msgid "Remove reminder"
+#~ msgstr "Fshi reminder-in"
+
+#~ msgid "Repeat new PIN:"
+#~ msgstr "Perserit kodin e ri PIN:"
+
+#~ msgid "Reykjavík"
+#~ msgstr "Reykjavík"
+
+#~ msgid "Russian"
+#~ msgstr "Rusisht"
+
+#~ msgid "Santiago"
+#~ msgstr "Santiago"
+
+#~ msgid "Satellite %s is not setup yet"
+#~ msgstr "Sateliti %s nuk eshte konfiguarar akoma"
+
+#~ msgid "Satellite Info"
+#~ msgstr "Informacion mbi satelitin "
+
+#~ msgid "Satellite Name"
+#~ msgstr "Emri i satelitit"
+
+#~ msgid "Satellite Name:"
+#~ msgstr "Emri i Satelitit:"
+
+#~ msgid "Scanning channels"
+#~ msgstr "Duke kerkuar kanalet"
+
+#~ msgid "Searching for channels"
+#~ msgstr "Duke kerkuar kanalet"
+
+#~ msgid "Searching..."
+#~ msgstr "Duke kerkuar ..."
+
+#~ msgid "Service Name"
+#~ msgstr "Emri i sherbimit "
+
+#~ msgid "Show similar"
+#~ msgstr "Trego te ngjajshme "
+
+#~ msgid "Signal Quality"
+#~ msgstr "Kualiteti i sinjalit"
+
+#~ msgid "Signal Strength"
+#~ msgstr "Fuqia e sinjalit"
+
+#~ msgid "Spanish"
+#~ msgstr "Spanjisht"
+
+#~ msgid "Standard"
+#~ msgstr "Standard"
+
+#~ msgid "Start Frequency"
+#~ msgstr "Frekuenca e fillimit"
+
+#~ msgid "Start date                End date"
+#~ msgstr "Data e fillimit                Data e mbarimit"
+
+#~ msgid "Start date      End date"
+#~ msgstr "Data e fillimit      Data e mbarimit"
+
+#~ msgid "Stop channel recording"
+#~ msgstr "Ndalo rregjistrimin e kanalit"
+
+#~ msgid "Stop recording"
+#~ msgstr "Ndalo rregjistrimin"
+
+#~ msgid "Strength"
+#~ msgstr "Fuqia"
+
+#~ msgid "Swedish"
+#~ msgstr "Suedisht"
+
+#~ msgid "Switch to channel"
+#~ msgstr "Kalo tek kanali"
+
+#~ msgid "Symbol Rate"
+#~ msgstr "Symbol Rate"
+
+#~ msgid "Trailer"
+#~ msgstr "Trailer"
+
+#~ msgid "Unable to change settings while recording is active"
+#~ msgstr ""
+#~ "Nuk mund te ndryshohen parametrat kur jane duke u bere rregjistrime."
+
+#~ msgid "Use NIT/SDT"
+#~ msgstr "perdor NIT/SDT"
+
+#~ msgid "Waiting for channels"
+#~ msgstr "Duke pritur per kanalet"
+
+#~ msgid "Waiting for channels..."
+#~ msgstr "Duke pritur per kanalet..."
+
+#~ msgid "Watch in Catch-up TV"
+#~ msgstr "Shiko ne Catch-up TV"
+
+#~ msgid "Wrong CA PIN."
+#~ msgstr "Kodi PIN i kartes i gabuar."
+
+#~ msgid "You got mail"
+#~ msgstr "Keni nje email"

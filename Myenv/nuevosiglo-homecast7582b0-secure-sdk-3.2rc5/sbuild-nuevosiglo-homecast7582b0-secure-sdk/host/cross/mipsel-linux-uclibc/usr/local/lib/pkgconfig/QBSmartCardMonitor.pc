@@ -1,0 +1,6 @@
+Name: QBSmartCardMonitor
+Version: 1.0.0
+Requires: QBCAS SvCore SvFoundation 
+Description: Cubiware wrapper for QBICSmartcard interface
+Libs: -lQBSmartCardMonitor 
+CFlags: 

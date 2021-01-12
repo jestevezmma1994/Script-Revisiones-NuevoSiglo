@@ -1,0 +1,6 @@
+Name: QBUpgrade
+Version: 1.0.0
+Requires: QBConfig QBDVBMuxesMap QBDVBScanner QBTunerFilter SvCore SvFoundation SvHTTPClient TranslationMergerHeaders fibers 
+Description: Cubiware Upgrade Library
+Libs: -lQBUpgrade -lexpat -lcrypto -lz 
+CFlags: 

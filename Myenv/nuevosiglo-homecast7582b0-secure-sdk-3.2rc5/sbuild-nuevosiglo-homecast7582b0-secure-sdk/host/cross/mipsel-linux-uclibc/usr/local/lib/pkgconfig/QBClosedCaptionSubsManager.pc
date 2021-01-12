@@ -1,0 +1,6 @@
+Name: QBClosedCaptionSubsManager
+Version: 1.0.0
+Requires: CUIT QBStringUtils QBSubsManager SvFoundation SvPlayerKit SvPlayerManager dataformat 
+Description: Handles Closed Caption subtitles 
+Libs: -lQBClosedCaptionSubsManager 
+CFlags: 

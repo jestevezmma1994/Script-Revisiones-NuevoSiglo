@@ -1,0 +1,114 @@
+#!/usr/bin/python
+
+import getopt
+import json
+import sys
+
+# Set is used to remove text repetitions
+# List is used to keep input text ordering
+all_texts=list()
+all_texts_set=set()
+
+def print_help():
+	print ''
+	print 'Script printing text values, marked as needing to be translated,'
+	print 'from JSON documents.'
+	print 'Values which need translation are selected using special array'
+	print 'named "i18n_gettext", placed in the same JSON document, in the same'
+	print '(or ancestor) scope. This array contains element NAMES. VALUES'
+	print 'of elements with that NAMES are printed by the script.'
+	print 'By default, all matching texts are embedded in gettext *.pot template.'
+	print ''
+	print 'Usage:',sys.argv[0],'[OPTIONS] input-files'
+	print '  -h, --help              Print this help message.'
+	print '  -o, --output-file FILE  Set output file. By default, whole output'
+	print '                          is printed to stdout.'
+	print '  --no-gettext            Instead of printing *.pot, print'
+	print '                          texts alone.'
+	print ''
+
+def process_json_elements(json_tree, json_name):
+	global all_texts
+	scope_keys=set()
+	if type(json_tree) == dict:
+		if json_tree.has_key('i18n_gettext'):
+			scope_keys = json_tree['i18n_gettext']
+
+		if json_name and json_tree.has_key(json_name):
+			entry = json_tree[json_name]
+			if entry:
+				if not entry in all_texts_set:
+					all_texts_set.add(entry)
+					all_texts.append(entry)
+
+		for name in scope_keys:
+			if json_tree.has_key(name):
+				entry = json_tree[name]
+				if entry:
+					if not entry in all_texts_set:
+						all_texts_set.add(entry)
+						all_texts.append(entry)
+
+		for key in json_tree.keys():
+			process_json_elements(json_tree[key], json_name)
+			for name in scope_keys:
+				process_json_elements(json_tree[key], name)
+		return
+	if type(json_tree) == list:
+		for value in json_tree:
+			process_json_elements(value, json_name)
+			for name in scope_keys:
+				process_json_elements(json_tree[key], name)
+		return
+
+def process_qb_json(filename):
+	f = open(filename, 'r')
+	if not f:
+		sys.stderr.write('Cannot open input file',filename)
+		exit(1)
+	data = json.load(f)
+	if type(data) != dict:
+		process_json_elements(data, None);
+		return
+	if not data.has_key('i18n_gettext'):
+		process_json_elements(data, None);
+		return
+	arr = data['i18n_gettext']
+	if not arr:
+		process_json_elements(data, None);
+		return
+	for name in arr:
+		process_json_elements(data, name)
+
+output_filename = ''
+format_gettext_template = True
+options, remainder = getopt.getopt(sys.argv[1:], 'ho:', [ 'help', 'output=', 'no-gettext' ]);
+
+for opt, arg in options:
+	if opt in ('-o', '--output'):
+		output_filename = arg
+	elif opt in ('-h', '--help'):
+		print_help()
+		exit(0)
+	elif opt in ('--no-gettext'):
+		format_gettext_template = False
+
+if output_filename:
+	f = open(output_filename, 'w')
+	if not f:
+		sys.stderr.write('Cannot open output file',output_filename)
+		exit(1)
+	sys.stdout = f
+
+for filename in remainder:
+	process_qb_json(filename)
+
+if format_gettext_template:
+	for text in all_texts:
+		print 'msgid "'+text+'"'
+		print 'msgstr ""'
+		print
+else:
+	for text in all_texts:
+		print text
+

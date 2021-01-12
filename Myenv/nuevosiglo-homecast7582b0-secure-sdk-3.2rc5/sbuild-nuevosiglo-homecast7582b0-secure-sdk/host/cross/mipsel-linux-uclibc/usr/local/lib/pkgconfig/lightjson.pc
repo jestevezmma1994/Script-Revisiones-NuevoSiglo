@@ -1,0 +1,6 @@
+Name: lightjson
+Version: 1.0.0
+Requires: 
+Description: simple JSON parser
+Libs: -llightjson -lm 
+CFlags: 

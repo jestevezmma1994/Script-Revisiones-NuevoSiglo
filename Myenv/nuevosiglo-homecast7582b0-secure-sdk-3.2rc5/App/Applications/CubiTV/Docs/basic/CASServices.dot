@@ -1,0 +1,30 @@
+digraph CASServices {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    CASServices [label="CAS" root=true]
+    conaxMailIndicator
+    conaxPopupManager
+    drm
+    fingerprint
+    QBCASManager
+    QBConaxPullEMMService
+    QBHTTPEMMService
+    QBReencryptionService
+    smartcard
+    smartCardMonitor
+    QBViewRightPopupManager
+    QBViewRightTriggerManager
+
+    CASServices -> conaxMailIndicator
+    CASServices -> conaxPopupManager
+    CASServices -> drm
+    CASServices -> fingerprint
+    CASServices -> QBCASManager
+    CASServices -> QBConaxPullEMMService
+    CASServices -> QBHTTPEMMService
+    CASServices -> QBReencryptionService
+    CASServices -> smartcard
+    CASServices -> smartCardMonitor
+    CASServices -> QBViewRightPopupManager
+    CASServices -> QBViewRightTriggerManager
+}

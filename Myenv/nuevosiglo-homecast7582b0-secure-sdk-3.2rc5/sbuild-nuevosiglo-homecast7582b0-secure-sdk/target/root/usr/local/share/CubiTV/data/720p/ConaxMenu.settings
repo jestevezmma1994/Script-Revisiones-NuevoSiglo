@@ -1,0 +1,137 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Dialog.settings"/>
+
+    <widget name="MenuItem">
+        <param tag="xOffset"><int>80</int></param>
+        <param tag="yOffset"><int>36</int></param>
+        <param tag="width"><int>800</int></param>
+        <param tag="height"><int>66</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="subcaptionSpacing"><int>4</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="icon"><bitmap><path>white/iconw_card.png</path></bitmap></param>
+        <param tag="iconHeight"><int>35</int></param>
+        <param tag="iconWidth"><int>35</int></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="focusFadeTime"><double>0.3</double></param>
+        <param tag="showTime"><double>0.3</double></param>
+        <param tag="tickMarkOn"><bitmap><path>check_on.png</path></bitmap></param>
+        <param tag="tickMarkOff"><bitmap><path>check_off.png</path></bitmap></param>
+        <param tag="hideInactiveText"><bool>true</bool></param>
+        <param tag="hideInactiveFocus"><bool>true</bool></param>
+        <widget name="MenuItem.focus">
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="minWidth"><int>237</int></param>
+        </widget>
+    </widget>
+    <widget name="Checkbox">
+        <param tag="width"><int>837</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="activeItemYOffset"><int>335</int></param>
+        <param tag="itemSpacing"><int>50</int></param>
+        <param tag="xtraSpace"><int>12</int></param>
+        <param tag="xtraSpaceAbove"><int>207</int></param>
+        <param tag="scrollDuration"><double>0.3</double></param>
+        <widget name="Checkbox.MenuItem">
+            <param tag="xOffset"><int>80</int></param>
+            <param tag="yOffset"><int>36</int></param>
+            <param tag="width"><int>800</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="subcaptionSpacing"><int>4</int></param>
+            <param tag="leftPadding"><int>10</int></param>
+            <param tag="normalDim"><int>255</int></param>
+            <param tag="inactiveDim"><int>255</int></param>
+            <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="icon"><bitmap><path>white/iconw_card.png</path></bitmap></param>
+            <param tag="iconHeight"><int>28</int></param>
+            <param tag="iconWidth"><int>28</int></param>
+            <param tag="focusXOffset"><int>0</int></param>
+            <param tag="focusYOffset"><int>0</int></param>
+            <param tag="focusFadeTime"><double>0.3</double></param>
+            <param tag="showTime"><double>0.3</double></param>
+            <param tag="tickMarkOn"><bitmap><path>check_on.png</path></bitmap></param>
+            <param tag="tickMarkOff"><bitmap><path>check_off.png</path></bitmap></param>
+            <param tag="hideInactiveText"><bool>true</bool></param>
+            <param tag="hideInactiveFocus"><bool>true</bool></param>
+            <widget name="Checkbox.MenuItem.focus">
+                <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+                <param tag="minWidth"><int>237</int></param>
+            </widget>
+        </widget>
+    </widget>  	
+    <widget name="Big">
+        <param tag="width"><int>800</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="activeItemYOffset"><int>358</int></param>
+        <param tag="itemSpacing"><int>100</int></param>
+        <param tag="xtraSpace"><int>12</int></param>
+        <param tag="xtraSpaceAbove"><int>220</int></param>
+        <param tag="scrollDuration"><double>0.3</double></param>
+        <widget name="Big.MenuItem">
+            <param tag="xOffset"><int>80</int></param>
+            <param tag="yOffset"><int>36</int></param>
+            <param tag="width"><int>800</int></param>
+            <param tag="height"><int>110</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="subcaptionSpacing"><int>4</int></param>
+            <param tag="leftPadding"><int>10</int></param>
+            <param tag="normalDim"><int>255</int></param>
+            <param tag="inactiveDim"><int>255</int></param>
+            <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="icon"><bitmap><path>white/iconw_card.png</path></bitmap></param>
+            <param tag="iconHeight"><int>35</int></param>
+            <param tag="iconWidth"><int>35</int></param>
+            <param tag="focusXOffset"><int>0</int></param>
+            <param tag="focusYOffset"><int>0</int></param>
+            <param tag="focusWidth"><int>237</int></param>
+            <param tag="focusHeight"><int>110</int></param>
+            <param tag="focusFadeTime"><double>0.3</double></param>
+            <param tag="showTime"><double>0.3</double></param>
+            <param tag="minBottomPadding"><int>10</int></param>
+            <param tag="hideInactiveText"><bool>true</bool></param>
+            <param tag="hideInactiveFocus"><bool>true</bool></param>
+            <param tag="subtitleMultiline"><bool>true</bool></param>
+            <widget name="Big.MenuItem.focus">
+                <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+                <param tag="minWidth"><int>237</int></param>
+            </widget>
+        </widget>
+    </widget>
+    <widget name="PinChangeDialog">
+        <param tag="pinsDontMatch"><string><i18n:gettext>PIN confirmation does not match.</i18n:gettext></string></param>
+        <param tag="invalidPin"><string><i18n:gettext>Incorrect old PIN.</i18n:gettext></string></param>
+        <param tag="pinChangeFailed"><string><i18n:gettext>Change CA PIN failed.</i18n:gettext></string></param>
+        <param tag="pinChangeSuccessful"><string><i18n:gettext>CA PIN has been changed.</i18n:gettext></string></param>
+        <param tag="wait"><string><i18n:gettext>Please wait.</i18n:gettext></string></param>
+        <param tag="oldPinEntryTitle"><string><i18n:gettext>Please enter CA PIN:</i18n:gettext></string></param>
+        <param tag="newPIN1EntryTitle"><string><i18n:gettext>Please enter new CA PIN:</i18n:gettext></string></param>
+        <param tag="newPIN2EntryTitle"><string><i18n:gettext>Please confirm new CA PIN:</i18n:gettext></string></param>
+        <param tag="oldPinFieldIncorrect"><string><i18n:gettext>Old CA PIN field is not complete</i18n:gettext></string></param>
+        <param tag="newPinF1Incorrect"><string><i18n:gettext>New CA PIN field is not complete</i18n:gettext></string></param>
+        <param tag="newPinF2Incorrect"><string><i18n:gettext>New CA PIN confirmation field is not complete.</i18n:gettext></string></param>
+        <param tag="title"><string><i18n:gettext>PIN Change</i18n:gettext></string></param>
+    </widget>
+    <widget name="AuthenticationDialog">
+        <param tag="invalidPin"><string><i18n:gettext>Wrong CA PIN.</i18n:gettext></string></param>
+        <param tag="wait"><string><i18n:gettext>Please wait.</i18n:gettext></string></param>
+        <param tag="pinEntryTitle"><string><i18n:gettext>PIN:</i18n:gettext></string></param>
+        <param tag="title"><string><i18n:gettext>Authentication required</i18n:gettext></string></param>
+    </widget>
+
+
+</settings>

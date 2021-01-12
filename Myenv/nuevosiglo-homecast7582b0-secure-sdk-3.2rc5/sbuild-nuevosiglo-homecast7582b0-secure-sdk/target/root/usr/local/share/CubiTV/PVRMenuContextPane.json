@@ -1,0 +1,132 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "continue",
+        "text": "Continue",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "playFromTheBeginning",
+        "text": "Play from the beginning",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop",
+        "text": "Stop",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "edit",
+        "text": "Edit",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "unlock",
+        "text": "Unlock",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "lock",
+        "text": "Lock",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "move",
+        "text": "Move",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete",
+        "text": "Delete recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all scheduled",
+        "text": "Delete all scheduled",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all active",
+        "text": "Delete all active",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all completed",
+        "text": "Delete all completed",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete all failed",
+        "text": "Delete all failed",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "more info",
+        "text": "More info",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    }
+]                                                                                 

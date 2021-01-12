@@ -1,0 +1,96 @@
+#!/bin/sh
+
+HDX=$1
+
+set +e
+
+log()
+{
+  echo "qb_unmount_and_format[$HDX] > $@" 1>&2
+  logger "qb_unmount_and_format[$HDX] > $@"
+  #[ 1 -eq 1 ] && echo -e "qb_unmount_and_format[$HDX] > $@" >> /tmp/mymesg
+  return
+}
+
+failed()
+{
+  rm -f /tmp/automount/blacklist/$HDX
+  hotplug_recall
+  exit 1
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR:" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_  no $@
+}
+
+call_v()
+{
+  call_  yes $@
+}
+
+
+#----------------------------
+# trigger unmounting
+log triggering unmounting of ${HDX}[n]
+mkdir -p /tmp/automount/blacklist
+echo "$HDX*" > /tmp/automount/blacklist/$HDX
+
+hotplug_recall
+#sleep 1
+
+#----------------------------
+# wait for unmounting to be finished
+log waiting for unmounting
+
+wait_cnt=0
+while : ; do
+  TEXT=`(cd /tmp/automount && ls -d $HDX? 2>/dev/null) || (cd /tmp/automount/$HDX/root && echo $HDX)`
+  [ $? -ne 0 ] && break
+
+  log still waiting for \($TEXT\) to be unmounted \($wait_cnt\)
+  if [ $wait_cnt -gt 9 ]; then
+    log waiting for unmounting failed after $wait_cnt seconds
+    failed;
+  fi
+  wait_cnt=$((wait_cnt+1))
+  sleep 1
+done
+
+#----------------------------
+# do the formatting
+
+call_v  qb_format_pvr_storage $HDX
+[ $RES -ne 0 ] && failed
+
+#----------------------------
+# trigger mounting
+
+log formatting finished - mounting again
+
+rm -f /tmp/automount/blacklist/$HDX
+hotplug_recall
+
+log finished
+exit 0

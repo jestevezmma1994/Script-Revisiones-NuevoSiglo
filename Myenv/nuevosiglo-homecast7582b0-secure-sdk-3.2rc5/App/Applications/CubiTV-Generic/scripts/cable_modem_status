@@ -1,0 +1,41 @@
+#!/bin/sh
+
+CABLE_MODEM_DIR="/tmp/cable_modem/"
+STATUS_FILE="$CABLE_MODEM_DIR/status"
+STATUS_FILE_UPDATE="$STATUS_FILE""_update"
+STATUS_FILE_UPDATE_CONSTANTLY="$STATUS_FILE_UPDATE""_constantly"
+MAC_FILE="$CABLE_MODEM_DIR/mac"
+MAC_FILE_UPDATE="$MAC_FILE""_update";
+
+TICKS=$((0))
+
+mkdir -p $CABLE_MODEM_DIR
+chown 0:1000 $CABLE_MODEM_DIR
+chmod ug+rw $CABLE_MODEM_DIR
+
+while [ true ]; do
+
+    if [[ -f "$STATUS_FILE_UPDATE" ]] || [[ "$TICKS" == "0" -a -f "$STATUS_FILE_UPDATE_CONSTANTLY" ]]; then
+        curl 2>/dev/null --max-time 10 http://192.168.100.1/status.htm | grep 'var cable_status=' | grep -o -E [0-9]+ > $STATUS_FILE
+        rm $STATUS_FILE_UPDATE 2>/dev/null
+    fi
+
+    if [[ -f "$MAC_FILE_UPDATE" ]] && [[ ! -f "$MAC_FILE" ]]; then
+        MAC=`curl http://192.168.100.1/info.html --max-time 10 2>/dev/null  | grep '<p align="left" class="style4">' | awk -F"<|>" '{printf $3 ";"}' | awk -F ';' '{printf $4}'`
+        if [[ "x$MAC" != "x" ]]; then
+            echo $MAC > $MAC_FILE
+        else
+            MAC=`curl http://192.168.100.1/interfaces.html --max-time 10 2>/dev/null | grep -A 2 'CM MAC Address' |  grep '<p align="left" class="style4">' | sed 's/.*e4">\([^<]*\)<.*/\1/'`
+            if [[ "x$MAC" != "x" ]]; then
+                echo $MAC > $MAC_FILE
+            fi
+        fi
+        rm $MAC_FILE_UPDATE 2>/dev/null
+    fi
+
+    sleep 3
+    let TICKS++
+    if [ "$TICKS" = "20" ]; then
+        TICKS=$((0))
+    fi
+done

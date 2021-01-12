@@ -1,0 +1,11 @@
+prefix=$${CROSS_ROOT}/usr
+exec_prefix=${prefix}
+libdir=$${CROSS_ROOT}/usr/lib
+includedir=${prefix}/include
+
+Name: libupnp
+Description: Linux SDK for UPnP Devices
+Version: 1.6.19
+Libs: -pthread  -L${libdir} -lupnp -lthreadutil -lixml 
+Cflags: -pthread -I${includedir}/upnp
+

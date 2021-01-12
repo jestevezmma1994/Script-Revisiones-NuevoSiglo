@@ -1,0 +1,15 @@
+{
+  "general": {
+    "generate_system_information": true,
+    "SID": 2008,
+    "PMT_PID": 2008,
+    "carousel_PID": 2009
+  },
+  "cable_delivery_descriptor": {
+    "frequency": 362000,
+    "modulation": "QAM256",
+    "symbol_rate": 5631,
+    "TSID": 1,
+    "ONID": 1
+  }
+}

@@ -1,0 +1,91 @@
+#!/usr/bin/env python2
+
+import getopt
+import json
+import re
+import sys
+
+# List is used to keep input text ordering
+all_texts=list()
+output_filename = ''
+format_gettext_template = True
+
+def print_help():
+    print ''
+    print 'Script printing text values, marked as needing to be translated,'
+    print 'from JSON documents.'
+    print 'Values which need translation are selected using special array'
+    print 'named "i18n_gettext", placed in the same JSON document, in the same'
+    print '(or ancestor) scope. This array contains element NAMES. VALUES'
+    print 'of elements with that NAMES are printed by the script.'
+    print 'By default, all matching texts are embedded in gettext *.pot template.'
+    print ''
+    print 'Usage:',sys.argv[0],'[OPTIONS] input-files'
+    print '  -h, --help              Print this help message.'
+    print '  -o, --output-file FILE  Set output file. By default, whole output'
+    print '                          is printed to stdout.'
+    print '  --no-gettext            Instead of printing *.pot, print'
+    print '                          texts alone.'
+    print ''
+    print ' E.g.'
+    print '   ',sys.argv[0],'-o out.pot file.json'
+    print ''
+
+def translate_text(text):
+    global all_texts
+    result = re.match("^(.+ )*([A-Z_]+)(.+ )*$", text);
+    if result:
+        all_texts.append(result.group(2))
+
+def process_qb_json_polices(filename):
+    global all_texts
+    f = open(filename, 'r')
+    if not f:
+        sys.stderr.write('Cannot open input file',filename)
+        exit(1)
+    data = json.load(f)
+    if type(data) == dict:
+        for name in data.keys():
+            item = data.get(name, None)
+            if type(item) == list:
+                for elem in item:
+                    translate_text(elem)
+            elif type(item) == unicode:
+                translate_text(item)
+            else:
+                sys.stderr.write("Unknown type of item");
+                exit(1)
+    f.close()
+
+if __name__ == "__main__":
+    options, remainder = getopt.getopt(sys.argv[1:], 'ho:', [ 'help', 'output=', 'no-gettext' ]);
+
+    for opt, arg in options:
+        if opt in ('-o', '--output'):
+            output_filename = arg
+        elif opt in ('-h', '--help'):
+            print_help()
+            exit(0)
+        elif opt in ('--no-gettext'):
+            format_gettext_template = False
+
+    if output_filename:
+        f = open(output_filename, 'w')
+        if not f:
+            sys.stderr.write('Cannot open output file',output_filename)
+            exit(1)
+        sys.stdout = f
+
+    for filename in remainder:
+        process_qb_json_polices(filename)
+
+    if format_gettext_template:
+        # removing duplicates
+        all_texts = list(set(all_texts))
+	for text in all_texts:
+            print 'msgid "'+text+'"'
+            print 'msgstr ""'
+            print
+    else:
+        for text in all_texts:
+            print text

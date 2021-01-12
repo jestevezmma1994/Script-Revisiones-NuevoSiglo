@@ -1,0 +1,6 @@
+Name: playready
+Version: 1.0.0
+Requires: 
+Description: DVB muxes map library
+Libs: -lplayready 
+CFlags: 

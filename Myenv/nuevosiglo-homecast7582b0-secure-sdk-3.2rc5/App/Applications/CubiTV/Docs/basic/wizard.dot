@@ -1,0 +1,7 @@
+digraph wizard {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    wizard [label="Wizard" URL="\N.html" root=true]
+
+    wizard -> Wizard 
+}

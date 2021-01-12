@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+
+use strict;
+use File::Find;
+use File::Basename;
+
+
+if ( @ARGV != 2 || ! -e $ARGV[0]){
+		print "usage: <source_dir> <destination_dir> \n";
+		exit 1;
+}
+
+
+my $SRC=$ARGV[0];
+my $RSRC=undef;
+my $DST=$ARGV[1].(-d $ARGV[1] && $ARGV[1]=~/\/$/?basename($ARGV[0]):'');
+my @dirs;
+my %files;
+
+sub wanted {
+#		print "File full name: $File::Find::name\n";
+		my $source=$File::Find::name;
+		my $dest=$File::Find::name;
+		$RSRC=$source unless ( $RSRC );
+		$dest =~ s|^($RSRC\|.\|$SRC)|$DST/|;
+		if ( -d($source) && ! -l($source) ) {
+				push (@dirs, $dest) unless -d($dest);
+		} else {
+				$files{$source}=$dest;
+		}
+}
+
+
+print STDERR "$SRC to $DST\n";
+find({wanted =>\&wanted,no_chdir=>1},($SRC));
+my $key;
+my $val;
+foreach $val (@dirs) {
+		#	print "mkdir $val\n";
+		mkdir ($val) or -d $val or die "error: cant create dir $val\n";
+}
+my $link_failed=undef;
+while (($key, $val) = each(%files)) {
+		#	print "ln $key $val\n";
+		if ( ! $link_failed ) {
+			my $res=link($key,$val);
+			if ( ! $res ) {
+				print STDERR "warning: cant create link $val to $key: $!\n";
+				print STDERR "warning: still trying to symlink the rest of filesinstead of hardlinking\n";
+				$link_failed='true';
+			}
+		}
+		if ( $link_failed ) {
+			symlink($key,$val);
+		}
+}
+
+exit 0;

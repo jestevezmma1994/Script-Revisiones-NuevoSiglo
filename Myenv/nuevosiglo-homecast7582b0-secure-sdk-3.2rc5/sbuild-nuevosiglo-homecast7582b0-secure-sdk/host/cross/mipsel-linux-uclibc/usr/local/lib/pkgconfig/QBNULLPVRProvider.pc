@@ -1,0 +1,6 @@
+Name: QBNULLPVRProvider
+Version: 1.0.0
+Requires: QBPVRProvider SvCore SvFoundation 
+Description: Cubiware null PVR provider
+Libs: -lQBNULLPVRProvider 
+CFlags: 

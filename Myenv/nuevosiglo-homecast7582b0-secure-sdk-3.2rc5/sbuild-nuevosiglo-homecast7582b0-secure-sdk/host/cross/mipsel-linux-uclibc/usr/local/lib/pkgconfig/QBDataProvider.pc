@@ -1,0 +1,6 @@
+Name: QBDataProvider
+Version: 1.0.0
+Requires: QBAppKit SvCore SvFoundation SvHTTPClient fibers 
+Description: Utilities for remote requests
+Libs: -lQBDataProvider 
+CFlags: 

@@ -1,0 +1,28 @@
+{
+
+"comment": [
+	"Overscan margins. One set of values for each television system.",
+	"Each margin size value MUST have suffix, specyfying if the value",
+	"is in pixels ('px' suffix), or as percentage ('%' suffix) of full",
+	"screen width/height."
+],
+
+"overscan-margins": [
+	{
+		"system": "PAL",
+		"margin-left": "6%",
+		"margin-right": "0%",
+		"margin-top": "2%",
+		"margin-bottom": "2%"
+	},
+
+	{
+		"system": "NTSC",
+		"margin-left": "3%",
+		"margin-right": "3%",
+		"margin-top": "2%",
+		"margin-bottom": "2%"
+	}
+]
+
+}

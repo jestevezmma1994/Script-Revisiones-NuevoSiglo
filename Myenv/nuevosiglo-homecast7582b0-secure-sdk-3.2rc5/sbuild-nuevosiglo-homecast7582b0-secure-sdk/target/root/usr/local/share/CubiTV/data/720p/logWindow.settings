@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+    <widget name="logWindow">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="spacing"><int>0</int></param>
+
+        <widget name="logqueue">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>50</int></param>
+            <param tag="width"><int>1180</int></param>
+            <param tag="height"><int>510</int></param>
+            <param tag="spacing"><int>0</int></param>
+            <param tag="maxQueueSize"><int>20</int></param>
+            <param tag="elementTime"><int>5</int></param>
+            <param tag="background"><bitmap><path>bg_mid_1020.png</path></bitmap></param>
+        </widget>
+    </widget>
+
+    <widget name="label">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>1180</int></param>
+        <param tag="font"><ref constant="MonoFont"/></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="fontSize"><int>22</int></param>
+        <param tag="multiLine"><bool>true</bool></param>
+        <param tag="vertAlign"><string>top</string></param>
+        <param tag="textAlign"><string>left</string></param>
+    </widget>
+</settings>

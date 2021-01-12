@@ -1,0 +1,134 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop pvr/ts",
+        "text": "Stop using for PVR/TS",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop pvr",
+        "text": "Stop using for PVR",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop ts",
+        "text": "Stop using for Timeshift",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop",
+        "text": "Stop using disk",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "use pvr/ts",
+        "text": "Use for PVR/TS",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "use pvr",
+        "text": "Use for PVR",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "use ts",
+        "text": "Use for Timeshift",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "use",
+        "text": "Use disk",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "format",
+        "text": "Begin format now",
+        "metadata": {
+            "parentalControl": true
+        },
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "format pvr/ts",
+        "text": "Format PVR/TS",
+        "metadata": {
+            "parentalControl": true
+        },
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "format MStoreVoD",
+        "text": "Format MStoreVoD",
+        "metadata": {
+            "parentalControl": true
+        },
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "format all",
+        "text": "Format whole disk",
+        "metadata": {
+            "parentalControl": true
+        },
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    }
+]

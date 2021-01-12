@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DIR=$1
+
+find $DIR -type d -exec chmod a+rx {} \;
+chmod -R a+r $DIR
+# chmod -R og-w $DIR
+chmod -R u+rw $DIR

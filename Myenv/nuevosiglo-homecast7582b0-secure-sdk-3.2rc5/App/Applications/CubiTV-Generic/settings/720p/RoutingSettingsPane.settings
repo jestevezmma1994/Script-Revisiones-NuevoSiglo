@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="ListPane.settings"/>
+    <xi:include href="XMBMenuItemFocus.settings"/>
+    <xi:include href="XMBMenuItemSelectedFocus.settings"/>
+
+    <widget name="MenuItem" import="ListPane.Item">
+            <param tag="width"><int>400</int></param>
+            <param tag="subcaptionSpacing"><int>6</int></param>
+            <param tag="focusMinWidth"><int>237</int></param>
+    </widget>
+    <widget name="ListPane">
+        <widget name="Title">
+            <param tag="text"><string><i18n:gettext>Set the preferred gateway</i18n:gettext></string></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+    </widget>
+</settings>

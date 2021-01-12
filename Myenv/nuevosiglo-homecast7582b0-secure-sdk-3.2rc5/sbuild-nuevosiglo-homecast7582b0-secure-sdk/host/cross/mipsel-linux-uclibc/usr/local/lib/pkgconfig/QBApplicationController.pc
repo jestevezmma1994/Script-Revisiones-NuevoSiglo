@@ -1,0 +1,6 @@
+Name: QBApplicationController
+Version: 1.0.0
+Requires: CUIT QBSecureLogManager SvCore SvFoundation SvSettingsManager swl 
+Description: Application controller
+Libs: -lQBApplicationController 
+CFlags: 

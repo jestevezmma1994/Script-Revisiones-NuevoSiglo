@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ -z $COMPILER_PATH ]; then
+    echo WARNING: `pwd`: gcc-4.5.3 $@ diverted to cross-toolchain >> ${SRM_ROOT}/cross.warnings
+fi
+exec ${SRM_BUILD_DIR}/bin/cross-gcc-4.5.3 "$@"

@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+<!--
+    <widget name="ConnectionStateIcons">
+        <param tag="xOffset"><int>66</int></param>
+        <param tag="yOffset"><int>80</int></param>
+        <param tag="width"><int>250</int></param>
+        <param tag="height"><int>56</int></param>
+        <param tag="itemSpacing"><int>10</int></param>
+        <widget name="Frame">
+            <param tag="width"><int>28</int></param>
+            <param tag="height"><int>56</int></param>
+            <param tag="maxWidth"><int>250</int></param>
+            <param tag="maxHeight"><int>56</int></param>
+            <param tag="bg">
+                <bitmap><path>frame_epg_nonfocus.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="NAT">
+            <widget name="IP">
+                <param tag="width"><int>26</int></param>
+                <param tag="height"><int>26</int></param>
+
+                <widget name="Icon">
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>26</int></param>
+                    <param tag="height"><int>26</int></param>
+                    <param tag="bgInternetUDP">
+                        <bitmap><path>networkIcons/internet_active.png</path></bitmap>
+                    </param>
+                    <param tag="bgInternet">
+                        <bitmap><path>networkIcons/internet_active.png</path></bitmap>
+                    </param>
+                    <param tag="bgNoInternet">
+                        <bitmap><path>networkIcons/internet_inactive.png</path></bitmap>
+                    </param>
+                </widget>
+            </widget>
+
+            <widget name="UDP">
+                <param tag="width"><int>26</int></param>
+                <param tag="height"><int>26</int></param>
+
+                <widget name="Icon">
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>26</int></param>
+                    <param tag="height"><int>26</int></param>
+                    <param tag="bgInternetUDP">
+                        <bitmap><path>networkIcons/tv_active.png</path></bitmap>
+                    </param>
+                    <param tag="bgInternet">
+                        <bitmap><path>networkIcons/tv_inactive.png</path></bitmap>
+                    </param>
+                    <param tag="bgNoInternet">
+                        <bitmap><path>networkIcons/tv_inactive.png</path></bitmap>
+                    </param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="Net">
+            <widget name="Default">
+                <param tag="width"><int>26</int></param>
+                <param tag="height"><int>26</int></param>
+
+                <widget name="Icon">
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>26</int></param>
+                    <param tag="height"><int>26</int></param>
+                    <param tag="bgAvailable">
+                        <bitmap><path>networkIcons/network_active.png</path></bitmap>
+                    </param>
+                    <param tag="bgAvailableWiFi">
+                        <bitmap><path>networkIcons/network_active_wifi.png</path></bitmap>
+                    </param>
+                    <param tag="bgUnavailable">
+                        <bitmap><path>networkIcons/network_inactive.png</path></bitmap>
+                    </param>
+                    <param tag="bgUnavailableWiFi">
+                        <bitmap><path>networkIcons/network_inactive.png</path></bitmap>
+                    </param>
+                </widget>
+            </widget>
+
+            <widget name="eth0">
+                <param tag="width"><int>26</int></param>
+                <param tag="height"><int>26</int></param>
+
+                <widget name="Icon">
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>26</int></param>
+                    <param tag="height"><int>26</int></param>
+                    <param tag="bgAvailable">
+                        <bitmap><path>networkIcons/network_active.png</path></bitmap>
+                    </param>
+                    <param tag="bgAvailableWiFi">
+                        <bitmap><path>networkIcons/network_active_wifi.png</path></bitmap>
+                    </param>
+                    <param tag="bgUnavailable">
+                        <bitmap><path>networkIcons/network_inactive.png</path></bitmap>
+                    </param>
+                    <param tag="bgUnavailableWiFi">
+                        <bitmap><path>networkIcons/network_inactive.png</path></bitmap>
+                    </param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="Traxis">
+            <param tag="width"><int>52</int></param>
+            <param tag="height"><int>26</int></param>
+
+            <widget name="Icon">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>52</int></param>
+                <param tag="height"><int>26</int></param>
+                <param tag="bgYes">
+                    <bitmap><path>trxIcons/trx_ok.png</path></bitmap>
+                </param>
+                <param tag="bgNo">
+                    <bitmap><path>trxIcons/trx_not_ok.png</path></bitmap>
+                </param>
+            </widget>
+        </widget>
+    </widget>
+
+-->
+
+</settings>

@@ -1,0 +1,20 @@
+#!/bin/sh
+if [ "$cross_compiling" != "" ]; then
+    if [ "$PKG_CONFIG_PATH" != "" ]; then
+        export PKG_CONFIG_LIBDIR=${CROSS_ROOT}/usr/lib/pkgconfig
+        export PKG_CONFIG_PATH=${PKG_CONFIG_PATH}:${CROSS_ROOT}/usr/X11R6/lib/pkgconfig:${CROSS_ROOT}/usr/local/lib/pkgconfig
+    else
+        export PKG_CONFIG_LIBDIR=${CROSS_ROOT}/usr/lib/pkgconfig
+        export PKG_CONFIG_PATH=${CROSS_ROOT}/usr/X11R6/lib/pkgconfig:${CROSS_ROOT}/usr/local/lib/pkgconfig
+    fi
+else
+    if [ "$PKG_CONFIG_PATH" != "" ]; then
+        export PKG_CONFIG_LIBDIR=${BUILD_ROOT}/usr/lib/pkgconfig
+        export PKG_CONFIG_PATH=${PKG_CONFIG_PATH}:${BUILD_ROOT}/usr/local/lib/pkgconfig
+    else
+        export PKG_CONFIG_LIBDIR=${BUILD_ROOT}/usr/lib/pkgconfig
+        export PKG_CONFIG_PATH=${BUILD_ROOT}/usr/local/lib/pkgconfig
+    fi
+fi
+
+exec ${BUILD_ROOT}/usr/local/bin/kelpiePkg $@

@@ -1,0 +1,71 @@
+[
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "automatic",
+        "name" : "NIT Automatic",
+        "tunerType" : "cab",
+        "chaseMissingChannels" : false,
+        "onlyActual" : false,
+        "useStandardRasters" : false,
+        "range" : [
+            {
+                "freqMin" : 834000,
+                "freqMax" : 858000,
+                "freqJump" : 8000
+            }
+        ],
+        "symbolRate" : [
+        	6900
+        ],
+        "extra" : "auto",
+        "dropAll" : true,
+        "needLcn" : false,
+        "needName" : true,
+        "automaticScanParams" : [ 
+            "range", "polarization", "symbolRate", "modulation"
+        ]
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "manual",
+        "name" : "Manual",
+        "tunerType" : "cab",
+        "onlyActual" : true,
+        "useStandardRasters" : true,
+        "needLcn" : false,
+        "needName" : true
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "id" : "factoryScan",
+        "name" : "Manual",
+        "tunerType" : "cab",
+        "onlyActual" : true,
+        "needName" : true,
+        "lcnOverwrite" : false
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "id" : "background",
+        "name" : "Background",
+        "tunerType" : "cab",
+        "onlyActual" : false,
+        "readSDTOther" : true,
+        "needName" : true,
+        "lcnOverwrite" : false
+    }
+]

@@ -1,0 +1,56 @@
+<perldata>
+ <hashref memory_address="0x16eee68">
+  <item key="build" defined="false"></item>
+  <item key="buildpkg">Src_license_checker_c_comp-b8b9a387a94960a1fcdee4313a8103c2.tgz</item>
+  <item key="description">
+   <hashref memory_address="0x17ffaf8">
+    <item key="comment">Scripts and database for cross-license compliance</item>
+    <item key="id">148</item>
+    <item key="owner">nrondan</item>
+    <item key="path">Src/license_checker</item>
+    <item key="vcs">hg</item>
+   </hashref>
+  </item>
+  <item key="dir" defined="false"></item>
+  <item key="ds_ext">
+   <hashref memory_address="0x1805a18">
+    <item key="dir" defined="false"></item>
+    <item key="ds_ext">
+     <hashref memory_address="0x1805a18">
+     </hashref>
+    </item>
+    <item key="file" defined="false"></item>
+    <item key="host">bold007@192.168.1.251</item>
+    <item key="locdir" defined="false"></item>
+    <item key="locfile" defined="false"></item>
+    <item key="locrepo" defined="false"></item>
+    <item key="params" defined="false"></item>
+    <item key="remdir" defined="false"></item>
+    <item key="remfile" defined="false"></item>
+    <item key="remrepo" defined="false"></item>
+    <item key="repo" defined="false"></item>
+    <item key="repodir" defined="false"></item>
+    <item key="repofile" defined="false"></item>
+    <item key="root">/silo/branches/254</item>
+    <item key="tag" defined="false"></item>
+    <item key="vcs" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="file">Src/license_checker/c.comp</item>
+  <item key="host">bold007@192.168.1.251</item>
+  <item key="locdir">Src/license_checker</item>
+  <item key="locfile">Src/license_checker/c.comp</item>
+  <item key="locpref"></item>
+  <item key="locrepo">Src/license_checker</item>
+  <item key="params" defined="false"></item>
+  <item key="remdir">ssh://bold007@192.168.1.251//silo/branches/254/hg/Src/license_checker/./</item>
+  <item key="remfile">ssh://bold007@192.168.1.251//silo/branches/254/hg/Src/license_checker/c.comp</item>
+  <item key="remrepo">ssh://bold007@192.168.1.251//silo/branches/254/hg/Src/license_checker</item>
+  <item key="repo">Src/license_checker</item>
+  <item key="repodir">./</item>
+  <item key="repofile">c.comp</item>
+  <item key="root">/silo/branches/254</item>
+  <item key="tag" defined="false"></item>
+  <item key="vcs">hg</item>
+ </hashref>
+</perldata>

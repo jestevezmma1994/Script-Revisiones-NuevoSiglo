@@ -1,0 +1,6 @@
+Name: QBPCRatings
+Version: 1.0.0
+Requires: SvCore SvFoundation 
+Description: Parental Control service backend
+Libs: -lQBPCRatings 
+CFlags: 

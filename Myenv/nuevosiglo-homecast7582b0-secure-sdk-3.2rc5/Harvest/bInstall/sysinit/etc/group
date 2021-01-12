@@ -1,0 +1,4 @@
+root:!:0:
+appgroup:!:1000:appuser
+netgroup:!:1001:netuser
+netlinkgroup:!:1002:netlinkuser

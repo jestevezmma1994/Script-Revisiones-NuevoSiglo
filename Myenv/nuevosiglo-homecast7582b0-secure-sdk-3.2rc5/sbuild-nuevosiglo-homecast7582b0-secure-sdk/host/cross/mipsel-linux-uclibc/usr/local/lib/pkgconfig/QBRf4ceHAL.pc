@@ -1,0 +1,6 @@
+Name: QBRf4ceHAL
+Version: 1.0.0
+Requires: SvFoundation 
+Description: RF4CE NULL HAL implementation
+Libs: -lQBRf4ceHAL 
+CFlags: 

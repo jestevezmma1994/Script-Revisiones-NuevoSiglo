@@ -1,0 +1,6 @@
+Name: QBDescrambler
+Version: 1.0.0
+Requires: SvCore SvFoundation SvPlayerKit fibers openssl 
+Description: Common api and utilities for h/w descramblers
+Libs: -lQBDescrambler 
+CFlags: 

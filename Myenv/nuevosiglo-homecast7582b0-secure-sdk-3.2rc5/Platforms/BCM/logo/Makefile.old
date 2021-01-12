@@ -1,0 +1,43 @@
+HERE = $(shell pwd)
+
+LOGO ?= cubiware.jpg
+LOGO_HD ?= $(patsubst %.png, %_720p.png, $(patsubst %.jpg, %_720p.jpg, $(LOGO)))
+MAX_SPLASH_SIZE_HEX := $(shell mapreader.pl $(S_MAP_DIR)/all.maps size src=sv-logo.bin)
+MAX_SPLASH_SIZE := $(shell printf "%d" $(MAX_SPLASH_SIZE_HEX))
+LOGO_SIZE := $(shell identify -format "%w*%h*3+400" logos/$(LOGO) | bc)
+LOGO_HD_SIZE := 0
+ifneq ($(filter 720p50 720p60, $(BOOT_SPLASH_MODE)),)
+	ifneq ($(wildcard logos/$(LOGO_HD)),)
+		LOGO_HD_SIZE := $(shell identify -format "%w*%h*3+400" logos/$(LOGO_HD) | bc)
+	endif
+endif
+
+compile:
+	@echo "Checking splash image sizes: $(LOGO_SIZE) + $(LOGO_HD_SIZE) <= $(MAX_SPLASH_SIZE)"
+	@if [ `echo $(LOGO_SIZE) + $(LOGO_HD_SIZE) | bc` -gt $(MAX_SPLASH_SIZE) ]; then echo -e "\x1b[31mCurrent splash images are too large to fit on flash\x1b[39m"; exit 1; fi
+	@echo Converting $(LOGO) to BMP3 format
+	@convert logos/$(LOGO) sv-logo.bmp3
+ifneq ($(LOGO_HD_SIZE),0)
+	@convert logos/$(LOGO_HD) sv-logo2.bmp3
+	@cat sv-logo.bmp3 >sv-logo.dst
+	@cat sv-logo2.bmp3 >>sv-logo.dst
+else
+	@cp sv-logo.bmp3 sv-logo.dst
+endif
+ifneq ($(shell mapreader.pl $(S_MAP_DIR)/all.maps attr src=sv-logo.bin | grep -o "qbimage"),)
+	@echo "Creating QBBinaryImage"
+	@srm-host-run $(SRM_ROOT)/host/local/usr/bin/mkqbbinaryimage.py --mode static --encryption aes256-cbc $(S_INSTALL_KEYSERVER_SYM_SPLASH_KEY_ID) $(S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID) sv-logo.dst sv-logo.bin
+else
+	@mv sv-logo.dst sv-logo.bin
+endif
+
+clean:
+	@rm -f sv-logo.bin sv-logo.bmp3 sv-logo2.bmp3 sv-logo.dst
+
+install:
+	@install -m 644 sv-logo.bin $(DESTDIR)/../sv-logo.bin
+
+md5sum:
+	@echo $(BASE)-srm1 > .md5sum
+	@cat .md5sum | md5sum > $(SRM_MD5SUM)
+	@rm -f .md5sum

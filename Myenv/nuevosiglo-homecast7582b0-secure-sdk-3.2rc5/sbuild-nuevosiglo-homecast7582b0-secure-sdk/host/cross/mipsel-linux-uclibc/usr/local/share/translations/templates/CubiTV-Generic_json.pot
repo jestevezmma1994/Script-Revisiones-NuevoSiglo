@@ -1,0 +1,687 @@
+msgid "Stop recording"
+msgstr ""
+
+msgid "Stop channel recording"
+msgstr ""
+
+msgid "Stop recording always"
+msgstr ""
+
+msgid "Stop recording repeatedly"
+msgstr ""
+
+msgid "Add new list"
+msgstr ""
+
+msgid "Remove list"
+msgstr ""
+
+msgid "Rename list"
+msgstr ""
+
+msgid "Rearrange list"
+msgstr ""
+
+msgid "Add/remove TV channels"
+msgstr ""
+
+msgid "Add/remove radio channels"
+msgstr ""
+
+msgid "Change list numbering"
+msgstr ""
+
+msgid "Remove channel"
+msgstr ""
+
+msgid "Switch to channel"
+msgstr ""
+
+msgid "Remove reminder"
+msgstr ""
+
+msgid "Remind me"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+msgid "Record always"
+msgstr ""
+
+msgid "Record repeatedly"
+msgstr ""
+
+msgid "Show similar"
+msgstr ""
+
+msgid "Search by name"
+msgstr ""
+
+msgid "Search by description"
+msgstr ""
+
+msgid "Search by category"
+msgstr ""
+
+msgid "More info"
+msgstr ""
+
+msgid "Record past event with nPVR"
+msgstr ""
+
+msgid "Record with nPVR"
+msgstr ""
+
+msgid "Delete NPvr recording"
+msgstr ""
+
+msgid "Record keyword with nPVR"
+msgstr ""
+
+msgid "Stop keyword recording"
+msgstr ""
+
+msgid "Record series with nPVR"
+msgstr ""
+
+msgid "Stop series recording"
+msgstr ""
+
+msgid "Catch-up TV - play"
+msgstr ""
+
+msgid "Catch-up TV - continuous playback"
+msgstr ""
+
+msgid "Catch-up TV - continue"
+msgstr ""
+
+msgid "Play from the beginning"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "save"
+msgstr ""
+
+msgid "channel"
+msgstr ""
+
+msgid "date"
+msgstr ""
+
+msgid "startTime"
+msgstr ""
+
+msgid "endTime"
+msgstr ""
+
+msgid "repeat"
+msgstr ""
+
+msgid "keyword"
+msgstr ""
+
+msgid "premiere"
+msgstr ""
+
+msgid "spaceRecovery"
+msgstr ""
+
+msgid "NpvrMargins"
+msgstr ""
+
+msgid "Schedule keyword recording"
+msgstr ""
+
+msgid "Create new directory"
+msgstr ""
+
+msgid "Schedule series recording"
+msgstr ""
+
+msgid "Delete all scheduled"
+msgstr ""
+
+msgid "Delete all active"
+msgstr ""
+
+msgid "Delete all"
+msgstr ""
+
+msgid "Delete all failed"
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Remove directory & keep contents"
+msgstr ""
+
+msgid "Delete all recordings"
+msgstr ""
+
+msgid "Quota"
+msgstr ""
+
+msgid "Delete All"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Spectral Inversion Mode"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Inverted"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Add new satellite"
+msgstr ""
+
+msgid "Remove satellite"
+msgstr ""
+
+msgid "Edit satellite"
+msgstr ""
+
+msgid "Sort satellites"
+msgstr ""
+
+msgid "Transponders"
+msgstr ""
+
+msgid "Rent"
+msgstr ""
+
+msgid "Play Trailer"
+msgstr ""
+
+msgid "UTF-8"
+msgstr ""
+
+msgid "Stop using for PVR/TS"
+msgstr ""
+
+msgid "Stop using for PVR"
+msgstr ""
+
+msgid "Stop using for Timeshift"
+msgstr ""
+
+msgid "Stop using disk"
+msgstr ""
+
+msgid "Use for PVR/TS"
+msgstr ""
+
+msgid "Use for PVR"
+msgstr ""
+
+msgid "Use for Timeshift"
+msgstr ""
+
+msgid "Use disk"
+msgstr ""
+
+msgid "Begin format now"
+msgstr ""
+
+msgid "Format PVR/TS"
+msgstr ""
+
+msgid "Format MStoreVoD"
+msgstr ""
+
+msgid "Format whole disk"
+msgstr ""
+
+msgid "Movie/Drama"
+msgstr ""
+
+msgid "News/Cultural affairs"
+msgstr ""
+
+msgid "Show/Game show"
+msgstr ""
+
+msgid "Sports"
+msgstr ""
+
+msgid "Children's/Youth Programmes"
+msgstr ""
+
+msgid "Music/Ballet/Dance"
+msgstr ""
+
+msgid "Arts/Culture"
+msgstr ""
+
+msgid "Social/Political issues/Economics"
+msgstr ""
+
+msgid "Education/Science/Factual topics"
+msgstr ""
+
+msgid "Leisure/hobbies"
+msgstr ""
+
+msgid "Special"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Unlock"
+msgstr ""
+
+msgid "Lock"
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
+msgid "Delete recording"
+msgstr ""
+
+msgid "Delete all completed"
+msgstr ""
+
+msgid "Exit"
+msgstr ""
+
+msgid "Exit to Home Page"
+msgstr ""
+
+msgid "Buy"
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "Subscription info"
+msgstr ""
+
+msgid "Trailer"
+msgstr ""
+
+msgid "Remove from Favorites"
+msgstr ""
+
+msgid "Add to Favorites"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "Latin"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "DVB Mode"
+msgstr ""
+
+msgid "IP Mode"
+msgstr ""
+
+msgid "Hybrid Mode"
+msgstr ""
+
+msgid "Tuner Type"
+msgstr ""
+
+msgid "Cable"
+msgstr ""
+
+msgid "Cable AnnexB"
+msgstr ""
+
+msgid "Cable DVB-C"
+msgstr ""
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Scanning Standard"
+msgstr ""
+
+msgid "Scan Type"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "NID selection"
+msgstr ""
+
+msgid "ONID selection"
+msgstr ""
+
+msgid "DVB channels"
+msgstr ""
+
+msgid "IP channels"
+msgstr ""
+
+msgid "EPG for IP channels"
+msgstr ""
+
+msgid "Web Services"
+msgstr ""
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr ""
+
+msgid "DVB-S/S2 Manual"
+msgstr ""
+
+msgid "DVB-T Automatic full scan"
+msgstr ""
+
+msgid "DVB-T Manual"
+msgstr ""
+
+msgid "Measuring performance of idle system..."
+msgstr ""
+
+msgid "Your USB drive is not capable neither of timeshift nor recording."
+msgstr ""
+
+msgid "Measuring timeshift performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of timeshift only."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and SD recording performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of simultaneous timeshift and one SD quality recording."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and HD recording performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of simultaneous timeshift and one HD quality recording."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift, SD and HD recordings performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of simultaneous timeshift, one SD quality and one HD quality recording."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and two HD recordings performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of simultaneous timeshift and two HD quality recordings."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and three SD recordings performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of simultaneous timeshift and three SD quality recording."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift, two HD recordings and one SD recording performance..."
+msgstr ""
+
+msgid "Your USB drive is capable of simultaneous timeshift, one SD quality and two HD quality recordings."
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "MAC Address"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "Device Name"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr ""
+
+msgid "Tuned Frequency"
+msgstr ""
+
+msgid "MPEG Service Number"
+msgstr ""
+
+msgid "Channel Name"
+msgstr ""
+
+msgid "Channel Number"
+msgstr ""
+
+msgid "Pre FEC BER"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "Chip ID"
+msgstr ""
+
+msgid "Short Term Error"
+msgstr ""
+
+msgid "Long Term Error"
+msgstr ""
+
+msgid "RF Signal Status"
+msgstr ""
+
+msgid "SmartCard ID"
+msgstr ""
+
+msgid "Guide Data"
+msgstr ""
+
+msgid "Channel Map"
+msgstr ""
+
+msgid "Audio Status"
+msgstr ""
+
+msgid "Video Status"
+msgstr ""
+
+msgid "SmartCard Subscription Status"
+msgstr ""
+
+msgid "RF Tuner Statistics"
+msgstr ""
+
+msgid "Carrier Lock"
+msgstr ""
+
+msgid "Modulation"
+msgstr ""
+
+msgid "Signal Level"
+msgstr ""
+
+msgid "TSID"
+msgstr ""
+
+msgid "Symbol Rate"
+msgstr ""
+
+msgid "DVB Table Status"
+msgstr ""
+
+msgid "PAT Status"
+msgstr ""
+
+msgid "PMT Status"
+msgstr ""
+
+msgid "CAT Status"
+msgstr ""
+
+msgid "NIT Status"
+msgstr ""
+
+msgid "TDT Status"
+msgstr ""
+
+msgid "SDT Status"
+msgstr ""
+
+msgid "EIT Status"
+msgstr ""
+
+msgid "STB Status"
+msgstr ""
+
+msgid "SmartCard Status"
+msgstr ""
+
+msgid "Uptime"
+msgstr ""
+
+msgid "Idle Time"
+msgstr ""
+
+msgid "User Time"
+msgstr ""
+
+msgid "System Time"
+msgstr ""
+
+msgid "Thread Count"
+msgstr ""
+
+msgid "Virtual Memory"
+msgstr ""
+
+msgid "Number of Pages"
+msgstr ""
+
+msgid "Total Memory"
+msgstr ""
+
+msgid "Memory Used"
+msgstr ""
+
+msgid "Free Memory"
+msgstr ""
+
+msgid "Buffers"
+msgstr ""
+
+msgid "Interface Status"
+msgstr ""
+
+msgid "HDMI Status"
+msgstr ""
+
+msgid "Ethernet Status"
+msgstr ""
+
+msgid "USB Status"
+msgstr ""
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "PID"
+msgstr ""
+
+msgid "SID"
+msgstr ""
+
+msgid "PCR"
+msgstr ""
+
+msgid "Program Number"
+msgstr ""
+
+msgid "Version Number"
+msgstr ""
+
+msgid "Channel Status"
+msgstr ""
+
+msgid "Mux ID"
+msgstr ""
+
+msgid "Network Name"
+msgstr ""
+
+msgid "PLPID"
+msgstr ""
+
+msgid "Bandwidth [MHz]"
+msgstr ""
+
+msgid "Polarization"
+msgstr ""
+
+msgid "Quality Level"
+msgstr ""
+
+msgid "Software Version"
+msgstr ""
+
+msgid "Full Software Version"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "HDTV"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+

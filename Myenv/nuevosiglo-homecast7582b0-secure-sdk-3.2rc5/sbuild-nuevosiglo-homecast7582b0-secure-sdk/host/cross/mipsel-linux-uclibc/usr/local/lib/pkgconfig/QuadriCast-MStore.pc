@@ -1,0 +1,6 @@
+Name: QuadriCast-MStore
+Version: 1.0.0
+Requires: 
+Description: Quadricast MStore PushVoD library (NULL implementation)
+Libs: -lQuadriCast-MStore 
+CFlags: 

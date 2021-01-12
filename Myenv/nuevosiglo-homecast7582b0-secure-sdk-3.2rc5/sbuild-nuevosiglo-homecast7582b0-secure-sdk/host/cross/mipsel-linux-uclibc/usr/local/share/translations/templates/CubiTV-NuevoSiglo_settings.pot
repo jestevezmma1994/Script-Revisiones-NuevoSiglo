@@ -1,0 +1,828 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-11 12:02-0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "%A %x"
+msgstr ""
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr ""
+
+msgid "0.00-CURRENT"
+msgstr ""
+
+msgid "1 Hour"
+msgstr ""
+
+msgid "1 minute"
+msgstr ""
+
+msgid "10 minutes"
+msgstr ""
+
+msgid "10 seconds"
+msgstr ""
+
+msgid "100GB"
+msgstr ""
+
+msgid "1080i"
+msgstr ""
+
+msgid "10GB"
+msgstr ""
+
+msgid "120 minutes"
+msgstr ""
+
+msgid "15 minutes"
+msgstr ""
+
+msgid "15 seconds"
+msgstr ""
+
+msgid "150 minutes"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "180 minutes"
+msgstr ""
+
+msgid "2 Hours"
+msgstr ""
+
+msgid "2 minutes"
+msgstr ""
+
+msgid "2 seconds"
+msgstr ""
+
+msgid "20 minutes"
+msgstr ""
+
+msgid "200GB"
+msgstr ""
+
+msgid "20GB"
+msgstr ""
+
+msgid "30 minutes"
+msgstr ""
+
+msgid "30 seconds"
+msgstr ""
+
+msgid "4 Hours"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "5 minutes"
+msgstr ""
+
+msgid "5 seconds"
+msgstr ""
+
+msgid "500GB"
+msgstr ""
+
+msgid "50GB"
+msgstr ""
+
+msgid "6 Hours"
+msgstr ""
+
+msgid "60 minutes"
+msgstr ""
+
+msgid "60 seconds"
+msgstr ""
+
+msgid "720p"
+msgstr ""
+
+msgid "8 Hours"
+msgstr ""
+
+msgid "90 minutes"
+msgstr ""
+
+msgid "A/V Output Settings"
+msgstr ""
+
+msgid "A: Over 18"
+msgstr ""
+
+msgid "About Conax CA"
+msgstr ""
+
+msgid "About CryptoGuard CA"
+msgstr ""
+
+msgid "About ViewRightIPTV CA"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgid "All tuners are in use"
+msgstr ""
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr ""
+
+msgid "Analog Closed Captioning"
+msgstr ""
+
+msgid "Analog Outputs"
+msgstr ""
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Auto Standby"
+msgstr ""
+
+msgid "Autodelete Oldest Recordings"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Automatic Channel Scanning"
+msgstr ""
+
+msgid "Automatic Frame Rate Selection"
+msgstr ""
+
+msgid "Bandwidth"
+msgstr ""
+
+msgid "Banner Timeout"
+msgstr ""
+
+msgid "Block Channels"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+msgid "Box Id"
+msgstr ""
+
+msgid "Buscador"
+msgstr ""
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "CAS Version"
+msgstr ""
+
+msgid "CC Primary Channel"
+msgstr ""
+
+msgid "CC Primary Language"
+msgstr ""
+
+msgid "CC Secondary Channel"
+msgstr ""
+
+msgid "CC Secondary Language"
+msgstr ""
+
+msgid "CC1"
+msgstr ""
+
+msgid "CC3"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "Call History"
+msgstr ""
+
+msgid "Caller ID"
+msgstr ""
+
+msgid "Caller ID Status"
+msgstr ""
+
+msgid "Central European"
+msgstr ""
+
+msgid "Change CA pin"
+msgstr ""
+
+msgid "Change PIN"
+msgstr ""
+
+msgid "Channel 3"
+msgstr ""
+
+msgid "Channel 4"
+msgstr ""
+
+msgid "Channel Installation"
+msgstr ""
+
+msgid "Channel Status"
+msgstr ""
+
+msgid "Check Code"
+msgstr ""
+
+msgid "Check pairing"
+msgstr ""
+
+msgid "Check purse"
+msgstr ""
+
+msgid "Chip id"
+msgstr ""
+
+msgid "Closed Captioning"
+msgstr ""
+
+msgid "Conax"
+msgstr ""
+
+msgid "Conditional access system ID"
+msgstr ""
+
+msgid "Configuration"
+msgstr ""
+
+msgid "CryptoGuard"
+msgstr ""
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "DVB Tables status"
+msgstr ""
+
+msgid "Danish"
+msgstr ""
+
+msgid "Default PVR Quota"
+msgstr ""
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Digital Audio"
+msgstr ""
+
+msgid "Digital Closed Captioning"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Display Format"
+msgstr ""
+
+msgid "Drop channels?"
+msgstr ""
+
+msgid "Dropping..."
+msgstr ""
+
+msgid "Empty"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "End Frequency"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Event Status"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Favorites Numbering"
+msgstr ""
+
+msgid "File Browser Character Set"
+msgstr ""
+
+msgid "Finnish"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr ""
+
+msgid "For 12+ year old"
+msgstr ""
+
+msgid "For 16+ year old"
+msgstr ""
+
+msgid "For 18+ year old"
+msgstr ""
+
+msgid "For 6+ year old"
+msgstr ""
+
+msgid "For HD or Widescreen TV"
+msgstr ""
+
+msgid "For classic TV"
+msgstr ""
+
+msgid "Format Hard Disk"
+msgstr ""
+
+msgid "Frequency"
+msgstr ""
+
+msgid "Frontpanel Clock In Standby"
+msgstr ""
+
+msgid "G"
+msgstr ""
+
+msgid "G: General Audience"
+msgstr ""
+
+msgid "Greek"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr ""
+
+msgid "Hard of Hearing"
+msgstr ""
+
+msgid "Hard of Hearing Subtitles"
+msgstr ""
+
+msgid "IP Network"
+msgstr ""
+
+msgid "Instant Timeshift"
+msgstr ""
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "Interface Status"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Languages"
+msgstr ""
+
+msgid "Latens"
+msgstr ""
+
+msgid "Latin US"
+msgstr ""
+
+msgid "Latvian"
+msgstr ""
+
+msgid "Letterbox"
+msgstr ""
+
+msgid "Letterbox / Pillarbox"
+msgstr ""
+
+msgid "Library date"
+msgstr ""
+
+msgid "Library version"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Locked Ratings"
+msgstr ""
+
+msgid "Locked Time"
+msgstr ""
+
+msgid "Locking Status"
+msgstr ""
+
+msgid "MPAA"
+msgstr ""
+
+msgid "MPEG Statistics"
+msgstr ""
+
+msgid "Mailbox"
+msgstr ""
+
+msgid "Mantenimiento automático"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Manual Channel Scanning"
+msgstr ""
+
+msgid "Maturity Rating"
+msgstr ""
+
+msgid "Menu Language"
+msgstr ""
+
+msgid "Menu Transparency"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr ""
+
+msgid "Multichannel"
+msgstr ""
+
+msgid "NAT Status"
+msgstr ""
+
+msgid "NC-17"
+msgstr ""
+
+msgid "NPVR End Margin"
+msgstr ""
+
+msgid "NPVR Start Margin"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Name This Device"
+msgstr ""
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Norwegian"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Off (Auto Relock)"
+msgstr ""
+
+msgid "Off (Relock Manually)"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "PG"
+msgstr ""
+
+msgid "PG-13"
+msgstr ""
+
+msgid "PG: Parental Guidance"
+msgstr ""
+
+msgid "PIN para compras"
+msgstr ""
+
+msgid "PVR"
+msgstr ""
+
+msgid "PVR End Margin"
+msgstr ""
+
+msgid "PVR Start Margin"
+msgstr ""
+
+msgid "Pairing status"
+msgstr ""
+
+msgid "Pan and Scan"
+msgstr ""
+
+msgid "Parental control"
+msgstr ""
+
+msgid "Permitir todos"
+msgstr ""
+
+msgid "Please enter Conax PIN"
+msgstr ""
+
+msgid "Please enter Middleware PIN"
+msgstr ""
+
+msgid "Please enter parental control PIN"
+msgstr ""
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr ""
+
+msgid "Please wait"
+msgstr ""
+
+msgid "Please wait..."
+msgstr ""
+
+msgid "Polarization"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Preferred Audio Track"
+msgstr ""
+
+msgid "Press Back to go to previous screen"
+msgstr ""
+
+msgid "Press EPG to enter grid view"
+msgstr ""
+
+msgid "Press EPG to enter list view"
+msgstr ""
+
+msgid "Primary Audio Language"
+msgstr ""
+
+msgid "Primary Subtitle Language"
+msgstr ""
+
+msgid "QR code"
+msgstr ""
+
+msgid "R"
+msgstr ""
+
+msgid "RF Channel"
+msgstr ""
+
+msgid "RF Tuner Statistics"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "Recording Settings"
+msgstr ""
+
+msgid "Restart Device"
+msgstr ""
+
+msgid "Restore Factory Defaults"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "S/PDIF A/V Sync"
+msgstr ""
+
+msgid "SCART Signal Type"
+msgstr ""
+
+msgid "SIMILAR TITLES:"
+msgstr ""
+
+msgid "SSM"
+msgstr ""
+
+msgid "STB ID"
+msgstr ""
+
+msgid "STB Status"
+msgstr ""
+
+msgid "Satellite %s is not setup yet"
+msgstr ""
+
+msgid "Satellite Name"
+msgstr ""
+
+msgid "Satellite Setup"
+msgstr ""
+
+msgid "Scanning channels"
+msgstr ""
+
+msgid "Scanning failed"
+msgstr ""
+
+msgid "Screensaver Timeout"
+msgstr ""
+
+msgid "Secondary Audio Language"
+msgstr ""
+
+msgid "Secondary Subtitle Language"
+msgstr ""
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Service Not Found - Please Contact your service representative."
+msgstr ""
+
+msgid "Signal Quality"
+msgstr ""
+
+msgid "Signal Strength"
+msgstr ""
+
+msgid "Software"
+msgstr ""
+
+msgid "Software Version"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Spectral Inversion Mode"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Standby Settings"
+msgstr ""
+
+msgid "Start Frequency"
+msgstr ""
+
+msgid "Status: Not available"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Stretched"
+msgstr ""
+
+msgid "Subscription Status"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Swedish"
+msgstr ""
+
+msgid "Symbol Rate"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "System Settings"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "TV Control"
+msgstr ""
+
+msgid "TV Guide"
+msgstr ""
+
+msgid "TV Size"
+msgstr ""
+
+msgid "TV System"
+msgstr ""
+
+msgid "Timer"
+msgstr ""
+
+msgid "Tokens Status"
+msgstr ""
+
+msgid "USB"
+msgstr ""
+
+msgid "Unique Id"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Update VOD Services"
+msgstr ""
+
+msgid "Use NIT/SDT"
+msgstr ""
+
+msgid "User Interface"
+msgstr ""
+
+msgid "VCAS connectivity"
+msgstr ""
+
+msgid "VCID"
+msgstr ""
+
+msgid "VOD"
+msgstr ""
+
+msgid "VOD Adult PIN"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "ViewRight DVB"
+msgstr ""
+
+msgid "ViewRightIPTV"
+msgstr ""
+
+msgid "Visually Impaired"
+msgstr ""
+
+msgid "Western European"
+msgstr ""
+
+msgid "Would You like to do it now?"
+msgstr ""
+
+msgid "X"
+msgstr ""
+
+msgid "X: Erotic"
+msgstr ""
+
+msgid "dut"
+msgstr ""
+
+msgid "eng"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "spa"
+msgstr ""

@@ -1,0 +1,14 @@
+digraph GUIOverriding {
+    node [URL="../\N.html" shape=box]
+    graph [label=<How default implementation is handled, how to slitghly tweak it and how to completely overwrite it> layout=dot ranksep=1 fontcolor=red]
+
+    menubar [label=<\N<br/>Allows to override how icons are created>]
+    widgetCreation [label=<Widget creation<br/>When menubar wants to create a widget<br/>- it checks if callbacks are registered, if so, they are called and must create widgets<br/>- otherwise QBMenuBarItemControllerCreateIcon is called (default implementation)>]
+    callback  [label=<\N<br/>There are two options:<br/>Either a completely new widget is created<br/>or QBMenuBarItemControllerCreateIcon is called and then resulting widget is tweaked>]
+
+    menubar -> GUILogic [label=<On creation calls QBGUILogicMenuBarItemControllerRegisterCallbacks>]
+    GUILogic [label=<\N<br/>If it wants it may register callbacks<br/>via QBMenuBarItemControllerSetCallbacks>]
+    menubar -> widgetCreation
+    widgetCreation -> callback
+
+}

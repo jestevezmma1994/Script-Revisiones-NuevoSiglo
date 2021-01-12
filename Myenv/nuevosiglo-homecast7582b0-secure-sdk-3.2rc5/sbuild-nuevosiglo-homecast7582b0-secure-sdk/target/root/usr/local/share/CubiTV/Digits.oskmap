@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osk-map xmlns="http://cubiware.com/osk-map-v1.xsd"
+    version="1.0">
+
+	<layouts>
+		<layout id="default"/>
+	</layouts>
+
+    <keys>
+        <key id="backspace" type="backspace">
+            <size><width>3</width></size>
+            <position><x>0</x><y>0</y></position>
+            <bitmap><path>backspace</path></bitmap>
+        </key>
+        <key id="7">
+            <position><x>0</x><y>1</y></position>
+            <caption>7</caption>
+            <value>7</value>
+        </key>
+        <key id="8">
+            <position><x>1</x><y>1</y></position>
+            <caption>8</caption>
+            <value>8</value>
+        </key>
+        <key id="9">
+            <position><x>2</x><y>1</y></position>
+            <caption>9</caption>
+            <value>9</value>
+        </key>
+        <key id="4">
+            <position><x>0</x><y>2</y></position>
+            <caption>4</caption>
+            <value>4</value>
+        </key>
+        <key id="5">
+            <position><x>1</x><y>2</y></position>
+            <caption>5</caption>
+            <value>5</value>
+        </key>
+        <key id="6">
+            <position><x>2</x><y>2</y></position>
+            <caption>6</caption>
+            <value>6</value>
+        </key>
+        <key id="1">
+            <position><x>0</x><y>3</y></position>
+            <caption>1</caption>
+            <value>1</value>
+        </key>
+        <key id="2">
+            <position><x>1</x><y>3</y></position>
+            <caption>2</caption>
+            <value>2</value>
+        </key>
+        <key id="3">
+            <position><x>2</x><y>3</y></position>
+            <caption>3</caption>
+            <value>3</value>
+        </key>
+        <key id=".">
+            <position><x>0</x><y>4</y></position>
+            <caption>.</caption>
+            <value>.</value>
+        </key>
+        <key id="0">
+            <position><x>1</x><y>4</y></position>
+            <caption>0</caption>
+            <value>0</value>
+        </key>
+        <key id="changeSign">
+            <position><x>2</x><y>4</y></position>
+            <caption>±</caption>
+            <value>changeSign</value>
+        </key>
+        <key id="enter" type="enter">
+            <size>
+                <width>3</width>
+            </size>
+            <position>
+                <x>0</x><y>5</y>
+            </position>
+            <caption>enter</caption>
+        </key>
+
+    </keys>
+</osk-map>

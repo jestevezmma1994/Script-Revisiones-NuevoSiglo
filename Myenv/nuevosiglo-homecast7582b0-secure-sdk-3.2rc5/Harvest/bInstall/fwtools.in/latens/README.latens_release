@@ -1,0 +1,60 @@
+
+== I. Preparing FieldDebug image for automatic signing ==
+  a) Enter sbuild directory
+  b) Run command:
+./latens_release/mkimage_for_signing.sh
+  c) Image to sign will be written to the same directory, e.g. Polsat_IPS3000MMP_Unsigned_FieldDebug_Application_2.0rc8.bin
+  d) Sign image using PGP with Latens keys, required ones:
+      client-integration-support@latens.co.uk 
+      ben.harrison@latens.com 
+      lss-images@latens.com
+     It is worth to add also keys of people involved in current project. Example command:
+gpg --recipient kamilk@cubiware.com --recipient adami@cubiware.com --recipient damianm@cubiware.com --recipient ciaran.doyle@latens.com --recipient Shane.Dinkin@latens.com --recipient client-integration-support@latens.co.uk --recipient ben.harrison@latens.com --recipient lss-images@latens.com --encrypt Polsat_IPS3000MMP_Unsigned_FieldDebug_Application_2.0rc8.bin
+  e) Upload gpg-ed image (e.g. Polsat_IPS3000MMP_Unsigned_FieldDebug_Application_2.0rc8.bin.gpg) to Latens ftp (ftp.latens.com) to folder:
+     /ToLatens/IPS3000MMP/Application/FieldDebugApplication
+  f) Image is automatically signed every half an hour. When it is ready, it will be copied to Latens ftp to folder:
+     /FromLatens/IPS3000MMP/Application/SignedFieldDebugApplication. There should be gpg-ed signed file like: Polsat_IPS3000MMP_Signed_FieldDebug_Application_2.0rc8.signed.bin.gpg
+     
+     
+== II. Preparing release for Latens certification ==
+  a) Get newest security tools from repository Var/security (branch 1):
+silo pull repo Var/security from 1 
+  b) install it: 'make install' or 'make install-local' (second one installs scripts to ~/bin directory)
+  c) run sectool script to generate release package from given RC, example command. Generate two release packages: 
+     one for FieldDebug (fd) secure version and one for Production (pd) secure version. Example commands:
+sectool -l -r mmp-cp7584a1-fd-secure-cubitv-2.0rc8
+sectool -l -r mmp-cp7584a1-pd-secure-cubitv-2.0rc8
+  d) Each command will generate firmware release directory in _delivery folder
+  e) Fill missing information in images/release_notes.txt (Both in fd and pd versions):
+     - Used libraries version (if there are not set)
+     - Version of previous release sent for Latens certification
+     - changelog from previos version
+  f) Create archive from firmare release directory, sign it with PGP (using the same keys as in signing separate image in point I.)
+  g) Upload it to Latens ftp to folder:
+     /ToLatens/IPS3000MMP/Application/ProductionApplication
+  h) Create ticket in Latens Web Portal (it must be done by Project Manager who has access to it)
+  i) When certification is succesfully passed, Latens uploads signed image to ftp to folder: 
+     /FromLatens/IPS3000MMP/Application/SignedProductionApplication
+     
+     
+== III. Creating packages (upgrade, nfsroot) with signed images ==
+  a) cd to sbuild-* directory
+  b) run following commands (giving signed application image as parameter)
+silo make shell
+./latens_release/qbnfsrootgen.sh <signed_app_image> <nfsroot_package> <output_folder>
+./latens_release/qbupgradegen.sh <signed_app_image> <nfsroot_package> <output_folder>
+  Example:
+silo make shell
+./latens_release/qbnfsrootgen.sh Polsat_IPS3000MMP_Signed_FieldDebug_Application_2.0rc8.signed.bin mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8.tgz .
+./latens_release/qbupgradegen.sh Polsat_IPS3000MMP_Signed_FieldDebug_Application_2.0rc8.signed.bin mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8.tgz .
+  c) For above example, we get following packages on output:
+     mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8_signed.tgz
+     mmp-cp7584a1-fd-secure-cubitv-upgrade-2.0rc8_signed.tgz
+     
+== IV. Creating factory images ==
+  a) Get newest security tools from repository Var/security (branch 1):
+silo pull repo Var/security from 1 
+  b) install it: 'make install' or 'make install-local' (second one installs scripts to ~/bin directory)
+  c) run prep_release script with passing path to signed application image as paramater, example:
+prep_release mmp-cp7584a1-pd-secure-cubitv-2.0rc8 -i Polsat_IPS3000MMP_Application_Production_2.0rc8.signed -m
+  

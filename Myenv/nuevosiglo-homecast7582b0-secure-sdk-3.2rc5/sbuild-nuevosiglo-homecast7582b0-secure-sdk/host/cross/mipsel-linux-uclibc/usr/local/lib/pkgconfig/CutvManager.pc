@@ -1,0 +1,6 @@
+Name: CutvManager
+Version: 1.0.0
+Requires: SvCore SvDataBucket2 SvFoundation SvPlayerKit 
+Description: Catch-up TV Manager and Plugin interface
+Libs: -lCutvManager 
+CFlags: 

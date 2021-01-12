@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <widget name="CustomerLogo">
+        <param tag="xOffset"><int>940</int></param>
+        <param tag="yOffset"><int>25</int></param>
+        <param tag="width"><int>277</int></param>
+        <param tag="height"><int>50</int></param>
+        <param tag="bg">
+            <bitmap><path>logo_long.png</path></bitmap>
+        </param>
+    </widget>
+
+</settings>

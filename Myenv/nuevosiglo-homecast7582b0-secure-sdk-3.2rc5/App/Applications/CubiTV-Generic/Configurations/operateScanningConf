@@ -1,0 +1,9 @@
+{
+	"nit_actual": true,
+	"nit_other": true,
+	"sdt_actual": true,
+	"sdt_other": true,
+	"bat": false,
+	"immediateNotify": true,
+	"popupTimeout": 30
+}

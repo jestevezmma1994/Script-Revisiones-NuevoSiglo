@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ $# -lt 2 ]; then
+	echo "$0: invalid usage" >&2
+	exit 1
+fi
+
+schema="${BUILD_ROOT}/usr/share/xml/activetree-v1.xsd"
+dest_dir="$(eval echo "\${$#}")"
+
+while [ $# -gt 1 ]; do
+	errors="$(xmllint --noout --schema "$schema" "$1" 2>&1)"
+	if [ $? -ne 0 ]; then
+		echo "$errors" >&2
+		exit 1
+	fi
+	install -m 0644 "$1" "$dest_dir" || exit 1
+	shift 1
+done

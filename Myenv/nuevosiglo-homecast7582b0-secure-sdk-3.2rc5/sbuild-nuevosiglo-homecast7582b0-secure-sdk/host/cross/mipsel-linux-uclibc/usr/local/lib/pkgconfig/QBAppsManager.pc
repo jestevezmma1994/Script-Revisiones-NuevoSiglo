@@ -1,0 +1,6 @@
+Name: QBAppsManager
+Version: 1.0.0
+Requires: CUIT QBRPC QBRPCInterfaces SvCore SvFoundation 
+Description: QBAppsManager enables launching and managing external applications. 
+Libs: -lQBAppsManager -luuid 
+CFlags: 

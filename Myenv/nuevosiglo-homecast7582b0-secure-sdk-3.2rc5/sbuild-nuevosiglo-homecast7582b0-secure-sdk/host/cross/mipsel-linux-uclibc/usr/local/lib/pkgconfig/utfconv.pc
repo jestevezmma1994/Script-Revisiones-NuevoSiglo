@@ -1,0 +1,6 @@
+Name: utfconv
+Version: 1.0.0
+Requires: QBStringUtils SvCore 
+Description: DVB to UTF-8 text string conversion library
+Libs: -lutfconv -liconv 
+CFlags: 

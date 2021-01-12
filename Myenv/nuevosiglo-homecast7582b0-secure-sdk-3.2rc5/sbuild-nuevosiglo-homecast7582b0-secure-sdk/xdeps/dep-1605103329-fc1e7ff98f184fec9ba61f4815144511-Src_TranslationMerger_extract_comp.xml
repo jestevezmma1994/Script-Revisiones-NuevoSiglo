@@ -1,0 +1,69 @@
+<perldata>
+ <hashref memory_address="0x23d5cc8">
+  <item key="deps">
+   <hashref memory_address="0x1bd1098">
+    <item key="Src/TranslationMerger/c.comp">18</item>
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x23ab898">
+    <item key="CROSS_ROOT">${SRM_ROOT}/host/cross/mipsel-linux</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x2401e58">
+    <item key="Src/TranslationMerger/Makefile">ef32301b6282877ccd2ffbba4f573a18</item>
+    <item key="Src/TranslationMerger/Makefile.extract">5622337e84a3603404dc0f91666bac51</item>
+    <item key="Src/TranslationMerger/extract/Makefile.mk">706beb8d5a2aad2708c8c2b666be6863</item>
+    <item key="Src/TranslationMerger/merge-translations.sh">4da6783f64ad8ada9adb11a0c77a8b67</item>
+    <item key="Src/TranslationMerger/scripts/extract-hints-i18n-texts">bf107388e1db9c7384cb12e60ef34fcc</item>
+    <item key="Src/TranslationMerger/scripts/extract-json-i18n-texts">6e328ee309ec7150cddb303d6344873b</item>
+    <item key="Src/TranslationMerger/scripts/extract-json-partner-polices-texts">7bd816c1f7b51e4f83450be7a4755990</item>
+    <item key="Src/TranslationMerger/scripts/extract-xml-i18n-texts">d690dcf9f570e1e9540a527300bebadf</item>
+   </hashref>
+  </item>
+  <item key="string">Src/TranslationMerger/extract.comp</item>
+  <item key="time">1605103329</item>
+  <item key="units">
+   <hashref memory_address="0x236ba88">
+    <item key="CROSS_ROOT">a</item>
+    <item key="Src/TranslationMerger/Makefile">a</item>
+    <item key="Src/TranslationMerger/Makefile.extract">a</item>
+    <item key="Src/TranslationMerger/extract/Makefile.mk">a</item>
+    <item key="Src/TranslationMerger/merge-translations.sh">a</item>
+    <item key="Src/TranslationMerger/scripts/extract-hints-i18n-texts">a</item>
+    <item key="Src/TranslationMerger/scripts/extract-json-i18n-texts">a</item>
+    <item key="Src/TranslationMerger/scripts/extract-json-partner-polices-texts">a</item>
+    <item key="Src/TranslationMerger/scripts/extract-xml-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/Makefile.mk">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-hints-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-json-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-json-partner-polices-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-xml-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/nn_NO.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/or_IN.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/pa_IN.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/pl_PL.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/ru_RU.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/sq_AL.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/sv_SE.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/ta_IN.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/out/CubiTV/te_IN.po">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/nn_NO/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/or_IN/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/pa_IN/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/pl_PL/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/ru_RU/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/sq_AL/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/sv_SE/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/ta_IN/LC_MESSAGES/CubiTV.mo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/locale/te_IN/LC_MESSAGES/CubiTV.mo">m</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x2204aa8">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

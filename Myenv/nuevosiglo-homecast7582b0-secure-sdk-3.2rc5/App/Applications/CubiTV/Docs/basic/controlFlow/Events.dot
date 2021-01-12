@@ -1,0 +1,28 @@
+digraph Events {
+    node [URL="../\N.html" shape=box]
+
+    QBTunerFilter [label=<\N<br/>- per tuner<br/>- on EIT pid>]
+    QBTSSectionParser [label=<\N>]
+    GenericEITPlugin [label=<\N<br/>- parses sections into SvEPGEvent<br/>- caches sections to not parse them again>]
+    Innov8onEPGDataPlugin [label=<\N<br/>- upon request obtains events from CubiMW>]
+    SvEPGManager [label=<\N<br/>- caches events<br/>- notifies SvDataWindow of events that they are interested in>]
+    newtvguide [label=<Grid TV Guide<br/>- draws updated events>]
+    epgWatcher [label=<EPG Watcher<br/>- monitors present and following events and checks if updated<br/>event is present or following, if so notifies listeners and sends<br/>channel changed request>]
+    QBPVRRepeatedRecordings [label=<QBPVRDirectory<br/>- schedules recordings for event if keyword matches>]
+    QBChannelMenu [label=<\N<br/>- redraws channel widget to<br/>display new present event>]
+    pvrAgent [label=<\N<br/>- updates events data in QBSchedManager>]
+
+
+    QBTunerFilter -> QBTSSectionParser [label="TS packets"]
+    QBTSSectionParser -> GenericEITPlugin [label="TS sections"]
+    GenericEITPlugin -> SvEPGManager [label="SvEPGEvents"]
+    SvEPGManager -> newtvguide [label="SvDataWindow notifications"]
+    SvEPGManager -> epgWatcher [label="SvDataWindow notifications"]
+    epgWatcher -> QBPVRRepeatedRecordings [label="eventsChanged notification"]
+    epgWatcher -> QBChannelMenu [label="eventsChanged notification"]
+    GenericEITPlugin -> pvrAgent [label="dataReceived notification from SvEPGRequestListener"]
+    Innov8onEPGDataPlugin -> pvrAgent [label="dataReceived notification from SvEPGRequestListener"]
+
+
+    {rank=same; QBTunerFilter QBTSSectionParser GenericEITPlugin}
+}

@@ -1,0 +1,6 @@
+Name: QBIPC
+Version: 1.0.0
+Requires: QBIPCSocket SvCore fibers 
+Description: inter-process communication (using unix-sockets)
+Libs: -lQBIPC 
+CFlags: 

@@ -1,0 +1,9 @@
+#!/bin/sh
+modprobe usb-storage
+modprobe sd_mod
+
+modprobe sata_svw
+
+modprobe vfat
+modprobe ext4
+modprobe ntfs

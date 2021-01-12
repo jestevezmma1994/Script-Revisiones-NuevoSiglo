@@ -1,0 +1,6 @@
+To enable channel logos (ChannelLogos) in cubitv, please place images in this folder in .png format named the same as channels in DVB network.
+
+Examples:
+1) name of channel: "Eurosport" -> name of file: "Eurosport.png"
+2) name of channel: "Disney XD" -> name of file: "Disney XD.png"
+3) name of channel: "Anonse.tv" -> name of file: "Anonse.tv.png"

@@ -1,0 +1,82 @@
+#!/bin/sh
+
+RUNTIME_DIR=/var/run
+NETWORKING_RUNTIME_DIR=$RUNTIME_DIR/networking
+NETWORKING_IPC_LISTENERS_DIR=$NETWORKING_RUNTIME_DIR/listeners
+DHCP_CLIENT_PID_DIR=$RUNTIME_DIR/dhcp_client
+WPA_SUPP_PID_DIR=$RUNTIME_DIR/wpa_supplicant
+RACOON_RUNTIME_DIR=$RUNTIME_DIR/racoon
+STRONGSWAN_RUNTIME_DIR=$RUNTIME_DIR/strongswan
+CONF_DIR=/etc/vod/networking
+PIDFILE=$NETWORKING_RUNTIME_DIR/network_manager.pidfile
+
+[ -f /etc/profile ] && . /etc/profile
+
+
+check_network_manager_status() {
+    STATUS=0
+    if [ -e "$PIDFILE" ]; then
+        PID=$(cat $PIDFILE)
+        if [ -n "$PID" ]; then
+            STATUS=1
+        fi
+    fi
+}
+
+run_network_manager() {
+    check_network_manager_status
+    if [ $STATUS -ne 0 ]; then
+        exit 0
+    fi
+    NETWORKING_DIRS="$NETWORKING_IPC_LISTENERS_DIR $DHCP_CLIENT_PID_DIR $WPA_SUPP_PID_DIR $RACOON_RUNTIME_DIR $STRONGSWAN_RUNTIME_DIR"
+    mkdir -p $NETWORKING_DIRS
+    chmod -R 500 $NETWORKING_DIRS
+    chmod -R 770 $NETWORKING_IPC_LISTENERS_DIR
+    chown -R netuser:appgroup $NETWORKING_RUNTIME_DIR
+    chown -R appuser:appgroup $NETWORKING_IPC_LISTENERS_DIR
+    chown -R netuser:netgroup $DHCP_CLIENT_PID_DIR $WPA_SUPP_PID_DIR $RACOON_RUNTIME_DIR $STRONGSWAN_RUNTIME_DIR
+
+    echo 0 > /proc/sys/net/ipv4/ip_forward
+
+    if [[ -f /etc/firewall.rules ]] && [[ `which iptables-restore`!="" ]]; then
+        iptables-restore </etc/firewall.rules
+    fi
+
+    if [ ! -d $CONF_DIR ]; then
+        mkdir -p $CONF_DIR
+        chown -R appuser:appgroup $CONF_DIR
+    fi
+
+    /etc/init.d/netlink_daemon status
+    if [ $? -ne 1 ]; then
+        /etc/init.d/netlink_daemon start
+    fi
+
+    /etc/networking/run_network_manager.script &
+}
+
+stop_network_manager() {
+    check_network_manager_status
+    if [ $STATUS -eq 0 ]; then
+        exit 0
+    fi
+
+    QBIPCSend $NETWORKING_RUNTIME_DIR/QBNetworkManager_api "#Close#"
+    kill -KILL $(cat $NETWORKING_RUNTIME_DIR/network_manager.pidfile)
+    rm $NETWORKING_RUNTIME_DIR/network_manager.pidfile
+}
+
+case "$1" in
+    start)
+        run_network_manager
+    ;;
+    stop)
+        stop_network_manager
+    ;;
+    restart)
+        $0 stop
+        $0 start
+    ;;
+    *)
+esac
+

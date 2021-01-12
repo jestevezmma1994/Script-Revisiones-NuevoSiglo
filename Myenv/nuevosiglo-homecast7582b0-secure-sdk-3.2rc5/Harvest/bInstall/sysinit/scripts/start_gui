@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo launching GUI
+
+touch /var/run/guistart
+# start main gui loop
+killall -CONT gui_start >/dev/null 2>&1

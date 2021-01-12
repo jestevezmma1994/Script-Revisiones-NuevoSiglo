@@ -1,0 +1,87 @@
+#!/bin/sh
+
+TEMP_DIR=`mktemp -d /tmp/XXXXXX`
+
+cleanup()
+{
+    oec=$?
+    rm -rf $TEMP_DIR >/dev/null 2>&1
+    exit $oec
+}
+
+trap "cleanup" EXIT
+
+issue_error()
+{
+    echo $1
+    chmod u+w /tmp/ssl -R
+    rm -rf /tmp/ssl/private
+    ln -sf /etc/ssl/backup /tmp/ssl/private
+    chown root:appgroup /tmp/ssl
+    chmod ug-w,o-rwx /tmp/ssl -R
+    exit 4
+}
+
+if [ "$1" = "start" ]; then
+    rm -rf /tmp/ssl
+    mkdir -m 0750 -p /tmp/ssl/private
+
+    CERT_DEVNUM=`grep "\<cert\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+    CERT_SIGN_DEVNUM=`grep "\<cert_sign\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+
+    if [ "x$CERT_DEVNUM" = "x" ]; then
+        issue_error "Certificates partition not found"
+    fi
+
+    if [ "x$CERT_SIGN_DEVNUM" = "x" ]; then
+        issue_error "Certificates sign partition not found"
+    fi
+
+    CERT_DEV=/dev/mtdblock$CERT_DEVNUM
+    CERT_SIGN_DEV=/dev/mtdblock$CERT_SIGN_DEVNUM
+
+    CERT_DEV_SIZE=`cat /sys/block/mtdblock$CERT_DEVNUM/size || echo 0`
+
+    dd if=$CERT_SIGN_DEV of=$TEMP_DIR/sign bs=1 count=256 >/dev/null 2>&1
+    dd if=$CERT_SIGN_DEV of=$TEMP_DIR/size skip=256 bs=1 count=11 >/dev/null 2>&1
+
+    FS_SIZE=`cat $TEMP_DIR/size | head -n 1 | cut -d \! -f 1`
+    [ -z "$FS_SIZE" ] && { issue_error "FS size not found!"; }
+    [ -z "${FS_SIZE##*[!0-9]*}" ] && { issue_error "FS size is not a number!"; }
+    if [ $FS_SIZE -gt $((CERT_DEV_SIZE * 512)) ]; then { issue_error "FS bigger than device!"; } ; fi
+
+    dd if=$CERT_DEV of=$TEMP_DIR/fs_dump bs=1 count=$FS_SIZE >/dev/null 2>&1 || { issue_error "Couldn't dump device contents!"; }
+
+    openssl dgst -sha1 -verify /etc/ssl/transport/rsa.pub -signature $TEMP_DIR/sign $TEMP_DIR/fs_dump || \
+        { issue_error "Could not verify cert part!"; }
+
+    if [ ! -x /usr/bin/unsquashfs ]; then
+        echo "0 $CERT_DEV_SIZE crypt aes-ecb `cat /etc/ssl/transport/certs.key` 0 $CERT_DEV 0" | dmsetup create certs || \
+            { issue_error "Could not create mapping for device!"; }
+
+        mount -t squashfs -o noexec /dev/mapper/certs /tmp/ssl/private || \
+            { dmsetup remove certs; issue_error "Could not mount squashfs partition"; }
+    else
+        openssl enc -d -aes-128-ecb -nopad -nosalt -K `cat /etc/ssl/transport/certs.key` -iv "" -in $TEMP_DIR/fs_dump -out $TEMP_DIR/fs_dump.squash >/dev/null 2>&1 || \
+            { issue_error "Could not decrypt archive!"; }
+
+        unsquashfs -n -f -d /tmp/ssl/private $TEMP_DIR/fs_dump.squash || \
+            { issue_error "Failed to unsquashfs"; }
+    fi
+
+    chown root:appgroup /tmp/ssl
+    chmod ug-w,o-rwx /tmp/ssl
+
+elif [ "$1" = "stop" ]; then
+    if [ ! -x /usr/bin/unsquashfs ]; then
+        umount /tmp/ssl/private
+        dmsetup remove certs
+    fi
+
+    if [ -d /tmp/ssl ]; then
+        chmod u+w /tmp/ssl -R
+    fi
+
+    rm -rf /tmp/ssl
+fi
+

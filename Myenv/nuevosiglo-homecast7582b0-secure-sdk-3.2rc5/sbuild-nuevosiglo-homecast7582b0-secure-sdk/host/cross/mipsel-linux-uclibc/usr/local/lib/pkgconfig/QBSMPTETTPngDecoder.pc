@@ -1,0 +1,6 @@
+Name: QBSMPTETTPngDecoder
+Version: 1.0.0
+Requires: CAGE QBMTQueue QBSubsManager SvCore SvFoundation SvQuirks libpng16 
+Description: component for decoding raw image data from TTML to bitmaps
+Libs: -lQBSMPTETTPngDecoder 
+CFlags: 

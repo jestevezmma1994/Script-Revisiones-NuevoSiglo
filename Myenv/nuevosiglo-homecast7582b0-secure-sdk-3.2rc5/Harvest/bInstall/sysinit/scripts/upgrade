@@ -1,0 +1,22 @@
+#!/bin/sh
+
+. /etc/profile
+
+if [ "$1" != "start" ]; then exit 0; fi
+
+LASTVERSION=`cat /etc/vod/LASTVERSION` 2>/dev/null
+THISVERSION=`cat /etc/PROJECT`-`cat /etc/RELEASE`
+if [ "$LASTVERSION" = "$THISVERSION" ]; then exit 0; fi
+
+export LASTVERSION THISVERSION
+
+echo "system was upgraded from $LASTVERSION to $THISVERSION"
+echo "running post-upgrade scripts"
+
+for i in /etc/upgrade.d/*; do 
+    echo "run: $i"
+    $i upgrade
+done
+
+echo $THISVERSION > /etc/vod/LASTVERSION
+/etc/init.d/config save

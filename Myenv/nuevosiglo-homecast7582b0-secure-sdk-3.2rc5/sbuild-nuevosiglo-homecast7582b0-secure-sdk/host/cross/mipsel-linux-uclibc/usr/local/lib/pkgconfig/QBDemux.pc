@@ -1,0 +1,6 @@
+Name: QBDemux
+Version: 1.0.0
+Requires: SvCore error_log fibers mpeg2 
+Description: TS demuxer interface and helper objects
+Libs: -lQBDemux 
+CFlags: 

@@ -1,0 +1,6 @@
+Name: sdp
+Version: 1.0.0
+Requires: SvCore dataformat ionet 
+Description: Sentivision SDP parser library
+Libs: -lsdp 
+CFlags: 

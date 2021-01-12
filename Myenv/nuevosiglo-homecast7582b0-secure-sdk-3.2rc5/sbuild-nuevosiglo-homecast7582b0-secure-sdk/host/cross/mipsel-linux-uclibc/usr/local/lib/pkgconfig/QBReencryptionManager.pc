@@ -1,0 +1,6 @@
+Name: QBReencryptionManager
+Version: 1.0.0
+Requires: QBCAS QBRecordFS QBSchedManager SvCore SvFoundation SvPlayerManager fibers 
+Description: Component that manages reencryption process of content recordings.
+Libs: -lQBReencryptionManager 
+CFlags: 

@@ -1,0 +1,6 @@
+Name: QBPlayReadyInterface
+Version: 1.0.0
+Requires: QBAppKit SvCore SvFoundation SvHTTPClient SvPlayerKit 
+Description: Common interface for different MS playready implementations
+Libs: -lQBPlayReadyInterface 
+CFlags: 

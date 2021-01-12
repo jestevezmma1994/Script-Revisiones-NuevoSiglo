@@ -1,0 +1,2 @@
+component splash_screen_image
+depends = libpng-host

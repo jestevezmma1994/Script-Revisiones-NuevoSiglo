@@ -1,0 +1,11 @@
+^reboot$
+^push_logs.sh [0-9]\+$
+^/etc/init.d/auto_testd \(start\|stop\)$
+^store_config.sh; /etc/init.d/network stop; /etc/init.d/network start; /etc/init.d/wifi reload$
+^hdparm -C /dev/sd[a-z][0-9]$
+^hdparm -S [0-9]\+ /dev/sd[a-z][0-9]$
+^qb_mount_mstore sd[a-z]$
+^qb_pvr_mount_usb_rw sd[a-z] \(yes\|no\)$
+^qb_unmount_and_format sd[a-z]$
+^hotplug_recall$
+^update_channel_logos$

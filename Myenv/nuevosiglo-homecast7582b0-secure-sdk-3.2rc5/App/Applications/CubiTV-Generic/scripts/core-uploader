@@ -1,0 +1,36 @@
+#!/bin/sh
+
+echo -n V > /dev/watchdog
+
+. /etc/profile
+. /usr/local/bin/firmware_version.sh
+
+REMOTE_DEBUG=$(svconf_ctl -n REMOTE_DEBUG)
+REMOTE_DEBUG_URL=$(svconf_ctl -n REMOTE_DEBUG_URL)
+FTPUSER=$(svconf_ctl -n FTPUSER)
+FTPPASS=$(svconf_ctl -n FTPPASS)
+FTPPATH=$(svconf_ctl -n FTPPATH)
+FIRMWARE_MD5=$(echo $QB_FIRMWARE_VERSION | awk '{print $2}')
+
+if ([[ "$REMOTE_DEBUG" == "enabled" ]] && [[ "x${REMOTE_DEBUG_URL}" != "x" ]] && [[ "x${FTPUSER}" != "x" ]] && [[ "x${FTPPASS}" != "x" ]]); then
+    echo "pack" >/dev/fp
+    IP=$(ifconfig eth0 | grep 'inet addr' | cut -d':' -f2 | cut -d' ' -f1)
+    if [ "$IP" == "" ]; then
+        IP=$(ifconfig eth17| grep 'inet addr' | cut -d':' -f2 | cut -d' ' -f1)
+    fi
+    if [ "$IP" == "" ]; then
+        IP=$(ifconfig ra0 | grep 'inet addr' | cut -d':' -f2 | cut -d' ' -f1)
+    fi
+    TS=$(date +%F-%H-%M-%S)
+    VERSION=$(cat /etc/VERSION)
+    RC=$(cat /etc/RC)
+    if [ "$RC" != "" ]; then
+        RC=rc$RC
+    fi
+    BUILD=$(cat /etc/BUILD)
+    COREFILE=core.$IP.$TS-md5-${FIRMWARE_MD5}.$BUILD-$VERSION${RC}.gz
+    MAXTIME=1800 # in seconds
+    gzip - | curl --max-time $MAXTIME -T - -u $FTPUSER:$FTPPASS $REMOTE_DEBUG_URL/$FTPPATH/$COREFILE
+fi
+
+echo -n -e \\0 > /dev/watchdog

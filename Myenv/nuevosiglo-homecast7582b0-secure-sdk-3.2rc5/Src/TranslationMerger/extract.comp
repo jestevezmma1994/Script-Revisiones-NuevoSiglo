@@ -1,0 +1,5 @@
+component TranslationMergerExtract
+makefile=Makefile.extract
+provides=TranslationMerger
+
+#X-domains = translations

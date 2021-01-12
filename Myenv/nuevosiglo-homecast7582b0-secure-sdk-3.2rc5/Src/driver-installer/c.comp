@@ -1,0 +1,7 @@
+component driver-installer
+
+files=${SRM_DRIVER_PACK}
+package=${SRM_DRIVER_PACK}
+
+depends =
+provides = driver-installer

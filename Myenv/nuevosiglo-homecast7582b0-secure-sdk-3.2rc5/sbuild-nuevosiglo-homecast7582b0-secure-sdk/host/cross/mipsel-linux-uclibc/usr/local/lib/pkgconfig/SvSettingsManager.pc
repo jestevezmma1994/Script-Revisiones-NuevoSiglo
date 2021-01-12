@@ -1,0 +1,6 @@
+Name: SvSettingsManager
+Version: 1.0.0
+Requires: CAGE CUIT QBAppKit QBResourceManager QBStringUtils SvFoundation 
+Description: Settings Manager
+Libs: -lSvSettingsManager -lexpat 
+CFlags: 

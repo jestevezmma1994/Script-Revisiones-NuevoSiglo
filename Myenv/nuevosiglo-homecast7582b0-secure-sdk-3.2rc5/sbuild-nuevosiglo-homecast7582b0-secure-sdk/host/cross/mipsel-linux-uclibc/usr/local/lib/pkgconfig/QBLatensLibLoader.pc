@@ -1,0 +1,6 @@
+Name: QBLatensLibLoader
+Version: 1.0.0
+Requires: SvCore 
+Description: Latens libraries loader - stub
+Libs: -lQBLatensLibLoader 
+CFlags: 

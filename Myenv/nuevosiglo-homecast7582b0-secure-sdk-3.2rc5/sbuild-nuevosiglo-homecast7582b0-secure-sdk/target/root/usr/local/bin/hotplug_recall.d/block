@@ -1,0 +1,42 @@
+#!/bin/sh
+# Scan all partitions (using /proc/partitions) and touch /sys/block/<devname>/uevent.
+# This will generate hotplug events for those partitions.
+# Usage scenario:
+#  1. Create QBIPC client listening for notifications from hotplug_app_messenger.
+#  2. call hotplug_recall to get all "add" notifications that we missed.
+
+log()
+{
+  #logger "hotplug_recall > $@"
+  #[ 1 -eq 1 ] && echo -e "recall/block > $@" >> /tmp/mymesg
+  return
+}
+
+
+while read  major minor blocks name; do
+
+  [ "$major" == "major" ] && continue; # skip legend
+  [ "$major" == "" ] && continue; # skip empty lines
+
+  log "name = [$name]";
+
+  [ "${name##loop}"     != "$name" ] && continue;
+  [ "${name##mtdblock}" != "$name" ] && continue;
+
+  # sda1 -> sda/sda1
+  devname=$name
+  if [ ${#name} -eq 4 ]; then
+    #log "${name:0:1}"/"$name";
+    devname="${name%?}"
+    name="$devname/$name";
+  fi
+
+  log "       [$name] [$devname]";
+
+  [ ! -d "/sys/block/$devname/device" ] && continue; # needed?
+
+  # Action!
+  log "/sys/block/$name/uevent"
+  echo "add" > /sys/block/$name/uevent
+
+done < "/proc/partitions";

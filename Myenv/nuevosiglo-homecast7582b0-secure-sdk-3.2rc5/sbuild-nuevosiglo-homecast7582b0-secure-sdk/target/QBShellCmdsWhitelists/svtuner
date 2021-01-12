@@ -1,0 +1,16 @@
+# svtuner: QBTunerHAL
+# QBTunerHAL: QBDemuxHAL-nexus QBPlatformHAL
+# QBDemuxHAL-nexus: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$

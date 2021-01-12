@@ -1,0 +1,28 @@
+digraph Channels {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+    QBDVBScanner [label=<\N<br/>Searches for DVB channels>]
+    QBChannelScanningLogic  [label=<\N<br/>Updates DVB channels database based on scan results>]
+    Innov8onEPGChannelListPlugin [label=<\N<br/>Periodically calls stb.GetProducts to obtain list of channels<br/>Notifies about new/modified/removed channels>]
+    SvEPGChannelListListener [label=<\N<br/>Interface for notifying about channel changes>]
+    channelStorage [label=<\N<br/>Usually CubiTV wants only DVB channels stored>]
+    sdtMonitor [label=<\N<br/>Works exclusively on DVB channels>]
+    DVBEPGPlugin [label=<\N<br/>On startup gets stored channels via 'Restore' afterwards merges channels changes via 'Update'>]
+    Innov8onEPGChannelListPlugin -> SvEPGChannelListListener
+    Innov8onEPGChannelListPlugin -> SvEPGManager [label=<Notifies about channel changes>] 
+    SvEPGManager -> SvEPGChannelList [label=<SvEPGChannelList processes notifications in his own fiber>]
+    DVBEPGPlugin -> channelStorage [label=<Notifies about channel changes>]
+    DVBEPGPlugin -> sdtMonitor [label=<Notifies about channel changes>]
+    DVBEPGPlugin -> SvEPGChannelListListener
+    DVBEPGPlugin -> SvEPGManager [label=<Notifies about channel changes>]
+    channelStorage -> InitLogic [label=<Loads channels from internal storage>]
+    InitLogic -> DVBEPGPlugin [label=<Uses 'Restore' functionality to load stored channels>]
+    SvEPGChannelListListeners [label=<Listeners are registered by SvEPGManagerAddChannelListListener or directly in SvEPGChannelList>]
+    SvEPGChannelList -> SvEPGChannelListListeners [label=<Notifies listeners about channel changes>]
+    SvEPGChannelListListeners -> QBPVRRepeatedRecordings
+    SvEPGChannelListListeners -> epgWatcher
+    SvEPGChannelListListeners -> epgMonitor
+    Innov8onEPGChannelListPlugin -> channelMetaStorage [label=<Used via 'fill' callbacks, to provide client side metadata>]
+    manual -> QBDVBScanner -> QBChannelScanningLogic -> DVBEPGPlugin
+}

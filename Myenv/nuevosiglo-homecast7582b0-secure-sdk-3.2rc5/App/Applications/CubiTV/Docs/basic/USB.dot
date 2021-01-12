@@ -1,0 +1,21 @@
+digraph USB {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    USB [label="USB" root=true]
+
+    QBFileBrowserMounter
+    QBHotplugNotifier
+    QBPVODStorage
+    QBPVRMounter
+    diskSchedulerChanger
+    hddStandbyManager
+    hotplugMounts
+
+    USB -> QBFileBrowserMounter
+    USB -> QBHotplugNotifier
+    USB -> QBPVODStorage
+    USB -> QBPVRMounter
+    USB -> diskSchedulerChanger
+    USB -> hddStandbyManager
+    USB -> hotplugMounts
+}

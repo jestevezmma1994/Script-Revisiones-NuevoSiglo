@@ -1,0 +1,228 @@
+#!/bin/sh
+
+. /etc/strings.txt
+
+mmc_part_by_name() {
+	name=$1
+	MMC_DEV=""
+	MMC_PART=""
+	ALL_DEVS=`ls /dev/mmcblk?p*`
+	for CUR_DEV in $ALL_DEVS; do
+		CUR_PART=`echo $CUR_DEV | sed 's#.*/##'`
+		if [ -d /sys/class/block/$CUR_PART ]; then
+			LABEL=`cat /sys/class/block/$CUR_PART/volname`
+			if [ "$LABEL" = "$name" ]; then
+				MMC_DEV=$CUR_DEV
+				MMC_PART=$CUR_PART
+			fi
+		fi
+	done
+	[ -z "$MMC_DEV" ] && { echo "ERROR: partition $name not found!"; return 1; }
+	return 0
+}
+
+#Error codes:
+# 103 - mmc partition not found
+# 104 - boot image write error
+
+
+#Platform string to identify your file, it should be uniq in each other:
+_UP_PLATFORM_NAME="bcm97xxx-mmc"
+
+#add number of your platform progress steps here (count all step_progress in the file)
+_UP_PLATFORM_STEP_CNT=0
+
+#Mandatory procedures operating on data, you should escape to "exit_upgrade" with error code if something goes criticaly wrong
+_up_get_hash () { #gets hash of current version, used to decide is upgrade is needed
+	setnv | grep "^SV_VERSION=" | cut -d'=' -f2
+}
+_up_get_status () { #gets current status of upgrade, you should print OK for confirmed firmware, RESTORED for restored firmware, or some other string for other states
+	setnv | grep "^SV_STATUS=" | cut -d'=' -f2
+}
+_up_set_status () {
+	setnv SV_STATUS "$1"
+}
+
+_up_check_version() { #if any additional version checking needed do it here, got a new version number in parameter
+	res="not needed in unsecure version"
+}
+
+_up_verify_firmware () { #check integrity, signatures, hashes or whatever you need, you got files names in parameter
+	res="not needed in unsecure version"
+}
+
+_up_before_main_fifo_create() { #prepare the _UP_PLATFORM_TAR_FILES/_UP_PLATFORM_TAR_PIPES variable
+	#set expected file names
+	#"ROOTFS.sqsh KERNEL.gz LOGO.bin USR.sqsh"
+	if [ -f image.sizes ]; then
+		_UP_PLATFORM_TAR_FILES=`cat image.sizes | sed -e "s/\.size.*//g"`
+	else
+		_UP_PLATFORM_TAR_FILES="_UPGRADE_FILES_"
+	fi
+	#set expected tar.gz pipe name, the tee will power them with the upgrade package stream.
+	#"rootfs kernel logo usr"
+	_UP_PLATFORM_TAR_PIPES=$(for i in  $_UP_PLATFORM_TAR_FILES; do echo $i.pipe; done)
+}
+
+#the most important function:
+_up_write_firmware () { #write firmware files on board, you got files name in parameter, after that stb should boot new firmware
+	HASH=$1
+	shift
+
+	SLOT=
+	#get current slot number from /proc/cmdline
+	for CMD in `cat /proc/cmdline`; do
+		#try to find slot=n kernel parameter
+		if [ "$(echo $CMD | cut -d'=' -f 1)" = "slot" ]; then
+			SLOT=$(echo $CMD | cut -d'=' -f 2)
+			echo "I:0980: Found slot number $SLOT in kernel commandline"
+			break
+		fi
+	done
+
+	if [ -z "$SLOT" ]; then
+		#we did not find slot in kernel commandline
+		echo "I:0980: Warning - falling back to slot selection based on NVRAM"
+		SLOT=`setnv | grep "^SV_SLOT=" | tail -n 1 | cut -d'=' -f2-`
+		if [ -z "$SLOT" ]; then
+			exit_upgrade 103 "Unable to get current slot number"
+		fi
+	fi
+
+	#upgrade to inverted slot number (0->1 or 1->0)
+	SLOT=$(( ! $SLOT ))
+	echo "I:0981: selected slot #$SLOT"
+
+	#set partition paths
+	mmc_part_by_name "slot$SLOT" && BPART=$MMC_PART
+	mmc_part_by_name "logo$SLOT" && LPART=$MMC_PART
+	[ -z "$LPART" ] && mmc_part_by_name "logo" && LPART=$MMC_PART
+	[ -z "$BPART" ] && exit_upgrade 103 "MMC partition not found";
+
+	echo $BPART > BPART
+	echo $LPART > LPART
+
+	#help function
+	_up_write_and_feedback () {
+		PIPE="$1.pipe"
+		FILE="$1"
+		WRITER="$2"
+		DEVICE="$3"
+
+		mkfifo $FILE.wc.pipe
+		{ #feedback
+			if [ ! -z "$DEVICE" -a -e "$DEVICE" ]; then #only if device defined
+				mkfifo $FILE
+				cat $FILE.wc.pipe | wc -c > $FILE.size && head -c $(cat $FILE.size) $DEVICE > $FILE;
+			else
+				cat $FILE.wc.pipe > /dev/null;
+			fi
+		} & #feedback
+
+		cat $PIPE | tar xO $FILE | tee $FILE.wc.pipe | \
+			$WRITER >$PIPE.log 2>&1; \
+			res=$?;
+
+		echo $res > $PIPE.?;
+	}
+
+	if echo "_UPGRADE_FILES_" | grep -s "\bBOOTIMAGE.vmx\b"; then
+		IMAGE_NAME="BOOTIMAGE.vmx"
+	elif echo "_UPGRADE_FILES_" | grep -s "\bBOOTIMAGE.qb\b"; then
+		IMAGE_NAME="BOOTIMAGE.qb"
+	fi
+
+	#process bootimage in background job, keep background job ID in file back_pids
+	_up_write_and_feedback $IMAGE_NAME "dd of=/dev/$BPART" /dev/$BPART &
+	#process logo only if it different than current one
+	# the package may not contain logo
+	echo "I:0990: processing logo"
+	skip_logo () {
+		echo 0 > LOGO.bin.pipe.?; echo "I:0999: $1, skipped"; exit 0;
+	};
+
+	{
+		cat LOGO.bin.pipe | tar x LOGO.bin || skip_logo "logo not found in pack";
+		[ -z "$LPART" -o ! -e /dev/$LPART ] && skip_logo "logo partition not found";
+		[ ! -e LOGO.bin ] && skip_logo "logo partition not found";
+		head -c `cat LOGO.bin | wc -c` /dev/$LPART | cmp -s LOGO.bin - && skip_logo "logo not changed"
+		dd if=LOGO.bin of=/dev/$LPART >/dev/null 2>&1; echo $? > LOGO.bin.pipe.?;
+	} & echo $! >> back_pids
+
+	#keep slot it and HASH for firmware confirmation
+	echo $SLOT > SLOT;
+	echo $HASH > HASH;
+}
+
+_up_verify_firmware () {
+	res="empty" #no additional firmware verification is requared
+}
+
+_up_confirm_firmware () {
+	SLOT=`cat SLOT`
+	HASH=`cat HASH`
+	[ -z "$SLOT" ] && exit_upgrade 104 "slot number file not found"
+	[ -z "$HASH" ] && exit_upgrade 104 "hash file not found"
+	setnv SV_SLOT "$SLOT" SV_STATUS "NEW" SV_VERSION "$HASH"
+}
+
+#Optional variable which you may need in your procedures, will be initialized with initial environment
+#if you need to overwrite some already initialized variables this place is good for that purposes
+#SOME_VARIABLE="SOME VALUE"
+
+#Optional procedures calling before and after each phase of upgrade, shouldn't be implemented, but do not remove them from here
+_up_before_wait_for_network () {
+        res="empty"
+}
+_up_after_wait_for_network () {
+        res="empty"
+}
+
+_up_before_wait_for_upgrade_server () {
+        res="empty"
+}
+_up_after_wait_for_upgrade_server () {
+        res="empty"
+}
+
+_up_before_version_check () {
+	res="empty"
+}
+_up_after_version_check () {
+	res="empty"
+}
+
+_up_before_initiate_upgrade () {
+	res="empty"
+}
+_up_after_initiate_upgrade () {
+	res="empty"
+}
+
+_up_before_getting_firmware () {
+	res="empty"
+}
+_up_after_getting_firmware () {
+	res="empty"
+}
+
+_up_before_firmware_verification () {
+	res="empty"
+}
+_up_after_firmware_verification () {
+	res="empty"
+}
+
+_up_before_writting_firmware () {
+	res="empty"
+}
+_up_after_writting_firmware () {
+	res="empty"
+}
+
+_up_before_complete () {
+	res="empty"
+}
+_up_after_complete () {
+	res="empty"
+}

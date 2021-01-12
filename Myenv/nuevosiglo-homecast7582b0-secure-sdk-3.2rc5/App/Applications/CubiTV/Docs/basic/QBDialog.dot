@@ -1,0 +1,7 @@
+digraph QBDialog {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBDialog [label="QBDialog" URL="\N.html" root=true]
+
+    QBDialog -> LocalPopup
+}

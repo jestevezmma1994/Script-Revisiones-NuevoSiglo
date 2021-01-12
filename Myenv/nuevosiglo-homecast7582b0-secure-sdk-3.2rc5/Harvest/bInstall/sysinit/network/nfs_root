@@ -1,0 +1,25 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+
+if [ "$1" = "stop" ]; then
+    exit 0
+fi
+
+if [ "$NFSROOT" != "" ]; then
+    OPT=""
+    if [ "$NFSROOT_OPTIONS" != "" ]; then
+	OPT="-o $NFSROOT_OPTIONS";
+    fi
+#    if [ -e /etc/vod/nfsroot ]; then exit 1; fi;
+    echo "$NFSROOT $OPT" > /etc/vod/nfsroot
+    /etc/init.d/config save
+    if mount $OPT $NFSROOT /mnt; then
+	umount /shared
+	umount /opt
+	mount -o move /home /mnt/home
+	mount -o move /storage /mnt/storage
+	mount -o move /dev/pts /mnt/dev/pts
+	mount -o move /dev/shm /mnt/dev/shm
+    fi
+fi

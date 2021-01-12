@@ -1,0 +1,6 @@
+Name: QBPlatformHAL-common
+Version: 1.0.0
+Requires: CAGE QBConfig SvCore SvFoundation dataformat fibers 
+Description: Platform independent part of Cubiware Platform HAL
+Libs: -lQBPlatformHAL-common 
+CFlags: 

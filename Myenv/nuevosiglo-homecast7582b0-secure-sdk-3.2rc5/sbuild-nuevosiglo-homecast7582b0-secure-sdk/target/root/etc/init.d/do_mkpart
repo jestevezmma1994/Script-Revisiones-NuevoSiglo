@@ -1,0 +1,214 @@
+#!/bin/sh
+
+log()
+{
+  echo "mkpart $@" 1>&2
+  #logger "mkpart > $@"
+}
+
+
+. /etc/profile
+
+LOCK_FILE=/var/lock/mkparts
+USE_USB=no
+
+# wait for the device (and/or autodetect it)
+timeout=10;
+while true; do
+	[ $timeout -gt 0 ] || exit 1;
+	let "timeout--"
+
+	F=`grep "\b.d.\b$" /proc/partitions | sed "s/.*\(\b.d.\b\)$/\1/g"`
+	if [ ! -z "$F" ]; then
+		for disk in ${F}
+		do
+			USB=`readlink -f /sys/block/$disk/device | grep usb`
+			if [ "$USE_USB" = "no" ]; then
+				if [ -z "$USB" ]; then
+					HDX=$disk
+					break
+				else
+					#if USB device is not authorized for storage then continue searching
+					log "USB disk can't be used for main storage"
+					continue
+				fi
+			else
+				if [ ! -z "$USB" ]; then
+					HDX=$disk
+					break
+				fi
+			fi
+		done
+       	fi
+
+	if [ ! -z "$HDX" ]; then
+		DEV=/dev/$HDX
+		dd if=$DEV of=/dev/null count=1 bs=1 2>/dev/null && break
+	fi
+
+	log still waiting for disk
+	sleep 1
+done
+
+ln -sf $DEV\2 /tmp/qb_internal_storage
+
+echo using_dma:1  > /proc/ide/${HDX}/settings
+
+# function for partitions size detection
+dev2size() {
+	grep "$1$" /proc/partitions |
+	while read major minor blocks dev; do
+		[ "$dev" = "$1" ] && echo $blocks && break;
+	done
+}
+
+# function for partitions size detection
+dev2majorminor() {
+    while read major minor blocks dev; do
+        [ "$dev" = "$1" ] && echo $major $minor && break;
+    done < /proc/partitions
+}
+
+DEV_SIZE=`dev2size $HDX`;
+
+# load mkpart.conf
+if [ -e /etc/mkpart.conf ]; then
+. /etc/mkpart.conf
+fi
+
+# function checks is the partitions size difference fits in admissible error
+isok() {
+	dev=$1;
+	type=$2
+	[ "$type" = "extended" ] && return 0;
+	wanted_size=$3;
+	[ -z "$dev" -o -z "$wanted_size" ] && return 0; #default for no value
+	admissible=$4; #admissible error in %
+	[ -z "$admissible" ] && admissible=5; #default is 5%
+	real_size=`dev2size $dev`;
+	[ "$real_size" = "1" ] && return 0; #special case - this is probably extended partition
+	[ -z "$real_size" ] && real_size=0; #if partition not found
+	let error="(wanted_size-real_size)*100/(wanted_size*admissible)"
+	[ $error -eq 0 ] && return 0; #error will be 0 is it fits in admissible error
+	return 1;
+}
+
+FORCE_FORMAT="False"
+if [ -f /etc/vod/forceInternalDiskFormat ]; then
+    FORCE_FORMAT="True"
+    rm -f /etc/vod/forceInternalDiskFormat
+fi
+
+FORMAT_DONE=
+
+if \
+       [ "$FORCE_FORMAT" = "True" ] \
+	|| ! isok $HDX\1 $P1_PTYPE $P1_SIZE $P1_ERROR \
+	|| ! isok $HDX\2 $P2_PTYPE $P2_SIZE $P2_ERROR \
+	|| ! isok $HDX\3 $P3_PTYPE $P3_SIZE $P3_ERROR \
+	|| ! isok $HDX\4 $P4_PTYPE $P4_SIZE $P4_ERROR \
+	|| ! isok $HDX\5 $P5_PTYPE $P5_SIZE $P5_ERROR \
+	|| ! isok $HDX\6 $P6_PTYPE $P6_SIZE $P6_ERROR \
+	|| ! isok $HDX\7 $P7_PTYPE $P7_SIZE $P7_ERROR \
+	|| ! isok $HDX\8 $P8_PTYPE $P8_SIZE $P8_ERROR \
+	; then # format partitions
+    	echo "!!!!!! Formatting disk $DEV !!!!!!"
+    	FORMAT_DONE=yes
+	# unmount
+	for i in `seq 1 8`; do
+		umount -f $DEV$i;
+	done
+	# erase old partition table
+	dd if=/dev/zero of=$DEV bs=512 count=1
+	# make new partition table
+	parted -s $DEV mklabel msdos
+	if  ! parted -s $DEV print > /dev/null; then
+		echo "Could not create msdos-type label on $DEV!"
+		exit 1
+	fi
+	# flush direct access
+	hdparm -f $DEV >/dev/null 2>&1
+	# make new partition table
+	PARTNO=0;
+	FROM=0
+	mkpart() {
+		[ $# -lt 2 ] && return 1;
+		ptype=$1;
+		size=$2;
+		fstype=$3; #default no type
+		from=$FROM;
+		to=$(( from + size ));
+		[ "$ptype" = "logical" ] && let "from++,to--";
+		if ! parted -s $DEV mkpart $ptype $from\kiB $to\kiB; then
+			echo "Could not create partition $*!"
+			return 2;
+		fi
+		let "PARTNO++"
+		if [ "$ptype" != "extended" ]; then
+			let "FROM=to";
+		else
+			let "FROM++";
+		fi
+		if [ "$fstype" = "ext2" ]; then
+    			mke2fs $DEV$PARTNO
+		elif [ "$fstype" = "ext3" ]; then
+    			mke2fs $DEV$PARTNO
+    			tune2fs -j $DEV$PARTNO
+		elif [ "$fstype" = "swap" ]; then
+    			mkswap $DEV$PARTNO
+		fi
+		return 0;
+	}
+	[ -z "$P1_SIZE" ] || mkpart $P1_PTYPE $P1_SIZE $P1_FSTYPE
+	[ -z "$P2_SIZE" ] || mkpart $P2_PTYPE $P2_SIZE $P2_FSTYPE
+	[ -z "$P3_SIZE" ] || mkpart $P3_PTYPE $P3_SIZE $P3_FSTYPE
+	[ -z "$P4_SIZE" ] || mkpart $P4_PTYPE $P4_SIZE $P4_FSTYPE
+	[ -z "$P5_SIZE" ] || mkpart $P5_PTYPE $P5_SIZE $P5_FSTYPE
+	[ -z "$P6_SIZE" ] || mkpart $P6_PTYPE $P6_SIZE $P6_FSTYPE
+	[ -z "$P7_SIZE" ] || mkpart $P7_PTYPE $P7_SIZE $P7_FSTYPE
+	[ -z "$P8_SIZE" ] || mkpart $P8_PTYPE $P8_SIZE $P8_FSTYPE
+	# flush changes
+	hdparm -f $DEV >/dev/null 2>&1
+fi # end of disk format
+
+#mount partitions
+mntpart() {
+	dev=$1;
+	mpoint=$2
+	fstype=$3
+	if [ "$fstype" = "swap" -o "$mpoint" = "swap" ]; then
+		swapon $dev
+	else
+		opts=$4
+		cmd="$dev $mpoint"
+		[ ! -z "$opts" ] && cmd="-o $opts $cmd"
+		if [ ! -z "$fstype" ] && [ "$fstype" = "ext3" ]; then
+			grep ext4 /proc/filesystems 1>/dev/null 2>/dev/null
+			if [ $? -eq 0 ]; then
+				#ext4 handles ext3 too
+				fstype="ext4"
+			fi
+		fi
+		[ ! -z "$fstype" ] && cmd="-t $fstype $cmd"
+		mount $cmd
+	fi
+}
+
+[ -z "$P1_MPT" ] || mntpart $DEV\1 $P1_MPT $P1_FSTYPE $P1_OPTS
+[ -z "$P2_MPT" ] || mntpart $DEV\2 $P2_MPT $P2_FSTYPE $P2_OPTS
+[ -z "$P3_MPT" ] || mntpart $DEV\3 $P3_MPT $P3_FSTYPE $P3_OPTS
+[ -z "$P4_MPT" ] || mntpart $DEV\4 $P4_MPT $P4_FSTYPE $P4_OPTS
+[ -z "$P5_MPT" ] || mntpart $DEV\5 $P5_MPT $P5_FSTYPE $P5_OPTS
+[ -z "$P6_MPT" ] || mntpart $DEV\6 $P6_MPT $P6_FSTYPE $P6_OPTS
+[ -z "$P7_MPT" ] || mntpart $DEV\7 $P7_MPT $P7_FSTYPE $P7_OPTS
+[ -z "$P8_MPT" ] || mntpart $DEV\8 $P8_MPT $P8_FSTYPE $P8_OPTS
+
+
+# and format pvr storage accordingly, if needed
+if [ "$FORMAT_DONE" = "yes" ]; then
+    qb_format_pvr_internal  force
+else
+    qb_format_pvr_internal
+fi
+
+exit 0

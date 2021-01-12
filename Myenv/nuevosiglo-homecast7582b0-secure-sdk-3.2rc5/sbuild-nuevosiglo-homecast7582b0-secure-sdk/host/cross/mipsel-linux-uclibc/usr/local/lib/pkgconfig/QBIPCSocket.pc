@@ -1,0 +1,6 @@
+Name: QBIPCSocket
+Version: 1.0.0
+Requires: SvCore 
+Description: inter-process communication socket (using unix-sockets)
+Libs: -lQBIPCSocket 
+CFlags: 

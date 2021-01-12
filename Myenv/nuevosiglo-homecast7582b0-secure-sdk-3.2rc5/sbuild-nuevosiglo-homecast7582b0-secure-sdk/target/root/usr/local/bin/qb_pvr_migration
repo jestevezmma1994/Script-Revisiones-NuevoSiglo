@@ -1,0 +1,169 @@
+#!/bin/sh
+
+log()
+{
+  echo "pvr_migration: $@" 1>&2
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR: (res=$RES)" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+dev2majorminor()
+{
+    while read major minor blocks dev; do
+        [ "$dev" = "$1" ] && echo $major $minor && break;
+    done < /proc/partitions
+}
+
+get_devsize()
+{
+    MAJOR=$1
+    MINOR=$2
+    while read major minor blocks dev; do
+        [ "$major" != "$MAJOR" ] && continue;
+        [ "$minor" != "$MINOR" ] && continue;
+        DEV_SIZE=$blocks
+        break;
+    done < /proc/partitions
+    echo "$DEV_SIZE"
+}
+
+create_config()
+{
+    TIMESHIFT_PART_PERC=$1
+    ALIGN=$2
+    OUT=$3
+
+    PVR_DATA_DEV=
+    DEV_LINE=`cat /etc/storage.conf | grep SVS_ADDRESS | grep "qb_internal_storage" | head -n 1`
+    [ $? -ne 0 ] && return;
+    PVR_DATA_DEV=${DEV_LINE#*/}
+    PVR_DATA_DEV="/${PVR_DATA_DEV%% *}"
+
+    PVR_DATA_DEV_LINK=`readlink -f "$PVR_DATA_DEV"`
+    if [ -z "$PVR_DATA_DEV_LINK" ]; then
+        echo "$PVR_DATA_DEV is not linked to valid device" >&2
+        return
+    fi
+
+    PVR_DATA_DEV_LINK=${PVR_DATA_DEV_LINK#*/dev/}
+    PVR_DATA_DEV_LINK=${PVR_DATA_DEV_LINK%% *}
+
+    MAJOR_MINOR=`dev2majorminor $PVR_DATA_DEV_LINK`;
+    DEV_SIZE=`get_devsize $MAJOR_MINOR`;
+    PART_SIZE="$(($DEV_SIZE / $ALIGN))"
+    FILES_OFFSET=$(($PART_SIZE * $TIMESHIFT_PART_PERC / 100))
+
+    echo "version=1" > $OUT
+    echo "align=$ALIGN" >> $OUT
+    echo "timeshift=0" >> $OUT
+    echo "files=$FILES_OFFSET" >> $OUT
+}
+
+if [ $# -ne 1 ]; then
+  log usage: "${0##*/} <meta_root>"
+  exit 0;
+fi
+
+META_FILE_PREFIX="meta"
+META_ROOT_DIR=$1
+
+META_DIR="$META_ROOT_DIR/rec"
+META_DIR_OLD="$META_ROOT_DIR/rec_del"
+NEW_META_DIR="$META_ROOT_DIR/tmpRec"
+SV_TABLE_CONF=.svtable
+
+if [ ! -e "$META_ROOT_DIR/$SV_TABLE_CONF" ]; then
+    rm -rf $META_DIR_OLD
+    log "Nothing to do."
+    exit 0
+fi
+
+rm -rf $NEW_META_DIR
+mkdir -p $NEW_META_DIR
+
+if [ -d "$META_DIR_OLD"  ]; then
+    rm -rf $META_DIR
+    mv $META_DIR_OLD $META_DIR
+fi
+
+TIMESHIFT_PERC=3
+ALIGN=$((248*8))
+
+# legacy PVR storage versions so far (must be in sync with StorageFormatVersion in tools/QBRecordFSMigration/main.c)
+#  0 - used by Welho
+#  1 - used by Toya 4.0 and earlier
+PVR_STORAGE_VERSION=0
+META_FILE=`ls $META_ROOT_DIR/*.meta 2>/dev/null | head -n 1`
+if [ -n "$META_FILE" ]; then
+    PVR_STORAGE_VERSION=1
+    TIMESHIFT_PERC=10
+    META_DIR=$META_ROOT_DIR
+fi
+
+# create partition config
+CONFIG_FILE="$META_ROOT_DIR/.qb_pvr_partition_config"
+TMP_CONFIG_FILE="$CONFIG_FILE"_tmp
+if [ ! -e "$CONFIG_FILE" ]; then
+    create_config "$TIMESHIFT_PERC" "$ALIGN" "$TMP_CONFIG_FILE";
+    if [ $? -eq 0 ]; then
+        mv "$TMP_CONFIG_FILE" "$CONFIG_FILE";
+    fi
+    rm -f "$TMP_CONFIG_FILE"
+fi
+
+# migrate meta files
+call QBRecordFSMigration $PVR_STORAGE_VERSION $META_ROOT_DIR $META_DIR $NEW_META_DIR
+
+# finalize & cleanup
+chown -R 1000:1000 $NEW_META_DIR
+chmod -R ug+rw $NEW_META_DIR
+rm -f $META_ROOT_DIR/$SV_TABLE_CONF
+
+if [ $RES -eq 0 ]; then
+    if [ "$PVR_STORAGE_VERSION" -eq 1 ]; then
+        # toya
+        rm -rf $META_ROOT_DIR/rec
+        rm $META_ROOT_DIR/*.meta
+        mv $NEW_META_DIR $META_ROOT_DIR/rec
+    else
+        # welho
+        mv $META_DIR $META_DIR_OLD
+        mv $NEW_META_DIR $META_DIR
+        rm -rf $META_DIR_OLD
+    fi
+    log success
+else
+    log "Migration failed"
+    rm -rf $NEW_META_DIR
+    rm $META_ROOT_DIR/*.meta
+    exit 1
+fi

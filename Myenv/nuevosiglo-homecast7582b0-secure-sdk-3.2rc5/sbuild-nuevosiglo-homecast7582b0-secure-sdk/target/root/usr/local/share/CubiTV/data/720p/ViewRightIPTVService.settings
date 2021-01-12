@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="Dialog.settings"/>
+
+    <widget name="QBViewRightIPTVFingerprint" import="Dialog-template">
+        <param tag="quadrantVerSize"><int>200</int></param>
+        <param tag="quadrantHorSize"><int>200</int></param>
+        <param tag="leftPos"><int>213</int></param>
+        <param tag="centerHorizontalPos"><int>640</int></param>
+        <param tag="rightPos"><int>1100</int></param>
+        <param tag="topPos"><int>120</int></param>
+        <param tag="centerVerticalPos"><int>360</int></param>
+        <param tag="bottomPos"><int>520</int></param>
+        <param tag="focusable"><bool>false</bool></param>
+        <param tag="bgAlpha"><int>0</int></param>
+        <widget name="Logo">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>200</int></param>
+            <param tag="height"><int>200</int></param>
+            <param tag="bg">
+                <bitmap><path>logo_long.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Label">
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>80</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="QBViewRightIPTVUserMessage" import="Dialog-template">
+        <widget name="Label">
+            <param tag="width"><int>608</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="textColor"><color>bfbfbfff</color></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="QBViewRightIPTVMMI" import="Dialog-template">
+        <param tag="keyNotAvailableStr"><string>No access (101)</string></param>
+        <param tag="blackoutStr"><string>Network blackout</string></param>
+        <param tag="otherStr"><string>No access (103)</string></param>
+        <param tag="unknownStr"><string>Fatal error</string></param>
+        <param tag="width"><int>554</int></param>
+        <param tag="height"><int>124</int></param>
+        <param tag="xOffset"><int>363</int></param>
+        <param tag="yOffset"><int>-5</int></param>
+        <param tag="focusable"><bool>false</bool></param>
+        <param tag="bg"><bitmap><path>bg_popup_warning.png</path></bitmap></param>
+        <param tag="bgAlpha"><int>0</int></param>
+        <widget name="Panel">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="width"><int>554</int></param>
+            <param tag="height"><int>4</int></param>
+            <param tag="horizPadding"><int>0</int></param>
+            <param tag="vertPadding"><int>0</int></param>
+            <param tag="vertSpacing"><int>0</int></param>
+        </widget>
+
+        <widget name="Label">
+            <param tag="width"><int>554</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="textColor"><color>bfbfbfff</color></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+    </widget>
+</settings>

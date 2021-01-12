@@ -1,0 +1,148 @@
+#!/bin/bash
+# This file was generated automatically by SvInstall
+
+[ "$#" = "3" -o "$#" = "5" -o "$#" = "4" ] || { echo "usage: $0 [ <src_dir>  <dst_file> <max_size> <zeropadding|randompadding|nopadding|qbimage> [excl_file] | -u <src_file> <dst_dir> ]";exit 1;}
+[ "$(id -u)" = "0" ] || { echo "you must be root!"; exit 1;}
+
+[ "$1" != "-u" ] || { shift; UNDO=yes;} #unpack filesystem from src_file to dst_dir
+
+SRC=$1
+DST=$(cd $(dirname $2) && pwd)"/"$(basename $2)
+MAXSIZE=$(( $3 ))
+#Used for UBIFS only
+UBIFS_MAX_LEBS=$(($MAXSIZE / $UBIFS_LEB_SIZE - 10))
+case $4 in
+	zeropadding) PADDING=zero;;
+	randompadding) PADDING=urandom;;
+	blockpadding) PADDING=block;;
+	qbimage) PADDING=qbimage;;
+	*) PADDING="";;
+esac
+
+if [ ! -z "$5" -a -e "$5" ]; then
+sed -i -e "s#^\./##" -e "s#[/]\+#/#g" $5
+EXCL="S_MK_FILE_SYSTEM_CMD_EXCL_OPT $5"
+fi
+
+if [ "$UNDO" = "yes" ]; then
+S_UNPACK_FILE_SYSTEM_CMD
+#always exit after unpacking
+exit $?
+else
+
+# Legacy projects depend on "silo make project" behaviour (now offered by "pysilo -l").
+# When using pure "pysilo" call watchdog and fp nodes are not created properly - they are plain files.
+# to solve this we call mknod here.
+COLOR='\033[1;33m'
+NC='\033[0m'
+for node in "dev/fp" "dev/watchdog"; do
+    if [ ! -c $SRC/$node -o ! -e $SRC/$node ]; then
+        echo -e "${COLOR}##################################################\n#      WARNING, $node node is not present! \n# Have you run the build with pysilo -l option?\n${NC}"
+        echo -e "${COLOR}#      Creating $node device node...\n##################################################\n${NC}"
+        rm -f $SRC/$node
+        if [ $node = "dev/fp" ]; then
+            mknod -m=660 $SRC/$node c 127 0
+        else
+            mknod -m=666 $SRC/$node c 10 130
+        fi
+    else
+        echo -e "$node device node is proper\n"
+    fi
+done
+
+chown -R 0:1000 $SRC
+
+#check ttyS0 device node to verify mknod/fakeroot procedures
+[ -c $SRC/dev/ttyS0 -o ! -e $SRC/dev/ttyS0 ] || { echo -e "\n\nfile system /dev/ttyS0 character device is not found, the file system is not bootable!\n\n"; exit 1; }
+S_MK_FILE_SYSTEM_CMD $EXCL || exit $?
+fi
+
+#check file size
+if [ "S_SKIP_SIZE_CHECK" != "yes" ]; then
+	[ `wc -c $DST | sed "s/\([[:digit:]]*\).*/\1/"` -le $MAXSIZE ] || { echo "\n\nfile system $DST is too BIG, max size is $MAXSIZE!\n\n"; exit 1; }
+fi
+
+if [ "S_SECURE_BOOT" = "yes" -a -z "$PADDING" -a -d $SRC/proc ]; then
+	echo "ERROR: Root file system in secure boot should use padding"
+	exit 1
+fi
+
+if [ "S_SECURE_BOOT" = "yes" ]; then
+	SEC_DATA_SIZE=0
+	if [ "$S_KERNEL_USE_KEYCHAIN" == "yes" ]; then
+		SEC_DATA_SIZE=$((SEC_DATA_SIZE + 32))
+	fi
+	if [ "$S_INSTALL_KEYSERVER_SYM_ROOTFS_MODE" == "cbciv" ]; then
+		SEC_DATA_SIZE=$((SEC_DATA_SIZE + 32))
+	fi
+	if [ "$PADDING" == "qbimage" ]; then
+		SEC_DATA_SIZE=0
+	fi
+	if [ "$PADDING" == "zero" ]; then
+		dd if=/dev/$PADDING of=$DST.max bs=1024 count=$(( $MAXSIZE / 1024 ))
+	elif [ "$PADDING" == "urandom" ]; then
+		dd if=/dev/zero bs=1024 count=$(( $MAXSIZE / 1024 )) | openssl enc -aes-256-cbc -nopad -K `openssl rand 32 | xxd -p -c 32` -iv `openssl rand 16 | xxd -p -c 32` -out $DST.max
+	elif [ "$PADDING" == "block" ] || [ "$PADDING" == "qbimage" ]; then
+		FS_SIZE=`stat -c "%s" $DST`
+		echo "Original FS size: $FS_SIZE"
+		echo "Security data size: $SEC_DATA_SIZE"
+		FS_SIZE=$(( FS_SIZE + SEC_DATA_SIZE ))
+		if [ $((S_BLOCK_SIZE)) -ne 0 ]; then
+			BLOCK_SIZE=S_BLOCK_SIZE
+		else
+			BLOCK_SIZE=131072
+		fi
+		ALIGNED=$(( FS_SIZE / BLOCK_SIZE ))
+		ALIGNED=$(( ALIGNED + 1 ))
+		ALIGNED=$(( ALIGNED * BLOCK_SIZE ))
+		dd if=/dev/zero bs=1024 count=$(( $ALIGNED / 1024 )) | openssl enc -aes-256-cbc -nopad -K `openssl rand 32 | xxd -p -c 32` -iv `openssl rand 16 | xxd -p -c 16` -out $DST.max
+		MAXSIZE=$ALIGNED
+		echo "Padded FS size: $MAXSIZE"
+	fi
+	dd if=$DST of=$DST.max conv=notrunc
+	if [ "$S_KERNEL_USE_KEYCHAIN" == "yes" ]; then
+		openssl rand -out ./tmp_rootfskey 32
+		echo "Encrypting ROOT FS with one-time key"
+		if [ "$S_INSTALL_KEYSERVER_SYM_ROOTFS_MODE" == "ecb" ]; then
+			if [ "$PADDING" == "qbimage" ]; then
+				echo "Creating QBImage"
+				srm-host-run ${SRM_ROOT}/host/local/usr/bin/mkqbbinaryimage.py --mode static --encryption aes256-ecb-keychain $S_INSTALL_KEYSERVER_SYM_ROOTFS_KEY_ID $S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID $DST.max $DST.enc
+			else
+				openssl aes-256-ecb -nopad -nosalt -in $DST.max -out $DST.enc -e -K $(xxd -p -c 256 ./tmp_rootfskey) -iv 00 -p || exit $?
+				echo "Using keyserver for ROOT FS master KEY encryption"
+				srm-host-run jclient encrypt -t tmp_rootfskey with $S_INSTALL_KEYSERVER_SYM_ROOTFS_KEY_ID ecb >./sec_data.bin || exit $?
+			fi
+		elif [ "$S_INSTALL_KEYSERVER_SYM_ROOTFS_MODE" == "cbciv" ]; then
+			if [ "$PADDING" == "qbimage" ]; then
+				echo "Creating QBImage"
+				srm-host-run ${SRM_ROOT}/host/local/usr/bin/mkqbbinaryimage.py --mode static --encryption aes256-cbc-keychain $S_INSTALL_KEYSERVER_SYM_ROOTFS_KEY_ID $S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID $DST.max $DST.enc
+			else
+				openssl rand -out ./tmp_iv 16
+				openssl aes-256-cbc -nopad -nosalt -in $DST.max -out $DST.enc -e -K $(xxd -p -c 256 ./tmp_rootfskey) -iv $(xxd -p -c 128 ./tmp_iv) -p || exit $?
+				echo "Using keyserver for ROOT FS master KEY encryption"
+				srm-host-run jclient encrypt -t ./tmp_rootfskey with $S_INSTALL_KEYSERVER_SYM_ROOTFS_KEY_ID cbcivfile ./masterIv.hex >./enckey.bin || exit $?
+				xxd -r -p ./masterIv.hex >sec_data.bin
+				cat ./tmp_iv >>./sec_data.bin
+				cat enckey.bin >>./sec_data.bin
+				if [ -z "$(cat ./masterIv.hex)" ]; then
+					echo "Master IV not set, are you using latest jclient?"
+				fi
+				echo "Master IV: " `cat ./masterIv.hex`
+				echo "Temp IV: " `xxd -p -c 128 ./tmp_iv`
+				echo "Encrypted temp key: " `xxd -p -c 256 ./enckey.bin`
+				rm -f ./tmp_iv ./masterIv.hex ./enckey.bin
+			fi
+		else
+			echo "Unsupported encryption mode"
+			exit 1
+		fi
+		rm -f ./tmp_rootfskey
+		rm -f $DST.max
+		if [ $SEC_DATA_SIZE -gt 0 ]; then
+			dd if=./sec_data.bin of=$DST.enc seek=$(( MAXSIZE - SEC_DATA_SIZE )) bs=1 count=$SEC_DATA_SIZE
+			rm -f ./sec_data.bin
+		fi
+		mv $DST.enc $DST.max
+	fi
+	mv $DST.max $DST
+fi

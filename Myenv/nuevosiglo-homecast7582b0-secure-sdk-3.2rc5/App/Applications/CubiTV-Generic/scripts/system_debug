@@ -1,0 +1,48 @@
+#!/bin/sh
+SLEEP_TIMEOUT=60
+
+while true; do
+    CUBITV_PID=`pidof cubitv 2>/dev/null| cut -f 1 -d ' '`
+    cat /proc/$CUBITV_PID/status 2>/dev/null | logger
+    top -bn 1 | logger
+
+    # we can't use find function
+    DIRECTORIES_TO_CHECK_SIZE="/etc/vod/ /tmp/ /var/log/"
+    DIRECTORIES_TO_CHECK_FILES_COUNT="/etc/vod/*/ /shared/*/ /tmp/shell_cmds/ /tmp/cache/ /tmp/http/ /proc/$CUBITV_PID/fd"
+
+    # sed regular expression used to print nice looking names of directories/files - we change '/' to '_' and we remove last '_'
+    SED_EXPRESSION_BETTER_LOOK='s|/|_|g ; s|__|_|g ; s|_"|"|' 
+
+    for DIRECTORY in $(ls -d $DIRECTORIES_TO_CHECK_SIZE 2>/dev/null); do
+        if [ -d $DIRECTORY ]; then
+            DIRSIZEKB=$(du -sx $DIRECTORY 2>/dev/null | awk '{print $1}')
+            if [ "$DIRSIZEKB" != "" ]; then
+                DIRSIZE=$(($DIRSIZEKB * 1024))
+                echo "{\"name\":\"memoryTrace\",\"zone\":\"directory_size_$DIRECTORY\",\"blocksCount\":1,\"memoryUsed\":$DIRSIZE}" | sed "$SED_EXPRESSION_BETTER_LOOK" | logger
+            fi
+        fi
+    done
+
+    for DIRECTORY in $(ls -d $DIRECTORIES_TO_CHECK_FILES_COUNT 2>/dev/null); do
+        if [ -d $DIRECTORY ]; then
+            FILES_COUNT=`ls -1 $DIRECTORY 2>/dev/null | wc -l 2>/dev/null`
+            if [ "$FILES_COUNT" != "" ]; then
+                echo "{\"name\":\"debugLiveObjects\",\"type\":\"files_in_$DIRECTORY\",\"count\":$FILES_COUNT}" | sed "s|/proc/$CUBITV_PID/fd|cubitv|" | sed  "$SED_EXPRESSION_BETTER_LOOK" | logger
+            fi
+        fi
+    done
+
+    # collect information about Broadcom heaps usage
+    BRCM_CORE_FILE=/proc/brcm/core
+    if [ -f "$BRCM_CORE_FILE" ]; then
+        if [ "" != "$(cat $BRCM_CORE_FILE | grep largestavail)" ]; then
+            # columns: heap offset size mapping used peak largestavail
+            cat $BRCM_CORE_FILE | grep '0x' | awk '{printf "\{\"name\":\"memory_brcm\",\"heap\":%d,\"size\":%d,\"pct_usage\":%d\}\n",$1,$3,$5}' | logger
+        elif [ "" != "$(cat $BRCM_CORE_FILE | grep vaddr)" ]; then
+            # columns: heap offset memc size MB vaddr used peak mapping
+            cat $BRCM_CORE_FILE | grep '0x' | awk '{printf "\{\"name\":\"memory_brcm\",\"heap\":%d,\"size\":%d,\"pct_usage\":%d\}\n",$1,$4,$7}' | logger
+        fi
+    fi
+
+    sleep $SLEEP_TIMEOUT
+done

@@ -1,0 +1,27 @@
+SvMakefileTemplate = Library
+include $(SvStandardMakefiles)/Versions/2/Before.mk
+
+SvName = CubiTV-logic
+SvDescription = CubiTV logics core
+
+SvMajorVersion = 1
+SvMinorVersion = 0
+SvRevision = 0
+
+SvRequires = CubiTV TraxisWebClient QBCAS-deps
+
+CPPFLAGS += -I.
+
+SvDirectoryLayoutConvention = custom
+
+AllFiles =  $(shell find . -type f -a \( -name '*\.[csm]' -o -name '*\.cpp' -o -name '*\.sx' -o -name '*\.cc' \))
+AllHeaderFiles = $(shell find . -type f -a -name '*.h')
+SvLibrarySourceFiles := $(AllFiles)
+SvLibraryHeaderFiles := $(AllHeaderFiles)
+
+SvStrictWarnings = yes
+
+include $(SvStandardMakefiles)/Versions/2/After.mk
+
+QBTranslateSources=$(shell find -name '*.[ch]')
+include $(CROSS_ROOT)/usr/local/share/translations/Makefile.mk

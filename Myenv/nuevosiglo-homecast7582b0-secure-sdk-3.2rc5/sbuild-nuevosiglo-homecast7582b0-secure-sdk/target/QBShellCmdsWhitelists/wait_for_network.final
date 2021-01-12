@@ -1,0 +1,10 @@
+# wait_for_network.final: QBNetworkManager
+# QBNetworkManager: QBShellCmdsWhitelist
+^run_moca \(start\|stop\) &$
+^run_dhclient \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) \(start\|stop\)$
+^run_dhclient \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) watch &$
+^run_wpa_supplicant \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) \(start\|stop\) &$
+^check_wpa_supplicant \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) start &$
+^run_ppp \(start\|stop\)$
+^run_racoon \(start\|stop\) &$
+^run_strongswan \(start\|stop\) &$

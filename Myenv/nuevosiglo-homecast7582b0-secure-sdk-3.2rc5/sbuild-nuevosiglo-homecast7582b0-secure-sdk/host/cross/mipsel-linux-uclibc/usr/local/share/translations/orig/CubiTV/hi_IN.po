@@ -1,0 +1,4716 @@
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-15 16:02+0100\n"
+"PO-Revision-Date: 2017-08-09 20:26+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " / minute"
+msgstr " / मिनट"
+
+msgid " H"
+msgstr " एच"
+
+msgid " V"
+msgstr " वी"
+
+#, c-format
+msgid " ep. %d"
+msgstr " ईपी। %d"
+
+#, c-format
+msgid "%.2f %s - %.2f %s"
+msgstr "%.2f %s - %.2f %s"
+
+msgid "%A %x"
+msgstr "%A %x"
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "%d एचडी घंटे शेष"
+msgstr[1] "%d एचडी घंटे शेष"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "%d प्रयास छोड़ा गया।"
+msgstr[1] "%d प्रयास छोड़े गए"
+
+#, c-format
+msgid "%d channel"
+msgid_plural "%d channels"
+msgstr[0] "%d चैनल"
+msgstr[1] "%d चैनल"
+
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d घंटे"
+msgstr[1] "%d घंटे"
+
+#, c-format
+msgid "%d min"
+msgstr "%d मिनट"
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d से %d"
+
+#, c-format
+msgid "%dMHz"
+msgstr "%dMHz"
+
+#, c-format
+msgid "%dMHz,%s,%d,%s"
+msgstr "%dMHz,%s,%d,%s"
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i नए या अद्यतन) रेडियो चैनल"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i नये या अद्यतन) टीवी चैनल"
+
+#, c-format
+msgid "%i hour "
+msgid_plural "%i hours "
+msgstr[0] "%i घंटे "
+msgstr[1] "%i घंटे "
+
+#, c-format
+msgid "%i min"
+msgstr "%i मिनट"
+
+#, c-format
+msgid "%i minute "
+msgid_plural "%i minutes "
+msgstr[0] "%i मिनट "
+msgstr[1] "%i मिनट "
+
+#, c-format
+msgid "%i percent left"
+msgstr "%i प्रतिशत शेष"
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i रेडियो चैनल"
+msgstr[1] "%i रेडियो चैनल"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i रिकॉर्डिंग"
+msgstr[1] "%i रिकॉर्डिंग"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i रिमाइंडर"
+msgstr[1] "%i रिमाइंडर्स"
+
+#, c-format
+msgid "%i secs"
+msgstr "%i सेकंड्स"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i टीवी चैनल"
+msgstr[1] "%i टीवी चैनल"
+
+#, c-format
+msgid "%i.%02i %s"
+msgstr "%i.%02i %s"
+
+#, c-format
+msgid "%i.%iMHz"
+msgstr "%i.%iMHz"
+
+#, c-format
+msgid "%iGB"
+msgstr "%iGB"
+
+#, c-format
+msgid "%ih"
+msgstr "%ih"
+
+#, c-format
+msgid "%s (%d.%d%s)"
+msgstr "%s (%d.%d%s)"
+
+#, c-format
+msgid "%s ep. %d"
+msgstr "%sईपी %d"
+
+#, c-format
+msgid "%s not found"
+msgstr "%s नहीं मिला"
+
+#, c-format
+msgid "%s%%i.%%.%ui"
+msgstr "%s%%i.%%.%ui"
+
+#, c-format
+msgid "%s, Available to: %s"
+msgstr "%s, के लिए उपलब्ध: %s"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s: %i चैनल मिला"
+msgstr[1] "%s: %i चैनल मिले"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d दिन %dh)"
+msgstr[1] "(%d दिन %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d दिन)"
+msgstr[1] "(%d दिन)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d घंटे)"
+msgstr[1] "(%d घंटे)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr "(%dh %dमिनट)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%dमिनट)"
+
+msgid "(Description blocked by Parental Control)"
+msgstr "(अभिभावक अभिभावक नियंत्रण द्वारा अवरुद्ध)"
+
+msgid "(Description blocked)"
+msgstr "(विवरण अवरुद्ध)"
+
+msgid "(Non smartcard)"
+msgstr "(गैर स्मार्टकार्ड)"
+
+msgid "(Title Blocked)"
+msgstr "(शीर्षक अवरुद्ध)"
+
+msgid "(all)"
+msgstr "सभी (सभी)"
+
+msgid "(hard of hearing)"
+msgstr "(सुनवाई की कड़ी)"
+
+msgid "(no label)"
+msgstr "(कोई लेबल नहीं)"
+
+msgid "(none)"
+msgstr "(कोई नहीं)"
+
+msgid "(unavailable)"
+msgstr "(अनुपलब्ध)"
+
+msgid "(unsupported)"
+msgstr "(असमर्थित)"
+
+msgid "(visually impaired)"
+msgstr "(नेत्रहीन बिगड़ा हुआ)"
+
+msgid "-"
+msgstr "-"
+
+msgid "0 recordings"
+msgstr "0 रिकॉर्डिंग"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-वर्तमान"
+
+msgid "000 unknown"
+msgstr "000 अज्ञात"
+
+msgid "1 Hour"
+msgstr "1 घंटे"
+
+msgid "1 minute"
+msgstr "1 मिनट"
+
+msgid "10 minutes"
+msgstr "10 मिनट"
+
+msgid "10 seconds"
+msgstr "10 सेकेंड"
+
+msgid "100GB"
+msgstr "100 जीबी"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10 जीबी"
+
+msgid "120 minutes"
+msgstr "120 मिनट"
+
+msgid "15 minutes"
+msgstr "15 मिनट"
+
+msgid "15 seconds"
+msgstr "15 सेकंड"
+
+msgid "150 minutes"
+msgstr "150 मिनट"
+
+msgid "16:9"
+msgstr "16: 9"
+
+msgid "180 minutes"
+msgstr "180 मिनट"
+
+msgid "2 Hours"
+msgstr "2 घंटे"
+
+msgid "2 minutes"
+msgstr "2 मिनट"
+
+msgid "2 seconds"
+msgstr "2 सेकंड"
+
+msgid "20 minutes"
+msgstr "20 मिनट"
+
+msgid "200GB"
+msgstr "200 जीबी"
+
+msgid "20GB"
+msgstr "20 जीबी"
+
+msgid "2160p"
+msgstr "2160p"
+
+msgid "22 kHz Tone"
+msgstr "22 kHz टोन"
+
+msgid "30 minutes"
+msgstr "30 मिनट"
+
+msgid "30 seconds"
+msgstr "30 सेकंड"
+
+msgid "4 Hours"
+msgstr "4 घंटे"
+
+msgid "4:3"
+msgstr "4: 3"
+
+msgid "5 minutes"
+msgstr "5 मिनट"
+
+msgid "5 seconds"
+msgstr "5 सेकंड"
+
+msgid "500GB"
+msgstr "500 जीबी"
+
+msgid "50GB"
+msgstr "50 जीबी"
+
+msgid "576p/480p"
+msgstr "576 पी / 480 पी"
+
+msgid "6 Hours"
+msgstr "6 घंटे"
+
+msgid "60 minutes"
+msgstr "60 मिनट"
+
+msgid "60 seconds"
+msgstr "60 सेकंड"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "8 Hours"
+msgstr "8 घंटे"
+
+msgid "8PSK"
+msgstr "8PSK"
+
+msgid "90 minutes"
+msgstr "90 मिनट"
+
+msgid "<p>Press Exit to hide Caller ID bar. Press <img src=\"icons_green_button.png\"/> button to redirect call to voice mail</p>"
+msgstr "<P> कॉलर आईडी बार को छुपाने के लिए बाहर निकलें दबाएं। <Img src = \" icons_green_button.png \\ \"/> बटन कोकॉल को डायल करने के लिए वाइस मेल </ p>"
+
+msgid "?"
+msgstr "?"
+
+msgid "???"
+msgstr "???"
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+"एक नई डिस्क %s%s मिला है। \n"
+" उपलब्ध डिस्क ब्राउज़ करने के लिए ठीक क्लिक करें।"
+
+msgid "A problem occurred"
+msgstr "एक समस्या हुई"
+
+msgid "A/V Output Settings"
+msgstr "ए / वी आउटपुट सेटिंग्स"
+
+msgid "A: Over 18"
+msgstr "ए: 18 से अधिक"
+
+msgid "About Conax CA"
+msgstr "वेरिमेट्रिक्स सीए के बारे में"
+
+msgid "About CryptoGuard CA"
+msgstr "क्रिप्टोगार्ड सीए के बारे में"
+
+msgid "About ViewRightIPTV CA"
+msgstr "ViewRight IPTV सीए के बारे में "
+
+msgid "Accept"
+msgstr "स्वीकार करें"
+
+msgid "Access denied"
+msgstr "प्रवेश निषेध"
+
+msgid "Action ends with success."
+msgstr "कार्य सफलता के साथ समाप्त होता है"
+
+msgid "Action failed! Please try later."
+msgstr "क्रिया विफल! कृपया बाद में प्रयास करें।"
+
+msgid "Action prohibited"
+msgstr "क्रिया निषिद्ध"
+
+msgid "Active Standby"
+msgstr "सक्रिय स्टैंडबाय"
+
+#, c-format
+msgid "Active standby will start in %u second."
+msgid_plural "Active standby will start in %u seconds."
+msgstr[0] "सक्रिय स्टैंडबाय %u सेकंड में शुरू होगा।"
+msgstr[1] "सक्रिय स्टैंडबाय %u सेकेंड में शुरू होगा।"
+
+msgid "Adaptive Bit Rate"
+msgstr "अनुकूली बिट दर"
+
+msgid "Add"
+msgstr "जोड़ें"
+
+msgid "Add & Connect"
+msgstr "जोड़ें और कनेक्ट करें"
+
+msgid "Add new list"
+msgstr "नई सूची जोड़ें"
+
+msgid "Add new satellite"
+msgstr "नया उपग्रह जोड़ें"
+
+msgid "Add to Favorites"
+msgstr "पसंदीदा में जोड़ें"
+
+msgid "Add/remove TV channels"
+msgstr "टीवी चैनल जोड़ें / निकालें"
+
+msgid "Add/remove radio channels"
+msgstr "रेडियो चैनल जोड़ें / निकालें"
+
+msgid "Adult"
+msgstr "वयस्क"
+
+msgid "Adult Content Blocking"
+msgstr "वयस्क सामग्री ब्लॉकिंग"
+
+msgid "Advanced settings"
+msgstr "उन्नत सेटिंग्स"
+
+msgid "Advanced..."
+msgstr "उन्नत ..."
+
+msgid "All Channels"
+msgstr "सभी चैनल"
+
+msgid "All Episodes"
+msgstr "सभी एपिसोड"
+
+msgid "All Music"
+msgstr "सभी संगीत"
+
+msgid "All files"
+msgstr "सभी फाइलें"
+
+msgid "All tuners are in use"
+msgstr "सभी ट्यूनर्स उपयोग में हैं"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr "सभी ट्यूनर उपयोग में हैं। शायद बहुत से रिकॉर्डिंग चल रहे  हैं।"
+
+msgid "Alphabetically"
+msgstr "वर्णक्रम"
+
+msgid "Alternative font"
+msgstr "वैकल्पिक फ़ॉन्ट"
+
+msgid "Alternative font recommended"
+msgstr "वैकल्पिक फ़ॉन्ट अनुशंसित"
+
+msgid "An error has occurred.\n"
+msgstr "एक त्रुटि हुई है। \n"
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr "एक त्रुटि आई है कृपया अपने सेवा प्रदाता से संपर्क करें। \n"
+
+msgid "Analog Closed Captioning"
+msgstr "एनालॉग बंद कैप्शनिंग"
+
+msgid "Analog Outputs"
+msgstr "एनालॉग आउटपुट"
+
+msgid "Any"
+msgstr "कोई भी"
+
+msgid "Application Font"
+msgstr "अनुप्रयोग फ़ॉन्ट"
+
+msgid "Application Skin"
+msgstr "अनुप्रयोग त्वचा"
+
+msgid "Apr"
+msgstr "अप्रैल"
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "क्या आप निश्चित हैं कि आप सभी चैनल छोड़ना चाहते हैं?"
+
+msgid "Are you sure?"
+msgstr "क्या आप निश्चित हैं?"
+
+msgid "Arts/Culture"
+msgstr "कला / संस्कृति"
+
+msgid "Ask again later"
+msgstr "बाद में पूछें"
+
+msgid "Assamese"
+msgstr "असामी"
+
+msgid "At least one active transponder must exist."
+msgstr "कम से कम एक सक्रिय ट्रांसपोंडर मौजूद होना चाहिए।"
+
+msgid "Audio Codec"
+msgstr "ऑडियो कोडेक"
+
+msgid "Audio DMM"
+msgstr "ऑडियो डीएमएम"
+
+msgid "Audio Lang"
+msgstr "ऑडियो लैंग"
+
+msgid "Audio PID"
+msgstr "ऑडियो पीआईडी"
+
+msgid "Audio Settings"
+msgstr "ऑडियो सेटिंग्स"
+
+msgid "Audio Status"
+msgstr "ऑडियो स्थिति"
+
+msgid "Audio Track"
+msgstr "ऑडियो ट्रैक"
+
+msgid "Audio Type"
+msgstr "ऑडियो प्रकार"
+
+msgid "Audio-Video Sync"
+msgstr "ऑडियो-वीडियो सिंक"
+
+msgid "Aug"
+msgstr "अगस्त"
+
+msgid "Authentication failed - PIN is blocked."
+msgstr "प्रमाणीकरण विफल - पिन अवरुद्ध है।"
+
+msgid "Authentication failed - PIN is blocked. Wait around 10 minutes."
+msgstr "प्रमाणीकरण विफल - पिन अवरुद्ध है, करीब 10 मिनट प्रतीक्षा करें।"
+
+msgid "Authentication failed. Not enough in purse"
+msgstr "प्रमाणीकरण असफल। पर्स में पर्याप्त पैसे नहीं"
+
+msgid "Authentication failed. Try again."
+msgstr "प्रमाणीकरण असफल। पुन: प्रयास करें।"
+
+msgid "Authentication failed. Wrong Pin was entered."
+msgstr "प्रमाणीकरण विफल। गलत पिन दर्ज किया गया।"
+
+msgid "Authentication required"
+msgstr "प्रमाणीकरण की आवश्यकता"
+
+#, c-format
+msgid "Authentication with %s failed"
+msgstr "%s के साथ प्रमाणीकरण विफल"
+
+msgid "Auto"
+msgstr "ऑटो"
+
+msgid "Auto Download"
+msgstr "ऑटो डाउनलोड"
+
+msgid "Auto Install"
+msgstr "स्वत: स्थापित करें"
+
+msgid "Auto Standby"
+msgstr "ऑटो स्टैंडबाय"
+
+msgid "Auto(DHCP)"
+msgstr "ऑटो (डीएचसीपी)"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "पुराने रिकॉर्डिंग ऑटो डिलीट "
+
+msgid "Automatic"
+msgstr "स्वचालित"
+
+msgid "Automatic Channel Scanning"
+msgstr "स्वचालित चैनल स्कैनिंग"
+
+msgid "Automatic Frame Rate Selection"
+msgstr "स्वत: फ़्रेम दर चयन"
+
+msgid "Automatic Standby"
+msgstr "स्वचालित स्टैंडबाय"
+
+#, c-format
+msgid "Automatic restart in %d second."
+msgid_plural "Automatic restart in %d seconds."
+msgstr[0] "%d सेकेंड में स्वचालित पुनरारंभ करें।"
+msgstr[1] "%d सेकेंड में स्वचालित पुनरारंभ करें।"
+
+#, c-format
+msgid "Automatic switch to standby in %u second."
+msgid_plural "Automatic switch to standby in %u seconds."
+msgstr[0] "%u सेकंड में स्टैंडबाय पर स्वत: स्विच करें।"
+msgstr[1] "%u सेकंड में स्टैंडबाय पर स्वत: स्विच करें।"
+
+#, c-format
+msgid "Automatic update will start in %d second."
+msgid_plural "Automatic update will start in %d seconds."
+msgstr[0] "स्वचालित अद्यतन %d सेकंड में शुरू होगा।"
+msgstr[1] "स्वचालित अद्यतन %d सेकेंड में शुरू होगा।"
+
+msgid "Available"
+msgstr "उपलब्ध"
+
+msgid "Available Transponders"
+msgstr "उपलब्ध ट्रांसपोंडर"
+
+msgid "BER"
+msgstr "बीइआर"
+
+msgid "Background music"
+msgstr "पृष्ठभूमि संगीत"
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr "खराब यूआरएल: %d"
+
+msgid "Bad certificate"
+msgstr "खराब प्रमाणपत्र"
+
+#, c-format
+msgid "Bad format: %d"
+msgstr "खराब प्रारूप: %d"
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr "खराब सर्वर प्रतिक्रिया: %d"
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "बैलेंस: %d टोकन"
+msgstr[1] "बैलेंस: %d टोकन"
+
+msgid "Band Select"
+msgstr "बैंड चयन करें"
+
+msgid "Bandwidth"
+msgstr "बैंडविड्थ"
+
+msgid "Bandwidth [MHz]"
+msgstr "बैंडविड्थ [मेगाहर्टज]"
+
+msgid "Banner Timeout"
+msgstr "बैनर टाइमआउट"
+
+msgid "Begin format now"
+msgstr "अब प्रारूप शुरू करें"
+
+msgid "Bengali"
+msgstr "बंगाली"
+
+msgid "Bhojpuri"
+msgstr "भोजपुरी"
+
+#, c-format
+msgid "Birth date: %s\n"
+msgstr "जन्म तिथि: %s \n"
+
+#, c-format
+msgid "Birth place: %s\n"
+msgstr "जन्म स्थान: %s \n"
+
+msgid "Block Channels"
+msgstr "ब्लॉक चैनल"
+
+msgid "Boot Loader"
+msgstr "बूट लोडर"
+
+msgid "Box Id"
+msgstr "बॉक्स आईडी"
+
+msgid "Buffers"
+msgstr "बफर"
+
+msgid "Buy"
+msgstr "खरीदें"
+
+#, c-format
+msgid "Buying with %s"
+msgstr "%s के साथ ख़रीदना"
+
+msgid "By Channel Number"
+msgstr "चैनल संख्या से"
+
+msgid "By Index"
+msgstr "सूचकांक द्वारा"
+
+msgid "By Longitude"
+msgstr "देशांतर द्वारा"
+
+msgid "C-band"
+msgstr "सी-बैंड"
+
+msgid "CA PIN has been changed."
+msgstr "सीए पिन बदल दिया गया है।"
+
+msgid "CA PIN validation"
+msgstr "सीए पिन सत्यापन"
+
+msgid "CA SYS ID"
+msgstr "सीए SYS आईडी"
+
+msgid "CAS Version"
+msgstr "सीएएस संस्करण"
+
+msgid "CAST:"
+msgstr "कास्ट:"
+
+msgid "CAT Status"
+msgstr "कैट स्थिति"
+
+msgid "CC Primary Channel"
+msgstr "सीसी प्राथमिक चैनल"
+
+msgid "CC Primary Language"
+msgstr "सीसी प्राथमिक भाषा"
+
+msgid "CC Secondary  Language"
+msgstr "सीसी माध्यमिक भाषा"
+
+msgid "CC Secondary Channel"
+msgstr "सीसी माध्यमिक चैनल"
+
+msgid "CC Secondary Language"
+msgstr "सीसी माध्यमिक भाषा"
+
+msgid "CC1"
+msgstr "सीसी 1"
+
+msgid "CC2"
+msgstr "सीसी 2"
+
+msgid "CC3"
+msgstr "सीसी 3"
+
+msgid "CC4"
+msgstr "सीसी 4"
+
+msgid "CVBS"
+msgstr "सीवीबीएस"
+
+msgid "Cable"
+msgstr "केबल"
+
+msgid "Cable AnnexB"
+msgstr "केबल अनुलग्नक बी"
+
+msgid "Cable DVB-C"
+msgstr "केबल डीवीबी-सी"
+
+msgid "Cable modem status"
+msgstr "केबल मॉडेम स्थिति"
+
+msgid "Call History"
+msgstr "कॉल इतिहास"
+
+msgid "Caller ID"
+msgstr "कॉलर आईडी"
+
+msgid "Caller ID Status"
+msgstr "कॉलर आईडी स्थिति"
+
+msgid "Calling"
+msgstr "कॉलिंग"
+
+msgid "Can't load skins list"
+msgstr "खाल की सूची लोड नहीं कर सकता"
+
+msgid "Can't record a show that's too close to ending."
+msgstr "एक शो को रिकॉर्ड नहीं किया जा सकता जो कि समाप्त होने के बहुत करीब है।"
+
+msgid "Can't submit data form XHTMLWindows"
+msgstr "डेटा फॉर्म XHTMLWindows सबमिट नहीं कर सकता"
+
+msgid "Cancel"
+msgstr "रद्द करें"
+
+msgid "Cancel scheduled recording"
+msgstr "अनुसूचित रिकॉर्डिंग रद्द करें"
+
+msgid "Cannot generate QR code."
+msgstr "क्यूआर कोड उत्पन्न नहीं कर सकता।"
+
+msgid "Cannot remove last satellite.\n"
+msgstr "अंतिम उपग्रह को हटाया नहीं जा सकता। \n"
+
+msgid "Cannot schedule keyword recording - keyword recordings limit exceeded."
+msgstr "कीवर्ड रिकॉर्डिंग अनुसूची नहीं कर सकता - कीवर्ड रिकॉर्डिंग सीमा पार हो गई है।"
+
+msgid "Cannot schedule recording - series recordings limit exceeded."
+msgstr "रिकॉर्डिंग सीरीज़ रिकॉर्डिंग की सीमा को पार नहीं कर सका।"
+
+msgid "Card Inserted"
+msgstr "कार्ड सम्मिलित"
+
+msgid "Card Number"
+msgstr "कार्ड नंबर"
+
+msgid "Card Problem - check card"
+msgstr "कार्ड समस्या - चेक कार्ड"
+
+msgid "Card Type"
+msgstr "कार्ड प्रकार"
+
+msgid "Card configuration changed - please enter PIN"
+msgstr "कार्ड कॉन्फिगरेशन बदल गया - कृपया पिन दर्ज करें"
+
+msgid "Card correct"
+msgstr "कार्ड सही"
+
+msgid "Card incorrect"
+msgstr "कार्ड गलत"
+
+msgid "Card inserted"
+msgstr "कार्ड डाला गया"
+
+msgid "Card is correct"
+msgstr "कार्ड सही है"
+
+msgid "Card problem"
+msgstr "कार्ड समस्या"
+
+msgid "Card problem - check card"
+msgstr "कार्ड समस्या - चेक कार्ड"
+
+msgid "Card removed"
+msgstr "कार्ड हटाया गया"
+
+msgid "Carrier Lock"
+msgstr "कैरियर ताला"
+
+msgid "Catch-up TV"
+msgstr "कैच अप टीवी"
+
+msgid "Catch-up TV - continue"
+msgstr "कैच अप टीवी - जारी रखें"
+
+msgid "Catch-up TV - play"
+msgstr "कैच अप टीवी - प्ले"
+
+msgid "Catchup TV"
+msgstr "कैच अप टीवी"
+
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+msgid "Central European"
+msgstr "मध्य यूरोपीय"
+
+msgid "Change CA PIN failed."
+msgstr "सीए पिन परिवर्तित करें।"
+
+msgid "Change CA pin"
+msgstr "सीए पिन बदलें"
+
+msgid "Change PIN"
+msgstr "पिन बदलें"
+
+msgid "Change list numbering"
+msgstr "सूची क्रमांकन बदलें"
+
+msgid "Changing pin failed."
+msgstr "पिन बदल रहा है।"
+
+msgid "Channel"
+msgstr "चैनल"
+
+msgid "Channel 3"
+msgstr "चैनल 3"
+
+msgid "Channel 4"
+msgstr "चैनल 4"
+
+msgid "Channel Frequency [kHz]"
+msgstr "चैनल आवृत्ति [kHz]"
+
+msgid "Channel Installation"
+msgstr "चैनल स्थापना"
+
+msgid "Channel Map"
+msgstr "चैनल मानचित्र"
+
+msgid "Channel Name"
+msgstr "चैनल नाम"
+
+msgid "Channel Number"
+msgstr "चैनल क्रमांक"
+
+msgid "Channel Scanning"
+msgstr "चैनल स्कैनिंग"
+
+msgid "Channel Status"
+msgstr "चैनल स्थिति"
+
+msgid "Channel not available"
+msgstr "चैनल उपलब्ध नहीं है"
+
+msgid "Channel scanning"
+msgstr "चैनल स्कैनिंग"
+
+#, c-format
+msgid "Channel scanning will start in %d second."
+msgid_plural "Channel scanning will start in %d seconds."
+msgstr[0] "चैनल स्कैनिंग %d सेकंड में शुरू हो जाएगा।"
+msgstr[1] "चैनल स्कैनिंग %d सेकेंड में शुरू हो जाएगा।"
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"चैनल: %s \n"
+"इवेंट: %s \n"
+"समय: %s-%s \n"
+
+msgid "Channels update"
+msgstr "चैनल अद्यतन"
+
+msgid "Charge my account"
+msgstr "मेरा खाता चार्ज करें"
+
+msgid "Check Code"
+msgstr "कोड की जाँच करें"
+
+msgid "Check pairing"
+msgstr "जोडने की जांच करें"
+
+msgid "Check purse"
+msgstr "पर्स की जाँच करें"
+
+msgid "Checking compatibility..."
+msgstr "संगतता जांच रहा है ..."
+
+msgid "Checking if new firmware is available"
+msgstr "जाँच रहा है कि नया फर्मवेयर उपलब्ध है"
+
+msgid "Children's/Youth Programmes"
+msgstr "बच्चे / युवा कार्यक्रम"
+
+msgid "Chip ID"
+msgstr "चिप आईडी"
+
+msgid "Chip id"
+msgstr "चिप आईडी"
+
+msgid "Clear all"
+msgstr "सभी को साफ़ करें"
+
+msgid "Close"
+msgstr "बंद करें"
+
+msgid "Closed Captioning"
+msgstr "क्लोज्ड कैप्शनिंग"
+
+msgid "Closed Captioning Mode"
+msgstr "क्लोज्ड कैप्शनिंग मोड"
+
+msgid "Communication error"
+msgstr "संचार त्रुटि"
+
+msgid "Compatible with PVR"
+msgstr "पीवीआर के साथ संगत"
+
+msgid "Compatible with PVR and Timeshift"
+msgstr "पीवीआर और टाइमशिफ्ट के साथ संगत"
+
+msgid "Compatible with Timeshift"
+msgstr "टाइमशिफ्ट के साथ संगत"
+
+msgid "Completed Recordings"
+msgstr "पूर्ण रिकॉर्डिंग"
+
+msgid "Conax"
+msgstr "Verimatrix"
+
+msgid "Conditional access system ID"
+msgstr "कंडीशनल एक्सेस सिस्टम आईडी"
+
+msgid "Configuration"
+msgstr "व्यवस्था का प्रारूप - कॉन्फ़िगरेशन"
+
+msgid "Configure Network"
+msgstr "नेटवर्क कॉन्फ़िगर करें"
+
+msgid "Confirm"
+msgstr "पुष्टि करें"
+
+msgid "Confirmation Required"
+msgstr "पुष्टि की आवश्यकता"
+
+msgid "Conformance"
+msgstr "अनुरूपता"
+
+msgid "Connect"
+msgstr "कनेक्ट करें"
+
+msgid "Connect to hidden Wi-Fi..."
+msgstr "छुपी वाईफाई नेटवर्क कनेक्ट करें ..."
+
+msgid "Connected"
+msgstr "कनेक्टेड"
+
+msgid "Connected anonymously"
+msgstr "अज्ञात रूप से कनेक्टेड"
+
+msgid "Connected to"
+msgstr "से कनेक्टेड"
+
+msgid "Connecting"
+msgstr "कनेक्ट कर रहा है"
+
+msgid "Connecting to"
+msgstr "कनेक्ट हो रहा है"
+
+msgid "Connecting..."
+msgstr "कनेक्ट कर रहा है ..."
+
+msgid "Connection problem"
+msgstr "कनेक्शन समस्या"
+
+#, c-format
+msgid "Connection with %s failed"
+msgstr "%s के साथ कनेक्शन विफल"
+
+msgid "Content blocked"
+msgstr "सामग्री अवरुद्ध"
+
+msgid "Content could not be found in the server"
+msgstr "सर्वर में सामग्री नहीं मिली"
+
+msgid "Content expired"
+msgstr "सामग्री समाप्त हो गई"
+
+msgid "Content has time restrictions but time is not set"
+msgstr "सामग्री का समय प्रतिबंध है लेकिन समय सेट नहीं है"
+
+msgid ""
+"Content owners use Microsoft PlayReadyTM content access technology to protect their intellectual property, including copyrighted content. This device uses PlayReady technology to access PlayReady-protected "
+"content and/or WMDRM protected content. If the device fails to properly enforce restrictions on content usage, content owners may require Microsoft to revoke the device's ability to consume PlayReady-protected "
+"content. Revocation should not affect unprotected content or content protected by other content access technologies. Content owners may require you to upgrade PlayReady to access their content. If you decline "
+"an upgrade, you will not be able to access content that requires the upgrade."
+msgstr ""
+"सामग्री के मालिक माइक्रोसॉफ्ट PlayReadyTM सामग्री पहुंच तकनीक का उपयोगकॉपीराइट की गई सामग्री सहित उनकी बौद्धिक संपदा की रक्षा करें। यहडिवाइस PlayReady- संरक्षित सामग्री तक पहुंचने के लिए PlayReady तकनीक का उपयोग करता है और /या "
+"WMDRM संरक्षित सामग्री। यदि उपकरण ठीक से लागू करने में विफल रहता हैसामग्री उपयोग पर प्रतिबंध, सामग्री मालिकों को माइक्रोसॉफ्ट की आवश्यकता हो सकती हैPlayReady- संरक्षित सामग्री का उपभोग करने की डिवाइस की क्षमता को निरस्त करें।निरसन को "
+"असुरक्षित सामग्री या सामग्री द्वारा संरक्षित नहीं किया जाना चाहिएअन्य कंटेंट एक्सेस टेक्नोलॉजीज। सामग्री के मालिकों को आप अपग्रेड करने की आवश्यकता हो सकती हैअपनी सामग्री का उपयोग करने के लिए PlayReady। अगर आप किसी अपग्रेड को अस्वीकार करते हैं, "
+"तो आपउस सामग्री तक पहुंचने में सक्षम हो जिसे अपग्रेड की आवश्यकता होती है।"
+
+msgid "Continue"
+msgstr "जारी रखें"
+
+msgid "Correct"
+msgstr "सही"
+
+msgid "Cost:"
+msgstr "क़ीमत:"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr "चैनल सूची को लोड नहीं किया जा सका। कार्यशीलता सीमित हो सकती है।"
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "डिवाइस को रोक नहीं सका, कृपया फिर से प्रयास करें (त्रुटि 2)"
+
+msgid "Create new directory"
+msgstr "नई निर्देशिका बनाएँ"
+
+msgid "Create playlist"
+msgstr "प्लेलिस्ट बनाएँ"
+
+msgid "Credit:"
+msgstr "क्रेडिट:"
+
+msgid "CryptoGuard"
+msgstr "क्रिप्टोगार्ड"
+
+msgid "CryptoGuard Force Tune"
+msgstr "क्रिप्टोगार्ड फोर्स ट्यून"
+
+msgid "CubiTV Portal Address"
+msgstr ""
+
+msgid "Custom LNB"
+msgstr "कस्टम एलएनबी"
+
+msgid "DLNA"
+msgstr "डीएलएनए"
+
+msgid "DNS is not setup"
+msgstr "डीएनएस सेटअप नहीं है"
+
+msgid "DNS1"
+msgstr "डीएनएस1"
+
+msgid "DNS2"
+msgstr "डीएनएस 2"
+
+msgid "DRM"
+msgstr "डीआरएम"
+
+#, c-format
+msgid "DRM error [%d]"
+msgstr "डीआरएम त्रुटि [%d]"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr "डीआरएम त्रुटि: %d"
+
+msgid "DRM initialization error"
+msgstr "डीआरएम प्रारंभिक त्रुटि"
+
+msgid "DRM license error"
+msgstr "डीआरएम लाइसेंस त्रुटि"
+
+msgid "DSMCC Feeds"
+msgstr "डीएसएमसीसी फीड्स"
+
+msgid "DVB Channels parameters have changed."
+msgstr "DVB चैनल पैरामीटर बदल गए हैं।"
+
+msgid "DVB Mode"
+msgstr "डीवीबी मोड"
+
+msgid "DVB Table Status"
+msgstr "डीवीबी तालिका स्थिति"
+
+msgid "DVB Tables Details"
+msgstr "डीवीबी तालिका विवरण"
+
+msgid "DVB Tables status"
+msgstr "डीवीबी तालिका स्थिति"
+
+msgid "DVB channels"
+msgstr "डीवीबी चैनल"
+
+msgid "DVB-S/S2 Manual"
+msgstr "डीवीबी- एस / एस 2 मैनुअल"
+
+msgid "DVB-S/S2 Manual PAT only scan"
+msgstr "डीवीबी- एस / एस 2 मैनुअल पीएटी केवल स्कैन"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "डीवीबी-एस / एस 2 एनआईटी स्वचालित"
+
+msgid "DVB-T Automatic full scan"
+msgstr "डीवीबी- टी स्वचालित पूर्ण स्कैन"
+
+msgid "DVB-T Manual"
+msgstr "डीवीबी- टी मैनुअल"
+
+msgid "DVB-T Manual PAT only scan"
+msgstr "डीवीबी- टी मैनुअल पीएटी केवल स्कैन"
+
+msgid "Danish"
+msgstr "डेनिश"
+
+msgid "Data buffering. Please wait ..."
+msgstr "डेटा बफरिंग। कृपया प्रतीक्षा करें ..."
+
+msgid "Date"
+msgstr "तिथि"
+
+msgid "Dec"
+msgstr "दिसंबर"
+
+msgid "Decline"
+msgstr "अस्वीकार"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr "डिकोडर त्रुटि: %d"
+
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+msgid "Default Channel"
+msgstr "डिफ़ॉल्ट चैनल"
+
+msgid "Default PVR Quota"
+msgstr "डिफ़ॉल्ट पीवीआर कोटा"
+
+msgid "Default directory"
+msgstr "डिफ़ॉल्ट निर्देशिका"
+
+msgid "Degrees"
+msgstr "डिग्री"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "रिकॉर्डिंग को%s  देरी में शुरू"
+
+msgid "Delete"
+msgstr "मिटाएँ"
+
+msgid "Delete All"
+msgstr "सभी मिटाएँ"
+
+msgid "Delete NPvr recording"
+msgstr "एनपीवीआर रिकॉर्डिंग मिटाएँ"
+
+msgid "Delete all"
+msgstr "सभी मिटाएँ"
+
+msgid "Delete all active"
+msgstr "सभी सक्रिय मिटाएँ"
+
+msgid "Delete all completed"
+msgstr "पूर्ण सभी को मिटाएँ"
+
+msgid "Delete all failed"
+msgstr "सभी विफल मिटाएँ"
+
+msgid "Delete all recordings"
+msgstr "सभी रिकॉर्डिंग मिटाएँ"
+
+msgid "Delete all scheduled"
+msgstr "सभी अनुसूचित मिटाएँ"
+
+msgid "Delete as needed"
+msgstr "आवश्यकतानुसार मिटाएँ"
+
+msgid "Delete directory"
+msgstr "निर्देशिका मिटाएँ"
+
+msgid "Delete manually"
+msgstr "मैन्युअल रूप से मिटाएँ"
+
+msgid "Delete recording"
+msgstr "रिकॉर्डिंग मिटाएँ"
+
+msgid "Device Name"
+msgstr "डिवाइस नाम"
+
+msgid "Device is not responding"
+msgstr "डिवाइस जवाब नहीं दे रहा है"
+
+msgid "Devotional"
+msgstr "धार्मिक"
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "DiSEqC पोर्ट %c"
+
+msgid "DiSEqC Switch"
+msgstr "DiSEqC स्विच"
+
+msgid "Diagnostics"
+msgstr "निदान"
+
+msgid "Digital Audio"
+msgstr "डिजिटल ऑडियो"
+
+msgid "Digital Closed Captioning"
+msgstr "डिजिटल बंद कैप्शन"
+
+#, c-format
+msgid "Directory '%s' already exists"
+msgstr "निर्देशिका '%s' पहले से मौजूद है"
+
+msgid "Directory name already exists"
+msgstr "निर्देशिका का नाम पहले से मौजूद है"
+
+msgid "Directory name cannot be empty"
+msgstr "निर्देशिका का नाम खाली नहीं हो सकता है"
+
+msgid "Directory name cannot start with a space"
+msgstr "डायरेक्टरी नाम खाली जगह के साथ शुरू नहीं हो सकता है"
+
+#, c-format
+msgid "Directory name must be at least %d characters"
+msgstr "निर्देशिका नाम कम से कम%d अक्षर होना चाहिए"
+
+msgid "Disable"
+msgstr "निर्योग्य करना"
+
+msgid "Disable PC"
+msgstr "पीसी को निर्योग्य करना"
+
+msgid "Disabled"
+msgstr "निर्योग्य"
+
+msgid "Disabling not possible"
+msgstr "निर्योग्य संभव नहीं"
+
+msgid "Disconnect"
+msgstr "डिस्कनेक्ट करें"
+
+#, c-format
+msgid "Disconnect %s"
+msgstr "%s डिस्कनेक्ट करें"
+
+msgid "Disconnected"
+msgstr "डिस्कनेक्ट किया गया"
+
+msgid "Disk Formating"
+msgstr "डिस्क फॉर्मेटिंग"
+
+msgid ""
+"Disk format in progress\n"
+"\n"
+"Disk format can take 3 up to 5 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"\n"
+"The STB will continue start-up process\n"
+"when the format is complete."
+msgstr ""
+"डिस्क प्रारूप प्रगति में है \n"
+"\n"
+"डिस्क प्रारूप 3 से 5 मिनट तक ले सकता है। \n"
+"कृपया एसटीबी को रीसेट या बिजली न दें। \n"
+"\n"
+"एसटीबी स्टार्ट-अप प्रक्रिया जारी रखेगी \\ nजब प्रारूप पूरा हो गया है।"
+
+msgid "Display Format"
+msgstr "प्रदर्शन प्रारूप"
+
+msgid "Display format is common for HDMI and analog outputs."
+msgstr "प्रदर्शन प्रारूप एचडीएमआई और एनालॉग आउटपुट के लिए सामान्य है।"
+
+msgid "Do not eject your USB drive before the formatting is finished!"
+msgstr "प्रारूपण समाप्त होने से पहले अपने यूएसबी ड्राइव को निकालना न करें"
+
+msgid "Do not eject your USB drive before the speed test is finished!"
+msgstr "स्पीड टेस्ट समाप्त होने से पहले अपने यूएसबी ड्राइव को निकालना न करें"
+
+msgid "Do not turn off the STB during channel scanning."
+msgstr "चैनल स्कैनिंग के दौरान एसटीबी बंद न करें।"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "फर्मवेयर अद्यतन के दौरान एसटीबी बंद न करें।"
+
+msgid "Done"
+msgstr "पूर्ण"
+
+msgid "Download now"
+msgstr "अभी डाउनलोड करें"
+
+msgid "Downloading firmware package"
+msgstr "फर्मवेयर पैकेज डाउनलोड कर रहा है"
+
+msgid "Drop"
+msgstr "ड्रॉप"
+
+msgid "Drop channels?"
+msgstr "चैनल ड्रॉप?"
+
+msgid "Dropping to voicemail failed - Please Contact your service representative."
+msgstr "ध्वनिमेल को छोड़ना विफल - कृपया अपने सेवा प्रतिनिधि से संपर्क करें।"
+
+msgid "Dropping..."
+msgstr "ड्रॉपिंग ..."
+
+msgid "Due to Broadcaster's restrictions you do not have access to this content"
+msgstr "ब्रॉडकास्टर के प्रतिबंधों के कारण आप इस सामग्री तक नहीं पहुंच सकते"
+
+msgid "Duration"
+msgstr "अवधि"
+
+msgid "EIT Status"
+msgstr "ईआईटी स्थिति"
+
+msgid "EME"
+msgstr "ईएमई"
+
+msgid "EPG"
+msgstr "ईपीजी"
+
+msgid "EPG for DVB channels"
+msgstr "डीवीबी चैनलों के लिए ईपीजी"
+
+msgid "EPG for IP channels"
+msgstr "आईपी चैनलों के लिए ईपीजी"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "त्रुटि: स्मार्टकार्ड में प्रश्न भेजना विफल"
+
+msgid "Edit"
+msgstr "संपादित करें"
+
+msgid "Edit satellite"
+msgstr "उपग्रह को संपादित करें"
+
+msgid "Education/Science/Factual topics"
+msgstr "शिक्षा / विज्ञान / वास्तविक विषय"
+
+msgid "Empty"
+msgstr "खाली"
+
+msgid "Empty folder"
+msgstr "रिक्त फ़ोल्डर"
+
+msgid "Enable/Disable"
+msgstr "सक्षम / अक्षम करें"
+
+msgid "Enabled"
+msgstr "सक्षम"
+
+msgid "End Frequency"
+msgstr "अंत आवृत्ति"
+
+msgid "End Margin"
+msgstr "समापन मार्जिन"
+
+msgid "End time"
+msgstr "समाप्ति समय"
+
+msgid "Endurance Testing (+3 hrs)"
+msgstr "सहनशक्ति परीक्षण (+3 घंटे)"
+
+msgid "English"
+msgstr "अंग्रेजी"
+
+msgid "Enter Active Standby"
+msgstr "सक्रिय स्टैंडबाय दर्ज करें"
+
+msgid "Enter CA PIN to accept"
+msgstr "स्वीकार करने के लिए सीए पिन दर्ज करें"
+
+msgid "Enter Standby"
+msgstr "स्टैंडबाय दर्ज करें"
+
+msgid "Enter WiFi Password"
+msgstr "वाईफाई पासवर्ड दर्ज करें"
+
+msgid "Enter WiFi SSID"
+msgstr "वाईफाई एसएसआईडी दर्ज करें"
+
+msgid "Entertainment"
+msgstr "मनोरंजन"
+
+msgid "Entitled"
+msgstr "हकदार"
+
+msgid "Episodes:"
+msgstr "एपिसोड:"
+
+msgid "Error"
+msgstr "त्रुटि"
+
+msgid "Error description"
+msgstr "त्रुटि विवरण"
+
+msgid "Error occurred"
+msgstr "त्रुटि हुई"
+
+msgid "Error while data submission"
+msgstr "डेटा जमा करते समय त्रुटि"
+
+msgid "Error while formatting disk!"
+msgstr "डिस्क स्वरूपण करते समय त्रुटि!"
+
+#, c-format
+msgid "Error: %d"
+msgstr "त्रुटि: %d"
+
+msgid "Ethernet Status"
+msgstr "ईथरनेट स्थिति"
+
+msgid "Event Status"
+msgstr "इवेंट स्थिति"
+
+msgid "Event not found. Data will be updated now. Please try again."
+msgstr "घटना नहीं मिली। डेटा अब अपडेट हो जाएगा, कृपया पुनः प्रयास करें।"
+
+msgid "Every Day"
+msgstr "हर दिन"
+
+msgid "Excellent"
+msgstr "उत्कृष्ट"
+
+msgid "Exit"
+msgstr "बाहर निकलें"
+
+msgid "Exit to Home Page"
+msgstr "होम पेज से बाहर निकलें"
+
+#, c-format
+msgid "Expires at : %s"
+msgstr "पर समाप्ति: %s"
+
+msgid "Extra"
+msgstr "अतिरिक्त"
+
+msgid "Extras"
+msgstr "अतिरिक्त"
+
+msgid "FATAL ERROR"
+msgstr "गलत त्रुटि"
+
+msgid "FREE"
+msgstr "मुफ़्त"
+
+msgid "FTA Blocking - Block"
+msgstr "एफटीए अवरुद्ध - ब्लॉक"
+
+msgid "FTA Blocking - Ent Based"
+msgstr "एफटीए ब्लॉकिंग - एंट आधारित"
+
+msgid "Failed Recordings"
+msgstr "विफल रिकॉर्डिंग"
+
+msgid "Failed to contact nPVR server."
+msgstr "एनपीवीआर सर्वर से संपर्क करने में असफल।"
+
+msgid "Failed to delete nPVR directory"
+msgstr "एनपीवीआर निर्देशिका को हटाने में विफल"
+
+msgid "Failed to delete nPVR recordings"
+msgstr "एनपीवीआर रिकॉर्डिंग को हटाने में विफल"
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "कार्ड से जानकारी प्राप्त करने में असफल (त्रुटि = 0x%x)"
+
+msgid "Failed to schedule nPVR recording"
+msgstr "एनपीवीआर रिकॉर्डिंग शेड्यूल करने में असफल"
+
+msgid "Fair"
+msgstr "उचित"
+
+msgid "Favorites"
+msgstr "पसंदीदा"
+
+msgid "Favorites Numbering"
+msgstr "पसंदीदा क्रमांकन"
+
+msgid "Feb"
+msgstr "फरवरी"
+
+msgid "File Browser Character Set"
+msgstr "फ़ाइल ब्राउज़र कैरेक्टर सेट"
+
+msgid "File not found"
+msgstr "फ़ाइल नहीं मिली"
+
+#, c-format
+msgid "File not found: %d"
+msgstr "फ़ाइल नहीं मिली: %d"
+
+msgid "Finish"
+msgstr "समाप्त करें"
+
+msgid "Finnish"
+msgstr "फिनिश"
+
+msgid "Firmware Version"
+msgstr "फर्मवेयर संस्करण"
+
+msgid "Firmware update"
+msgstr "फर्मवेयर अपडेट"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr "एसटीबी काम ठीक से करने के लिए फर्मवेयर अद्यतन की आवश्यकता है।"
+
+msgid ""
+"Firmware upgrade can take 10 up to 15 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"The STB will restart automatically when the upgrade is complete."
+msgstr ""
+"फर्मवेयर अपग्रेड 10 से 15 मिनट तक ले सकता है। \n"
+"कृपया एसटीबी को रीसेट या बिजली न दें। \n"
+"अपग्रेड पूर्ण होने पर एसटीबी स्वचालित रूप से पुनरारंभ हो जाएगा।"
+
+msgid "First Time Installation"
+msgstr "पहली बार अधिष्ठापन"
+
+msgid "First time using VoD service?"
+msgstr "पहली बार वीओडी सेवा का प्रयोग कर रहा है?"
+
+msgid "Font with Cyryllic and Greek"
+msgstr "साइरिलिक और ग्रीक के साथ फ़ॉन्ट"
+
+msgid "For 12+ year old"
+msgstr "12+ साल के लिए"
+
+msgid "For 16+ year old"
+msgstr "16+ साल के लिए"
+
+msgid "For 18+ year old"
+msgstr "18+ साल के लिए"
+
+msgid "For 6+ year old"
+msgstr "6+ वर्ष के लिए"
+
+msgid "For HD or Widescreen TV"
+msgstr "एचडी या वाइडस्क्रीन टीवी के लिए"
+
+msgid "For classic TV"
+msgstr "क्लासिक टीवी के लिए"
+
+msgid "Force HTTP upgrade"
+msgstr "HTTP अपग्रेड बलपूर्वक"
+
+#, c-format
+msgid "Forget %s"
+msgstr "%s को भूलें"
+
+msgid "Forget the network"
+msgstr "नेटवर्क को भूल जाओ"
+
+msgid "Format Hard Disk"
+msgstr "फार्मेट हार्ड डिस्क"
+
+msgid "Format MStoreVoD"
+msgstr "फार्मेट MStoreVoD"
+
+msgid "Format PVR/TS"
+msgstr "फार्मेट पीवीआर / टीएस"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr "फार्मेट समर्थित नहीं है: %d"
+
+msgid "Format whole disk"
+msgstr "पूरी डिस्क फार्मेट करें"
+
+msgid "Formatting finished!"
+msgstr "फ़ॉर्मेटिंग समाप्त हो गया!"
+
+msgid "Formatting storage"
+msgstr "फॉर्मेटिंग स्टोरेज"
+
+msgid "Formatting this disk will permanently erase all data on it. Do you want to continue?"
+msgstr "इस डिस्क को फ़ॉर्मेट करने से उस पर सभी डेटा को स्थायी रूप से मिटा दिया जाएगा। क्या आप जारी रखना चाहते हैं?"
+
+msgid "Formatting..."
+msgstr "फॉर्मेटिंग ..."
+
+msgid "Free Memory"
+msgstr "फ्री मेमरी"
+
+msgid "Free with Subscription"
+msgstr "सदस्यता के साथ निशुल्क"
+
+msgid "Frequency"
+msgstr "फ़्रिक्वेंसी"
+
+msgid "Frequency Range"
+msgstr "फ़्रिक्वेंसी रेंज"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "फ्रीक्वेंसी: %d.%02d मेगाहर्टज %s %s %s"
+
+msgid "Fridays"
+msgstr "शुक्रवार"
+
+msgid "From"
+msgstr "से"
+
+msgid "Front Panel Power Button"
+msgstr "फ्रंट पैनल पावर बटन"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "स्टैंडबाय में फ्रंट पैनल क्लॉक"
+
+msgid "Full Software Version"
+msgstr "पूर्ण सॉफ्टवेयर संस्करण"
+
+msgid "G: General Audience"
+msgstr "जी: जनरल ऑडियंस"
+
+msgid "GHz"
+msgstr "गीगा हर्टज"
+
+msgid "Gateway"
+msgstr "गेटवे"
+
+msgid "German"
+msgstr "जर्मन"
+
+msgid "Go!"
+msgstr "जाओ!"
+
+msgid "Good"
+msgstr "अच्छा"
+
+msgid "Greek"
+msgstr "ग्रीक"
+
+msgid "Group Number"
+msgstr "समूह संख्या"
+
+msgid "Guide"
+msgstr ""
+
+msgid "Guide Data"
+msgstr "गाइड डेटा"
+
+msgid "Gujarati"
+msgstr "गुजराती"
+
+msgid "H"
+msgstr "एच"
+
+msgid "HD Channels"
+msgstr "एचडी चैनल"
+
+msgid "HDCP ERROR"
+msgstr "एचडीसीपी त्रुटि"
+
+msgid "HDMI"
+msgstr "एचडीएमआई"
+
+msgid "HDMI Status"
+msgstr "एचडीएमआई स्थिति"
+
+msgid "HDMI Video Format"
+msgstr "एचडीएमआई वीडियो प्रारूप"
+
+msgid "HDTV"
+msgstr "एचडीटीवी"
+
+msgid "HFC MAC ID"
+msgstr "एचएफसी मैक आईडी"
+
+msgid "Hard of Hearing"
+msgstr "सुनने में दिक्कत"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "सुनने में दिक्कत उपशीर्षक"
+
+msgid "Hemisphere"
+msgstr "गोलार्ध"
+
+msgid "Hide"
+msgstr "छिपाएँ"
+
+msgid "Hindi"
+msgstr "हिंदी"
+
+msgid "Horizontal"
+msgstr "क्षैतिज"
+
+msgid "Hybrid Mode"
+msgstr "हाइब्रिड मोड"
+
+msgid "IP"
+msgstr "आईपी"
+
+msgid "IP Address"
+msgstr "आईपी पता"
+
+msgid "IP Mode"
+msgstr "आईपी मोड"
+
+msgid "IP Network"
+msgstr "आईपी नेटवर्क"
+
+msgid "IP channels"
+msgstr "आईपी चैनल"
+
+msgid "IPPV PIN"
+msgstr "आईपीपीवी पिन"
+
+msgid "Idle Time"
+msgstr "निष्क्रिय समय"
+
+msgid ""
+"If you wish to purchase this asset,\n"
+"please enter your Purchase Pin"
+msgstr ""
+"यदि आप इस संपत्ति को खरीदना चाहते हैं, \n"
+"कृपया अपनी खरीदारी पिन दर्ज करें"
+
+msgid "Ignore"
+msgstr "अनदेखा करें"
+
+msgid "In order to browse this category, please log in."
+msgstr "इस श्रेणी को ब्राउज़ करने के लिए कृपया लॉगिन करें।"
+
+msgid "In order to get access to VoD service, please contact your sales representative"
+msgstr "वीओडी सेवा तक पहुंच प्राप्त करने के लिए, कृपया अपनी बिक्री प्रतिनिधि से संपर्क करें"
+
+msgid "In order to purchase products, please log in."
+msgstr "त्पादों को खरीदने के लिए, कृपया लॉग इन करें"
+
+msgid "In order to record selected program you need to stop one of the following recordings/schedules"
+msgstr "चयनित प्रोग्राम को रिकॉर्ड करने के लिए आपको निम्न में से एक रिकॉर्डिंग / कार्यक्रम को रोकने की आवश्यकता है "
+
+msgid "In progress"
+msgstr "प्रगति में"
+
+msgid "Inactive"
+msgstr "निष्क्रिय"
+
+msgid "Incorrect Card"
+msgstr "गलत कार्ड"
+
+msgid "Incorrect Conax Card"
+msgstr "गलत वेरिमेट्रिक्स कार्ड"
+
+msgid "Incorrect Conax card"
+msgstr "गलत वेरिमेट्रिक्स कार्ड"
+
+msgid "Incorrect card"
+msgstr "गलत कार्ड"
+
+msgid "Incorrect message"
+msgstr "गलत संदेश"
+
+#, c-format
+msgid "Incorrect network settings (%s)"
+msgstr "गलत नेटवर्क सेटिंग्स (%s)"
+
+msgid "Incorrect old PIN."
+msgstr "गलत पुराने पिन।"
+
+msgid "Incorrect response status"
+msgstr "गलत प्रतिक्रिया स्थिति"
+
+msgid "Incorrect response type"
+msgstr "गलत प्रतिक्रिया प्रकार"
+
+msgid "Incorrect widget id"
+msgstr "गलत विजेट आईडी"
+
+msgid "Information"
+msgstr "सूचना"
+
+msgid "Infotainment"
+msgstr "ज्ञानरंजन"
+
+msgid "Initialization Error"
+msgstr "प्रारंभिक त्रुटि"
+
+msgid "Inserted"
+msgstr "डाला गया"
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"स्थापित करें \n"
+"\n"
+"स्वचालित चैनल स्कैनिंग को ठीक करने के लिए दबाएं।"
+
+msgid "Install now"
+msgstr "अब स्थापित करें"
+
+msgid "Installing firmware"
+msgstr "फर्मवेयर अधिष्ठापन"
+
+msgid "Instant Timeshift"
+msgstr "इंस्टेंट टाइम शिफ्ट"
+
+msgid "Insufficient credit to purchase event."
+msgstr "घटना को खरीदने के लिए अपर्याप्त क्रेडिट।"
+
+msgid "Interactive Services"
+msgstr "इंटरएक्टिव सर्विसेज"
+
+msgid "Interface Status"
+msgstr "इंटरफेस स्थिति"
+
+msgid "Interface Version"
+msgstr "इंटरफेस वर्जन"
+
+#, c-format
+msgid "Interface: %s"
+msgstr "इंटरफेस: %s"
+
+msgid "Internal error. Unknown state"
+msgstr "आंतरिक त्रुटि। अज्ञात स्थिति"
+
+msgid "Internal server error"
+msgstr "आंतरिक सर्वर त्रुटि"
+
+msgid "International"
+msgstr "अंतरराष्ट्रीय"
+
+msgid "Internet"
+msgstr "इंटरनेट"
+
+msgid "Internet Radio"
+msgstr "इंटरनेट रेडियो"
+
+msgid "Invalid password"
+msgstr "अमान्य पासवर्ड"
+
+msgid "Invalid recording."
+msgstr "अमान्य रिकॉर्डिंग।"
+
+msgid "Invalid server response"
+msgstr "अवैध सर्वर प्रतिक्रिया"
+
+msgid "Inverted"
+msgstr "उलटे"
+
+msgid "Jan"
+msgstr "जनवरी"
+
+msgid "Jio Exclusive"
+msgstr "जियो विशेष"
+
+msgid "Jul"
+msgstr "जुलाई"
+
+msgid "Jun"
+msgstr "जून"
+
+msgid "Kannada"
+msgstr "कन्नड़"
+
+msgid "Keyword"
+msgstr "खोजशब्द"
+
+msgid "Kids"
+msgstr "बच्चों के लिए"
+
+msgid "Ku-band"
+msgstr "केयू-बैंड"
+
+msgid "Ku-band BSS"
+msgstr "केयू-बैंड बीएसएस"
+
+msgid "Ku-band FSS"
+msgstr "केयू-बैंड एफएसएस"
+
+msgid "Ku-band Universal"
+msgstr "केयू-बैंड यूनिवर्सल"
+
+msgid "LNB Setup"
+msgstr "एलएनबी सेटअप"
+
+msgid "LNB Type"
+msgstr "एलएनबी प्रकार"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Languages"
+msgstr "भाषाएं"
+
+msgid "Latens"
+msgstr "वेरिमेट्रिक्स"
+
+msgid "Latest arrivals"
+msgstr "नवीनतम आगमन"
+
+msgid "Latin US"
+msgstr "लैटिन अमेरिका"
+
+msgid "Latvian"
+msgstr "लातवियाई"
+
+msgid "Leisure hobbies"
+msgstr "अवकाश शौक"
+
+msgid "Leisure/hobbies"
+msgstr "अवकाश / शौक"
+
+msgid "Letterbox"
+msgstr "लेटरबॉक्स"
+
+msgid "Library date"
+msgstr "लाइब्रेरी की तारीख"
+
+msgid "Library version"
+msgstr "लाइब्रेरी संस्करण"
+
+msgid "Lifestyle"
+msgstr "लाइफ स्टाइल"
+
+msgid "Line"
+msgstr "लाइन"
+
+msgid "List is empty"
+msgstr "सूची खाली है"
+
+msgid "List name already exists"
+msgstr "सूची नाम पहले से मौजूद है"
+
+msgid "List name cannot be empty"
+msgstr "सूची नाम खाली नहीं हो सकता"
+
+#, c-format
+msgid "List no. %u"
+msgstr "सूची संख्या। %u"
+
+msgid "Loading..."
+msgstr "लोड हो रहा है ..."
+
+msgid "Local"
+msgstr "लोकल"
+
+msgid "Local Oscillator Frequency"
+msgstr "लोकल ऑसिलिकेटर फ़्रिक्वेंसी"
+
+msgid "Lock"
+msgstr "लॉक"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "लॉक स्थिति - कोई संकेत नहीं"
+
+msgid "Lock status - OK"
+msgstr "लॉक स्थिति - ठीक है"
+
+msgid "Locked Ratings"
+msgstr "लॉक रेटिंग्स"
+
+msgid "Locked Time"
+msgstr "लॉक टाइम"
+
+msgid "Locking Status"
+msgstr "लॉक स्थिति"
+
+msgid "Log In"
+msgstr "लॉग इन करें"
+
+msgid "Login"
+msgstr "लॉगिन"
+
+msgid "Long Term Error"
+msgstr "लंबी अवधि की त्रुटि"
+
+msgid "Low power consumption, slow recovery"
+msgstr "कम बिजली की खपत, धीमी वसूली"
+
+msgid "MAC Address"
+msgstr "मैक पता"
+
+msgid "MAC address"
+msgstr "मैक पता"
+
+msgid "MB"
+msgstr "एमबी"
+
+msgid "MPEG Service Number"
+msgstr "एमपीईजी सेवा संख्या"
+
+msgid "MPEG Statistics"
+msgstr "एमपीईजी सांख्यिकी"
+
+msgid "MSE"
+msgstr "एमएसई"
+
+msgid "MStore"
+msgstr "एम स्टोर"
+
+msgid "Mailbox"
+msgstr "मेलबॉक्स"
+
+msgid "Malayalam"
+msgstr "मलयालम"
+
+msgid "Manual"
+msgstr "मैनुअल"
+
+msgid "Manual Channel Scanning"
+msgstr "मैनुअल चैनल स्कैनिंग"
+
+msgid "Manual PAT"
+msgstr "मैनुअल पीएटी"
+
+msgid "Manual PAT Channel Scanning"
+msgstr "मैनुअल पीएटी चैनल स्कैनिंग"
+
+msgid "Manual PAT only scan"
+msgstr "मैनुअल पीएटी केवल स्कैन"
+
+msgid "Manual(Static)"
+msgstr "मैनुअल (स्टेटिक)"
+
+msgid "Mar"
+msgstr "मार्च"
+
+msgid "Marathi"
+msgstr "मराठी"
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"परिपक्वता लॉक \\ n\n"
+"प्रोग्राम रेटिंग: %s \n"
+"कार्ड स्तर: %s \n"
+"अनलॉक करने के लिए CA पिन दर्ज करें"
+
+msgid "Maturity Rating"
+msgstr "परिपक्वता रेटिंग"
+
+msgid "May"
+msgstr "मई"
+
+msgid "Measuring performance of idle system..."
+msgstr "निष्क्रिय सिस्टम का प्रदर्शन मापना ..."
+
+msgid "Measuring simultaneous timeshift and HD recording performance..."
+msgstr "एक साथ टाइम शिफ्ट और एचडी रिकॉर्डिंग प्रदर्शन को मापने ..."
+
+msgid "Measuring simultaneous timeshift and SD recording performance..."
+msgstr "एक साथ टाइम शिफ्ट और एसडी रिकॉर्डिंग प्रदर्शन को मापने ..."
+
+msgid "Measuring simultaneous timeshift and three HD recordings..."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and three SD recordings performance..."
+msgstr "एक साथ टाइम शिफ्ट और तीन एसडी रिकॉर्डिंग प्रदर्शन मापने ..."
+
+msgid "Measuring simultaneous timeshift and two HD recordings performance..."
+msgstr "एक साथ टाइम शिफ्ट और दो एचडी रिकॉर्डिंग प्रदर्शन को मापना ..."
+
+msgid "Measuring simultaneous timeshift, SD and HD recordings performance..."
+msgstr "एक साथ टाइम शिफ्ट, एसडी और एचडी रिकॉर्डिंग प्रदर्शन को मापने ..."
+
+msgid "Measuring simultaneous timeshift, two HD recordings and one SD recording performance..."
+msgstr "एक साथ टाइम शिफ्ट, दो एचडी रिकॉर्डिंग और एक एसडी रिकॉर्डिंग प्रदर्शन को मापने..."
+
+msgid "Measuring timeshift performance..."
+msgstr "टाइम शिफ्ट प्रदर्शन को मापना ..."
+
+msgid "Memory Used"
+msgstr "मेमोरी इस्तेमाल किया"
+
+msgid "Menu Language"
+msgstr "मेनू भाषा"
+
+msgid "Menu Transparency"
+msgstr "मेनू पारदर्शिता"
+
+msgid "Message"
+msgstr "संदेश"
+
+msgid "Message - NEW!"
+msgstr "संदेश - नया!"
+
+msgid "Messages"
+msgstr "संदेश"
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+#, c-format
+msgid "Minimum Age %d"
+msgstr "न्यूनतम आयु %d"
+
+msgid "Mode"
+msgstr "मोड"
+
+msgid "Modulation"
+msgstr "मॉड्यूलेशन"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "मॉड्यूलेशन: %s"
+
+msgid "Mondays"
+msgstr "सोमवार"
+
+msgid "More info"
+msgstr "अधिक जानकारी"
+
+msgid "Mounting..."
+msgstr "बढ़ते हुए ..."
+
+msgid "Move"
+msgstr "चालें"
+
+msgid "Movie/Drama"
+msgstr "मूवी / ड्रामा"
+
+msgid "Movies"
+msgstr "मूवीज़"
+
+#, c-format
+msgid "Movies %s is in..."
+msgstr "फिल्म %s में है ..."
+
+msgid "Multichannel"
+msgstr "मल्टीचैनल"
+
+msgid "Music"
+msgstr "संगीत"
+
+msgid "Music/Ballet/Dance"
+msgstr "संगीत / बैले / नृत्य"
+
+msgid "Mux ID"
+msgstr "मक्स आईडी"
+
+msgid "My Coupons"
+msgstr "मेरे कूपन"
+
+msgid "My List"
+msgstr "मेरी सूची"
+
+msgid "My Recordings"
+msgstr "मेरे रिकॉर्डिंग"
+
+msgid "My Rentals"
+msgstr "मेरा किराया"
+
+msgid "N/A"
+msgstr "एन / ए"
+
+msgid "NAT Status"
+msgstr "एनएटी स्थिति"
+
+msgid "NEW RELEASES"
+msgstr "नया रिलीज़"
+
+msgid "NID selection"
+msgstr "एनआईडी चयन"
+
+msgid "NIT Automatic"
+msgstr "एनआईटी स्वचालित"
+
+msgid "NIT Status"
+msgstr "एनआईटी स्थिति"
+
+msgid "NO SIGNAL"
+msgstr "कोई संकेत नहीं"
+
+msgid "NPVR End Margin"
+msgstr "एनपीवीआर समाप्ति मार्जिन"
+
+msgid "NPVR Start Margin"
+msgstr "एनपीवीआर प्रारंभ मार्जिन"
+
+msgid "NTSC"
+msgstr "एनटीएससी"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Name This Device"
+msgstr "इस उपकरण को नाम दें"
+
+msgid "Nepali"
+msgstr "नेपाली"
+
+msgid "Netmask"
+msgstr "नेटमास्क"
+
+msgid "Network Name"
+msgstr "नेटवर्क नाम"
+
+msgid "Network PVR"
+msgstr "नेटवर्क पीवीआर"
+
+msgid "Network PVR Quota"
+msgstr "नेटवर्क पीवीआर कोटा"
+
+msgid "Network Problem Detected"
+msgstr "नेटवर्क समस्या का पता चला"
+
+msgid "Network Settings"
+msgstr "नेटवर्क सेटिंग्स"
+
+msgid "Network Settings Window"
+msgstr "नेटवर्क सेटिंग्स विंडो"
+
+msgid "Network mask"
+msgstr "नेटवर्क मास्क"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr "नया सीए पिन पुष्टिकरण फ़ील्ड पूरा नहीं हुआ है।"
+
+msgid "New CA PIN field is not complete"
+msgstr "नया सीए पिन क्षेत्र पूर्ण नहीं है"
+
+msgid "New Only"
+msgstr "केवल नई"
+
+msgid "New PIN confirmation field is not complete."
+msgstr "नया पिन पुष्टिकरण क्षेत्र पूर्ण नहीं है।"
+
+msgid "New PIN field is not complete."
+msgstr "नया पिन क्षेत्र पूर्ण नहीं है।"
+
+msgid "New PIN:"
+msgstr "नया पिन:"
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "नया फर्मवेयर संस्करण %s नेटवर्क %s से उपलब्ध है।"
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "नया फर्मवेयर संस्करण %s उपलब्ध है।"
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "नया फर्मवेयर संस्करण: %s"
+
+msgid "New pins don't match."
+msgstr "नये पिंस मेल नहीं खाते।"
+
+msgid "New recording cannot be scheduled due to many conflicts with previously scheduled recordings"
+msgstr "पहले के अनुसूचित रिकॉर्डिंग के साथ कई विरोधों के कारण नई रिकॉर्डिंग निर्धारित नहीं की जा सकती"
+
+msgid "News"
+msgstr "समाचार"
+
+msgid "News/Cultural affairs"
+msgstr "समाचार / सांस्कृतिक मामलों"
+
+msgid "News/Current affairs"
+msgstr "समाचार / वर्तमान मामलों"
+
+msgid "Next"
+msgstr "अगला"
+
+msgid "No"
+msgstr "नहीं"
+
+msgid "No Card Inserted"
+msgstr "कोई कार्ड सम्मिलित नहीं है"
+
+msgid "No Content"
+msgstr "कोई सामग्री नहीं"
+
+msgid "No DiSEqC"
+msgstr "कोई डायसेकसी नहीं"
+
+msgid "No Items"
+msgstr "कोई आइटम नहीं"
+
+msgid "No Music"
+msgstr "कोई संगीत नहीं"
+
+msgid "No Signal Lock"
+msgstr "कोई सिग्नल लॉक नहीं"
+
+msgid "No SmartCard found. This movie can not be ordered"
+msgstr "कोई स्मार्टकार्ड नहीं मिला। इस फिल्म का आदेश नहीं दिया जा सकता"
+
+msgid "No access"
+msgstr "नो एक्सेस"
+
+#, c-format
+msgid "No access (%d)"
+msgstr "नो एक्सेस (%d)"
+
+msgid "No access (1)"
+msgstr "नो एक्सेस (1)"
+
+msgid "No access (10)"
+msgstr "नो एक्सेस (10)"
+
+msgid "No access (11)"
+msgstr "नो एक्सेस(11)"
+
+msgid "No access (12)"
+msgstr "नो एक्सेस (12)"
+
+msgid "No access (2)"
+msgstr "नो एक्सेस (2)"
+
+msgid "No access (3)"
+msgstr "नो एक्सेस (3)"
+
+msgid "No access (4)"
+msgstr "नो एक्सेस (4)"
+
+msgid "No access (5)"
+msgstr "नो एक्सेस (5)"
+
+msgid "No access (6)"
+msgstr "नो एक्सेस (6)"
+
+msgid "No access (7)"
+msgstr "नो एक्सेस (7)"
+
+msgid "No access (8)"
+msgstr "नो एक्सेस (8)"
+
+msgid "No access (9)"
+msgstr "नो एक्सेस (9)"
+
+msgid "No access (No pairing)"
+msgstr "नो एक्सेस (नो पैरिंग)"
+
+msgid "No access - geographical blackout"
+msgstr "नो एक्सेस - भौगोलिक ब्लैकआउट"
+
+msgid "No access - network block"
+msgstr "नो एक्सेस - नेटवर्क ब्लॉक"
+
+msgid "No card inserted"
+msgstr "कोई कार्ड नहीं डाला"
+
+msgid "No channel"
+msgstr "कोई चैनल नहीं"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"कोई भी चैनल स्थापित नहीं है। \n"
+"चैनल स्कैनिंग की आवश्यकता है।"
+
+msgid "No credits"
+msgstr "कोई क्रेडिट नहीं"
+
+msgid "No debits"
+msgstr "कोई डेबिट नहीं है"
+
+msgid "No entries"
+msgstr "नो एंट्रीज"
+
+msgid "No events"
+msgstr "कोई इवेंट नहीं है"
+
+msgid "No items"
+msgstr "कोई वस्तु नहीं"
+
+msgid "No list"
+msgstr "कोई सूची नहीं"
+
+msgid "No messages"
+msgstr "कोई संदेश नहीं"
+
+msgid "No pairing"
+msgstr "नो पैरिंग"
+
+msgid "No purses"
+msgstr "कोई पर्स नहीं"
+
+msgid "No results"
+msgstr "कोई परिणाम नहीं"
+
+msgid "No results found"
+msgstr "कोई परिणाम नहीं मिला"
+
+msgid ""
+"No results.\n"
+"Please enter new search criteria"
+msgstr ""
+"कोई परिणाम नहीं। \n"
+"कृपया नया खोज मानदंड दर्ज करें"
+
+msgid "No subscription"
+msgstr "कोई सदस्यता नहीं है"
+
+msgid "No subscriptions"
+msgstr "कोई सदस्यता नहीं है"
+
+msgid "No time limits"
+msgstr "कोई समय सीमा नहीं"
+
+msgid "No title"
+msgstr "कोई शीर्षक नहीं"
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "गैर संगत संग्रहण डिवाइस का पता चला (त्रुटि 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "गैर संगत संग्रहण डिवाइस का पता चला, (त्रुटि 3)"
+
+msgid "Non smartcard"
+msgstr "गैर स्मार्टकार्ड"
+
+msgid "Non smartcard configuration changed - please enter PIN"
+msgstr "गैर स्मार्टकार्ड कॉन्फ़िगरेशन बदला - कृपया पिन दर्ज करें"
+
+msgid "Non smartcard mode"
+msgstr "गैर स्मार्टकार्ड मोड"
+
+msgid "Non smartcard mode with card"
+msgstr "कार्ड के साथ गैर स्मार्टकार्ड मोड"
+
+msgid "Normal"
+msgstr "सामान्य"
+
+msgid "Normal power consumption, fast recovery"
+msgstr "सामान्य बिजली की खपत, तेज़ रिकवरी"
+
+msgid "Norwegian"
+msgstr "नार्वेजियन"
+
+msgid "Not Available"
+msgstr "उपलब्ध नहीं है"
+
+msgid "Not Entitled"
+msgstr "अधिकार नहीं"
+
+msgid "Not authorized"
+msgstr "अधिकृत नहीं है"
+
+msgid "Not authorized."
+msgstr "अधिकृत नहीं है।"
+
+msgid "Not connected"
+msgstr "कनेक्ट नहीं है"
+
+msgid "Not enough tokens - please recharge your card"
+msgstr "पर्याप्त टोकन नहीं - कृपया अपना कार्ड रिचार्ज करें"
+
+msgid "Not entitled"
+msgstr "हकदार नहीं"
+
+msgid "Not present"
+msgstr "उपस्थित नहीं है"
+
+msgid "Not subscribed"
+msgstr "सदस्यता नहीं ली गई"
+
+msgid "Nov"
+msgstr "नवम्बर"
+
+msgid "NpvrMargins"
+msgstr "एनपीवीआर मार्जिन"
+
+msgid "Number of Pages"
+msgstr "पन्नों की संख्या"
+
+msgid "Number of Sessions"
+msgstr "सत्रों की संख्या"
+
+msgid "OK"
+msgstr "ठीक है"
+
+msgid "ONID selection"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr "ओएसडी / बैनर प्रदर्शन समय"
+
+msgid "Obtaining IP address..."
+msgstr "आईपी पता प्राप्त कर रहा है ..."
+
+msgid "Oct"
+msgstr "अक्टूबर"
+
+msgid "Off"
+msgstr "बंद"
+
+msgid "Off (Auto Relock)"
+msgstr "ऑफ (ऑटो रिलाक)"
+
+msgid "Off (Relock Manually)"
+msgstr "ऑफ (रीलॉक मैन्युअली)"
+
+msgid "Offline"
+msgstr "ऑफ़लाइन"
+
+msgid "Ok"
+msgstr "ठीक है"
+
+msgid "Old CA PIN field is not complete"
+msgstr "पुराना सीए पिन क्षेत्र पूर्ण नहीं है"
+
+msgid "Old PIN field is not complete."
+msgstr "पुराना पिन क्षेत्र पूरा नहीं हुआ है।"
+
+msgid "Old PIN:"
+msgstr "पुराना पिन:"
+
+msgid "Old pin is invalid."
+msgstr "पुराना पिन अमान्य है।"
+
+msgid "On"
+msgstr "चालू"
+
+msgid "Ongoing Recordings"
+msgstr "चालू रिकॉर्डिंग"
+
+msgid "Ongoing recording is unavilable due to parental control restrictions"
+msgstr "अभिभावकीय नियंत्रण प्रतिबंधों के चलते निरंतर रिकॉर्डिंग अनुपलब्ध है"
+
+msgid "Only for testing"
+msgstr "केवल परीक्षण के लिए"
+
+msgid "Open"
+msgstr "खुला"
+
+msgid "Operation Successful"
+msgstr "कार्य सफल"
+
+msgid "Options"
+msgstr "विकल्प"
+
+msgid "Order Now"
+msgstr "अब आदेश दें"
+
+msgid "Order by SMS"
+msgstr "एसएमएस द्वारा आदेश"
+
+msgid "Order history"
+msgstr "ऑर्डर इतिहास"
+
+#, c-format
+msgid ""
+"Ordering\n"
+"%s \\%s\n"
+"Please contact your operator for further information."
+msgstr ""
+"आदेश \n"
+"%s \\%s\n"
+"अधिक जानकारी के लिए कृपया अपने ऑपरेटर से संपर्क करें।"
+
+msgid "Original Format"
+msgstr "मूल प्रारूप"
+
+msgid "Oriya"
+msgstr "उड़ीसा"
+
+#, c-format
+msgid "Other error: [%d]"
+msgstr "अन्य त्रुटि: [%d]"
+
+msgid "Others"
+msgstr "अन्य"
+
+msgid "Out of quota on nPVR server."
+msgstr "एनपीवीआर सर्वर पर कोटा से बाहर।"
+
+msgid "Override"
+msgstr "ओवरराइड"
+
+msgid "PAL"
+msgstr "पाल"
+
+msgid "PAT Status"
+msgstr "पैट स्थिति"
+
+msgid "PCR"
+msgstr "पीसीआर"
+
+msgid "PG: Parental Guidance"
+msgstr "पीजी: अभिभावकीय मार्गदर्शन"
+
+msgid "PID"
+msgstr "पीआईडी"
+
+msgid "PIN Change"
+msgstr "पिन बदल"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "पिन प्रमाणीकरण%d मिनट के लिए अवरुद्ध"
+msgstr[1] "%d मिनट के लिए पिन प्रमाणीकरण अवरुद्ध"
+
+msgid "PIN change"
+msgstr "पिन परिवर्तन"
+
+msgid "PIN confirmation does not match."
+msgstr "पिन पुष्टि मैच नहीं है।"
+
+msgid "PIN:"
+msgstr "पिन:"
+
+msgid "PLPID"
+msgstr "पीएलपीआईडी"
+
+msgid "PMT Status"
+msgstr "पीएमटी स्थिति"
+
+msgid "PVR"
+msgstr "पीवीआर"
+
+msgid "PVR End Margin"
+msgstr "पीवीआर समाप्ति मार्जिन"
+
+msgid "PVR Start Margin"
+msgstr "पीवीआर प्रारंभ मार्जिन"
+
+msgid "PVR end time setup - warning"
+msgstr "पीवीआर समाप्ति समय सेटअप - चेतावनी"
+
+msgid "Pairing Ok"
+msgstr ""
+
+msgid "Pairing Remote Controller"
+msgstr "रिमोट कंट्रोलर को जोड़ना"
+
+msgid "Pairing bad"
+msgstr "बुरा जोड़ रहा है"
+
+msgid "Pairing status"
+msgstr "जोड़ना स्थिति"
+
+msgid "Pan and Scan"
+msgstr "पैन और स्कैन"
+
+msgid "Panjabi"
+msgstr "पंजाबी"
+
+msgid "Parental control"
+msgstr "अभिभावक नियंत्रण"
+
+msgid "Parental control PIN"
+msgstr "अभिभावकीय नियंत्रण पिन"
+
+msgid "Parental control PIN (Non smartcard)"
+msgstr "अभिभावकीय नियंत्रण पिन (गैर स्मार्टकार्ड)"
+
+msgid "Parental control PIN required (CA)"
+msgstr "अभिभावकीय नियंत्रण पिन की आवश्यकता है (सीए)"
+
+msgid "Passive Standby"
+msgstr "निष्क्रिय स्टैंडबाय"
+
+msgid "Password"
+msgstr "पासवर्ड"
+
+#, c-format
+msgid "Password must contain between %d and %d characters"
+msgstr "पासवर्ड में %d और %d अक्षर के बीच होना चाहिए"
+
+msgid "Pin change successful."
+msgstr "पिन बदल सफल।"
+
+msgid "Play"
+msgstr "प्ले"
+
+msgid "Play Trailer"
+msgstr "ट्रेलर चलाएं"
+
+msgid "Play from the beginning"
+msgstr "शुरुआत से चलायें"
+
+msgid "Playback Settings"
+msgstr "प्लेबैक सेटिंग्स"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr "प्लेबैक त्रुटि कोड के साथ विफल: %d"
+
+msgid "Playlist name"
+msgstr "प्लेलिस्ट नाम"
+
+msgid "Please Wait"
+msgstr "कृपया प्रतीक्षा करें"
+
+msgid "Please configure network"
+msgstr "नेटवर्क कॉन्फ़िगर करें"
+
+msgid "Please confirm new CA PIN:"
+msgstr "कृपया नया सीए पिन की पुष्टि करें:"
+
+msgid "Please enter CA PIN"
+msgstr "कृपया CA पिन दर्ज करें"
+
+msgid "Please enter CA PIN:"
+msgstr "कृपया CA पिन दर्ज करें:"
+
+msgid "Please enter Conax PIN"
+msgstr "कृपया वेरिमेट्रिक्स पिन पिन दर्ज करें"
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr "कृपया चुने गए सामग्री को चलाने के लिए वेरिमेट्रिक्स पिन दर्ज करें"
+
+msgid "Please enter Middleware PIN"
+msgstr "कृपया मिडलवेयर पिन दर्ज करें"
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr "कृपया चुने गए सामग्री को चलाने के लिए मिडलवेयर पिन दर्ज करें"
+
+msgid "Please enter new CA PIN:"
+msgstr "कृपया नया सीए पिन दर्ज करें:"
+
+msgid "Please enter parental control PIN"
+msgstr "कृपया पैतृक नियंत्रण पिन दर्ज करें"
+
+msgid "Please enter parental control PIN to enter this category"
+msgstr "कृपया इस श्रेणी में प्रवेश करने के लिए पैतृक नियंत्रण पिन दर्ज करें"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr "कृपया चुने गए सामग्री को चलाने के लिए पैतृक नियंत्रण पिन दर्ज करें"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr "सभी रिकॉर्डिंग को हटाने के लिए कृपया पैतृक नियंत्रण पिन दर्ज करें"
+
+msgid "Please wait"
+msgstr "कृपया प्रतीक्षा करें"
+
+msgid "Please wait for result"
+msgstr "कृपया परिणाम के लिए प्रतीक्षा करें"
+
+msgid "Please wait, loading ..."
+msgstr "कृपया प्रतीक्षा करें, लोड हो रहा है ..."
+
+msgid "Please wait, loading..."
+msgstr "कृपया प्रतीक्षा करें, लोड हो रहा है ..."
+
+msgid "Please wait, loading…"
+msgstr "कृपया प्रतीक्षा करें, लोड हो रहा है ..."
+
+msgid "Please wait."
+msgstr "कृपया प्रतीक्षा करें।"
+
+msgid "Please wait..."
+msgstr "कृपया प्रतीक्षा करें ..."
+
+msgid "Polarization"
+msgstr "ध्रुवीकरण"
+
+msgid "Polish"
+msgstr "पोलिश"
+
+msgid "Poor"
+msgstr "खराब"
+
+msgid "Pre FEC BER"
+msgstr "पूर्व एफईसी बीईआर"
+
+msgid "Pre-certification debug options"
+msgstr "पूर्व प्रमाणन डीबग विकल्प"
+
+msgid "Preferences"
+msgstr "वरीयताएँ"
+
+msgid "Preferred Audio Track"
+msgstr "पसंदीदा ऑडियो ट्रैक"
+
+msgid "Premiere"
+msgstr "प्रीमियर"
+
+msgid "Press 'Cancel' to abort automatic switch to standby."
+msgstr "स्वत: स्विच को स्टैंडबाय पर बंद करने के लिए 'रद्द करें' दबाएं।"
+
+msgid "Press 'Configure Network' to see your network settings."
+msgstr "अपनी नेटवर्क सेटिंग्स देखने के लिए 'कॉन्फ़िगर नेटवर्क' दबाएं।"
+
+msgid "Press 'Enter Standby' to immediately switch to standby."
+msgstr "स्टैंडबाय पर तुरंत स्विच करने के लिए 'स्टैंडबाई दर्ज करें' दबाएं।"
+
+msgid "Press Back to go to previous screen"
+msgstr "पिछली स्क्रीन पर जाने के लिए पिछला दबाएं"
+
+msgid "Press Cancel to stay on current channel or press OK to go to"
+msgstr "मौजूदा चैनल पर रहने के लिए रद्द करें दबाएं या जाने के लिए ठीक दबाएं"
+
+msgid "Press EPG to enter grid view"
+msgstr "ग्रिड दृश्य प्रविष्ट करने के लिए ईपीजी दबाएं"
+
+msgid "Press EPG to enter list view"
+msgstr "सूची दृश्य प्रविष्ट करने के लिए ईपीजी दबाएं"
+
+msgid "Press OK button to start channel scanning."
+msgstr "चैनल स्कैनिंग शुरू करने के लिए ओके बटन दबाएं।"
+
+msgid "Press OK to browse"
+msgstr "ब्राउज़ करने के लिए ओके दबाएं"
+
+msgid "Press OK to browse or OPT to format"
+msgstr "ब्राउज़ करने के लिए ओके दबाएं या फॉर्मेट के लिए ओपीटी दबाएं"
+
+msgid "Press OPT to format"
+msgstr "फॉर्मेट करने के लिए ओपीटी दबाएं"
+
+msgid "Press Opt for advanced settings"
+msgstr "एडवांस सेटिंग्स के लिए ओपीटी दबाएं"
+
+msgid "Press Opt for more options"
+msgstr "अधिक विकल्पों के लिए ओपीटी दबाएं"
+
+msgid "Press Opt to add hidden SSID"
+msgstr "छुपी SSID जोड़ने के लिए ओपीटी दबाएं"
+
+msgid "Press Opt to unlock movie data"
+msgstr "फिल्म डेटा अनलॉक करने के लिए ओपीटी को दबाएं"
+
+msgid "Press RED button for more features"
+msgstr "अधिक सुविधाओं के लिए लाल बटन दबाएं"
+
+msgid "Press Restart Now button to restart."
+msgstr "पुनः आरंभ करने के लिए प्रेस पुनः आरंभ बटन दबाएं।"
+
+msgid "Press and hold \"OK\" and \"MENU\" buttons until diode on remote blinks."
+msgstr "दूरस्थ ब्लिंक्स पर डायोड तक प्रेस और \"ओके\" और \"मेनू\" बटन दबाए रखें।"
+
+#, c-format
+msgid "Press and hold power button for %u second to enter passive standby."
+msgid_plural "Press and hold power button for %u seconds to enter passive standby."
+msgstr[0] "निष्क्रिय और स्टैंडबाय दर्ज करने के लिए %u सेकंड के लिए पॉवर बटन दबाएं और दबाए रखें"
+msgstr[1] "निष्क्रिय और स्टैंडबाय दर्ज करने के लिए %u सेकंड के लिए पॉवर बटन दबाएं और दबाए रखें"
+
+msgid "Press power button to cancel standby."
+msgstr "स्टैंडबाय को रद्द करने के लिए पावर बटन दबाएं।"
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "पिछला फर्मवेयर संस्करण: %s"
+
+msgid "Price: %i.%02i %s"
+msgstr "मूल्य: %i.%02i %s"
+
+msgid "Price: %i.%02i%s"
+msgstr "मूल्य: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "प्राथमिक ऑडियो भाषा"
+
+msgid "Primary Subtitle Language"
+msgstr "प्राथमिक उपशीर्षक भाषा"
+
+msgid "Problem"
+msgstr "समस्या"
+
+msgid "Proceed"
+msgstr "आगे बढ़ें"
+
+msgid "Processing KERNEL"
+msgstr "कर्नेल प्रसंस्करण"
+
+msgid "Processing LOGO"
+msgstr "प्रसंस्करण लोगो"
+
+msgid "Processing ROOTFS"
+msgstr "प्रसंस्करण रुट एफ एस"
+
+msgid "Processing USR"
+msgstr "यूएसआर प्रसंस्करण"
+
+msgid "Program Number"
+msgstr "प्रोग्राम संख्या"
+
+msgid "Progressive"
+msgstr "प्रोग्रेसिव"
+
+msgid "Prompt"
+msgstr "शीघ्र"
+
+msgid "Prompt when pressed"
+msgstr "दबाए जाने पर संकेत दें"
+
+msgid "Protocol not supported: %d"
+msgstr "प्रोटोकॉल समर्थित नहीं है: %d"
+
+#, c-format
+msgid "Purse: %s"
+msgstr "पर्स: %s"
+
+msgid "Push VOD"
+msgstr "पुश वीओडी"
+
+msgid "PushServer Connectivity"
+msgstr "पुश सर्वर कनेक्टिविटी"
+
+msgid "QAM128"
+msgstr "क्यू ए एम128"
+
+msgid "QAM16"
+msgstr "क्यू ए एम16"
+
+msgid "QAM256"
+msgstr "क्यू ए एम256"
+
+msgid "QAM32"
+msgstr "क्यू ए एम32"
+
+msgid "QAM64"
+msgstr "क्यू ए एम64"
+
+msgid "QPSK"
+msgstr "क्यूपीएसके"
+
+msgid "QR code"
+msgstr "क्यूआर कोड"
+
+msgid "Quality"
+msgstr "गुणवत्ता"
+
+msgid "Quality Level"
+msgstr "गुणवत्ता स्तर"
+
+msgid "Quota"
+msgstr "कोटा"
+
+msgid "RCU Pairing"
+msgstr "आरसीयू जोड़ना"
+
+msgid "RCU Power Button"
+msgstr "आरसीयू पावर बटन"
+
+msgid "RECOMMENDED"
+msgstr "सिफारिश"
+
+msgid "RF Channel"
+msgstr "आरएफ चैनल"
+
+msgid "RF Signal Status"
+msgstr "आरएफ सिग्नल स्थिति"
+
+msgid "RF Tuner Statistics"
+msgstr "आरएफ ट्यूनर आंकड़े"
+
+msgid "RGB"
+msgstr "आरजीबी"
+
+msgid "Radio"
+msgstr "रेडियो"
+
+msgid "Radio Guide"
+msgstr "रेडियो गाइड"
+
+msgid "Rearrange list"
+msgstr "सूची की पुनर्रचना करें"
+
+msgid "Recommended"
+msgstr "सिफारिश"
+
+msgid "Recommended Titles:"
+msgstr "सिफारिश की हुइ टाइटल्स"
+
+msgid "Record"
+msgstr "रिकॉर्ड"
+
+msgid "Record always"
+msgstr "हमेशा रिकॉर्ड करें"
+
+msgid "Record keyword with nPVR"
+msgstr "सूचक शब्द एनपीवीआर के साथ रिकॉर्ड करें"
+
+msgid "Record repeatedly"
+msgstr "बार-बार रिकॉर्ड करें"
+
+msgid "Record series with nPVR"
+msgstr "एनपीवीआर के साथ श्रृंखला रिकॉर्ड करें"
+
+msgid "Record with nPVR"
+msgstr "एनपीवीआर के साथ रिकॉर्ड करें"
+
+msgid "Recording Settings"
+msgstr "रिकॉर्डिंग सेटिंग्स"
+
+msgid "Recording can't be scheduled - not enough quota."
+msgstr "रिकॉर्डिंग निर्धारित नहीं किया जा सकता है - पर्याप्त कोटा नहीं।"
+
+msgid "Recording can't be scheduled on selected event."
+msgstr "चयनित घटना पर रिकॉर्डिंग निर्धारित नहीं किया जा सकता है।"
+
+#, c-format
+msgid "Recording channel %s is not available due to broadcaster's limitations"
+msgstr "प्रसारक की सीमाओं के कारण रिकॉर्डिंग चैनल %s उपलब्ध नहीं है"
+
+msgid "Recording is in the wrong state."
+msgstr "रिकॉर्डिंग गलत स्थिति में है।"
+
+msgid "Recording not found."
+msgstr "रिकॉर्डिंग नहीं मिला।"
+
+msgid "Recording on that event has been already scheduled."
+msgstr "उस घटना पर रिकॉर्डिंग पहले से निर्धारित हो चुकी है।"
+
+msgid "Recording schedule failed."
+msgstr "रिकॉर्डिंग अनुसूची विफल।"
+
+msgid "Regional"
+msgstr "प्रादेशिक"
+
+msgid "Remind me"
+msgstr "मुझे याद दिलाएं"
+
+msgid "Reminder"
+msgstr "स्मरणपत्र"
+
+msgid "Reminders"
+msgstr "स्मरणपत्र"
+
+msgid "Remote debugging"
+msgstr "दूरस्थ डिबगिंग"
+
+msgid "Removal not possible"
+msgstr "निष्कासन संभव नहीं है"
+
+msgid "Remove"
+msgstr "निकालें"
+
+msgid "Remove channel"
+msgstr "चैनल निकालें"
+
+msgid "Remove directory & keep contents"
+msgstr "निर्देशिका को निकालें और सामग्री रखें"
+
+msgid "Remove from Favorites"
+msgstr "पसंदीदा से निकालें"
+
+msgid "Remove list"
+msgstr "सूची निकालें"
+
+msgid "Remove reminder"
+msgstr "स्मरणपत्र निकालें"
+
+msgid "Remove satellite"
+msgstr "सैटेलाइट हटाएं"
+
+msgid "Removed"
+msgstr "हटाया गया"
+
+msgid "Rename directory"
+msgstr "निर्देशिका का नाम बदलें"
+
+msgid "Rename list"
+msgstr "सूची का नाम बदलें"
+
+msgid "Rent"
+msgstr "किराया"
+
+msgid "Rental Terms"
+msgstr "किराये की शर्तें"
+
+msgid "Rental period expired"
+msgstr "किराये की अवधि समाप्त हो गई है"
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "किराये की अवधि: %i %s"
+
+msgid "Renting Period Expired."
+msgstr "किराये की अवधि समाप्त हो गई है।"
+
+msgid "Repeat"
+msgstr "दोहराएं"
+
+msgid "Repeat new PIN:"
+msgstr "नया पिन दोहराएं:"
+
+msgid "Resolve conflicts"
+msgstr "विरोध को हल करें"
+
+msgid "Restart Device"
+msgstr "डिवाइस पुनरारंभ करें"
+
+msgid "Restart Now"
+msgstr "अब पुनरारंभ करें"
+
+msgid "Restore Factory Defaults"
+msgstr "फ़ैक्टरी डिफ़ॉल्ट पुनर्स्थापित करें"
+
+msgid "Restore defaults"
+msgstr "डिफ़ॉल्ट पुनर्स्थापित करें"
+
+msgid "Restored last working network configuration."
+msgstr "अंतिम कार्यशील नेटवर्क विन्यास बहाल।"
+
+msgid "Results - Failure"
+msgstr "परिणाम - विफलता"
+
+msgid "Results - Success"
+msgstr "परिणाम - सफलता"
+
+msgid "Resume event pin"
+msgstr "इवेंट पिन फिर से शुरू करें"
+
+msgid "Retrieving channel list"
+msgstr "चैनल सूची को पुनः प्राप्त कर रहा है"
+
+msgid "Routing settings"
+msgstr "रौटिंग सेटिंग्स"
+
+msgid "Russian"
+msgstr "रूसी"
+
+msgid "S/PDIF A/V Sync"
+msgstr "एस / पीडीआईएफ ए / वी सिंक"
+
+msgid "SCART Signal Type"
+msgstr "SCART सिग्नल प्रकार"
+
+msgid "SDT Status"
+msgstr "SDT स्थिति"
+
+msgid "SID"
+msgstr "एसआईडी"
+
+msgid "SIMILAR TITLES:"
+msgstr "समान शीर्षक:"
+
+msgid "SNR"
+msgstr "एसएनआर"
+
+msgid "SSID is unknown"
+msgstr "एसएसआईडी अज्ञात है"
+
+msgid "SSID is unknown!"
+msgstr "एसएसआईडी अज्ञात है!"
+
+msgid "SSL 1"
+msgstr "SSL 1"
+
+msgid "SSL 2"
+msgstr "SSL 2"
+
+msgid "SSM"
+msgstr "एसएसएम"
+
+msgid "SSM Download"
+msgstr "एसएसएम डाउनलोड"
+
+msgid "STB ID"
+msgstr "एसटीबी आईडी"
+
+msgid "STB Mode has changed"
+msgstr "एसटीबी मोड बदल गया है"
+
+msgid "STB Mode update is required to make the STB work correctly."
+msgstr "एसटीबी मोड अद्यतन एसटीबी काम सही ढंग से करने के लिए आवश्यक है।"
+
+msgid "STB Status"
+msgstr "एसटीबी स्थिति"
+
+msgid "Satellite"
+msgstr "सैटेलाइट"
+
+msgid "Satellite %s is not setup yet"
+msgstr "सैटेलाइट %s अभी तक सेटअप नहीं है"
+
+msgid "Satellite Info"
+msgstr "सैटेलाइट सूचना"
+
+msgid "Satellite Name"
+msgstr "सैटेलाइट नाम"
+
+msgid "Satellite Name:"
+msgstr "सैटेलाइट नाम:"
+
+msgid "Satellite Setup"
+msgstr "सैटेलाइट सेटअप"
+
+msgid "Satellite name cannot be empty"
+msgstr "सैटेलाइट नाम रिक्त नहीं हो सकता"
+
+msgid "Satellite with given name already exists"
+msgstr "दिए गए नाम के साथ उपग्रह पहले से मौजूद है"
+
+msgid "Saturdays"
+msgstr "शनिवार"
+
+msgid "Save"
+msgstr "सेव"
+
+msgid "Saving..."
+msgstr "सेविंग ..."
+
+msgid "Scan Type"
+msgstr "स्कैन प्रकार"
+
+msgid "Scan now"
+msgstr "अब स्कैन करें"
+
+msgid "Scanning Standard"
+msgstr "स्कैनिंग मानक"
+
+msgid "Scanning channels"
+msgstr "चैनल स्कैन कर रहा है"
+
+msgid "Scanning failed"
+msgstr "स्कैनिंग विफल"
+
+#, c-format
+msgid "Scanning frequency: %d.%02d MHz"
+msgstr "स्कैनिंग आवृत्ति: %d। %02d MHz"
+
+msgid "Schedule"
+msgstr "शेड्यूल"
+
+msgid "Schedule keyword recording"
+msgstr "कीवर्ड रिकॉर्डिंग शेड्यूल करें"
+
+msgid "Schedule manual recording"
+msgstr "मैनुअल रिकॉर्डिंग शेड्यूल करें"
+
+msgid "Schedule series recording"
+msgstr "शेड्यूल श्रृंखला रिकॉर्डिंग"
+
+msgid "Scheduled Recordings"
+msgstr "शेड्यूलड रिकॉर्डिंग"
+
+msgid "Screensaver Timeout"
+msgstr "स्क्रीनसेवर टाइमआउट"
+
+msgid "Search"
+msgstr "खोज"
+
+msgid "Search Error"
+msgstr "खोज त्रुटि"
+
+msgid "Search by category"
+msgstr "श्रेणी के अनुसार खोजें"
+
+msgid "Search by description"
+msgstr "विवरण के अनुसार खोजें"
+
+msgid "Search by name"
+msgstr "नाम से खोजें"
+
+msgid "Search in progress..."
+msgstr "खोज प्रगति में है ..."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "खोज: %d परिणाम"
+msgstr[1] "खोज: %d परिणाम"
+
+msgid "Searching for channels"
+msgstr "चैनलों के लिए खोज"
+
+msgid "Searching..."
+msgstr "खोज रहा है ..."
+
+#, c-format
+msgid "Season: %zu"
+msgstr "सीजन: %zu"
+
+msgid "Secondary Audio Language"
+msgstr "माध्यमिक ऑडियो भाषा"
+
+msgid "Secondary Subtitle Language"
+msgstr "माध्यमिक उपशीर्षक भाषा"
+
+msgid "See all"
+msgstr "सभी देखें"
+
+msgid "See all from"
+msgstr "सभी से देखें"
+
+msgid "Select Time Zone"
+msgstr "समय क्षेत्र चुनें"
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "%s आउटपुट पर ऑडियो विलंब चुनें"
+
+msgid "Select event"
+msgstr "इवेंट चुनें"
+
+msgid "Select images"
+msgstr "चित्र चुनें"
+
+msgid "Select music"
+msgstr "संगीत चुनें"
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "नए परिपक्वता रेटिंग (सीए पिन की आवश्यकता) चुनें"
+
+msgid "Sent from remote device"
+msgstr "दूरस्थ डिवाइस से भेजा गया"
+
+msgid "Sep"
+msgstr "सितम्बर"
+
+msgid "Serial Number"
+msgstr "सीरियल नंबर"
+
+msgid "Series directory name"
+msgstr "श्रृंखला निर्देशिका नाम"
+
+msgid "Series directory name cannot be empty"
+msgstr "श्रृंखला निर्देशिका नाम रिक्त नहीं हो सकता"
+
+#, c-format
+msgid "Series directory name must be at least %d characters"
+msgstr "श्रृंखला निर्देशिका नाम कम से कम %d अक्षर होना चाहिए"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr "सर्वर संचार त्रुटि: %d"
+
+msgid "Server error"
+msgstr "सर्वर त्रुटि"
+
+msgid "Server error: forbidden"
+msgstr "सर्वर त्रुटि: वर्जित"
+
+msgid "Server error: unsupported protocol"
+msgstr "सर्वर त्रुटि: असमर्थित प्रोटोकॉल"
+
+msgid "DVB error: no audio/video"
+msgstr ""
+
+
+msgid "Service Not Found - Please Contact your service representative."
+msgstr "सेवा नहीं मिली - कृपया अपने सेवा प्रतिनिधि से संपर्क करें।"
+
+msgid "Service unavailable"
+msgstr "सेवा अनुपलब्ध"
+
+msgid "Set Auto Relock Time"
+msgstr "स्वत: रिलाॉक समय सेट करें"
+
+msgid "Set duration"
+msgstr "सेट अवधि"
+
+msgid "Set the preferred gateway"
+msgstr "पसंदीदा गेटवे सेट करें"
+
+msgid "Set top box starting up one moment please"
+msgstr "सेट टॉप बॉक्स शुरू हो रहा है, एक क्षण कृपया"
+
+msgid "Setup"
+msgstr "सेटअप"
+
+msgid "Short Term Error"
+msgstr "शॉर्ट टर्म त्रुटि"
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "रिकॉर्डिंग को %s में छोटा करें"
+
+msgid "Show selected"
+msgstr "चयनित दिखाएँ"
+
+msgid "Show similar"
+msgstr "समान दिखाएँ"
+
+msgid "Show/Game show"
+msgstr "शो / गेम शो"
+
+msgid "Sign Off"
+msgstr "साइन आउट करें"
+
+msgid "Signal - OK"
+msgstr "सिग्नल - ओके"
+
+msgid "Signal Level"
+msgstr "संकेत स्तर"
+
+msgid "Signal Quality"
+msgstr "सिग्नल क्वालिटी"
+
+msgid "Signal Strength"
+msgstr "सिग्नल स्ट्रेंथ"
+
+msgid "Signal lost - check cable"
+msgstr "सिग्नल लॉस्ट - चेक केबल"
+
+msgid "Slideshow"
+msgstr "स्लाइड शो"
+
+msgid "SmartCard ID"
+msgstr "स्मार्टकार्ड आईडी"
+
+msgid "SmartCard Status"
+msgstr "स्मार्ट कार्ड स्थिति"
+
+msgid "SmartCard Subscription Status"
+msgstr "स्मार्टकार्ड सदस्यता स्थिति"
+
+msgid "Smartcard"
+msgstr "स्मार्टकार्ड"
+
+msgid "Smartcard configuration changed - please enter PIN"
+msgstr "स्मार्टकार्ड कॉन्फ़िगरेशन बदल गया है - कृपया पिन दर्ज करें"
+
+msgid "Smartcard hardware error"
+msgstr "स्मार्ट कार्ड हार्डवेयर त्रुटि"
+
+msgid "Smartcard not present"
+msgstr "स्मार्ट कार्ड मौजूद नहीं है"
+
+msgid "Smartcard ok"
+msgstr "स्मार्टकार्ड ठीक है"
+
+msgid "Smartcard rejected"
+msgstr "स्मार्टकार्ड अस्वीकृत"
+
+msgid "Social Media"
+msgstr "सोशल मीडिया"
+
+msgid "Social/Political issues/Economics"
+msgstr "सामाजिक / राजनीतिक मुद्दों / अर्थशास्त्र"
+
+msgid "Software"
+msgstr "सॉफ्टवेयर"
+
+msgid "Software Update"
+msgstr "सॉफ्टवेयर अपडेट"
+
+msgid "Software Version"
+msgstr "सॉफ्टवेयर संस्करण"
+
+msgid "Some services are unavailable due to lack of connectivity. Please check your network setup."
+msgstr "कनेक्टिविटी की कमी के कारण कुछ सेवाएं अनुपलब्ध हैं। कृपया अपने नेटवर्क सेटअप को चेक करे।"
+
+msgid "Sort satellites"
+msgstr "उपग्रहों को क्रमबद्ध करें"
+
+msgid "Space Recovery"
+msgstr "स्पेस रिकवरी"
+
+msgid "Space recovery"
+msgstr "स्पेस रिकवरी"
+
+msgid "Spanish"
+msgstr "स्पेनिश"
+
+msgid "Special"
+msgstr "विशेष"
+
+msgid "Spectral Inversion Mode"
+msgstr "स्पेक्ट्रल इनवर्शन मोड"
+
+msgid "Sports"
+msgstr "खेल"
+
+msgid "Standard"
+msgstr "मानक"
+
+msgid "Standby Mode"
+msgstr "स्टैंडबाय मोड"
+
+msgid "Standby Settings"
+msgstr "स्टैंडबाय सेटिंग्स"
+
+msgid "Start"
+msgstr "प्रारंभ करें"
+
+msgid "Start Frequency"
+msgstr "स्टार्ट फ्रीक्वेंसी"
+
+msgid "Start Margin"
+msgstr "स्टार्ट मार्जिन"
+
+msgid "Start RCU Pairing"
+msgstr "आरसीयू पैरिंग प्रारंभ करें"
+
+msgid "Start date                           End date"
+msgstr "प्रारंभ दिनांक                समाप्ति दिनांक"
+
+msgid "Start date                End date                   Entitlement"
+msgstr "प्रारंभ दिनांक               समाप्ति दिनांक             एंटाइटेलमेंट"
+
+msgid "Start time"
+msgstr "प्रारंभ समय"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Enter CA PIN to start viewing:"
+msgstr ""
+"देखने को प्रारंभ करें \n"
+"%s\n"
+"मिनट देखने का समय शेष: %i \n"
+"देखने के लिए सीए पिन दर्ज करें:"
+
+#, c-format
+msgid "Start: %s min, End: %s min"
+msgstr "प्रारंभ करें: %s मिनट, समाप्ति: %s मिनट"
+
+msgid "Status: %u%% downloaded"
+msgstr "स्थिति: %u%% डाउनलोड"
+
+msgid "Status: Download scheduled"
+msgstr "स्थिति: शेड्यूलड डाउनलोड"
+
+msgid "Status: Not available"
+msgstr "स्थिति: उपलब्ध नहीं है"
+
+#, c-format
+msgid "Step %d out of %d"
+msgstr "%d से बाहर %d चरण"
+
+msgid "Stereo"
+msgstr "स्टीरियो"
+
+msgid "Stop"
+msgstr "रोकें"
+
+msgid "Stop channel recording"
+msgstr "चैनल रिकॉर्डिंग रोकें"
+
+msgid "Stop keyword recording"
+msgstr "कीवर्ड रिकॉर्डिंग रोकें"
+
+msgid "Stop recording"
+msgstr "रिकॉर्डिंग रोकें"
+
+msgid "Stop recording always"
+msgstr "हमेशा रिकॉर्डिंग रोकें"
+
+msgid "Stop recording repeatedly"
+msgstr "बार-बार रिकॉर्डिंग रोकें"
+
+msgid "Stop repeated recording"
+msgstr "बार-बार रिकॉर्डिंग रोकें"
+
+msgid "Stop series recording"
+msgstr "श्रृंखला रिकॉर्डिंग रोकें"
+
+msgid "Stop time can not be set before current time"
+msgstr "रोक समय वर्तमान समय से पहले सेट नहीं किया जा सकता है"
+
+msgid "Stop using disk"
+msgstr "डिस्क का प्रयोग बंद करो"
+
+msgid "Stop using for PVR"
+msgstr "पीवीआर के लिए प्रयोग बंद करो"
+
+msgid "Stop using for PVR/TS"
+msgstr "पीवीआर / टीएस के लिए प्रयोग बंद करो"
+
+msgid "Stop using for Timeshift"
+msgstr "टाइमशिफ्ट के लिए प्रयोग बंद करो"
+
+msgid "Stopped"
+msgstr "बंद कर दिया"
+
+msgid "Strength"
+msgstr "शक्ति"
+
+msgid "Stretched"
+msgstr "बढ़ाया"
+
+msgid "Subscription Info"
+msgstr "सदस्यता जानकारी"
+
+msgid "Subscription Status"
+msgstr "सदस्यता स्थिति"
+
+msgid "Subscription info"
+msgstr "सदस्यता जानकारी"
+
+msgid "Subtitle Language"
+msgstr "उपशीर्षक भाषा"
+
+msgid "Subtitles encoding"
+msgstr "उपशीर्षक एन्कोडिंग"
+
+msgid "Subtitles: -"
+msgstr "उपशीर्षक: -"
+
+msgid "Successfully paired device with the remote controller."
+msgstr "रिमोट कंट्रोलर के साथ सफलतापूर्वक युग्मित डिवाइस।"
+
+msgid "Such task already exists."
+msgstr "ऐसा कार्य पहले से मौजूद है।"
+
+msgid "Summary"
+msgstr "सारांश"
+
+msgid "Sundays"
+msgstr "रविवार"
+
+msgid "Swedish"
+msgstr "स्वीडिश"
+
+msgid "Switch to channel"
+msgstr "चैनल पर स्विच करें"
+
+msgid "Symbol Rate"
+msgstr "सिंबल दर"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "सिंबल दर: %d"
+
+msgid "System Information"
+msgstr "सिस्टम सूचना"
+
+msgid "System Settings"
+msgstr "सिस्टम सेटिंग्स"
+
+msgid "System Time"
+msgstr "सिस्टम समय"
+
+msgid "System reboot is required to apply new application layout."
+msgstr "सिस्टम रिबूट नए अनुप्रयोग लेआउट को लागू करने के लिए आवश्यक है।"
+
+#, c-format
+msgid "T: %dh%02d'"
+msgstr "टी: %dh%02d'"
+
+msgid "TDT Status"
+msgstr "टीडीटी स्थिति"
+
+msgid "TSH disallowed"
+msgstr "टीएसएच अस्वीकृत"
+
+msgid "TSID"
+msgstr "टीएसआईडी"
+
+msgid "TV"
+msgstr "टीवी"
+
+msgid "TV Control"
+msgstr "टीवी नियंत्रण"
+
+msgid "TV Guide"
+msgstr "टीवी गाइड"
+
+msgid "TV Size"
+msgstr "टीवी आकार"
+
+msgid "TV Store"
+msgstr "टीवी स्टोर"
+
+msgid "TV System"
+msgstr "टीवी सिस्टम"
+
+msgid "Tamil"
+msgstr "तामिल"
+
+msgid "Telugu"
+msgstr "तेलुगू"
+
+msgid "Terrestrial"
+msgstr "स्थलीय"
+
+msgid "The access was not authorized (e.g. trying to update Cpe with a different customer id) or the supplied CpeId, CustomerId or ProfileId was incorrect."
+msgstr "पहुंच अधिकृत नहीं था (उदाहरण के लिए सीईपी को एक अलगग्राहक आईडी) या आपूर्ति की गई सीपीआईडी, ग्राहक आईडी या प्रोफाइलआईडी गलत थी।"
+
+msgid "The custom data exceeds the allowed configured size."
+msgstr "कस्टम डेटा अनुमति विन्यस्त आकार से अधिक है।"
+
+msgid "The directory will be deleted."
+msgstr "निर्देशिका हटा दी जाएगी।"
+
+msgid "The limit of simultaneous tasks has been exceeded."
+msgstr "एक साथ कार्य की सीमा पार हो गई है।"
+
+msgid "The movie is currently not available."
+msgstr "फिल्म वर्तमान में उपलब्ध नहीं है।"
+
+msgid ""
+"The offer You are trying to access is a part of a package.\n"
+"Please contact operator for further instructions."
+msgstr ""
+"जिस प्रस्ताव को आप एक्सेस करने का प्रयास कर रहे हैं वह पैकेज का एक हिस्सा है। \n"
+"कृपया आगे निर्देशों के लिए ऑपरेटर से संपर्क करें।"
+
+msgid "The query was not ok, either the resource was not known or the requested resource id was not found or query parameters are unknown."
+msgstr "क्वेरी ठीक नहीं थी, या तो संसाधन ज्ञात नहीं था या अनुरोध किया गया थासंसाधन आईडी नहीं मिली है या क्वेरी पैरामीटर अज्ञात हैं।"
+
+msgid "The requested resource id was not found."
+msgstr "अनुरोधित संसाधन आईडी नहीं मिला।"
+
+msgid "There is a technical problem with this movie, please contact Customer Care"
+msgstr "इस मूवी के साथ एक तकनीकी समस्या है, कृपया ग्राहक सेवा से संपर्क करें"
+
+msgid "This action can not be performed on selected recording."
+msgstr "यह क्रिया चयनित रिकॉर्डिंग पर नहीं किया जा सकता है।"
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "यह क्रिया डिवाइस को रीबूट करती है। क्या आप निश्चित हैं?"
+
+msgid "This channel is not available for your operator"
+msgstr "यह चैनल आपके ऑपरेटर के लिए उपलब्ध नहीं है"
+
+msgid "This device is used as PVR storage"
+msgstr "यह उपकरण पीवीआर स्टोरेज के रूप में प्रयोग किया जाता है"
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "यह रिमाइंडर निम्नलिखित अनुस्मारक को ओवरराइड करेगा: \n"
+
+msgid "Thread Count"
+msgstr "थ्रेड गणना"
+
+msgid "Thursdays"
+msgstr "गुरुवार"
+
+msgid "Time Mode"
+msgstr "समय मोड"
+
+msgid "Time Settings"
+msgstr "समय सेटिंग्स"
+
+msgid "Time Zone"
+msgstr "टाइम ज़ोन"
+
+msgid "Timer"
+msgstr "टाइमर"
+
+msgid "Title blocked"
+msgstr "टाइटल ब्लॉक्ड "
+
+msgid "Title text template"
+msgstr "टाइटल टेक्स्ट टेम्पलेट"
+
+msgid "Title: %s"
+msgstr "टाइटल: %s"
+
+msgid ""
+"To start USB Speed Test Utility press OK.\n"
+"The USB Speed Test Utility will measure performance of your USB drive to obtain optimal timeshift and recordings parameters.\n"
+"The USB Speed Test Utility will be unavailable until next USB drive format."
+msgstr ""
+"यूएसबी स्पीड टेस्ट यूटिलिटी शुरू करने के लिए ठीक दबाएं। \n"
+"यूएसबी स्पीड टेस्ट यूटिलिटी आपके यूएसबी ड्राइव के प्रदर्शन कोइष्टतम टाइमशफ़्ट और रिकॉर्डिंग पैरामीटर प्राप्त करें। \n"
+"यूएसबी स्पीड टेस्ट सुविधा अगले यूएसबी ड्राइव प्रारूप तक अनुपलब्ध होगी।"
+
+msgid "To subscribe to this product (Traxis SVOD), please call Customer Support."
+msgstr "इस उत्पाद (ट्रक्सिस एसवीओडी) की सदस्यता लेने के लिए, कृपया ग्राहक सहयोग को कॉल करें।"
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"टोकन पहुंच \\ n%s\n"
+"%d टोकन %s \n"
+"बटुआ शेष: %s %d टोकन \n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "टोकन स्थिति"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "टोकन: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Date: %s"
+msgstr ""
+"टोकन: %d \n"
+"तारीख: %s"
+
+msgid "Too many simultaneous recordings."
+msgstr "बहुत से एक साथ रिकॉर्डिंग।"
+
+msgid "Total Memory"
+msgstr "कुल मेमोरी"
+
+msgid "Track %d"
+msgstr "%d ट्रैक करें"
+
+msgid "Trailer"
+msgstr "ट्रेलर"
+
+msgid "Transponders"
+msgstr "ट्रांसपोंडर"
+
+msgid "Tuesdays"
+msgstr "मंगलवार"
+
+msgid "Tuned Frequency"
+msgstr "ट्यूनड फ्रीक्वेंसी"
+
+msgid "Tuner Type"
+msgstr "ट्यूनर प्रकार"
+
+msgid "Type"
+msgstr "टाइप करें"
+
+msgid "USB"
+msgstr "यूएसबी"
+
+msgid "USB Speed Test Utility"
+msgstr "यूएसबी स्पीड टेस्ट यूटिलिटी"
+
+msgid "USB Speed Test failed. Try to reinsert you USB drive and run the test again."
+msgstr "यूएसबी स्पीड टेस्ट विफल हुआ। आपको यूएसबी ड्राइव को फिर से स्थापित करने का प्रयास करें और फिर से परीक्षण चलाएं।"
+
+msgid "USB Status"
+msgstr "यूएसबी स्थिति"
+
+msgid "UTF-8"
+msgstr "यूटीएफ -8"
+
+msgid "Unable to change settings while recording is active"
+msgstr "रिकॉर्डिंग सक्रिय होने पर सेटिंग्स बदलने में असमर्थ"
+
+msgid "Unable to connect to MW."
+msgstr "मिडिलवेयर से कनेक्ट करने में असमर्थ।"
+
+msgid "Unable to pair device with a new remote controller."
+msgstr "एक नया रिमोट कंट्रोलर उपकरण के साथ जोडने में असमर्थ।"
+
+msgid "Unable to reach host. Functionality may be limited."
+msgstr "मेजबान तक पहुँचने में असमर्थ। कार्यशीलता सीमित हो सकती है।"
+
+msgid "Unable to save. Directory name exists."
+msgstr "सहेजने में असमर्थ। निर्देशिका नाम मौजूद है।"
+
+msgid "Unable to save. Keyword is incorrect."
+msgstr "सहेजने में असमर्थ। कुंजीशब्द गलत है।"
+
+msgid "Unable to save. Keyword is too short."
+msgstr "सहेजने में असमर्थ। खोजशब्द बहुत छोटा है।"
+
+msgid "Unavailable"
+msgstr "अनुपलब्ध"
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr "अनपेक्षित सर्वर प्रतिसाद: %d"
+
+msgid "Unfortunately VoD service is not available."
+msgstr "दुर्भाग्य से VoD सेवा उपलब्ध नहीं है।"
+
+msgid "Unique Id"
+msgstr "यूनिक आईडी"
+
+msgid "Unknown"
+msgstr "अज्ञात"
+
+msgid "Unknown Device"
+msgstr "अज्ञात उपकरण"
+
+msgid "Unknown card state"
+msgstr "अज्ञात कार्ड स्थिति"
+
+msgid "Unknown conflict found."
+msgstr "अज्ञात संघर्ष मिला।"
+
+msgid "Unknown message"
+msgstr "अज्ञात संदेश"
+
+msgid "Unknown nPVR error."
+msgstr "अज्ञात एनपीवीआर त्रुटि।"
+
+msgid "Unknown state"
+msgstr "अज्ञात स्थिति"
+
+msgid "Unlimited"
+msgstr "असीमित"
+
+msgid "Unlock"
+msgstr "अनलॉक करें"
+
+msgid "Unmounting..."
+msgstr "अनमाउंटिंग ..."
+
+#, c-format
+msgid "Unread messages! (%zu)"
+msgstr ""
+
+msgid "Update Starts In %d Minute"
+msgid_plural "Update Starts In %d Minutes"
+msgstr[0] "अपडेट %d मिनट में शुरू होता है"
+msgstr[1] "%d मिनट में अपडेट शुरू होता है"
+
+msgid "Update Starts Soon"
+msgstr "अपडेट जल्द ही शुरू होता है"
+
+msgid "Update now"
+msgstr "अब अपडेट करें"
+
+msgid "Update required"
+msgstr "अपडेट आवश्यक"
+
+msgid "Update will take about 10 minutes. During this time screen may blink and you won't be able to use your STB."
+msgstr "अपडेट के बारे में 10 मिनट लगेंगे। इस समय के दौरान स्क्रीन झपकी जाएगी और आपआपके एसटीबी का उपयोग करने में सक्षम नहीं होगा।"
+
+msgid "Upgrade triggered"
+msgstr "अपडेट ट्रिगर्ड"
+
+msgid "Uptime"
+msgstr "अपटाइम"
+
+msgid "Urdu"
+msgstr "उर्दू"
+
+msgid "Use Coupon"
+msgstr "कूपन का प्रयोग करें"
+
+msgid "Use NIT/SDT"
+msgstr "उपयोग NIT / SDT"
+
+msgid "Use disk"
+msgstr "डिस्क का प्रयोग करें"
+
+msgid "Use for PVR"
+msgstr "पीवीआर के लिए प्रयोग करें"
+
+msgid "Use for PVR/TS"
+msgstr "पीवीआर / टीएस के लिए उपयोग करें"
+
+msgid "Use for Timeshift"
+msgstr "टाइमशिफ्ट के लिए प्रयोग करें"
+
+msgid "Use numeric keyboard to navigate"
+msgstr "नेविगेट करने के लिए संख्यात्मक कीबोर्ड का प्रयोग करें"
+
+msgid "Used for PVR"
+msgstr "पीवीआर के लिए प्रयुक्त"
+
+msgid "Used for PVR and Timeshift"
+msgstr "पीवीआर और टाइम शिफ्ट के लिए प्रयुक्त"
+
+msgid "Used for Timeshift"
+msgstr "टाइम शिफ्ट के लिए इस्तेमाल किया"
+
+msgid "User Interface"
+msgstr "उपयोगकर्ता इंटरफेस"
+
+msgid "User Time"
+msgstr "उपयोगकर्ता समय"
+
+msgid "V"
+msgstr "वी"
+
+msgid "VCAS connectivity"
+msgstr "वीसीएएस कनेक्टिविटी"
+
+msgid "VCID"
+msgstr "वीसीआईडी"
+
+msgid "VOD"
+msgstr "वीओडी"
+
+msgid "VPN is not setup"
+msgstr "वीपीएन सेटअप नहीं है"
+
+msgid "Verifying Flash partitions"
+msgstr "फ्लैश पार्टिशन्स का सत्यापन"
+
+msgid "Verifying installed file"
+msgstr "संस्थापित फ़ाइल की जांच"
+
+msgid "Version"
+msgstr "संस्करण"
+
+msgid "Version Number"
+msgstr "संस्करण संख्या"
+
+#, c-format
+msgid "Version: %s"
+msgstr "संस्करण: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "संस्करण: %s, नेटवर्क: %s"
+
+msgid "Vertical"
+msgstr "खड़ा"
+
+msgid "Video Codec"
+msgstr "वीडियो कोडेक"
+
+msgid "Video PID"
+msgstr "वीडियो पीआईडी"
+
+msgid "Video Settings"
+msgstr "वीडियो सेटिंग्स"
+
+msgid "Video Status"
+msgstr "वीडियो स्थिति"
+
+msgid "Video Type"
+msgstr "वीडियो प्रकार"
+
+msgid "View"
+msgstr "देखें"
+
+msgid "View again"
+msgstr "फिर से देखें"
+
+msgid "View from the beginning"
+msgstr "शुरुआत से देखें"
+
+msgid "ViewRight DVB"
+msgstr "व्यू राइट डीवीबी"
+
+msgid "ViewRight Web Connectivity"
+msgstr "व्यू राइट वेब कनेक्टिविटी"
+
+msgid "ViewRightIPTV"
+msgstr "व्यू राइट आईपीटीवी"
+
+msgid "Virtual Memory"
+msgstr "वर्चुअल मेमरी"
+
+msgid "Visually Impaired"
+msgstr "नेत्रहीन"
+
+msgid "VoD unavailable"
+msgstr "वीओडी अनुपलब्ध"
+
+msgid "Voicemail error"
+msgstr "ध्वनिमेल त्रुटि"
+
+msgid "WEB on TV"
+msgstr "टीवी पर वेब"
+
+msgid "WEP"
+msgstr "WEP"
+
+msgid "WPA/WPA2"
+msgstr "WPA/WPA2"
+
+msgid "Waiting for channels"
+msgstr "चैनलों के लिए प्रतीक्षा कर रहा है"
+
+msgid "Waiting for middleware"
+msgstr "मिडलवेयर के लिए प्रतीक्षा कर रहा है"
+
+msgid "Waiting for nPVR server response..."
+msgstr "एनपीवीआर सर्वर प्रतिक्रिया की प्रतीक्षा कर रहा है ..."
+
+msgid "Waiting for response"
+msgstr "प्रतिक्रिया की प्रतीक्षा कर रहा है"
+
+msgid "Warning"
+msgstr "चेतावनी"
+
+msgid "Warning: All current recordings will be stopped!"
+msgstr "चेतावनी: सभी मौजूदा रिकॉर्डिंग बंद हो जाएंगे!"
+
+msgid "Warning: Timeshift will be forsaken"
+msgstr "चेतावनी: टाइम शिफ्ट को छोड़ दिया जाएगा"
+
+msgid "Watched"
+msgstr "देखा गया"
+
+msgid "We think you might like..."
+msgstr "हमें लगता है कि आप चाहें ..."
+
+msgid "Weather"
+msgstr "मौसम"
+
+msgid "Web Audio"
+msgstr "वेब ऑडियो"
+
+msgid "Web Services"
+msgstr "वेब सेवा"
+
+msgid "WebP"
+msgstr "वेबपी"
+
+msgid "WebP Image 1"
+msgstr "वेबपी छवि 1"
+
+msgid "WebP Image 2"
+msgstr "वेबपी छवि2"
+
+msgid "WebP Image 3"
+msgstr "वेबपी छवि 3"
+
+msgid "WebP Image 4"
+msgstr "वेबपी इमेज 4"
+
+msgid "WebP Image 5"
+msgstr "वेबपी इमेज 5"
+
+msgid "WebShell"
+msgstr "वेब शैल"
+
+msgid "Wednesdays"
+msgstr "बुधवार"
+
+msgid "Weekdays"
+msgstr "सप्ताह का दिन"
+
+msgid "Weekends"
+msgstr "सप्ताह का अंत"
+
+msgid "Welcome to Jio"
+msgstr "जियो में आपका स्वागत है"
+
+msgid "Western European"
+msgstr "पश्चिमी यूरोपीय"
+
+msgid "What People are Watching"
+msgstr "लोग क्या देख रहे हैं"
+
+msgid "WiFi Security"
+msgstr "वाईफाई सुरक्षा"
+
+msgid "WiFi Session ID"
+msgstr "वाईफाई सत्र आईडी"
+
+msgid "Wired (DOCSIS)"
+msgstr "वायर्ड (DOCSIS)"
+
+msgid "Wired (Ethernet)"
+msgstr "वायर्ड (ईथरनेट)"
+
+msgid "Wired (MoCa)"
+msgstr "वायर्ड (एमओसीए)"
+
+msgid "Wireless (3G)"
+msgstr "वायरलेस (3 जी)"
+
+msgid "Wireless (WiFi)"
+msgstr "वायरलेस (वाईफाई)"
+
+msgid "Would You like to do it now?"
+msgstr "क्या आप इसे अभी करना चाहते हैं?"
+
+msgid "Writing configuration"
+msgstr "कॉन्फ़िगरेशन लिखाई"
+
+msgid "Wrong CA PIN."
+msgstr "गलत सीए पिन।"
+
+msgid "Wrong CA PIN. Try again."
+msgstr "गलत सीए पिन। पुन: प्रयास करें।"
+
+msgid "Wrong Start time and End time. Start time must be other than End time."
+msgstr "गलत प्रारंभ समय और समाप्ति समय। प्रारंभ समय समाप्ति समय के अलावा अन्य होना चाहिए।"
+
+#, c-format
+msgid "Wrong key for %s"
+msgstr "%s के लिए गलत चाबी"
+
+msgid "X: Erotic"
+msgstr "एक्स: कामुक"
+
+msgid "Yes"
+msgstr "हां"
+
+msgid "You are not an owner of that recording."
+msgstr "आप उस रिकॉर्डिंग के मालिक नहीं हैं।"
+
+msgid "You are not entitled to use this folder."
+msgstr "आप इस फ़ोल्डर का उपयोग करने के हकदार नहीं हैं।"
+
+msgid "You are not entitled to use this recording."
+msgstr "आप इस रिकॉर्डिंग का उपयोग करने के हकदार नहीं हैं।"
+
+msgid "You can not use this recording now."
+msgstr "आप अब इस रिकॉर्डिंग का उपयोग नहीं कर सकते।"
+
+msgid "You cannot delete folder with NpvrRecordings."
+msgstr "आप NpvrRecordings के साथ फ़ोल्डर नहीं हटा सकते।"
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "आपके पास एक नया रिकॉर्डिंग करने के लिए पर्याप्त रिक्त स्थान नहीं है।"
+
+msgid ""
+"You don’t have any content in your List yet.\n"
+"Please see what content other users are watching."
+msgstr ""
+"आपकी सूची में अभी तक कोई भी सामग्री नहीं है। \n"
+"कृपया देखें कि अन्य उपयोगकर्ता क्या देख रहे हैं।"
+
+msgid "You have too many directories and keyword recordings."
+msgstr "आपके पास बहुत सी निर्देशिका और खोजशब्द रिकॉर्डिंग हैं।"
+
+msgid "You have too many directories and recordings."
+msgstr "आपके पास बहुत सी निर्देशिका और रिकॉर्डिंग हैं।"
+
+msgid "You have too many directories and scheduled recordings."
+msgstr "आपके पास बहुत सी निर्देशिका और अनुसूचित रिकॉर्डिंग हैं।"
+
+msgid "You have too many directories."
+msgstr "आपके पास बहुत सी निर्देशिका है।"
+
+msgid "You have too many favorites lists."
+msgstr "आपके पास बहुत अधिक पसंदीदा सूचियां हैं।"
+
+msgid "You have too many recordings."
+msgstr "आपके पास बहुत अधिक रिकॉर्डिंग है।"
+
+msgid "You have too many reminders."
+msgstr "आपके पास बहुत अधिक अनुस्मारक हैं।"
+
+msgid ""
+"You haven't watched anything yet.\n"
+"Please see what content other users are watching."
+msgstr ""
+"आपने अभी तक कुछ नहीं देखा है। \n"
+"कृपया देखें कि अन्य उपयोगकर्ता क्या देख रहे हैं।"
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr "वीओडी सेवा का उपयोग शुरू करने के लिए मैनुअल चैनल स्कैनिंग को करने की आवश्यकता है।"
+
+msgid "You will be soon zapped to"
+msgstr "आप जल्द से जल्द zapped किया जाएगा"
+
+msgid "YouTube"
+msgstr "यूट्यूब"
+
+msgid "YouTube Qualification Engine"
+msgstr "यूट्यूब क्वालिफिकेशन इंजिन"
+
+msgid "YouTube Tests"
+msgstr "यूट्यूब टेस्ट"
+
+#, c-format
+msgid "Your TV is currently connected to an inactive output on this set-top box. Please press VOUT button on your remote control to activate this output or connect your TV to the %s output."
+msgstr "आपका टीवी वर्तमान में इस सेट टॉप बॉक्स पर एक निष्क्रिय आउटपुट से कनेक्ट है।इस आउटपुट को सक्रिय करने के लिए कृपया अपने रिमोट कंट्रोल पर VOUT बटन दबाएंअपने टीवी को %s आउटपुट से कनेक्ट करें।"
+
+msgid "Your USB drive is capable of simultaneous timeshift and one HD quality recording."
+msgstr "आपका यूएसबी ड्राइव एक साथ टाइमशफ़्ट और एक एचडी गुणवत्ता में सक्षम है रिकॉर्डिंग।"
+
+msgid "Your USB drive is capable of simultaneous timeshift and one SD quality recording."
+msgstr "आपका यूएसबी ड्राइव एक साथ टाइमशफ़्ट और एक एसडी गुणवत्ता में सक्षम है रिकॉर्डिंग।"
+
+msgid "Your USB drive is capable of simultaneous timeshift and three SD quality recording."
+msgstr "आपका यूएसबी ड्राइव एक साथ टाइमशफ़्ट और तीन एसडी गुणवत्ता में सक्षम है रिकॉर्डिंग।"
+
+msgid "Your USB drive is capable of simultaneous timeshift and two HD quality recordings."
+msgstr "आपका यूएसबी ड्राइव एक साथ टाइमशफ़्ट और दो एचडी गुणवत्ता में सक्षम है रिकॉर्डिंग।"
+
+msgid "Your USB drive is capable of simultaneous timeshift, one SD quality and one HD quality recording."
+msgstr "आपका यूएसबी ड्राइव एक साथ टाइमशफ़्ट, एक एसडी गुणवत्ता और एक में सक्षम है एचडी गुणवत्ता रिकॉर्डिंग।"
+
+msgid "Your USB drive is capable of simultaneous timeshift, one SD quality and two HD quality recordings."
+msgstr "आपका यूएसबी ड्राइव एक साथ टाइमशफ़्ट, एक एसडी गुणवत्ता और दो में सक्षम है एचडी गुणवत्ता रिकॉर्डिंग।"
+
+msgid "Your USB drive is capable of timeshift only."
+msgstr "आपका यूएसबी ड्राइव केवल टाइमशफ़्ट करने में सक्षम है।"
+
+msgid "Your USB drive is not capable neither of timeshift nor recording."
+msgstr "आपका यूएसबी ड्राइव टाइमशफ़्ट न ही रिकॉर्डिंग के लिए सक्षम नहीं है।"
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would you like to:\n"
+"\n"
+msgstr[0] ""
+"%iपहले से अनुसूचित रिकॉर्डिंग के साथ आपका नया रिकॉर्डिंग संघर्ष होगा।आप ये पसंद करते हैं: \n"
+"\n"
+msgstr[1] ""
+"%i पहले अनुसूचित रिकॉर्डिंग के साथ अपने नए रिकॉर्डिंग संघर्ष होगा ।आप ये पसंद करते हैं: \n"
+"\n"
+
+msgid "[[stopped manually]"
+msgstr "[[मैन्युअल रूप से रोक]"
+
+msgid "[active]"
+msgstr "[सक्रिय]"
+
+msgid "[completed]"
+msgstr "[पूर्ण]"
+
+msgid "[failed]"
+msgstr "[असफल]"
+
+msgid "[missed]"
+msgstr "[चूक]"
+
+msgid "[removed]"
+msgstr "[हटाया गया]"
+
+msgid "[scheduled]"
+msgstr "[शेड्यूलड]"
+
+msgid "[stopped – no source]"
+msgstr "[रोका गया - कोई स्रोत नहीं]"
+
+msgid "[stopped – no space]"
+msgstr "[रोका गया - कोई स्थान नहीं]"
+
+msgid "[unknown]"
+msgstr "[अज्ञात]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] "लगभग %d एसडी घंटा या "
+msgstr[1] "%d के बारे में एसडी घंटे या "
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "लगभग %d घंटे शेष"
+msgstr[1] "लगभग %d घंटे शेष"
+
+msgid "asm"
+msgstr "असामी"
+
+msgid "ben"
+msgstr "बंगाली"
+
+msgid "bho"
+msgstr "भोजपुरी"
+
+msgid "cannot connect to network"
+msgstr "नेटवर्क से कनेक्ट नहीं हो सकता"
+
+msgid "channel"
+msgstr "चैनल"
+
+msgid "check"
+msgstr "चेक"
+
+msgid "chkflash"
+msgstr "chkflash"
+
+msgid "config"
+msgstr "कॉन्फ़िग"
+
+msgid "connected"
+msgstr "जुड़ा हुआ"
+
+#, c-format
+msgid "connecting (%d)"
+msgstr "कनेक्टिंग (%d)"
+
+msgid "date"
+msgstr "तिथि"
+
+msgid "disabled"
+msgstr "अक्षम"
+
+msgid "disconnected"
+msgstr "डिस्कनेक्ट किया गया"
+
+msgid "done"
+msgstr "किया"
+
+msgid "download"
+msgstr "डाउनलोड"
+
+msgid "dut"
+msgstr "डी यू टी"
+
+msgid "element"
+msgstr "एलिमेंट"
+
+msgid "endTime"
+msgstr "अंत टाइम"
+
+msgid "eng"
+msgstr "इनजी"
+
+msgid "enter"
+msgstr "प्रविष्ट करें"
+
+msgid "error"
+msgstr "त्रुटि"
+
+msgid "format_long"
+msgstr ""
+"डिस्क प्रारूप प्रगति में है \n"
+"\n"
+"डिस्क प्रारूप 3 से 5 मिनट तक ले सकता है। \n"
+" कृपया एसटीबी को रीसेट या बिजली न दें। \n"
+" \n"
+"एसटीबी स्टार्ट-अप प्रक्रिया जारी रखेगी \n"
+"जब प्रारूप पूरा हो गया है।"
+
+msgid "formating"
+msgstr "फ़ॉर्मेटिंग"
+
+msgid "guj"
+msgstr "गुजराती"
+
+msgid "hin"
+msgstr "हिंदी"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "घंटा"
+msgstr[1] "घंटे"
+
+msgid "hours"
+msgstr "घंटे"
+
+msgid "interrupted"
+msgstr "बाधित"
+
+msgid "kan"
+msgstr "कन्नड़"
+
+msgid "kernel"
+msgstr "कर्नेल"
+
+msgid "keyword"
+msgstr "कीवर्ड"
+
+msgid "less than HD hour left"
+msgstr "एचडी घंटा से कम समय"
+
+msgid "less than hour left"
+msgstr "कम से कम घंटे बाकी"
+
+msgid "logo"
+msgstr "लोगो"
+
+msgid "mal"
+msgstr "मलयालम"
+
+msgid "mar"
+msgstr "मराठी"
+
+msgid "more_adult_search_results"
+msgstr "अधिक_वयस्क_सर्च_प्रस्तुति"
+
+msgid "nPVR action failed"
+msgstr "एनपीवीआर कार्रवाई विफल"
+
+msgid "nPVR margins"
+msgstr "एनपीवीआर मार्जिन"
+
+msgid "nPVR quota used"
+msgstr "एनपीवीआर कोटा का इस्तेमाल किया"
+
+msgid "nPVR request has been canceled"
+msgstr "एनपीवीआर अनुरोध रद्द कर दिया गया है"
+
+msgid "nPVR server rejected recording request."
+msgstr "एनपीवीआर सर्वर रिकॉर्डिंग अनुरोध को अस्वीकार कर दिया।"
+
+msgid "nep"
+msgstr "नेपाली"
+
+msgid "network connected, but no Internet access"
+msgstr "नेटवर्क जुड़ा हुआ है, लेकिन कोई इंटरनेट एक्सेस नहीं"
+
+msgid "no interface connected"
+msgstr "कोई अंतरफलक जुड़ा नहीं है"
+
+msgid "no quota limit"
+msgstr "कोई कोटा सीमा नहीं"
+
+msgid "off"
+msgstr "बंद"
+
+msgid "ori"
+msgstr "उड़ीसा"
+
+msgid "pan"
+msgstr "पंजाबी"
+
+msgid "premiere"
+msgstr "प्रीमियर"
+
+msgid "quota used"
+msgstr "कोटा इस्तेमाल किया"
+
+msgid "recording"
+msgid_plural "recordings"
+msgstr[0] "रिकॉर्डिंग"
+msgstr[1] "रिकॉर्डिंग"
+
+msgid "repeat"
+msgstr "दोहराना"
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "परिणाम"
+msgstr[1] "परिणाम"
+
+msgid "rootfs"
+msgstr "रूट एफएस"
+
+msgid "save"
+msgstr "सेव"
+
+msgid "spa"
+msgstr "स्पा"
+
+msgid "space"
+msgstr "स्पेस"
+
+msgid "spaceRecovery"
+msgstr "स्पेस रिकवरी"
+
+msgid "startTime"
+msgstr "प्रारंभ समय"
+
+msgid "tam"
+msgstr "तामिल"
+
+msgid "tel"
+msgstr "तेलुगू"
+
+msgid "to"
+msgstr "से"
+
+msgid "today"
+msgstr "आज"
+
+msgid "tomorrow"
+msgstr "कल"
+
+msgid "unknown"
+msgstr "अज्ञात"
+
+msgid "unknown quota"
+msgstr "अज्ञात कोटा"
+
+msgid "unknown test"
+msgstr "अज्ञात परीक्षण"
+
+msgid "unknown connection error"
+msgstr "अज्ञात कनेक्शन त्रुटि"
+
+msgid "unlimited"
+msgstr "असीमित"
+
+msgid "upgrade_long"
+msgstr ""
+"फर्मवेयर अपग्रेड 10 से 15 मिनट तक ले सकता है। \n"
+"कृपया एसटीबी को रीसेट या बिजली न दें। \n"
+"अपग्रेड पूर्ण होने पर एसटीबी स्वचालित रूप से पुनरारंभ हो जाएगा।"
+
+msgid "usr"
+msgstr "यूएसआर"
+
+msgid "verify"
+msgstr "सत्यापित करें"
+
+msgid "writing"
+msgstr "लेखन"
+
+#~ msgid "%a, %b %e %Y"
+#~ msgstr "%a, %b %e %Y"
+
+#~ msgid "%x %X"
+#~ msgstr "%b %e %Y, %H:%M"
+
+#~ msgid "1080p"
+#~ msgstr "1080p"
+
+#~ msgid "576p"
+#~ msgstr "576p"
+
+#~ msgid "Active Recordings"
+#~ msgstr "सक्रिय रिकॉर्डिंग"
+
+#~ msgid "Active recordings"
+#~ msgstr "सक्रिय रिकॉर्डिंग"
+
+#~ msgid "Block channels"
+#~ msgstr "चैनल ब्लॉक करें"
+
+#~ msgid "Channel Scanning Type"
+#~ msgstr "चैनल स्कैनिंग प्रकार"
+
+#~ msgid "Completed recordings"
+#~ msgstr "पूर्ण रिकॉर्डिंग"
+
+#~ msgid "Configure"
+#~ msgstr "कॉन्फ़िगर"
+
+#~ msgid "DVB-C"
+#~ msgstr "DVB-C"
+
+#~ msgid "DVB-T"
+#~ msgstr "DVB-T"
+
+#~ msgid "Data Channels"
+#~ msgstr "डाटा चैनल"
+
+#~ msgid "Display Format (HDMI)"
+#~ msgstr "प्रदर्शन प्रारूप (एचडीएमआई)"
+
+#~ msgid "Display Format (SCART)"
+#~ msgstr "प्रदर्शन प्रारूप (SCART)"
+
+#~ msgid "Fullscreen"
+#~ msgstr "पूर्णस्क्रीन"
+
+#~ msgid "Hard of Hearing Audio"
+#~ msgstr "सुनवाई ऑडियो की हार्ड"
+
+#~ msgid "Manual channel scanning"
+#~ msgstr "मैनुअल चैनल स्कैनिंग"
+
+#~ msgid "Menu language"
+#~ msgstr "मेनू भाषा"
+
+#~ msgid "PLATFORM XXX:YYY:ZZZ"
+#~ msgstr "प्लेटफॉर्म XXX:YYY:ZZZ"
+
+#~ msgid "PVR Margin"
+#~ msgstr "पीवीआर मार्जिन"
+
+#~ msgid "Platform"
+#~ msgstr "प्लेटफार्म"
+
+#~ msgid "Polski"
+#~ msgstr "पोल्स्कि"
+
+#~ msgid "Scheduled recordings"
+#~ msgstr "अनुसूचित रिकॉर्डिंग"
+
+#~ msgid "Software Update Check"
+#~ msgstr "सॉफ्टवेयर अपडेट चेक"
+
+#~ msgid "Subscription status"
+#~ msgstr "सदस्यता की स्थिति"
+
+#~ msgid "Suomi"
+#~ msgstr "सुओमी"
+
+#~ msgid "Svenska"
+#~ msgstr "स्वेन्स्का"
+
+#~ msgid "System settings"
+#~ msgstr "सिस्टम सेटिंग्स"
+
+#~ msgid "TV Aspect Ratio"
+#~ msgstr "टीवी पहलू अनुपात"
+
+#~ msgid "Upgrade later"
+#~ msgstr "बाद में अपग्रेड करें"
+
+# ~ "आपका डिस्प्ले डिवाइस वर्तमान में निष्क्रिय आउटपुट %s से कनेक्ट है। कृपया"
+# ~ "इस आउटपुट को सक्रिय करने के लिए अपने रिमोट कंट्रोल पर वाउट बटन दबाएं"
+# ~ "अपने डिस्प्ले डिवाइस को %s आउटपुट से कनेक्ट करें।"
+#~ msgid "automatic"
+#~ msgstr "स्वचालित"
+
+#~ msgid "manual"
+#~ msgstr "मैनुअल"

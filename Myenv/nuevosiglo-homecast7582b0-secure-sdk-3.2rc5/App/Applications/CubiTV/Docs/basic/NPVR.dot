@@ -1,0 +1,10 @@
+digraph NPVR {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    NPVR [label="NVPR" root=true]
+
+    npvrAgent
+
+
+    NPVR -> npvrAgent
+}

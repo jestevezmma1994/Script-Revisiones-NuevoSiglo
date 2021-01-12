@@ -1,0 +1,19 @@
+SvStandardMakefiles = $(CROSS_ROOT)/usr/local/include/SvStandardMakefiles
+SvMakefileTemplate = Library
+include $(SvStandardMakefiles)/Versions/2/Before.mk
+
+SvName = TranslationMergerHeaders
+SvDescription = Translation merger headers
+
+SvMajorVersion = 1
+SvMinorVersion = 0
+SvRevision = 0
+
+SvHeadersDir = Headers
+SvLibraryHeaderFiles = $(wildcard $(SvHeadersDir)/*.h)
+SvLibrarySourceFiles =
+
+SvCompileSharedLibrary = no
+SvCompileStaticLibrary = no
+
+include $(SvStandardMakefiles)/Versions/2/After.mk

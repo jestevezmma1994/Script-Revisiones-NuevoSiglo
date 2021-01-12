@@ -1,0 +1,29 @@
+#!/bin/sh
+
+/etc/init.d/load.smartcard stop
+/etc/init.d/load.nexus_playpump stop
+rmmod nexus
+modprobe nexus config="${NEXUS_INSMOD_CONFIG}"
+rmmod wakeup_drv
+modprobe wakeup_drv
+
+# set box mode, based on:
+# nexus/platforms/common/src/linuxuser/nexus_platform_privilege.c:NEXUS_Platform_P_ReadBoxMode
+if [ -e /proc/device-tree/bolt/rts ]; then
+  BOXMODE=`cat /proc/device-tree/bolt/rts | sed -r 's/^.*_box([[:digit:]]+)$/\1/;tx;d;:x'`
+  if [ $BOXMODE ]; then
+    echo "B_REFSW_BOXMODE=$BOXMODE" > /proc/brcm/config
+  fi
+fi
+
+# set proper permission to leds
+chown appuser:appgroup /sys/class/leds/*/brightness
+
+# set proper permission to wake timer
+chown appuser:appgroup /sys/bus/platform/drivers/brcm-waketimer/*/power/wakeup
+chown appuser:appgroup /sys/bus/platform/drivers/brcm-waketimer/*/power/wakeup_coun
+chown appuser:appgroup /sys/bus/platform/drivers/brcm-waketimer/*/timeout
+
+/etc/init.d/load.nexus_playpump start
+/etc/init.d/load.smartcard start
+

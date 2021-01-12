@@ -1,0 +1,6 @@
+Name: QBViewRight
+Version: 1.0.0
+Requires: CAGE SvCore SvFoundation SvPlayerKit dataformat fibers mpeg2 
+Description: ViewRight library implementation - stub
+Libs: -lQBViewRight 
+CFlags: 

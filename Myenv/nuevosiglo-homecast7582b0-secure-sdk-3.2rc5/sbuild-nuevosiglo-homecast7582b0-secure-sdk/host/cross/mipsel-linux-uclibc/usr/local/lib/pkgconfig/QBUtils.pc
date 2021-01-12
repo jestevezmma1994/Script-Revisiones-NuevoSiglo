@@ -1,0 +1,6 @@
+Name: QBUtils
+Version: 1.0.0
+Requires: QBConfig QBCoreUtils QBDataModel3 QBStringUtils QBTextUtils SvCore SvFoundation SvJSON SvQuirks openssl 
+Description: Various utilites
+Libs: -lQBUtils 
+CFlags: 

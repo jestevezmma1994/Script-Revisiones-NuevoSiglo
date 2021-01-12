@@ -1,0 +1,4038 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Lithuanian\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-22 13:38+0200\n"
+"PO-Revision-Date: 2013-08-20 12:53+0100\n"
+"Last-Translator: Marek Bejgier <marekb@cubiware.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=9 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid " / minute"
+msgstr " / minutė"
+
+msgid " H"
+msgstr " V"
+
+msgid " V"
+msgstr " V"
+
+msgid "%A %x"
+msgstr "%A %x"
+
+#, c-format
+msgid "%A %x %X"
+msgstr "%A %x %X"
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "liko %d HD valanda"
+msgstr[1] "liko %d HD valandų"
+msgstr[2] "liko %d HD valandos"
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "liko %d HD valanda"
+msgstr[1] "liko %d HD valandų"
+msgstr[2] "liko %d HD valandos"
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "liko %d SD valanda"
+msgstr[1] "liko %d SD valandų"
+msgstr[2] "liko %d SD valandos"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "Liko %d bandymas"
+msgstr[1] "Liko %d bandymai"
+msgstr[2] "Liko %d bandymų"
+
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d valanda"
+msgstr[1] "%d valandos"
+msgstr[2] "%d valandų"
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d iš %d"
+
+#, c-format
+msgid "%d.%d"
+msgstr ""
+
+#, c-format
+msgid "%dMHz"
+msgstr ""
+
+#, c-format
+msgid "%dMHz,%s,%d,%s"
+msgstr ""
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i nauji ar atnaujinti) Radijo kanalai"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i nauji ar atnaujinti) TV kanalai"
+
+#, c-format
+msgid "%i min"
+msgstr "%i min."
+
+#, c-format
+msgid "%i percent left"
+msgstr ""
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i radijo kanalas"
+msgstr[1] "%i radijo kanalai"
+msgstr[2] "%i radijo kanalų"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i įrašas"
+msgstr[1] "%i įrašai"
+msgstr[2] "%i įrašų"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i priminimas"
+msgstr[1] "%i priminimai"
+msgstr[2] "%i priminimų"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i TV kanalas"
+msgstr[1] "%i TV kanalai"
+msgstr[2] "%i TV kanalų"
+
+#, c-format
+msgid "%i.%iMHz"
+msgstr ""
+
+#, c-format
+msgid "%iGB"
+msgstr ""
+
+#, c-format
+msgid "%ih"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s\n"
+"\\%s\n"
+"Please contact your operator for further information."
+msgstr ""
+
+#, c-format
+msgid "%s (%d.%d%s)"
+msgstr ""
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s: rastas %i kanalas"
+msgstr[1] "%s: rasti %i kanalai"
+msgstr[2] "%s: rasta %i kanalų"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d diena %dh)"
+msgstr[1] "(%d dienos %dh)"
+msgstr[2] "(%d dienų %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d diena)"
+msgstr[1] "(%d dienos)"
+msgstr[2] "(%d dienų)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d valanda)"
+msgstr[1] "(%d valandos)"
+msgstr[2] "(%d valandų)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr " %dh %dmin)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%dmin)"
+
+msgid "(Description blocked by Parental Control)"
+msgstr " (Aprašas užblokuotas tėvų kontrolės)"
+
+msgid "(Description blocked)"
+msgstr ""
+
+msgid "(Non smartcard)"
+msgstr ""
+
+msgid "(Title Blocked)"
+msgstr "(Pavadinimas užblokuotas)"
+
+msgid "(all)"
+msgstr "(visi)"
+
+msgid "(hard of hearing)"
+msgstr "(neprigirdintiesiems)"
+
+msgid "(no label)"
+msgstr "(nėra etiketės)"
+
+msgid "(none)"
+msgstr "(nėra)"
+
+msgid "(unsupported)"
+msgstr "(nesuderinamas)"
+
+msgid "(visually impaired)"
+msgstr "(silpnaregiams)"
+
+msgid "-"
+msgstr ""
+
+msgid "0 recordings"
+msgstr "0 įrašų"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-CURRENT"
+
+msgid "000 unknown"
+msgstr "000 nežinoma"
+
+msgid "1 Hour"
+msgstr ""
+
+msgid "1 minute"
+msgstr "1 minutė"
+
+msgid "10 minutes"
+msgstr "10 minučių"
+
+msgid "10 seconds"
+msgstr "10 sekundžių"
+
+msgid "100GB"
+msgstr "100GB"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10GB"
+
+msgid "15 minutes"
+msgstr "15 minučių"
+
+msgid "15 seconds"
+msgstr "15 sekundžių"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "2 Hours"
+msgstr ""
+
+msgid "2 minutes"
+msgstr "2 minutės"
+
+msgid "2 seconds"
+msgstr "2 sekundės"
+
+msgid "20 minutes"
+msgstr "20 minučių"
+
+msgid "200GB"
+msgstr "200GB"
+
+msgid "20GB"
+msgstr "20GB"
+
+msgid "2160p"
+msgstr ""
+
+msgid "22 kHz Tone"
+msgstr "22 kHz tonas"
+
+msgid "30 minutes"
+msgstr "30 minučių"
+
+msgid "30 seconds"
+msgstr ""
+
+msgid "4 Hours"
+msgstr ""
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 minutės"
+
+msgid "5 seconds"
+msgstr "5 sekundės"
+
+msgid "500GB"
+msgstr "500GB"
+
+msgid "50GB"
+msgstr "50GB"
+
+msgid "576p/480p"
+msgstr "576p/480p"
+
+msgid "6 Hours"
+msgstr ""
+
+msgid "60 seconds"
+msgstr ""
+
+msgid "720p"
+msgstr "720p"
+
+msgid "8 Hours"
+msgstr ""
+
+msgid "8PSK"
+msgstr ""
+
+msgid ""
+"<p>Press Exit to hide Caller ID bar. Press <img src=\"icons_green_button.png"
+"\"/> button to redirect call to voice mail</p>"
+msgstr ""
+
+msgid "?"
+msgstr ""
+
+msgid "???"
+msgstr ""
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+"Rastas naujas diskas %s %s.\n"
+"Spauskite OK peržiūrėti diskus."
+
+msgid "A problem occurred"
+msgstr "Įvyko klaida"
+
+msgid "A/V Output Settings"
+msgstr "Prijungimo \"tulpe\" nustatymai"
+
+msgid "A: Over 18"
+msgstr "A: Virš 18"
+
+msgid "About Conax CA"
+msgstr "Apie Conax CA"
+
+msgid "About ViewRightIPTV CA"
+msgstr ""
+
+msgid "Access denied"
+msgstr "Prieiga draudžiama"
+
+msgid "Action prohibited"
+msgstr "Veiksmas negalimas"
+
+msgid "Active Standby"
+msgstr "Budėjimo režimas"
+
+#, c-format
+msgid "Active standby will start in %u second."
+msgid_plural "Active standby will start in %u seconds."
+msgstr[0] "Budėjimo režimas įsijungs po %u sekundės."
+msgstr[1] "Budėjimo režimas įsijungs po %u sekundžių."
+msgstr[2] "Budėjimo režimas įsijungs po %u sekundžių."
+
+msgid "Add"
+msgstr "Pridėti"
+
+msgid "Add & Connect"
+msgstr "Pridėti ir prisijungti"
+
+msgid "Add new list"
+msgstr "Pridėti naują sąrašą"
+
+msgid "Add new satellite"
+msgstr "Pridėti satelitą"
+
+msgid "Add/remove TV channels"
+msgstr "Pridėti/šalinti kanalus"
+
+msgid "Add/remove radio channels"
+msgstr ""
+
+msgid "Advanced..."
+msgstr "Detaliau..."
+
+msgid "All tuners are in use"
+msgstr "Visi tiuneriai užimti"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr ""
+"Visi tiuneriai užimti. Greičiausiai vienu metu vyksta per daug įrašymų."
+
+msgid "Alphabetically"
+msgstr "Abėcėlės tvarka"
+
+msgid "Always"
+msgstr "Visada"
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr "Įvyko klaida. Prašome kreiptis į Cgates.\n"
+
+msgid "Analog Closed Captioning"
+msgstr ""
+
+msgid "Analog Outputs"
+msgstr "Prijungimas \"tulpe\" ar SCART jungtimi"
+
+msgid "Any"
+msgstr ""
+
+msgid "Apr"
+msgstr "Bal"
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Ar tikrai norite ištrinti visus kanalus?"
+
+msgid "Are you sure?"
+msgstr "Prašome patvirtinti"
+
+msgid "Arts/Culture"
+msgstr "Menai/Kultūra"
+
+msgid "Ask again later"
+msgstr "Paklausti vėliau"
+
+msgid "Audio Codec"
+msgstr ""
+
+msgid "Audio DMM"
+msgstr ""
+
+msgid "Audio Lang"
+msgstr ""
+
+msgid "Audio PID"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr "Garso nustatymai"
+
+msgid "Audio Status"
+msgstr ""
+
+msgid "Audio Track"
+msgstr "Kalba"
+
+msgid "Audio Type"
+msgstr ""
+
+msgid "Aug"
+msgstr "Rug"
+
+msgid "Authentication failed - PIN is blocked."
+msgstr ""
+
+msgid "Authentication failed - PIN is blocked. Wait around 10 minutes."
+msgstr ""
+
+msgid "Authentication failed. Try again."
+msgstr "Įvesta neteisingai, bandykite dar kartą."
+
+msgid "Authentication failed. Wrong Pin was entered."
+msgstr ""
+
+msgid "Authentication required"
+msgstr "Prašome įvesti PIN kodą"
+
+msgid "Auto (DHCP)"
+msgstr ""
+
+msgid "Auto Download"
+msgstr "Automatinis atsisiuntimas"
+
+msgid "Auto Install"
+msgstr "Automatinis diegimas"
+
+msgid "Auto(DHCP)"
+msgstr "Auto (DHCP)"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Automatiškai trinti seniausius įrašus"
+
+msgid "Automatic"
+msgstr "Automatinis nustatymas"
+
+msgid "Automatic Channel Scanning"
+msgstr "Automatinė kanalų paieška"
+
+msgid "Automatic Standby"
+msgstr ""
+
+#, c-format
+msgid "Automatic restart in %d second."
+msgid_plural "Automatic restart in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, c-format
+msgid "Automatic switch to standby in %u second."
+msgid_plural "Automatic switch to standby in %u seconds."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, c-format
+msgid "Automatic update will start in %d second."
+msgid_plural "Automatic update will start in %d seconds."
+msgstr[0] "Automatinis atnaujinimas prasidės po %d s."
+msgstr[1] "Automatinis atnaujinimas prasidės po %d s."
+msgstr[2] "Automatinis atnaujinimas prasidės po %d s."
+
+msgid "Available"
+msgstr ""
+
+msgid "Available Transponders"
+msgstr "Prieinami transponderiai"
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr "Bloga nuoroda: %d"
+
+msgid "Bad certificate"
+msgstr ""
+
+#, c-format
+msgid "Bad format: %d"
+msgstr "Blogas formatas: %d"
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr "Blogas serverio atsakymas: %d"
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Balansas: %d žetonas"
+msgstr[1] "Balansas: %d žetonai"
+msgstr[2] "Balansas: %d žetonų"
+
+msgid "Band Select"
+msgstr "Bangų pasirinkimas"
+
+msgid "Bandwidth"
+msgstr "Bangų ruožas"
+
+msgid "Bandwidth [MHz]"
+msgstr "Bangų ruožas [MHz]"
+
+msgid "Banner Timeout"
+msgstr ""
+
+msgid "Begin format now"
+msgstr "Pradėti formatavimą"
+
+msgid "Block Channels"
+msgstr "Blokuoti kanalus"
+
+msgid "Buy"
+msgstr "Pirkti"
+
+msgid "By Channel Number"
+msgstr "Pagal kanalo numerį"
+
+msgid "By Index"
+msgstr "Pagal indeksą"
+
+msgid "By Longitude"
+msgstr "Pagal platumą"
+
+msgid "C-band"
+msgstr "C-band"
+
+msgid "CA PIN has been changed."
+msgstr "CA PIN pakeistas."
+
+msgid "CA SYS ID"
+msgstr "CA SYS ID"
+
+msgid "CAT Status"
+msgstr ""
+
+msgid "CC Primary Channel"
+msgstr ""
+
+msgid "CC Primary Language"
+msgstr ""
+
+msgid "CC Secondary  Language"
+msgstr ""
+
+msgid "CC Secondary Channel"
+msgstr ""
+
+msgid "CC1"
+msgstr "CC1"
+
+msgid "CC2"
+msgstr "CC2"
+
+msgid "CC3"
+msgstr "CC3"
+
+msgid "CC4"
+msgstr "CC4"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "Cable"
+msgstr "Kabelinis"
+
+msgid "Cable AnnexB"
+msgstr "Kabelinis AnnexB"
+
+msgid "Cable DVB-C"
+msgstr "Kabelinis DVB-C"
+
+msgid "Cable modem status"
+msgstr "Kabelinio modemo būklė"
+
+msgid "Call History"
+msgstr ""
+
+msgid "Caller ID"
+msgstr ""
+
+msgid "Caller ID Status"
+msgstr ""
+
+msgid "Calling"
+msgstr ""
+
+msgid "Can't load skins list"
+msgstr "Nepavyksta įkelti aplinkų sąrašo"
+
+msgid "Can't record a show that's too close to ending."
+msgstr ""
+
+msgid "Cancel"
+msgstr "Atšaukti"
+
+msgid "Cancel scheduled recording"
+msgstr "Atšaukti suplanuotą įrašymą"
+
+msgid "Cannot remove last satellite.\n"
+msgstr "Nepavyksta pašalinti paskutinio palydovo.\n"
+
+msgid "Cannot schedule keyword recording - keyword recordings limit exceeded."
+msgstr ""
+
+msgid "Cannot schedule recording - series recordings limit exceeded."
+msgstr ""
+
+msgid "Card Inserted"
+msgstr "Kortelė įdėta"
+
+msgid "Card Number"
+msgstr "Kortelės numeris"
+
+msgid "Card Problem - check card"
+msgstr "Kortelės problema - patikrinkite kortelę"
+
+msgid "Card Type"
+msgstr "Kortelės tipas"
+
+msgid "Card inserted"
+msgstr ""
+
+msgid "Card is correct"
+msgstr "Teisinga kortelė"
+
+msgid "Card problem - check card"
+msgstr ""
+
+msgid "Carrier Lock"
+msgstr ""
+
+msgid "Catch-up TV"
+msgstr "TV archyvas"
+
+msgid "Catch-up TV - continue"
+msgstr "Įrašai - tęsti"
+
+msgid "Catch-up TV - play"
+msgstr "Įrašai - rodyti"
+
+msgid "Catchup TV"
+msgstr ""
+
+msgid "Change CA PIN failed."
+msgstr "CA PIN keitimas nepavyko."
+
+msgid "Change CA pin"
+msgstr "Keisti CA kodą"
+
+msgid "Change PIN"
+msgstr "Keisti PIN"
+
+msgid "Change list numbering"
+msgstr "Pakeisti sąrašo numeraciją"
+
+msgid "Changing pin failed."
+msgstr "Kodo keitimas nepavyko"
+
+msgid "Channel"
+msgstr "Kanalas"
+
+msgid "Channel 3"
+msgstr "Kanalas 3"
+
+msgid "Channel 4"
+msgstr "Kanalas 4"
+
+msgid "Channel Frequency [kHz]"
+msgstr "Kanalo dažnis [kHz]"
+
+msgid "Channel Installation"
+msgstr "Kanalo diegimas"
+
+msgid "Channel Map"
+msgstr ""
+
+msgid "Channel Name"
+msgstr "Kanalo pavadinimas"
+
+msgid "Channel Number"
+msgstr ""
+
+msgid "Channel Scanning"
+msgstr "Kanalo paieška"
+
+msgid "Channel Status"
+msgstr "Kanalo būklė"
+
+msgid "Channel entitlement expired."
+msgstr ""
+
+msgid "Channel is not recordable."
+msgstr ""
+
+msgid "Channel is not registered."
+msgstr ""
+
+msgid "Channel not available"
+msgstr "Kanalas nepasiekiamas"
+
+msgid "Channel scanning"
+msgstr "Kanalo paieška"
+
+#, c-format
+msgid "Channel scanning will start in %d second."
+msgid_plural "Channel scanning will start in %d seconds."
+msgstr[0] "Kanalų paieška prasidės po %d sekundės."
+msgstr[1] "Kanalų paieška prasidės po %d sekundžių."
+msgstr[2] "Kanalų paieška prasidės po %d sekundžių."
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Kanalas: %s\n"
+"Įvykis: %s\n"
+"Laikas: %s-%s\n"
+
+msgid "Channels DVB"
+msgstr ""
+
+msgid "Channels IP"
+msgstr ""
+
+msgid "Channels update"
+msgstr "Kanalų atnaujinimas"
+
+msgid "Checking compatibility..."
+msgstr "Tikrinamas suderinamumas..."
+
+msgid "Children's/Youth Programmes"
+msgstr "Vaikų/Jaunimo programos"
+
+msgid "Chip ID"
+msgstr "Lusto ID"
+
+msgid "Chip id"
+msgstr "Lusto id"
+
+msgid "Close"
+msgstr "Uždaryti"
+
+msgid "Closed Captioning"
+msgstr "Closed Captioning"
+
+msgid "Closed Captioning Mode"
+msgstr ""
+
+msgid "Communication error"
+msgstr "Ryšio klaida"
+
+msgid "Compatible with PVR"
+msgstr "Suderinamas su įrašymu"
+
+msgid "Compatible with PVR and Timeshift"
+msgstr "Suderinamas su įrašymu ir TV pauze"
+
+msgid "Compatible with Timeshift"
+msgstr "Suderinamas su TV pauze"
+
+msgid "Completed Recordings"
+msgstr "Baigti įrašai"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Conax Card Number"
+msgstr "TV kortelės nr."
+
+msgid "Conditional access system ID"
+msgstr ""
+
+msgid "Configuration"
+msgstr "Nustatymai"
+
+msgid "Confirm"
+msgstr "Patvirtinti"
+
+msgid "Confirmation Required"
+msgstr "Būtinas patvirtinimas"
+
+msgid "Connect"
+msgstr "Prisijungti"
+
+msgid "Connected"
+msgstr "Prisijungta"
+
+msgid "Connecting..."
+msgstr "Jungiamasi..."
+
+msgid "Connection problem"
+msgstr ""
+
+msgid ""
+"Content owners use Microsoft PlayReadyTM content access technology to "
+"protect their intellectual property, including copyrighted content. This "
+"device uses PlayReady technology to access PlayReady-protected content and/"
+"or WMDRM protected content. If the device fails to properly enforce "
+"restrictions on content usage, content owners may require Microsoft to "
+"revoke the device's ability to consume PlayReady-protected content. "
+"Revocation should not affect unprotected content or content protected by "
+"other content access technologies. Content owners may require you to upgrade "
+"PlayReady to access their content. If you decline an upgrade, you will not "
+"be able to access content that requires the upgrade."
+msgstr ""
+
+msgid "Continue"
+msgstr "Tęsti"
+
+msgid "Correct"
+msgstr ""
+
+msgid "Cost:"
+msgstr ""
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr ""
+"Nepavyko įkelti kanalų sąrašo. Dalis funkcijų gali neveikti. Įsitikinkite, "
+"ar priedėlis prijungtas prie interneto."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Įrenginio išjungti nepavyko, prašome bandyti dar kartą (klaida 2)"
+
+msgid "Create new directory"
+msgstr "Sukurti naują katalogą"
+
+msgid "Credit:"
+msgstr ""
+
+msgid "Custom LNB"
+msgstr "Custom LNB"
+
+msgid "Customer is not entitled to record."
+msgstr ""
+
+msgid "Customer is not registered."
+msgstr ""
+
+msgid "DHCP"
+msgstr "DHCP"
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS1"
+msgstr "DNS1"
+
+msgid "DNS2"
+msgstr "DNS2"
+
+#, c-format
+msgid "DRM error [%d]"
+msgstr ""
+
+#, c-format
+msgid "DRM error: %d"
+msgstr "DRM klaida: %d"
+
+msgid "DRM initialization error"
+msgstr ""
+
+msgid "DRM license error"
+msgstr ""
+
+msgid "DVB Channels parameters have changed."
+msgstr "Paskeitė kanalų informacija."
+
+msgid "DVB Mode"
+msgstr "DVB režimas"
+
+msgid "DVB Table Status"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "DVB Tables status"
+msgstr ""
+
+msgid "DVB-C Manual"
+msgstr "DVB-C Rankinis"
+
+msgid "DVB-C Manual PAT only scan"
+msgstr "DVB-C tik rankinis PAT skanavimas"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT automatinis"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 Manual"
+
+msgid "DVB-S/S2 Manual PAT only scan"
+msgstr "DVB-S/S2 Manual PAT only scan"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT Automatic"
+
+msgid "DVB-T Automatic full scan"
+msgstr "DVB-T automatinė paieška"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T rankinė"
+
+msgid "DVB-T Manual PAT only scan"
+msgstr "DVB-T Manual PAT only scan"
+
+msgid "Daily"
+msgstr "Kasdien"
+
+msgid "Danish"
+msgstr "Danų"
+
+msgid "Data buffering. Please wait ..."
+msgstr ""
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Dec"
+msgstr "Grd"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr "Dekoderio klaida: %d"
+
+msgid "Default"
+msgstr "Standartinis"
+
+msgid "Default Channel"
+msgstr "Standartinis kanalas"
+
+msgid "Default PVR Quota"
+msgstr "Standartinis įrašų limitas"
+
+msgid "Default directory"
+msgstr ""
+
+msgid "Degrees"
+msgstr "Laipsniai"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Užlaikyti įrašo pradžią iki %s"
+
+msgid "Delete"
+msgstr "Trinti"
+
+msgid "Delete NPvr recording"
+msgstr ""
+
+msgid "Delete all"
+msgstr "Trinti viską"
+
+msgid "Delete all active"
+msgstr "Trinti visus aktyvius"
+
+msgid "Delete all completed"
+msgstr ""
+
+msgid "Delete all failed"
+msgstr "Trinti visus nepavykusius"
+
+msgid "Delete all scheduled"
+msgstr "Trinti visus suplanuotus"
+
+msgid "Delete file"
+msgstr "Trinti bylą"
+
+msgid "Device is not responding"
+msgstr "Įrenginys neatsako"
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "DiSEqC Port %c"
+
+msgid "DiSEqC Switch"
+msgstr "DiSEqC Switch"
+
+msgid "Diagnostics"
+msgstr "Diagnostika"
+
+msgid "Digital Audio"
+msgstr "Skaitmeninis garsas"
+
+msgid "Digital Closed Captioning"
+msgstr ""
+
+msgid "Directory name already exists"
+msgstr "Toks katalogas jau yra"
+
+msgid "Directory name cannot be empty"
+msgstr "Katalogo pavadinimas negali būti tuščias"
+
+msgid "Directory name is incorrect"
+msgstr ""
+
+msgid "Directory name is too short"
+msgstr ""
+
+msgid "Disable"
+msgstr "Išjungta"
+
+msgid "Disabled"
+msgstr "Išjungta"
+
+msgid "Disconnect"
+msgstr "Atsijungti"
+
+msgid "Disconnected"
+msgstr "Atsijungta"
+
+msgid ""
+"Disk format in progress\n"
+"\n"
+"Disk format can take 3 up to 5 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"\n"
+"The STB will continue start-up process\n"
+"when the format is complete."
+msgstr ""
+
+msgid "Display Format"
+msgstr "Vaizdo koregavimas (HDMI)"
+
+msgid "Do not turn off the STB during channel scanning."
+msgstr "Neišjunkite priedėlio per kanalų paiešką."
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "Per programinės įrangos atnaujinimą neišjunkite priedėlio."
+
+msgid "Done"
+msgstr "Atlikta"
+
+msgid "Download now"
+msgstr "Atsisiųsti dabar"
+
+msgid "Downloading firmware package"
+msgstr ""
+
+msgid "Drop"
+msgstr "Ištrinti"
+
+msgid "Drop channels?"
+msgstr "Ištrinti kanalus"
+
+msgid ""
+"Dropping to voicemail failed - Please Contact your service representative."
+msgstr ""
+
+msgid "Dropping..."
+msgstr "Ištrina..."
+
+msgid "EIT Status"
+msgstr ""
+
+msgid "EPG"
+msgstr "TV gidas"
+
+msgid "EPG event deleted."
+msgstr ""
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "Klaida: klausimo siuntimas į kortelę nepavyko"
+
+msgid "Edit"
+msgstr "Redaguoti"
+
+msgid "Edit satellite"
+msgstr "Redaguoti palydovą"
+
+msgid "Education/Science/Factual topics"
+msgstr "Švietimas/Moksas/Dokumentika"
+
+msgid "Empty folder"
+msgstr "Tuščias katalogas"
+
+msgid "Enable"
+msgstr "Įjungti"
+
+msgid "Enabled"
+msgstr "Įjungta"
+
+msgid "End Frequency"
+msgstr "Pabaigos dažnis"
+
+msgid "End time"
+msgstr "Pabaigos laikas"
+
+msgid "English"
+msgstr "Anglų"
+
+msgid "Enter Active Standby"
+msgstr "Įeiti į aktyvaus budėjimo režimą"
+
+msgid "Enter CA PIN to accept"
+msgstr ""
+
+msgid "Enter Standby"
+msgstr "Įeiti į budėjimo režimą"
+
+msgid "Enter WiFi password"
+msgstr "Įveskite WiFi slaptažodį"
+
+msgid "Entitled"
+msgstr "Prieiga suteikta"
+
+msgid "Error"
+msgstr "Klaida"
+
+msgid "Error occurred"
+msgstr "Įvyko klaida"
+
+#, c-format
+msgid "Error: %d"
+msgstr ""
+
+msgid "Ethernet Status"
+msgstr ""
+
+msgid "Event Status"
+msgstr "Įvykio būklė"
+
+msgid "Event is not recordable."
+msgstr ""
+
+msgid "Event not found."
+msgstr ""
+
+msgid "Event wasn't recorded by the source server."
+msgstr ""
+
+msgid "Every Day"
+msgstr "Kasdien"
+
+msgid "Excellent"
+msgstr ""
+
+msgid "Exit"
+msgstr ""
+
+msgid "Exit to Home Page"
+msgstr ""
+
+msgid "Extra"
+msgstr "Papildomai"
+
+msgid "Extras"
+msgstr "Papildomai"
+
+msgid "FATAL ERROR"
+msgstr ""
+"Atsiprašome, įvyko klaida. Jei šį klaida kartojasi - prašome kreiptis į "
+"Cgates"
+
+msgid "Failed Recordings"
+msgstr "Nepavykę įrašai"
+
+msgid "Failed to contact nPVR server."
+msgstr "Nepavyko susisiekti su įrašymo serveriu."
+
+msgid "Failed to delete nPVR directory"
+msgstr ""
+
+msgid "Failed to delete nPVR recordings"
+msgstr ""
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Nepavyko gauti informacijos iš kortelės (klaida = 0x%x)"
+
+msgid "Failed to schedule nPVR recording"
+msgstr "Nepavyko suplanuoti įrašymo"
+
+msgid "Failed..."
+msgstr ""
+
+msgid "Fair"
+msgstr ""
+
+msgid "Favorites"
+msgstr "Mėgstamiausieji"
+
+msgid "Favorites Numbering"
+msgstr "Mėgstamiausiųjų numeracija"
+
+msgid "Feb"
+msgstr "Vas"
+
+msgid "File not found"
+msgstr "Byla nerasta"
+
+#, c-format
+msgid "File not found: %d"
+msgstr "Byla nerasta: %d"
+
+msgid "Finish"
+msgstr "Baigti"
+
+msgid "Finnish"
+msgstr "Suomių"
+
+msgid "Firmware Version"
+msgstr "Programinės įrangos versija"
+
+msgid "Firmware update"
+msgstr "Programinės įrangos atnaujinimas"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr "Kad priedėlis gerai veiktų, būtina atnaujinti programinę įrangą."
+
+msgid ""
+"Firmware upgrade can take 10 up to 15 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"The STB will restart automatically when the upgrade is complete."
+msgstr ""
+
+msgid "First Time Installation"
+msgstr "Pirmasis diegimas"
+
+msgid "First time using VoD service?"
+msgstr "Ar naudojatės Videoteka pirmą kartą?"
+
+msgid "Follow Parental Control"
+msgstr "Vadovautis tėvų kontrole"
+
+msgid "For 12+ year old"
+msgstr "12 m. ir vyresniems"
+
+msgid "For 16+ year old"
+msgstr "16 m. ir vyresniems"
+
+msgid "For 18+ year old"
+msgstr "18 m. ir vyresniems"
+
+msgid "For 6+ year old"
+msgstr " 6 m. ir vyresniems"
+
+msgid "For HD or Widescreen TV"
+msgstr "Plačiaekranis TV"
+
+msgid "For classic TV"
+msgstr "Įprastinis TV"
+
+msgid "Forget the network"
+msgstr "Pamiršti tinklą"
+
+msgid "Format Hard Disk"
+msgstr "Formatuoti kietąjį diską"
+
+msgid "Format MStoreVoD"
+msgstr ""
+
+msgid "Format PVR/TS"
+msgstr ""
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr "Nesuderinamas formatas: %d"
+
+msgid "Format whole disk"
+msgstr ""
+
+msgid "Formatting storage"
+msgstr ""
+
+msgid ""
+"Formatting this disk will permanently erase all data on it. Do you want to "
+"continue?"
+msgstr ""
+"Formatavimas negrįžtamai ištrins visus diske esančius duomenis. Ar norite "
+"tęsti?"
+
+msgid "Formatting..."
+msgstr "Formatuojama..."
+
+msgid "Frequency"
+msgstr "Dažnis"
+
+msgid "Frequency Range"
+msgstr "Dažnių diapazonas"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Dažnis: %d.%02d MHz%s %s %s"
+
+msgid "Fridays"
+msgstr "Penktadieniais"
+
+msgid "From"
+msgstr ""
+
+msgid "Front Panel Power Button"
+msgstr "Priedėlio įjungimo mygtukas"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Laikrodžio rodymas išjungus priedėlį"
+
+msgid "Fullscreen"
+msgstr "Išnaudoti visą ekraną"
+
+msgid "G: General Audience"
+msgstr "G: Bendroji auditorija"
+
+msgid "GHz"
+msgstr "GHz"
+
+msgid "Gateway"
+msgstr "Gateway"
+
+msgid "German"
+msgstr ""
+
+msgid "Go!"
+msgstr "Pirmyn"
+
+msgid "Good"
+msgstr ""
+
+msgid "Greek"
+msgstr "Graikų"
+
+msgid "Group Number"
+msgstr "Grupės numeris"
+
+msgid "Guide"
+msgstr ""
+
+msgid "Guide Data"
+msgstr ""
+
+msgid "H"
+msgstr ""
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI Status"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "HDMI raiška"
+
+msgid "HDTV"
+msgstr ""
+
+msgid "HFC MAC ID"
+msgstr "HFC MAC ID"
+
+msgid "Hard of Hearing"
+msgstr "Neprigirdinčiųjų"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Neprigirdinčiųjų subtitrai"
+
+msgid "Hemisphere"
+msgstr "Pusrutulis"
+
+msgid "Hide"
+msgstr "Paslėpti"
+
+msgid "Hide Adult Titles"
+msgstr "Nerodyti turinio suaugusiems"
+
+msgid "Horizontal"
+msgstr "Horizontaliai"
+
+msgid "Hybrid Mode"
+msgstr "Mišrus režimas"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Address"
+msgstr "IP adresas"
+
+msgid "IP Mode"
+msgstr "Internetinis režimas"
+
+msgid "IP Network"
+msgstr "IP tinklas"
+
+msgid "Idle Time"
+msgstr ""
+
+msgid ""
+"In order to record selected program you need to stop one of the following "
+"recordings/schedules"
+msgstr ""
+"Kad galėtumėte įrašyti pasirinktą programą, būtina sustabdyti vieną iš "
+"pateiktų įrašų"
+
+msgid "In progress"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Incorrect Card"
+msgstr "Bloga kortelė"
+
+msgid "Incorrect Conax Card"
+msgstr "Bloga Conax kortelė"
+
+msgid "Incorrect Conax card"
+msgstr ""
+
+msgid "Incorrect card"
+msgstr ""
+
+msgid "Incorrect network settings"
+msgstr ""
+
+msgid "Incorrect old PIN."
+msgstr "Neteisingas senas PIN."
+
+msgid "Information"
+msgstr "Informacija"
+
+msgid "Initialization Error"
+msgstr ""
+
+msgid "Inserted"
+msgstr ""
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Diegimas\n"
+"\n"
+"Paspauskite OK, kad būtų pradėta automatinė kanalų paieška"
+
+msgid "Install now"
+msgstr "Diegti dabar"
+
+msgid "Installing firmware"
+msgstr ""
+
+msgid "Instant Timeshift"
+msgstr "TV su pauze"
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "Interface Status"
+msgstr ""
+
+msgid "Interface Version"
+msgstr "Sąsasajos versija"
+
+msgid "Internet"
+msgstr "Internetas"
+
+msgid "Internet Radio"
+msgstr "Radijas"
+
+msgid "Invalid password"
+msgstr "Neteisingas slaptažodis"
+
+msgid "Invalid recording."
+msgstr ""
+
+msgid "Invalid server response"
+msgstr ""
+
+msgid "Jan"
+msgstr "Sau"
+
+msgid "Jul"
+msgstr "Lie"
+
+msgid "Jun"
+msgstr "Bir"
+
+msgid "Keyword"
+msgstr "Raktažodis"
+
+msgid "Ku-band"
+msgstr "Ku-band"
+
+msgid "Ku-band BSS"
+msgstr "Ku-band BSS"
+
+msgid "Ku-band FSS"
+msgstr "Ku-band FSS"
+
+msgid "Ku-band Universal"
+msgstr "Ku-band Universal"
+
+msgid "LNB Setup"
+msgstr "LNB Setup"
+
+msgid "LNB Type"
+msgstr "LNB Type"
+
+msgid "Language"
+msgstr "Kalba"
+
+msgid "Languages"
+msgstr "Kalbos"
+
+msgid "Latest arrivals"
+msgstr ""
+
+msgid "Latvian"
+msgstr "Latvių"
+
+msgid "Leisure hobbies"
+msgstr "Laisvalaikio hobiai"
+
+msgid "Leisure/hobbies"
+msgstr "Laisvalaikis/hobiai"
+
+msgid "Letterbox"
+msgstr "Palikti juodus kraštus"
+
+msgid "Line"
+msgstr ""
+
+msgid "List is empty"
+msgstr "Nustatymai neįvesti"
+
+msgid "List name already exists"
+msgstr "Toks sąrašo pavadinimas jau yra"
+
+msgid "List name cannot be empty"
+msgstr "Sąrašo pavadinimas negali būti tuščias"
+
+#, c-format
+msgid "List no. %u"
+msgstr "Sąrašo nr. %u"
+
+msgid "Lithuanian"
+msgstr "Lietuvių"
+
+msgid "Loading..."
+msgstr "Kraunama..."
+
+msgid "Local"
+msgstr "Lokalus"
+
+msgid "Local Oscillator Frequency"
+msgstr "Local Oscillator Frequency"
+
+msgid "Lock"
+msgstr "Signalas"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Nėra signalo"
+
+msgid "Lock status - OK"
+msgstr "Tinkamas signalas"
+
+msgid "Locked Ratings"
+msgstr "Turinio leidimas pagal amžių"
+
+msgid "Locked Time"
+msgstr "Laiko ribojimas"
+
+msgid "Locking Status"
+msgstr "Kontrolės būklė"
+
+msgid "Login"
+msgstr "Prisijungti"
+
+msgid "Long Term Error"
+msgstr ""
+
+msgid "Lost tuner access"
+msgstr "Prarasta prieiga prie tiunerio"
+
+msgid "Low power consumption, slow recovery"
+msgstr "Mažas energijos suvartojimas, lėtas įsijungimas"
+
+msgid "MAC Address"
+msgstr ""
+
+msgid "MAC address"
+msgstr "MAC adresas"
+
+msgid "MB"
+msgstr "MB"
+
+msgid "MPEG Service Number"
+msgstr ""
+
+msgid "MPEG Statistics"
+msgstr ""
+
+msgid "MStore"
+msgstr ""
+
+msgid "Manual"
+msgstr "Rankinis"
+
+msgid "Manual (Static)"
+msgstr ""
+
+msgid "Manual Channel Scanning"
+msgstr "Rankinė kanalų paieška"
+
+msgid "Manual Configuration"
+msgstr "Rankinis nustatymas"
+
+msgid "Manual PAT"
+msgstr ""
+
+msgid "Manual PAT Channel Scanning"
+msgstr ""
+
+msgid "Manual(Static)"
+msgstr "Rankinis (Statinis)"
+
+msgid "Mar"
+msgstr "Kov"
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Tėvų apsauga\n"
+"\n"
+"Programos apribojimas: %s\n"
+"Kortelės apribojimas: %s\n"
+"Norėdami žiūrėti įveskite PIN"
+
+msgid "Maturity Rating"
+msgstr "Tėvų apsauga"
+
+msgid "May"
+msgstr "Geg"
+
+msgid "Menu Language"
+msgstr "Meniu kalba"
+
+msgid "Menu Transparency"
+msgstr "Meniu permatomumas"
+
+msgid "Message"
+msgstr "Žinutė"
+
+msgid "Message - NEW!"
+msgstr "Nauja žinutė!"
+
+msgid "Messages"
+msgstr "Žinutės"
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "Mode"
+msgstr "Režimas"
+
+msgid "Modulation"
+msgstr "Moduliacija"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Moduliacija: %s"
+
+msgid "Mondays"
+msgstr "Pirmadieniais"
+
+msgid "More info"
+msgstr "Daugiau informacijos"
+
+msgid "Mounting..."
+msgstr "Prijungiama..."
+
+msgid "Move"
+msgstr "Perkelti"
+
+msgid "Movie/Drama"
+msgstr "Filmai/Drama"
+
+msgid "Movies"
+msgstr ""
+
+msgid "Multichannel"
+msgstr "Daugiakanalis"
+
+msgid "Music/Ballet/Dance"
+msgstr "Muzika/Baletas/Šokis"
+
+msgid "Mux ID"
+msgstr ""
+
+msgid "My Rentals"
+msgstr "Mano nuoma"
+
+msgid "N/A"
+msgstr "Nepasiekiama"
+
+msgid "NAT Status"
+msgstr "NAT būklė"
+
+msgid "NEW RELEASES"
+msgstr ""
+
+msgid "NID selection"
+msgstr ""
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NIT Status"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "Nėra TV signalo"
+
+msgid "NPVR End Margin"
+msgstr ""
+
+msgid "NPVR Start Margin"
+msgstr ""
+
+msgid "NPvr channel entitlement expired."
+msgstr ""
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Name"
+msgstr "Pavadinimas"
+
+msgid "Netmask"
+msgstr "Netmask"
+
+msgid "Network Medium"
+msgstr "Prisijungimas prie interneto"
+
+msgid "Network Name"
+msgstr "Tinklo pavadinimas"
+
+msgid "Network PVR"
+msgstr ""
+
+msgid "Network PVR Quota"
+msgstr ""
+
+msgid "Network Selection"
+msgstr "Tinklo pasirinkimas"
+
+msgid "Network Settings"
+msgstr "Interneto nustatymai"
+
+msgid "Network Type"
+msgstr ""
+
+msgid "Network mask"
+msgstr "Netmask"
+
+msgid "Never"
+msgstr "Niekada"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr "Neįvestas naujo CA PIN kodo patvirtinimo laukas"
+
+msgid "New CA PIN field is not complete"
+msgstr "Neįvestas naujo CA PIN kodo laukas"
+
+msgid "New PIN confirmation field is not complete."
+msgstr "Neįvestas naujo PIN kodo patvirtinimo laukas"
+
+msgid "New PIN field is not complete."
+msgstr "Neįvestas naujo PIN kodo laukas"
+
+msgid "New PIN:"
+msgstr "Naujas PIN:"
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Reikalingas programinės įrangos atnaujinimas %s iš tinklo %s "
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Parengta nauja programinės įrangos versija - %s"
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Nauja versija: %s"
+
+msgid "New pins don't match."
+msgstr "Nauji PIN kodai nesutampa"
+
+msgid ""
+"New recording cannot be scheduled due to many conflicts with previously "
+"scheduled recordings"
+msgstr ""
+"Negalima suplanuoti naujo įrašymo, nes kyla per daug konfliktų su anksčiau "
+"suplanuotais įrašymais"
+
+msgid "News/Cultural affairs"
+msgstr "Naujienos/Kultūra"
+
+msgid "Next"
+msgstr ""
+
+msgid "No"
+msgstr "Ne"
+
+msgid "No Card Inserted"
+msgstr "Neįdėta TV kortelė"
+
+msgid "No DiSEqC"
+msgstr "Nėra DiSEqC"
+
+msgid "No Items"
+msgstr "Nėra įrašų"
+
+msgid "No Signal Lock"
+msgstr ""
+
+msgid "No SmartCard found. This movie can not be ordered"
+msgstr ""
+
+msgid "No access"
+msgstr "Nėra prieigos"
+
+#, c-format
+msgid "No access (%d)"
+msgstr "Nėra prieigos (%d)"
+
+msgid "No access (1)"
+msgstr ""
+
+msgid "No access (10)"
+msgstr ""
+
+msgid "No access (11)"
+msgstr ""
+
+msgid "No access (12)"
+msgstr ""
+
+msgid "No access (2)"
+msgstr ""
+
+msgid "No access (3)"
+msgstr ""
+
+msgid "No access (4)"
+msgstr ""
+
+msgid "No access (5)"
+msgstr ""
+
+msgid "No access (6)"
+msgstr ""
+
+msgid "No access (7)"
+msgstr ""
+
+msgid "No access (8)"
+msgstr ""
+
+msgid "No access (9)"
+msgstr ""
+
+msgid "No access - geographical blackout"
+msgstr "Nėra prieigos dėl geografinių apribojimų"
+
+msgid "No access - network block"
+msgstr "Nėra prieigos dėl tinklo blokavimo"
+
+msgid "No card inserted"
+msgstr ""
+
+msgid "No channel"
+msgstr "Nėra kanalo"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Nėra kanalų.\n"
+"Būtina paleisti kanalų paiešką"
+
+msgid "No credits"
+msgstr "Nėra kreditų"
+
+msgid "No debits"
+msgstr "Nėra papildymų"
+
+msgid "No entries"
+msgstr "Nėra įrašų"
+
+msgid "No events"
+msgstr "Nėra įvykių"
+
+msgid "No items"
+msgstr "Nieko nėra"
+
+msgid "No list"
+msgstr "Nėra sąrašo"
+
+msgid "No messages"
+msgstr "Nėra pranešimų"
+
+msgid "No pairing"
+msgstr ""
+
+msgid "No purses"
+msgstr "Nėra piniginių"
+
+msgid "No results"
+msgstr "Nėra rezultatų"
+
+msgid "No results found"
+msgstr ""
+
+msgid "No subscription"
+msgstr ""
+
+msgid "No subscriptions"
+msgstr "Nėra prenumeratų"
+
+msgid "No title"
+msgstr "Nėra pavadinimo"
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "Aptikta nesuderinama duomenų saugykla (Klaida nr. 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "Aptikta nesuderinama duomenų saugykla (Klaida nr. 3)"
+
+msgid "Non smartcard"
+msgstr ""
+
+msgid "Normal"
+msgstr "Normalus"
+
+msgid "Normal power consumption, fast recovery"
+msgstr "Normalus energijos suvartojimas, greitas įsijungimas"
+
+msgid "Norwegian"
+msgstr "Norvegų"
+
+msgid "Not Entitled"
+msgstr "Nėra prieigos"
+
+msgid "Not connected"
+msgstr "Neprisijungta"
+
+msgid "Not enough tokens - please recharge your card"
+msgstr "Nepakanka kreditų - prašome papildyti kortelę"
+
+msgid "Not entitled"
+msgstr "Nėra prieigos"
+
+msgid "Not present"
+msgstr ""
+
+msgid "Nov"
+msgstr "Lap"
+
+msgid "Number of Pages"
+msgstr ""
+
+msgid "Number of Sessions"
+msgstr "Sesijų skaičius"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "ONID selection"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr "Rodomas laikas"
+
+msgid "Obtaining IP address..."
+msgstr "Gaunamas IP adresas"
+
+msgid "Oct"
+msgstr "Spa"
+
+msgid "Off"
+msgstr "Išjungta"
+
+msgid "Off (Auto Relock)"
+msgstr "Laikinai išjungta"
+
+msgid "Off (Relock Manually)"
+msgstr "Išjungta"
+
+msgid "Offline"
+msgstr ""
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Old CA PIN field is not complete"
+msgstr "Neįvestas senas PIN kodas."
+
+msgid "Old PIN field is not complete."
+msgstr "Neįvestas senas PIN kodas"
+
+msgid "Old PIN:"
+msgstr "Senas PIN:"
+
+msgid "Old pin is invalid."
+msgstr "Neteisingas senas PIN kodas."
+
+msgid "On"
+msgstr "Įjungta"
+
+msgid "Ongoing Recordings"
+msgstr "Vykstantys įrašymai"
+
+msgid "Only for testing"
+msgstr "Tik testavimui"
+
+msgid "Open"
+msgstr "Atviras"
+
+msgid "Options"
+msgstr "Variantai"
+
+msgid "Order by SMS"
+msgstr ""
+
+msgid "Order history"
+msgstr ""
+
+msgid "Original Format"
+msgstr "Originalus formatas"
+
+#, c-format
+msgid "Other error: [%d]"
+msgstr ""
+
+msgid "Out of quota on nPVR server."
+msgstr "Nebeužtenka saugyklos vietos."
+
+msgid "Override"
+msgstr "Neatsižvelgti"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PAT Status"
+msgstr ""
+
+msgid "PCR"
+msgstr ""
+
+msgid "PG: Parental Guidance"
+msgstr "Amžiaus apribojimai"
+
+msgid "PID"
+msgstr ""
+
+msgid "PIN Change"
+msgstr "PIN kodo keitimas"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "Prisijungimas užblokuotas %d minutei"
+msgstr[1] "Prisijungimas užblokuotas %d minutėms"
+msgstr[2] "Prisijungimas užblokuotas %d minučių"
+
+msgid "PIN change"
+msgstr "PIN kodo keitimas"
+
+msgid "PIN confirmation does not match."
+msgstr "PIN kodai nesutampa"
+
+msgid "PIN:"
+msgstr "PIN kodas:"
+
+msgid "PLPID"
+msgstr "PLPID"
+
+msgid "PMT Status"
+msgstr ""
+
+msgid "PVR"
+msgstr "Įrašymas"
+
+msgid "PVR End Margin"
+msgstr "Įrašo pabaigos pavėlinimas"
+
+msgid "PVR Start Margin"
+msgstr "Įrašo pradžios paankstinimas"
+
+msgid "Pairing Ok"
+msgstr ""
+
+msgid "Pairing bad"
+msgstr ""
+
+msgid "Parental Control"
+msgstr "Tėvų kontrolė"
+
+msgid "Parental control"
+msgstr "Tėvų kontrolė"
+
+msgid "Parental control PIN required"
+msgstr ""
+
+msgid "Passive Standby"
+msgstr "Pasyvus budėjimas"
+
+msgid "Password"
+msgstr "Slaptažodis"
+
+msgid "Password must contain between 8 and 63 characters."
+msgstr "Slaptažodžio ilgis turi būti nuo 8 iki 63 simbolių"
+
+msgid "Pin change successful."
+msgstr "PIN kodas pakeistas sėkmingai"
+
+msgid "Play"
+msgstr "Paleisti"
+
+msgid "Play Trailer"
+msgstr "Paleisti anonsą"
+
+msgid "Play from the beginning"
+msgstr "Paleisti nuo pradžių"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr "Rodymas nutrūko dėl klaidos (kodo nr. %d)"
+
+msgid "Playlist error"
+msgstr "Grojaraščio klaida"
+
+msgid "Please Wait"
+msgstr "Prašome palaukti"
+
+msgid "Please confirm new CA PIN:"
+msgstr "Prašome pakartoti CA PIN kodą:"
+
+msgid "Please enter CA PIN"
+msgstr "Prašome įvesti CA PIN kodą:"
+
+msgid "Please enter CA PIN:"
+msgstr "Prašome įvesti PIN kodą:"
+
+msgid "Please enter Conax PIN"
+msgstr "Prašome įvesti PIN kodą"
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr "Pasirinkto turinio peržiūrai prašome įvesti  PIN kodą"
+
+msgid "Please enter Conax PIN to play chosen content"
+msgstr ""
+
+msgid "Please enter Middleware PIN"
+msgstr "Prašome įvesti PIN kodą"
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr "Pasirinkto turinio peržiūrai prašome įvesti PIN kodą"
+
+msgid "Please enter Middleware PIN to play chosen content"
+msgstr ""
+
+msgid "Please enter WEP key"
+msgstr "Prašome įvesti slaptažodį(WEP raktą)"
+
+msgid "Please enter WPA password"
+msgstr "Prašome įvesti slaptažodį (WPA)"
+
+msgid "Please enter WPA2 password"
+msgstr "Prašome įvesti slaptažodį (WPA2)"
+
+msgid "Please enter new CA PIN:"
+msgstr "Prašome įvesti PIN kodą:"
+
+msgid "Please enter parental control PIN"
+msgstr "Šiam veiksmui būtinas PIN kodas"
+
+msgid "Please enter parental control PIN to enter this category"
+msgstr "Prašome įvesti PIN kodą"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr "Prašome įvesti PIN kodą"
+
+msgid "Please enter parental control PIN to play chosen content"
+msgstr "Prašome įvesti PIN kodą"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr "Jei norite ištrinti visus įrašus, prašome įvesti PIN kodą"
+
+msgid "Please wait"
+msgstr "Prašome palaukti"
+
+msgid "Please wait, loading..."
+msgstr "Prašome palaukti..."
+
+msgid "Please wait, loading…"
+msgstr "Prašome palaukti, ruošiama…"
+
+msgid "Please wait."
+msgstr "Prašome palaukti"
+
+msgid "Please wait..."
+msgstr "Prašome palaukti..."
+
+msgid "Polarization"
+msgstr "Poliarizacija"
+
+msgid "Polish"
+msgstr "Lenkų"
+
+msgid "Poor"
+msgstr ""
+
+msgid "Pre FEC BER"
+msgstr ""
+
+msgid "Preferred Audio Track"
+msgstr "Pagrindinis garso takelis"
+
+msgid "Press 'Cancel' to abort automatic switch to standby."
+msgstr ""
+
+msgid "Press 'Enter Standby' to immediately switch to standby."
+msgstr ""
+
+msgid "Press Cancel to stay on current channel or press OK to go to"
+msgstr ""
+
+msgid "Press EPG to enter grid view"
+msgstr "Vaizdui pakeisti spauskite mygtuką Gidas"
+
+msgid "Press EPG to enter list view"
+msgstr "Vaizdui pakeisti spauskite mygtuką Gidas"
+
+msgid "Press Back to go to previous screen"
+msgstr "Norėdami grįžti spauskite Atgal"
+
+msgid "Press OK button to start channel scanning."
+msgstr "Paspauskite OK pradėti kanalų paiešką"
+
+msgid "Press OK to browse"
+msgstr "Norėdami naršyti spauskite OK"
+
+msgid "Press OK to browse or OPT to format"
+msgstr "Paspauskite OK naršyti arba Info formatuoti"
+
+msgid "Press OPT to format"
+msgstr "Paspauskite Info formatuoti"
+
+msgid "Press Opt for more options"
+msgstr "Norėdami keisti spauskite Info"
+
+msgid "Press Opt to add hidden SSID"
+msgstr "Paspauskite Info paslėptam tinklui pridėti"
+
+msgid "Press Restart Now button to restart."
+msgstr ""
+
+#, c-format
+msgid "Press and hold power button for %u second to enter passive standby."
+msgid_plural "Press and hold power button for %u seconds to enter passive standby."
+msgstr[0] ""
+msgstr[1] "Palaikykite įjungimo mygtuką %u sekundes kad patektumėte į pasyvų budėjimą"
+msgstr[2] ""
+
+msgid "Press power button to cancel standby."
+msgstr "Paspauskite įjungimo mygtuką atšaukti budėjimą"
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Ankstesnė versija: %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Kaina: %i.%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Kaina: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Pagrindinė kalba"
+
+msgid "Primary Subtitle Language"
+msgstr "Pagrindinė subtitrų kalba"
+
+msgid "Problem"
+msgstr ""
+
+msgid "Proceed"
+msgstr "Tęsti"
+
+msgid "Processing KERNEL"
+msgstr ""
+
+msgid "Processing LOGO"
+msgstr ""
+
+msgid "Processing ROOTFS"
+msgstr ""
+
+msgid "Processing USR"
+msgstr ""
+
+msgid "Program Number"
+msgstr ""
+
+msgid "Prompt"
+msgstr "Paklausti"
+
+msgid "Prompt when pressed"
+msgstr "Paklausti kai paspausta"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr "Nesuderinamas protokolas: %d"
+
+msgid "Purchase Acceptance"
+msgstr ""
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Piniginė: %s"
+
+msgid "Push VOD"
+msgstr ""
+
+msgid "QAM128"
+msgstr ""
+
+msgid "QAM16"
+msgstr ""
+
+msgid "QAM256"
+msgstr ""
+
+msgid "QAM32"
+msgstr ""
+
+msgid "QAM64"
+msgstr ""
+
+msgid "QPSK"
+msgstr ""
+
+msgid "Quality"
+msgstr "Kokybė"
+
+msgid "Quality Level"
+msgstr "Signalo kokybė"
+
+msgid "Quota"
+msgstr "Kvota"
+
+msgid "Quota exceeded."
+msgstr ""
+
+msgid "RCU Power Button"
+msgstr "Įjungimo mygtukas pultelyje"
+
+msgid "RECOMMENDED"
+msgstr ""
+
+msgid "RF Channel"
+msgstr ""
+
+msgid "RF Signal Status"
+msgstr ""
+
+msgid "RF Tuner Statistics"
+msgstr ""
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Radio"
+msgstr "Radijas"
+
+msgid "Radio Guide"
+msgstr ""
+
+msgid "Rearrange list"
+msgstr "Redaguoti sąrašą"
+
+msgid "Record"
+msgstr "Įrašyti"
+
+msgid "Record always"
+msgstr "Visada įrašyti"
+
+msgid "Record keyword with nPVR"
+msgstr ""
+
+msgid "Record repeatedly"
+msgstr "Įrašyti pakartotinai"
+
+msgid "Record series with nPVR"
+msgstr ""
+
+msgid "Record with nPVR"
+msgstr "Įrašyti"
+
+msgid "Recording can't be scheduled - not enough quota."
+msgstr ""
+
+msgid "Recording can't be scheduled on selected event."
+msgstr ""
+
+msgid "Recording is in the wrong state."
+msgstr ""
+
+msgid "Recording not found."
+msgstr ""
+
+msgid "Recording on that event has been already scheduled."
+msgstr ""
+
+msgid "Remind me"
+msgstr "Priminti"
+
+msgid "Reminder"
+msgstr "Priminimas"
+
+msgid "Reminders"
+msgstr "Priminimai"
+
+msgid "Remove"
+msgstr "Pašalinti"
+
+msgid "Remove channel"
+msgstr "Pašalinti kanalą"
+
+msgid "Remove directory"
+msgstr "Pašalinti katalogą"
+
+msgid "Remove directory & keep contents"
+msgstr ""
+
+msgid "Remove list"
+msgstr "Pašalinti sąrašą"
+
+msgid "Remove reminder"
+msgstr "Pašalinti priminimą"
+
+msgid "Remove satellite"
+msgstr "Pašalinti palydovą"
+
+msgid "Removed"
+msgstr ""
+
+msgid "Rename directory"
+msgstr "Pervadinti katalogą"
+
+msgid "Rename list"
+msgstr "Pervadinti sąrašą"
+
+msgid "Rent"
+msgstr "Išnuomoti"
+
+msgid "Rental period expired"
+msgstr "Pasibaigęs nuomos periodas"
+
+msgid "Rental period for this content has expired."
+msgstr "Šiam turiniui nuomos periodas yra pasibaigęs"
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Nuomos periodas: %i %s"
+
+msgid "Renting Period Expired."
+msgstr ""
+
+msgid "Repeat"
+msgstr "Kartoti"
+
+msgid "Repeat new PIN:"
+msgstr "Pakartokite naują PIN:"
+
+msgid "Resolve conflicts"
+msgstr "Spręsti konfliktus"
+
+msgid "Restart Device"
+msgstr "Perkrauti priedėlį"
+
+msgid "Restart Now"
+msgstr ""
+
+msgid "Restore Factory Defaults"
+msgstr "Atstatyti gamyklinius parametrus"
+
+msgid "Restored last working network configuration."
+msgstr ""
+
+msgid "Results - Failure"
+msgstr "Rezultatai - nepavyko"
+
+msgid "Results - Success"
+msgstr "Rezultatai - pavyko"
+
+msgid "Retrieving channel list"
+msgstr "Gaunamas kanalų sąrašas"
+
+msgid "Russian"
+msgstr "Rusų"
+
+msgid "S/PDIF A/V Sync"
+msgstr "S/PDIF A/V sinchronizacija"
+
+msgid "SCART Signal Type"
+msgstr "SCART signalo tipas"
+
+msgid "SDT Status"
+msgstr ""
+
+msgid "SID"
+msgstr ""
+
+msgid "SIMILAR TITLES:"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "SSID is unknown"
+msgstr "Tinklo pavadinimas nežinomas"
+
+msgid "SSID is unknown!"
+msgstr "Tinklo pavadinimas nežinomas"
+
+msgid "STB Mode has changed"
+msgstr ""
+
+msgid "STB Mode update is required to make the STB work correctly."
+msgstr ""
+
+msgid "STB Status"
+msgstr ""
+
+msgid "Satellite"
+msgstr "Palydovas"
+
+msgid "Satellite %s is not setup yet"
+msgstr "Palydovas %s dar nenustatytas"
+
+msgid "Satellite Info"
+msgstr "Palydovo informacija"
+
+msgid "Satellite Name"
+msgstr "Palydovo pavadinimas"
+
+msgid "Satellite Name:"
+msgstr "Palydovo pavadinimas:"
+
+msgid "Satellite Setup"
+msgstr "Palydovo nustatymas"
+
+msgid "Satellite name cannot be empty"
+msgstr "Palydovo pavadinimas negali būti tuščias"
+
+msgid "Satellite with given name already exists"
+msgstr "Palydovas tokiu pavadinimu jau yra"
+
+msgid "Saturdays"
+msgstr "Šeštadieniais"
+
+msgid "Save"
+msgstr "Išsaugoti"
+
+msgid "Saving..."
+msgstr "Išsaugoma..."
+
+msgid "Scan Type"
+msgstr "Paieškos tipas"
+
+msgid "Scan now"
+msgstr "Ieškoti dabar"
+
+msgid "Scanning Standard"
+msgstr "Paieškos standartas"
+
+msgid "Scanning channels"
+msgstr "Kanalų paieška"
+
+msgid "Scanning failed"
+msgstr ""
+
+msgid "Schedule deleted."
+msgstr ""
+
+msgid "Schedule keyword recording"
+msgstr "Suplanuoti įrašymą pagal raktažodį"
+
+msgid "Schedule manual recording"
+msgstr "Suplanuoti rankinį įrašymą"
+
+msgid "Schedule series recording"
+msgstr ""
+
+msgid "Scheduled Recordings"
+msgstr "Suplanuoti įrašymai"
+
+msgid "Screensaver Timeout"
+msgstr "Po kiek laiko įjungti ekrano apsaugą"
+
+msgid "Search"
+msgstr "Paieška"
+
+msgid "Search by category"
+msgstr "Ieškoti pagal kategoriją"
+
+msgid "Search by name"
+msgstr "Ieškoti pagal pavadinimą"
+
+msgid "Search in progress..."
+msgstr "Vyksta paieška..."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "Paieška: %d rezultatas"
+msgstr[1] "Paieška: %d rezultatai"
+msgstr[2] "Paieška: %d rezultatų"
+
+msgid "Searching for channels"
+msgstr "Ieškoma kanalų"
+
+msgid "Searching..."
+msgstr "Ieškoma..."
+
+msgid "Secondary Audio Language"
+msgstr "Antrinė kalba"
+
+msgid "Secondary Subtitle Language"
+msgstr "Antrinė subtitrų kalba"
+
+msgid "See all"
+msgstr ""
+
+msgid "See all from"
+msgstr "Rodyti visus iš"
+
+msgid "Select Time Zone"
+msgstr "Pasirinkite laiko juostą"
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Pasirinkite garso vėlinimą %s išėjime"
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Pasirinkti naują amžiaus apribojimą (reikės CA PIN)"
+
+msgid "Sent from remote device"
+msgstr "Atsiųsta iš nutolusio įrenginio"
+
+msgid "Sep"
+msgstr "Rgs"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr "Ryšio su serveriu klaida: %d"
+
+msgid "Server error"
+msgstr ""
+
+msgid "Server error: forbidden"
+msgstr ""
+
+msgid "Server error: unsupported protocol"
+msgstr ""
+
+msgid "DVB error: no audio/video"
+msgstr ""
+
+
+msgid "Service Name"
+msgstr "Paslaugos pavadinimas"
+
+msgid "Service Not Found - Please Contact your service representative."
+msgstr ""
+
+msgid "Set Auto Relock Time"
+msgstr "Vėl įjungti po"
+
+msgid "Set Current Time"
+msgstr "Nustatyti dabartinį laiką"
+
+msgid "Settings"
+msgstr "Techniniai parametrai"
+
+msgid "Setup"
+msgstr "Nustatymai"
+
+msgid "Short Term Error"
+msgstr ""
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Sutrumpinti įrašą iki %s"
+
+msgid "Show similar"
+msgstr "Rodyti panašius"
+
+msgid "Show/Game show"
+msgstr "Pasirodymai/Žaidimai"
+
+msgid "Sign Off"
+msgstr "Išsiregistruoti"
+
+msgid "Signal - OK"
+msgstr "Signalas - geras"
+
+msgid "Signal Level"
+msgstr "Signalo stiprumas"
+
+msgid "Signal Quality"
+msgstr "Signalo kokybė"
+
+msgid "Signal Strength"
+msgstr "Signalo stiprumas"
+
+msgid "Signal lost - check cable"
+msgstr "Prarastas signalas - patikrinkite kabelį"
+
+msgid "SmartCard ID"
+msgstr ""
+
+msgid "SmartCard Status"
+msgstr ""
+
+msgid "SmartCard Subscription Status"
+msgstr ""
+
+msgid "Smartcard"
+msgstr ""
+
+msgid "Social Media"
+msgstr "Socialinė medija"
+
+msgid "Social/Political issues/Economics"
+msgstr "Politika/Ekonomika/Socialiniai klausimai"
+
+msgid "Software"
+msgstr "Programinė įranga"
+
+msgid "Software Update"
+msgstr "Programinės įrangos atnaujinimas"
+
+msgid "Software Version"
+msgstr "Programinės įrangos versija"
+
+msgid "Sort satellites"
+msgstr "Rūšiuoti palydovus"
+
+msgid "Source server: failed to record event."
+msgstr ""
+
+msgid "Spanish"
+msgstr "Ispanų"
+
+msgid "Special"
+msgstr "Ypatinga"
+
+msgid "Sports"
+msgstr "Sportas"
+
+msgid "Standard"
+msgstr "Standartinis"
+
+msgid "Standby Mode"
+msgstr ""
+
+msgid "Standby Settings"
+msgstr "Budėjimo nustatymai"
+
+msgid "Start"
+msgstr "Pradėti"
+
+msgid "Start Frequency"
+msgstr "Pradžios dažnis"
+
+msgid "Start date                           End date"
+msgstr "Pradžios data                           Pabaigos data"
+
+msgid "Start date                End date                   Entitlement"
+msgstr "Pradžios data\t\t\t Pabaigos data\t\t\t\tPrieiga"
+
+msgid "Start time"
+msgstr "Pradžios laikas"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Enter CA PIN to start viewing:"
+msgstr ""
+"Pradėti žiūrėti\n"
+"%s\n"
+"Liko žiūrėti minučių: %i\n"
+"Norėdami žiūrėti prašome įveskite PIN:"
+
+msgid "Static"
+msgstr "Statinis"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "Būklė: %u%% atsisiųsta"
+
+msgid "Status: Download scheduled"
+msgstr "Būklė: suplantuotas atsisiuntimas"
+
+msgid "Status: Not available"
+msgstr "Būklė: neprieinama"
+
+#, c-format
+msgid "Step %d out of %d"
+msgstr "Žingsnis %d iš %d"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Stop"
+msgstr "Sustabdyti"
+
+msgid "Stop channel recording"
+msgstr "Sustabdyti kanalo įrašymą"
+
+msgid "Stop keyword recording"
+msgstr "Sustabdyti įrašymą pagal raktažodį"
+
+msgid "Stop recording"
+msgstr "Sustabdyti įrašymą"
+
+msgid "Stop recording always"
+msgstr ""
+
+msgid "Stop recording repeatedly"
+msgstr ""
+
+msgid "Stop repeated recording"
+msgstr "Sustabdyti pakartotinį įrašymą"
+
+msgid "Stop series recording"
+msgstr ""
+
+msgid "Stop using disk"
+msgstr ""
+
+msgid "Stop using for PVR"
+msgstr "Nustoti naudoti įrašymui"
+
+msgid "Stop using for PVR/TS"
+msgstr "Nustoti naudoti įrašymui/pauzei"
+
+msgid "Stop using for Timeshift"
+msgstr "Nustoti naudoti pauzei"
+
+msgid "Stopped"
+msgstr "Sustabdyta"
+
+msgid "Strength"
+msgstr "Stiprumas"
+
+msgid "Stretched"
+msgstr "Priartinti nukertant kraštus"
+
+msgid "Subscription Status"
+msgstr "Abonemento būklė"
+
+msgid "Subtitle Language"
+msgstr "Subtitrų kalba"
+
+msgid "Summary"
+msgstr ""
+
+msgid "Sundays"
+msgstr "Sekmadieniais"
+
+msgid "Swedish"
+msgstr "Švedų"
+
+msgid "Switch to channel"
+msgstr "Perjungti kanalą"
+
+msgid "Symbol Rate"
+msgstr "Simbolių sparta"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Simbolių sparta: %d"
+
+msgid "System Information"
+msgstr "Sisteminė informacija"
+
+msgid "System Settings"
+msgstr "Sisteminiai nustatymai"
+
+msgid "System Time"
+msgstr ""
+
+msgid "System reboot is required to apply new application layout."
+msgstr "Naujos aplinkos pritaikymui būtina perkrauti priedėlį."
+
+msgid "TDT Status"
+msgstr ""
+
+msgid "TSID"
+msgstr ""
+
+msgid "TV"
+msgstr "TV"
+
+msgid "TV Guide"
+msgstr "TV gidas"
+
+msgid "TV Size"
+msgstr "TV ekrano forma"
+
+msgid "TV System"
+msgstr "TV sistema"
+
+msgid "Terrestrial"
+msgstr "Orinė"
+
+msgid "Test is test"
+msgstr ""
+
+msgid "The limit of simultaneous tasks has been exceeded."
+msgstr "Viršytas vienu metu vykstančių užduočių limitas"
+
+msgid ""
+"The offer You are trying to access is a part of a package.\n"
+"Please contact operator for further instructions."
+msgstr ""
+"Pasiūlymas, kurį bandote pasiekti yra paketo dalis.\n"
+"Prašome susisiekti su Cgates dėl tolimesnių nurodymų."
+
+msgid ""
+"There are too many ongoing recordings. Please stop some to watch this "
+"channel again."
+msgstr ""
+"Per daug vykstančių įrašymų. Prašome kažkurį sustabdyti, jeigu norite vėl "
+"žiūrėti šį kanalą."
+
+msgid ""
+"There is a technical problem with this movie, please contact Digitalb "
+"Customer Care"
+msgstr ""
+
+msgid ""
+"There´s a connectivity problem, please try again, if the problem remains "
+"please call your provider"
+msgstr ""
+"Atsiprašome, įvyko ryšio klaida. Patikrinkite interneto ryšį ir perkraukite "
+"priedėlį. Jei problema neišsispręs – kreipkitės į Cgates"
+
+msgid "This action can not be performed on selected recording."
+msgstr ""
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "Reiks perkrauti priedėlį. Ar esate tikri?"
+
+msgid "This is not a valid IP address"
+msgstr ""
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Priminimas pakeis šiuos priminimus:\n"
+
+msgid "Thread Count"
+msgstr ""
+
+msgid "Thursdays"
+msgstr "Ketvirtadieniais"
+
+msgid "Time"
+msgstr "Laikas"
+
+msgid "Time Mode"
+msgstr "Laiko režimas"
+
+msgid "Time Settings"
+msgstr "Laiko nustatymai"
+
+msgid "Time Zone"
+msgstr "Laiko juosta"
+
+#, c-format
+msgid "Title: %s"
+msgstr "Pavadinimas: %s"
+
+msgid ""
+"To subscribe to this product (Traxis SVOD), please call Customer Support."
+msgstr "Norėdami užsisakyti šį produktą prašome kreiptis į Cgates."
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Prieiga žetonais\n"
+"%s\n"
+"%d žetonas(-ai)%s\n"
+"Piniginės balansas: %s %d žetonai\n"
+"%s"
+
+msgid "Token and EMM was not provided by Middleware"
+msgstr ""
+
+msgid "Tokens Status"
+msgstr "Žetonų būklė"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Žetonai: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Date: %s"
+msgstr ""
+"Žetonai: %d\n"
+"Paskutinį kart naudota: %s"
+
+msgid "Too many simultaneous recordings."
+msgstr "Per daug įrašymų vienu metu"
+
+#, c-format
+msgid "Track %d"
+msgstr "Kalba %d"
+
+msgid "Trailer"
+msgstr "Anonsas"
+
+msgid "Transponders"
+msgstr "Transponderiai"
+
+msgid "Tuesdays"
+msgstr "Antradieniais"
+
+msgid "Tuned Frequency"
+msgstr "Dažnis"
+
+msgid "Tuner Type"
+msgstr "Tiunerio tipas"
+
+msgid "Tuner is not available"
+msgstr "Tiuneris nepasiekiamas"
+
+msgid "Type"
+msgstr "Tipas"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "USB Status"
+msgstr ""
+
+msgid "Unable to change settings while recording is active"
+msgstr "Negalima keisti nustatymų aktyvaus įrašymo metu"
+
+msgid "Unable to reach host. Functionality may be limited."
+msgstr ""
+
+msgid "Unable to save. Keyword is incorrect."
+msgstr ""
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Negalima išsaugoti - per trumptas raktažodis"
+
+msgid "Unavailable"
+msgstr ""
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr "Klaida: nesuprantamas serverio atsakas: %d"
+
+msgid "Unfortunately VoD service is not available."
+msgstr "Deja, Video paslaugos šiuo metu neprieinamos"
+
+msgid "Unique Id"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Nežinomas"
+
+msgid "Unknown Device"
+msgstr "Nežinomas įrenginys"
+
+msgid "Unknown nPVR error."
+msgstr "Nežinoma įrašymo klaida. Jei kartojasi - kreipkitės į Cgates"
+
+msgid "Unknown state"
+msgstr ""
+
+msgid "Unlimited"
+msgstr "Neribotas"
+
+msgid "Unlock"
+msgstr "Atrakinti"
+
+msgid "Unmounting..."
+msgstr "Atjungimas..."
+
+msgid "Unread messages!"
+msgstr "Neperskaityti pranešimai!"
+
+#, c-format
+msgid "Update Starts In %d Minute"
+msgid_plural "Update Starts In %d Minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Update Starts Soon"
+msgstr ""
+
+msgid "Update now"
+msgstr "Atnaujinti dabar"
+
+msgid ""
+"Update will take about 10 minutes. During this time screen may blink and you "
+"won't be able to use your STB."
+msgstr ""
+"Atnaujinimas truks apie 10 minučių. Tuo metu ekranas gali mirkčioti ir Jūs "
+"negalėsite naudotis priedėliu."
+
+msgid "Uptime"
+msgstr ""
+
+msgid "Use NIT/SDT"
+msgstr "Naudoti NIT/SDT"
+
+msgid "Use disk"
+msgstr ""
+
+msgid "Use for PVR"
+msgstr "Naudoti PVR"
+
+msgid "Use for PVR/TS"
+msgstr "Naudoti įrašymui/pauzei"
+
+msgid "Use for Timeshift"
+msgstr "Naudoti pauzei"
+
+msgid "Used for PVR"
+msgstr "Naudojamas įrašymui"
+
+msgid "Used for PVR and Timeshift"
+msgstr "Naudojamas įrašymui ir pauzei"
+
+msgid "Used for Timeshift"
+msgstr "Naudojamas pauzei"
+
+msgid "User Interface"
+msgstr "Išvaizda"
+
+msgid "User Time"
+msgstr ""
+
+msgid "V"
+msgstr ""
+
+msgid "VCAS connectivity"
+msgstr ""
+
+msgid "VOD"
+msgstr "Video"
+
+msgid "Verifying Flash partitions"
+msgstr ""
+
+msgid "Verifying installed file"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Version Number"
+msgstr ""
+
+#, c-format
+msgid "Version: %s"
+msgstr "Versija: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Versija: %s, tinklas: %s"
+
+msgid "Vertical"
+msgstr "Vertikaliai"
+
+msgid "Video Codec"
+msgstr ""
+
+msgid "Video PID"
+msgstr ""
+
+msgid "Video Settings"
+msgstr "Vaizdo nustatymai"
+
+msgid "Video Status"
+msgstr ""
+
+msgid "Video Type"
+msgstr ""
+
+msgid "View"
+msgstr "Paleisti"
+
+msgid "View again"
+msgstr "Paleisti vėl"
+
+msgid "View from the beginning"
+msgstr "Paleisti nuo pradžių"
+
+msgid "ViewRight Web Connectivity"
+msgstr ""
+
+msgid "ViewRightIPTV"
+msgstr ""
+
+msgid "Virtual Memory"
+msgstr ""
+
+msgid "Visually Impaired"
+msgstr "Silpnaregiams"
+
+msgid "VoD unavailable"
+msgstr "Video nepasiekiami"
+
+msgid "Voicemail error"
+msgstr ""
+
+msgid "WEB on TV"
+msgstr "WWW televizoriuje"
+
+msgid "WEP"
+msgstr "WEP"
+
+msgid "WPA/WPA2"
+msgstr "WPA/WPA2"
+
+msgid "Waiting for channels"
+msgstr "Laukiama kanalų"
+
+msgid "Waiting for channels..."
+msgstr "Laukiama kanalų..."
+
+msgid "Waiting for nPVR server response..."
+msgstr "Laukiama įrašymo serverio atsakymo"
+
+msgid "Waiting for response"
+msgstr "Laukiama atsakymo"
+
+msgid "Warning"
+msgstr "Įspėjimas"
+
+msgid "Warning: All current recordings will be stopped!"
+msgstr "Dėmesio: visi vykstantys įrašymai bus sustabdyti!"
+
+msgid "Warning: Timeshift will be forsaken"
+msgstr "Dėmesio: pauzė bus išjungta"
+
+msgid "Weather"
+msgstr "Orai"
+
+msgid "Web Services"
+msgstr ""
+
+msgid "Wednesdays"
+msgstr "Trečiadieniais"
+
+msgid "Weekdays"
+msgstr "Darbo d."
+
+msgid "Weekends"
+msgstr "Savaitgaliais"
+
+msgid "Weekly"
+msgstr "Kas savaitę"
+
+msgid "WiFi Encryption"
+msgstr ""
+
+msgid "WiFi Network Type"
+msgstr "WiFi tinklo tipas"
+
+msgid "WiFi Password"
+msgstr "WiFi slaptažodis"
+
+msgid "WiFi Security"
+msgstr "WiFi apsauga"
+
+msgid "WiFi Session ID"
+msgstr "WiFi sesijos ID"
+
+msgid "WiFi settings"
+msgstr "WiFi nustatymai"
+
+msgid "Wired (Ethernet)"
+msgstr "Laidu (\"Ethernet\")"
+
+msgid "Wired (MoCa)"
+msgstr "Laidu (MoCa)"
+
+msgid "Wireless (WiFi)"
+msgstr "Belaidžiu (WiFi)"
+
+msgid "Would You like to do it now?"
+msgstr "Ar norėtumėte tai padaryti dabar?"
+
+msgid "Writing configuration"
+msgstr ""
+
+msgid "Wrong CA PIN."
+msgstr "Blogas CA PIN."
+
+msgid "Wrong CA PIN. Try again."
+msgstr "Blogas PIN kodas. Bandykite dar."
+
+msgid "Wrong Start time and End time. Start time must be other than End time."
+msgstr "Pradžios laikas negali sutapti su pabaigos laiku."
+
+msgid "X: Erotic"
+msgstr "X: Erotika"
+
+msgid "Yes"
+msgstr "Taip"
+
+msgid "You are not an owner of that recording."
+msgstr ""
+
+msgid "You are not entitled to use this folder."
+msgstr ""
+
+msgid "You are not entitled to use this recording."
+msgstr ""
+
+msgid "You are not entitled to view this channel"
+msgstr "Nesate užsisakę šio kanalo"
+
+msgid "You are not entitled to view this content"
+msgstr "Nesate užsisakę šio turinio"
+
+msgid "You can not use this recording now."
+msgstr ""
+
+msgid "You cannot delete folder with NpvrRecordings."
+msgstr ""
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "Nepakanka vietos naujam įrašui"
+
+msgid "You got mail"
+msgstr "Gavote naują pranešimą"
+
+msgid "You have too many directories and keyword recordings."
+msgstr ""
+
+msgid "You have too many directories and recordings."
+msgstr ""
+
+msgid "You have too many directories and scheduled recordings."
+msgstr ""
+
+msgid "You have too many directories."
+msgstr "Turite per daug katalogų"
+
+msgid "You have too many favorites lists."
+msgstr "Turite per daug mėgstamiausiųjų sąrašų"
+
+msgid "You have too many recordings."
+msgstr "Turite per daug įrašų"
+
+msgid "You have too many reminders."
+msgstr ""
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr "Būtina paleisti kanalų paiešką, jeigu norite naudotis Video paslaugomis"
+
+msgid "You will be soon zapped to"
+msgstr "Priedėlis tuoj persijungs į"
+
+#, c-format
+msgid ""
+"Your TV is currently connected to an inactive output on this set-top box. "
+"Please press VOUT button on your remote control to activate this output or "
+"connect your TV to the %s output."
+msgstr ""
+"Jūsų televizorius prijungtas neaktyvia priedėlio jungtimi. Palaikykite garso "
+"išjungimo mygtuką pultelyje arba prijunkite televizorių per %s jungtį"
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would "
+"you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would "
+"you like to:\n"
+"\n"
+msgstr[0] ""
+"Jūsų naujas įrašas nesuderinamas su %i anksčiau suplanuotu įrašu. Ar "
+"norėtumėte:\n"
+"\n"
+msgstr[1] ""
+"Jūsų naujas įrašas nesuderinamas su %i anksčiau suplanuotais įrašais. Ar "
+"norėtumėte:\n"
+"\n"
+msgstr[2] ""
+"Jūsų naujas įrašas nesuderinamas su %i anksčiau suplanuotų įrašų. Ar "
+"norėtumėte:\n"
+"\n"
+
+msgid "[active]"
+msgstr ""
+
+msgid "[completed]"
+msgstr "[baigta]"
+
+msgid "[failed]"
+msgstr "[nepavyko]"
+
+msgid "[interrupted]"
+msgstr "[pertraukta]"
+
+msgid "[missed]"
+msgstr "[praleista]"
+
+msgid "[recording]"
+msgstr "[įrašinėja]"
+
+msgid "[removed]"
+msgstr "[pašalinta]"
+
+msgid "[scheduled]"
+msgstr "[suplanuota]"
+
+msgid "[stopped manually]"
+msgstr "[sustabdyta rankiniu būdu]"
+
+msgid "[stopped – no source]"
+msgstr "[sustabdyta – nėra šaltinio]"
+
+msgid "[stopped – no space]"
+msgstr "[sustabdyta – nėra vietos]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] "apie %d SD valandą arba"
+msgstr[1] "apie %d SD valandas arba"
+msgstr[2] "apie %d SD valandų arba"
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "liko apie %d valanda"
+msgstr[1] "liko apie %d valandos"
+msgstr[2] "liko apie %d valandų"
+
+msgid "chkflash"
+msgstr "chkflash"
+
+msgid "config"
+msgstr "config"
+
+msgid "done"
+msgstr "Baigta"
+
+msgid "download"
+msgstr "Siunčiama"
+
+msgid "dut"
+msgstr ""
+
+msgid "element"
+msgstr "elementas"
+
+msgid "eng"
+msgstr ""
+
+msgid "enter"
+msgstr "OK"
+
+msgid "format_long"
+msgstr "format_long"
+
+msgid "formating"
+msgstr "formatuoja"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "valanda"
+msgstr[1] "valandos"
+msgstr[2] "valandų"
+
+msgid "hours"
+msgstr "val."
+
+msgid "kernel"
+msgstr "kernel"
+
+msgid "less than HD hour left"
+msgstr "liko mažiau nei HD valanda"
+
+msgid "less than hour left"
+msgstr "liko mažiau nei valanda"
+
+msgid "logo"
+msgstr "logo"
+
+msgid "more_adult_search_results"
+msgstr ""
+
+msgid "nPVR action failed"
+msgstr ""
+
+msgid "nPVR quota used"
+msgstr "naudojama saugyklos vietos"
+
+msgid "nPVR request has been canceled"
+msgstr ""
+
+msgid "nPVR server rejected recording request."
+msgstr "nepavyko paleisti įrašymo"
+
+msgid "no quota limit"
+msgstr ""
+
+msgid "off"
+msgstr "Išjungta"
+
+msgid "quota used"
+msgstr ""
+
+msgid "recording"
+msgid_plural "recordings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "rezultatas"
+msgstr[1] "rezultatai"
+msgstr[2] "rezultatų"
+
+msgid "rootfs"
+msgstr "rootfs"
+
+msgid "spa"
+msgstr ""
+
+msgid "space"
+msgstr "Tarpas"
+
+msgid "to"
+msgstr ""
+
+msgid "today"
+msgstr "Šiandien"
+
+msgid "tomorrow"
+msgstr "Rytoj"
+
+msgid "unknonw"
+msgstr ""
+
+msgid "unknown"
+msgstr "nežinomas"
+
+msgid "unknown quota"
+msgstr ""
+
+msgid "unlimited"
+msgstr "neribotas"
+
+msgid "upgrade_long"
+msgstr ""
+"Programinės įrangos atnaujinimas gali užtrukti 10 – 15 min.\n"
+"SVARBU: neišjunkite priedėlio ir neatjunkite jo maitinimo laido.\n"
+"Atsinaujinus programinei įrangai priedėlis automatiškai persikraus."
+
+msgid "usr"
+msgstr "usr"
+
+msgid "verify"
+msgstr "patvirtinti"
+
+msgid "writing"
+msgstr "įrašinėja"
+
+#~ msgid "120 minutes"
+#~ msgstr "120 minučių"
+
+#~ msgid "150 minutes"
+#~ msgstr "150 minučių"
+
+#~ msgid "180 minutes"
+#~ msgstr "180 minučių"
+
+#~ msgid "60 minutes"
+#~ msgstr "60 minučių"
+
+#~ msgid "90 minutes"
+#~ msgstr "90 minučių"
+
+#~ msgid "Add/remove channels"
+#~ msgstr "Pridėti/šalinti kanalus"
+
+#~ msgid "Advanced settings"
+#~ msgstr "Detalūs nustatymai"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "CET / CEST"
+#~ msgstr "CET / CEST"
+
+#~ msgid "CLT / CLST"
+#~ msgstr "CLT / CLST"
+
+#~ msgid "Cannot connect to middleware (error code %d)."
+#~ msgstr "Nepavyksta prisijungti prie serverio (klaidos kodas %d)."
+
+#~ msgid "Changing skin requires box reboot"
+#~ msgstr "Aplinkos pakeitimui būtina perkrauti priedėlį"
+
+#~ msgid "Configure"
+#~ msgstr "Nustatyti"
+
+#~ msgid "Connected to"
+#~ msgstr "Prisijungta prie"
+
+#~ msgid "Connected to %s network. Link is up on %s interface."
+#~ msgstr "Prisijungta prie %s tinklo per %s sąsają."
+
+#~ msgid "Connected, IP:"
+#~ msgstr "Prisijungta, IP:"
+
+#~ msgid "Connecting to"
+#~ msgstr "Jungiamasi prie"
+
+#~ msgid "Connection lost on %s interface."
+#~ msgstr "Ryšys prarastas %s sąsajoje"
+
+#~ msgid "Connection to %s failed"
+#~ msgstr "Prie %s prisijungti nepavyko"
+
+#~ msgid "DNS"
+#~ msgstr "DNS"
+
+#~ msgid "DVB-C Automatic"
+#~ msgstr "DVB-C automatinis"
+
+#~ msgid "Default gateway"
+#~ msgstr "Gateway"
+
+#~ msgid "Disconnecting"
+#~ msgstr "Atsijungiama"
+
+#~ msgid "Display Format (HDMI)"
+#~ msgstr "Rodymo formatas (HDMI)"
+
+#~ msgid "Display Format (SCART)"
+#~ msgstr "Rodymo formatas (SCART)"
+
+#~ msgid "EET / EEST"
+#~ msgstr "EET / EEST"
+
+#~ msgid "Enable/Disable"
+#~ msgstr "Įjungti/Išjungti"
+
+#~ msgid "Error occured"
+#~ msgstr "Įvyko klaida"
+
+#~ msgid "Favourites Numbering"
+#~ msgstr "Mėgstamiausiųjų numeracija"
+
+#~ msgid "Format successful"
+#~ msgstr "Sėkmingai suformatuota"
+
+#~ msgid "GB"
+#~ msgstr "GB"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "GMT / BST"
+#~ msgstr "GMT / BST"
+
+#~ msgid ""
+#~ "Got new %s IP address (%s) on %s interface. Achieved %s connectivity."
+#~ msgstr ""
+#~ "Gautas naujas %s IP adresas (%s) per %s sąsają. Prisijungta prie %s."
+
+#~ msgid "Helsinki, Athens, Kaliningrad"
+#~ msgstr "Helsinkis, Atėnai, Kaliningradas"
+
+#~ msgid "IP:"
+#~ msgstr "IP:"
+
+#~ msgid "Incorrect CA Card"
+#~ msgstr "Bloga CA kortelė"
+
+#~ msgid "Internet radio"
+#~ msgstr "Radijas"
+
+#~ msgid "Link is up on %s interface."
+#~ msgstr "Prisijungimas veikia per %s sąsają"
+
+#~ msgid "London, Belfast"
+#~ msgstr "Londonas, Belfastas"
+
+#~ msgid "MSK"
+#~ msgstr "MSK"
+
+#~ msgid ""
+#~ "Make sure your ethernet cable is plugged in or your WiFi dongle is "
+#~ "inserted."
+#~ msgstr "Įsitikinkite, kad interneto laidas arba WiFi antena yra prijungti."
+
+#~ msgid "Middleware connection status is OK."
+#~ msgstr "Sėkmingai prisijungta prie serverio."
+
+#~ msgid "Middleware connection status is unknown."
+#~ msgstr "Neaišku ar pavyks prisijungti prie serverio."
+
+#~ msgid "Moscow, Saint Petersburg"
+#~ msgstr "Maskva, Sankt Peterburgas"
+
+#~ msgid "Network Configuration"
+#~ msgstr "Režimas"
+
+#~ msgid "New application layout requires box reboot."
+#~ msgstr "Naujai išvaizdai aktyvuoti būtina perkrauti priedėlį"
+
+#~ msgid "No Access (1)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(1)"
+
+#~ msgid "No Access (10)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(10)"
+
+#~ msgid "No Access (11)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(11)"
+
+#~ msgid "No Access (12)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(12)"
+
+#~ msgid "No Access (2)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(2)"
+
+#~ msgid "No Access (3)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(3)"
+
+#~ msgid "No Access (4)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(4)"
+
+#~ msgid "No Access (5)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(5)"
+
+#~ msgid "No Access (6)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(6)"
+
+#~ msgid "No Access (7)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(7)"
+
+#~ msgid "No Access (8)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(8)"
+
+#~ msgid "No Access (9)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(9)"
+
+#~ msgid "No Access (error code 1)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(1)"
+
+#~ msgid "No Access (error code 10)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(10)"
+
+#~ msgid "No Access (error code 11)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(11)"
+
+#~ msgid "No Access (error code 12)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(12)"
+
+#~ msgid "No Access (error code 2)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(2)"
+
+#~ msgid "No Access (error code 3)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(3)"
+
+#~ msgid "No Access (error code 4)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(4)"
+
+#~ msgid "No Access (error code 5)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(5)"
+
+#~ msgid "No Access (error code 6)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(6)"
+
+#~ msgid "No Access (error code 7)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(7)"
+
+#~ msgid "No Access (error code 8)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(8)"
+
+#~ msgid "No Access (error code 9)"
+#~ msgstr ""
+#~ "Neužsakytas mokamas kanalas, neaktyvuota TV kortelė ar kortelės klaida(9)"
+
+#~ msgid "No access (error code %i)"
+#~ msgstr "Nėra prieigos (klaidos kodas %i)"
+
+#~ msgid "Not enough tokens - please recharge Your card"
+#~ msgstr "Nepakanka kreditų - prašome papildyti kortelę"
+
+#~ msgid "Paris, Berlin, Warsaw, Rome"
+#~ msgstr "Paryžius, Berlynas, Varšuva, Roma"
+
+#~ msgid "Play again"
+#~ msgstr "Paleisti dar kartą"
+
+#~ msgid "Please enter parental control PIN to rent chosen content"
+#~ msgstr "Jei norite išsinuomoti pasirinktą turinį, prašome įvesti PIN kodą"
+
+#~ msgid "Press OK to browse or OPT to format for PVR"
+#~ msgstr "Spauskite OK naršyti arba Info formatavimui"
+
+#~ msgid "Press OPT to format for PVR"
+#~ msgstr "Spauskite Info formatavimui"
+
+#~ msgid "Remove dir"
+#~ msgstr "Pašalinti katalogą"
+
+#~ msgid "Rename dir"
+#~ msgstr "Pervadinti katalogą"
+
+#~ msgid "Requested EMM but not EMM was provided"
+#~ msgstr "Klaida: iš serverio negautas užprašytas EMM"
+
+#~ msgid "Restore defaults"
+#~ msgstr "Atstatyti standartinius nustatymus"
+
+#~ msgid "Reykjavík"
+#~ msgstr "Reikjavikas"
+
+#~ msgid "Santiago"
+#~ msgstr "Santjago"
+
+#~ msgid "Select OK to remove all data from your disk."
+#~ msgstr "Paspauskite OK kad būtų ištrinti visi Jūsų disko duomenys"
+
+#~ msgid "Selected offer has changed, please try again."
+#~ msgstr "Pasiūlymas pasikeitė, prašome bandyti dar kartą."
+
+#~ msgid "Start date                End date"
+#~ msgstr "Pradžios data                Pabaigos data"
+
+#~ msgid "Start date      End date"
+#~ msgstr "Pradžios data      Pabaigos data"
+
+#~ msgid ""
+#~ "Start viewing\n"
+#~ "%s\n"
+#~ "Minutes viewing time left: %i\n"
+#~ "Please enter CA PIN to start viewing:"
+#~ msgstr ""
+#~ "Pradėti žiūrėti\n"
+#~ "%s\n"
+#~ "Liko žiūrėti minučių: %i\n"
+#~ "Norėdami žiūrėti prašome įveskite PIN:"
+
+#~ msgid "TV Aspect Ratio"
+#~ msgstr "TV kraštinių santykis"
+
+#~ msgid "The device must be connected to the Internet."
+#~ msgstr "Priedėlį būtina prijungti prie interneto."
+
+#~ msgid "Timer"
+#~ msgstr "Laikmatis"
+
+#~ msgid ""
+#~ "Tokens: %d\n"
+#~ "Last access: %s"
+#~ msgstr ""
+#~ "Žetonai: %d\n"
+#~ "Paskutinį kart naudota: %s"
+
+#~ msgid ""
+#~ "Until your Set Top Box is connected to the Internet, it will not be able "
+#~ "to continue it's work."
+#~ msgstr ""
+#~ "Prijungę priedėlį prie interneto lukterkite, kol priedelis atsinaujins ir "
+#~ "pasiruoš darbui."
+
+#~ msgid "Waiting for IP..."
+#~ msgstr "Laukiama IP adreso..."
+
+#~ msgid "Welcome"
+#~ msgstr "Sveikiname įsijungus Cgates sumani.tv priedėlį"
+
+#~ msgid "Welcome to Cgates Smart Set Top Box!"
+#~ msgstr "Sveikiname įsigijus Cgates sumani.tv priedėlį!"
+
+#~ msgid "You have too many keyword recordings."
+#~ msgstr "Turite per daug raktažodžių įrašų"
+
+#~ msgid "You will be soon zapped to %s."
+#~ msgstr "Priedėlis tuoj persijungs į %s."
+
+#~ msgid ""
+#~ "Your set top box needs to have its network connection configured. Please "
+#~ "setup wired or wireless network connection."
+#~ msgstr ""
+#~ "Sveikiname įsigijus Cgates sumani.tv priedėlį!\n"
+#~ "\n"
+#~ "Priedėlį būtina prijungti prie interneto.\n"
+#~ "Įsitikinkite, kad interneto laidas arba WiFi antena yra prijungti.\n"
+#~ "Prijungę priedėlį prie interneto lukterkite, kol priedelis atsinaujins ir "
+#~ "pasiruoš darbui."
+
+#~ msgid "automatic"
+#~ msgstr "Automatiškai"
+
+#~ msgid "manual"
+#~ msgstr "rankinis"
+
+#~ msgid "minutes"
+#~ msgstr "minutės"
+
+#~ msgid "nPvr quota used"
+#~ msgstr "naudojama saugyklos vietos"
+
+#~ msgid "new"
+#~ msgstr "naujas"
+
+#~ msgid "prev"
+#~ msgstr "prev"
+
+#~ msgid "recordings"
+#~ msgstr "įrašai"

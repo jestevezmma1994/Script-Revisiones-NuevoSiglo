@@ -1,0 +1,37 @@
+[
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "automatic",
+        "name" : "DVB-S/S2 NIT Automatic",
+        "tunerType" : "sat",
+        "chaseChannels" : "recursiveNIT",
+        "onlyActual" : true,
+        "dropNotFoundInNIT" : false,
+        "extra" : "auto",
+        "dropAll" : true,
+        "needLcn" : false,
+        "useStandardRasters" : false,
+        "usePredefinedTransponders" : true,
+        "automaticScanParams" : [ 
+            "range", "polarization", "symbolRate", "modulation"
+        ]
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "manual",
+        "name" : "DVB-S/S2 Manual",
+        "tunerType" : "sat",
+        "onlyActual" : true,
+        "needLcn" : false,
+        "needName" : true,
+        "usePredefinedTransponders" : false
+    }
+]

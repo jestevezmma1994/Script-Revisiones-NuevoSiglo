@@ -1,0 +1,6 @@
+Name: CAGE
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvFoundation freetype2 harfbuzz libpng16 
+Description: Cubiware Accelerated Graphics Engine
+Libs: -lCAGE -lm 
+CFlags: 

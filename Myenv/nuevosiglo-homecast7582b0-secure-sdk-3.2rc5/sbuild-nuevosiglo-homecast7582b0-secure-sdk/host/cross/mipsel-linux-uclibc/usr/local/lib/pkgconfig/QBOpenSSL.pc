@@ -1,0 +1,6 @@
+Name: QBOpenSSL
+Version: 1.0.0
+Requires: SvCore openssl 
+Description: OpenSSL initialization library.
+Libs: -lQBOpenSSL 
+CFlags: 

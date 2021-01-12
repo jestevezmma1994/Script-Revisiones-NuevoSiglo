@@ -1,0 +1,68 @@
+[
+	{
+		"portNumber": 0,
+		"position": 130,
+		"__jsonclass__": [
+			"QBTunerLNBConfig",
+			[]
+		],
+		"bands": [
+			{
+				"minFreq": 10700000,
+				"localOscFreq": 9750000,
+				"maxFreq": 11700000
+			},
+			{
+				"minFreq": 11700000,
+				"localOscFreq": 10600000,
+				"maxFreq": 12750000
+			}
+		],
+		"satelliteName": "EUTELSAT HOT BIRD 13A/13B/13C (13.0E)",
+		"id": "eutelsat_hot"
+	},
+	{
+		"portNumber": 1,
+		"position": 160,
+		"__jsonclass__": [
+			"QBTunerLNBConfig",
+			[]
+		],
+		"bands": [
+			{
+				"minFreq": 10700000,
+				"localOscFreq": 9750000,
+				"maxFreq": 11700000
+			},
+			{
+				"minFreq": 11700000,
+				"localOscFreq": 10600000,
+				"maxFreq": 12750000
+			}
+		],
+		"satelliteName": "EUTELSAT 16A/16B/16C (16.0E)",
+		"id": "eutelsat_16a"
+	},
+	{
+		"portNumber": 2,
+		"position": 192,
+		"__jsonclass__": [
+			"QBTunerLNBConfig",
+			[]
+		],
+		"bands": [
+			{
+				"minFreq": 10700000,
+				"localOscFreq": 9750000,
+				"maxFreq": 11700000
+			},
+			{
+				"minFreq": 11700000,
+				"localOscFreq": 10600000,
+				"maxFreq": 12750000
+			}
+		],
+		"satelliteName": "Astra 1H/1KR/1L/1M/2C (19.2E)",
+		"id": "astra_1h"
+	}
+]

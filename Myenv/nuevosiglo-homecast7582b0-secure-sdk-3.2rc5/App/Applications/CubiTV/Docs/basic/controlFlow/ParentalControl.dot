@@ -1,0 +1,18 @@
+digraph ParentalControl {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+    QBParentalControlLogic [label=<\N<br/>May additionally control the helper to force auth/no auth>]
+    newtvCallback [label=<TV Context Auth Callback>]
+
+    newtv -> SvEPGEvent [label=<Gets parental control rating from>]
+    SvEPGEvent -> SvPCRatingLevel
+    newtv -> QBParentalControlHelper [label=<Creates and manages<br/>Sets current channel, events source, registers callbacks>]
+    newtv -> QBParentalControlLogic [label=<Registers created Helper>]
+    QBParentalControlHelper -> newtv [label=<Calls callback when authentication state changes<br/>For example user needs to authenticate>]
+    newtv -> authDialog [label=<Created when user needs to authenticate>]
+    authDialog -> QBAccessManager [label=<Provides PIN and polls PIN check status>]
+    authDialog -> newtvCallback [label=<Provides PIN check status>]
+    newtvCallback -> QBParentalControlHelper [label=<Notifies if user successfully authenticated>]
+    QBAccessManager -> QBAccessManagerPlugin [label=<Implements PIN verification>]
+}

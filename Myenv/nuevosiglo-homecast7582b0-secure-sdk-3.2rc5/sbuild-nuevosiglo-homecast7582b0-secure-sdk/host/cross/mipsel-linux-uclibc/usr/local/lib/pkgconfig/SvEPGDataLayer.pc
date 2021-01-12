@@ -1,0 +1,6 @@
+Name: SvEPGDataLayer
+Version: 1.0.0
+Requires: QBDVBScanner QBDataModel3 QBStringUtils QBTSParser QBTextUtils QBTunerFilter SvCore SvDataBucket2 SvFoundation SvHTTPClient SvPlayerKit SvXMLRPCClient fibers svtuner 
+Description: EPG Data Layer Library
+Libs: -lSvEPGDataLayer -lz 
+CFlags: 

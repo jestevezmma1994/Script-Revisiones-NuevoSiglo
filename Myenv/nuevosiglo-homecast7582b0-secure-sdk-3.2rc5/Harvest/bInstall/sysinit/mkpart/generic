@@ -1,0 +1,176 @@
+#!/bin/sh
+
+. /etc/profile
+
+# hda, sda, ...
+HDX=@HDX@
+DEV=/dev/${HDX}
+LOCK_FILE=/var/lock/mkparts
+
+echo using_dma:1  > /proc/ide/${HDX}/settings
+
+# It will probably exit for USB storage since
+# initialization takes considerable amount of time
+# Thus we need to do the following:
+# 1. run mkparts in rcS.d -> this will work for SATA drives
+# 2. run load.storage -> this will load USB drivers
+# 3. upon starting GUI we need to run mkparts one more time
+#    - this is the case for USB storage -> hopefully driver
+#      and drive itself will already be initialized, but just
+#      to be sure we need to introduce some timeout, usually
+#      15 seconds or so...
+
+#if LOCK_FILE exists then it means that script already run
+#once -> meaning we can be in two states
+# 1. SATA is already initialized, so we can skip or run the
+#    script one more time (doesnt matter)
+# 2. USB storage is not yet initialized (or it is), anyway
+#    in this case we will add some timeout
+
+# yes or no
+WAIT_FOR_USB_DISK="@WAIT_FOR_USB_DISK@"
+
+if [ -f $LOCK_FILE ]; then
+	echo "Script was run previously."
+
+	echo "Checking for SATA drive (${DEV})..."
+	if (egrep "${DEV}([1-3]|[5-7])" /proc/partitions); then
+		echo "SATA drive (${DEV}) found, exiting"
+		exit 0
+	fi
+
+  if [ "$WAIT_FOR_USB_DISK" = "yes" ]; then
+		echo "SATA (${DEV}) drive not found!"
+		echo "Looking for USB storage..."
+		timeout=0
+		maxtimeout=20
+		partready=$(grep $DEV /proc/partitions)
+		while [ "$timeout" != "$maxtimeout" -a "$partready" = "" ]; do
+			let "secondsleft=maxtimeout-timeout"
+			echo "Waiting for USB storage to initialize...($secondsleft seconds left)"
+			let "timeout=timeout+1"
+			partready=$(grep ${HDX} /proc/partitions)
+			if [ "$partready" != "" ]; then
+				#echo "sdfsfd"
+				break
+			fi
+			sleep 1
+		done
+		
+		if [ "$partready" != "" ]; then
+			echo "Found USB storage (${DEV})."
+		else
+			echo "USB Storage not found. Timeout occurred"
+		fi
+	fi
+
+else
+	echo "Script was not run previously. Performing regular run"
+fi
+
+if dd if=$DEV of=/dev/null count=1 bs=1 2>/dev/null; then
+  echo HDD found
+else
+  echo HDD not found
+  touch $LOCK_FILE
+  exit 0
+fi
+
+dev_size="unknown"
+cat /proc/partitions | grep -m 1 ${HDX} > /tmp/sys_parts
+read major minor dev_size dev < /tmp/sys_parts;
+echo "dev_size=[$dev_size]";
+
+check_parts() {
+    egrep "${HDX}([1-3]|[5-7])" /proc/partitions | ( \
+      while read major minor blocks dev; do \
+        echo -n "$minor:$blocks "; \
+      done \
+    )
+}
+
+check_parts > /tmp/sys_parts
+read p1 p2 p3 p5 p6 p7 < /tmp/sys_parts
+
+echo "partitions config: $p1;$p2;$p3;$p5;$p6;$p7"
+swapoff -a 2>/dev/null
+for i in 1 2 3 6 7; do umount ${DEV}$i 2>/dev/null; done
+
+if cat /proc/filesystems | grep -q ext3; then 
+	FS=ext3
+else
+	echo warning, mounting ext3 filesystems as ext2
+	FS=ext2
+fi
+
+part_size1=$((1024*1024))
+part_size3=$part_size1
+part_size2=$((dev_size-part_size1-part_size3))
+# due to some inacuracies when issuing "parted" near end of device, it s better to save some (100) blocks left.
+part_size3=$((part_size3-100))
+echo "expected partition sizes in kiB : [$part_size1] [$part_size2] [$part_size3]";
+
+if [ "$p1" != "1:$part_size1"  -o "$p2" != "2:$part_size2" -o "$p3" != "3:$part_size3" ]; then
+    echo "formatting disk"
+    dd if=/dev/zero of=${DEV} bs=1M count=10
+    if ! parted ${DEV} mklabel msdos; then
+      echo "Could not create msdos-type label on ${DEV}!"
+      return 1
+    fi
+
+    part_end1=$part_size1
+    if ! parted ${DEV} mkpart primary  0 ${part_end1}kiB; then
+      echo "Could not create home partition on ${DEV}!"
+      return 1
+    fi
+    mke2fs ${DEV}1
+    tune2fs -j ${DEV}1
+
+    part_end2=$((part_end1+part_size2))
+    if ! parted ${DEV} mkpart primary ${part_end1}kiB ${part_end2}kiB; then
+      echo "Could not create shared partition on ${DEV}!"
+      return 1
+    fi
+
+    part_end3=$((part_end2+part_size3))
+    if ! parted ${DEV} mkpart primary  ${part_end2}kiB ${part_end3}kiB; then
+      echo "Could not create swap partition on ${DEV}!"
+      return 1
+    fi
+    mkswap ${DEV}3
+fi
+
+# reformat tempspace (home partition)
+#mke2fs /dev/hda1
+#tune2fs -j /dev/hda1 >/dev/null 2>&1
+
+hdparm -f ${DEV} >/dev/null 2>&1
+
+#if ! swapon /dev/hda3; then
+#    mkswap /dev/hda3
+#    if ! swapon /dev/hda3; then
+#	echo swap activation failed
+#    fi
+#fi
+
+# do not mount /opt and /home if we run from nfs; remount root read-write.
+#MPT=`mount | grep "/ type nfs"`;
+#if [ "$MPT" != "" ]; then
+#  mount -o remount,rw /
+#  exit 0
+#fi
+
+mount -t $FS -o noatime,rw,noexec ${DEV}1 /shared
+
+# Now lock this file to inform that we ve already been here!
+touch $LOCK_FILE
+
+#if ! mount -t $FS -o noatime,rw /dev/hda1 /home; then
+#  echo mount home partition failed, using ramdisk
+#  mount -t tmpfs nodev /home
+#fi
+
+# move cache to home dir
+#mkdir /home/cache
+#rm -rf /tmp/cache
+#ln -s /home/cache /tmp

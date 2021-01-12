@@ -1,0 +1,9 @@
+digraph manual {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    manual [label="Channel Scanning" URL="\N.html" root=true]
+
+    manual -> Wizard
+    manual -> Channels
+    manual -> ChannelScanParams
+}

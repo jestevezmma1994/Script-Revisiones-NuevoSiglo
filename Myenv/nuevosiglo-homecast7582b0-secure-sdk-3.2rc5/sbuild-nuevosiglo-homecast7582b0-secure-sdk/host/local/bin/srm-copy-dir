@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIRS=$(find $1/ -type d | sed -e "s?^$1??g")
+for DIR in $DIRS; do
+	install -m 755 -d $2$DIR
+	if [[ -n "$(ls $1$DIR/*)" ]]; then
+		cp -af $1$DIR/* $2$DIR/
+	fi
+done
+

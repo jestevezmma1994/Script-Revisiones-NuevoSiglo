@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="BasicPane.settings"/>
+    <xi:include href="Dialog.settings"/>
+    <xi:include href="RenameOSK.settings"/>
+    <xi:include href='RecordingEditPane.settings'/>
+    <xi:include href="XMBMenuItem.settings"/>
+    <xi:include href="XMBMenuItemFocus.settings"/>
+    <xi:include href="XMBMenuItemSelectedFocus.settings"/>
+    <xi:include href="extendedInfo.settings"/>
+    <xi:include href="SearchByCategoryPane.settings"/>
+    <xi:include href="ContainerPane.settings"/>
+    <xi:include href="fonts.settings"/>
+    <xi:include href="RecordingEditPane.settings"/>
+
+    <widget name="ScheduleError">
+        <param tag="xOffset"><int>10</int></param>
+        <param tag="yOffset"><int>30</int></param>
+        <param tag="width"><int>200</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="textAlign"><string>center</string></param>
+        <param tag="multiLine"><bool>true</bool></param>
+    </widget>
+
+</settings>

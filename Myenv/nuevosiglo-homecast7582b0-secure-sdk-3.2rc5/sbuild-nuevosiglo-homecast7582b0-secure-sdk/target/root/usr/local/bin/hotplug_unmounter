@@ -1,0 +1,72 @@
+#!/bin/sh
+# This script is to be run in the background.
+# It can wait indefinitely until given block device is no longer used and agrees to be unmounted.
+
+short_dev=$1
+no_remove=$2
+MAJOR=$3
+MINOR=$4
+base_dir=/tmp/automount/$short_dev/
+mount_point=$base_dir/root
+
+
+log_error()
+{
+  logger "automounter > $@"
+  #[ 1 -eq 1 ] && echo -e "unmounter[$short_dev] > $@" >> /tmp/mymesg
+  return
+}
+
+log()
+{
+  logger "automounter > $@"
+  #[ 1 -eq 1 ] && echo -e "unmounter[$short_dev] > $@" >> /tmp/mymesg
+  return
+}
+
+
+while :; do
+
+  if [ ! -d "$base_dir" ]; then
+    log_error "[$base_dir] does not exist"
+    break;
+  fi
+
+  set +e
+  if [ -d "$mount_point" ]; then
+    log "umount ..."
+    TEXT=`umount $mount_point 2>&1`
+    res=$?
+    if [ $res -ne 0 ]; then
+      log "umount ... failed with $res [$TEXT]"
+      sleep 2
+      continue;
+    fi
+    log "success"
+  else
+    log "mount point vanished"
+  fi
+
+  if [ -e /dev/mapper/"meta_"$MAJOR"_"$MINOR ]; then
+    TEXT=`dmsetup remove "meta_"$MAJOR"_"$MINOR 2>&1`
+    if [ $? -ne 0 ]; then
+      log "failed to remove device mapper node [meta_"$MAJOR"_"$MINOR"] [$TEXT]"
+    fi
+  fi
+
+  if [[ $no_remove -ne 1 ]]; then
+    TEXT=`rm -rf $base_dir 2>&1`
+    if [ $? -ne 0 ]; then
+      log_error "failed to remove [$base_dir] [$TEXT]"
+    fi
+  else
+    TEXT=`rm -rf $mount_point 2>&1`
+    if [ $? -ne 0 ]; then
+      log_error "failed to remove [$mount_point] [$TEXT]"
+    fi
+  fi
+
+
+  break;
+
+done

@@ -1,0 +1,86 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <widget name="ExtendedInfo">
+        <param tag="xOffset"><int>677</int></param>
+        <param tag="yOffset"><int>112</int></param>
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>494</int></param>
+
+        <widget name="verticalBar.bg">
+            <param tag="height"><int>496</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="bg"><bitmap><path>bg_xmb.png</path></bitmap></param>
+        </widget>
+
+        <widget name="Grid">
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>496</int></param>
+            <param tag="spacing"><int>20</int></param>
+        </widget>
+
+        <widget name="ExtendedInfo.ViewPort">
+            <param tag="xOffset"><int>10</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>434</int></param>
+            <param tag="xStep"><int>20</int></param>
+            <param tag="yStep"><int>20</int></param>
+            <param tag="yMaxVelocity"><double>1000</double></param>
+            <param tag="yAcceleration"><double>20</double></param>
+            <param tag="screenAcceleration"><double>100</double></param>
+        </widget>
+        <widget name="ExtendedInfo.Text">
+            <param tag="width"><int>380</int></param>
+            <param tag="height"><int>0</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+        </widget>
+
+        <widget name="ExtendedInfo.Title">
+            <param tag="width"><int>380</int></param>
+            <param tag="height"><int>0</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+        </widget>
+        <widget name="ExtendedInfo.Time">
+            <param tag="width"><int>380</int></param>
+            <param tag="height"><int>0</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="ExtendedInfo.ScrollBar">
+            <param tag="xOffset"><int>40</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>496</int></param>
+            <param tag="fadeDuration"><double>0.2</double></param>
+            <widget name="ExtendedInfo.ScrollBar.arrowHigh">
+                <param tag="xOffset"><int>150</int></param>
+                <param tag="yOffset"><int>470</int></param>
+                <param tag="active"><bitmap><path>arrow/arrow_right_active.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>arrow/arrow_right_inactive.png</path></bitmap></param>
+            </widget>
+            <widget name="ExtendedInfo.ScrollBar.arrowLow">
+                <param tag="xOffset"><int>150</int></param>
+                <param tag="yOffset"><int>6</int></param>
+                <param tag="active"><bitmap><path>arrow/arrow_left_active.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>arrow/arrow_left_inactive.png</path></bitmap></param>
+            </widget>
+        </widget>
+    </widget>
+</settings>

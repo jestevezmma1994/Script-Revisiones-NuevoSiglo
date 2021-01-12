@@ -1,0 +1,90 @@
+#!/bin/sh
+
+#AMERELES
+echo "INICIO CARGA DE LOGOS"
+
+cURLparams="-f --connect-timeout 5" # --speed-time 20 --speed-limit 1
+
+LOCAL_URL=$(svconf_ctl -n LOGOS_IN_SERVER.LOCAL_URL)
+IMAGE_SERVER_URL=$(svconf_ctl -n LOGOS_IN_SERVER.IMAGE_SERVER_URL)
+
+if [ "$LOCAL_URL" = "" ] || [ "$IMAGE_SERVER_URL" = "" ]; then
+    echo "FALTA DEFINIR VARIABLES"
+    exit
+fi
+
+if [ ! -d "$LOCAL_URL" ]; then
+    mkdir "$LOCAL_URL"
+    if [ -d "/usr/local/share/CubiTV/data/720p/ChannelLogos/" ]; then
+        echo "Hay logos por defecto"
+        cd "$LOCAL_URL"
+        cp /usr/local/share/CubiTV/data/720p/ChannelLogos/*.png .
+    else
+        echo "No hay logos por defecto"
+    fi
+fi
+
+cd "$LOCAL_URL"
+
+if [ ! -f "version" ]; then
+    echo "0" > version
+fi
+
+echo "CARGA DE VERSION"
+if [ -f version2 ]; then
+    rm version2
+fi
+
+curl $cURLparams $IMAGE_SERVER_URL/version --max-time 30 -o version2 --silent
+if [ ! -f version2 ]; then
+    echo "NO HAY CONEXION O NO EXISTE EL ARCHIVO version"
+    exit
+else
+    echo "Archivo version encontrado y bajado correctamente"
+fi
+
+V1=$(cat version)
+V2=$(cat version2)
+
+echo "Version actual: " $V1
+echo "Version Servidor: " $V2
+
+if [ "$V1" != "$V2" ]; then
+    echo "NUEVA VERSION ENCONTRADA"
+    
+    if [  -d tmp ]; then
+        rm -rf tmp
+    fi
+    
+    mkdir tmp
+    cd tmp
+    
+    if [ -f logos.tar.gz ]; then
+        rm logos.tar.gz
+    fi
+    curl $cURLparams $IMAGE_SERVER_URL/logos.tar.gz --max-time 60 -o logos.tar.gz --silent
+    if [ ! -f logos.tar.gz ]; then
+        echo "NO HAY CONEXION O NO EXISTE EL ARCHIVO logos.tar.gz"
+        exit
+    fi
+    
+    if tar zxf logos.tar.gz; then
+        echo "tar ok"
+        rm logos.tar.gz
+        cd ..
+        rm -rf *.png
+        mv tmp/* .
+        rm -rf tmp
+        mv version2 version
+    else
+        echo "fallo tar"
+        cd ..
+        rm -rf tmp
+        rm version2
+    fi
+else
+    echo "NO SE ENCONTRO NUEVA VERSION"
+    rm version2
+fi
+
+

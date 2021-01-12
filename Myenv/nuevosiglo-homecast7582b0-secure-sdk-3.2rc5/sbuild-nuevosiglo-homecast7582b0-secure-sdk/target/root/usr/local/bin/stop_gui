@@ -1,0 +1,11 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+
+killall -STOP gui_start >/dev/null 2>&1
+
+killall -9 cubitv >/dev/null 2>&1
+
+usleep 100000
+
+touch /var/run/guistop

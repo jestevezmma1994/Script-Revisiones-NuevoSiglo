@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo $$ > /var/run/netlink/netlink_daemon.pidfile
+
+while true ; do
+    /usr/local/bin/QBNetlinkDaemon
+    rm /var/run/netlink/QBNetlinkDaemon.pidfile
+    sleep 1;
+done
+

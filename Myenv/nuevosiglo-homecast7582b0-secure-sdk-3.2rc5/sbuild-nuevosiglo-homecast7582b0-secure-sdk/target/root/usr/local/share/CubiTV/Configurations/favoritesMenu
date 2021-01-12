@@ -1,0 +1,30 @@
+{
+
+"comment": [
+	"Favorites menu configuration file.",
+
+	"i18n_gettext array contains field names, which values should be translated",
+	"by gettext. There is a script which extracts each value of that field value",
+	"and creates gettext template *.pot. 'i18n_gettext' field is optional",
+
+	"'Elements' array contains an array of Favorites menu entries. Fields of each",
+	"element are described below:",
+	"[OPTIONAL] id - string - for example - to specify one of predefined ID-s,",
+	"                like TVChannels, RadioChannels and HDTVChannels.",
+	"                If used one of predefined IDs, setting name, channel_type or",
+	"                channel_numbers has no effect.",
+	"[REQUIRED] name - string - what is seen by user",
+	"[REQUIRED] channel_type - string - one of 'Radio', 'TV', 'HDTV'",
+	"[OPTIONAL] channel_numbers - string - comma separated sequence of channel numbers, or channel",
+	"                number ranges. Example: '100-120, 543, 700-800'.",
+	"                If range is not specified, all channels matching to specified channel",
+	"                type will be selected.",
+	"[OPTIONAL] epg - boolean - default is false when id=RadioChannels, otherwise true."
+],
+
+"i18n_gettext" : [ "name" ],
+
+"elements" : [
+]
+
+}

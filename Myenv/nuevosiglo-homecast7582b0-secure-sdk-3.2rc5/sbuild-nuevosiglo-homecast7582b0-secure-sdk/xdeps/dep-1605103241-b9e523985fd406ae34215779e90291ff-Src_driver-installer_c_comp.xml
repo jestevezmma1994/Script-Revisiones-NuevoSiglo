@@ -1,0 +1,38 @@
+<perldata>
+ <hashref memory_address="0x1d30dd0">
+  <item key="deps">
+   <hashref memory_address="0x20d5a08">
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x20a0cb0">
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x21b8d08">
+    <item key="Src/driver-installer/Makefile">e02b7e51a9b6ffedcf60b2aa85b04a00</item>
+   </hashref>
+  </item>
+  <item key="string">Src/driver-installer/c.comp</item>
+  <item key="time">1605103241</item>
+  <item key="units">
+   <hashref memory_address="0x29e98d0">
+    <item key="Src/driver-installer/Makefile">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/FREE/lib/libnexus.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/FREE/lib/modules/3.3.8-3.3/nexus/nexus.ko">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/PROP/lib/libnexus.so">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/PROP/lib/modules/3.3.8-3.3/nexus/nexus.ko">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/PROP_WITHOUT_DDP_DTSHD_WMA/info.txt">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/PROP_WITHOUT_DDP_DTSHD_WMA/lib/libnexus.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/PROP_WITHOUT_DDP_DTSHD_WMA/lib/modules/3.3.8-3.3/nexus/nexus.ko">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/lib/libnexus.so">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/lib/modules/3.3.8-3.3/nexus/nexus.ko">c</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x1c165b8">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

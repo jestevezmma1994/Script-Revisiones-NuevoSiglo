@@ -1,0 +1,5 @@
+; Subproject with application keys for arion3 platform
+
+setenv S_INSTALL_KEYSERVER_RSA_UPGRADE_INNER_KEY_ID=152
+setenv S_INSTALL_KEYSERVER_RSA_UPGRADE_OUTER_KEY_ID=152
+setenv S_INSTALL_KEYSERVER_RSA_SKIN_KEY_ID=154

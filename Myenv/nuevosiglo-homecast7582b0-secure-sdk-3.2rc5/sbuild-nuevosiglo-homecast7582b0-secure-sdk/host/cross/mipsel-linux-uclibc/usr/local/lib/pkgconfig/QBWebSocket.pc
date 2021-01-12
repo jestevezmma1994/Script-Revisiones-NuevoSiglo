@@ -1,0 +1,6 @@
+Name: QBWebSocket
+Version: 1.0.0
+Requires: QBStringUtils QBTextUtils SvCore SvFoundation SvHTTPClient fibers 
+Description: WebSocket client library
+Libs: -lQBWebSocket -lpthread -lpthread 
+CFlags: 

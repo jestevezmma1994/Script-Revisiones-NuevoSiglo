@@ -1,0 +1,5206 @@
+# Hungarian translations for PACKAGE package
+# Copyright (C) 2012 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 13:18+0100\n"
+"PO-Revision-Date: 2012-01-26 15:45+0100\n"
+"Last-Translator: \n"
+"Language-Team: none\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " "
+msgstr ""
+
+msgid " / minute"
+msgstr " / perc"
+
+msgid " H"
+msgstr ""
+
+msgid " V"
+msgstr ""
+
+#, c-format
+msgid " ep. %d"
+msgstr ""
+
+#, c-format
+msgid "%.2f %s - %.2f %s"
+msgstr ""
+
+msgid "%A %x"
+msgstr "%A %x"
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "%d óra van hátra (HD)"
+msgstr[1] "%d óra van hátra (HD)"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "%d próbálkozás van hátra"
+msgstr[1] "%d próbálkozás van hátra"
+
+#, c-format
+msgid "%d channel"
+msgid_plural "%d channels"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d min"
+msgstr ""
+
+#, c-format
+msgid "%d out of %d"
+msgstr ""
+
+#, c-format
+msgid "%dMHz"
+msgstr ""
+
+#, c-format
+msgid "%dMHz,%s,%d,%s"
+msgstr ""
+
+#, c-format
+msgid "%i"
+msgstr ""
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i új vagy frissített) rádió csatorna"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i új vagy frissített) TV csatorna"
+
+#, c-format
+msgid "%i hour "
+msgid_plural "%i hours "
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i min"
+msgstr ""
+
+#, c-format
+msgid "%i minute "
+msgid_plural "%i minutes "
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%i percent left"
+msgstr ""
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i rádió csatorna"
+msgstr[1] "%i rádió csatorna"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i rögzítés"
+msgstr[1] "%i rögzítés"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i emlékeztető"
+msgstr[1] "%i emlékeztető"
+
+#, c-format
+msgid "%i secs"
+msgstr ""
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i TV csatorna"
+msgstr[1] "%i TV csatorna"
+
+#, c-format
+msgid "%i.%02i %s"
+msgstr ""
+
+#, c-format
+msgid "%i.%iMHz"
+msgstr ""
+
+#, c-format
+msgid "%iGB"
+msgstr ""
+
+#, c-format
+msgid "%ih"
+msgstr ""
+
+#, c-format
+msgid "%s (%d.%d%s)"
+msgstr ""
+
+#, c-format
+msgid "%s ep. %d"
+msgstr ""
+
+#, c-format
+msgid "%s not found"
+msgstr ""
+
+#, c-format
+msgid "%s%%i.%%.%ui"
+msgstr ""
+
+#, c-format
+msgid "%s, Available to: %s"
+msgstr ""
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s: %i csatorna telepítve"
+msgstr[1] "%s: %i csatorna telepítve"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d nap %dh)"
+msgstr[1] "(%d nap %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d nap)"
+msgstr[1] "(%d nap)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d óra)"
+msgstr[1] "(%d óra)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr "(%dóra %dperc)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%d perc)"
+
+msgid "(Description blocked by Parental Control)"
+msgstr ""
+
+msgid "(Description blocked)"
+msgstr ""
+
+msgid "(Non smartcard)"
+msgstr ""
+
+msgid "(Title Blocked)"
+msgstr ""
+
+msgid "(all)"
+msgstr "(összes)"
+
+msgid "(hard of hearing)"
+msgstr "(hallássérült)"
+
+msgid "(no label)"
+msgstr "(nincs cím)"
+
+msgid "(none)"
+msgstr "(nincs)"
+
+msgid "(unavailable)"
+msgstr ""
+
+msgid "(unsupported)"
+msgstr "(nem támogatott)"
+
+msgid "(visually impaired)"
+msgstr "(látássérült)"
+
+msgid "-"
+msgstr ""
+
+msgid "0 recordings"
+msgstr "0 felvétel"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-AKTUÁLIS"
+
+msgid "000 unknown"
+msgstr "000 ismeretlen"
+
+msgid "1 Hour"
+msgstr ""
+
+msgid "1 minute"
+msgstr "1 perc"
+
+msgid "10 minutes"
+msgstr "10 perc"
+
+msgid "10 seconds"
+msgstr "10 másodperc"
+
+msgid "100GB"
+msgstr "100GB"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10GB"
+
+msgid "120 minutes"
+msgstr ""
+
+msgid "15 minutes"
+msgstr "15 perc"
+
+msgid "15 seconds"
+msgstr "15 másodperc"
+
+msgid "150 minutes"
+msgstr ""
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "180 minutes"
+msgstr ""
+
+msgid "2 Hours"
+msgstr ""
+
+msgid "2 minutes"
+msgstr "2 perc"
+
+msgid "2 seconds"
+msgstr "2 másodperc"
+
+msgid "20 minutes"
+msgstr "20 perc"
+
+msgid "200GB"
+msgstr "200GB"
+
+msgid "20GB"
+msgstr "20GB"
+
+msgid "22 kHz Tone"
+msgstr "DiSEqC 22 kHz"
+
+msgid "30 minutes"
+msgstr "30 perc"
+
+msgid "30 seconds"
+msgstr ""
+
+msgid "4 Hours"
+msgstr ""
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 perc"
+
+msgid "5 seconds"
+msgstr "5 másodperc"
+
+msgid "500GB"
+msgstr "500GB"
+
+msgid "50GB"
+msgstr "50GB"
+
+msgid "576p/480p"
+msgstr "576p/480p"
+
+msgid "6 Hours"
+msgstr ""
+
+msgid "60 minutes"
+msgstr ""
+
+msgid "60 seconds"
+msgstr ""
+
+msgid "720p"
+msgstr "720p"
+
+msgid "8 Hours"
+msgstr ""
+
+msgid "8PSK"
+msgstr ""
+
+msgid "90 minutes"
+msgstr ""
+
+msgid ""
+"<p>For any issues related to services,<br/>please contact help desk number "
+"<font size=\"47\" color=\"#e0192c\">123456</font></p>"
+msgstr ""
+
+msgid ""
+"<p>Press Exit to hide Caller ID bar. Press <img src=\"icons_green_button.png"
+"\"/> button to redirect call to voice mail</p>"
+msgstr ""
+
+msgid "?"
+msgstr ""
+
+msgid "???"
+msgstr ""
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+
+msgid "A problem occurred"
+msgstr ""
+
+msgid "A/V Output Settings"
+msgstr "A/V kimenet beállításai"
+
+msgid "A: Over 18"
+msgstr "18 év felett"
+
+msgid "About Conax CA"
+msgstr "Conax CA információ"
+
+msgid "About CryptoGuard CA"
+msgstr ""
+
+msgid "About ViewRightIPTV CA"
+msgstr ""
+
+msgid "Accept"
+msgstr ""
+
+msgid "Access denied"
+msgstr ""
+
+msgid "Action ends with success."
+msgstr ""
+
+msgid "Action failed! Please try later."
+msgstr ""
+
+msgid "Action prohibited"
+msgstr ""
+
+msgid "Active Standby"
+msgstr ""
+
+#, c-format
+msgid "Active standby will start in %u second."
+msgid_plural "Active standby will start in %u seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Adaptive Bit Rate"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Add & Connect"
+msgstr ""
+
+msgid "Add new list"
+msgstr "Új lista hozzáadása"
+
+msgid "Add new satellite"
+msgstr ""
+
+msgid "Add to Favorites"
+msgstr ""
+
+msgid "Add/remove TV channels"
+msgstr ""
+
+msgid "Add/remove radio channels"
+msgstr ""
+
+msgid "Adult"
+msgstr ""
+
+msgid "Adult Content Blocking"
+msgstr ""
+
+msgid "Adults"
+msgstr ""
+
+msgid "Advanced settings"
+msgstr ""
+
+msgid "Advanced..."
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgid "Agregar a Mi lista"
+msgstr ""
+
+msgid "Album"
+msgstr ""
+
+msgid "All Episodes"
+msgstr ""
+
+msgid "All Music"
+msgstr ""
+
+msgid "All files"
+msgstr ""
+
+msgid "All movies"
+msgstr ""
+
+msgid "All tuners are in use"
+msgstr "Összes tuner használatban"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr ""
+"Összes tuner használatban. A folyamatban lévő rögzítések száma elérte a "
+"maximumot. "
+
+msgid "Alphabetically"
+msgstr ""
+
+msgid "Alternative font"
+msgstr ""
+
+msgid "Alternative font recommended"
+msgstr ""
+
+msgid "Always"
+msgstr ""
+
+msgid "An error has occurred.\n"
+msgstr ""
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr ""
+
+msgid "An error occurred while processing our order."
+msgstr ""
+
+msgid "Analog Closed Captioning"
+msgstr ""
+
+msgid "Analog Outputs"
+msgstr ""
+
+msgid "Any"
+msgstr ""
+
+msgid "Application Font"
+msgstr ""
+
+msgid "Application Skin"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Biztos, hogy törölni akarja a meglévő csatornákat?"
+
+msgid "Are you sure?"
+msgstr "Biztos benne?"
+
+msgid "Arts/Culture"
+msgstr "Művészetek/Kultúra"
+
+msgid "Ask again later"
+msgstr "Kérdezzen rá később"
+
+msgid "At least one active transponder must exist."
+msgstr ""
+
+msgid "Audio Codec"
+msgstr ""
+
+msgid "Audio DMM"
+msgstr ""
+
+msgid "Audio Lang"
+msgstr ""
+
+msgid "Audio PID"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr ""
+
+msgid "Audio Status"
+msgstr ""
+
+msgid "Audio Track"
+msgstr "Hangsáv"
+
+msgid "Audio Type"
+msgstr ""
+
+msgid "Audio-Video Sync"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "Authentication failed - PIN is blocked."
+msgstr ""
+
+msgid "Authentication failed - PIN is blocked. Wait around 10 minutes."
+msgstr ""
+
+msgid "Authentication failed. Not enough in purse"
+msgstr ""
+
+msgid "Authentication failed. Try again."
+msgstr "Azonosítás nem sikerült. Kérem, próbálja újra."
+
+msgid "Authentication failed. Wrong Pin was entered."
+msgstr ""
+
+msgid "Authentication required"
+msgstr "Azonosítás szükséges"
+
+#, c-format
+msgid "Authentication with %s failed"
+msgstr ""
+
+msgid "Auto"
+msgstr "Automatikus"
+
+msgid "Auto Download"
+msgstr "Automatikus letöltés"
+
+msgid "Auto Install"
+msgstr "Automatikus telepítés"
+
+msgid "Auto Standby"
+msgstr ""
+
+msgid "Auto(DHCP)"
+msgstr ""
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Korábbi rögzítések törlése automatikusan"
+
+msgid "Automatic"
+msgstr "Automatikus"
+
+msgid "Automatic Channel Scanning"
+msgstr "Automatikus csatorna keresés"
+
+msgid "Automatic Frame Rate Selection"
+msgstr ""
+
+msgid "Automatic Standby"
+msgstr ""
+
+#, c-format
+msgid "Automatic restart in %d second."
+msgid_plural "Automatic restart in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Automatic switch to standby in %u second."
+msgid_plural "Automatic switch to standby in %u seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Automatic update will start in %d second."
+msgid_plural "Automatic update will start in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Available Transponders"
+msgstr "Elérhető transzponderek"
+
+msgid "BER"
+msgstr ""
+
+msgid "Background music"
+msgstr ""
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr ""
+
+msgid "Bad certificate"
+msgstr ""
+
+#, c-format
+msgid "Bad format: %d"
+msgstr ""
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr ""
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Egyenleg: %d token"
+msgstr[1] "Egyenleg: %d token"
+
+msgid "Band Select"
+msgstr ""
+
+msgid "Bandwidth"
+msgstr "Sávszélesség"
+
+msgid "Bandwidth [MHz]"
+msgstr "Sávszélesség [MHz]"
+
+msgid "Banner Timeout"
+msgstr ""
+
+msgid "Begin format now"
+msgstr "Formázás indítása"
+
+#, c-format
+msgid "Birth date: %s\n"
+msgstr ""
+
+#, c-format
+msgid "Birth place: %s\n"
+msgstr ""
+
+msgid "Block Channels"
+msgstr "Csatornák lezárása"
+
+msgid "Boot Loader"
+msgstr ""
+
+msgid "Box ID:"
+msgstr ""
+
+msgid "Box Id"
+msgstr ""
+
+msgid "Buffers"
+msgstr ""
+
+msgid "Buscador"
+msgstr ""
+
+msgid "Buy"
+msgstr "Vásárlás"
+
+#, c-format
+msgid "Buying with %s"
+msgstr ""
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "By Longitude"
+msgstr ""
+
+msgid "C-band"
+msgstr ""
+
+msgid "CA PIN has been changed."
+msgstr "CA PIN módosítva"
+
+msgid "CA PIN validation"
+msgstr ""
+
+msgid "CA SYS ID"
+msgstr ""
+
+msgid "CAS Version"
+msgstr ""
+
+msgid "CAST:"
+msgstr ""
+
+msgid "CAT Status"
+msgstr ""
+
+msgid "CC Primary Channel"
+msgstr ""
+
+msgid "CC Primary Language"
+msgstr ""
+
+msgid "CC Secondary  Language"
+msgstr ""
+
+msgid "CC Secondary Channel"
+msgstr ""
+
+msgid "CC Secondary Language"
+msgstr ""
+
+msgid "CC1"
+msgstr ""
+
+msgid "CC2"
+msgstr ""
+
+msgid "CC3"
+msgstr ""
+
+msgid "CC4"
+msgstr ""
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "Cable"
+msgstr "Kábel"
+
+msgid "Cable AnnexB"
+msgstr "Kábel AnnexB"
+
+msgid "Cable DVB-C"
+msgstr "Kábel DVB-C"
+
+msgid "Cable modem status"
+msgstr "Kábelmodem állapota"
+
+msgid "Call History"
+msgstr ""
+
+msgid "Caller ID"
+msgstr ""
+
+msgid "Caller ID Status"
+msgstr ""
+
+msgid "Calling"
+msgstr ""
+
+msgid "Can't load skins list"
+msgstr ""
+
+msgid "Can't record a show that's too close to ending."
+msgstr ""
+
+msgid "Can't submit data form XHTMLWindows"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Mégsem"
+
+msgid "Cancel scheduled recording"
+msgstr "Időzített rögzítés törlése"
+
+msgid "Cancelar reinicio"
+msgstr ""
+
+msgid "Cannot generate QR code."
+msgstr ""
+
+msgid "Cannot remove last satellite.\n"
+msgstr ""
+
+msgid "Cannot schedule keyword recording - keyword recordings limit exceeded."
+msgstr ""
+
+msgid "Cannot schedule recording - series recordings limit exceeded."
+msgstr ""
+
+msgid "Card Inserted"
+msgstr "Smartkártya elérhető"
+
+msgid "Card Number"
+msgstr "Kártyaszám"
+
+msgid "Card Problem - check card"
+msgstr "Kártya hiba - kérem, ellenőrizze a kártyát"
+
+msgid "Card Type"
+msgstr "Kártya típusa"
+
+msgid "Card configuration changed - please enter PIN"
+msgstr ""
+
+msgid "Card correct"
+msgstr ""
+
+msgid "Card incorrect"
+msgstr ""
+
+msgid "Card inserted"
+msgstr ""
+
+msgid "Card is correct"
+msgstr "Kártya megfelelő"
+
+msgid "Card problem"
+msgstr ""
+
+msgid "Card problem - check card"
+msgstr ""
+
+msgid "Card removed"
+msgstr ""
+
+msgid "Carrier Lock"
+msgstr ""
+
+msgid "Catch-up TV - continue"
+msgstr ""
+
+msgid "Catch-up TV - continuous playback"
+msgstr ""
+
+msgid "Catch-up TV - play"
+msgstr ""
+
+msgid "Catchup TV"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Central European"
+msgstr ""
+
+msgid "Change CA PIN failed."
+msgstr "CA PIN meváltoztatása sikertelen"
+
+msgid "Change CA pin"
+msgstr "CA PIN módosítása"
+
+msgid "Change PIN"
+msgstr "PIN megváltoztatása"
+
+msgid "Change list numbering"
+msgstr ""
+
+msgid "Changing pin failed."
+msgstr "PIN módosítása sikertelen"
+
+msgid "Channel"
+msgstr "Csatorna"
+
+msgid "Channel 3"
+msgstr ""
+
+msgid "Channel 4"
+msgstr ""
+
+msgid "Channel Frequency [kHz]"
+msgstr "Csatorna frekvencia [kHz]"
+
+msgid "Channel Installation"
+msgstr "Csatorna telepítés"
+
+msgid "Channel Map"
+msgstr ""
+
+msgid "Channel Name"
+msgstr ""
+
+msgid "Channel Number"
+msgstr ""
+
+msgid "Channel Scanning"
+msgstr "Csatorna keresés"
+
+msgid "Channel Status"
+msgstr "Csatorna állapota"
+
+msgid "Channel not available"
+msgstr "Csatorna nem áll rendelkezésre"
+
+msgid "Channel scanning"
+msgstr "Csatorna keresése"
+
+#, c-format
+msgid "Channel scanning will start in %d second."
+msgid_plural "Channel scanning will start in %d seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Csatorna: %s\n"
+"Esemény: %s\n"
+"Idő: %s-%s\n"
+
+msgid "Channels update"
+msgstr ""
+
+msgid "Charge my account"
+msgstr ""
+
+msgid "Check Code"
+msgstr ""
+
+msgid "Check pairing"
+msgstr ""
+
+msgid "Check purse"
+msgstr ""
+
+msgid "Checking compatibility..."
+msgstr "Kompatibilitás ellenőrzése..."
+
+msgid "Checking if new firmware is available"
+msgstr ""
+
+msgid "Children's/Youth Programmes"
+msgstr "Gyermek/Ifjúsági programok"
+
+msgid "Chip ID"
+msgstr ""
+
+msgid "Chip id"
+msgstr "Chip ID"
+
+msgid "Clear All"
+msgstr ""
+
+msgid "Clear all"
+msgstr ""
+
+msgid "Close"
+msgstr "Bezár"
+
+msgid "Closed Captioning"
+msgstr ""
+
+msgid "Closed Captioning Mode"
+msgstr ""
+
+msgid "Communication error"
+msgstr "Kommunikációs hiba"
+
+msgid "Compatible with PVR"
+msgstr "PVR kompatibilis"
+
+msgid "Compatible with PVR and Timeshift"
+msgstr ""
+
+msgid "Compatible with Timeshift"
+msgstr ""
+
+msgid "Completed Recordings"
+msgstr "Befejezett rögzítések"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Conditional access system ID"
+msgstr ""
+
+msgid "Configuration"
+msgstr "Beállítások"
+
+msgid "Configure Network"
+msgstr ""
+
+msgid "Confirm"
+msgstr "Megerősít"
+
+msgid "Confirmación de compra"
+msgstr ""
+
+msgid "Confirmation Required"
+msgstr "Megerősítés szükséges"
+
+msgid "Conformance"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "Connect to hidden Wi-Fi..."
+msgstr ""
+
+msgid "Connected"
+msgstr ""
+
+msgid "Connected anonymously"
+msgstr ""
+
+msgid "Connected to"
+msgstr ""
+
+msgid "Connecting"
+msgstr ""
+
+msgid "Connecting to"
+msgstr ""
+
+msgid "Connecting..."
+msgstr ""
+
+msgid "Connection established"
+msgstr ""
+
+msgid "Connection problem"
+msgstr ""
+
+#, c-format
+msgid "Connection with %s failed"
+msgstr ""
+
+msgid "Content blocked"
+msgstr ""
+
+msgid "Content could not be found in the server"
+msgstr ""
+
+msgid "Content expired"
+msgstr ""
+
+msgid "Content has time restrictions but time is not set"
+msgstr ""
+
+msgid ""
+"Content owners use Microsoft PlayReadyTM content access technology to "
+"protect their intellectual property, including copyrighted content. This "
+"device uses PlayReady technology to access PlayReady-protected content and/"
+"or WMDRM protected content. If the device fails to properly enforce "
+"restrictions on content usage, content owners may require Microsoft to "
+"revoke the device's ability to consume PlayReady-protected content. "
+"Revocation should not affect unprotected content or content protected by "
+"other content access technologies. Content owners may require you to upgrade "
+"PlayReady to access their content. If you decline an upgrade, you will not "
+"be able to access content that requires the upgrade."
+msgstr ""
+
+msgid "Continue"
+msgstr "Folytatás"
+
+msgid "Correct"
+msgstr ""
+
+msgid "Cost:"
+msgstr ""
+
+msgid "Could not connect to host or proxy"
+msgstr ""
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr "Csatorna lista nem tölthető be."
+
+msgid "Could not resolve host name"
+msgstr ""
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Eszköz nem leállítható. Kérem, próbálja újra. (error 2)"
+
+msgid "Could not use SSL/TLS cipher"
+msgstr ""
+
+msgid "Create new directory"
+msgstr "Új mappa létrehozása"
+
+msgid "Create playlist"
+msgstr ""
+
+msgid "Creator"
+msgstr ""
+
+msgid "Credit:"
+msgstr ""
+
+msgid "CryptoGuard"
+msgstr ""
+
+msgid "CryptoGuard Force Tune"
+msgstr ""
+
+msgid "CubiTV Portal Address"
+msgstr ""
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "Custom LNB"
+msgstr ""
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS is not setup"
+msgstr ""
+
+msgid "DNS1"
+msgstr ""
+
+msgid "DNS2"
+msgstr ""
+
+msgid "DRM"
+msgstr ""
+
+#, c-format
+msgid "DRM error [%d]"
+msgstr "DRM hiba [%d]"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr ""
+
+msgid "DRM initialization error"
+msgstr ""
+
+msgid "DRM license error"
+msgstr ""
+
+msgid "DSMCC Feeds"
+msgstr ""
+
+msgid "DVB Channels parameters have changed."
+msgstr ""
+
+msgid "DVB Mode"
+msgstr ""
+
+msgid "DVB Table Status"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "DVB Tables status"
+msgstr ""
+
+msgid "DVB channels"
+msgstr ""
+
+msgid "DVB error: no audio/video"
+msgstr ""
+
+msgid "DVB-C Manual"
+msgstr "DVB-C Kézi"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT Automatikus"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 Kézi"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT Automatikus"
+
+msgid "DVB-T Automatic full scan"
+msgstr "DVB-T Automatikus keresés"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T Kézi"
+
+msgid "Daily"
+msgstr "Napi"
+
+msgid "Danish"
+msgstr "Danish"
+
+msgid "Data buffering. Please wait ..."
+msgstr ""
+
+msgid "Date"
+msgstr "Dátum"
+
+msgid "Dec"
+msgstr ""
+
+msgid "Decline"
+msgstr ""
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr ""
+
+msgid "Default"
+msgstr "Alapértelmezett"
+
+msgid "Default Channel"
+msgstr ""
+
+msgid "Default PVR Quota"
+msgstr "Alapértelmezett PVR arány"
+
+msgid "Default directory"
+msgstr ""
+
+msgid "Default interface"
+msgstr ""
+
+msgid "Default satellite"
+msgstr ""
+
+msgid "Degrees"
+msgstr ""
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Rögzítés indításának késleltetése: %s"
+
+msgid "Delete"
+msgstr "Törlés"
+
+msgid "Delete All"
+msgstr ""
+
+msgid "Delete NPvr recording"
+msgstr ""
+
+msgid "Delete all"
+msgstr "Összes törlése"
+
+msgid "Delete all active"
+msgstr "Minden aktív rögzítés törlése"
+
+msgid "Delete all completed"
+msgstr ""
+
+msgid "Delete all failed"
+msgstr "Összes sikertelen törlése"
+
+msgid "Delete all recordings"
+msgstr ""
+
+msgid "Delete all scheduled"
+msgstr "Minden időzített rögzítés törlése"
+
+msgid "Delete as needed"
+msgstr ""
+
+msgid "Delete directory"
+msgstr ""
+
+msgid "Delete manually"
+msgstr ""
+
+msgid "Delete recording"
+msgstr ""
+
+msgid "Deleted Recordings"
+msgstr ""
+
+msgid "Device Name"
+msgstr ""
+
+msgid "Device is not assigned to any customer"
+msgstr ""
+
+msgid "Device is not responding"
+msgstr ""
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr ""
+
+msgid "DiSEqC Switch"
+msgstr "DiSEqC váltás"
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Digital Audio"
+msgstr "Digitális audió"
+
+msgid "Digital Closed Captioning"
+msgstr ""
+
+#, c-format
+msgid "Directory '%s' already exists"
+msgstr ""
+
+msgid "Directory name already exists"
+msgstr ""
+
+msgid "Directory name cannot be empty"
+msgstr ""
+
+msgid "Directory name cannot start with a space"
+msgstr ""
+
+#, c-format
+msgid "Directory name must be at least %d characters"
+msgstr ""
+
+msgid "Disable"
+msgstr "Kikapcsol"
+
+msgid "Disable PC"
+msgstr ""
+
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+msgid "Disabling not possible"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+#, c-format
+msgid "Disconnect %s"
+msgstr ""
+
+msgid "Disconnected"
+msgstr ""
+
+msgid "Disk Formating"
+msgstr ""
+
+msgid ""
+"Disk format in progress\n"
+"\n"
+"Disk format can take 3 up to 5 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"\n"
+"The STB will continue start-up process\n"
+"when the format is complete."
+msgstr ""
+
+msgid "Display Format"
+msgstr ""
+
+msgid "Do not eject your USB drive before the formatting is finished!"
+msgstr ""
+
+msgid "Do not eject your USB drive before the speed test is finished!"
+msgstr ""
+
+msgid "Do not turn off the STB during channel scanning."
+msgstr ""
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "Ne kapcsolja ki a STB-t a szoftver frissítés alatt."
+
+msgid "Done"
+msgstr "Kész"
+
+msgid "Download haven't been completed"
+msgstr ""
+
+msgid "Download now"
+msgstr "Letöltés indítása"
+
+msgid "Downloading firmware package"
+msgstr ""
+
+msgid "Drop"
+msgstr "Töröl"
+
+msgid "Drop channels?"
+msgstr "Törli a csatornát?"
+
+msgid ""
+"Dropping to voicemail failed - Please Contact your service representative."
+msgstr ""
+
+msgid "Dropping..."
+msgstr "Törlés..."
+
+msgid ""
+"Due to Broadcaster's restrictions you do not have access to this content"
+msgstr ""
+
+msgid "Duplicate transponder"
+msgstr ""
+
+msgid "Duration"
+msgstr ""
+
+msgid "EIT Status"
+msgstr ""
+
+msgid "EME"
+msgstr ""
+
+msgid "EPG"
+msgstr ""
+
+msgid "EPG for IP channels"
+msgstr ""
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "HIBA: A kártya lekérdezése sikertelen"
+
+msgid "Edit"
+msgstr "Szerkeszt"
+
+msgid "Edit satellite"
+msgstr ""
+
+msgid "Education/Science/Factual topics"
+msgstr "Oktatás/Tudomány/Aktuális témák"
+
+#, c-format
+msgid "El canal se cambiará en %d segundo."
+msgid_plural "El canal se cambiará en %d segundos."
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "El equipo se reiniciará automáticamente en: %d segundo."
+msgid_plural "El equipo se reiniciará automáticamente en: %d segundos."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Empty"
+msgstr ""
+
+msgid "Empty folder"
+msgstr ""
+
+msgid "Enable/Disable"
+msgstr ""
+
+msgid "Enabled"
+msgstr "Bekapcsolva"
+
+msgid "End Frequency"
+msgstr "Végfrekvencia"
+
+msgid "End Margin"
+msgstr ""
+
+msgid "End time"
+msgstr "Befejezés ideje"
+
+msgid "Endurance Testing (+3 hrs)"
+msgstr ""
+
+msgid "English"
+msgstr "English"
+
+msgid "Enter Active Standby"
+msgstr ""
+
+msgid "Enter CA PIN to accept"
+msgstr ""
+
+msgid "Enter Standby"
+msgstr ""
+
+msgid "Enter WiFi Password"
+msgstr ""
+
+msgid "Enter WiFi SSID"
+msgstr ""
+
+msgid "Entitled"
+msgstr "Jogosult"
+
+msgid "Episodes:"
+msgstr ""
+
+msgid "Error"
+msgstr "Hiba"
+
+msgid "Error description"
+msgstr ""
+
+msgid "Error in SSL/TLS handshake"
+msgstr ""
+
+msgid "Error occurred"
+msgstr ""
+
+msgid "Error while data submission"
+msgstr ""
+
+msgid "Error while formatting disk!"
+msgstr ""
+
+#, c-format
+msgid "Error: %d"
+msgstr ""
+
+msgid ""
+"Está a punto de cambiar de canal y perder la sesión grabada, ¿desea "
+"continuar?"
+msgstr ""
+
+msgid "Ethernet Status"
+msgstr ""
+
+msgid "Event Status"
+msgstr "Esemény státusza"
+
+msgid "Event not found. Data will be updated now. Please try again."
+msgstr ""
+
+msgid "Every Day"
+msgstr ""
+
+msgid "Excellent"
+msgstr ""
+
+msgid "Exit"
+msgstr ""
+
+msgid "Exit to Home Page"
+msgstr ""
+
+#, c-format
+msgid "Expires at : %s"
+msgstr ""
+
+msgid "Extra"
+msgstr ""
+
+msgid "Extras"
+msgstr "Extrák"
+
+msgid "FATAL ERROR"
+msgstr "Kritikus hiba"
+
+msgid "FREE"
+msgstr ""
+
+msgid "FTA Blocking - Block"
+msgstr ""
+
+msgid "FTA Blocking - Ent Based"
+msgstr ""
+
+msgid "Failed Recordings"
+msgstr "Sikertelen rögzítések"
+
+msgid "Failed to contact nPVR server."
+msgstr ""
+
+msgid "Failed to delete nPVR directory"
+msgstr ""
+
+msgid "Failed to delete nPVR recordings"
+msgstr ""
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Kártyainformáció nem elérhető (error = 0x%x)"
+
+msgid "Failed to schedule nPVR recording"
+msgstr ""
+
+msgid "Fair"
+msgstr ""
+
+msgid "Favorites"
+msgstr "Kedvencek"
+
+msgid "Favorites Numbering"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "File Browser Character Set"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+#, c-format
+msgid "File not found: %d"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+msgid "Finnish"
+msgstr "Suomi"
+
+msgid "Firmware Version"
+msgstr "Firmware verzió"
+
+msgid "Firmware update"
+msgstr "Szoftver frissítés"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr "Szoftverfrissítés szükséges a STB megfelelő működéséhez."
+
+msgid ""
+"Firmware upgrade can take 10 up to 15 minutes.\n"
+"Please  DO NOT  reset or power off the STB.\n"
+"The STB will restart automatically when the upgrade is complete."
+msgstr ""
+
+msgid "First Time Installation"
+msgstr "Első telepítés"
+
+msgid "First time using VoD service?"
+msgstr ""
+
+msgid "Follow Parental Control"
+msgstr ""
+
+msgid "Font with Cyryllic and Greek"
+msgstr ""
+
+msgid "For 12+ year old"
+msgstr "12 éven felülieknek"
+
+msgid "For 16+ year old"
+msgstr "16 éven felülieknek"
+
+msgid "For 18+ year old"
+msgstr "18 éven felülieknek"
+
+msgid "For 6+ year old"
+msgstr "6 éven felülieknek"
+
+msgid "For HD or Widescreen TV"
+msgstr ""
+
+msgid "For classic TV"
+msgstr ""
+
+#, c-format
+msgid "Forget %s"
+msgstr ""
+
+msgid "Forget the network"
+msgstr ""
+
+msgid "Format Hard Disk"
+msgstr "Merevlemez formázása"
+
+msgid "Format MStoreVoD"
+msgstr ""
+
+msgid "Format PVR/TS"
+msgstr ""
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr ""
+
+msgid "Format whole disk"
+msgstr ""
+
+msgid "Formatting finished!"
+msgstr ""
+
+msgid "Formatting storage"
+msgstr ""
+
+msgid ""
+"Formatting this disk will permanently erase all data on it. Do you want to "
+"continue?"
+msgstr ""
+
+msgid "Formatting..."
+msgstr "Formázás..."
+
+msgid "Free Memory"
+msgstr ""
+
+msgid "Free with Subscription"
+msgstr ""
+
+msgid "Frequency"
+msgstr "Frekvencia"
+
+msgid "Frequency Range"
+msgstr "Frekvencia tartomány"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Frekvencia: %d.%02d MHz%s %s %s"
+
+msgid "Fridays"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "Front Panel Power Button"
+msgstr ""
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Előlapi óra készenléti módban"
+
+msgid "Full Software Version"
+msgstr ""
+
+msgid "Fullscreen"
+msgstr "Teljes képernyő"
+
+msgid "G"
+msgstr ""
+
+msgid "G: General Audience"
+msgstr "G: Általános közönség"
+
+msgid "GHz"
+msgstr ""
+
+msgid "Gateway"
+msgstr "Átjáró"
+
+msgid "Genre"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "Go!"
+msgstr "Menj!"
+
+msgid "Good"
+msgstr ""
+
+msgid "Greek"
+msgstr "Greek"
+
+msgid "Group Number"
+msgstr "Csoport azonosító"
+
+msgid "Guide"
+msgstr ""
+
+msgid "Guide Data"
+msgstr ""
+
+msgid "H"
+msgstr ""
+
+msgid "HDCP ERROR"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI Status"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "HDMI videó formátum"
+
+msgid "HDTV"
+msgstr ""
+
+msgid "HELP"
+msgstr ""
+
+msgid "HFC MAC ID"
+msgstr ""
+
+msgid "HTTP server returned error"
+msgstr ""
+
+msgid "Hard of Hearing"
+msgstr "Hallássérült"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Hallássérült felirat"
+
+msgid "Hemisphere"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Hide Adult Titles"
+msgstr ""
+
+msgid "Horizontal"
+msgstr "Horizontális"
+
+msgid "Hybrid Mode"
+msgstr ""
+
+msgid "I/O error while receiving data"
+msgstr ""
+
+msgid "I/O error while sending data"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "IP Mode"
+msgstr ""
+
+msgid "IP Network"
+msgstr "IP Hálózat"
+
+msgid "IP channels"
+msgstr ""
+
+msgid "IPPV PIN"
+msgstr ""
+
+msgid "Idle Time"
+msgstr ""
+
+msgid ""
+"If you wish to purchase this asset,\n"
+"please enter your Purchase Pin"
+msgstr ""
+
+msgid "Ignore"
+msgstr ""
+
+msgid "In order to browse this category, please log in."
+msgstr ""
+
+msgid ""
+"In order to get access to VoD service, please contact your sales "
+"representative"
+msgstr ""
+
+msgid "In order to purchase products, please log in."
+msgstr ""
+
+msgid ""
+"In order to record selected program you need to stop one of the following "
+"recordings/schedules"
+msgstr ""
+"A kiválaszott esemény rögzítéséhez, kérem töröljön egyet az alábbi "
+"rögzítések/időzítések közül."
+
+msgid "In progress"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Incorrect Card"
+msgstr "Nem megfelelő kártya"
+
+msgid "Incorrect Conax Card"
+msgstr "Nem megfelelő Conax kártya"
+
+msgid "Incorrect Conax card"
+msgstr ""
+
+msgid "Incorrect card"
+msgstr ""
+
+msgid "Incorrect message"
+msgstr ""
+
+#, c-format
+msgid "Incorrect network settings (%s)"
+msgstr ""
+
+msgid "Incorrect old PIN."
+msgstr "Hibás régi PIN"
+
+msgid "Incorrect response status"
+msgstr ""
+
+msgid "Incorrect response type"
+msgstr ""
+
+msgid "Incorrect widget id"
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "Initialization Error"
+msgstr ""
+
+msgid "Inserted"
+msgstr ""
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Telepítés\n"
+"\n"
+"Automatikus csatorna kereséshez nyomja meg az OK gombot."
+
+msgid "Install now"
+msgstr "Telepítés indítása"
+
+msgid "Installing firmware"
+msgstr ""
+
+msgid "Instant Timeshift"
+msgstr "Folyamatos Timeshift"
+
+msgid "Insufficient credit to purchase event."
+msgstr ""
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "Interface Status"
+msgstr ""
+
+msgid "Interface Version"
+msgstr "Interface verzió"
+
+#, c-format
+msgid "Interface: %s"
+msgstr ""
+
+msgid "Internal error. Unknown state"
+msgstr ""
+
+msgid "Internal library error"
+msgstr ""
+
+msgid "Internal server error"
+msgstr ""
+
+msgid "Internet"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr "Internet Rádió"
+
+msgid "Invalid behavior of HTTP client listener"
+msgstr ""
+
+msgid "Invalid password"
+msgstr ""
+
+msgid "Invalid recording."
+msgstr ""
+
+msgid "Invalid server response"
+msgstr ""
+
+msgid "Invalid tranponder"
+msgstr ""
+
+msgid "Inverted"
+msgstr ""
+
+msgid "Ir a vivo"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "Keyword"
+msgstr "Kulcsszó"
+
+msgid "Ku-band"
+msgstr ""
+
+msgid "Ku-band BSS"
+msgstr ""
+
+msgid "Ku-band FSS"
+msgstr ""
+
+msgid "Ku-band Universal"
+msgstr ""
+
+msgid "LNB Setup"
+msgstr "LNB beállítás"
+
+msgid "LNB Type"
+msgstr "LNB típusa"
+
+msgid "Language"
+msgstr "Nyelv"
+
+msgid "Languages"
+msgstr "Nyelvi beállítások"
+
+msgid "Latens"
+msgstr ""
+
+msgid "Latest arrivals"
+msgstr ""
+
+msgid "Latin"
+msgstr ""
+
+msgid "Latin US"
+msgstr ""
+
+msgid "Latvian"
+msgstr "Latvian"
+
+msgid "Leisure hobbies"
+msgstr "Szabadidő, hobbi"
+
+msgid "Leisure/hobbies"
+msgstr ""
+
+msgid "Letterbox"
+msgstr "Letterbox"
+
+msgid "Letterbox / Pillarbox"
+msgstr ""
+
+msgid "Library date"
+msgstr ""
+
+msgid "Library version"
+msgstr ""
+
+msgid "Line"
+msgstr ""
+
+msgid "List is empty"
+msgstr ""
+
+msgid "List name already exists"
+msgstr "Létező lista név"
+
+msgid "List name cannot be empty"
+msgstr "A lista név nem lehet üres"
+
+#, c-format
+msgid "List no. %u"
+msgstr "Lista száma %u"
+
+msgid "Loading..."
+msgstr "Töltés..."
+
+msgid "Local"
+msgstr ""
+
+msgid "Local CA certificates could not be loaded"
+msgstr ""
+
+msgid "Local Oscillator Frequency"
+msgstr "Local Oscillator frekvenciája"
+
+msgid "Local client certificate could not be loaded"
+msgstr ""
+
+msgid "Local connection error"
+msgstr ""
+
+msgid "Lock"
+msgstr "Lezár"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Állapot - Nincs jel"
+
+msgid "Lock status - OK"
+msgstr "Állapot - OK"
+
+msgid "Locked Ratings"
+msgstr ""
+
+msgid "Locked Time"
+msgstr ""
+
+msgid "Locking Status"
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Long Term Error"
+msgstr ""
+
+msgid "Lost tuner access"
+msgstr ""
+
+msgid "Low power consumption, slow recovery"
+msgstr ""
+
+msgid "MAC Address"
+msgstr ""
+
+msgid "MAC Address:"
+msgstr ""
+
+msgid "MAC address"
+msgstr "MAC cím"
+
+msgid "MB"
+msgstr ""
+
+msgid "MPAA"
+msgstr ""
+
+msgid "MPEG Service Number"
+msgstr ""
+
+msgid "MPEG Statistics"
+msgstr ""
+
+msgid "MSE"
+msgstr ""
+
+msgid "MStore"
+msgstr ""
+
+msgid "Mailbox"
+msgstr ""
+
+msgid "Mantenimiento automático"
+msgstr ""
+
+msgid "Manual"
+msgstr "Kézi"
+
+msgid "Manual Channel Scanning"
+msgstr "Kézi csatorna keresés"
+
+msgid "Manual PAT Channel Scanning"
+msgstr ""
+
+msgid "Manual(Static)"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Szülői zár\n"
+"\n"
+"Esemény besorolása: %s\n"
+"Kártya szint: %s\n"
+"Kérem, adja meg a CA PIN-t a feloldáshoz"
+
+msgid "Maturity Rating"
+msgstr "Szülői felügyelet"
+
+msgid "May"
+msgstr ""
+
+msgid "Measuring performance of idle system..."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and HD recording performance..."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and SD recording performance..."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and three SD recordings performance..."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift and two HD recordings performance..."
+msgstr ""
+
+msgid "Measuring simultaneous timeshift, SD and HD recordings performance..."
+msgstr ""
+
+msgid ""
+"Measuring simultaneous timeshift, two HD recordings and one SD recording "
+"performance..."
+msgstr ""
+
+msgid "Measuring timeshift performance..."
+msgstr ""
+
+msgid "Memory Used"
+msgstr ""
+
+msgid "Menu Language"
+msgstr "Menü nyelve"
+
+msgid "Menu Transparency"
+msgstr ""
+
+msgid "Message"
+msgstr "Üzenet"
+
+msgid "Message - NEW!"
+msgstr "Üzenet  - Új!"
+
+msgid "Messages"
+msgstr "Üzenetek"
+
+msgid "Middleware Connectivity"
+msgstr ""
+
+#, c-format
+msgid "Minimum Age %d"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr "Moduláció"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Moduláció: %s"
+
+msgid "Mondays"
+msgstr ""
+
+msgid "More info"
+msgstr "További információ"
+
+msgid "Mounting..."
+msgstr "Csatolás..."
+
+msgid "Move"
+msgstr "Mozgat"
+
+msgid "Movie/Drama"
+msgstr "Film/Dráma"
+
+msgid "Movies"
+msgstr ""
+
+#, c-format
+msgid "Movies %s is in..."
+msgstr ""
+
+msgid "Multichannel"
+msgstr "Több csatornás"
+
+msgid "Music/Ballet/Dance"
+msgstr "Zene/Balett/Tánc"
+
+msgid "Mux ID"
+msgstr ""
+
+msgid "My Coupons"
+msgstr ""
+
+msgid "My List"
+msgstr ""
+
+msgid "My Recordings"
+msgstr ""
+
+msgid "My Rentals"
+msgstr ""
+
+msgid "My rentals"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "NAT Status"
+msgstr ""
+
+msgid "NATStatus"
+msgstr ""
+
+msgid "NC-17"
+msgstr ""
+
+msgid "NEW RELEASES"
+msgstr ""
+
+msgid "NID selection"
+msgstr ""
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NIT Status"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "Nincs jel"
+
+msgid "NPVR End Margin"
+msgstr ""
+
+msgid "NPVR Start Margin"
+msgstr ""
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Name"
+msgstr ""
+
+msgid "Name This Device"
+msgstr ""
+
+msgid "Netmask"
+msgstr ""
+
+msgid "Network Name"
+msgstr "Hálózat neve"
+
+msgid "Network PVR"
+msgstr ""
+
+msgid "Network PVR Quota"
+msgstr ""
+
+msgid "Network Problem Detected"
+msgstr ""
+
+msgid "Network Settings"
+msgstr "Hálózati beállítások"
+
+msgid "Network Settings Window"
+msgstr ""
+
+msgid "Network mask"
+msgstr "Hálózati maszk"
+
+msgid "Never"
+msgstr ""
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New CA PIN field is not complete"
+msgstr ""
+
+msgid "New Only"
+msgstr ""
+
+msgid "New PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New PIN field is not complete."
+msgstr ""
+
+msgid "New PIN:"
+msgstr "Új PIN:"
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Új %s sw. verzió a %s hálózaton erérhető."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Új %s sw. verzió elérhető."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Új firmware verzió: %s"
+
+msgid "New pins don't match."
+msgstr "Új PIN nem egyezik"
+
+msgid ""
+"New recording cannot be scheduled due to many conflicts with previously "
+"scheduled recordings"
+msgstr ""
+"Az aktuális rögzítés nem állítható be, mivel ütközik korábban időzített "
+"rögzítésekkel"
+
+msgid "News/Cultural affairs"
+msgstr "Hírek/Kulturális események"
+
+msgid "News/Current affairs"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No Access (1)"
+msgstr ""
+
+msgid "No Access (10)"
+msgstr ""
+
+msgid "No Access (11)"
+msgstr ""
+
+msgid "No Access (12)"
+msgstr ""
+
+msgid "No Access (13)"
+msgstr ""
+
+msgid "No Access (14)"
+msgstr ""
+
+msgid "No Access (2)"
+msgstr ""
+
+msgid "No Access (3)"
+msgstr ""
+
+msgid "No Access (4)"
+msgstr ""
+
+msgid "No Access (5)"
+msgstr ""
+
+msgid "No Access (6)"
+msgstr ""
+
+msgid "No Access (7)"
+msgstr ""
+
+msgid "No Access (8)"
+msgstr ""
+
+msgid "No Access (9)"
+msgstr ""
+
+msgid "No Card Inserted"
+msgstr "Smartkártya nincs behelyezve"
+
+msgid "No Content"
+msgstr ""
+
+msgid "No DiSEqC"
+msgstr ""
+
+msgid "No Items"
+msgstr ""
+
+msgid "No Music"
+msgstr ""
+
+msgid "No STUN Server Connection"
+msgstr ""
+
+msgid "No Signal Lock"
+msgstr ""
+
+msgid "No SmartCard found. This movie can not be ordered"
+msgstr ""
+
+msgid "No access"
+msgstr "Nincs hozzáférés"
+
+#, c-format
+msgid "No access (%d)"
+msgstr ""
+
+#, c-format
+msgid "No access (%i)"
+msgstr ""
+
+msgid "No access (1)"
+msgstr ""
+
+msgid "No access (10)"
+msgstr ""
+
+msgid "No access (11)"
+msgstr ""
+
+msgid "No access (12)"
+msgstr ""
+
+msgid "No access (13)"
+msgstr ""
+
+msgid "No access (14)"
+msgstr ""
+
+msgid "No access (2)"
+msgstr ""
+
+msgid "No access (3)"
+msgstr ""
+
+msgid "No access (4)"
+msgstr ""
+
+msgid "No access (5)"
+msgstr ""
+
+msgid "No access (6)"
+msgstr ""
+
+msgid "No access (7)"
+msgstr ""
+
+msgid "No access (8)"
+msgstr ""
+
+msgid "No access (9)"
+msgstr ""
+
+msgid "No access (No pairing)"
+msgstr ""
+
+#, c-format
+msgid "No access (error code %i)"
+msgstr ""
+
+msgid "No access - geographical blackout"
+msgstr "Nincs hozzáférés - területi üzemzavar"
+
+msgid "No access - network block"
+msgstr "Nincs hozzáférés - hálózati tiltás"
+
+msgid "No card inserted"
+msgstr ""
+
+msgid "No channel"
+msgstr "Nincs ilyen csatorna"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Nincs telepített csatorna.\n"
+"Csatornakeresés szükséges."
+
+msgid "No credits"
+msgstr "Nincs keret"
+
+msgid "No debits"
+msgstr "Nincs tartozás"
+
+msgid "No entries"
+msgstr "Nincs bejegyzés"
+
+msgid "No error (request did not failed)"
+msgstr ""
+
+msgid "No events"
+msgstr "Nincs esemény"
+
+msgid "No hay contenidos agregados a Mi lista."
+msgstr ""
+
+msgid "No items"
+msgstr ""
+
+msgid "No list"
+msgstr "Nincs elérhető lista"
+
+msgid "No messages"
+msgstr "Nincs üzenet"
+
+msgid "No pairing"
+msgstr ""
+
+msgid "No purses"
+msgstr "Nincs keret"
+
+msgid "No results"
+msgstr "Nincs találat"
+
+msgid "No results found"
+msgstr ""
+
+msgid ""
+"No results.\n"
+"Please enter new search criteria"
+msgstr ""
+
+msgid "No subscription"
+msgstr ""
+
+msgid "No subscriptions"
+msgstr "Nincs előfizetés"
+
+msgid "No time limits"
+msgstr ""
+
+msgid "No title"
+msgstr ""
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "Nem kompatibilis tároló eszköz csatlakoztatva. (error 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "Nem kompatibilis tároló eszköz csatlakoztatva. (error 3)"
+
+msgid "Non smartcard"
+msgstr ""
+
+msgid "Non smartcard configuration changed - please enter PIN"
+msgstr ""
+
+msgid "Non smartcard mode"
+msgstr ""
+
+msgid "Non smartcard mode with card"
+msgstr ""
+
+msgid "Normal"
+msgstr "Alap"
+
+msgid "Normal power consumption, fast recovery"
+msgstr ""
+
+msgid "Norwegian"
+msgstr ""
+
+msgid "Not Available"
+msgstr ""
+
+msgid "Not Entitled"
+msgstr "Nem jogosult"
+
+msgid "Not Possible"
+msgstr ""
+
+msgid "Not Rated (Adult)"
+msgstr ""
+
+msgid "Not Rated (General)"
+msgstr ""
+
+msgid "Not authorized"
+msgstr ""
+
+msgid "Not authorized."
+msgstr ""
+
+msgid "Not connected"
+msgstr ""
+
+msgid "Not enough tokens - please recharge your card"
+msgstr ""
+
+msgid "Not entitled"
+msgstr "Nem jogosult"
+
+msgid "Not present"
+msgstr ""
+
+msgid "Not subscribed"
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "NpvrMargins"
+msgstr ""
+
+msgid "Number of Pages"
+msgstr ""
+
+msgid "Number of Sessions"
+msgstr "Folyamatok száma"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "ONID selection"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr "OSD megjelenítési ideje"
+
+msgid "Obtaining IP address..."
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "Off"
+msgstr "Ki"
+
+msgid "Off (Auto Relock)"
+msgstr ""
+
+msgid "Off (Relock Manually)"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "Old CA PIN field is not complete"
+msgstr ""
+
+msgid "Old PIN field is not complete."
+msgstr ""
+
+msgid "Old PIN:"
+msgstr "Régi PIN:"
+
+msgid "Old pin is invalid."
+msgstr "Hibás régi PIN"
+
+msgid "On"
+msgstr "Be"
+
+msgid "Ongoing Recordings"
+msgstr "Folyamatban lévő rögzítések"
+
+msgid "Ongoing recording is unavilable due to parental control restrictions"
+msgstr ""
+
+msgid "Only for testing"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Operation Successful"
+msgstr ""
+
+msgid "Operation timed out"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Order Now"
+msgstr ""
+
+msgid "Order by SMS"
+msgstr ""
+
+msgid "Order history"
+msgstr ""
+
+#, c-format
+msgid ""
+"Ordering\n"
+"%s \\%s\n"
+"Please contact your operator for further information."
+msgstr ""
+
+msgid "Original Format"
+msgstr "Eredeti formátum"
+
+#, c-format
+msgid "Other error: [%d]"
+msgstr ""
+
+msgid "Other unspecified error"
+msgstr ""
+
+msgid "Out of quota on nPVR server."
+msgstr ""
+
+msgid "Override"
+msgstr "Felülír"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PAT Status"
+msgstr ""
+
+msgid "PCR"
+msgstr ""
+
+msgid "PG"
+msgstr ""
+
+msgid "PG-13"
+msgstr ""
+
+msgid "PG: Parental Guidance"
+msgstr "Szülői felügyelet"
+
+msgid "PID"
+msgstr ""
+
+msgid "PIN Change"
+msgstr ""
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "PIN azonosítás tiltva %d percig."
+msgstr[1] "PIN azonosítás tiltva %d percig."
+
+msgid "PIN change"
+msgstr "PIN változtatása"
+
+msgid "PIN confirmation does not match."
+msgstr "PIN nem egyezik."
+
+msgid "PIN para compras"
+msgstr ""
+
+msgid "PIN:"
+msgstr "PIN"
+
+msgid "PLPID"
+msgstr ""
+
+msgid "PMT Status"
+msgstr ""
+
+msgid "PVR"
+msgstr ""
+
+msgid "PVR End Margin"
+msgstr "PVR leállítás időzítése"
+
+msgid "PVR Start Margin"
+msgstr "PVR indítás időzítése"
+
+msgid "PVR end time setup - warning"
+msgstr ""
+
+msgid "Pairing Ok"
+msgstr ""
+
+msgid "Pairing Remote Controller"
+msgstr ""
+
+msgid "Pairing bad"
+msgstr ""
+
+msgid "Pairing status"
+msgstr ""
+
+msgid "Pan and Scan"
+msgstr ""
+
+msgid "Parental control"
+msgstr "Szülői felügyelet"
+
+msgid "Parental control PIN"
+msgstr ""
+
+msgid "Parental control PIN (Non smartcard)"
+msgstr ""
+
+msgid "Parental control PIN required (CA)"
+msgstr ""
+
+msgid "Passive Standby"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+#, c-format
+msgid "Password must contain between %d and %d characters"
+msgstr ""
+
+msgid "Peer certificate could not be verified"
+msgstr ""
+
+msgid "Permitir todos"
+msgstr ""
+
+msgid "Pin change successful."
+msgstr "PIN módosítás sikeres."
+
+msgid "Play"
+msgstr "Lejátszás"
+
+msgid "Play Trailer"
+msgstr "Előzetes megtekintése"
+
+msgid "Play from the beginning"
+msgstr "Lejátszás az elejétől"
+
+msgid "Playback Settings"
+msgstr ""
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr ""
+
+msgid "Playlist error"
+msgstr ""
+
+msgid "Playlist name"
+msgstr ""
+
+msgid "Please Wait"
+msgstr "Kérem várjon"
+
+msgid "Please configure network"
+msgstr ""
+
+msgid "Please confirm new CA PIN:"
+msgstr "Új PIN kód megerősítése:"
+
+msgid "Please enter CA PIN"
+msgstr "Kérem, adja meg a CA PIN-t"
+
+msgid "Please enter CA PIN:"
+msgstr "Kérem, adja meg a CA PIN-t:"
+
+msgid "Please enter Conax PIN"
+msgstr ""
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter Middleware PIN"
+msgstr ""
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter new CA PIN:"
+msgstr "Kérem, adja meg az új CA PIN-t:"
+
+msgid "Please enter parental control PIN"
+msgstr "Kérem, adja meg a szülői felügyelet PIN-t."
+
+msgid "Please enter parental control PIN to enter this category"
+msgstr ""
+
+msgid "Please enter parental control PIN to enter this service"
+msgstr ""
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr ""
+"Kérem, adja meg a szülői felügyelet PIN-t a kiválasztott tartalom "
+"elindításához."
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr "A rögzítések törléséhez adja meg a szülői felügyelet PIN kódját"
+
+msgid "Please wait"
+msgstr "Kérem várjon"
+
+msgid "Please wait for result"
+msgstr ""
+
+msgid "Please wait, loading ..."
+msgstr ""
+
+msgid "Please wait, loading..."
+msgstr ""
+
+msgid "Please wait, loading…"
+msgstr "Kérem várjon, betöltés folyamatban..."
+
+msgid "Please wait."
+msgstr "Kérem várjon."
+
+msgid "Please wait..."
+msgstr "Kérem várjon..."
+
+msgid "Polarization"
+msgstr "Polarizáció"
+
+msgid "Polish"
+msgstr ""
+
+msgid "Poor"
+msgstr ""
+
+msgid "Pre FEC BER"
+msgstr ""
+
+msgid "Pre-certification debug options"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Preferred Audio Track"
+msgstr "Elsődleges hangsáv"
+
+msgid "Premiere"
+msgstr ""
+
+msgid "Preserved"
+msgstr ""
+
+msgid "Press 'Cancel' to abort automatic switch to standby."
+msgstr ""
+
+msgid "Press 'Configure Network' to see your network settings."
+msgstr ""
+
+msgid "Press 'Enter Standby' to immediately switch to standby."
+msgstr ""
+
+msgid "Press Back to go to previous screen"
+msgstr ""
+
+msgid "Press Cancel to stay on current channel or press OK to go to"
+msgstr ""
+
+msgid "Press EPG to enter grid view"
+msgstr ""
+
+msgid "Press EPG to enter list view"
+msgstr ""
+
+msgid "Press OK button to start channel scanning."
+msgstr ""
+
+msgid "Press OK to browse"
+msgstr "Nyomja meg az OK gombot a kereséshez"
+
+msgid "Press OK to browse or OPT to format"
+msgstr ""
+
+msgid "Press OPT to format"
+msgstr ""
+
+msgid "Press Opt for more options"
+msgstr "További beállítások: \"Opt\""
+
+msgid "Press Opt to add hidden SSID"
+msgstr ""
+
+msgid "Press RED button for more features"
+msgstr ""
+
+msgid "Press Restart Now button to restart."
+msgstr ""
+
+msgid ""
+"Press and hold \"OK\" and \"MENU\" buttons until diode on remote blinks."
+msgstr ""
+
+#, c-format
+msgid "Press and hold power button for %u second to enter passive standby."
+msgid_plural ""
+"Press and hold power button for %u seconds to enter passive standby."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Press power button to cancel standby."
+msgstr ""
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Előző firmware verzió: %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Ár: %i.%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Ár: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Elsődleges nyelv"
+
+msgid "Primary Subtitle Language"
+msgstr "Elsődleges felirat nyelv"
+
+msgid "Problem"
+msgstr ""
+
+msgid "Proceed"
+msgstr "Tovább"
+
+msgid "Processing KERNEL"
+msgstr ""
+
+msgid "Processing LOGO"
+msgstr ""
+
+msgid "Processing ROOTFS"
+msgstr ""
+
+msgid "Processing USR"
+msgstr ""
+
+msgid "Program Number"
+msgstr ""
+
+msgid "Progressive"
+msgstr ""
+
+msgid "Prompt"
+msgstr ""
+
+msgid "Prompt when pressed"
+msgstr ""
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr ""
+
+msgid "Public IP"
+msgstr ""
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Keret : %s"
+
+msgid "PushServer Connectivity"
+msgstr ""
+
+msgid "QAM128"
+msgstr ""
+
+msgid "QAM16"
+msgstr ""
+
+msgid "QAM256"
+msgstr ""
+
+msgid "QAM32"
+msgstr ""
+
+msgid "QAM64"
+msgstr ""
+
+msgid "QPSK"
+msgstr ""
+
+msgid "QR code"
+msgstr ""
+
+msgid "Quality"
+msgstr "Minőség"
+
+msgid "Quality Level"
+msgstr ""
+
+msgid "Quality Level Number"
+msgstr ""
+
+msgid "Quitar de Mi lista"
+msgstr ""
+
+msgid "Quota"
+msgstr "kvóta"
+
+msgid "R"
+msgstr ""
+
+msgid "RCU Pairing"
+msgstr ""
+
+msgid "RCU Power Button"
+msgstr ""
+
+msgid "RECOMMENDED"
+msgstr ""
+
+msgid "RF Channel"
+msgstr ""
+
+msgid "RF Signal Status"
+msgstr ""
+
+msgid "RF Tuner Statistics"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "Radio"
+msgstr "Rádió"
+
+msgid "Radio Guide"
+msgstr ""
+
+msgid "Randomized"
+msgstr ""
+
+msgid "Rearrange list"
+msgstr "Lista szerkesztése"
+
+msgid "Recommended"
+msgstr ""
+
+msgid "Recommended Titles:"
+msgstr ""
+
+msgid "Record"
+msgstr "Rögzítés"
+
+msgid "Record always"
+msgstr "Folyamatos rögzítés"
+
+msgid "Record keyword with nPVR"
+msgstr ""
+
+msgid "Record past event with nPVR"
+msgstr ""
+
+msgid "Record repeatedly"
+msgstr "Ismétlődő rögzítés"
+
+msgid "Record series with nPVR"
+msgstr ""
+
+msgid "Record with nPVR"
+msgstr ""
+
+msgid "Recording Settings"
+msgstr ""
+
+msgid "Recording can't be scheduled - not enough quota."
+msgstr ""
+
+msgid "Recording can't be scheduled on selected event."
+msgstr ""
+
+#, c-format
+msgid "Recording channel %s is not available due to broadcaster's limitations"
+msgstr ""
+
+msgid "Recording is in the wrong state."
+msgstr ""
+
+msgid "Recording not found."
+msgstr ""
+
+msgid "Recording on that event has been already scheduled."
+msgstr ""
+
+msgid "Recording schedule failed."
+msgstr ""
+
+msgid "Remind me"
+msgstr "Emlékeztető"
+
+msgid "Reminder"
+msgstr "Emlékeztető"
+
+msgid "Reminders"
+msgstr "Emlékeztetők"
+
+msgid "Remote debugging"
+msgstr ""
+
+msgid "Remote resource not found"
+msgstr ""
+
+msgid "Removal not possible"
+msgstr ""
+
+msgid "Remove"
+msgstr "Töröl"
+
+msgid "Remove channel"
+msgstr "Csatorna törlése"
+
+msgid "Remove directory & keep contents"
+msgstr ""
+
+msgid "Remove from Favorites"
+msgstr ""
+
+msgid "Remove list"
+msgstr "Lista törlése"
+
+msgid "Remove reminder"
+msgstr "Emlékeztető törlése"
+
+msgid "Remove satellite"
+msgstr ""
+
+msgid "Removed"
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Rename list"
+msgstr "Lista átnevezése"
+
+msgid "Rent"
+msgstr "Kölcsönzés"
+
+msgid "Rental Terms"
+msgstr ""
+
+msgid "Rental period expired"
+msgstr "Kölcsönzés ideje lejárt"
+
+msgid "Rental period for this content has expired."
+msgstr "A tartalom kölcsönzése lejárt"
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Kölcsönzés időtartama : %i %s"
+
+msgid "Renting Period Expired."
+msgstr ""
+
+msgid "Repeat"
+msgstr "Ismétlés"
+
+msgid "Repeat new PIN:"
+msgstr "Adja meg újra az új PIN-t:"
+
+msgid "Resolve conflicts"
+msgstr "Ütközések feloldása"
+
+msgid "Restart Device"
+msgstr "Készülék újraindítása"
+
+msgid "Restart Now"
+msgstr ""
+
+msgid "Restore Factory Defaults"
+msgstr "Gyári értékek visszaállítása"
+
+msgid "Restore defaults"
+msgstr ""
+
+msgid "Restored last working network configuration."
+msgstr ""
+
+msgid "Results - Failure"
+msgstr "Eredmény - Sikertelen"
+
+msgid "Results - Success"
+msgstr "Eredmény - Sikeres"
+
+msgid "Resume event pin"
+msgstr ""
+
+msgid "Retrieving channel list"
+msgstr "Csatorna lista fogadása"
+
+msgid "Routing settings"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "S/PDIF A/V Sync"
+msgstr ""
+
+msgid "SCART Signal Type"
+msgstr "SCART jel típusa"
+
+msgid "SDT Status"
+msgstr ""
+
+msgid "SID"
+msgstr ""
+
+msgid "SIMILAR TITLES:"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "SSID is unknown"
+msgstr ""
+
+msgid "SSID is unknown!"
+msgstr ""
+
+msgid "SSL 1"
+msgstr ""
+
+msgid "SSL 2"
+msgstr ""
+
+msgid "SSM"
+msgstr ""
+
+msgid "SSM Download"
+msgstr ""
+
+msgid "STB ID"
+msgstr ""
+
+msgid "STB Mode has changed"
+msgstr ""
+
+msgid "STB Mode update is required to make the STB work correctly."
+msgstr ""
+
+msgid "STB Status"
+msgstr ""
+
+msgid "STUN IP restricted"
+msgstr ""
+
+msgid "STUN Port Restricted"
+msgstr ""
+
+msgid "SUBSCRIBER INFO"
+msgstr ""
+
+msgid "Satellite"
+msgstr "Műhold"
+
+msgid "Satellite %s is not setup yet"
+msgstr ""
+
+msgid "Satellite Info"
+msgstr ""
+
+msgid "Satellite Name"
+msgstr ""
+
+msgid "Satellite Name:"
+msgstr ""
+
+msgid "Satellite Setup"
+msgstr ""
+
+msgid "Satellite name cannot be empty"
+msgstr ""
+
+msgid "Satellite with given name already exists"
+msgstr ""
+
+msgid "Saturdays"
+msgstr ""
+
+msgid "Save"
+msgstr "Mentés"
+
+msgid "Saving..."
+msgstr "Mentés..."
+
+msgid "Scan Type"
+msgstr "Keresés típusa"
+
+msgid "Scan now"
+msgstr ""
+
+msgid "Scanning Standard"
+msgstr "Keresés típusa"
+
+msgid "Scanning channels"
+msgstr "Csatornák keresése"
+
+msgid "Scanning failed"
+msgstr ""
+
+#, c-format
+msgid "Scanning frequency: %d.%02d MHz"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Schedule keyword recording"
+msgstr "Rögzítés kulcsszó alapján"
+
+msgid "Schedule manual recording"
+msgstr "Kézi rögzítés beállítása"
+
+msgid "Schedule series recording"
+msgstr ""
+
+msgid "Scheduled Recordings"
+msgstr "Időzített rögzítések"
+
+msgid "Screensaver Timeout"
+msgstr "Képernyővédő időzítése"
+
+msgid "Search"
+msgstr "Keresés"
+
+msgid "Search Error"
+msgstr ""
+
+msgid "Search by category"
+msgstr ""
+
+msgid "Search by description"
+msgstr ""
+
+msgid "Search by name"
+msgstr ""
+
+msgid "Search in progress..."
+msgstr "Keresés folyamatban"
+
+msgid "Search results"
+msgstr ""
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "%d eredmény"
+msgstr[1] "%d eredmény"
+
+msgid "Searching for channels"
+msgstr "Csatornák keresése"
+
+msgid "Searching..."
+msgstr "Keresés..."
+
+#, c-format
+msgid "Season: %zu"
+msgstr ""
+
+msgid "Secondary Audio Language"
+msgstr "Másodlagos nyelv"
+
+msgid "Secondary Subtitle Language"
+msgstr "Másodlagos felirat nyelve"
+
+msgid "See all"
+msgstr ""
+
+msgid "See all from"
+msgstr ""
+
+msgid "Select Time Zone"
+msgstr ""
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Audió késleltetés beállítása a %s kimeneten"
+
+msgid "Select event"
+msgstr ""
+
+msgid "Select images"
+msgstr ""
+
+msgid "Select music"
+msgstr ""
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Új szülői felügyelet beállítása (CA PIN szükséges)"
+
+msgid "Sent from remote device"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Serial Number / VSC:"
+msgstr ""
+
+msgid "Series directory name"
+msgstr ""
+
+msgid "Series directory name cannot be empty"
+msgstr ""
+
+#, c-format
+msgid "Series directory name must be at least %d characters"
+msgstr ""
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr ""
+
+msgid "Server error"
+msgstr ""
+
+msgid "Server error: forbidden"
+msgstr ""
+
+msgid "Server error: unsupported protocol"
+msgstr ""
+
+msgid "Service Not Found - Please Contact your service representative."
+msgstr ""
+
+msgid "Service unavailable"
+msgstr ""
+
+msgid "Set Auto Relock Time"
+msgstr ""
+
+msgid "Set duration"
+msgstr ""
+
+msgid "Set the preferred gateway"
+msgstr ""
+
+msgid "Setup"
+msgstr "Beállítás"
+
+msgid "Short Term Error"
+msgstr ""
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Rögzítés rövidítésének ideje %s"
+
+msgid "Show selected"
+msgstr ""
+
+msgid "Show similar"
+msgstr "Hasonlók mutatása"
+
+msgid "Show/Game show"
+msgstr "Show/Játékok"
+
+msgid "Si aún estás viendo este canal, por favor presioná OK"
+msgstr ""
+
+msgid "Sign Off"
+msgstr ""
+
+msgid "Signal - OK"
+msgstr "Jel - OK"
+
+msgid "Signal Level"
+msgstr ""
+
+msgid "Signal Level Number"
+msgstr ""
+
+msgid "Signal Quality"
+msgstr "Jelszint"
+
+msgid "Signal Strength"
+msgstr "Jelerősség"
+
+msgid "Signal lost - check cable"
+msgstr "Nincs jel - ellenőrizze a kábelt"
+
+msgid "Slideshow"
+msgstr ""
+
+msgid "SmartCard ID"
+msgstr ""
+
+msgid "SmartCard Status"
+msgstr ""
+
+msgid "SmartCard Subscription Status"
+msgstr ""
+
+msgid "Smartcard"
+msgstr ""
+
+msgid "Smartcard configuration changed - please enter PIN"
+msgstr ""
+
+msgid "Smartcard hardware error"
+msgstr ""
+
+msgid "Smartcard not present"
+msgstr ""
+
+msgid "Smartcard ok"
+msgstr ""
+
+msgid "Smartcard rejected"
+msgstr ""
+
+msgid "Social Media"
+msgstr ""
+
+msgid "Social/Political issues/Economics"
+msgstr "Szociális/Politikai/Gazdasági"
+
+msgid "Software"
+msgstr "Szoftver"
+
+msgid "Software Update"
+msgstr "Szofver frissítés"
+
+msgid "Software Version"
+msgstr "Szoftver verzió"
+
+msgid ""
+"Some services are unavailable due to lack of connectivity. Please check your "
+"network setup."
+msgstr ""
+
+msgid "Sort satellites"
+msgstr ""
+
+msgid "Space Recovery"
+msgstr ""
+
+msgid "Space recovery"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Special"
+msgstr "Speciális"
+
+msgid "Spectral Inversion Mode"
+msgstr ""
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Standard"
+msgstr "Alap"
+
+msgid "Standby Mode"
+msgstr ""
+
+msgid "Standby Settings"
+msgstr ""
+
+msgid "Start"
+msgstr "Indít"
+
+msgid "Start Frequency"
+msgstr "Kezdő frekvencia"
+
+msgid "Start Margin"
+msgstr ""
+
+msgid "Start RCU Pairing"
+msgstr ""
+
+msgid "Start date                           End date"
+msgstr ""
+
+msgid "Start date                End date                   Entitlement"
+msgstr ""
+
+msgid "Start time"
+msgstr "Indítás ideje"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Enter CA PIN to start viewing:"
+msgstr ""
+
+#, c-format
+msgid "Start: %s min, End: %s min"
+msgstr ""
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "Állapot: %u%% letöltve"
+
+msgid "Status: Download scheduled"
+msgstr "Állapot: Időzített letöltés"
+
+msgid "Status: Not available"
+msgstr "Állapot: Nem elérhető"
+
+#, c-format
+msgid "Step %d out of %d"
+msgstr ""
+
+msgid "Stereo"
+msgstr "Sztereo"
+
+msgid "Stop"
+msgstr "Leállít"
+
+msgid "Stop channel recording"
+msgstr "Rögzítés leállítása"
+
+msgid "Stop keyword recording"
+msgstr "Rögzítés leállítása"
+
+msgid "Stop recording"
+msgstr "Rögzítés leállítása"
+
+msgid "Stop recording always"
+msgstr ""
+
+msgid "Stop recording repeatedly"
+msgstr ""
+
+msgid "Stop repeated recording"
+msgstr "Ismételt rögzítés leállítása"
+
+msgid "Stop series recording"
+msgstr ""
+
+msgid "Stop time can not be set before current time"
+msgstr ""
+
+msgid "Stop using disk"
+msgstr ""
+
+msgid "Stop using for PVR"
+msgstr "PVR funkció leállítása"
+
+msgid "Stop using for PVR/TS"
+msgstr ""
+
+msgid "Stop using for Timeshift"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "Strength"
+msgstr "Erősség"
+
+msgid "Stretched"
+msgstr "Nyújtott"
+
+msgid "Subscription Info"
+msgstr ""
+
+msgid "Subscription Status"
+msgstr "Előfizetői Állapot"
+
+msgid "Subscription info"
+msgstr ""
+
+msgid "Subtitle Language"
+msgstr "Felirat nyelve"
+
+msgid "Subtitles encoding"
+msgstr ""
+
+msgid "Subtitles: -"
+msgstr ""
+
+msgid "Successfully paired device with the remote controller."
+msgstr ""
+
+msgid "Such task already exists."
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Sundays"
+msgstr ""
+
+msgid "Swedish"
+msgstr ""
+
+msgid "Switch to channel"
+msgstr "Váltás csatornára"
+
+msgid "Symbol Rate"
+msgstr ""
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr ""
+
+msgid "System Information"
+msgstr "Rendszer információ"
+
+msgid "System Settings"
+msgstr "Rendszer beállítások"
+
+msgid "System Time"
+msgstr ""
+
+msgid "System reboot is required to apply new application layout."
+msgstr ""
+
+#, c-format
+msgid "T: %dh%02d'"
+msgstr ""
+
+msgid "TDT Status"
+msgstr ""
+
+msgid "TSH disallowed"
+msgstr ""
+
+msgid "TSID"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "TV Control"
+msgstr ""
+
+msgid "TV Guide"
+msgstr "TV Információ"
+
+msgid "TV Size"
+msgstr ""
+
+msgid "TV Store"
+msgstr ""
+
+msgid "TV System"
+msgstr "TV norma"
+
+msgid "TV-14"
+msgstr ""
+
+msgid "TV-G"
+msgstr ""
+
+msgid "TV-MA"
+msgstr ""
+
+msgid "TV-PG"
+msgstr ""
+
+msgid "TV-Y"
+msgstr ""
+
+msgid "TV-Y7"
+msgstr ""
+
+msgid "Terrestrial"
+msgstr "Földi"
+
+msgid ""
+"The access was not authorized (e.g. trying to update Cpe with a different "
+"customer id) or the supplied CpeId, CustomerId or ProfileId was incorrect."
+msgstr ""
+
+msgid "The card is not whitelisted"
+msgstr ""
+
+msgid "The custom data exceeds the allowed configured size."
+msgstr ""
+
+msgid "The directory will be deleted."
+msgstr ""
+
+msgid "The limit of simultaneous tasks has been exceeded."
+msgstr ""
+
+msgid "The movie is currently not available."
+msgstr ""
+
+msgid ""
+"The offer You are trying to access is a part of a package.\n"
+"Please contact operator for further instructions."
+msgstr ""
+
+msgid ""
+"The query was not ok, either the resource was not known or the requested "
+"resource id was not found or query parameters are unknown."
+msgstr ""
+
+msgid "The requested resource id was not found."
+msgstr ""
+
+msgid ""
+"There are too many ongoing recordings. Please stop some to watch this "
+"channel again."
+msgstr ""
+"Túl sok egyidejű rögzítés van folyamatban. A kívánt csatorna megtekintéséhez "
+"állítson le egy rögzítést."
+
+msgid ""
+"There is a technical problem with this movie, please contact Customer Care"
+msgstr ""
+
+msgid ""
+"There´s a connectivity problem, please try again, if the problem remains "
+"please call your provider"
+msgstr ""
+
+msgid "This action can not be performed on selected recording."
+msgstr ""
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr ""
+"Ez a művelet a készülék újraindítását eredményezi. Biztosan végrehajtja?"
+
+msgid "This channel is not available for your operator"
+msgstr ""
+
+msgid "This device is used as PVR storage"
+msgstr ""
+
+msgid "This product does not exists."
+msgstr ""
+
+msgid "This product is expiring soon and cannot be ordered."
+msgstr ""
+
+msgid "This product is not valid."
+msgstr ""
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Ez az emlékeztető ütközik az alábbi emlékeztetőkkel:\n"
+
+msgid "This smart card does not have a active subscription."
+msgstr ""
+
+msgid "This smart card is not in white list."
+msgstr ""
+
+msgid "This smart card is not valid."
+msgstr ""
+
+msgid "Thread Count"
+msgstr ""
+
+msgid "Thursdays"
+msgstr ""
+
+msgid "Time Mode"
+msgstr ""
+
+msgid "Time Settings"
+msgstr ""
+
+msgid "Time Zone"
+msgstr "Idözóna"
+
+msgid "Timer"
+msgstr ""
+
+msgid "Title blocked"
+msgstr ""
+
+msgid "Title text template"
+msgstr ""
+
+#, c-format
+msgid "Title: %s"
+msgstr "Cím: %s"
+
+msgid ""
+"To start USB Speed Test Utility press OK.\n"
+"The USB Speed Test Utility will measure performance of your USB drive to "
+"obtain optimal timeshift and recordings parameters.\n"
+"The USB Speed Test Utility will be unavailable until next USB drive format."
+msgstr ""
+
+msgid ""
+"To subscribe to this product (Traxis SVOD), please call Customer Support."
+msgstr ""
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Elérhető Token-ek\n"
+"%s\n"
+"%d token%s\n"
+"Egyenleg: %s %d token\n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "Token állapot"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Tokenek: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Date: %s"
+msgstr ""
+
+msgid "Too many simultaneous recordings."
+msgstr "Túl sok párhuzamos rögzítés."
+
+msgid "Total Memory"
+msgstr ""
+
+#, c-format
+msgid "Track %d"
+msgstr "Sáv %d"
+
+msgid "Trailer"
+msgstr "Előzetes"
+
+msgid "Transponder has incorrect frequency value."
+msgstr ""
+
+msgid "Transponder has incorrect symbol rate value."
+msgstr ""
+
+msgid "Transponder is duplicate (has the same frequency as existing)."
+msgstr ""
+
+msgid "Transponders"
+msgstr ""
+
+msgid "Tuesdays"
+msgstr ""
+
+msgid "Tuned Frequency"
+msgstr ""
+
+msgid "Tuner Type"
+msgstr "Tuner típusa"
+
+msgid "Type"
+msgstr ""
+
+msgid "UDP port behind NAT"
+msgstr ""
+
+msgid "UDP receiving"
+msgstr ""
+
+msgid "USB"
+msgstr ""
+
+msgid "USB Speed Test Utility"
+msgstr ""
+
+msgid ""
+"USB Speed Test failed. Try to reinsert you USB drive and run the test again."
+msgstr ""
+
+msgid "USB Status"
+msgstr ""
+
+msgid "UTF-8"
+msgstr ""
+
+msgid "Unable to change settings while recording is active"
+msgstr "A beállítások megváltozatatása rögzítés alatt nem lehetséges"
+
+msgid "Unable to connect to MW."
+msgstr ""
+
+msgid "Unable to pair device with a new remote controller."
+msgstr ""
+
+msgid "Unable to reach host. Functionality may be limited."
+msgstr ""
+
+msgid "Unable to save. Directory name exists."
+msgstr ""
+
+msgid "Unable to save. Keyword is incorrect."
+msgstr ""
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Mentés nem lehetséges. A kulcsszó túl rövid."
+
+msgid "Unavailable"
+msgstr ""
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr ""
+
+msgid "Unfortunately VoD service is not available."
+msgstr ""
+
+msgid "Unique Id"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+msgid "Unknown Device"
+msgstr ""
+
+msgid "Unknown card state"
+msgstr ""
+
+msgid "Unknown conflict found."
+msgstr ""
+
+msgid "Unknown error"
+msgstr "Ismeretlen hiba"
+
+#, c-format
+msgid "Unknown error code %d"
+msgstr ""
+
+msgid "Unknown error when processing transponder."
+msgstr ""
+
+msgid "Unknown message"
+msgstr ""
+
+msgid "Unknown nPVR error."
+msgstr ""
+
+msgid "Unknown state"
+msgstr ""
+
+msgid "Unlimited"
+msgstr "Korlátlan"
+
+msgid "Unlock"
+msgstr "Felold"
+
+msgid "Unmounting..."
+msgstr "Leválasztás..."
+
+#, c-format
+msgid "Unread messages! (%zu)"
+msgstr ""
+
+msgid "Unregistered card"
+msgstr ""
+
+#, c-format
+msgid "Update Starts In %d Minute"
+msgid_plural "Update Starts In %d Minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Update Starts Soon"
+msgstr ""
+
+msgid "Update VOD Services"
+msgstr ""
+
+msgid "Update now"
+msgstr "Frissítés most"
+
+msgid "Update required"
+msgstr ""
+
+msgid ""
+"Update will take about 10 minutes. During this time screen may blink and you "
+"won't be able to use your STB."
+msgstr ""
+"A frissítés akár 10 percig is eltarthat. Ez idő alatt a képernyő "
+"elsötétülhet  és a STB nem használható."
+
+msgid "Upgrade triggered"
+msgstr ""
+
+msgid "Uptime"
+msgstr ""
+
+msgid "Use Coupon"
+msgstr ""
+
+msgid "Use NIT/SDT"
+msgstr "NIT/SDT használata"
+
+msgid "Use disk"
+msgstr ""
+
+msgid "Use for PVR"
+msgstr "Használatban PVR funkcióra"
+
+msgid "Use for PVR/TS"
+msgstr ""
+
+msgid "Use for Timeshift"
+msgstr ""
+
+msgid "Use numeric keyboard to navigate"
+msgstr ""
+
+msgid "Used for PVR"
+msgstr "Használatban PVR funkcióra"
+
+msgid "Used for PVR and Timeshift"
+msgstr ""
+
+msgid "Used for Timeshift"
+msgstr ""
+
+msgid "User Interface"
+msgstr "Felhasználói felület"
+
+msgid "User Time"
+msgstr ""
+
+msgid "Usted está en modo 'Pausa en vivo':"
+msgstr ""
+
+msgid "V"
+msgstr ""
+
+msgid "VCAS connectivity"
+msgstr ""
+
+msgid "VCHIP"
+msgstr ""
+
+msgid "VCID"
+msgstr ""
+
+msgid "VOD"
+msgstr ""
+
+msgid "VOD Adult PIN"
+msgstr ""
+
+msgid "VOD services not updated"
+msgstr ""
+
+msgid "VOD services updated"
+msgstr ""
+
+msgid "VPN is not setup"
+msgstr ""
+
+msgid "Verifying Flash partitions"
+msgstr ""
+
+msgid "Verifying installed file"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Version Number"
+msgstr ""
+
+#, c-format
+msgid "Version: %s"
+msgstr "Verzió: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Verzió: %s, Hálózat: %s"
+
+msgid "Vertical"
+msgstr "Vertikális"
+
+msgid "Video Codec"
+msgstr ""
+
+msgid "Video PID"
+msgstr ""
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Video Status"
+msgstr ""
+
+msgid "Video Type"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View again"
+msgstr ""
+
+msgid "View from the beginning"
+msgstr ""
+
+msgid "ViewRight DVB"
+msgstr ""
+
+msgid "ViewRight Web Connectivity"
+msgstr ""
+
+msgid "ViewRightIPTV"
+msgstr ""
+
+msgid "Virtual Memory"
+msgstr ""
+
+msgid "Visually Impaired"
+msgstr "Látássérült[x]"
+
+msgid "VoD unavailable"
+msgstr ""
+
+msgid "Voicemail error"
+msgstr ""
+
+msgid "Volver a empezar"
+msgstr ""
+
+msgid "WEB on TV"
+msgstr "Hírböngésző"
+
+msgid "WEP"
+msgstr ""
+
+msgid "WPA/WPA2"
+msgstr ""
+
+msgid "Waiting for channels"
+msgstr "Várakozás a csatornákra"
+
+msgid "Waiting for middleware"
+msgstr ""
+
+msgid "Waiting for nPVR server response..."
+msgstr ""
+
+msgid "Waiting for response"
+msgstr ""
+
+#, c-format
+msgid "Waiting for upgrade, (%zu) seconds left"
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Warning: All current recordings will be stopped!"
+msgstr ""
+
+msgid "Warning: Timeshift will be forsaken"
+msgstr ""
+
+msgid "Watched"
+msgstr ""
+
+msgid "We think you might like..."
+msgstr ""
+
+msgid "Weather"
+msgstr ""
+
+msgid "Web Audio"
+msgstr ""
+
+msgid "Web Services"
+msgstr ""
+
+msgid "WebP"
+msgstr ""
+
+msgid "WebP Image 1"
+msgstr ""
+
+msgid "WebP Image 2"
+msgstr ""
+
+msgid "WebP Image 3"
+msgstr ""
+
+msgid "WebP Image 4"
+msgstr ""
+
+msgid "WebP Image 5"
+msgstr ""
+
+msgid "WebShell"
+msgstr ""
+
+msgid "Wednesdays"
+msgstr ""
+
+msgid "Weekdays"
+msgstr "Hétköznap"
+
+msgid "Weekends"
+msgstr "Hétvége"
+
+msgid "Weekly"
+msgstr "Heti"
+
+msgid "Western European"
+msgstr ""
+
+msgid "What People are Watching"
+msgstr ""
+
+msgid "WiFi Security"
+msgstr ""
+
+msgid "WiFi Session ID"
+msgstr ""
+
+msgid "Wired (DOCSIS)"
+msgstr ""
+
+msgid "Wired (Ethernet)"
+msgstr "Vezetékes"
+
+msgid "Wired (MoCa)"
+msgstr ""
+
+msgid "Wireless (3G)"
+msgstr ""
+
+msgid "Wireless (WiFi)"
+msgstr "Vezetéknélküli"
+
+msgid "Would You like to do it now?"
+msgstr "Végrehajta most?"
+
+msgid "Writing configuration"
+msgstr ""
+
+msgid "Wrong CA PIN."
+msgstr "Hibás CA PIN"
+
+msgid "Wrong CA PIN. Try again."
+msgstr ""
+
+msgid "Wrong Start time and End time. Start time must be other than End time."
+msgstr ""
+
+#, c-format
+msgid "Wrong key for %s"
+msgstr ""
+
+msgid "X"
+msgstr ""
+
+msgid "X: Erotic"
+msgstr "Felnőtt"
+
+msgid "Yes"
+msgstr ""
+
+msgid "You are not an owner of that recording."
+msgstr ""
+
+msgid "You are not entitled to use this folder."
+msgstr ""
+
+msgid "You are not entitled to use this recording."
+msgstr ""
+
+msgid "You are not entitled to view this channel"
+msgstr "Nem jogosult a csatorna megtekintésére"
+
+msgid "You are not entitled to view this content"
+msgstr "Nem jogosult a tartalom megtekintésére."
+
+msgid "You can not remove nor modify default satellite."
+msgstr ""
+
+msgid "You can not use this recording now."
+msgstr ""
+
+msgid "You cannot delete folder with NpvrRecordings."
+msgstr ""
+
+msgid "You do not have enough credits to complete this order."
+msgstr ""
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "Nincs elég hely új rögzítés számára"
+
+msgid ""
+"You don’t have any content in your List yet.\n"
+"Please see what content other users are watching."
+msgstr ""
+
+msgid "You have already ordered this product."
+msgstr ""
+
+msgid "You have too many directories and keyword recordings."
+msgstr ""
+
+msgid "You have too many directories and recordings."
+msgstr ""
+
+msgid "You have too many directories and scheduled recordings."
+msgstr ""
+
+msgid "You have too many directories."
+msgstr "Túl sok létrehozott mappa "
+
+msgid "You have too many favorites lists."
+msgstr "Túl sok kedvencek lista létezik."
+
+msgid "You have too many recordings."
+msgstr "Túl sok rögzítése van"
+
+msgid "You have too many reminders."
+msgstr ""
+
+msgid ""
+"You haven't watched anything yet.\n"
+"Please see what content other users are watching."
+msgstr ""
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr ""
+
+msgid "You will be soon zapped to"
+msgstr ""
+
+msgid "YouTube"
+msgstr ""
+
+msgid "YouTube Qualification Engine"
+msgstr ""
+
+msgid "YouTube Tests"
+msgstr ""
+
+msgid "Your FREE order was completed successfully"
+msgstr ""
+
+#, c-format
+msgid ""
+"Your TV is currently connected to an inactive output on this set-top box. "
+"Please press VOUT button on your remote control to activate this output or "
+"connect your TV to the %s output."
+msgstr ""
+"Az Ön TV-je a set-top-box egyik inaktív kimenetére van csatlakoztatva.Kérem "
+"nyomja meg a VOUT-ot a kimenet aktiválásához vagy csatlakoztassa a TV-t a %s "
+"kimenethez"
+
+msgid ""
+"Your USB drive is capable of simultaneous timeshift and one HD quality "
+"recording."
+msgstr ""
+
+msgid ""
+"Your USB drive is capable of simultaneous timeshift and one SD quality "
+"recording."
+msgstr ""
+
+msgid ""
+"Your USB drive is capable of simultaneous timeshift and three SD quality "
+"recording."
+msgstr ""
+
+msgid ""
+"Your USB drive is capable of simultaneous timeshift and two HD quality "
+"recordings."
+msgstr ""
+
+msgid ""
+"Your USB drive is capable of simultaneous timeshift, one SD quality and one "
+"HD quality recording."
+msgstr ""
+
+msgid ""
+"Your USB drive is capable of simultaneous timeshift, one SD quality and two "
+"HD quality recordings."
+msgstr ""
+
+msgid "Your USB drive is capable of timeshift only."
+msgstr ""
+
+msgid "Your USB drive is not capable neither of timeshift nor recording."
+msgstr ""
+
+msgid "Your drive is too slow to handle this recording."
+msgstr ""
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would "
+"you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would "
+"you like to:\n"
+"\n"
+msgstr[0] ""
+"Az új rögzítése ütközik %i korábban beállított rögzítéssel. Kérjük "
+"válasszon:\n"
+"\n"
+msgstr[1] ""
+"Az új rögzítése ütközik %i korábban beállított rögzítéssel. Kérjük "
+"válasszon:\n"
+"\n"
+
+msgid "Your order was completed successfully"
+msgstr ""
+
+msgid "[CONAX=A: Over 18]"
+msgstr ""
+
+msgid "[CONAX=G: General Audience]"
+msgstr ""
+
+msgid "[CONAX=PG: Parental Guidance]"
+msgstr ""
+
+msgid "[CONAX=X: Erotic]"
+msgstr ""
+
+msgid "[[stopped manually]"
+msgstr ""
+
+msgid "[active]"
+msgstr ""
+
+msgid "[completed]"
+msgstr "[befejezett]"
+
+msgid "[failed]"
+msgstr "[sikertelen]"
+
+msgid "[missed]"
+msgstr "[elmaradt]"
+
+msgid "[removed]"
+msgstr ""
+
+msgid "[scheduled]"
+msgstr "[ütemezett]"
+
+msgid "[stopped – no source]"
+msgstr "[megállt - forrás nem elérhető]"
+
+msgid "[stopped – no space]"
+msgstr "[megállt - nincs szabad hely]"
+
+msgid "[unknown]"
+msgstr ""
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "%d óra van hátra (HD)"
+msgstr[1] "%d óra van hátra (HD)"
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "%d óra van hátra (SD)"
+msgstr[1] "%d óra van hátra (SD)"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "cannot connect to network"
+msgstr ""
+
+msgid "channel"
+msgstr ""
+
+msgid "check"
+msgstr ""
+
+msgid "chkflash"
+msgstr ""
+
+msgid "config"
+msgstr ""
+
+msgid "connected"
+msgstr ""
+
+#, c-format
+msgid "connecting (%d)"
+msgstr ""
+
+msgid "date"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "disconnected"
+msgstr ""
+
+msgid "done"
+msgstr "kész"
+
+msgid "download"
+msgstr "letöltés"
+
+msgid "dut"
+msgstr ""
+
+msgid "element"
+msgstr ""
+
+msgid "endTime"
+msgstr ""
+
+msgid "eng"
+msgstr ""
+
+msgid "enter"
+msgstr ""
+
+msgid "error"
+msgstr ""
+
+msgid "format_long"
+msgstr ""
+"Formázás folyamatban\n"
+"\n"
+"A formázás 5 percig is eltarthat.\n"
+"Kéjük, ne kapcsolja ki a készüléket.\n"
+"\n"
+"A formázás végén a STB\n"
+"újra elérhető lesz."
+
+msgid "formating"
+msgstr "formázás"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "óra"
+msgstr[1] "óra"
+
+msgid "hours"
+msgstr ""
+
+msgid "interrupted"
+msgstr ""
+
+msgid "kernel"
+msgstr ""
+
+msgid "keyword"
+msgstr ""
+
+msgid "less than HD hour left"
+msgstr "kevesebb mint egy óra van hátra (HD)"
+
+msgid "less than hour left"
+msgstr "kevesebb mint egy óra van hátra"
+
+msgid "logo"
+msgstr ""
+
+msgid "more_adult_search_results"
+msgstr ""
+
+msgid "nPVR action failed"
+msgstr ""
+
+msgid "nPVR margins"
+msgstr ""
+
+msgid "nPVR quota used"
+msgstr ""
+
+msgid "nPVR request has been canceled"
+msgstr ""
+
+msgid "nPVR server rejected recording request."
+msgstr ""
+
+msgid "network connected, but no Internet access"
+msgstr ""
+
+msgid "no interface connected"
+msgstr ""
+
+msgid "no quota limit"
+msgstr ""
+
+msgid "off"
+msgstr "ki"
+
+msgid "premiere"
+msgstr ""
+
+msgid "quota used"
+msgstr ""
+
+msgid "recording"
+msgid_plural "recordings"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "repeat"
+msgstr ""
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "találat"
+msgstr[1] "találat"
+
+msgid "rootfs"
+msgstr ""
+
+msgid "save"
+msgstr ""
+
+msgid "spa"
+msgstr ""
+
+msgid "space"
+msgstr ""
+
+msgid "spaceRecovery"
+msgstr ""
+
+msgid "startTime"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "today"
+msgstr "ma"
+
+msgid "tomorrow"
+msgstr "holnap"
+
+msgid "unknown"
+msgstr "ismeretlen"
+
+msgid "unknown connection error"
+msgstr ""
+
+msgid "unknown quota"
+msgstr ""
+
+msgid "unknown test"
+msgstr ""
+
+msgid "unlimited"
+msgstr "korlátlan"
+
+msgid "upgrade_long"
+msgstr ""
+"A frissítés 15 percig is eltarthat.\n"
+"Kérjük, ne kapcsolja ki a STB-t.\n"
+"A frissítés végén a STB automatikusan újraindul."
+
+msgid "usr"
+msgstr ""
+
+msgid "verify"
+msgstr "megerősít"
+
+msgid "writing"
+msgstr "írás"
+
+msgid "¿Hay alguien viendo?"
+msgstr ""
+
+#~ msgid "Add/remove channels"
+#~ msgstr "Csatornák hozzáadása/törlése"
+
+#~ msgid "Automatic update will start in %u second."
+#~ msgid_plural "Automatic update will start in %u seconds."
+#~ msgstr[0] "Automatikus frissítés %u mp. múlva indul."
+#~ msgstr[1] "Automatikus frissítés %u mp. múlva indul."
+
+#~ msgid "Bad URL [%d]"
+#~ msgstr "Hibás URL [%d]"
+
+#~ msgid "Bad server response [%d]"
+#~ msgstr "Szerver válasza nem megfelelő [%d]"
+
+#~ msgid "Block channels"
+#~ msgstr "Csatornák tiltása"
+
+#~ msgid "CET / CEST"
+#~ msgstr "CET / CEST"
+
+#~ msgid "CLT / CLST"
+#~ msgstr "CLT / CLST"
+
+#~ msgid "Cable Modem"
+#~ msgstr "Kábelmodem"
+
+#~ msgid "Changing application mode requires device reboot. Are you sure?"
+#~ msgstr ""
+#~ "A változások életbe lépéséhez a készülék újraindul. Biztosan szeretné "
+#~ "végrehajtani?"
+
+#~ msgid "Configure"
+#~ msgstr "Beállít"
+
+#~ msgid "DVB-C Automatic"
+#~ msgstr "DVB-C Automatikus"
+
+#~ msgid "Decoder error [%d]"
+#~ msgstr "Dekóder hiba [%d]"
+
+#~ msgid "Delete file"
+#~ msgstr "Fájl törlése"
+
+#~ msgid "Display Format (HDMI)"
+#~ msgstr "Megjelenítés formátuma (HDMI)"
+
+#~ msgid "Display Format (SCART)"
+#~ msgstr "Megjelenítés formátuma (SCART)"
+
+#~ msgid "EET / EEST"
+#~ msgstr "EET / EEST"
+
+#~ msgid "Español"
+#~ msgstr "Español"
+
+#~ msgid "File not found [%d]"
+#~ msgstr "Fájl nem található [%d]"
+
+#~ msgid "Format not supported [%d]"
+#~ msgstr "Nem támogatott formátum [%d]"
+
+#~ msgid "Format successful"
+#~ msgstr "Formázás sikeres"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "GMT / BST"
+#~ msgstr "GMT / BST"
+
+#~ msgid "Helsinki, Athens, Kaliningrad"
+#~ msgstr "Helsinki, Athens, Kaliningrad"
+
+#~ msgid "Hungarian"
+#~ msgstr "Magyar"
+
+#~ msgid "Incorrect CA Card"
+#~ msgstr "Nem megfelelő smartkártya"
+
+#~ msgid "Latviešu"
+#~ msgstr "Latviešu"
+
+#~ msgid "London, Belfast"
+#~ msgstr "London, Belfast"
+
+#~ msgid "MSK"
+#~ msgstr "MSK"
+
+#~ msgid "Moscow, Saint Petersburg"
+#~ msgstr "Moscow, Saint Petersburg"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %d)"
+#~ msgstr ""
+#~ "Nincs hozzáférés\n"
+#~ "Nem aktivált (hiba kód %d)"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %i)"
+#~ msgstr ""
+#~ "Nincs hozzáférés\n"
+#~ "Nem aktivált (hiba kód %i)"
+
+#~ msgid "Not enough tokens - please recharge Your card"
+#~ msgstr "Nincs elegendő tokenje - kérem, töltse fel a kártyáját"
+
+#~ msgid "Playback failed with error code %d"
+#~ msgstr "Lejátszás sikertelen. Hibakód [%d]"
+
+#~ msgid "Please enter WEP key"
+#~ msgstr "Kérem, adja meg a WEP jelszót"
+
+#~ msgid "Please enter WPA password"
+#~ msgstr "Kérem, adja meg a WPA jelszót"
+
+#~ msgid "Please enter WPA2 password"
+#~ msgstr "Kérem, adja meg a WPA2 jelszót"
+
+#~ msgid "Press OK to browse or OPT to format for PVR"
+#~ msgstr "Nyomja meg az Ok-t a kereséshez, illetve az OPT-ot a formázáshoz"
+
+#~ msgid "Press OPT to format for PVR"
+#~ msgstr "Formázás a PVR használatához: \"Opt\""
+
+#~ msgid "Protocol not supported [%d]"
+#~ msgstr "Nem támogatott prokoll [%d]"
+
+#~ msgid "Remove dir"
+#~ msgstr "Mappa törlése"
+
+#~ msgid "Rename dir"
+#~ msgstr "Mappa átnevezése"
+
+#~ msgid "Server communication error [%d]"
+#~ msgstr "Szerver kommunikációs hiba [%d]"
+
+#~ msgid "Service Name"
+#~ msgstr "Szolgáltatás neve"
+
+#~ msgid ""
+#~ "Start viewing\n"
+#~ "%s\n"
+#~ "Minutes viewing time left: %i\n"
+#~ "Please enter CA PIN to start viewing:"
+#~ msgstr ""
+#~ "Lejátszás indítása\n"
+#~ "%s\n"
+#~ "Hátralévő percek száma: %i\n"
+#~ "Kérem, adja meg a CA PIN-t a lejátszás indításához:"
+
+#~ msgid "Static"
+#~ msgstr "Statikus"
+
+#~ msgid "Subscription status"
+#~ msgstr "Előfizetői állapot"
+
+#~ msgid "TV Aspect Ratio"
+#~ msgstr "TV kép arány"
+
+#~ msgid ""
+#~ "Tokens: %d\n"
+#~ "Last access: %s"
+#~ msgstr ""
+#~ "Tokenek: %d\n"
+#~ "Utolsó hozzáférés: %s"
+
+#~ msgid "Transaction failed"
+#~ msgstr "Nem sikerült a tranzakció."
+
+#~ msgid "Unread messages!"
+#~ msgstr "Olvasatlan üzenet!"
+
+#~ msgid "Waiting for channels..."
+#~ msgstr "Várakozás a csatornákra..."
+
+#~ msgid "You got mail"
+#~ msgstr "Új üzenete érkezett"
+
+#~ msgid "You have too many keyword recordings."
+#~ msgstr "Túl sok rögzítés"
+
+#~ msgid "You have too many recordings"
+#~ msgstr "Túl sok párhuzamos rögzítés"
+
+#~ msgid "You will be soon zapped to %s."
+#~ msgstr "Hamarosan átkapcsoljuk a %s csatornára."
+
+#~ msgid "[interrupted]"
+#~ msgstr "[megszakított]"
+
+#~ msgid "[recording]"
+#~ msgstr "[rögzítés]"
+
+#~ msgid "[stopped manually]"
+#~ msgstr "[manuálisan megállított]"
+
+#~ msgid "about %d SD hour"
+#~ msgid_plural "about %d SD hours"
+#~ msgstr[0] "kb. %d óra (SD)"
+#~ msgstr[1] "kb. %d óra (SD)"
+
+#~ msgid "about %d hour left"
+#~ msgid_plural "about %d hours left"
+#~ msgstr[0] "kb. %d óra van hátra"
+#~ msgstr[1] "kb. %d óra van hátra"
+
+#~ msgid "automatic"
+#~ msgstr "automatikus"
+
+#~ msgid "manual"
+#~ msgstr "kézi"
+
+#~ msgid "new"
+#~ msgstr "új"
+
+#~ msgid "prev"
+#~ msgstr "előző"

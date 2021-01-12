@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 13:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Can't record a show that's too close to ending."
+msgstr ""
+
+msgid "Cannot schedule keyword recording - keyword recordings limit exceeded."
+msgstr ""
+
+msgid "Cannot schedule recording - series recordings limit exceeded."
+msgstr ""
+
+msgid "Event not found. Data will be updated now. Please try again."
+msgstr ""
+
+msgid "Invalid recording."
+msgstr ""
+
+msgid "Recording can't be scheduled - not enough quota."
+msgstr ""
+
+msgid "Recording can't be scheduled on selected event."
+msgstr ""
+
+msgid "Recording is in the wrong state."
+msgstr ""
+
+msgid "Recording not found."
+msgstr ""
+
+msgid "Recording on that event has been already scheduled."
+msgstr ""
+
+msgid "This action can not be performed on selected recording."
+msgstr ""
+
+msgid "You are not an owner of that recording."
+msgstr ""
+
+msgid "You are not entitled to use this folder."
+msgstr ""
+
+msgid "You are not entitled to use this recording."
+msgstr ""
+
+msgid "You can not use this recording now."
+msgstr ""
+
+msgid "You cannot delete folder with NpvrRecordings."
+msgstr ""

@@ -1,0 +1,7 @@
+digraph XMBCarousel {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    XMBCarousel [URL="\N.html" root=true]
+
+    XMBCarousel -> CubiMW
+}

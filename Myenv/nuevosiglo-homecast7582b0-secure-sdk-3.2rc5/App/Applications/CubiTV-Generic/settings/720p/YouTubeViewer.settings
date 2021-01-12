@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+
+	<widget name="YTMainWindow">
+		<common>
+			<param tag="textColor"><color>ffffffff</color></param>
+			<param tag="inactiveTextColor"><color>5792b7ff</color></param>
+			<param tag="textAlign"><string>left</string></param>
+			<param tag="font">
+				<ref constant="NormalFont"/>
+			</param>
+			<param tag="duration"><double>0.1</double></param>
+		</common>
+
+		<param tag="width"><int>1280</int></param>
+		<param tag="height"><int>720</int></param>
+
+		<widget name="YTViewer">
+			<param tag="width"><int>1280</int></param>
+			<param tag="height"><int>720</int></param>
+			<param tag="bgColor"><color>000001ff</color></param>
+			<param tag="itemsPerPage"><int>20</int></param>
+			<param tag="loadingBig"><string>bg_play_loading.png</string></param>
+
+			<widget name="YTViewer.Title">
+				<param tag="xOffset"><int>50</int></param>
+				<param tag="yOffset"><int>50</int></param>
+				<param tag="width"><int>470</int></param>
+				<param tag="height"><int>32</int></param>
+				<param tag="fontSize"><int>22</int></param>
+				<param tag="textAlign"><string>left</string></param>
+			</widget>
+
+			<widget name="YTViewer.Rating">
+				<param tag="xOffset"><int>270</int></param>
+				<param tag="yOffset"><int>10</int></param>
+			</widget>
+
+			<widget name="YTViewer.LineTop">
+				<param tag="xOffset"><int>50</int></param>
+				<param tag="yOffset"><int>85</int></param>
+				<param tag="bg">
+					<bitmap><path>line_thin.png</path></bitmap>
+				</param>
+			</widget>
+
+			<widget name="YTViewer.LineBottom">
+				<param tag="xOffset"><int>50</int></param>
+				<param tag="yOffset"><int>465</int></param>
+				<param tag="bg">
+					<bitmap><path>line_thin.png</path></bitmap>
+				</param>
+			</widget>
+
+			<widget name="YTViewer.Thumbnail">
+				<param tag="xOffset"><int>85</int></param>
+				<param tag="yOffset"><int>97</int></param>
+				<param tag="width"><int>480</int></param>
+				<param tag="height"><int>362</int></param>
+				<param tag="bgColor"><color>000001ff</color></param>
+			</widget>
+
+			<widget name="YTViewer.Description">
+				<param tag="xOffset"><int>50</int></param>
+				<param tag="yOffset"><int>480</int></param>
+				<param tag="width"><int>540</int></param>
+				<param tag="height"><int>250</int></param>
+				<param tag="fontSize"><int>18</int></param>
+			</widget>
+
+			<widget name="YTViewer.YTLogo">
+				<param tag="xOffset"><int>1100</int></param>
+				<param tag="yOffset"><int>40</int></param>
+				<param tag="bg">
+					<bitmap><path>logo_youtube.png</path></bitmap>
+				</param>
+			</widget>
+
+			<widget name="YTViewer.keywordsInput">
+				<param tag="xOffset"><int>631</int></param>
+				<param tag="yOffset"><int>36</int></param>
+				<param tag="width"><int>419</int></param>
+				<param tag="height"><int>54</int></param>
+				<param tag="horizPadding"><int>56</int></param>
+				<param tag="vertPadding"><int>16</int></param>
+				<param tag="inactiveTextColor"><color>aaaaaaff</color></param>
+				<param tag="fontSize"><int>18</int></param>
+				<param tag="bg">
+					<bitmap><path>bar_search_focus.png</path></bitmap>
+				</param>
+				<param tag="inactiveBg">
+					<bitmap><path>bar_search_nonfocus.png</path></bitmap>
+				</param>
+			</widget>
+
+			<widget name="YTViewer.iconBrowser">
+				<param tag="xOffset"><int>632</int></param>
+				<param tag="yOffset"><int>87</int></param>
+				<param tag="width"><int>628</int></param>
+				<param tag="height"><int>600</int></param>
+				<param tag="iconWidth"><int>130</int></param>
+				<param tag="iconHeight"><int>97</int></param>
+				<param tag="itemWidth"><int>590</int></param>
+				<param tag="itemHeight"><int>120</int></param>
+				<param tag="fontSize"><int>18</int></param>
+				<param tag="focusFrame">
+					<bitmap><path>frame_list1_whole.png</path></bitmap>
+				</param>
+				<param tag="loadingImage">
+					<bitmap><path>bg_play.png</path></bitmap>
+				</param>
+			</widget>
+
+		</widget>
+	</widget>
+</settings>

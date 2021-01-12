@@ -1,0 +1,22 @@
+digraph Menus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Menus [label="Menus (Main menu elements)" root=true]
+    InteractiveServicesMenus [label="Interactive services menus" root=true]
+    CASMenus [label="CAS Menus" root=true]
+    ConfigurationMenus [root=true]
+    ChannelsMenus [root=true]
+    FileBrowserMenus [root=true]
+    RecordingMenus [root=true]
+    MiscMenus [root=true]
+
+    Menus -> InteractiveServicesMenus
+    Menus -> CASMenus
+    Menus -> ConfigurationMenus
+    Menus -> ChannelsMenus
+    Menus -> FileBrowserMenus
+    Menus -> RecordingMenus
+    Menus -> MiscMenus
+    Menus -> menubar
+    Menus -> menuchoice
+}

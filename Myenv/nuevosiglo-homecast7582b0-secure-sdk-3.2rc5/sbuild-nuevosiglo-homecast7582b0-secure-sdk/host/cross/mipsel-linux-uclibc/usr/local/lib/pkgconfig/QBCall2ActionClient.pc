@@ -1,0 +1,6 @@
+Name: QBCall2ActionClient
+Version: 1.0.0
+Requires: QBContentManager QBDataModel3 QBServices SvCore SvDataBucket2 SvFoundation SvXMLRPCClient 
+Description: Call2Action content library access
+Libs: -lQBCall2ActionClient 
+CFlags: 

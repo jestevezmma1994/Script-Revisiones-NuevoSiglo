@@ -1,0 +1,5 @@
+
+set_env_var() {
+    setnv $1 $2
+}
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Dialog.settings"/>
+
+    <widget name="Dialog">
+        <param tag="inputPolicy"><string>strictModal</string></param>
+    </widget>
+
+    <widget name="AuthenticationDialog">
+        <param tag="invalidPin"><string><i18n:gettext>Wrong CA PIN. Try again.</i18n:gettext></string></param>
+        <param tag="wait"><string><i18n:gettext>Please wait.</i18n:gettext></string></param>
+        <param tag="title"><string><i18n:gettext>CA PIN validation</i18n:gettext></string></param>
+        <param tag="mandatory"><bool>false</bool></param>
+    </widget>
+
+</settings>

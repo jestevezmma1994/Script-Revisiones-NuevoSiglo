@@ -1,0 +1,12 @@
+#!/bin/sh
+
+for module in \
+        nf_conntrack_ipv4 \
+        xt_conntrack \
+        xt_tcpudp \
+        xt_addrtype \
+        iptable_filter \
+        iptable_raw \
+    ; do
+        /sbin/modprobe -q -- "${module}"
+    done

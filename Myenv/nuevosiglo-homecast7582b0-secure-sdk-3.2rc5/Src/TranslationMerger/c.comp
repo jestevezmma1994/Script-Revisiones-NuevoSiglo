@@ -1,0 +1,5 @@
+component TranslationMerger
+translate=yes
+depends=all
+
+#X-domains = translations

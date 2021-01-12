@@ -1,0 +1,31 @@
+digraph services {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    services [label="Services" root=true]
+    PVRServices [label="PVR"]
+    CASServices [label="CAS"]
+    CubiMWServices [label="CubiMW"]
+    OutputControl [label="Output Control"]
+    Standby
+    Channels
+    Playback
+    Misc [label="Miscellaneous"]
+    NPVR
+    PVOD
+    Traxis
+    USB
+
+    services -> PVRServices
+    services -> CASServices
+    services -> CubiMWServices
+    services -> OutputControl
+    services -> Monitoring
+    services -> Standby
+    services -> Channels
+    services -> Playback 
+    services -> Misc 
+    services -> NPVR
+    services -> PVOD
+    services -> Traxis
+    services -> USB
+}

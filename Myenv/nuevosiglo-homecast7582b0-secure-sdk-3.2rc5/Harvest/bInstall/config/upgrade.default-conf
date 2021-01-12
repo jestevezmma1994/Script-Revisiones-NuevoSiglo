@@ -1,0 +1,30 @@
+#!/bin/sh
+
+QBECHO=echo
+cd /etc/default-conf/
+
+#convert conf.xml to conf.json 
+if [ -e "/etc/vod/conf.xml" ]; then
+	if [ ! -e "/etc/vod/conf.json" ]; then
+		if [ -e "/usr/local/bin/qbconf_xml2json" ]; then
+			$QBECHO "Converting conf.xml to conf.json"
+			qbconf_xml2json -i /etc/vod/conf.xml /etc/vod/conf.json
+			chown 1000:1000 /etc/vod/conf.json
+		else
+			$QBECHO "qbconf_xml2json does not exist"
+			:
+		fi
+	else
+		$QBECHO "Old conf.json file exist. Nothing should be converted"
+		:
+	fi
+
+fi
+# end of conversion
+
+for i in *; do
+	[ -e /etc/vod/$i ] || cp /etc/default-conf/$i /etc/vod/$i
+done
+
+cd - >/dev/null
+

@@ -1,0 +1,41 @@
+kernel/fs/nls/nls_cp437.ko:
+kernel/fs/nls/nls_cp850.ko:
+kernel/fs/nls/nls_cp852.ko:
+kernel/fs/nls/nls_cp1250.ko:
+kernel/fs/nls/nls_cp1251.ko:
+kernel/fs/nls/nls_iso8859-1.ko:
+kernel/fs/nls/nls_iso8859-2.ko:
+kernel/fs/nls/nls_utf8.ko:
+kernel/fs/ext4/ext4.ko: kernel/fs/jbd2/jbd2.ko
+kernel/fs/jbd2/jbd2.ko:
+kernel/fs/fat/fat.ko:
+kernel/fs/fat/vfat.ko: kernel/fs/fat/fat.ko
+kernel/fs/fat/msdos.ko: kernel/fs/fat/fat.ko
+kernel/drivers/char/hw_random/rng-core.ko:
+kernel/drivers/scsi/scsi_wait_scan.ko:
+kernel/drivers/net/usb/mcs7830.ko: kernel/drivers/net/usb/usbnet.ko kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+kernel/drivers/net/usb/usbnet.ko: kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+kernel/drivers/watchdog/softdog.ko:
+kernel/drivers/usb/core/usbcore.ko: kernel/drivers/usb/usb-common.ko
+kernel/drivers/usb/host/usb-brcm.ko: kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+kernel/drivers/usb/host/ehci-brcm.ko: kernel/drivers/usb/host/usb-brcm.ko kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+kernel/drivers/usb/host/ohci-brcm.ko: kernel/drivers/usb/host/usb-brcm.ko kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+kernel/drivers/usb/storage/usb-storage.ko: kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+kernel/drivers/usb/usb-common.ko:
+kernel/net/netfilter/nf_conntrack.ko:
+kernel/net/netfilter/x_tables.ko:
+kernel/net/netfilter/xt_tcpudp.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_addrtype.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_conntrack.ko: kernel/net/netfilter/nf_conntrack.ko kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_pkttype.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_state.ko: kernel/net/netfilter/nf_conntrack.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/nf_conntrack_ipv4.ko: kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/nf_conntrack.ko
+kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko:
+kernel/net/ipv4/netfilter/ip_tables.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/iptable_filter.ko: kernel/net/ipv4/netfilter/ip_tables.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/iptable_raw.ko: kernel/net/ipv4/netfilter/ip_tables.ko kernel/net/netfilter/x_tables.ko
+netio.ko:
+rt5370sta.ko: kernel/drivers/usb/core/usbcore.ko kernel/drivers/usb/usb-common.ko
+QBConax2_ioctl.ko: QBConax2.ko nexus/nexus.ko
+QBConax2.ko: nexus/nexus.ko
+nexus/nexus.ko:

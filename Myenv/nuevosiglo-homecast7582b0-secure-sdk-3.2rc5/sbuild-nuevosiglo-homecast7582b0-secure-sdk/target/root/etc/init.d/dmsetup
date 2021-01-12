@@ -1,0 +1,21 @@
+#!/bin/sh
+
+logger=echo
+
+mkdir -p /tmp/mapper
+
+if [ ! -d /dev/mapper ]; then
+	$logger "No /dev/mapper/ directory"
+	exit 1
+fi
+
+
+
+if [ ! -e /sys/class/misc/device-mapper/dev ]; then
+	$logger "No sysfs entry for device-mapper dev"
+	exit 1
+fi
+
+number=`cat /sys/class/misc/device-mapper/dev | awk 'BEGIN {FS = ":"} ; {print $1 " " $2}'`
+
+mknod /dev/mapper/control c $number || { $logger "Couldn't create control device node" ; exit 1; }

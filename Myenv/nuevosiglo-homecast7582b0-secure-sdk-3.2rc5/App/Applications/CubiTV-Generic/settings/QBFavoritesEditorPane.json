@@ -1,0 +1,82 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "add new list",
+        "text": "Add new list",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "remove list",
+        "text": "Remove list",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "rename list",
+        "text": "Rename list",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "rearrange list",
+        "text": "Rearrange list",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "add/remove tv channels",
+        "text": "Add/remove TV channels",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "add/remove radio channels",
+        "text": "Add/remove radio channels",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "change list numbering",
+        "text": "Change list numbering",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "remove channel",
+        "text": "Remove channel",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    }
+]

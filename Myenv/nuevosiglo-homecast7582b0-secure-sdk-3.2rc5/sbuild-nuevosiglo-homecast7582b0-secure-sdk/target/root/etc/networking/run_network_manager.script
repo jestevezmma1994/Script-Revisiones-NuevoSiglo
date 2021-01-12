@@ -1,0 +1,18 @@
+#!/bin/sh
+
+QB_NETWORKING_RUNTIME_PATH=/var/run/networking
+QB_NETLINK_DAEMON_LISTENER_IPC_PATH_FILE=$QB_NETWORKING_RUNTIME_PATH/netlink_daemon_listener_ipc_path
+
+echo $$ > $QB_NETWORKING_RUNTIME_PATH/network_manager.pidfile
+
+CRASH_CNT=1
+while true ; do
+    echo $CRASH_CNT > /var/run/networking/crash_counter
+    CRASH_CNT=$((CRASH_CNT+1))
+    QBNetworkManager
+    QB_NETLINK_DAEMON_LISTENER_IPC_PATH=`cat $QB_NETLINK_DAEMON_LISTENER_IPC_PATH_FILE`
+    rm $QB_NETLINK_DAEMON_LISTENER_IPC_PATH
+    rm $QB_NETLINK_DAEMON_LISTENER_IPC_PATH_FILE
+    sleep 1;
+done
+

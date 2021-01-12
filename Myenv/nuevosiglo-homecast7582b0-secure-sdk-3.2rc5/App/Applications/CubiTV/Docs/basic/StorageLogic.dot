@@ -1,0 +1,8 @@
+digraph StorageLogic {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    StorageLogic [root=true]
+    StorageLogic -> HotplugLogic
+    StorageLogic -> MStoreLogic
+    StorageLogic -> PVRLogic
+}

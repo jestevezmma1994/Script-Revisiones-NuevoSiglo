@@ -1,0 +1,7 @@
+digraph channelMetaStorage {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    channelMetaStorage [URL="\N.html" root=true]
+
+    channelMetaStorage -> Channels
+}

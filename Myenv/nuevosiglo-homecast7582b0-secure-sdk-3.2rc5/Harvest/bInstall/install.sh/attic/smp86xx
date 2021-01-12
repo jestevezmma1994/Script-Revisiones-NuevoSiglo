@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DEV="/dev/"`cat /proc/mtd | grep "CS2: Physically mapped flash" | cut -d':' -f1`
+IMG="/firmware/image.bin"
+
+[ ! -c "$DEV" ] && { echo "device file not found"; exit 1;}
+[ ! -e "$IMG" ] && { echo "image file not found"; exit 1;}
+[ -z "`which flashcp`" ] && { echo "flashcp tool not found"; exit 1;}
+
+flashcp -v $IMG $DEV || exit $?
+exit 0

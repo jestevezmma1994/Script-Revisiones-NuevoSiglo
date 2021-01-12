@@ -1,0 +1,6 @@
+Name: QBInput
+Version: 1.0.0
+Requires: QBAppKit QBPlatformHAL-common QBRf4ceHAL SvCore SvFoundation SvQuirks fibers 
+Description: A library for handling input devices
+Libs: -lQBInput -lpthread -lncurses 
+CFlags: 

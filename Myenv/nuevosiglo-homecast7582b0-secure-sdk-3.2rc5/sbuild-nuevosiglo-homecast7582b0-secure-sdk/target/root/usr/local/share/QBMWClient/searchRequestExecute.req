@@ -1,0 +1,79 @@
+{
+    "levelOfDetail": "high",
+    "resolveCount": "0",
+    "resolveLevelOfDetail": "low",
+    "resolveOffset": "0",
+    "useAnchorOperation": "true",
+    "imageRuleset": [
+    {
+        "name": "grid",
+        "rule": {
+            "width": "153",
+            "height": "226",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    },
+    {
+        "name": "cover",
+        "rule": {
+            "width": "194",
+            "height": "280",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    }
+    ],
+    "note": [
+        "collectionForCollectionId"
+    ],
+     "responseTemplate": [
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["collection"],
+        "type": "responseTemplate",
+        "typeName": "collectionList"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["category","description","hdtv","title","tvRating","hasLiveOffers","objectIdAndType","partnerId","partnerCollectionId",
+                      "collectionId","hasThreeDOffers","collectionType","episodic","descriptionLanguage","credit","image", "rating",
+                      "mpaaRating", "starRating", "thumbsRating"],
+        "type": "responseTemplate",
+        "typeName": "collection"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["offerGroup"],
+        "type": "responseTemplate",
+        "typeName": "offerGroupList"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["example"],
+        "type": "responseTemplate",
+        "typeName": "offerGroup"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["image", "collectionId", "offerId", "offerNoteContainer", "imageUrl", "collectionType", "category",
+                      "description", "collectionTitle", "rating", "mpaaRating", "starRating", "duration", "movieYear"],
+        "type": "responseTemplate",
+        "typeName": "offer"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["offer"],
+        "type": "responseTemplate",
+        "typeName": "offerList"
+      }
+    ]
+}

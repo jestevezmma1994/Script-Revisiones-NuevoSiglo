@@ -1,0 +1,11 @@
+digraph PVOD {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    PVOD [label="PVOD" root=true]
+
+    QBPVODStorage
+    hotplugMounts
+
+    PVOD -> QBPVODStorage
+    PVOD -> hotplugMounts
+}

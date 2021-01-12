@@ -1,0 +1,21 @@
+digraph  LocalPopup {
+    node [URL="../\N.html" shape=box]
+    graph [label="QBDialog as local window"]
+    graph [layout=dot ranksep=1]
+
+    newtv [label=<TV Context<br/>Wants to show popup>]
+    newtv -> QBDialog [label=<Calls QBDialogCreate>]
+    QBDialog [label=<QBDialog<br/>Creates a QBDialog and QBLocalWindow>]
+    newtvrun [label=<TV Context>]
+    QBDialog -> newtvrun [label=<QBDialog is returned>]
+    QBDialogRun [label=<QBDialog>]
+    newtvrun -> QBDialogRun [label=<QBDialogRun is called<br/>- 'on end' callbacks are set>]
+    QBDialogRun -> QBLocalWindowManager [label=<QBLocalWindowManager is requested to show a popup<br/>which decides if it should be shown>]
+    popupOnScreen [label=<QBLocalWindowManager>]
+    QBLocalWindowManager -> popupOnScreen [label=<Popup is on screen>]
+    popupBreak [label=<QBDialog>]
+    popupOnScreen -> popupBreak [label=<User finished popup flow, QBDialogBreak is called>]
+    newtvResult [label="TV Context"]
+    popupBreak -> newtvResult [label=<'on end' callback is called and newtv gets the result>]
+}
+

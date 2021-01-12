@@ -1,0 +1,30 @@
+_TOOL_NAME_
+----------------
+This utility manipulates squashfs filesystems.
+To create a filesystem image use:
+
+  _TOOL_NAME_ <fs_dir> <fs_image_file> <max_size>
+  
+where:
+    <fs_dir> - directory which contents will form a filesystem, 
+		will become a root directory
+    <fs_image_file> - filename of the filesystem image
+
+  Example:
+
+    # ./_TOOL_NAME_ rootfs/ rootfs.img
+
+The utility can also be used to decompress an existing filesystem
+image:
+
+  _TOOL_NAME_ -u <fs_image_file> <fs_dir>
+  
+where:
+    <fs_image_file> - filename of the existing filesystem image
+    <fs_dir> - directory where image will be decompressed
+    
+  Example:
+  
+    # ./_TOOL_NAME_ -u ROOTFS.img root_fs/
+    
+

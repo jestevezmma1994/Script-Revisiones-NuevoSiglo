@@ -1,0 +1,6 @@
+Name: QBStaticStorage
+Version: 1.0.0
+Requires: SvCore SvFoundation fibers 
+Description: Cubiware Static Storage library
+Libs: -lQBStaticStorage 
+CFlags: 

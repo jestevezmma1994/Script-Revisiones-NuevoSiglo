@@ -1,0 +1,8 @@
+# id:3:initdefault:
+::sysinit:/etc/rcS 
+::ctrlaltdel:/sbin/reboot -f
+::respawn:/etc/gui_start
+::respawn:/sbin/getty -n -i -l /bin/sh 115200 ttyS0 vt100
+::shutdown:/sbin/reboot -f
+::restart:/sbin/reboot -f
+

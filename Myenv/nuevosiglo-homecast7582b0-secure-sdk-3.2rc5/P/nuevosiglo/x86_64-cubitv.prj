@@ -1,0 +1,25 @@
+base (host=servinfo@devel.cubiware.com:22444) bold-x86_64-cubitv-3.0rc30
+
+setenv Q_RESOURCES_CUBITV_CUSTOMER=nuevosiglo
+setenv Q_RESOURCES_CUBITV_USE_GENERIC=yes
+setenv Q_RESOURCES_CUBITV_SETTINGS=generic,qb,nuevosiglo
+setenv Q_RESOURCES_CUBITV_FORMAT=720p
+
+; Subtitle Manager
+include App/Components/QBSubsManager/c.comp
+include App/Components/QBTextSubsManager/c.comp
+
+include App/Applications/CubiTV/CubiTV.comp
+include App/Applications/CubiTV-Generic/files.comp
+
+include App/Applications/CubiTV-Bold/logic.comp
+include App/Applications/CubiTV-Bold/exec.comp
+
+include App/Applications/CubiTV-NuevoSiglo/exec.comp
+
+; Add images ('.jpg', etc.) to customized compilation
+include Files/Resources/CubiTV/c.comp
+
+include Files/CubiTV/NuevoSiglo/c.comp
+
+;include Harvest/bSpec/generic/bspec.comp

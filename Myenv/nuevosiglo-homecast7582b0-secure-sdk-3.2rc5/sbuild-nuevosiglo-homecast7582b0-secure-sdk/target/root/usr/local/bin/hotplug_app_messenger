@@ -1,0 +1,38 @@
+#!/bin/sh
+# This script is to pass given message, using QBIPC, to all sockets in /var/run/hotplug/app/
+
+log()
+{
+  #echo -e $@ 2>&1
+  #logger "hotplug_app_messenger > $@"
+  #[ 1 -eq 1 ] && echo -e "hotplug_app_messenger > $@" >> /tmp/mymesg
+  return
+}
+
+module=$1
+action=$2
+shift 2;
+
+MSG="#"$module"#"$action
+
+while [ $# -gt 0 ]; do
+  MSG=$MSG"#"$1
+  shift 1;
+done
+
+MSG=$MSG"#"
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib:/usr/lib"
+
+set +e
+
+for sock in /var/run/hotplug/app/*;
+do
+  [ ! -S "$sock" ] && continue;
+  log "trying socket [$sock]";
+  TEXT=`/usr/local/bin/QBIPCSend "$sock" "$MSG" 2>&1`
+  res=$?
+  if [ $res -ne 0 ]; then
+    log "socket [$sock] -> $res [$TEXT]";
+  fi
+done

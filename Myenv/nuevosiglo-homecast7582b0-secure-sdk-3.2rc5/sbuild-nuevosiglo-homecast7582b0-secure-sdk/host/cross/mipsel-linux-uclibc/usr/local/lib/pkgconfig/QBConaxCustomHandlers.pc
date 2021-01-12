@@ -1,0 +1,6 @@
+Name: QBConaxCustomHandlers
+Version: 1.0.0
+Requires: SvCore 
+Description: Custom functions from QBConax - Homecast implementation
+Libs: -lQBConaxCustomHandlers 
+CFlags: 

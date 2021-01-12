@@ -1,0 +1,494 @@
+[
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "summary",
+        "caption": "Summary",
+        "diagnostics": [
+            {
+                "id" : "macAddress",
+                "label" : "MAC Address",
+                "enabled" : true
+            },
+            {
+                "id" : "ipAddress",
+                "label" : "IP Address",
+                "enabled" : true
+            },
+            {
+                "id" : "deviceName",
+                "label" : "Device Name",
+                "enabled" : true
+            },
+            {
+                "id" : "swVersion",
+                "label" : "Firmware Version",
+                "enabled" : true
+            },
+            {
+                "id" : "tunedFrequency",
+                "label" : "Tuned Frequency",
+                "enabled" : true
+            },
+            {
+                "id" : "mpegService",
+                "label" : "MPEG Service Number",
+                "enabled" : true
+            },
+            {
+                "id" : "channelName",
+                "label" : "Channel Name",
+                "enabled" : true
+            },
+            {
+                "id" : "channelNumber",
+                "label" : "Channel Number",
+                "enabled" : true
+            },
+            {
+                "id" : "preBER",
+                "label" : "Pre FEC BER",
+                "enabled" : true
+            },
+            {
+                "id" : "snr",
+                "label" : "SNR",
+                "enabled" : true
+            },
+            {
+                "id" : "chipID",
+                "label" : "Chip ID",
+                "enabled" : true
+            },
+            {
+                "id" : "shortTermError",
+                "label" : "Short Term Error",
+                "enabled" : true
+            },
+            {
+                "id" : "longTermError",
+                "label" : "Long Term Error",
+                "enabled" : true
+            },
+            {
+                "id" : "RFSignalStatus",
+                "label" : "RF Signal Status",
+                "enabled" : true
+            },
+            {
+                "id" : "simID",
+                "label" : "SmartCard ID",
+                "enabled" : true
+            },
+            {
+                "id" : "guideData",
+                "label" : "Guide Data",
+                "enabled" : true
+            },
+            {
+                "id" : "channelMap",
+                "label" : "Channel Map",
+                "enabled" : true
+            },
+            {
+                "id" : "audioStatus",
+                "label" : "Audio Status",
+                "enabled" : true
+            },
+            {
+                "id" : "videoStatus",
+                "label" : "Video Status",
+                "enabled" : true
+            },
+            {
+                "id" : "simCardSubscriptionStatus",
+                "label" : "SmartCard Subscription Status",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "tunerStatistics",
+        "caption": "RF Tuner Statistics",
+        "diagnostics": [
+            {
+                "id" : "tunedFrequency",
+                "label" : "Tuned Frequency",
+                "enabled" : true
+            },
+            {
+                "id" : "channelName",
+                "label" : "Channel Name",
+                "enabled" : true
+            },
+            {
+                "id" : "channelNumber",
+                "label" : "Channel Number",
+                "enabled" : true
+            },
+            {
+                "id" : "carrierLock",
+                "label" : "Carrier Lock",
+                "enabled" : true
+            },
+            {
+                "id" : "modulation",
+                "label" : "Modulation",
+                "enabled" : true
+            },
+            {
+                "id" : "signalLevel",
+                "label" : "Signal Level",
+                "enabled" : true
+            },
+            {
+                "id" : "tsid",
+                "label" : "TSID",
+                "enabled" : true
+            },
+            {
+                "id" : "snr",
+                "label" : "SNR",
+                "enabled" : true
+            },
+            {
+                "id" : "shortTermError",
+                "label" : "Short Term Error",
+                "enabled" : true
+            },
+            {
+                "id" : "longTermError",
+                "label" : "Long Term Error",
+                "enabled" : true
+            },
+            {
+                "id" : "symbolRate",
+                "label" : "Symbol Rate",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "dvbTableStatus",
+        "caption": "DVB Table Status",
+        "diagnostics": [
+            {
+                "id" : "patStatus",
+                "label" : "PAT Status",
+                "enabled" : true
+            },
+            {
+                "id" : "pmtStatus",
+                "label" : "PMT Status",
+                "enabled" : true
+            },
+            {
+                "id" : "catStatus",
+                "label" : "CAT Status",
+                "enabled" : true
+            },
+            {
+                "id" : "nitStatus",
+                "label" : "NIT Status",
+                "enabled" : true
+            },
+            {
+                "id" : "tdtStatus",
+                "label" : "TDT Status",
+                "enabled" : true
+            },
+            {
+                "id" : "sdtStatus",
+                "label" : "SDT Status",
+                "enabled" : true
+            },
+            {
+                "id" : "eitStatus",
+                "label" : "EIT Status",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "settopStatistics",
+        "caption": "STB Status",
+        "diagnostics" : [
+            {
+                "id" : "swVersion",
+                "label" : "Firmware Version",
+                "enabled" : true
+            },
+            {
+                "id" : "simCardStatus",
+                "label" : "SmartCard Status",
+                "enabled" : true
+            },
+            {
+                "id" : "uptime",
+                "label" : "Uptime",
+                "enabled" : true
+            },
+            {
+                "id" : "idleTime",
+                "label" : "Idle Time",
+                "enabled" : true
+            },
+            {
+                "id" : "userTime",
+                "label" : "User Time",
+                "enabled" : true
+            },
+            {
+                "id" : "systemTime",
+                "label" : "System Time",
+                "enabled" : true
+            },
+            {
+                "id" : "threadCount",
+                "label" : "Thread Count",
+                "enabled" : true
+            },
+            {
+                "id" : "virtualMemory",
+                "label" : "Virtual Memory",
+                "enabled" : true
+            },
+            {
+                "id" : "vmRss",
+                "label" : "Number of Pages",
+                "enabled" : true
+            },
+            {
+                "id" : "totalMem",
+                "label" : "Total Memory",
+                "enabled" : true
+            },
+            {
+                "id" : "usedMem",
+                "label" : "Memory Used",
+                "enabled" : true
+            },
+            {
+                "id" : "freeMem",
+                "label" : "Free Memory",
+                "enabled" : true
+            },
+            {
+                "id" : "buffMem",
+                "label" : "Buffers",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "interfaceStatus",
+        "caption": "Interface Status",
+        "diagnostics" : [
+            {
+                "id" : "hdmiStatus",
+                "label" : "HDMI Status",
+                "enabled" : true
+            },
+            {
+                "id" : "ethernetStatus",
+                "label" : "Ethernet Status",
+                "enabled" : true
+            },
+            {
+                "id" : "usbStatus",
+                "label" : "USB Status",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "interactiveServices",
+        "caption": "Interactive Services",
+        "diagnostics" : [
+            {
+                "id" : "ipAddress",
+                "label" : "IP Address",
+                "enabled" : true
+            },
+            {
+                "id" : "mwConnectivity",
+                "label" : "CubiTV Portal Connectivity",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "dvbTablesDetails",
+        "caption": "DVB Tables Details",
+        "diagnostics" : [
+            {
+                "id" : "channelNumber",
+                "label" : "Channel Number",
+                "enabled" : true
+            },
+            {
+                "id" : "channelName",
+                "label" : "Channel Name",
+                "enabled" : true
+            },
+            {
+                "id" : "pid",
+                "label" : "PID",
+                "enabled" : true
+            },
+            {
+                "id" : "sid",
+                "label" : "SID",
+                "enabled" : true
+            },
+            {
+                "id" : "pcr",
+                "label" : "PCR",
+                "enabled" : true
+            },
+            {
+                "id" : "programNumber",
+                "label" : "Program Number",
+                "enabled" : true
+            },
+            {
+                "id" : "versionNumber",
+                "label" : "Version Number",
+                "enabled" : true
+            },
+            {
+                "id" : "pmtAudio",
+                "enabled" : true
+            },
+            {
+                "id" : "pmtVideo",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "channelStatus",
+        "caption": "Channel Status",
+        "diagnostics": [
+            {
+                "id" : "muxID",
+                "label" : "Mux ID",
+                "enabled" : true
+            },
+            {
+                "id" : "networkName",
+                "label" : "Network Name",
+                "enabled" : true
+            },
+            {
+                "id" : "channelName",
+                "label" : "Channel Name",
+                "enabled" : true
+            },
+            {
+                "id" : "tunedFrequency",
+                "label" : "Tuned Frequency",
+                "enabled" : true
+            },
+            {
+                "id" : "plpID",
+                "label" : "PLPID",
+                "enabled" : true
+            },
+            {
+                "id" : "bandwidth",
+                "label" : "Bandwidth [MHz]",
+                "enabled" : true
+            },
+            {
+                "id" : "symbolRate",
+                "label" : "Symbol Rate",
+                "enabled" : true
+            },
+            {
+                "id" : "polarization",
+                "label" : "Polarization",
+                "enabled" : true
+            },
+            {
+                "id" : "modulation",
+                "label" : "Modulation",
+                "enabled" : true
+            },
+            {
+                "id" : "signalLevel",
+                "label" : "Signal Level Number",
+                "enabled" : true
+            },
+            {
+                "id" : "signalLevelBar",
+                "label" : "Signal Level",
+                "enabled" : true
+            },
+            {
+                "id" : "qualityLevel",
+                "label" : "Quality Level Number",
+                "enabled" : true
+            },
+            {
+                "id" : "qualityLevelBar",
+                "label" : "Quality Level",
+                "enabled" : true
+            }
+        ]
+    },
+    {
+        "__jsonclass__": [
+            "QBDiagnosticsWindowConf",
+            []
+        ],
+        "i18n_gettext": [ "caption", "label" ],
+        "id": "extraSwVersion",
+        "caption": "Software Version",
+        "diagnostics" : [
+            {
+                "id" : "extraSwVersion",
+                "label" : "Full Software Version",
+                "enabled" : true
+            }
+        ]
+    }
+]

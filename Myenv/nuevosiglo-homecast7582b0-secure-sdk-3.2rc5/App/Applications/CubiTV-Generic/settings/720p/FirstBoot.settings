@@ -1,0 +1,51 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="CustomerLogo.settings"/>
+    <xi:include href="fonts.settings"/>
+
+    <widget name="FirstBootWindow">
+        <common>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><int>18</int></param>
+
+        </common>
+
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="bg">
+            <bitmap><path>bg_mainbg.png</path></bitmap>
+        </param>
+        <widget name="Greeting">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>100</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>100</int></param>
+            <param tag="multiLine"><bool>true</bool></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><int>30</int></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="text"><string><i18n:gettext>No channels installed.
+Channel scanning is needed.</i18n:gettext></string></param>
+        </widget>
+        <widget name="Proceed">
+            <param tag="xOffset"><int>581</int></param>
+            <param tag="yOffset"><int>250</int></param>
+            <param tag="width"><int>118</int></param>
+            <param tag="height"><int>41</int></param>
+            <param tag="textColor"><color>000000ff</color></param>
+            <param tag="bg">
+                <bitmap><path>button_focus.png</path></bitmap>
+            </param>
+            <param tag="inactiveBg">
+                <bitmap><path>button_nonfocus.png</path></bitmap>
+            </param>
+        </widget>
+    </widget>
+</settings>

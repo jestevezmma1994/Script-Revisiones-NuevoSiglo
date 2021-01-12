@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://cubiware.com/i18n-v1.xsd"
+           xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+           elementFormDefault="qualified">
+
+<!-- string tagged for translation -->
+
+<xs:complexType name="string_t" mixed="true">
+		<xs:sequence>
+				<xs:element name="gettext" minOccurs="0" maxOccurs="1" form="qualified" type="xs:string" />
+		</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

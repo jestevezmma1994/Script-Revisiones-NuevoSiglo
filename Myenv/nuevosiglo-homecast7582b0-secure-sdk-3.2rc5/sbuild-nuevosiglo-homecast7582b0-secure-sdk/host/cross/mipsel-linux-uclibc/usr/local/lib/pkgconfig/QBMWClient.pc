@@ -1,0 +1,6 @@
+Name: QBMWClient
+Version: 1.0.0
+Requires: QBConfig QBContentManager QBDataModel3 QBDataProvider SvCore SvFoundation SvHTTPClient SvJSON 
+Description: Middleware access client
+Libs: -lQBMWClient 
+CFlags: 

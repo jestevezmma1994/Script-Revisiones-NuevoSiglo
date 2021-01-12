@@ -1,0 +1,6 @@
+Name: QBSmartcardTweaks
+Version: 1.0.0
+Requires: QBStringUtils SvFoundation utfconv 
+Description: Additional tweaks for clients, e.g. strings conversion
+Libs: -lQBSmartcardTweaks 
+CFlags: 

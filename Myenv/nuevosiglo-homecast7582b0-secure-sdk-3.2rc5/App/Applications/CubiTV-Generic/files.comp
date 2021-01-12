@@ -1,0 +1,7 @@
+component CubiTV-generic-files
+makefile=Makefile.files
+depends=TranslationMerger SvSettingsManager
+provides=CubiTV-generic-files
+translate=yes
+
+#X-domains = files

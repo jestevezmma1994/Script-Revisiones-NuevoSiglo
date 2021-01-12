@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="MenuItem">
+        <param tag="xOffset"><int>80</int></param>
+        <param tag="yOffset"><int>36</int></param>
+        <param tag="width"><int>650</int></param>
+        <param tag="height"><int>66</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="subcaptionSpacing"><int>6</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="iconHeight"><int>35</int></param>
+        <param tag="iconWidth"><int>35</int></param>
+        <param tag="icon"><bitmap><path>white/iconw_settings.png</path></bitmap></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="focusFadeTime"><double>0.3</double></param>
+        <param tag="showTime"><double>0.3</double></param>
+        <param tag="focusMinWidth"><int>237</int></param>
+        <param tag="tickMarkOn"><bitmap><path>check_on.png</path></bitmap></param>
+        <param tag="tickMarkOff"><bitmap><path>check_off.png</path></bitmap></param>
+        <param tag="tickMarkDisabled"><bitmap><path>check_disabled.png</path></bitmap></param>
+        <param tag="hideInactiveText"><bool>true</bool></param>
+        <param tag="showTextFocused"><bool>false</bool></param>
+        <param tag="hideInactiveFocus"><bool>true</bool></param>
+        <widget name="focus">
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="minWidth"><int>250</int></param>
+            <param tag="maxWidth"><int>600</int></param>
+        </widget>  
+    </widget>
+
+    <widget name="LicenseLabel">
+        <param tag="xOffset"><int>5</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>280</int></param>
+        <param tag="height"><int>700</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="text"><string><i18n:gettext>Content owners use Microsoft PlayReadyTM content access technology to protect their intellectual property, including copyrighted content. This device uses PlayReady technology to access PlayReady-protected content and/or WMDRM protected content. If the device fails to properly enforce restrictions on content usage, content owners may require Microsoft to revoke the device's ability to consume PlayReady-protected content. Revocation should not affect unprotected content or content protected by other content access technologies. Content owners may require you to upgrade PlayReady to access their content. If you decline an upgrade, you will not be able to access content that requires the upgrade.</i18n:gettext></string></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="vertAlign"><string>middle</string></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="multiLine"><bool>true</bool></param>
+    </widget>
+
+</settings>

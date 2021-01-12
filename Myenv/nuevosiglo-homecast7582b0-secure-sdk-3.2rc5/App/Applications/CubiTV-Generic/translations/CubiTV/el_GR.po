@@ -1,0 +1,2216 @@
+#
+# Translators:
+#   <andreas@louca.org>, 2011.
+#   <dkofos@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cablenet-STB\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-20 14:38+0200\n"
+"PO-Revision-Date: 2011-09-27 11:33+0200\n"
+"Last-Translator: dk <d.kofos@cablenetcy.net>\n"
+"Language-Team: none\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid " / minute"
+msgstr "/ Λεπτό"
+
+msgid " H"
+msgstr ""
+
+msgid " V"
+msgstr ""
+
+msgid "%A %x"
+msgstr ""
+
+#, c-format
+msgid "%A %x %X"
+msgstr ""
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr ""
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%d out of %d"
+msgstr ""
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i νέα ή ενημερωμένα) κανάλια ραδιοφώνου"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i νέα ή ενημερωμένα) τηλεοπτικά κανάλια"
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i ραδιοφωνικός σταθμός"
+msgstr[1] "%i ραδιοφωνικοί σταθμοί"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i εγγραφή"
+msgstr[1] " %i εγγραφές"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i υπενθύμιση"
+msgstr[1] "%i υπενθυμίσεις"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i τηλεοπτικό κανάλι"
+msgstr[1] "%i τηλεοπτικά κανάλια"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "Βρέθηκε %s: %i κανάλι"
+msgstr[1] "Βρέθηκαν %s: %i κανάλια"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr ""
+
+#, c-format
+msgid "(%dmin)"
+msgstr ""
+
+msgid "(all)"
+msgstr "(Όλα)"
+
+msgid "(hard of hearing)"
+msgstr ""
+
+msgid "(no label)"
+msgstr ""
+
+msgid "(none)"
+msgstr "(Κανένα)"
+
+msgid "(unsupported)"
+msgstr ""
+
+msgid "(visually impaired)"
+msgstr ""
+
+msgid "0 recordings"
+msgstr "0 εγγραφές"
+
+msgid "0.00-CURRENT"
+msgstr ""
+
+msgid "000 unknown"
+msgstr "000 άγνωστο"
+
+msgid "1 minute"
+msgstr "1 λεπτό"
+
+msgid "10 minutes"
+msgstr "10 λεπτά"
+
+msgid "10 seconds"
+msgstr "10 δευτερόλεπτα"
+
+msgid "100GB"
+msgstr "100GB"
+
+msgid "1080i"
+msgstr ""
+
+msgid "10GB"
+msgstr "10GB"
+
+msgid "15 minutes"
+msgstr "15 λεπτά"
+
+msgid "15 seconds"
+msgstr "15 δευτερόλεπτα"
+
+msgid "16:9"
+msgstr ""
+
+msgid "2 minutes"
+msgstr "2 λεπτά"
+
+msgid "2 seconds"
+msgstr "2 δευτερόλεπτα"
+
+msgid "20 minutes"
+msgstr "20 λεπτά"
+
+msgid "200GB"
+msgstr "200GB"
+
+msgid "20GB"
+msgstr "20GB"
+
+msgid "22 kHz Tone"
+msgstr ""
+
+msgid "30 minutes"
+msgstr "30 λεπτά"
+
+msgid "4:3"
+msgstr ""
+
+msgid "5 minutes"
+msgstr "5 λεπτά"
+
+msgid "5 seconds"
+msgstr "5 δευτερόλεπτα"
+
+msgid "500GB"
+msgstr "500GB"
+
+msgid "50GB"
+msgstr "50GB"
+
+msgid "576p/480p"
+msgstr ""
+
+msgid "720p"
+msgstr ""
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+
+msgid "A problem occurred"
+msgstr ""
+
+msgid "A/V Output Settings"
+msgstr "A/V Ρυθμίσεις Eξόδου"
+
+msgid "A: Over 18"
+msgstr "Α: Άνω των 18"
+
+msgid "About Conax CA"
+msgstr "Σύστημα Conax CA"
+
+msgid "Access denied"
+msgstr ""
+
+msgid "All tuners are in use"
+msgstr "Όλοι οι δέκτες είναι σε χρήση"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr ""
+"Όλοι οι δέκτες είναι σε χρήση. Πιθανότατα υπάρχουν πάρα πολλές εγγραφές σε "
+"εξέλιξη."
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr ""
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε όλα τα κανάλια;"
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Arts/Culture"
+msgstr "Τέχνες/Πολιτισμός"
+
+msgid "Ask again later"
+msgstr "Ζητήστε ξανά αργότερα"
+
+msgid "Audio Track"
+msgstr "Κανάλι ήχου"
+
+msgid "Authentication failed. Try again."
+msgstr "Απέτυχε ο έλεγχος ταυτότητας. Δοκιμάστε ξανά."
+
+msgid "Authentication required"
+msgstr "Απαιτείται έλεγχος ταυτότητας"
+
+msgid "Auto"
+msgstr "Αυτόματο"
+
+msgid "Auto Download"
+msgstr "Αυτόματη Λήψη"
+
+msgid "Auto Install"
+msgstr "Αυτόματη Εγκατάσταση"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Αυτόματη Διαγραφή Παλαιότερων Εγγραφών"
+
+msgid "Automatic"
+msgstr "Αυτόματο"
+
+msgid "Automatic Channel Scanning"
+msgstr "Αυτόματη αναζήτηση καναλιών"
+
+#, c-format
+msgid "Automatic update will start in %u second."
+msgid_plural "Automatic update will start in %u seconds."
+msgstr[0] "Αυτόματη ενημέρωση θα αρχίσει σε %u δευτερόλεπτο."
+msgstr[1] "Αυτόματη ενημέρωση θα αρχίσει σε %u δευτερόλεπτα."
+
+msgid "Available Transponders"
+msgstr ""
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr ""
+
+#, c-format
+msgid "Bad format: %d"
+msgstr ""
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr ""
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Υπόλοιπο: %d μάρκα"
+msgstr[1] "Υπόλοιπο: %d μάρκες"
+
+msgid "Band Select"
+msgstr ""
+
+msgid "Bandwidth"
+msgstr "Εύρος ζώνης"
+
+msgid "Bandwidth [MHz]"
+msgstr "Εύρος Ζώνης [MHz]"
+
+msgid "Begin format now"
+msgstr ""
+
+msgid "Block Channels"
+msgstr ""
+
+msgid "Buy"
+msgstr "Αγορά"
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "C-band"
+msgstr ""
+
+msgid "CA PIN has been changed."
+msgstr "Ο κωδικός CA PIN έχει αλλάξει."
+
+msgid "CA SYS ID"
+msgstr ""
+
+msgid "CET / CEST"
+msgstr ""
+
+msgid "CLT / CLST"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "Cable"
+msgstr ""
+
+msgid "Cable AnnexB"
+msgstr ""
+
+msgid "Cable DVB-C"
+msgstr ""
+
+msgid "Cable modem status"
+msgstr "Κατάσταση cable μόντεμ"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Cancel scheduled recording"
+msgstr "Ακύρωση προγραμματισμένης εγγραφής"
+
+msgid "Card Inserted"
+msgstr "Η Κάρτα τοποθετήθηκε"
+
+msgid "Card Number"
+msgstr "Αριθμός Κάρτας"
+
+msgid "Card Problem - check card"
+msgstr "Πρόβλημα Κάρτας - Ελέξτε τη Κάρτα"
+
+msgid "Card Type"
+msgstr "Τύπος Κάρτας"
+
+msgid "Card is correct"
+msgstr "Η Κάρτα είναι σωστή"
+
+msgid "Change CA PIN failed."
+msgstr "Απέτυχε η αλλαγή κωδικού CA PIN."
+
+msgid "Change CA pin"
+msgstr "Αλλαγή κωδικού CA PIN"
+
+msgid "Change PIN"
+msgstr "Αλλαγή κωδικού PIN"
+
+msgid "Changing pin failed."
+msgstr "Αλλαγή κωδικού PIN απέτυχε."
+
+msgid "Changing skin requires box reboot"
+msgstr ""
+
+msgid "Channel"
+msgstr "Κανάλι"
+
+msgid "Channel Frequency [kHz]"
+msgstr "Συχνότητα Καναλιού [kHz]"
+
+msgid "Channel Installation"
+msgstr "Εγκατάσταση καναλιών"
+
+msgid "Channel Scanning"
+msgstr "Ανίχνευση καναλιών"
+
+msgid "Channel Status"
+msgstr "Κατάσταση καναλιού"
+
+msgid "Channel not available"
+msgstr "Κανάλι μη διαθέσιμο"
+
+msgid "Channel scanning"
+msgstr "Αναζήτηση καναλιού"
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Κανάλι: %s\n"
+"Πρόγραμμα: %s\n"
+"Διάρκεια: %s-%s\n"
+
+msgid "Checking compatibility..."
+msgstr ""
+
+msgid "Children's/Youth Programmes"
+msgstr "Προγράμματα για παιδιά/Νεολαία"
+
+msgid "Chip ID"
+msgstr ""
+
+msgid "Chip id"
+msgstr ""
+
+msgid "Close"
+msgstr "Κλείσιμο"
+
+msgid "Communication error"
+msgstr ""
+
+msgid "Compatible with PVR"
+msgstr "Συμβατό με PVR"
+
+msgid "Completed Recordings"
+msgstr "Ολοκληρωμένες Εγγραφές"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Configuration"
+msgstr "Ρυθμίσεις"
+
+msgid "Configure"
+msgstr "Ρύθμιση"
+
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+msgid "Confirmation Required"
+msgstr ""
+
+msgid "Continue"
+msgstr "Συνέχεια"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr ""
+"Δεν ήταν δυνατή η φόρτωση λίστας καναλιών. Η λειτουργικότητα μπορεί να είναι "
+"περιορισμένη."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr ""
+
+msgid "Create new directory"
+msgstr "Δημιουργία νέου καταλόγου"
+
+msgid "Custom LNB"
+msgstr ""
+
+msgid "DHCP"
+msgstr ""
+
+msgid "DLNA"
+msgstr ""
+
+msgid "DNS1"
+msgstr ""
+
+msgid "DNS2"
+msgstr ""
+
+#, c-format
+msgid "DRM error: %d"
+msgstr ""
+
+msgid "DVB-C Automatic"
+msgstr ""
+
+msgid "DVB-C Manual"
+msgstr ""
+
+msgid "DVB-C NIT Automatic"
+msgstr ""
+
+msgid "DVB-S/S2 Manual"
+msgstr ""
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr ""
+
+msgid "DVB-T Automatic full scan"
+msgstr ""
+
+msgid "DVB-T Manual"
+msgstr ""
+
+msgid "Daily"
+msgstr "Καθημερινά"
+
+msgid "Danish"
+msgstr ""
+
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Default PVR Quota"
+msgstr ""
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Καθυστέρηση έναρξης εγγραφής κατά %s"
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "Delete all"
+msgstr "Διαγραφή όλων"
+
+msgid "Delete all active"
+msgstr "Διαγραφή όλων των ενεργών"
+
+msgid "Delete all failed"
+msgstr "Διαγραφή όλων των αποτυχημένων"
+
+msgid "Delete all scheduled"
+msgstr "Διαγραφή όλων των προγραμματισμένων"
+
+msgid "Delete file"
+msgstr "Διαγραφή αρχείου"
+
+msgid "Device is not responding"
+msgstr ""
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr ""
+
+msgid "DiSEqC Switch"
+msgstr ""
+
+msgid "Digital Audio"
+msgstr "Ψηφιακός ήχος"
+
+msgid "Directory name already exists"
+msgstr ""
+
+msgid "Directory name cannot be empty"
+msgstr ""
+
+msgid "Disable"
+msgstr "Απενεργοποίηση"
+
+msgid "Disabled"
+msgstr "Απενεργοποίηση"
+
+msgid "Display Format (HDMI)"
+msgstr "Φορμά προβολής (HDMI)"
+
+msgid "Display Format (SCART)"
+msgstr "Φορμά προβολής (SCART)"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr ""
+"Μην απενεργοποιήσετε τον αποκωδικοποιητή κατά τη διάρκεια της ενημέρωσης "
+"λογισμικού."
+
+msgid "Done"
+msgstr ""
+
+msgid "Download now"
+msgstr ""
+
+msgid "Drop"
+msgstr "Ακύρωση"
+
+msgid "Drop channels?"
+msgstr "Διαγραφή καναλιών;"
+
+msgid "Dropping..."
+msgstr "Διαγραφή ..."
+
+msgid "EET / EEST"
+msgstr ""
+
+msgid "EPG"
+msgstr "Οδηγός προγραμμάτων"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "ΣΦΑΛΜΑ: H αποστολή ερώτησης προς την Kάρτα απέτυχε"
+
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+msgid "Education/Science/Factual topics"
+msgstr "Εκπαίδευση/Επιστήμη/Πραγματικά θέματα"
+
+msgid "Empty folder"
+msgstr ""
+
+msgid "Enabled"
+msgstr "Ενεργοποίηση"
+
+msgid "End Frequency"
+msgstr "Τελική Συχνότητα"
+
+msgid "End time"
+msgstr "Ώρα λήξης"
+
+msgid "English"
+msgstr "Αγγλικά"
+
+msgid "Entitled"
+msgstr "Αγορασμένο"
+
+msgid "Error"
+msgstr "Σφάλμα"
+
+msgid "Error occured"
+msgstr ""
+
+msgid "Event Status"
+msgstr "Κατάσταση Γεγονότος"
+
+msgid "Extra"
+msgstr "Έξτρα"
+
+msgid "Extras"
+msgstr ""
+
+msgid "FATAL ERROR"
+msgstr ""
+
+msgid "Failed Recordings"
+msgstr "Αποτυχημένες Εγγραφές"
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Η λήψη πληροφοριών από την κάρτα απέτυχε (σφάλμα = 0x%x)"
+
+msgid "Favorites"
+msgstr "Αγαπημένα"
+
+msgid "Favourites Numbering"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+#, c-format
+msgid "File not found: %d"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+msgid "Finnish"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr "Έκδοση Λογισμικού"
+
+msgid "Firmware update"
+msgstr "Ενημέρωση λογισμικού"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr ""
+"Η ενημέρωση λογισμικού είναι απαραίτητη για να λειτουργήσει ο "
+"αποκωδικοποιητής σωστά."
+
+msgid "First Time Installation"
+msgstr "Αρχική εγκατάσταση"
+
+msgid "First time using VoD service?"
+msgstr ""
+
+msgid "For 12+ year old"
+msgstr ""
+
+msgid "For 16+ year old"
+msgstr ""
+
+msgid "For 18+ year old"
+msgstr ""
+
+msgid "For 6+ year old"
+msgstr ""
+
+msgid "Format Hard Disk"
+msgstr "Διαγραφή/Μορφοποίηση δεδομένων Σκληρού Δίσκου"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr ""
+
+msgid "Format successful"
+msgstr "Επιτυχής διαγραφή/μορφοποίηση δεδομένων"
+
+msgid ""
+"Formatting this disk will permanently erase all data on it. Do you want to "
+"continue?"
+msgstr ""
+
+msgid "Formatting..."
+msgstr "Διαγραφή/Μορφοποίηση δίσκου ..."
+
+msgid "Frequency"
+msgstr ""
+
+msgid "Frequency Range"
+msgstr ""
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Συχνότητα: %d.%02d MHz%s %s %s"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Ρολόι μπροστινής οθόνης (Σε κατάσταση αναμονής)"
+
+msgid "Fullscreen"
+msgstr "Πλήρης οθόνη"
+
+msgid "G: General Audience"
+msgstr "G: Γενικό Ακροατήριο"
+
+msgid "GMT"
+msgstr ""
+
+msgid "GMT / BST"
+msgstr ""
+
+msgid "Gateway"
+msgstr "Πύλη"
+
+msgid "Go!"
+msgstr "Εκκίνηση!"
+
+msgid "Greek"
+msgstr "ελληνικά"
+
+msgid "Group Number"
+msgstr "Αριθμός ομάδας"
+
+msgid "Guide"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "Ρυθμίσεις HDMI"
+
+msgid "HFC MAC ID"
+msgstr ""
+
+msgid "Hard of Hearing"
+msgstr "Βαρηκόων"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Υπότιτλοι Βαρηκόων"
+
+msgid "Helsinki, Athens, Kaliningrad"
+msgstr ""
+
+msgid "Horizontal"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "IP Network"
+msgstr "IP Δίκτυο"
+
+msgid ""
+"In order to record selected program you need to stop one of the following "
+"recordings/schedules"
+msgstr ""
+"Για να εγγραφεί το επιλεγμένο πρόγραμμα, θα πρέπει να σταματήσετε μία από "
+"τις παρακάτω, ολοκληρωμένες ή προγραμματισμένες, εγγραφές"
+
+msgid "Incorrect CA Card"
+msgstr "Λανθασμένη Κάρτα CA"
+
+msgid "Incorrect Card"
+msgstr "Λανθασμένη Κάρτα"
+
+msgid "Incorrect Conax Card"
+msgstr "Λανθασμένη κάρτα Conax"
+
+msgid "Incorrect old PIN."
+msgstr "Λανθασμένος παλιός κωδικός PIN."
+
+msgid "Information"
+msgstr ""
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Εγκατάσταση\n"
+"\n"
+"Για να εκτελέσετε αυτόματη αναζήτηση καναλιών, πιέστε OK."
+
+msgid "Install now"
+msgstr ""
+
+msgid "Instant Timeshift"
+msgstr "Άμεσo Timeshift"
+
+msgid "Interface Version"
+msgstr "Έκδοση Διεπιφάνειας"
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Keyword"
+msgstr "Λέξη-κλειδί"
+
+msgid "Ku-band"
+msgstr ""
+
+msgid "Ku-band BSS"
+msgstr ""
+
+msgid "Ku-band FSS"
+msgstr ""
+
+msgid "Ku-band Universal"
+msgstr ""
+
+msgid "LNB Setup"
+msgstr ""
+
+msgid "LNB Type"
+msgstr ""
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "Languages"
+msgstr "Γλώσσες"
+
+msgid "Latvian"
+msgstr ""
+
+msgid "Leisure hobbies"
+msgstr "Χόμπι"
+
+msgid "Letterbox"
+msgstr ""
+
+msgid "List name already exists"
+msgstr " Yπάρχει ήδη λίστα με το ίδιο όνομα"
+
+msgid "List name cannot be empty"
+msgstr "Το όνομα της λίστας δεν μπορεί να είναι κενό"
+
+#, c-format
+msgid "List no. %u"
+msgstr "Λίστα αρ. %u"
+
+msgid "Loading..."
+msgstr "Φόρτωση ..."
+
+msgid "Local Oscillator Frequency"
+msgstr ""
+
+msgid "Lock"
+msgstr "Κλείδωμα"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Κατάσταση σήματος - ΑΠΟΥΣΙΑ ΣΗΜΑΤΟΣ"
+
+msgid "Lock status - OK"
+msgstr "Κατάσταση σήματος - OK"
+
+msgid "Login"
+msgstr ""
+
+msgid "London, Belfast"
+msgstr ""
+
+msgid "Lost tuner access"
+msgstr ""
+
+msgid "MAC address"
+msgstr "Διεύθυνση MAC"
+
+msgid "MSK"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Manual Channel Scanning"
+msgstr "Χειροκίνητη αναζήτηση καναλιών"
+
+msgid "Manual Configuration"
+msgstr ""
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Γονικό Κλείδωμα\n"
+"\n"
+"Επίπεδο προγράμματος:%s\n"
+"Επίπεδο κάρτας:%s\n"
+"Εισάγετε τον κωδικό CA PIN για ξεκλείδωμα"
+
+msgid "Maturity Rating"
+msgstr "Ρύθμιση επιπέδου πρόσβασης"
+
+msgid "Menu Language"
+msgstr "Γλώσσα Μενού"
+
+msgid "Menu Transparency"
+msgstr ""
+
+msgid "Message"
+msgstr "Μήνυμα"
+
+msgid "Message - NEW!"
+msgstr "Μήνυμα - ΝΕΟ!"
+
+msgid "Messages"
+msgstr "Μηνύματα"
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr "Διαμόρφωση"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Διαμόρφωση: %s"
+
+msgid "More info"
+msgstr "Περισσότερες πληροφορίες"
+
+msgid "Moscow, Saint Petersburg"
+msgstr ""
+
+msgid "Mounting..."
+msgstr "Τοποθέτηση ..."
+
+msgid "Move"
+msgstr "Μεταφορά"
+
+msgid "Movie/Drama"
+msgstr "Ταινία/Δράμα"
+
+msgid "Multichannel"
+msgstr "Πολυκάναλος"
+
+msgid "Music/Ballet/Dance"
+msgstr "Μουσική/Μπαλέτο/Χορός"
+
+msgid "My Rentals"
+msgstr ""
+
+msgid "N/A"
+msgstr "Μη διαθέσιμο"
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "ΑΠΟΥΣΙΑ ΣΗΜΑΤΟΣ"
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Netmask"
+msgstr ""
+
+msgid "Network Medium"
+msgstr ""
+
+msgid "Network Name"
+msgstr "Όνομα δικτύου"
+
+msgid "Network Selection"
+msgstr ""
+
+msgid "Network Settings"
+msgstr "Ρυθμίσεις Δικτύου"
+
+msgid "Network Type"
+msgstr ""
+
+msgid "Network mask"
+msgstr "Μάσκα Δικτύου"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New CA PIN field is not complete"
+msgstr ""
+
+msgid "New PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New PIN field is not complete."
+msgstr ""
+
+msgid "New PIN:"
+msgstr "Νέος κωδικός PIN:"
+
+msgid "New application layout requires box reboot."
+msgstr ""
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Νέα έκδοση λογισμικού %s από δίκτυο %s είναι διαθέσιμη."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Νέα έκδοση λογισμικού %s είναι διαθέσιμη."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Νέα έκδοση λογισμικού: %s"
+
+msgid "New pins don't match."
+msgstr "Οι νέοι κωδικοί PIN δεν ταιριάζουν."
+
+msgid ""
+"New recording cannot be scheduled due to many conflicts with previously "
+"scheduled recordings"
+msgstr ""
+"Η νέα εγγραφή δεν μπορεί να προγραμματιστεί, λόγω αντικρουόμενων εντολών από "
+"προηγούμενες προγραμματισμένες εγγραφές."
+
+msgid "News/Cultural affairs"
+msgstr "Ειδήσεις/Πολιτιστικά"
+
+msgid "No Access (error code 1)"
+msgstr ""
+
+msgid "No Access (error code 10)"
+msgstr ""
+
+msgid "No Access (error code 11)"
+msgstr ""
+
+msgid "No Access (error code 12)"
+msgstr ""
+
+msgid "No Access (error code 2)"
+msgstr ""
+
+msgid "No Access (error code 3)"
+msgstr ""
+
+msgid "No Access (error code 4)"
+msgstr ""
+
+msgid "No Access (error code 5)"
+msgstr ""
+
+msgid "No Access (error code 6)"
+msgstr ""
+
+msgid "No Access (error code 7)"
+msgstr ""
+
+msgid "No Access (error code 8)"
+msgstr ""
+
+msgid "No Access (error code 9)"
+msgstr ""
+
+msgid "No Card Inserted"
+msgstr "Δεν έχει τοποθετηθεί η Κάρτα"
+
+msgid "No DiSEqC"
+msgstr ""
+
+msgid "No access"
+msgstr "Μη προσβάσιμο"
+
+#, c-format
+msgid "No access (error code %i)"
+msgstr ""
+
+msgid "No access - geographical blackout"
+msgstr "Μη προσβάσιμο - γεωγραφικό μπλακ άουτ"
+
+msgid "No access - network block"
+msgstr "Μη προσβάσιμο - πρόβλημα δικτύου "
+
+msgid "No channel"
+msgstr "Κανένα κανάλι"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Δεν αποθηκεύτηκε κανένα κανάλι.\n"
+"Είναι απαραίτητη η αναζήτηση καναλιών."
+
+msgid "No credits"
+msgstr "Δεν υπάρχει πίστωση"
+
+msgid "No debits"
+msgstr "Δεν υπάρχουν χρεώσεις"
+
+msgid "No entries"
+msgstr ""
+
+msgid "No events"
+msgstr "Δεν υπάρχουν γεγονότα"
+
+msgid "No items"
+msgstr ""
+
+msgid "No list"
+msgstr "Καμία λίστα"
+
+msgid "No messages"
+msgstr "Δεν υπάρχουν μηνύματα"
+
+msgid "No purses"
+msgstr "Δεν υπάρχουν αγορές"
+
+msgid "No results"
+msgstr "Δεν υπάρχουν αποτελέσματα"
+
+msgid "No subscriptions"
+msgstr "Δεν υπάρχουν συνδρομές"
+
+msgid "No title"
+msgstr ""
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr ""
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr ""
+
+msgid "Normal"
+msgstr "Κανονικό"
+
+msgid "Norwegian"
+msgstr ""
+
+msgid "Not Entitled"
+msgstr ""
+
+msgid "Not enough tokens - please recharge Your card"
+msgstr ""
+"Δεν υπάρχουν αρκετές μάρκες - παρακαλώ όπως ανανεώσετε το υπόλοιπο της "
+"κάρτας σας"
+
+msgid "Not entitled"
+msgstr ""
+
+msgid "Number of Sessions"
+msgstr "Αριθμός συνεδριών"
+
+msgid "OK"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr "Διάρκεια προβολής πλαισίου OSD/Banner"
+
+msgid "Off"
+msgstr "Απενεργοποίηση"
+
+msgid "Ok"
+msgstr ""
+
+msgid "Old CA PIN field is not complete"
+msgstr ""
+
+msgid "Old PIN field is not complete."
+msgstr ""
+
+msgid "Old PIN:"
+msgstr "Παλιός κωδικός PIN:"
+
+msgid "Old pin is invalid."
+msgstr "Ο παλιός κωδικός PIN δεν είναι έγκυρος."
+
+msgid "On"
+msgstr ""
+
+msgid "Ongoing Recordings"
+msgstr "Εγγραφές σε εξέλιξη"
+
+msgid "Original Format"
+msgstr "Αρχικό φορμά εικόνας"
+
+msgid "Override"
+msgstr "Αντικατάσταση"
+
+msgid "PAL"
+msgstr ""
+
+msgid "PG: Parental Guidance"
+msgstr "PG: Γονική Συναίνεση"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "PIN change"
+msgstr "Αλλαγή κωδικού PIN"
+
+msgid "PIN confirmation does not match."
+msgstr "Η επιβεβαίωση κωδικού PIN δεν ταιριάζει."
+
+msgid "PIN:"
+msgstr "Kωδικός PIN:"
+
+msgid "PLPID"
+msgstr ""
+
+msgid "PVR"
+msgstr ""
+
+msgid "PVR End Margin"
+msgstr "Περιθώριο Λήξης Εγγραφής"
+
+msgid "PVR Start Margin"
+msgstr "Περιθώριο Έναρξης Εγγραφής "
+
+msgid "Parental control"
+msgstr "Γονικός έλεγχος"
+
+msgid "Paris, Berlin, Warsaw, Rome"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Pin change successful."
+msgstr "Επιτυχής αλλαγή κωδικού PIN."
+
+msgid "Play"
+msgstr "Αναπαραγωγή"
+
+msgid "Play Trailer"
+msgstr ""
+
+msgid "Play from the beginning"
+msgstr "Αναπαραγωγή από την αρχή"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr ""
+
+msgid "Playlist error"
+msgstr ""
+
+msgid "Please Wait"
+msgstr "Παρακαλώ Περιμένετε"
+
+msgid "Please confirm new CA PIN:"
+msgstr "Παρακαλώ επιβεβαιώστε το νέο κωδικό CA PIN:"
+
+msgid "Please enter CA PIN"
+msgstr "Παρακαλώ εισάγετε τον κωδικό  CA PIN"
+
+msgid "Please enter CA PIN:"
+msgstr "Παρακαλώ εισάγετε τον κωδικό CA PIN:"
+
+msgid "Please enter Conax PIN"
+msgstr ""
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter Middleware PIN"
+msgstr ""
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter WEP key"
+msgstr "Παρακαλώ εισάγετε το κλειδί WEP"
+
+msgid "Please enter WPA password"
+msgstr "Παρακαλώ εισάγετε τον κωδικό πρόσβασης WPA"
+
+msgid "Please enter WPA2 password"
+msgstr "Παρακαλώ εισάγετε τον κωδικό πρόσβασης WPA2"
+
+msgid "Please enter new CA PIN:"
+msgstr "Παρακαλώ εισάγετε το νέο κωδικό CA PIN:"
+
+msgid "Please enter parental control PIN"
+msgstr "Παρακαλώ εισάγετε τον κωδικό PIN γονικού ελέγχου"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr ""
+"Παρακαλώ εισάγετε τον κωδικό PIN γονικού ελέγχου για να αφαιρέσετε όλες τις "
+"εγγραφές"
+
+msgid "Please wait"
+msgstr "Παρακαλώ περιμένετε"
+
+msgid "Please wait, loading…"
+msgstr "Παρακαλώ περιμένετε, φόρτωση ..."
+
+msgid "Please wait."
+msgstr "Παρακαλώ περιμένετε."
+
+msgid "Please wait..."
+msgstr "Παρακαλώ περιμένετε ..."
+
+msgid "Polarization"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Preferred Audio Track"
+msgstr "Προτεινόμενo κανάλι ήχου"
+
+msgid "Press OK to browse"
+msgstr ""
+
+msgid "Press OK to browse or OPT to format for PVR"
+msgstr ""
+
+msgid "Press OPT to format for PVR"
+msgstr ""
+
+msgid "Press Opt for more options"
+msgstr ""
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Προηγούμενη έκδοση λογισμικού: %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr ""
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Τιμή: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Γλώσσα Ήχου 1"
+
+msgid "Primary Subtitle Language"
+msgstr "Γλώσσα υποτίτλων 1"
+
+msgid "Proceed"
+msgstr "Προχωρήστε"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr ""
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Αγορές: %s"
+
+msgid "Quality"
+msgstr "Ποιότητα"
+
+msgid "Quota"
+msgstr "Ποσόστωση"
+
+msgid "RGB"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "Record"
+msgstr "Εγγραφή"
+
+msgid "Record always"
+msgstr "Συνεχής εγγραφή "
+
+msgid "Record repeatedly"
+msgstr "Επανειλημμένη εγγραφή "
+
+msgid "Remind me"
+msgstr "Υπενθύμιση"
+
+msgid "Reminder"
+msgstr "Υπενθύμιση"
+
+msgid "Reminders"
+msgstr "Υπενθυμίσεις"
+
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+msgid "Remove dir"
+msgstr "Κατάργηση καταλόγου"
+
+msgid "Remove reminder"
+msgstr "Κατάργηση υπενθύμισης"
+
+msgid "Rename dir"
+msgstr "Μετονομασία καταλόγου"
+
+msgid "Rent"
+msgstr "Ενοικίαση"
+
+msgid "Rental period expired"
+msgstr ""
+
+msgid "Rental period for this content has expired."
+msgstr ""
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Περίοδος ενοικίασης: %i %s"
+
+msgid "Repeat"
+msgstr "Επανάληψη"
+
+msgid "Repeat new PIN:"
+msgstr "Επαναλάβετε το νέο κωδικό PIN:"
+
+msgid "Requested EMM but not EMM was provided"
+msgstr ""
+
+msgid "Resolve conflicts"
+msgstr "Επίλυση συγκρούσεων"
+
+msgid "Restart Device"
+msgstr "Επανεκκίνηση Συσκευής"
+
+msgid "Restore Factory Defaults"
+msgstr "Επαναφορά Εργοστασιακών Ρυθμίσεων"
+
+msgid "Results - Failure"
+msgstr "Αποτελέσματα - Αποτυχή"
+
+msgid "Results - Success"
+msgstr "Αποτελέσματα - Επιτυχή"
+
+msgid "Retrieving channel list"
+msgstr "Ανάκτηση λίστας καναλιών"
+
+msgid "Reykjavík"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "S/PDIF A/V Sync"
+msgstr "Συγχρονισμός A/V S/PDIF"
+
+msgid "SCART Signal Type"
+msgstr "Τύπος σήματος SCART"
+
+msgid "Santiago"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Satellite %s is not setup yet"
+msgstr ""
+
+msgid "Satellite Info"
+msgstr ""
+
+msgid "Satellite Name"
+msgstr ""
+
+msgid "Satellite Name:"
+msgstr ""
+
+msgid "Satellite Setup"
+msgstr ""
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Saving..."
+msgstr "Αποθήκευση ..."
+
+msgid "Scan Type"
+msgstr ""
+
+msgid "Scanning Standard"
+msgstr ""
+
+msgid "Scanning channels"
+msgstr "Αναζήτηση καναλιών"
+
+msgid "Schedule keyword recording"
+msgstr "Προγραμματισμός εγγραφής με λέξη-κλειδί"
+
+msgid "Schedule manual recording"
+msgstr "Πρoγραμματισμός χειροκίνητης εγγραφής"
+
+msgid "Scheduled Recordings"
+msgstr ""
+
+msgid "Screensaver Timeout"
+msgstr "Προστασία Οθόνης"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "Search in progress..."
+msgstr ""
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Searching for channels"
+msgstr "Αναζήτηση καναλιών"
+
+msgid "Searching..."
+msgstr "Αναζήτηση ..."
+
+msgid "Secondary Audio Language"
+msgstr "Γλώσσα Ήχου 2"
+
+msgid "Secondary Subtitle Language"
+msgstr "Γλώσσα υποτίτλων 2"
+
+msgid "See all from"
+msgstr ""
+
+msgid "Select OK to remove all data from your disk."
+msgstr ""
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Επιλογή καθυστέρησης ήχου στην έξοδο %s"
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr ""
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr ""
+
+msgid "Service Name"
+msgstr "Όνομα Υπηρεσίας"
+
+msgid "Setup"
+msgstr ""
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Περικοπή εγγραφής κατά %s"
+
+msgid "Show similar"
+msgstr "Εμφάνιση παρόμοιων"
+
+msgid "Show/Game show"
+msgstr "Σόου/Τηλεπαιχνίδι"
+
+msgid "Sign Off"
+msgstr ""
+
+msgid "Signal - OK"
+msgstr "Σήμα - OK"
+
+msgid "Signal Quality"
+msgstr "Ποιότητα Σήματος"
+
+msgid "Signal Strength"
+msgstr "Ισχύς σήματος"
+
+msgid "Signal lost - check cable"
+msgstr "Απουσία σήματος - Ελέξτε τη καλωδιακή σύνδεση"
+
+msgid "Social Media"
+msgstr ""
+
+msgid "Social/Political issues/Economics"
+msgstr "Κοινωνικά/Πολιτικά θέματα/Οικονομικά"
+
+msgid "Software"
+msgstr "Λογισμικό"
+
+msgid "Software Update"
+msgstr "Αναβάθμιση Λογισμικού"
+
+msgid "Software Version"
+msgstr "Έκδοση Λογισμικού"
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Special"
+msgstr "Ειδικά"
+
+msgid "Sports"
+msgstr "Αθλητισμός"
+
+msgid "Standard"
+msgstr ""
+
+msgid "Start"
+msgstr "Εκκίνηση"
+
+msgid "Start Frequency"
+msgstr "Αρχική Συχνότητα"
+
+msgid "Start date                End date"
+msgstr ""
+
+msgid "Start date      End date"
+msgstr ""
+
+msgid "Start time"
+msgstr "Ώρα έναρξης"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Please enter CA PIN to start viewing:"
+msgstr ""
+"Ξεκινήστε την προβολή\n"
+"%s\n"
+"Υπολειπόμενος χρόνος θέασης: %i\n"
+"Παρακαλώ εισάγετε τον κωδικό  CA PIN για να ξεκινήσει η προβολή:"
+
+msgid "Static"
+msgstr "Στατική"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr ""
+
+msgid "Status: Download scheduled"
+msgstr ""
+
+msgid "Status: Not available"
+msgstr "Κατάσταση: Μη διαθέσιμο"
+
+msgid "Stereo"
+msgstr "Στέρεο"
+
+msgid "Stop"
+msgstr "Διακοπή"
+
+msgid "Stop channel recording"
+msgstr ""
+
+msgid "Stop keyword recording"
+msgstr "Διακοπή εγγραφής με λέξη-κλειδί"
+
+msgid "Stop recording"
+msgstr "Διακοπή εγγραφής"
+
+msgid "Stop repeated recording"
+msgstr "Διακοπή επαναλαμβανόμενης εγγραφής"
+
+msgid "Stop using for PVR"
+msgstr "Διακοπή χρήσης για PVR"
+
+msgid "Strength"
+msgstr "Ισχύς"
+
+msgid "Stretched"
+msgstr ""
+
+msgid "Subscription Status"
+msgstr ""
+
+msgid "Subtitle Language"
+msgstr "Γλώσσα Υποτίτλων"
+
+msgid "Swedish"
+msgstr ""
+
+msgid "Switch to channel"
+msgstr "Αλλαγή στο κανάλι"
+
+msgid "Symbol Rate"
+msgstr "Ρυθμός Συμβόλων"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Ρυθμός συμβόλων: %d"
+
+msgid "System Information"
+msgstr "Πληροφορίες Συστήματος"
+
+msgid "System Settings"
+msgstr "Ρυθμίσεις Συστήματος"
+
+msgid "TV"
+msgstr ""
+
+msgid "TV Aspect Ratio"
+msgstr "Αναλογία οθόνης"
+
+msgid "TV Guide"
+msgstr "Οδηγός Προγραμμάτων"
+
+msgid "TV System"
+msgstr ""
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid ""
+"There are too many ongoing recordings. Please stop some to watch this "
+"channel again."
+msgstr ""
+"Υπάρχουν πάρα πολλές εγγραφές σε εξέλιξη. Παρακαλώ διακόψτε κάποιες για να "
+"δείτε αυτό το κανάλι και πάλι."
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr ""
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Η υπενθύμιση αυτή θα αντικαταστήσει τις ακόλουθες υπενθυμίσεις:\\n\n"
+
+msgid "Time Zone"
+msgstr ""
+
+#, c-format
+msgid "Title: %s"
+msgstr "Τίτλος: %s"
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Πρόσβαση στις μάρκες\n"
+"%s\n"
+"%d μάρκες%s\n"
+"Λογαριασμός-Υπόλοιπο: %s %d μάρκες\n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "Κατάσταση Μαρκών"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Μάρκες: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Last access: %s"
+msgstr ""
+"Μάρκες: %d\n"
+"Τελευταία πρόσβαση: %s"
+
+msgid "Too many simultaneous recordings."
+msgstr ""
+
+#, c-format
+msgid "Track %d"
+msgstr ""
+
+msgid "Trailer"
+msgstr "Τρέιλερ"
+
+msgid "Tuner Type"
+msgstr ""
+
+msgid "Tuner is not available"
+msgstr ""
+
+msgid "USB"
+msgstr ""
+
+msgid "Unable to change settings while recording is active"
+msgstr ""
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Δεν είναι δυνατή η αποθήκευση. Η Λέξη-κλειδί είναι πολύ σύντομη."
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr ""
+
+msgid "Unfortunately VoD service is not available."
+msgstr ""
+
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+msgid "Unlimited"
+msgstr "Απεριόριστος"
+
+msgid "Unlock"
+msgstr "Ξεκλειδωμα"
+
+msgid "Unmounting..."
+msgstr "Αποπροσάρτηση ..."
+
+msgid "Unread messages!"
+msgstr "Μη αναγνωσμένα μηνύματα!"
+
+msgid "Update now"
+msgstr "Ενημέρωση τώρα"
+
+msgid ""
+"Update will take about 10 minutes. During this time screen may blink and you "
+"won't be able to use your STB."
+msgstr ""
+"Η ενημέρωση θα διαρκέσει περίπου 10 λεπτά. Κατά τη διάρκεια αυτής της "
+"περιόδου, η  οθόνη μπορεί να αναβοσβήσει και δε θα είστε σε θέση να "
+"χρησιμοποιήσετε τον αποκωδικοποιητή σας."
+
+msgid "Use NIT/SDT"
+msgstr "Χρήση NIT/SDT"
+
+msgid "Use for PVR"
+msgstr "Χρήση για PVR"
+
+msgid "Used for PVR"
+msgstr "Χρήση για το PVR"
+
+msgid "User Interface"
+msgstr "Περιβάλλον χρήστη"
+
+msgid "VOD"
+msgstr ""
+
+#, c-format
+msgid "Version: %s"
+msgstr ""
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr ""
+
+msgid "Vertical"
+msgstr ""
+
+msgid "Visually Impaired"
+msgstr "Άτομα με προβλήματα όρασης"
+
+msgid "VoD unavailable"
+msgstr ""
+
+msgid "WEB on TV"
+msgstr ""
+
+msgid "Waiting for channels"
+msgstr ""
+
+msgid "Waiting for channels..."
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Weekdays"
+msgstr "Καθημερινές"
+
+msgid "Weekends"
+msgstr "Σαββατοκύριακα"
+
+msgid "Weekly"
+msgstr "Εβδομαδιαία"
+
+msgid "WiFi Network Type"
+msgstr ""
+
+msgid "WiFi Password"
+msgstr ""
+
+msgid "WiFi Session ID"
+msgstr ""
+
+msgid "WiFi settings"
+msgstr ""
+
+msgid "Wired (Ethernet)"
+msgstr "Ενσύρματα (Ethernet)"
+
+msgid "Wireless (WiFi)"
+msgstr "Ασύρματα (WiFi)"
+
+msgid "Would You like to do it now?"
+msgstr ""
+
+msgid "Wrong CA PIN."
+msgstr "Λάθος κωδικός CA PIN."
+
+msgid "X: Erotic"
+msgstr "X: Ερωτικά"
+
+msgid "You are not entitled to view this channel"
+msgstr ""
+
+msgid "You are not entitled to view this content"
+msgstr ""
+
+msgid "You don't have enough free space to make a new recording."
+msgstr ""
+
+msgid "You got mail"
+msgstr "Έχετε ηλεκτρονικό μήνυμα"
+
+msgid "You have too many directories."
+msgstr ""
+
+msgid "You have too many favorites lists."
+msgstr ""
+
+msgid "You have too many keyword recordings."
+msgstr "Έχετε πολλές εγγραφές με Λέξεις-κλειδιά."
+
+msgid "You have too many recordings."
+msgstr "Έχετε πάρα πολλές εγγραφές."
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr ""
+
+#, c-format
+msgid "You will be soon zapped to %s."
+msgstr "Σύντομα θα μεταφερθείτε στο %s."
+
+#, c-format
+msgid ""
+"Your TV is currently connected to an inactive output on this set-top box. "
+"Please press VOUT button on your remote control to activate this output or "
+"connect your TV to the %s output."
+msgstr ""
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would "
+"you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would "
+"you like to:\n"
+"\n"
+msgstr[0] ""
+"Η νέα σας εγγραφή αντικρούεται με %i προηγούμενη προγραμματισμένη εγγραφή. "
+"Θα θέλατε να:\n"
+"\n"
+msgstr[1] ""
+"Η νέα σας εγγραφή αντικρούεται με %i προηγούμενες προγραμματισμένες "
+"εγγραφές. Θα θέλατε να:\n"
+"\n"
+
+msgid "[completed]"
+msgstr "[Ολοκληρώθηκε]"
+
+msgid "[failed]"
+msgstr "[Απέτυχε]"
+
+msgid "[interrupted]"
+msgstr "[Διακόπηκε]"
+
+msgid "[missed]"
+msgstr "[Αστοχία]"
+
+msgid "[recording]"
+msgstr "[Εγγραφή]"
+
+msgid "[scheduled]"
+msgstr "[Προγραμματισμένο]"
+
+msgid "[stopped manually]"
+msgstr "[Διακόπηκε χειροκίνητα]"
+
+msgid "[stopped – no source]"
+msgstr "[Διακόπηκε - πηγή μη διαθέσιμη]"
+
+msgid "[stopped – no space]"
+msgstr "[Διακόπηκε - μη διαθέσιμος χώρος]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "απέμεινε περίπου %d ώρα "
+msgstr[1] "απέμειναν περίπου  %d ώρες "
+
+msgid "automatic"
+msgstr ""
+
+msgid "chkflash"
+msgstr "έλεγχος μνήμης flash"
+
+msgid "config"
+msgstr ""
+
+msgid "done"
+msgstr "OK"
+
+msgid "download"
+msgstr ""
+
+msgid "element"
+msgstr ""
+
+msgid "format_long"
+msgstr ""
+"Διαγραφή/Μορφοποίηση δίσκου σε εξέλιξη\n"
+"\n"
+"Η διαδικασία θα διαρκέσει από 3 μέχρι 5 λεπτά.\n"
+"Κατά τη διάρκεια της διαδικασίας , μην επιχειρήσετε\n"
+"να κλείσετε τον αποκωδικοποιητή.\n"
+"\n"
+"Μετά το τέλος της διαδικασίας ο αποκωδικοποιητής θα είναι και πάλι σε θέση "
+"να λειτουργήσει."
+
+msgid "formating"
+msgstr "διαγραφή/μορφοποίηση δεδομένων δίσκου"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "ώρα"
+msgstr[1] "ώρες"
+
+msgid "kernel"
+msgstr "επεξεργασία - kernel"
+
+msgid "less than HD hour left"
+msgstr ""
+
+msgid "less than hour left"
+msgstr "απέμεινε λιγότερο από μια ώρα"
+
+msgid "logo"
+msgstr "επεξεργασία - logo"
+
+msgid "manual"
+msgstr ""
+
+msgid "new"
+msgstr ""
+
+msgid "off"
+msgstr "Απενεργοποίηση"
+
+msgid "prev"
+msgstr ""
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "αποτέλεσμα"
+msgstr[1] "αποτελέσματα"
+
+msgid "rootfs"
+msgstr "επεξεργασία - rootfs"
+
+msgid "today"
+msgstr "σήμερα"
+
+msgid "tomorrow"
+msgstr "αύριο"
+
+msgid "unknown"
+msgstr "άγνωστο"
+
+msgid "unlimited"
+msgstr "απεριόριστα"
+
+msgid "upgrade_long"
+msgstr ""
+"Η αναβάθμιση λογισμικού θα διαρκέσει από 10 μέχρι 15 λεπτά.\n"
+"Κατα τη διάρκεια της αναβάθμισης, μην επιχειρήσετε \n"
+"να κλείσετε τον αποκωδικοποιητή. \n"
+"\n"
+"Όταν ολοκληρωθεί η αναβάθμιση, ο αποκωδικοποιητής θα ξεκινήσει αυτόματα."
+
+msgid "usr"
+msgstr "επεξεργασία - usr"
+
+msgid "verify"
+msgstr "επαλήθευση"
+
+msgid "writing"
+msgstr "εγκατάσταση νέου λογισμικού"
+
+#~ msgid "Add new list"
+#~ msgstr "Προσθήκη νέας λίστας"
+
+#~ msgid "Add/remove channels"
+#~ msgstr "Προσθήκη/αφαίρεση καναλιών"
+
+#~ msgid "Block channels"
+#~ msgstr "Κλείδωμα καναλιών"
+
+#~ msgid "Cable modem"
+#~ msgstr "Cable μόντεμ"
+
+#~ msgid "Format"
+#~ msgstr "Διαγραφή/Μορφοποίηση δεδομένων δίσκου"
+
+#~ msgid "Incompatible with PVR"
+#~ msgstr "Ασύμβατο με PVR"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %d)"
+#~ msgstr ""
+#~ "Μη προσβάσιμο\n"
+#~ "Δεν έχει ενεργοποιηθεί (κωδικός σφάλματος %d)"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %i)"
+#~ msgstr ""
+#~ "Μη προσβάσιμο\n"
+#~ "Δεν έχει ενεργοποιηθεί (κωδικός σφάλματος %i)"
+
+#~ msgid "Rearrange list"
+#~ msgstr "Αναδιάταξη λίστας"
+
+#~ msgid "Remove channel"
+#~ msgstr "Αφαίρεση καναλιού"
+
+#~ msgid "Remove list"
+#~ msgstr "Αφαίρεση λίστας"
+
+#~ msgid "Rename list"
+#~ msgstr "Μετονομασία λίστας"
+
+#~ msgid "Scheduled recordings"
+#~ msgstr "Προγραμματισμένες εγγραφές"
+
+#~ msgid "Subscription status"
+#~ msgstr "Κατάσταση συνδρομής"
+
+#~ msgid "Transaction failed"
+#~ msgstr "H συναλλαγή απέτυχε"
+
+#~ msgid "Unknown error"
+#~ msgstr "Άγνωστο σφάλμα"
+
+#~ msgid "You have too many recordings"
+#~ msgstr "Έχετε πάρα πολλές εγγραφές"
+
+#~ msgid ""
+#~ "Your display device is currently connected to inactive output %s. Please "
+#~ "press Vout button on your remote control to activate this output or "
+#~ "connect your display device to %s output."
+#~ msgstr ""
+#~ "Η συσκευή προβολής σας είναι συνδεδεμένη σε ανενεργή έξοδο %s. "
+#~ "Παρακαλούμε πατήστε το Vout πλήκτρο στο τηλεχειριστήριο σας για να "
+#~ "ενεργοποιήσετε αυτήν την έξοδο ή συνδέστε τη συσκευή προβολής στην έξοδο "
+#~ "%s."

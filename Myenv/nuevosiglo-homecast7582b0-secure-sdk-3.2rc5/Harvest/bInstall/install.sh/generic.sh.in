@@ -1,0 +1,197 @@
+#!/bin/sh
+
+. /etc/profile
+
+#for dry run
+if false; then #change false to true to enable dry run
+DRY="echo "
+else
+DRY=""
+fi
+
+
+dd="$DRY dd"
+tar="$DRY tar"
+mount="$DRY mount"
+umount="$DRY umount"
+flashcp="$DRY flashcp"
+flash_erase="$DRY flash_erase"
+flash_eraseall="$DRY flash_eraseall"
+nand_write="$DRY nandwrite"
+
+ubi_create_ctrl() {
+	if [ ! -e /dev/shm/ubi_ctrl ]; then
+		UBICTRL_MAJOR=`cat /sys/class/misc/ubi_ctrl/dev | cut -d: -f1`
+		UBICTRL_MINOR=`cat /sys/class/misc/ubi_ctrl/dev | cut -d: -f2`
+		rm -f /dev/shm/ubi_ctrl
+		mknod /dev/shm/ubi_ctrl c $UBICTRL_MAJOR $UBICTRL_MINOR
+	fi
+}
+
+ubi_attach() {
+	ubidetach /dev/shm/ubi_ctrl -p /dev/$2 >/dev/null 2>&1
+	ubiattach /dev/shm/ubi_ctrl -p /dev/$2 -d $1 \
+	&& rm -f /dev/shm/ubi$1 \
+	&& mknod /dev/shm/ubi$1 c `cat /sys/class/ubi/ubi$1/dev | cut -d: -f1` `cat /sys/class/ubi/ubi$1/dev | cut -d: -f2`
+}
+
+welcome_in() {
+	echo "FIRMWARE INSTALLATION, DO NOT REBOOT THE STB"
+}
+
+go_out() {
+	sync; sync; sync;
+	cnt=10
+	while [ $(( cnt-- )) -gt 0 ]; do
+		printf "FIRMWARE INSTALLTION COMPLETE, THE STB WILL REBOOT IN %d SECONDS\r" $cnt
+		sleep 1
+	done
+	reboot
+	sleep 3
+	reboot
+	sleep 3
+	reboot
+	sleep 10
+	reboot -f
+}
+
+
+do_mapped_nor_write() {
+	#do_mapped_nor_write file offset size
+	file=$1
+	offset=$2
+	size=$3
+
+	FLASH=`cat /proc/mtd | grep "\<phys_mapped_flash\>" | cut -d: -f1`
+
+	if [ -z "$FLASH" -o ! -e "/dev/$FLASH" ]; then
+		echo "ERROR: flash file $FLASH is not found!"
+		exit 1
+	fi
+
+	BLOCK=$(( 0x`cat /proc/mtd | grep "\<phys_mapped_flash\>" | cut -d' ' -f 3` ))
+
+	if [ -z "$BLOCK" ]; then
+		echo "ERROR: flash block size is undefined!"
+		exit 2
+	fi
+	$flash_erase /dev/$FLASH $(( offset )) $(( ( size + 1 ) / BLOCK )) \
+		&& echo "writting $file @ /dev/$FLASH:$offset" \
+		&& $dd if=$file of=/dev/$FLASH \
+			bs=$(( BLOCK )) seek=$(( offset / BLOCK )) \
+		|| { echo "ERROR: could not write $file!"; exit 3;}
+}
+
+do_named_mtd_write() {
+	file=$1
+	name=$2
+	attr=$3
+	FLASH=`cat /proc/mtd | grep "\<$name\>" | cut -d: -f0`
+	if [ ! -z "$FLASH" ]; then
+		echo "INFO: writting $file on flash device $name"
+		if echo "$attr" | grep "\<jffs2\>" | grep "\<tgz\>" > /dev/null; then
+			MOUNT=/tmp/mount.$name
+			FLASHB=`echo "$FLASH" | sed "s/mtd/mtdblock/g"`
+			$flash_eraseall /dev/$FLASH \
+				&& mkdir -p $MOUNT \
+				&& $mount -t jffs2 /dev/$FLASHB $MOUNT \
+				&& $tar zxf $file -C $MOUNT \
+				|| echo "ERROR!!! jffs2 partition was not written"
+			$umount $MOUNT
+			sync
+		elif echo "$attr" | grep "\<ubifs\>" | grep "\<ro\>" >/dev/null || echo "$attr" | grep "\<squbifs\>" >/dev/null; then
+			UBI_NUM=`grep "\<$name\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+			UBI_VOL="ubi"$UBI_NUM"_0"
+			ubi_create_ctrl
+			ubidetach /dev/shm/ubi_ctrl -p /dev/$FLASH >/dev/null 2>&1
+			$flash_eraseall /dev/$FLASH \
+			&& ubiformat -y /dev/$FLASH \
+			&& ubi_attach $UBI_NUM $FLASH\
+			&& ubimkvol /dev/shm/ubi$UBI_NUM -t static -s `stat -c %s $file` -N UBI_$name \
+			&& rm -rf /dev/shm/$UBI_VOL \
+			&& mknod /dev/shm/$UBI_VOL c `cat "/sys/class/ubi/$UBI_VOL/dev" | cut -d: -f1` `cat "/sys/class/ubi/$UBI_VOL/dev" | cut -d: -f2` \
+			&& ubiupdatevol /dev/shm/$UBI_VOL $file \
+			|| echo "ERROR!!! ubifs partition not written"
+		elif echo "$attr" | grep "\<ubifs\>" >/dev/null; then
+			UBI_NUM=`grep "\<$name\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+			UBI_VOL="ubi"$UBI_NUM"_0"
+			ubi_create_ctrl
+			ubidetach /dev/shm/ubi_ctrl -p /dev/$FLASH >/dev/null 2>&1
+			$flash_eraseall /dev/$FLASH \
+			&& ubiformat -y /dev/$FLASH \
+			&& ubi_attach $UBI_NUM $FLASH \
+			&& ubimkvol /dev/shm/ubi$UBI_NUM -s `stat -c %s $file` -N UBI_$name \
+			&& rm -rf /dev/shm/$UBI_VOL \
+			&& mknod /dev/shm/$UBI_VOL c `cat "/sys/class/ubi/$UBI_VOL/dev" | cut -d: -f1` `cat "/sys/class/ubi/$UBI_VOL/dev" | cut -d: -f2` \
+			&& ubiupdatevol /dev/shm/$UBI_VOL $file \
+			|| echo "ERROR!!! ubifs partition not written"
+		elif [ -e /sys/class/mtd/$FLASH/type ]; then
+			if [ "$(cat /sys/class/mtd/$FLASH/type)" = "nand" ]; then
+				$flash_eraseall /dev/$FLASH \
+				&& $nand_write -mp /dev/$FLASH $file \
+					|| echo "ERROR!!! nandwrite $file to $name at /dev/$FLASH failed"
+			else
+				$flashcp -v $file /dev/$FLASH \
+					|| echo "ERROR!!! flashcp $file to $name at /dev/$FLASH failed"
+			fi
+		else
+			$flashcp -v $file /dev/$FLASH \
+				|| echo "ERROR!!! flashcp $file to $name at /dev/$FLASH failed"
+		fi
+		return 0;
+	fi
+	#TODO: add harddrive support here!
+	echo "WARNING!!! Partition $2 not found! Image file $1 skipped!"
+	return 1;
+}
+
+do_named_part_write() {
+	#do_name_write file name size
+	file=$1
+	name=$2
+	size=$3
+	devs=`cat /proc/partitions | grep "\<$name\>$" | sed "s/.*\(\<$name\>\)$/\1/"`
+	[ -z "$devs" ] && echo "ERROR: partition $name not found!"
+	for i in $devs; do
+		echo "writting $file @ $i"
+		$dd if=$file of=/dev/$i
+		sync
+	done
+}
+
+do_named_mmc_write() {
+	#do_name_write file name size
+	file=$1
+	name=$2
+
+	ALL_DEVS=`ls /sys/class/block | grep mmcblk.p`
+	for CUR_DEV in $ALL_DEVS; do
+		CUR_PART=`echo $CUR_DEV | sed 's#.*/##'`
+		if [ -d /sys/class/block/$CUR_PART ]; then
+			LABEL=`cat /sys/class/block/$CUR_PART/volname`
+			if [ "$LABEL" = "$name" ]; then
+				MMC_DEV=$CUR_DEV
+				MMC_PART=$CUR_PART
+			fi
+		fi
+	done
+	[ -z "$MMC_DEV" ] && echo "ERROR: partition $name not found!"
+	for i in $MMC_DEV; do
+		echo "writting $file @ $i"
+		$dd if=$file of=/dev/$MMC_DEV || { echo "ERROR: write to $name failed"; exit 1; }
+		sync
+	done
+}
+
+do_flash_erase () {
+	FLASH=`cat /proc/mtd | grep "[^\.]\<$1\>[^\.]" | cut -d: -f0`
+	if [ ! -z "$FLASH" ]; then
+			echo "INFO: erasing $FLASH content"
+			flash_eraseall /dev/$FLASH || echo "WARNING!!! error $! when erasing /dev/$FLASH"
+			return 0;
+	fi
+	echo "WARNING!!! Partition $1 not found! Erase skipped!"
+	return 1;
+}
+
+welcome_in

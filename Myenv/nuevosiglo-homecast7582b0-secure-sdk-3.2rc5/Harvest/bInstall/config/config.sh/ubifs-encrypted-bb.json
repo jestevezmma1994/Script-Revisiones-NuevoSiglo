@@ -1,0 +1,112 @@
+#!/bin/sh
+
+UBI_NUM=`grep "\<config\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+
+CPART=S_INSTALL_CONFIG_PARTITION
+if [ "$CPART" = "dynamic" ]; then
+	CPART="/dev/mtd$UBI_NUM"
+	[ ! -e "$CPART" ] && echo "!!! could not find configuration partition" >&2 && exit 1
+fi
+
+if [ ! -e /dev/shm/ubi_ctrl ]; then
+	UBICTRL_MAJOR=`cat /sys/class/misc/ubi_ctrl/dev | cut -d: -f1`
+	UBICTRL_MINOR=`cat /sys/class/misc/ubi_ctrl/dev | cut -d: -f2`
+	rm -f /dev/shm/ubi_ctrl
+	mknod /dev/shm/ubi_ctrl c $UBICTRL_MAJOR $UBICTRL_MINOR
+fi
+
+ubi_attach() {
+	ubidetach /dev/shm/ubi_ctrl -d $UBI_NUM >/dev/null 2>&1
+	MTD_BLOKS=`cat /sys/class/mtd/mtd$UBI_NUM/size`
+	MTD_ERASE_SIZE=`cat /sys/class/mtd/mtd$UBI_NUM/erasesize`
+	UBI_RESERVED_BLOKS=$(($MTD_BLOKS / $MTD_ERASE_SIZE - 4))
+	ubiattach /dev/shm/ubi_ctrl -p $CPART -d $UBI_NUM -c 1 -r $UBI_RESERVED_BLOKS >/dev/null 2>&1 || return 1
+	rm -f /dev/shm/ubi$UBI_NUM
+	mknod /dev/shm/ubi$UBI_NUM c `cat /sys/class/ubi/ubi$UBI_NUM/dev | cut -d: -f1` `cat /sys/class/ubi/ubi$UBI_NUM/dev | cut -d: -f2`
+}
+
+restore_defaults () {
+	#reset partition
+	echo Creating new config partition
+	ubidetach /dev/shm/ubi_ctrl -d $UBI_NUM >/dev/null 2>&1
+	flash_eraseall $CPART
+	ubiformat -y $CPART -c 1 || exit 1
+	ubi_attach || exit 1
+	UBI_BLOCKS=`cat /sys/class/ubi/ubi$UBI_NUM/avail_eraseblocks`
+	UBI_NEWSIZE=$(($UBI_BLOCKS - $(($UBI_BLOCKS / 10))))
+	ubimkvol /dev/shm/ubi$UBI_NUM -N UBI_config -S $UBI_NEWSIZE || exit 1
+	mount -o sync,noexec,nosuid -t ubifs ubi$UBI_NUM:UBI_config /etc/vod/
+	#restore back-up
+	cp -a /etc/default-conf/* /etc/vod/
+	rm -f /etc/vod/LASTVERSION
+}
+
+verify_integrity () {
+	rm -f /etc/vod/integrity-test
+	cp /etc/default-conf/conf.json /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	cmp /etc/default-conf/conf.json /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	rm -f /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+}
+
+start_config () {
+	mount | grep -q "UBI_config\b" || {
+		ubi_attach
+		mount -o sync,noexec,nosuid -t ubifs ubi$UBI_NUM:UBI_config /etc/vod/
+	} || restore_defaults
+	verify_integrity
+    # Migrate from XML
+    [ ! -e /etc/vod/conf.json -a -e /etc/vod/conf.xml ] && {
+        cp /etc/vod/conf.xml /etc/vod/conf.xml.org
+        /etc/upgrade.d/upgrade.default-conf
+        rm -f /etc/vod/LASTVERSION
+		}
+    # Default conf
+    [ ! -e /etc/vod/conf.json ] && {
+        cp /etc/default-conf/conf.json* /etc/vod/
+        rm -f /etc/vod/LASTVERSION
+    }
+    for i in $(seq 1 5); do
+        /usr/local/bin/qbconf_ctl --export > /tmp/STB.cfg
+        [ $? -eq "0" ] && break
+        [ ! $? -eq "0" ]  && {
+            cp /etc/default-conf/* /etc/vod/
+            rm -f /etc/vod/LASTVERSION
+        }
+    done
+	sync
+}
+
+save_config () {
+  echo -n "storing configuration"
+  #check partition mount
+  mount | grep -q "UBI_config\b" || { #if not found in mount start config first
+		start_config
+  }
+  /usr/local/bin/qbconf_ctl --export > /tmp/STB.cfg
+  echo " OK"
+}
+
+case "$1" in
+    start)
+        start_config
+        ;;
+    save)
+        save_config
+        ;;
+    *)
+        ;;
+esac
+
+

@@ -1,0 +1,6 @@
+Name: CUIT
+Version: 1.0.0
+Requires: CAGE QBAppKit QBInput SvCore SvFoundation SvGfxHAL SvProfile fibers 
+Description: Cubiware User Interface Toolkit
+Libs: -lCUIT -ldl -lm -ldl -lm 
+CFlags: 

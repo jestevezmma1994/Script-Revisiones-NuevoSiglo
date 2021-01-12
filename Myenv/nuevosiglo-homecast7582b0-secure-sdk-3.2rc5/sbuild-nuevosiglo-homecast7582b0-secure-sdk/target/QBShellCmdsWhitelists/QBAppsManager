@@ -1,0 +1,12 @@
+# QBAppsManager: QBShellCmdsWhitelist CUIT
+^env \(\(QBSandboxID\|QBSandboxName\|QBSandboxUID\|QBSandboxGID\)=\"[a-zA-Z0-9_-]*\" \)*/etc/sandbox.d/sandbox_start$
+^/etc/sandbox.d/sandbox_kill [a-zA-Z0-9_-]*$
+
+# CUIT: SvGfxHAL
+# SvGfxHAL: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$

@@ -1,0 +1,7 @@
+digraph channelStorage {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    channelStorage [URL="\N.html" root=true]
+
+    channelStorage -> Channels
+}

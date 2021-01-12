@@ -1,0 +1,104 @@
+<perldata>
+ <hashref memory_address="0x231a9a8">
+  <item key="deps">
+   <hashref memory_address="0x1788cc0">
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x2b701a8">
+    <item key="CROSS_ROOT">${SRM_ROOT}/host/cross/mipsel-linux</item>
+    <item key="SvStandardMakefiles">${SRM_ROOT}/host/cross/mipsel-linux/usr/local/include/SvStandardMakefiles</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x287a738">
+    <item key="App/Components/QBTextSubsManager/Makefile">5cb4c30c2e0fb4137375e68109e7c218</item>
+    <item key="App/Components/QBTextSubsManager/include/QBTextSubsManager.h">7a1a2aaffeabad34dd533d99966c1dae</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubsParser.c">ab6e5029471e20e9f5ea6b00fe77270d</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubsParser.h">c36f71e1c0bebc779b1b09b4032dca1d</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubtitle.c">afee27219654f38a3a3532faf78dd636</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubtitle.h">d212d967cad9eec39cfc6e1be830d962</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTextSubsManager.c">a8e7d5f8eb967085a87af85c70fa81a5</item>
+   </hashref>
+  </item>
+  <item key="string">App/Components/QBTextSubsManager/c.comp</item>
+  <item key="time">1605103249</item>
+  <item key="units">
+   <hashref memory_address="0x28cd4a8">
+    <item key="App/Components/QBTextSubsManager/Makefile">a</item>
+    <item key="App/Components/QBTextSubsManager/include/QBTextSubsManager.h">a</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubsParser.c">a</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubsParser.h">a</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubtitle.c">a</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTTMLSubtitle.h">a</item>
+    <item key="App/Components/QBTextSubsManager/src/QBTextSubsManager.c">a</item>
+    <item key="CROSS_ROOT">a</item>
+    <item key="SvStandardMakefiles">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/include/expat.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/include/expat_external.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/asm-generic/ioctl.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/asm/ioctl.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/asm/socket.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/asm/sockios.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/bits/sockaddr.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/bits/socket.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/bits/uClibc_touplow.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/ctype.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/sys-root/usr/include/sys/socket.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/CAGE/Text/SvAbstractTextParagraph.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/CAGE/Text/SvBasicTextParagraph.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/CAGE/Text/SvFont.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/CAGE/Text/SvGlyph.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/CAGE/Text/SvTextLayout.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/CAGE/Text/SvTextRender.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBAppKit/QBFuture.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBAppKit/QBThreadPool.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBResourceManager/SvRBObject.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBSMPTETTPngDecoder.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBSubsManager.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBTextSubsManager.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/QBTextUtils/base64.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvFoundation/SvStringBuffer.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvFoundation/SvValue.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvGfxHAL/SvGfxUtils.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvHTTPClient/SvHTTPFileCache.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvPlayerControllers/SvPlayerSubsTrack.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvPlayerControllers/SvPlayerSubsTrackES.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvPlayerControllers/SvPlayerTrack.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/SvSettingsManager/SvSettingsManagerTypes.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/dataformat/media_format.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/intrusive_list.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/mpeg_es_decoder.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/mpeg_psi_receiver.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/netaddr.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/player_opts/subs_sniffer.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/sdp.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/include/settings.h">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBMTQueue.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBMTQueue.so.1.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBMTQueue.so.1.0.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBSMPTETTPngDecoder.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBSMPTETTPngDecoder.so.1.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBSMPTETTPngDecoder.so.1.0.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBSubsManager.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBSubsManager.so.1.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBSubsManager.so.1.0.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBTextSubsManager.a">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBTextSubsManager.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBTextSubsManager.so.1.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/libQBTextSubsManager.so.1.0.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/pkgconfig/QBMTQueue.pc">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/pkgconfig/QBSMPTETTPngDecoder.pc">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/pkgconfig/QBSubsManager.pc">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/lib/pkgconfig/QBTextSubsManager.pc">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/lib/libQBTextSubsManager.so.1.0">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/lib/libQBTextSubsManager.so.1.0.0">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x2379890">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

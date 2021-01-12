@@ -1,0 +1,96 @@
+digraph Windows {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    windows [label="Windows" root=true]
+    pvrplayer [label="PVRPlayer/AnyPlayer"]
+    mainmenu [label="Main Menu"]
+
+    subgraph {
+        TV [root=true]
+        QBTVChannelFrame
+        adWindow
+        miniChannelList
+        miniRecordingList
+        miniTVGuide
+        teletextWindow
+        newtv
+
+        TV -> newtv
+        TV -> QBTVChannelFrame
+        TV -> adWindow
+        TV -> miniChannelList
+        TV -> miniRecordingList
+        TV -> miniTVGuide
+        TV -> teletextWindow
+    }
+
+    subgraph {
+        EPG [root=true]
+        searchResults
+        newtvguide
+        verticalEPG
+
+        EPG -> searchResults
+        EPG -> newtvguide
+        EPG -> verticalEPG
+    }
+
+    subgraph {
+        DVBChannels [label="DVB Channels" root=true]
+        SatelliteSetup
+        channelStatus
+        channelscanning [label="Channel Scanning"]
+
+        DVBChannels -> SatelliteSetup
+        DVBChannels -> channelStatus
+        DVBChannels -> channelscanning -> manual
+    }
+
+    subgraph {
+        browsing [label="Browsing" root=true]
+        QBVoDCarousel
+        QBVoDCategoryBrowser
+        QBVoDGridBrowser
+        QBVoDMovieDetails
+        imagebrowser
+
+        browsing -> QBVoDCarousel
+        browsing -> QBVoDCategoryBrowser
+        browsing -> QBVoDGridBrowser
+        browsing -> QBVoDMovieDetails
+        browsing -> imagebrowser
+    }
+
+    subgraph {
+        startup [label="Startup" root=true]
+        appInitWaiter
+        appStartupWaiter
+        firstboot
+        wizard
+
+        startup -> appInitWaiter
+        startup -> appStartupWaiter
+        startup -> firstboot
+        startup -> wizard
+    }
+
+    subgraph {
+        Misc [root=true]
+        HomecastFactory
+        screensaver
+        standby
+
+        Misc -> HomecastFactory
+        Misc -> screensaver
+        Misc -> standby
+    }
+
+    windows -> TV
+    windows -> EPG
+    windows -> DVBChannels
+    windows -> browsing
+    windows -> startup
+    windows -> pvrplayer
+    windows -> mainmenu
+    windows -> Misc
+}

@@ -1,0 +1,84 @@
+#!/bin/sh
+
+CPART=S_INSTALL_CONFIG_PARTITION
+if [ "$CPART" = "dynamic" ]; then
+	CPART="/dev/mtdblock"`grep "\<config\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+	[ ! -e "$CPART" ] && echo "!!! could not find configuration partition" >&2 && exit 1
+fi
+
+restore_defaults () {
+	umount $CPART
+	flash_eraseall -j `echo $CPART | sed "s/block//"`
+	mount -t jffs2 -o noexec $CPART /etc/vod/
+	echo config partition damged, loading DEFAULT configuration
+	cp /etc/default-conf/* /etc/vod/
+	rm -f /etc/vod/LASTVERSION
+}
+
+verify_integrity () {
+	rm -f /etc/vod/integrity-test
+	cp /etc/default-conf/conf.json /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	cmp /etc/default-conf/conf.json /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	rm -f /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+}
+
+start_config () {
+    mount | grep -q "$CPART\b" || mount -t jffs2 -o noexec $CPART /etc/vod/ || {
+        restore_defaults
+	}
+	verify_integrity
+    # Migrate from XML
+    [ ! -e /etc/vod/conf.json -a -e /etc/vod/conf.xml ] && {
+        cp /etc/vod/conf.xml /etc/vod/conf.xml.org
+        /etc/upgrade.d/upgrade.default-conf
+        rm -f /etc/vod/LASTVERSION
+    }
+    # Default conf
+    [ ! -e /etc/vod/conf.json ] && {
+        cp /etc/default-conf/conf.json /etc/vod/conf.json
+        rm -f /etc/vod/LASTVERSION
+    }
+    for i in $(seq 1 5); do                    
+        /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+        [ $? -eq "0" ] && break
+        [ ! $? -eq "0" ]  && {
+            cp /etc/default-conf/* /etc/vod/      
+            rm -f /etc/vod/LASTVERSION
+        }                            
+    done
+    sync
+}
+
+save_config () {
+    echo -n "storing configuration"
+    #check partition mount
+    mount | grep -q "$CPART\b" || { #if not found in mount recongure it
+        start_config
+    }
+    /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+    echo " OK"
+}
+
+case "$1" in
+    start)
+        start_config
+        ;;
+    save)
+        save_config
+        ;;
+    *)
+        ;;
+esac
+

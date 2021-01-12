@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd">
+
+    <widget name="main">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+
+        <widget name="mainbg">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="bgColor"><color>00000000</color></param>
+        </widget>
+
+        <widget name="displayer">
+            <common>
+                <param tag="font">
+                    <font aspect="1.0"><path>teletext2.pcf</path></font>
+                </param>
+                <param tag="fontSize"><int>20</int></param>
+            </common>
+
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="bgColor"><color>000000ff</color></param>
+
+
+            <widget name="displayer.teletextLine">
+                <param tag="xOffset"><int>94</int></param>
+                <param tag="yOffset"><int>46</int></param>
+                <param tag="width"><int>1092</int></param>
+                <param tag="height"><int>50</int></param>
+                <param tag="cellHeight"><int>20</int></param>
+                <param tag="cellWidth"><int>12</int></param>
+            </widget>
+
+
+            <widget name="displayer.teletextPage">
+                <param tag="xOffset"><int>148</int></param>
+                <param tag="yOffset"><int>80</int></param>
+                <param tag="width"><int>960</int></param>
+                <param tag="height"><int>625</int></param>
+                <param tag="cellHeight"><int>20</int></param>
+                <param tag="cellWidth"><int>12</int></param>
+            </widget>
+
+            <widget name="displayer.input">
+                <param tag="xOffset"><int>94</int></param>
+                <param tag="yOffset"><int>46</int></param>
+                <param tag="width"><int>196</int></param>
+                <param tag="height"><int>25</int></param>
+            </widget>
+
+            <widget name="displayer.header">
+                <param tag="xOffset"><int>148</int></param>
+                <param tag="yOffset"><int>35</int></param>
+                <param tag="width"><int>960</int></param>
+                <param tag="height"><int>25</int></param>
+                <param tag="cellHeight"><int>20</int></param>
+                <param tag="cellWidth"><int>12</int></param>
+
+            </widget>
+
+            <widget name="displayer.clock">
+                <param tag="xOffset"><int>962</int></param>
+                <param tag="yOffset"><int>46</int></param>
+                <param tag="width"><int>224</int></param>
+                <param tag="height"><int>25</int></param>
+            </widget>
+
+        </widget>
+    </widget>
+
+</settings>

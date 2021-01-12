@@ -1,0 +1,17 @@
+NAMES="MOVIECITY.URI_PATTERN"
+
+for NAME in $NAMES; do
+    OLD_IFS="$IFS"
+    IFS=$'\n'
+    CURRENT_VAL=`svconf_ctl -n $NAME`
+    DEFAULT_VAL=`svconf_ctl -n -i /etc/default-conf/conf.json $NAME`
+    if [ "x$CURRENT_VAL" != "x$DEFAULT_VAL" ]; then
+        if [ -z "$DEFAULT_VAL" ]; then
+            svconf_ctl -n --set-null $NAME
+        else
+            svconf_ctl -n $NAME "$DEFAULT_VAL"
+        fi
+    fi
+    IFS="$OLD_IFS"
+done
+

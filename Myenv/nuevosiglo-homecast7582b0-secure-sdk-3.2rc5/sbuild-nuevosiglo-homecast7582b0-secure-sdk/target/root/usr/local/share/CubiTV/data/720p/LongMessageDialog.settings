@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+<xi:include href="Dialog-template.settings"/>
+
+    <widget name="LongMessageDialog" import="Dialog-template">
+        
+        <widget name="Grid">
+            <param tag="width"><int>608</int></param>
+            <param tag="height"><int>450</int></param>
+            <param tag="spacing"><int>0</int></param>
+        </widget>
+        
+        <widget name="AsyncLabel">
+            <param tag="width"><int>608</int></param>
+            <param tag="height"><int>0</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>bfbfbfff</color></param>
+            <param tag="multiline"><bool>true</bool></param>
+        </widget>
+        
+        <widget name="ViewPort">
+            <param tag="xOffset"><int>10</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>608</int></param>
+            <param tag="height"><int>450</int></param>
+            <param tag="xStep"><int>20</int></param>
+            <param tag="yStep"><int>20</int></param>
+            <param tag="yMaxVelocity"><double>1000</double></param>
+            <param tag="yAcceleration"><double>20</double></param>
+            <param tag="screenAcceleration"><double>100</double></param>
+        </widget>
+        
+        <widget name="ScrollBar">
+            <param tag="xOffset"><int>530</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>608</int></param>
+            <param tag="height"><int>550</int></param>
+            <param tag="fadeDuration"><double>0.2</double></param>
+            <widget name="arrowHigh">
+                <param tag="xOffset"><int>150</int></param>
+                <param tag="yOffset"><int>530</int></param>
+                <param tag="active"><bitmap><path>arrow/arrow_down_active.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>arrow/arrow_down_inactive.png</path></bitmap></param>
+            </widget>
+            <widget name="arrowLow">
+                <param tag="xOffset"><int>150</int></param>
+                <param tag="yOffset"><int>65</int></param>
+                <param tag="active"><bitmap><path>arrow/arrow_up_active.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>arrow/arrow_up_inactive.png</path></bitmap></param>
+            </widget>
+        </widget>
+        
+    </widget>
+</settings>

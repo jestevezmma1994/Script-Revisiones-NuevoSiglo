@@ -1,0 +1,6 @@
+Name: ionet
+Version: 1.0.0
+Requires: SvCore netio sv-list 
+Description: Sentivision Network I/O interface
+Libs: -lionet 
+CFlags: 

@@ -1,0 +1,7 @@
+[
+    {
+        "input": "AUDIOTRACK",
+        "output": "RED",
+        "contexts": [ "EPGWindow" ]
+    }
+]

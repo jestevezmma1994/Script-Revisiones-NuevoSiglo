@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <xi:include href="ConaxPopupManagerDialog.settings"/>
+
+    <widget name="ConaxPopupManager">
+        <common>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        </common>
+
+        <widget name="ConaxPopupManager.SimplePopup">
+
+            <param tag="width"><int>554</int></param>
+            <param tag="height"><int>154</int></param>
+            <param tag="bg"><bitmap><path>bg_popup_warning.png</path></bitmap></param>
+
+            <widget name="ConaxPopupManager.SimplePopup.Button">
+                <param tag="xOffset"><int>212</int></param>
+                <param tag="yOffset"><int>90</int></param>
+                <param tag="width"><int>130</int></param>
+                <param tag="height"><int>52</int></param>
+                <param tag="bottomPadding"><int>0</int></param>
+                <param tag="caption"><string>OK</string></param>
+                <param tag="bg">
+                    <bitmap><path>button_focus.png</path></bitmap>
+                </param>
+                <param tag="inactiveBg">
+                    <bitmap><path>button_nonfocus.png</path></bitmap>
+                </param>
+                <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+                <param tag="textColor"><color>000000ff</color></param>
+                <param tag="textAlign"><string>center</string></param>
+                <param tag="duration"><double>0.2</double></param>
+            </widget>
+
+            <widget name="ConaxPopupManager.SimplePopup.Title">
+                <param tag="xOffset"><int>20</int></param>
+                <param tag="yOffset"><int>30</int></param>
+                <param tag="width"><int>514</int></param>
+                <param tag="multiline"><bool>true</bool></param>
+                <param tag="multiLine"><bool>true</bool></param>
+                <param tag="bgColor"><color>001680ed</color></param>
+                <param tag="text"><string/></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="textAlign"><string>center</string></param>
+            </widget>
+        </widget>
+    </widget>
+    <widget name="AuthenticationDialog">
+        <param tag="invalidPin"><string><i18n:gettext>Wrong CA PIN. Try again.</i18n:gettext></string></param>
+        <param tag="wait"><string><i18n:gettext>Please wait.</i18n:gettext></string></param>
+        <param tag="pinEntryTitle"><string><i18n:gettext>PIN:</i18n:gettext></string></param>
+        <param tag="title"><string><i18n:gettext>Authentication required</i18n:gettext></string></param>
+        <param tag="mandatory"><bool>false</bool></param>
+    </widget>
+    <widget name="NoneSupportedCAIDFoundPopup">
+        <param tag="text"><string><i18n:gettext>This channel is not available for your operator</i18n:gettext></string></param>
+    </widget>
+
+</settings>

@@ -1,0 +1,12 @@
+digraph TimeWidgets {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    TimeWidgets [label="Time" root=true]
+    QBTimeEditBox
+    QBTimeInput
+    QBCalendar
+
+    TimeWidgets -> QBTimeEditBox
+    TimeWidgets -> QBTimeInput
+    TimeWidgets -> QBCalendar
+}

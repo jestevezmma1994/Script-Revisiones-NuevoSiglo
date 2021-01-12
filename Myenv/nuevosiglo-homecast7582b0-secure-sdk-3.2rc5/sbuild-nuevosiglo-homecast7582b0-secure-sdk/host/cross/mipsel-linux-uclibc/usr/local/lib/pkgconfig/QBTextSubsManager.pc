@@ -1,0 +1,6 @@
+Name: QBTextSubsManager
+Version: 1.0.0
+Requires: CUIT QBSMPTETTPngDecoder QBSubsManager SvPlayerControllers SvPlayerManager 
+Description: manager for printing text subtitles
+Libs: -lQBTextSubsManager 
+CFlags: 

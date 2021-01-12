@@ -1,0 +1,6 @@
+Name: QBTunerMonitor
+Version: 1.0.0
+Requires: SvFoundation fibers svtuner 
+Description: Tuner Monitor
+Libs: -lQBTunerMonitor 
+CFlags: 

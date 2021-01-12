@@ -1,0 +1,32 @@
+digraph Playback {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Playback [label="Playback" root=true]
+
+    AdBitrate
+    GlobalPlayer
+    QBBookmarkService
+    QBCASManager
+    QBConaxPullEMMService
+    QBParentalControl
+    QBProductUsageController
+    QBViewRightPopupManager
+    QBViewRightTriggerManager
+    fingerprint
+    langPreferences
+    conaxPopupManager
+
+
+    Playback -> AdBitrate
+    Playback -> GlobalPlayer
+    Playback -> QBBookmarkService
+    Playback -> QBCASManager
+    Playback -> QBConaxPullEMMService
+    Playback -> QBParentalControl
+    Playback -> QBProductUsageController
+    Playback -> QBViewRightPopupManager
+    Playback -> QBViewRightTriggerManager
+    Playback -> fingerprint
+    Playback -> langPreferences
+    Playback -> conaxPopupManager
+}

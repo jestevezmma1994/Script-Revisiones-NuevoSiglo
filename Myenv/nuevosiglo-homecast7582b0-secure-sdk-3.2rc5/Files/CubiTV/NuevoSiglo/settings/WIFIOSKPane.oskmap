@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osk-map xmlns="http://cubiware.com/osk-map-v1.xsd"
+    version="1.0">
+
+    <layouts>
+        <layout id="small" default="yes"/>
+        <layout id="capital"/>
+        <layout id="special"/>
+    </layouts>
+
+    <keys>
+        <key id="a">
+            <position><x>0</x><y>0</y></position>
+            <caption layout="small">a</caption>
+            <caption layout="capital">A</caption>
+            <caption layout="special">@</caption>
+            <value layout="small">a</value>
+            <value layout="capital">A</value>
+            <value layout="special">@</value>
+
+        </key>
+        <key id="b">
+            <position><x>1</x><y>0</y></position>
+            <caption layout="small">b</caption>
+            <caption layout="capital">B</caption>
+            <caption layout="special">:</caption>
+            <value layout="small">b</value>
+            <value layout="capital">B</value>
+            <value layout="special">:</value>
+        </key>
+        <key id="c">
+            <position><x>2</x><y>0</y></position>
+            <caption layout="small">c</caption>
+            <caption layout="capital">C</caption>
+            <caption layout="special">;</caption>
+            <value layout="small">c</value>
+            <value layout="capital">C</value>
+            <value layout="special">;</value>
+
+        </key>
+        <key id="d">
+            <position><x>3</x><y>0</y></position>
+            <caption layout="small">d</caption>
+            <caption layout="capital">D</caption>
+            <caption layout="special">_</caption>
+            <value layout="small">d</value>
+            <value layout="capital">D</value>
+            <value layout="special">_</value>
+        </key>
+        <key id="e">
+            <position><x>4</x><y>0</y></position>
+            <caption layout="small">e</caption>
+            <caption layout="capital">E</caption>
+            <caption layout="special">-</caption>
+            <value layout="small">e</value>
+            <value layout="capital">E</value>
+            <value layout="special">-</value>
+        </key>
+        <key id="f">
+            <position><x>5</x><y>0</y></position>
+            <caption layout="small">f</caption>
+            <caption layout="capital">F</caption>
+            <caption layout="special">#</caption>
+            <value layout="small">f</value>
+            <value layout="capital">F</value>
+            <value layout="special">#</value>
+        </key>
+        <key id="g">
+            <position><x>0</x><y>1</y></position>
+            <caption layout="small">g</caption>
+            <caption layout="capital">G</caption>
+            <caption layout="special">(</caption>
+            <value layout="small">g</value>
+            <value layout="capital">G</value>
+            <value layout="special">(</value>
+        </key>
+        <key id="h">
+            <position><x>1</x><y>1</y></position>
+            <caption layout="small">h</caption>
+            <caption layout="capital">H</caption>
+            <caption layout="special">)</caption>
+            <value layout="small">h</value>
+            <value layout="capital">H</value>
+            <value layout="special">)</value>
+        </key>
+        <key id="i">
+            <position><x>2</x><y>1</y></position>
+            <caption layout="small">i</caption>
+            <caption layout="capital">I</caption>
+            <caption layout="special">/</caption>
+            <value layout="small">i</value>
+            <value layout="capital">I</value>
+            <value layout="special">/</value>
+        </key>
+        <key id="j">
+            <position><x>3</x><y>1</y></position>
+            <caption layout="small">j</caption>
+            <caption layout="capital">J</caption>
+            <caption layout="special">\</caption>
+            <value layout="small">j</value>
+            <value layout="capital">J</value>
+            <value layout="special">\</value>
+        </key>
+        <key id="k">
+            <position><x>4</x><y>1</y></position>
+            <caption layout="small">k</caption>
+            <caption layout="capital">K</caption>
+            <caption layout="special">.</caption>
+            <value layout="small">k</value>
+            <value layout="capital">K</value>
+            <value layout="special">.</value>
+        </key>
+        <key id="l">
+            <position><x>5</x><y>1</y></position>
+            <caption layout="small">l</caption>
+            <caption layout="capital">L</caption>
+            <caption layout="special">,</caption>
+            <value layout="small">l</value>
+            <value layout="capital">L</value>
+            <value layout="special">,</value>
+        </key>
+        <key id="m">
+            <position><x>0</x><y>2</y></position>
+            <caption layout="small">m</caption>
+            <caption layout="capital">M</caption>
+            <caption layout="special">?</caption>
+            <value layout="small">m</value>
+            <value layout="capital">M</value>
+            <value layout="special">?</value>
+        </key>
+        <key id="n">
+            <position><x>1</x><y>2</y></position>
+            <caption layout="small">n</caption>
+            <caption layout="capital">N</caption>
+            <caption layout="special">!</caption>
+            <value layout="small">n</value>
+            <value layout="capital">N</value>
+            <value layout="special">!</value>
+        </key>
+        <key id="o">
+            <position><x>2</x><y>2</y></position>
+            <caption layout="small">o</caption>
+            <caption layout="capital">O</caption>
+            <caption layout="special">&apos;</caption>
+            <value layout="small">o</value>
+            <value layout="capital">O</value>
+            <value layout="special">&apos;</value>
+        </key>
+        <key id="p">
+            <position><x>3</x><y>2</y></position>
+            <caption layout="small">p</caption>
+            <caption layout="capital">P</caption>
+            <caption layout="special">&quot;</caption>
+            <value layout="small">p</value>
+            <value layout="capital">P</value>
+            <value layout="special">&quot;</value>
+        </key>
+        <key id="q">
+            <position><x>4</x><y>2</y></position>
+            <caption layout="small">q</caption>
+            <caption layout="capital">Q</caption>
+            <caption layout="special">=</caption>
+            <value layout="small">q</value>
+            <value layout="capital">Q</value>
+            <value layout="special">=</value>
+        </key>
+        <key id="r">
+            <position><x>5</x><y>2</y></position>
+            <caption layout="small">r</caption>
+            <caption layout="capital">R</caption>
+            <caption layout="special">+</caption>
+            <value layout="small">r</value>
+            <value layout="capital">R</value>
+            <value layout="special">+</value>
+        </key>
+        <key id="s">
+            <position><x>0</x><y>3</y></position>
+            <caption layout="small">s</caption>
+            <caption layout="capital">S</caption>
+            <caption layout="special">%</caption>
+            <value layout="small">s</value>
+            <value layout="capital">S</value>
+            <value layout="special">%</value>
+        </key>
+        <key id="t">
+            <position><x>1</x><y>3</y></position>
+            <caption layout="small">t</caption>
+            <caption layout="capital">T</caption>
+            <caption layout="special">*</caption>
+            <value layout="small">t</value>
+            <value layout="capital">T</value>
+            <value layout="special">*</value>
+        </key>
+        <key id="u">
+            <position><x>2</x><y>3</y></position>
+            <caption layout="small">u</caption>
+            <caption layout="capital">U</caption>
+            <caption layout="special">[</caption>
+            <value layout="small">u</value>
+            <value layout="capital">U</value>
+            <value layout="special">[</value>
+        </key>
+        <key id="v">
+            <position><x>3</x><y>3</y></position>
+            <caption layout="small">v</caption>
+            <caption layout="capital">V</caption>
+            <caption layout="special">]</caption>
+            <value layout="small">v</value>
+            <value layout="capital">V</value>
+            <value layout="special">]</value>
+        </key>
+        <key id="w">
+            <position><x>4</x><y>3</y></position>
+            <caption layout="small">w</caption>
+            <caption layout="capital">W</caption>
+            <caption layout="special">{</caption>
+            <value layout="small">w</value>
+            <value layout="capital">W</value>
+            <value layout="special">{</value>
+        </key>
+        <key id="x">
+            <position><x>5</x><y>3</y></position>
+            <caption layout="small">x</caption>
+            <caption layout="capital">X</caption>
+            <caption layout="special">}</caption>
+            <value layout="small">x</value>
+            <value layout="capital">X</value>
+            <value layout="special">}</value>
+        </key>
+
+        <key id="y">
+            <position><x>0</x><y>4</y></position>
+            <caption layout="small">y</caption>
+            <caption layout="capital">Y</caption>
+            <caption layout="special">&lt;</caption>
+            <value layout="small">y</value>
+            <value layout="capital">Y</value>
+            <value layout="special">&lt;</value>
+        </key>
+        <key id="z">
+            <position><x>1</x><y>4</y></position>
+            <caption layout="small">z</caption>
+            <caption layout="capital">Z</caption>
+            <caption layout="special">&gt;</caption>
+            <value layout="small">z</value>
+            <value layout="capital">Z</value>
+            <value layout="special">&gt;</value>
+        </key>
+        <key id="1">
+            <position><x>2</x><y>4</y></position>
+            <caption layout="small">1</caption>
+            <caption layout="capital">1</caption>
+            <caption layout="special">$</caption>
+            <value layout="small">1</value>
+            <value layout="capital">1</value>
+            <value layout="special">$</value>
+        </key>
+
+
+        <key id="2">
+            <position><x>3</x><y>4</y></position>
+            <caption layout="small">2</caption>
+            <caption layout="capital">2</caption>
+            <caption layout="special">€</caption>
+            <value layout="small">2</value>
+            <value layout="capital">2</value>
+            <value layout="special">€</value>
+        </key>
+        <key id="3">
+            <position><x>4</x><y>4</y></position>
+            <caption layout="small">3</caption>
+            <caption layout="capital">3</caption>
+            <caption layout="special">|</caption>
+            <value layout="small">3</value>
+            <value layout="capital">3</value>
+            <value layout="special">|</value>
+        </key>
+        <key id="4">
+            <position><x>5</x><y>4</y></position>
+            <caption layout="small">4</caption>
+            <caption layout="capital">4</caption>
+            <caption layout="special">~</caption>
+            <value layout="small">4</value>
+            <value layout="capital">4</value>
+            <value layout="special">~</value>
+        </key>
+
+        <key id="5">
+            <position><x>0</x><y>5</y></position>
+            <caption layout="small">5</caption>
+            <caption layout="capital">5</caption>
+            <caption layout="special">^</caption>
+            <value layout="small">5</value>
+            <value layout="capital">5</value>
+            <value layout="special">^</value>
+        </key>
+        <key id="6">
+            <position><x>1</x><y>5</y></position>
+            <caption layout="small">6</caption>
+            <caption layout="capital">6</caption>
+            <caption layout="special">&amp;</caption>
+            <value layout="small">6</value>
+            <value layout="capital">6</value>
+            <value layout="special">&amp;</value>
+        </key>
+        <key id="7">
+            <position><x>2</x><y>5</y></position>
+            <caption layout="small">7</caption>
+            <caption layout="capital">7</caption>
+            <caption layout="special">`</caption>
+            <value layout="small">7</value>
+            <value layout="capital">7</value>
+            <value layout="special">`</value>
+        </key>
+        <key id="8">
+            <position><x>3</x><y>5</y></position>
+            <caption layout="small">8</caption>
+            <caption layout="capital">8</caption>
+            <caption layout="special"></caption>
+            <value layout="small">8</value>
+            <value layout="capital">8</value>
+            <value layout="special"></value>
+            <hidden layout="special"></hidden>
+        </key>
+        <key id="9">
+            <position><x>4</x><y>5</y></position>
+            <caption layout="small">9</caption>
+            <caption layout="capital">9</caption>
+            <caption layout="special"></caption>
+            <value layout="small">9</value>
+            <value layout="capital">9</value>
+            <value layout="special"></value>
+            <hidden layout="special"></hidden>
+        </key>        
+        <key id="0">
+            <position><x>5</x><y>5</y></position>
+            <caption layout="small">0</caption>
+            <caption layout="capital">0</caption>
+            <caption layout="special"></caption>
+            <value layout="small">0</value>
+            <value layout="capital">0</value>
+            <value layout="special"></value>
+            <hidden layout="special"></hidden>
+        </key>
+
+
+        <key id="backspace" type="backspace">
+            <size>
+                <width>3</width>
+            </size>
+            <position>
+                <x>3</x><y>6</y>
+            </position>
+            <bitmap><path>backspace</path></bitmap>
+        </key>
+
+        <key id="shift" type="layout">
+            <size>
+                <width>3</width>
+            </size>
+            <position>
+                <x>0</x><y>6</y>
+            </position>
+            <bitmap><path>shift</path></bitmap>
+        </key>
+
+
+        <!-- seventh row: SPACE -->
+        <key id="space">
+            <size>
+                <width>3</width>
+            </size>
+            <position>
+                <x>0</x><y>7</y>
+            </position>
+            <caption>space</caption>
+            <value> </value>
+        </key>
+
+        <key id="enter" type="enter">
+            <size>
+                <width>3</width>
+            </size>
+            <position>
+                <x>3</x><y>7</y>
+            </position>
+            <caption>enter</caption>
+        </key>
+
+
+    </keys>
+
+</osk-map>

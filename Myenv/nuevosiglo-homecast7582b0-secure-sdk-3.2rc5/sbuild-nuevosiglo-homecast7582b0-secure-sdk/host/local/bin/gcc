@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ "$SRM_ALLOW_HOST_GCC" = 1 ]; then exec /usr/bin/gcc "$@"; fi
+export SRM_ALLOW_HOST_GCC=1
+${BUILD_ROOT}/bin/host-gcc "$@"

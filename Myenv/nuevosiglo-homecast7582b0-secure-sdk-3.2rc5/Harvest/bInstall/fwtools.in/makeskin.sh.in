@@ -1,0 +1,155 @@
+#!/bin/bash
+
+print_usage() {
+    echo "usage: $0 [OPTIONS] <skin_name>"
+    echo "   Creates new skin package."
+    echo "   OPTIONS:"
+    echo "      -f   Creates full skin package instead of differential"
+    echo "      -s   Manually set app version"
+    echo ""
+    echo "usage: $0 -p"
+    echo "   Prepare all necessary directories. Will be run automatically if $SRC does not exist"
+    echo ""
+    echo "!!!!"
+    echo "!!!! This tool is intended to be run in the main directory of skintools."
+    echo "!!!!"
+}
+
+prepare() {
+    if [ ! -d $ORIG ] ; then
+        echo "Source directory $ORIG doesn't exists. Run this tool from unpacked skintools package." >&2
+        exit 1
+    fi
+    echo "Preparing skin directories." >&2
+    echo "Please rerun this script after modifying files in $SRC." >&2
+
+    if [ -d "$SRC" ] ; then
+        rm -rf $SRC
+    fi
+
+    cp -R $ORIG $SRC
+    chmod -R +w $SRC
+}
+
+make_manifest() {
+    SKINSIZE=$(stat --printf="%s" $SKIN)
+    CHECKSUM=$(openssl $S_INSTALL_KEYSERVER_RSA_SKIN_HASH $SKIN | cut -d ' ' -f2)
+    echo "VERSION $VERSION" > $MANIFEST_FILE.tmp
+    echo "$SKIN $SKINSIZE $CHECKSUM" >> $MANIFEST_FILE.tmp
+
+    FSIG=$(srm-host-run jclient sign $S_INSTALL_KEYSERVER_RSA_SKIN_HASH -t $MANIFEST_FILE.tmp with $S_INSTALL_KEYSERVER_RSA_SKIN_KEY_ID) || exit $?
+    echo $FSIG | xxd -r -p >$MANIFEST_FILE || exit $?
+
+    cat $MANIFEST_FILE.tmp >> $MANIFEST_FILE
+    rm $MANIFEST_FILE.tmp
+}
+
+make_skin() {
+    mkdir $WORK
+
+    rm -f ./skin.md5.in
+    echo $SKIN >./skin.md5.in
+    for file in $(find $SRC -printf "%P\n") ; do
+        if [ -d "$SRC/$file" ] ; then
+            mkdir -p $WORK/skin/$file
+        else
+            if [ ! -z "$FORCE" ] && [ $FORCE -eq 1 ] ; then
+                cp $SRC/$file $WORK/skin/$file
+            else
+                cmp $SRC/$file $ORIG/$file > /dev/null 2> /dev/null ||
+                    cp $SRC/$file $WORK/skin/$file
+            fi
+            md5sum $SRC/$file >>./skin.md5.in
+        fi
+    done
+    MD5=$(md5sum ./skin.md5.in | cut -d ' ' -f1)
+
+    pushd $WORK > /dev/null
+    zip -r $SKIN skin > /dev/null
+    mv $SKIN ..
+    popd > /dev/null
+    rm -rf $WORK
+
+    make_manifest
+
+    if [ -d "$DST/$NAME-$MD5" ]; then
+        echo "Skin already exists in "`pwd`"/$DST/$NAME-$MD5"
+        rm -f $SKIN $MANIFEST_FILE
+        exit 0
+    fi
+
+    mkdir -p $DST/$NAME-$MD5
+    mv $SKIN $DST/$NAME-$MD5/
+    mv $MANIFEST_FILE $DST/$NAME-$MD5/
+}
+
+###############################################################################
+
+SRC=./skindata_new
+ORIG=./skindata_orig
+WORK=./skindata_tmp
+DST=./skins
+VERSION="S_VERSION"
+MANIFEST_FILE=MANIFEST
+S_INSTALL_KEYSERVER_RSA_SKIN_HASH=_REPLACE_S_INSTALL_KEYSERVER_RSA_SKIN_HASH_
+S_INSTALL_USE_KEYSERVER=_REPLACE_S_INSTALL_USE_KEYSERVER_
+S_INSTALL_KEYSERVER_RSA_SKIN_KEY_ID=_REPLACE_S_INSTALL_KEYSERVER_RSA_SKIN_KEY_ID_
+
+while getopts ":fs:ph" opt; do
+  case $opt in
+    f)
+      FORCE=1
+      ;;
+    s)
+      VERSION=$OPTARG
+      ;;
+    p)
+      prepare
+      exit 0
+      ;;
+    h)
+      print_usage
+      exit
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+NAME=${!OPTIND}
+
+ORIG_MD5=$(find ./skindata_orig/ -type f -exec cat \{\} \; | md5sum | cut -d' ' -f 1)
+SAVED_MD5=$(cat ./orig.md5)
+
+if [ "$ORIG_MD5" != "$SAVED_MD5" ]; then
+    echo "You have modified original skin data. Unable to continue." >&2
+    echo "Please unpack package again and rerun this script." >&2
+fi
+
+if [ ! -d "$SRC" ] ; then
+    echo "Directory $SRC doesn't exist." >&2
+    prepare
+    exit 0
+fi
+
+if [ -z "$NAME" ] ; then
+    echo "missing package name" >&2
+    print_usage
+    exit 1
+fi
+
+SKIN=$NAME.zip
+
+make_skin
+
+echo ""
+echo "Done."
+echo "New skin package is available at "`pwd`"/$DST/$NAME-$MD5"
+echo ""
+

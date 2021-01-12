@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <widget name="StarRatings">
+        <param tag="width"><int>84</int></param>
+        <param tag="height"><int>16</int></param>
+        <param tag="spacing"><int>1</int></param>
+        <param tag="leftPadding"><int>0</int></param>
+        <param tag="topPadding"><int>0</int></param>
+        <param tag="itemsCount"><int>5</int></param>
+        <param tag="on"><bitmap><path>ratings/rating_star_active.png</path></bitmap></param>
+        <param tag="off"><bitmap><path>ratings/rating_star_inactive.png</path></bitmap></param>
+        <widget name="Item">
+            <param tag="width"><int>16</int></param>
+            <param tag="height"><int>16</int></param>
+        </widget>
+    </widget>
+</settings>

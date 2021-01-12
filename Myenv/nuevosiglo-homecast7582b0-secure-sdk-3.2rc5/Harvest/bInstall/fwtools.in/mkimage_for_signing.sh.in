@@ -1,0 +1,136 @@
+#!/bin/bash
+
+# Retrieves raw application binary image for signing
+#
+# Parameters:
+# $1 - output image name (optional) - if not given default name is used
+
+
+print_header()
+{
+	echo -e "\x1b[32m$*\x1b[39m"
+}
+
+check_latens_package_version()
+{
+	PACKAGE_NAME=$1
+	STB_VENDOR="S_LATENS_OEM_NAME"
+	STB_MODEL="S_LATENS_STB_MODEL"
+
+	IMAGE=$(basename $PACKAGE_NAME)
+	if [ -z "$(echo $PACKAGE_NAME | grep 'fd\|pd' | grep secure)" ]; then
+		echo "Wrong application built type. Only secure fd or pd image are allowed for Latens signing!"
+		exit 1
+	fi
+
+	TYPE="$(echo $IMAGE | cut -d'-' -f3)"
+	VERSION="$(echo $IMAGE | awk -F'nfsroot-' '{print $NF}' | sed 's/^\(.*\).tgz$/\1/')"
+
+	echo "Latens image type = $TYPE, VERSION = $VERSION"
+
+	if [ "$TYPE" = "fd" ]; then
+		LATENS_IMAGE_NAME=${STB_VENDOR}_${STB_MODEL}_Unsigned_FieldDebug_Application_${VERSION}.bin
+	elif [ "$TYPE" = "pd" ]; then
+		LATENS_IMAGE_NAME=${STB_VENDOR}_${STB_MODEL}_Application_Production_${VERSION}.unsigned
+	else
+		echo "Wrong image type = '$TYPE', only 'fd' and 'pd' are allowed"
+		exit 1
+	fi
+}
+
+
+OUTPUT_FILE=$1
+
+print_header "Checking nfsroot package ..."
+
+SRC_TGZ=`ls *.tgz | grep nfsroot`
+if [ -z "$SRC_TGZ" ]; then
+	echo "No nfsroot package found, are you running from sbuild directory?"
+	exit 1
+fi
+
+if [ `echo $SRC_TGZ | wc -w` -ne 1 ]; then
+	echo "Multiple packages found, select correct one:"
+	SEL_NUM=0
+	for SELECTION in $SRC_TGZ; do
+		SEL_NUM=$(($SEL_NUM + 1))
+		echo $SEL_NUM") "$SELECTION
+	done
+	read -n 1 FINAL_NUM
+	SEL_NUM=0
+	for SELECTION in $SRC_TGZ; do
+		SEL_NUM=$(($SEL_NUM + 1))
+		if [ $SEL_NUM -eq $FINAL_NUM ]; then
+			SEL_TGZ=$SELECTION
+			break
+		fi
+	done
+else
+	SEL_TGZ=$SRC_TGZ
+fi
+
+if [ -z "$SEL_TGZ" ]; then
+	echo ""
+	echo "Invalid selection"
+	exit 1
+fi
+echo "Using package: $SEL_TGZ"
+
+print_header "Checking application image ..."
+
+if [ "yes" = "${S_INSTALL_VMX_UPGRADE}" ]; then
+	IMG_KIND="VMX"
+    if [ "yes" = "${S_INSTALL_VMX_UPGRADE_2}" ]; then
+	    IMAGE_NAME=BOOTIMAGE.vmx
+    else
+    	IMAGE_NAME=ROOTFS.vmx
+    fi
+elif [ "yes" = "${S_INSTALL_LATENS_UPGRADE}" ]; then
+	IMG_KIND="LATENS"
+        if [ "yes" = "${S_INSTALL_LATENS_UPGRADE_2}" ]; then
+            IMAGE_NAME=BOOTIMAGE.latens
+        else
+            IMAGE_NAME=ROOTFS.latens
+        fi
+fi
+
+echo "Image kind: $IMG_KIND"
+
+WORK_DIR=./_image
+mkdir -p $WORK_DIR
+rm -rf $WORK_DIR/*
+pushd $WORK_DIR
+
+tar -xzf ../$SEL_TGZ firmware/
+chmod -R +w firmware
+
+if [ "$IMG_KIND" = "LATENS" ]; then
+	check_latens_package_version $SEL_TGZ
+	if [ -z "$OUTPUT_FILE" ]; then
+		OUTPUT_FILE=$LATENS_IMAGE_NAME
+	fi
+	QB_HEADER_SIZE=256
+	QB_SIGNATURE_SIZE=16
+
+elif [ "$IMG_KIND" = "VMX" ]; then
+	if [ -z "$OUTPUT_FILE" ]; then
+		OUTPUT_FILE=$IMAGE_NAME
+	fi
+	QB_HEADER_SIZE=256
+	QB_SIGNATURE_SIZE=256
+else
+	echo "Error: Unknown image kind: $IMG_KIND"
+	exit 1
+fi
+
+print_header "Copying application image ..."
+
+IMAGE_DIR=firmware/src
+IMAGE_PATH=$IMAGE_DIR/$IMAGE_NAME
+TOTAL_SKIP=$(( QB_HEADER_SIZE + QB_SIGNATURE_SIZE))
+tail -c +$((TOTAL_SKIP+1)) $IMAGE_PATH > ../$OUTPUT_FILE
+
+popd
+rm -rf $WORK_DIR
+
+print_header "Done, image copied to: $OUTPUT_FILE"

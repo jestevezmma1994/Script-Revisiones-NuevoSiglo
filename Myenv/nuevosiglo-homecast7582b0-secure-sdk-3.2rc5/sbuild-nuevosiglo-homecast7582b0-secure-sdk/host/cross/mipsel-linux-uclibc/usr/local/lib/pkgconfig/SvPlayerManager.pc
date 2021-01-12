@@ -1,0 +1,6 @@
+Name: SvPlayerManager
+Version: 1.0.0
+Requires: QBCAS SvFoundation SvPlayerKit autoplayer fibers 
+Description: Sentivision player manager
+Libs: -lSvPlayerManager 
+CFlags: 

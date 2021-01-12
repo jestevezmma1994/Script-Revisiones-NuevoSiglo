@@ -1,0 +1,19 @@
+#!/bin/sh
+
+. /etc/profile
+
+mkdir -p /etc/vod/app/qbopera
+
+chown -R appuser:appgroup /etc/vod/
+chmod -R ug+rw /etc/vod/
+
+for APP in $(ls /etc/vod/app); do
+    grep "${APP}" /etc/passwd
+    if [ $? -eq 0 ]; then
+        chown -R "${APP}" "/etc/vod/app/${APP}"
+    fi
+done
+
+mkdir -p /tmp/qbdialserver
+chown -R qbdialserver:appgroup /tmp/qbdialserver
+chmod -R ug+rw /tmp/qbdialserver

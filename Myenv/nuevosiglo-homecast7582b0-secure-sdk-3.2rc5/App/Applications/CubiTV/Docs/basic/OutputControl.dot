@@ -1,0 +1,20 @@
+digraph OutputControl {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    OutputControl [label="Output Control" root=true]
+
+    OutputStandardService
+    QBDualOutputHandler
+    QBStandbyAgent
+    aspectRatioAgent
+    videoFormatMonitor
+    volume
+
+
+    OutputControl -> OutputStandardService
+    OutputControl -> QBDualOutputHandler
+    OutputControl -> QBStandbyAgent
+    OutputControl -> aspectRatioAgent
+    OutputControl -> videoFormatMonitor
+    OutputControl -> volume
+}

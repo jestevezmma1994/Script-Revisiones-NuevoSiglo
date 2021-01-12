@@ -1,0 +1,106 @@
+*asm:
+%{mno-gpopt|mno-gpOPT:-G0} %{!mno-gpopt:%{!mno-gpOPT:%{G*}}} %{EB} %{EL} %{mips1} %{mips2} %{mips3} %{mips4} %{mips32} %{mips64}%{mips16:%{!mno-mips16:-mips16}} %{mno-mips16:-no-mips16} %(subtarget_asm_optimizing_spec) %(subtarget_asm_debugging_spec) %{membedded-pic} %(target_asm_spec) %(subtarget_asm_spec)
+
+*asm_final:
+
+
+*cpp:
+%{.cc:	-D__LANGUAGE_C_PLUS_PLUS -D_LANGUAGE_C_PLUS_PLUS} %{.cxx:	-D__LANGUAGE_C_PLUS_PLUS -D_LANGUAGE_C_PLUS_PLUS} %{.C:	-D__LANGUAGE_C_PLUS_PLUS -D_LANGUAGE_C_PLUS_PLUS} %{.m:	-D__LANGUAGE_OBJECTIVE_C -D_LANGUAGE_OBJECTIVE_C -D__LANGUAGE_C -D_LANGUAGE_C} %{.S:	-D__LANGUAGE_ASSEMBLY -D_LANGUAGE_ASSEMBLY %{!ansi:-DLANGUAGE_ASSEMBLY}} %{.sx:	-D__LANGUAGE_ASSEMBLY -D_LANGUAGE_ASSEMBLY %{!ansi:-DLANGUAGE_ASSEMBLY}} %{.s:	-D__LANGUAGE_ASSEMBLY -D_LANGUAGE_ASSEMBLY %{!ansi:-DLANGUAGE_ASSEMBLY}} %{!.S: %{!.sx: %{!.s: %{!.cc: %{!.cxx: %{!.C: %{!.m: -D__LANGUAGE_C -D_LANGUAGE_C %{!ansi:-DLANGUAGE_C}}}}}}}} %{.S:%{!no-traditional-cpp:-traditional} -$$} %{.sx:%{!no-traditional-cpp:-traditional} -$$} %{mips1:%{!ansi:-Umips -Dmips=1} -U__mips -D__mips=1} %{mips2:%{!ansi:-Umips -Dmips=2} -U__mips -D__mips=2} %{mips3:%{!ansi:-Umips -Dmips=3} -U__mips -D__mips=3 -D__mips64 -D__mipsfp64} %{mips4:%{!ansi:-Umips -Dmips=4} -U__mips -D__mips=4 -D__mips64 -D__mipsfp64} %{mips5:%{!ansi:-Umips -Dmips=5} -U__mips -D__mips=5 -D__mips64 -D__mipsfp64} %{mips32*:%{!ansi:-Umips -Dmips=32} -U__mips -D__mips=32 -D__mips_isa_rev=1} %{mips64*:%{!ansi:-Umips -Dmips=64} -U__mips -D__mips=64 -D__mips64 -D__mipsfp64 -D__mips_isa_rev=1} %{mips16e:%{!mips32*:%{!mips64*:%{!ansi:-Umips -Dmips=32} -U__mips -D__mips=32 -D__mips_isa_rev=1}}} %{mips32r2|mips64r2:-D__mipsr2 -U__mips_isa_rev -D__mips_isa_rev=2} %{mdmx:-D__mdmx} %{mgp32:-U__mips64} %{mgp64:-D__mips64} %{mfp32:-U__mipsfp64} %{mfp64:-D__mipsfp64} %{mips16*:%{!mno-mips16:-D__mips16}} %{mabi=:-Aabi(%*)} %{!mabi:  %{mlong64|mint64:-Aabi(64)}  %{!mlong64:%{!mint64:   %{!marg64:-Aabi(32) -D__mips_algabi}   %{marg64:-Aabi(o64) -D__mips_cygabi}}}} %{EL:-Acpu(mipsel) -Aendian(little) %{!ansi:-DMIPSEL} -D__MIPSEL__} %{!EL:-Acpu(mipseb) -Aendian(big) %{!ansi:-DMIPSEB} -D__MIPSEB__} %{mno-float:-D__NO_FLOAT -D__mips_no_float} %{msoft-float:-D__SOFT_FLOAT -D__mips_soft_float} %{msingle-float:-D__SINGLE_FLOAT -D__mips_single_float} %{mno-mul:-D__mips_no_mul} %{mentry:-D__mips16_entry} %{mcpu=*:-Acpu(%*)} %{mcpu=vr*:-Acpu(r%*)} %{mcpu=4k*:-Acpu(4k)} %{mcpu=5k*:-Acpu(5k)} %{mcpu=20k*:-Acpu(20k)} %{mcpu=24k*:-Acpu(24k)} %{mcpu=25k*:-Acpu(25k)} %{mcpu=vr4*:%{!ansi:-DCPU_R4000} -Acpu(r4000)} %{mcpu=r4*:%{!ansi:-DCPU_R4000} -Acpu(r4000)} %{mcpu=vr41*:%{!ansi:-DCPU_R41XX} -Acpu(vr41xx) -Acpu(r41xx)} %{mcpu=r41*:%{!ansi:-DCPU_R41XX} -Acpu(vr41xx) -Acpu(r41xx)} %{mcpu=vr54*:%{!ansi:-DCPU_R54XX} -Acpu(vr54xx) -Acpu(r54xx)} %{mcpu=r54*:%{!ansi:-DCPU_R54XX} -Acpu(vr54xx) -Acpu(r54xx)} %{mcpu=vr55*:%{!ansi:-DCPU_R55XX} -Acpu(vr55xx) -Acpu(r55xx)} %{mcpu=r55*:%{!ansi:-DCPU_R55XX} -Acpu(vr55xx) -Acpu(r55xx)} %{mcpu=vr5*:%{!ansi:-DCPU_R5000} -Acpu(r5%*) -Acpu(r5000)} %{mcpu=r5*:%{!ansi:-DCPU_R5000} -Acpu(r5000)} %{mcpu=rm52*:%{!ansi:-DCPU_RM52XX -DCPU_R5000} -Acpu(rm52xx) -Acpu(r5000)} %{mcpu=cw400*:%{!ansi:-DCPU_CW400X} -Acpu(cw400x)} %{mcpu=cw401*:%{!ansi:-DCPU_CW401X} -Acpu(cw401x)} %{mcpu=cw402*:%{!ansi:-DCPU_CW402X} -Acpu(cw402x)} %{mcpu=tr410*:%{!ansi:-DCPU_TR410X} -Acpu(tr410x)} %{mcpu=ev410*:%{!ansi:-DCPU_TR410X} -Acpu(tr410%*) -Acpu(tr410x)} %{mcpu=atm2:%{!ansi:-DCPU_ATM2 -DCPU_CW401X} -Acpu(atm2) -Acpu(cw401x)} %{mcpu=atmizer2:%{!ansi:-DCPU_ATM2 -DCPU_CW401X} -Acpu(atm2) -Acpu(cw401x)} %{mcpu=apu:%{!ansi:-DCPU_ATM2 -DCPU_CW401X} -Acpu(atm2) -Acpu(cw401x)} %{mcpu=lr33*:%{!ansi:-DCPU_LR33K} -Acpu(lr33k) -Acpu(r3000)} %{mcpu=pr39*:%{!ansi:-DCPU_R3900} -Acpu(r39*) -Acpu(r3000)} %{mcpu=rc3236*:%{!ansi:-DCPU_RC3236X} -Acpu(rc3236x)} %{mcpu=rc6457*:%{!ansi:-DCPU_RC6457X} -Acpu(rc6457x)} %{mcpu=r19*:%{!ansi:-DCPU_R1900} -Acpu(r3000)} %{mcpu=r3*:%{!ansi:-DCPU_R3000} -Acpu(r3000)} %{mcpu=r*:-Acpu(r*)} %{posix:-D_POSIX_SOURCE} %(subtarget_cpp_spec) 
+
+*cc1:
+%{gline:%{!g:%{!g0:%{!g1:%{!g2: -g1}}}}} %{mips1:-mfp32 -mgp32} %{mips2:-mfp32 -mgp32}%{mips3:-mfp64 -mgp64} %{mips4:-mfp64 -mgp64} %{mips5:-mfp64 -mgp64} %{mips32*:-mfp32 -mgp32} %{mips64*:-mfp64 -mgp64} %{mips16*:-G0 -fno-common -mno-check-zero-division} %{mips32-16:-G0 -fno-common -mno-check-zero-division} %{mips64-16:-G0 -fno-common -mno-check-zero-division} %{mno-data-in-code:%{!fpic:%{!fPIC:-G8 -mno-embedded-data}}} %{!mabi=*:%{!mlong64:%{!mint64:%{marg64:-mabi=o64}}}} %{G*} %{EB:-meb} %{EL:-mel} %{EB:%{EL:%emay not use both -EB and -EL}} %{save-temps: } %(subtarget_cc1_spec) 
+
+*cc1plus:
+
+
+*endfile:
+%{!nostdlib:%{startfiles:crtn.o%s}}
+
+*link:
+%{G*} %{!z:%{!n:%{!N:-n}}} %{EB} %{EL} %{!EB:%{!EL:-EB}} %{EB:%{EL:%emay not use both -EB and -EL}} %{mips3:%{!mgp32:%{mfp32:%{!nostdlib:%eno std libs for -mips3 -mfp32}}}} %{mips4:%{!mgp32:%{mfp32:%{!nostdlib:%eno std libs for -mips4 -mfp32}}}} %{mips5:%{!mgp32:%{mfp32:%{!nostdlib:%eno std libs for -mips5 -mfp32}}}} %{mips64*:%{!mgp32:%{mfp32:%{!nostdlib:%eno std libs for -mips64 -mfp32}}}}
+
+*lib:
+
+
+*libgcc:
+
+
+*startfile:
+%{!nostdlib:%{startfiles:crt0.o%s}}
+
+*switches_need_spaces:
+
+
+*signed_char:
+%{!fsigned-char:-D__CHAR_UNSIGNED__}
+
+*predefines:
+-Asystem(sde) -Acpu(mips) -Amachine(mips) -Dmips -D__SDE_MIPS__
+
+*cross_compile:
+1
+
+*version:
+2.96-mipssde-031117
+
+*multilib:
+. !EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips3 !EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips32 !EL !mips3 mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips32r2 !EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips64 !EL !mips3 !mips32 !mips32r2 mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips16 !EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;sof !EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;sgf !EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;nof !EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips16/sof !EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips16/sgf !EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;mips16/nof !EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips3/mips16 !EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips3/gp32 !EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips3/sof !EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips3/sgf !EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;mips3/nof !EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips3/gp32/sof !EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 msoft-float !msingle-float !mno-float !mfp64;mips3/gp32/sgf !EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 !msoft-float msingle-float !mno-float !mfp64;mips3/gp32/nof !EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 !msoft-float !msingle-float mno-float !mfp64;mips3/mips16/gp32 !EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips3/mips16/sof !EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips3/mips16/sgf !EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;mips3/mips16/nof !EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips3/mips16/gp32/sof !EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 msoft-float !msingle-float !mno-float !mfp64;mips3/mips16/gp32/sgf !EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 !msoft-float msingle-float !mno-float !mfp64;mips3/mips16/gp32/nof !EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 !msoft-float !msingle-float mno-float !mfp64;mips32/mips16 !EL !mips3 mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips32/sof !EL !mips3 mips32 !mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips32/nof !EL !mips3 mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips32/mips16/sof !EL !mips3 mips32 !mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips32/mips16/nof !EL !mips3 mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips32r2/mips16 !EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips32r2/sof !EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips32r2/nof !EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips32r2/f64 !EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float mfp64;mips32r2/mips16/sof !EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips32r2/mips16/nof !EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips32r2/mips16/f64 !EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float mfp64;mips64/mips16 !EL !mips3 !mips32 !mips32r2 mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;mips64/sof !EL !mips3 !mips32 !mips32r2 mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips64/nof !EL !mips3 !mips32 !mips32r2 mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;mips64/mips16/sof !EL !mips3 !mips32 !mips32r2 mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;mips64/mips16/nof !EL !mips3 !mips32 !mips32r2 mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips3 EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips32 EL !mips3 mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips32r2 EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips64 EL !mips3 !mips32 !mips32r2 mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips16 EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/sof EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/sgf EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;el/nof EL !mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips16/sof EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips16/sgf EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;el/mips16/nof EL !mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips3/mips16 EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips3/gp32 EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips3/sof EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips3/sgf EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;el/mips3/nof EL mips3 !mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips3/gp32/sof EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips3/gp32/sgf EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 !msoft-float msingle-float !mno-float !mfp64;el/mips3/gp32/nof EL mips3 !mips32 !mips32r2 !mips64 !mips16 mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips3/mips16/gp32 EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips3/mips16/sof EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips3/mips16/sgf EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float msingle-float !mno-float !mfp64;el/mips3/mips16/nof EL mips3 !mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips3/mips16/gp32/sof EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips3/mips16/gp32/sgf EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 !msoft-float msingle-float !mno-float !mfp64;el/mips3/mips16/gp32/nof EL mips3 !mips32 !mips32r2 !mips64 mips16 mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips32/mips16 EL !mips3 mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips32/sof EL !mips3 mips32 !mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips32/nof EL !mips3 mips32 !mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips32/mips16/sof EL !mips3 mips32 !mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips32/mips16/nof EL !mips3 mips32 !mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips32r2/mips16 EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips32r2/sof EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips32r2/nof EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips32r2/f64 EL !mips3 !mips32 mips32r2 !mips64 !mips16 !mgp32 !msoft-float !msingle-float !mno-float mfp64;el/mips32r2/mips16/sof EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips32r2/mips16/nof EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips32r2/mips16/f64 EL !mips3 !mips32 mips32r2 !mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float mfp64;el/mips64/mips16 EL !mips3 !mips32 !mips32r2 mips64 mips16 !mgp32 !msoft-float !msingle-float !mno-float !mfp64;el/mips64/sof EL !mips3 !mips32 !mips32r2 mips64 !mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips64/nof EL !mips3 !mips32 !mips32r2 mips64 !mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;el/mips64/mips16/sof EL !mips3 !mips32 !mips32r2 mips64 mips16 !mgp32 msoft-float !msingle-float !mno-float !mfp64;el/mips64/mips16/nof EL !mips3 !mips32 !mips32r2 mips64 mips16 !mgp32 !msoft-float !msingle-float mno-float !mfp64;
+
+*multilib_defaults:
+mips1 {mips1:mgp32 mfp32} {mips2:mgp32 mfp32} {mips32*:mgp32 mfp32} {mips64*:mgp64 mfp64} {mips3:mgp64 mfp64} {mips4:mgp64 mfp64} {mips5:mgp64 mfp64} {!mips1|mips2|mips3|mips4|mips5|mips32*|mips64*:mgp32 mfp32}
+
+*multilib_extra:
+mno-gpopt fno-optimize-sibling-calls
+
+*multilib_matches:
+m4650 msingle-float;mips4 mips3;mips5 mips3;mips64r2 mips64;mips16e mips16;mips16v2 mips16;mips32-16 mips16;mips64-16 mips16;EL EL;mips3 mips3;mips32 mips32;mips32r2 mips32r2;mips64 mips64;mips16 mips16;mgp32 mgp32;msoft-float msoft-float;msingle-float msingle-float;mno-float mno-float;mfp64 mfp64;
+
+*multilib_exclusions:
+
+
+*linker:
+collect2
+
+*subtarget_cc1_spec:
+
+
+*subtarget_cpp_spec:
+
+
+*subtarget_cpp_size_spec:
+%{mlong64:%{!mips1:%{!mips2:%{!mips32:-D__SIZE_TYPE__=long\ unsigned\ int -D__PTRDIFF_TYPE__=long\ int}}}} %{!mlong64:-D__SIZE_TYPE__=unsigned\ int -D__PTRDIFF_TYPE__=int}
+
+*long_max_spec:
+%{mabi=64|mabi=n64:-D__LONG_MAX__=9223372036854775807L}    %{mabi=eabi:%{!mgp32:%{mips3|mips4|mips5|mips64:-D__LONG_MAX__=9223372036854775807L}}}    %{mlong64:-D__LONG_MAX__=9223372036854775807L}
+
+*mips_as_asm_spec:
+%{!.s:-nocpp} %{.s: %{cpp} %{nocpp}} %{pipe: %e-pipe is not supported.} %{mabi=32:-32}%{mabi=o32:-32}%{mabi=n32:-n32}%{mabi=64:-64}%{mabi=n64:-64} %{K} %(subtarget_mips_as_asm_spec)
+
+*gas_asm_spec:
+%{mcpu=*} %{m4650} %{mmad:-m4650} %{m3900} %{m5400} %{v} %{mgp32} %{mgp64} %(abi_gas_asm_spec) %{mabi=32:%{!mips*:-mips2}} %{mno-fpe-in-dslot} %{mfpe-in-dslot}
+
+*abi_gas_asm_spec:
+%{mabi=*} %{!mabi=*:  %{mlong64|mint64:-mabi=64}  %{!mlong64:%{!mint64:   %{!marg64:-mabi=32}   %{marg64:-mabi=o64}}}}
+
+*target_asm_spec:
+%{mmips-as: %(mips_as_asm_spec)} %{!mmips-as: %(gas_asm_spec)}
+
+*subtarget_mips_as_asm_spec:
+%{v}
+
+*subtarget_asm_optimizing_spec:
+%{O*} %{noasmopt|fno-delayed-branch:-O0} %{!noasmopt:  %{!fno-delayed-branch:   %{fdelayed-branch:-O2}   %{!fdelayed-branch:    %{!O*:-O0}}}}
+
+*subtarget_asm_debugging_spec:
+%{!gdwarf-2*:%{!g0:%{!g1:%{.s:%{g*:-gstabs}} %{.S:%{g*:-gstabs}} %{.sx:%{g*:-gstabs}}}}} %{gdwarf-2*:%{!g0:%{!g1:%{.s:-gdwarf2} %{.S:-gdwarf2} %{.sx:-gdwarf2}}}}
+
+*subtarget_asm_spec:
+%{!EL:%{!EB:-EB}} %{mips1:-mfp32 -mgp32} %{mips2:-mfp32 -mgp32} %{mips3:-mfp64 -mgp64} %{mips4:-mfp64 -mgp64} %{mips5:-mfp64 -mgp64} %{mips32*:-mfp32 -mgp32} %{mips64*:-mfp64 -mgp64} %{mips3D:-mfp64 -mgp64} %{mips5} %{mips32*} %{mips64*} %{mips3D} %{mdmx} %{mips16*} %{msmartmips} %{mfp64} %{mfp32} %{mgp64} %{mgp32} %{msingle-float} %{mno-gpconst} %{membedded-data} %{mdiv-checks} %{mno-div-checks} %{mdwalign-labels} %{mfix-*} %{mno-fix-*} %{mno-fpe-in-dslot} %{mfpe-in-dslot} %{Werror:-X} %{algas} %{abi} %{sde} %{gnuld}
+
+*linker_endian_spec:
+
+
+*link_command:
+%{!fsyntax-only:  %{!c:%{!M:%{!MM:%{!E:%{!S:%(linker) %l %X %{o*} %{A} %{d} %{e*} %{m} %{N} %{n} 			%{r} %{s} %{t} %{u*} %{x} %{z} %{Z}			%{!A:%{!nostdlib:%{!nostartfiles:%S}}}			%{static:} %{L*} %D %o			%{!nostdlib:%{!nodefaultlibs:%G %L %G}}			%{!A:%{!nostdlib:%{!nostartfiles:%E}}}			%{T*}			
+ }}}}}}
+

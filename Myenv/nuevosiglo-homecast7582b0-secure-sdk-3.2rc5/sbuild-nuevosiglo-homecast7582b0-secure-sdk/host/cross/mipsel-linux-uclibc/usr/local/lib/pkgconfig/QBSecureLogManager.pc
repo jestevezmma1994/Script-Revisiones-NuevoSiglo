@@ -1,0 +1,6 @@
+Name: QBSecureLogManager
+Version: 1.0.0
+Requires: QBTextUtils SvCore SvFoundation fibers libcrypto libcurl openssl sv-list zlib 
+Description: Secure Logging Manager
+Libs: -lQBSecureLogManager 
+CFlags: 

@@ -1,0 +1,6 @@
+Name: QBAsyncResolver
+Version: 1.0.0
+Requires: SvCore fibers libcares sv-list 
+Description: Fiber service for asynchronous name resolving library
+Libs: -lQBAsyncResolver 
+CFlags: 

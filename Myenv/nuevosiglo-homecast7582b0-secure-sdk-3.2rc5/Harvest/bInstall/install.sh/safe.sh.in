@@ -1,0 +1,34 @@
+#!/bin/sh
+
+welcome_in() {
+	echo "FIRMWARE INSTALLATION, DO NOT REBOOT THE STB"
+}
+
+go_out() {
+	sync; sync; sync;
+	cnt=10
+	while [ $(( cnt-- )) -gt 0 ]; do
+		printf "FIRMWARE INSTALLTION COMPLETE, THE STB WILL REBOOT IN %d SECONDS\r" $cnt
+		sleep 1
+	done
+	reboot
+	sleep 3
+	reboot
+	sleep 3
+	reboot
+	sleep 10
+	reboot -f
+}
+
+do_write() {
+	FLASH=`cat /proc/mtd | grep "\<$2\>" | cut -d: -f0`
+	if [ ! -z "$FLASH" ]; then
+			echo "INFO: writting $1 on flash device $2"
+			flashcp -v $1 /dev/$FLASH || echo "WARNING!!! error $! when writing $1 to $2 at /dev/$FLASH"
+			return 0;
+	fi
+	#TODO: add harddrive support here!
+	echo "WARNING!!! Partition $2 not found! Image file $1 skipped!"
+	return 1;
+}
+

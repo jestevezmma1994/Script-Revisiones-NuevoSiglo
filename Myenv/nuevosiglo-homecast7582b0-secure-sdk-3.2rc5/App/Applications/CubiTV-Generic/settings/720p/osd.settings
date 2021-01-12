@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="clockOSD.settings"/>
+    <xi:include href="fonts.settings"/>
+    <xi:include href="TVTopOSD.settings"/>
+    <xi:include href="TVBottomOSD.settings"/>
+    <xi:include href="AnimatedBackgroundInTV.settings"/>
+
+    <widget name="playState">
+        <param tag="xOffset"><int>78</int></param>
+        <param tag="yOffset"><int>16</int></param>
+        <param tag="width"><int>64</int></param>
+        <param tag="height"><int>76</int></param>
+        <param tag="iconHideDelay"><int>2</int></param>
+        <param tag="bitmaps"><array>
+            <bitmap key="tv"><path>empty.png</path></bitmap>
+            <bitmap key="play"><path>osd/button_play.png</path></bitmap>
+            <bitmap key="pause"><path>osd/button_pause.png</path></bitmap>
+            <bitmap key="pauseNotAvailable"><path>osd/button_pause_not_available.png</path></bitmap>
+            <bitmap key="rw"><path>osd/button_rw.png</path></bitmap>
+            <bitmap key="fw"><path>osd/button_fw.png</path></bitmap>
+            <bitmap key="fwNotAvailable"><path>osd/button_fw_not_available.png</path></bitmap>
+        </array></param>
+    </widget>
+
+    <widget name="OSDPane">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+    </widget>
+
+</settings>

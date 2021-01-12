@@ -1,0 +1,6 @@
+Name: QBCAS
+Version: 1.0.0
+Requires: QBAppKit QBContentSource QBCrypto QBDescramblerHAL QBStaticStorage QBTSParser SvCore SvFoundation SvJSON dataformat fibers mpeg2 
+Description: Common interface for any CAS
+Libs: -lQBCAS 
+CFlags: 

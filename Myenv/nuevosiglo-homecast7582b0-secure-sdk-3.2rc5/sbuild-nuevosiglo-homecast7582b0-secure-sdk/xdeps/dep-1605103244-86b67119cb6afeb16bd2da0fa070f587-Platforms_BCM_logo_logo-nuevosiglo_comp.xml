@@ -1,0 +1,42 @@
+<perldata>
+ <hashref memory_address="0x245f0b0">
+  <item key="deps">
+   <hashref memory_address="0x2165f08">
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x23a5da8">
+    <item key="LOGO">nuevosiglo.jpg</item>
+    <item key="S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID">52</item>
+    <item key="S_MAP_DIR">${SRM_ROOT}/target/root/../maps/</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x19d4990">
+    <item key="Platforms/BCM/logo/Makefile">90fcb7f2f690838d4cbc9d27146c5321</item>
+    <item key="Platforms/BCM/logo/Makefile.old">ca1b9f3095f61872eaecf9210e7117b0</item>
+    <item key="Platforms/BCM/logo/logos/nuevosiglo.jpg">8c567218f178aa36b0df92f9e09e20c8</item>
+   </hashref>
+  </item>
+  <item key="string">Platforms/BCM/logo/logo-nuevosiglo.comp</item>
+  <item key="time">1605103244</item>
+  <item key="units">
+   <hashref memory_address="0x28dcd60">
+    <item key="LOGO">a</item>
+    <item key="Platforms/BCM/logo/Makefile">a</item>
+    <item key="Platforms/BCM/logo/Makefile.old">a</item>
+    <item key="Platforms/BCM/logo/logos/nuevosiglo.jpg">a</item>
+    <item key="S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID">a</item>
+    <item key="S_MAP_DIR">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/local/bin/mapreader.pl">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/maps/all.maps">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/sv-logo.bin">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x2057e70">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

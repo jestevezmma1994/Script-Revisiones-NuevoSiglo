@@ -1,0 +1,6 @@
+Name: QBPVRProvider
+Version: 1.0.0
+Requires: QBContentManager QBSearch SvCore SvEPGDataLayer SvFoundation SvPlayerKit TranslationMergerHeaders 
+Description: Cubiware virtual PVR provider
+Libs: -lQBPVRProvider 
+CFlags: 

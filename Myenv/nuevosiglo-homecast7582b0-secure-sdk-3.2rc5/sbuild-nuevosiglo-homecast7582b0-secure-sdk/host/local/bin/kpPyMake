@@ -1,0 +1,1416 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import os
+import sys
+import subprocess
+import fnmatch
+import shlex
+import shutil
+import time
+import string
+import threading
+import Queue
+import multiprocessing
+import errno
+
+#----------------------------------------------
+# simple utils
+#----------------------------------------------
+
+def join_string_list(lst):
+    s = ""
+    for i in lst:
+        if " " in i:
+            s += "\"" + i + "\" "
+        else:
+            s += i + " "
+    return s
+
+def remove_key(cont, key):
+    if cont.has_key(key):
+        del cont[key]
+
+#----------------------------------------------
+# logging
+#----------------------------------------------
+
+class bcolors:
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    TEAL = '\033[36m'
+    ENDC = '\033[0m'
+
+g_log_mutex = threading.Lock()
+
+def common_log(color, s):
+    g_log_mutex.acquire()
+    print>>sys.stderr, color + "kpPyMake >> " + s + bcolors.ENDC
+    g_log_mutex.release()
+
+def log_error(s):
+    common_log(bcolors.RED, "ERROR : %s" % s)
+
+def log_warn(s):
+    common_log(bcolors.YELLOW, "WARNING : %s" % s)
+
+def log_skip(s):
+    common_log(bcolors.TEAL, s)
+
+def log_state(s):
+    common_log(bcolors.GREEN, s)
+
+def log_debug(s):
+    return
+    common_log(bcolors.BLUE, s)
+
+def log_debug_dep(s):
+    return
+    common_log(bcolors.BLUE, s)
+
+def log_warn_dep(s):
+    #return
+    common_log(bcolors.YELLOW, s)
+
+def log_debug_args(s):
+    return
+    common_log(bcolors.BLUE, s)
+
+def log_task(s):
+    common_log(bcolors.TEAL, s)
+
+def log_my(s):
+    return
+    common_log(bcolors.TEAL, s)
+
+def log_task_verbose(lst):
+    s = join_string_list(lst)
+    common_log(bcolors.ENDC, s)
+
+#----------------------------------------------
+# system calls
+#----------------------------------------------
+
+def call(args, captureStderr=False):
+    #print>>sys.stderr, "caling", args
+    #print>>sys.stderr, "pwd = [%s]" % os.getcwd()
+    #if env != None:
+    #    print>>sys.stderr, "PATH = [%s]" % env["PATH"]
+
+    err = None
+    if captureStderr:
+        err = subprocess.PIPE
+
+    p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=err, close_fds=True)
+    (out,errout) = p.communicate()
+    res = p.returncode
+    return (res, out, errout)
+
+#----------------------------------------------
+# environment manipulations
+#----------------------------------------------
+
+def get_env(env, key):
+    if env.has_key(key):
+        return env[key]
+    return ""
+
+def get_env_nil(env, key):
+    if env.has_key(key):
+        return env[key]
+    return None
+
+def get_env_bool(env, key):
+    if not env.has_key(key):
+        return False
+    return env[key] == "yes" or env[key] == "true" or env[key] == "1"
+
+def get_env_list(env, key):
+    if not env.has_key(key):
+        return []
+    return shlex.split(env[key]) # shlex.split is reaaally slow, but it's called only limited amount of times it's ok
+
+def get_env_default(env, key, default):
+    if not env.has_key(key):
+        return default
+    return env[key]
+
+def expand_env(env, val):
+    # expand all $XXX and ${XXX} based on current env
+    template = string.Template(val)
+    return template.safe_substitute(env)
+
+def update_env(env, key, val):
+    env[key] = expand_env(env, val)
+
+def update_env_noover(env, key, val):
+    if not env.has_key(key):
+        env[key] = val
+
+#----------------------------------------------
+# filesystem utils
+#----------------------------------------------
+
+def norm_path(path):
+    path = os.path.normpath(path)
+    if path == ".":
+        path = ""
+    else:
+        path += "/"
+    return path
+
+def non_empty_dir(path):
+    if path == "":
+        return "."
+    return path
+
+def ensure_dir(target):
+    target_dir = os.path.dirname(target)
+    try:
+        os.makedirs(target_dir)
+    except OSError, e:
+        if e.errno != errno.EEXIST:
+            raise
+
+# dirname must NOT end with slash, cannot be empty, and must exist
+# prefix must be empty or end with slash
+def find_files_by_extension_(dirname, extensions, prefix):
+    out = []
+    files = os.listdir(dirname)
+    for f in files:
+        if os.path.isdir(prefix + f):
+            out += find_files_by_extension_(dirname + "/" + f, extensions, prefix + f + "/")
+        else:
+            for ext in extensions:
+                if len(f) > len(ext) and f[-len(ext):] == ext:
+                    out.append(prefix + f)
+    #log_state("find_files_by_extension_(%s) -> %s" % (dirname, out))
+    return out
+
+# dirname must be w/o slash
+def find_files_by_extension(dirname, extensions):
+    prefix = dirname
+    if len(prefix) > 0 and prefix[-1] != '/':
+        prefix += '/'
+
+    if dirname == "":
+        dirname = "."
+    if not os.path.isdir(dirname):
+        return []
+
+    return find_files_by_extension_(dirname, extensions, prefix)
+
+def copy_file(src, dst):
+    shutil.copyfile(src, dst)
+    # TODO: safer - with copy to tmp, and rename
+
+def copy_file_sync_mtime(src, dst, t=None):
+    ensure_dir(dst)
+    # remove dst first, otherwise if any program has dst mmapped, that program could crash
+    if os.path.isfile(dst) or os.path.islink(dst):
+        os.unlink(dst)
+    shutil.copyfile(src, dst)
+    shutil.copymode(src, dst)
+    if t == None:
+        t = time.time()
+    os.utime(src, (t, t))
+    os.utime(dst, (t, t))
+
+def get_mtime(name):
+    return os.lstat(name).st_mtime
+
+def get_mtime_follow(name):
+    return os.stat(name).st_mtime
+
+#----------------------------------------------
+# threading utils
+#----------------------------------------------
+
+class Worker(threading.Thread):
+    def __init__(self, tasks):
+        threading.Thread.__init__(self)
+        self.tasks = tasks
+        #self.daemon = True
+        self.start()
+
+    def run(self):
+        while True:
+            (ev, func, args, kargs) = self.tasks.get()
+            try:
+                func(*args, **kargs)
+            #except KeyboardInterrupt:
+                #exit(1)
+            except Exception, e:
+                log_error(e)
+            self.tasks.task_done()
+            ev.set()
+
+
+class ThreadPool:
+    def __init__(self, cnt):
+        self.tasks = Queue.Queue()
+        self.workers = []
+        for i in range(cnt):
+            self.workers.append(Worker(self.tasks))
+
+    def add_task(self, func, *args, **kargs):
+        ev = threading.Event()
+        self.tasks.put((ev, func, args, kargs))
+        return ev
+
+    def wait_for(self, ev_list):
+        for ev in ev_list:
+            ev.wait()
+
+#----------------------------------------------
+# application state
+#----------------------------------------------
+
+class AppState:
+    def __init__(self, env):
+        self.env = env
+        self.verbose = get_env_bool(env, "kpPyVerbose")
+        self.cppcheck = get_env_bool(env, "kpPyCppCheck")
+        self.cppcheck_console = get_env_bool(env, "kpPyCppCheckConsole")
+        self.cppcheck_threads_cnt = get_env_nil(env, "kpPyCppCheckThreadsCnt")
+        self.cppcheck_xml = get_env_bool(env, "kpPyCppCheckXml")
+        self.cppcheck_suppressions = get_env_nil(env, "kpPyCppSuppressions")
+        self.cppcheck_warnings = get_env_nil(env, "kpPyCppCheckWarnings")
+
+        disabledAnalysisTools = get_env_nil(env, "kpDisableStaticAnalysisTools")
+        if disabledAnalysisTools and disabledAnalysisTools.find('cppcheck') != -1:
+            self.cppcheck = None
+            self.cppcheck_console = None
+            self.cppcheck_xml = None
+            self.cppcheck_suppressions = None
+            self.cppcheck_threads_cnt = None
+            self.cppcheck_warnings = None
+
+        self.preprocess = get_env_bool(env, "kpPyPreprocess")
+
+        self.origCwd = norm_path(os.getcwd())
+        self.inOrigCwd = True
+        log_debug_args("cwd = [%s]" % self.origCwd)
+
+        # tools
+        if self.preprocess:
+            self.cc  = "cross-cpp"
+            self.cxx = "cross-cpp"
+        else:
+            self.cc  = get_env_default(env, "CC",  "gcc")
+            self.cxx = get_env_default(env, "CXX", "g++")
+
+        self.ar = get_env_default(env, "AR", "ar")
+
+        # targets
+        self.description = get_env_nil(env, "kpDesc")
+        if self.description == None:
+            self.description = get_env_nil(env, "SvDescription")
+
+        self.libName = get_env_nil(env, "kpPyLibraryName")
+        if self.libName:
+            major = get_env_nil(env, "kpPyLibraryMajor")
+            if major == None:
+                major = "1"
+            minor = get_env_nil(env, "kpPyLibraryMinor")
+            if minor == None:
+                minor = "0"
+            revision = get_env_nil(env, "kpPyLibraryRevision")
+            if revision == None:
+                revision = "0"
+            self.libVersion = [ major, minor, revision ]
+            log_debug_args("libName = [%s]" % self.libName)
+            log_debug_args("libVersion = %s" % self.libVersion)
+
+        self.execName = get_env_nil(env, "kpPyExecName")
+        if self.execName:
+            log_debug_args("execName = [%s]" % self.execName)
+
+        self.customExecNames = get_env_list(env, "kpPyCustomExecNames")
+        self.customExecSources = {}
+        for customExec in self.customExecNames:
+            sources = get_env_list(env, "kpPyCustomExecSources_%s" % customExec)
+            if len(sources) == 0:
+                sources = [ "%s.c" % customExec ]
+            self.customExecSources[customExec] = sources
+        log_debug_args("customExecNames = %s" % self.customExecNames)
+
+        # headers
+        self.hdrDir  = get_env_nil(env, "kpPyHeadersBaseDir")
+        self.hdrList = []
+        implicitHeaders = (self.libName != None)
+        if self.hdrDir != None or implicitHeaders:
+            if self.hdrDir == None:
+                self.hdrDir = "include/"
+            else:
+                log_debug_args("hdrDir = given [%s]" % self.hdrDir)
+                self.hdrDir = norm_path(self.hdrDir)
+            log_debug_args("hdrDir = [%s]" % self.hdrDir)
+
+            self.hdrList = get_env_nil(env, "kpPyHeaders")
+            if self.hdrList == None:
+                self.hdrList = find_files_by_extension(self.hdrDir, [".h", ".hpp"])
+            else:
+                log_debug_args("headers = given [%s]" % self.hdrList)
+                self.hdrList = shlex.split(self.hdrList) # shlex.split is reaaally slow, but it's called only once, so it's ok
+            log_debug_args("headers = %s" % self.hdrList)
+
+
+        # sources
+        self.srcDir = None
+        self.srcList = []
+        if self.libName != None or self.execName != None:
+            self.srcDir  = get_env_nil(env, "kpPySrcBaseDir")
+            if self.srcDir == None:
+                self.srcDir = "src/"
+            else:
+                log_debug_args("srcDir = given [%s]" % self.srcDir)
+                self.srcDir = norm_path(self.srcDir)
+            log_debug_args("srcDir = [%s]" % self.srcDir)
+
+            self.srcList = get_env_nil(env, "kpPySrcFiles")
+            if self.srcList == None:
+                self.srcList = find_files_by_extension(self.srcDir, [".c", ".cc", ".cpp", ".s", ".sx"])
+            else:
+                log_debug_args("sources = given [%s]" % self.srcList)
+                self.srcList = shlex.split(self.srcList) # shlex.split is reaaally slow, but it's called only once, so it's ok
+            log_debug_args("sources = %s" % self.srcList)
+
+        # deps
+        self.depsList = get_env_list(env, "kpPyPkgDeps")
+        self.exportedDepsList = self.depsList[:]
+        self.depsList += get_env_list(env, "kpPyPkgDepsPriv")
+        self.execDepsList = []
+        log_debug_args("deps = %s" % self.depsList)
+        log_debug_args("exported deps = %s" % self.exportedDepsList)
+
+        # dirs
+        self.tmpBaseDir = norm_path(env["kpPyTmpDir"])
+        self.tmpDir = "tmp/"
+        self.productsDir = "products/"
+        self.binDir = norm_path(env["kpPyBinPrefix"])
+
+        self.crossRoot = norm_path(env["CROSS_ROOT"])
+        self.targetRoot = norm_path(env["TARGET_ROOT"])
+        self.srmRoot = norm_path(env["SRM_ROOT"])
+
+        # flags
+        self.LdLibs   = get_env_list(env, "LDLIBS")
+        self.LdFlags  = get_env_list(env, "LDFLAGS")
+        self.CFlags   = get_env_list(env, "CFLAGS")
+        self.CxxFlags = get_env_list(env, "CXXFLAGS")
+        self.CppFlags = get_env_list(env, "CPPFLAGS")
+
+        self.staticLinking = get_env_bool(env, "kpPyStaticLinking")
+        self.staticLinkingBlacklistedLibs = get_env_list(env, "kpPyStaticLinkingBlacklistedLibs")
+        self.staticLinkingBlacklistedDirs = get_env_list(env, "kpPyStaticLinkingBlacklistedDirs")
+
+        if self.hdrDir != None:
+            self.CppFlags = [ "-I%s" % non_empty_dir(self.hdrDir) ] + self.CppFlags
+        self.CppFlags += [ "-I" + self.crossRoot + '/usr/include',
+                           "-I" + self.crossRoot + '/usr/local/include' ]
+        self.LdFlags += [ "-L" + self.crossRoot + '/usr/lib',
+                          "-L" + self.crossRoot + '/usr/local/lib' ]
+        # TODO? more include flags for CROSS_ROOT/usr/local/include, etc?, and the same for ldflags?
+
+        self.exportedLdLibs = self.LdLibs[:]
+        log_debug_args("exported ldlibs = %s" % self.exportedLdLibs)
+
+        self.exportedFlags = get_env_list(env, "kpPyExportedFlags")
+        self.staticLibsNotFound = []
+
+        self.FinalAlibFlags = []
+        self.FinalSolibFlags = []
+        self.FinalExecFlags = []
+        self.FinalLdLibs = []
+
+        # temps
+        self.fileMap = {}
+        self.depsTestedCnt = 0
+
+        # commands
+        self.checkLibsRelink = get_env_bool(env, "kpPyCheckLibsRelink")
+
+        # internals
+        file_cnt = len(self.srcList) + len(self.customExecNames)
+        thread_cnt = multiprocessing.cpu_count() * 2
+        if thread_cnt > 20:
+            thread_cnt = 20
+        if thread_cnt > file_cnt:
+            thread_cnt = file_cnt
+        if thread_cnt < 2:
+            thread_cnt = 2
+        self.thread_cnt = thread_cnt
+
+        if self.cppcheck:
+            name = None
+            self.cppcheck_path = None
+            if self.libName:
+                name = self.libName
+            elif self.execName:
+                name = self.execName
+
+            if name:
+                self.cppcheck_path = self.srmRoot + "/docs/cppcheck/" + name
+
+            if self.cppcheck_path:
+                ensure_dir(self.cppcheck_path)
+
+        self.thread_pool = ThreadPool(thread_cnt)
+
+
+def exit_app(app, code):
+    os._exit(code)
+
+
+#----------------------------------------------
+# application : path utils
+#----------------------------------------------
+
+def tmp_prefix_dir(app):
+    if app.inOrigCwd:
+        return app.tmpBaseDir
+    else:
+        return "";
+
+def src_to_obj(app, src):
+    if app.preprocess:
+        return src
+    else:
+        return tmp_prefix_dir(app) + app.tmpDir + src + ".o"
+
+def src_to_dep(app, src):
+    return tmp_prefix_dir(app) + app.tmpDir + src + ".d"
+
+def hdr_to_product(app, hdr):
+    return tmp_prefix_dir(app) + app.productsDir + "usr/local/include/" + hdr[len(app.hdrDir):]
+
+def product_to_cross(app, product):
+    return app.crossRoot + product[len(app.productsDir):]
+
+def product_to_target(app, product):
+    return app.targetRoot + product[len(app.productsDir):]
+
+def solib_to_links(app, solib, isCross):
+    len2 = 1 + len(app.libVersion[2])
+    len1 = 1 + len(app.libVersion[1]) + len2
+    len0 = 1 + len(app.libVersion[0]) + len1
+
+    name_tab = []
+
+    if isCross:
+        # libX.so      needed for linking with -lX
+        name_tab.append(solib[:-len0])
+        # libX.so.1    completely unneeded
+        #name_tab.append(solib[:-len1])
+
+    # libX.so.1.0  needed when linking in run-time (filename must be the same as soname, and we pass "X.so.1.0" as soname)
+    #              may be needed for recursive linking in compile-time on some platforms
+    name_tab.append(solib[:-len2])
+
+    return name_tab
+
+def solib_to_soname(app, solib):
+    len2 = 1 + len(app.libVersion[2])
+    return solib[:-len2]
+
+def get_exec_product(app, execName):
+    return tmp_prefix_dir(app) + app.productsDir + app.binDir + execName
+
+def get_solib_file_name(app):
+    return "lib%s.so.%s.%s.%s" % (app.libName, app.libVersion[0], app.libVersion[1], app.libVersion[2])
+
+def get_solib_product(app):
+    return tmp_prefix_dir(app) + app.productsDir + "usr/local/lib/" + get_solib_file_name(app)
+
+def get_alib_file_name(app):
+    return "lib" + app.libName + ".a"
+
+def get_alib_product(app):
+    return tmp_prefix_dir(app) + app.productsDir + "usr/local/lib/" + get_alib_file_name(app)
+
+def get_pkgconfig_product(app):
+    return tmp_prefix_dir(app) + app.productsDir + "usr/local/lib/pkgconfig/" + app.libName + ".pc"
+
+def get_store_file(app, name):
+    return tmp_prefix_dir(app) + "store/" + name
+
+
+#----------------------------------------------
+# application : calling pkg-config
+#----------------------------------------------
+
+def calc_pkg_config(app, deps, addWholeArchive):
+    if len(deps) == 0:
+        return
+
+    cmd = ["pkg-config", "--print-errors", "--cflags", "--libs"]
+    if app.staticLinking:
+        cmd += ["--static"]
+
+    cmd += deps
+
+    if app.verbose:
+        log_task_verbose(cmd)
+    (res, output, _) = call(cmd)
+    if res != 0:
+        log_error("pkg-config failed to resolve dependencies for libraries:")
+        log_error(deps)
+        exit_app(app, 1)
+
+    output = expand_env(app.env, output)
+
+    if addWholeArchive:
+        app.LdLibs.append("-Wl,-whole-archive")
+
+    tab = shlex.split(output) # shlex.split is reaaally slow, but it's called only once, so it's ok
+    for entry in tab:
+        if entry[0:2] == "-I" or entry[0:2] == "-D":
+            app.CppFlags.append(entry)
+        elif entry[0:2] == "-l":
+            app.LdLibs.append(entry)
+        elif entry[0:2] == "-L":
+            app.LdFlags.append(entry)
+
+    if addWholeArchive:
+        app.LdLibs.append("-Wl,-no-whole-archive")
+
+
+#----------------------------------------------
+# application : check if X has to be done again
+#----------------------------------------------
+
+def check_rebuild_needed(app, src):
+    target = src_to_obj(app, src)
+
+    ensure_dir(target)
+
+    log_debug_dep("[%s] -> [%s]" % (src, target))
+    if not os.path.isfile(target):
+        #log_warn_dep("  [%s] : target file [%s] does not exist" % (src, target))
+        return True
+
+    dep = src_to_dep(app, src)
+    log_debug_dep("  dep file is [%s]" % dep)
+    if not os.path.isfile(dep):
+        log_warn_dep("  [%s] : dep file does not exist" % src)
+        os.remove(target)
+        return True
+
+    target_time = get_mtime(target)
+
+    f = open(dep, "r")
+    for line in f:
+        line = line.lstrip(" \t").rstrip(" \t\r\n\\")
+        if line == "":
+            continue
+        files = line.split(" ")
+        for sub_file in files:
+            if len(sub_file) == 0:
+                continue
+            if sub_file[-1] == ':':
+                continue
+            log_debug_dep("  testing [%s]" % sub_file)
+            app.depsTestedCnt += 1
+
+            sub_mtime = None
+            if app.fileMap.has_key(sub_file):
+                sub_mtime = app.fileMap[sub_file]
+            else:
+                if not os.path.isfile(sub_file):
+                    log_warn_dep("  [%s] : [%s] does not exist" % (src, sub_file))
+                    os.remove(dep)
+                    os.remove(target)
+                    return True
+                sub_mtime = get_mtime(sub_file)
+                app.fileMap[sub_file] = sub_mtime
+
+            if sub_mtime > target_time:
+                log_warn_dep("  [%s] : [%s] is newer" % (src, os.path.basename(sub_file)))
+                os.remove(dep)
+                os.remove(target)
+                return True
+            log_debug_dep("  target=%d, sub=%d" % (target_time, sub_mtime))
+
+
+    all_flags = [ "cppflags" ]
+    if src[-4:] == ".cpp" or src[-3:] == ".cc":
+        all_flags += [ "cxxflags" ]
+    else:
+        all_flags += [ "cflags" ]
+
+    for flags in all_flags:
+        flags_file = get_store_file(app, flags)
+        flags_mtime = get_mtime(flags_file)
+        if flags_mtime > target_time:
+            log_warn_dep("  [%s] - [%s] are newer" % (src, flags))
+            os.remove(target)
+            return True
+
+    log_debug_dep("  no need to rebuild")
+    return False
+
+
+def generate_link_objs(app, srcList):
+    for src in srcList:
+        obj = src_to_obj(app, src)
+        yield obj
+    yield get_store_file(app, "srclist")
+
+def lib_is_in_weird_location(lib):
+    if lib in [ "stdc++", "m", "dl", "rt", "pthread" ]:
+        return True
+    return False
+
+def find_lib_location(app, linkCmdLib, findStaticLib, target):
+    libs_paths = [ "/usr/local/lib", "/usr/lib", "/lib" ]
+
+    lib = linkCmdLib[2:]
+    lib_short_name = "lib%s.so" % lib
+
+    if findStaticLib:
+        if (lib in app.staticLinkingBlacklistedLibs):
+            return None
+        lib_short_name = "lib%s.a" % lib
+        libs_paths = [ path for path in libs_paths if path not in app.staticLinkingBlacklistedDirs ]
+
+    log_debug_dep("  looking for [%s]" % lib_short_name)
+
+    for path in libs_paths:
+        full_name = "%s/%s/%s" % (app.crossRoot, path, lib_short_name)
+        if os.path.isfile(full_name):
+            return full_name
+        log_debug_dep("    not in [%s]" % full_name)
+
+    log_warn_dep("[%s] : [%s] does not exist" % (os.path.basename(target), lib_short_name))
+    return None
+
+def check_relink_needed(app, product, srcList, checkLibsRelink=True):
+    ensure_dir(product)
+
+    productExists = True
+
+    log_debug_dep("srcList -> [%s]" % product)
+    if not os.path.isfile(product):
+        log_warn_dep("[%s] does not exist" % product)
+        productExists = False
+    else:
+        product_mtime = get_mtime(product)
+
+        for dep in generate_link_objs(app, srcList):
+            dep_mtime = get_mtime(dep)
+            log_debug_dep("  testing [%s]" % dep)
+            if dep_mtime > product_mtime:
+                log_warn_dep("[%s] : [%s] is newer" % (os.path.basename(product), os.path.basename(dep)))
+                os.remove(product)
+                productExists = False
+                break
+            log_debug_dep("  target=%d, sub=%d" % (product_mtime, dep_mtime))
+
+
+    # construct final target-specific flags used by command-line
+
+    if app.libName:
+        libName = get_solib_file_name(app)
+        soName = solib_to_soname(app, libName)
+        app.FinalSolibFlags = ["-shared", "-Wl,-soname=" + soName]
+        app.FinalAlibFlags  = []
+    elif app.execName:
+        app.FinalExecFlags  = []
+
+    # construct final LdLibs used by command-line
+    # also: if any ldlibs are newer than product, force relinking
+
+    FinalLdLibs = []
+    staticLibsNotFound = []
+    lastStaticLinking = False
+
+    for lib in app.LdLibs:
+        if lib[:2] != "-l":
+            FinalLdLibs += [lib]
+            continue
+
+        staticLinking = app.staticLinking
+
+        if lib_is_in_weird_location(lib[2:]):
+            staticLinking = False # skip checking system stuff (can be in some weird locations anyway)
+        else:
+            # find static or dynamic library
+            staticLinking = app.staticLinking
+            if staticLinking:
+                lib_full_name = find_lib_location(app, lib, True, product)
+                if lib_full_name == None:
+                    staticLinking = False
+            if not staticLinking:
+                lib_full_name = find_lib_location(app, lib, False, product)
+
+            if lib_full_name == None:
+                if productExists:
+                    os.remove(product)
+                    productExists = False
+                staticLinking = False
+            elif checkLibsRelink and productExists: # check if lib is newer than product
+                log_debug_dep("    testing [%s]" % lib_full_name)
+                lib_mtime = get_mtime_follow(lib_full_name)
+                if lib_mtime > product_mtime:
+                    log_warn_dep("[%s] : [%s] is newer" % (os.path.basename(product), os.path.basename(lib_full_name)))
+                    os.remove(product)
+                    productExists = False
+                else:
+                    log_debug_dep("    target=%d, sub=%d" % (product_mtime, lib_mtime))
+
+        if app.staticLinking and (not staticLinking):
+            log_warn_dep("  static lib not used for : [%s]" % lib)
+            staticLibsNotFound += [lib]
+
+        if lastStaticLinking and (not staticLinking):
+            FinalLdLibs += [ "-Wl,-dy" ]
+        elif (not lastStaticLinking) and staticLinking:
+            FinalLdLibs += [ "-Wl,-dn" ]
+        lastStaticLinking = staticLinking
+
+        FinalLdLibs += [lib]
+
+    if lastStaticLinking:
+        FinalLdLibs += ["-Wl,-dy"]
+        lastStaticLinking = False
+
+    app.FinalLdLibs = FinalLdLibs
+    app.staticLibsNotFound = staticLibsNotFound
+
+    if productExists:
+        log_debug_dep("  relink not needed")
+
+    log_debug_dep("staticLibsNotFound = %s" % app.staticLibsNotFound)
+    return (not productExists)
+
+
+def compare_sets(debug_name, old_set, new_set):
+    added_elems = new_set - old_set
+    removed_elems = old_set - new_set
+    if len(added_elems) == 0 and len(removed_elems) == 0:
+        return False
+    log_warn("%s have changed" % debug_name)
+    for a in added_elems:
+        log_warn("[+] %s" % a)
+    for r in removed_elems:
+        log_warn("[-] %s" % r)
+    return True
+
+def check_storedset_changed(app, name, lst):
+    new_set = set(lst)
+
+    store_file = get_store_file(app, name)
+
+    if os.path.isfile(store_file):
+        old_tab = []
+        f = open(store_file, "rb")
+        for line in f:
+            line = line.rstrip("\r\n")
+            old_tab.append(line)
+        f.close()
+        old_set = set(old_tab)
+        different = compare_sets(name, old_set, new_set)
+        if not different:
+            return False
+        os.remove(store_file)
+    else:
+        ensure_dir(store_file)
+
+    store_file_tmp = store_file + ".tmp"
+    f = open(store_file_tmp, "wb")
+    for entry in new_set:
+        f.write(entry + "\n")
+    f.close()
+
+    os.rename(store_file_tmp, store_file)
+    return True
+
+
+def check_changes_cppflags(app):
+    return check_storedset_changed(app, "cppflags", app.CppFlags)
+
+def check_changes_cflags(app):
+    return check_storedset_changed(app, "cflags", app.CFlags)
+
+def check_changes_cxxflags(app):
+    return check_storedset_changed(app, "cxxflags", app.CxxFlags)
+
+def check_changes_ldlibs(app):
+    return check_storedset_changed(app, "ldlibs", app.FinalLdLibs)
+
+def check_changes_solibflags(app):
+    return check_storedset_changed(app, "solibflags", app.FinalSolibFlags)
+
+def check_changes_srclist(app):
+    return check_storedset_changed(app, "srclist", app.srcList)
+
+def check_install_neeeded(app, src, dst):
+    if not os.path.isfile(dst):
+        ensure_dir(dst)
+        return True
+    else:
+        src_mtime = get_mtime(src)
+        dst_mtime = get_mtime(dst)
+        if src_mtime == dst_mtime:
+            return False
+        os.remove(dst)
+        if dst_mtime > src_mtime:
+            log_warn("[%s] has been changed from outside of this build" % dst)
+        return True
+
+
+#----------------------------------------------
+# application : compile
+#----------------------------------------------
+
+def compile_source_file(app, src):
+    obj = src_to_obj(app, src)
+    dep = src_to_dep(app, src)
+
+    log_task("Compiling [%s]" % src)
+
+    if src[-2:] == ".c":
+        base_cmd = [app.cc]
+        base_cmd += app.CFlags
+    elif src[-2:] == ".s":
+        base_cmd = [app.cc]
+        base_cmd += app.CFlags
+    elif src[-3:] == ".sx":
+        base_cmd = [app.cc, "-x", "assembler-with-cpp"]
+        base_cmd += app.CFlags
+    elif src[-4:] == ".cpp" or src[-3:] == ".cc":
+        base_cmd = [app.cxx] + app.CxxFlags
+
+    base_cmd += app.CppFlags
+
+    src_full_name = src
+
+    # compile
+    if not app.preprocess:
+        obj_tmp = obj + ".tmp"
+    else:
+        obj_tmp = src + ".out"
+
+    compile_options = []
+
+    if app.preprocess:
+        base_cmd = filter(lambda a: a != "-g3", base_cmd)
+        base_cmd += ["-E", "-P"]
+    else:
+      compile_options += ["-fPIC"]
+      compile_options += ["-c"]
+
+    compile_options += ["-o", obj_tmp, src_full_name]
+    compile_cmd = base_cmd + compile_options
+
+    if app.verbose:
+        log_task_verbose(compile_cmd)
+    (res, output, _) = call(compile_cmd)
+    if res != 0:
+        log_error("Failed to compile [%s]" % src)
+        log_error(compile_cmd)
+        return False
+
+    if app.preprocess:
+        return True
+
+    # generate new deps
+    dep_tmp = dep + ".tmp"
+    gen_dep_options = ["-M", "-MF", dep_tmp, src_full_name]
+    gen_deps_cmd = base_cmd + gen_dep_options
+
+    #if app.verbose:
+    #    log_task_verbose(gen_deps_cmd)
+    (res, output, _) = call(gen_deps_cmd)
+    if res != 0:
+        log_error("Failed to generate deps for [%s]" % src)
+        log_error(gen_deps_cmd)
+        return False
+
+    # final objects
+    os.rename(dep_tmp, dep)
+    os.rename(obj_tmp, obj)
+    return True
+
+def compile_source_file_threaded(args):
+    (app, src) = args
+    succ = compile_source_file(app, src)
+    if not succ:
+        exit_app(app, 1)
+
+def compile_sources(app):
+    src_all = set()
+    src_all |= set(app.srcList)
+    for vals in app.customExecSources.itervalues():
+        src_all |= set(vals)
+
+    src_to_rebuild = []
+
+    if app.preprocess:
+        src_to_rebuild = src_all
+    else:
+        log_debug("  check which sources need to be compiled (%d)" % len(src_all))
+        before = time.time()
+        for src in src_all:
+            if check_rebuild_needed(app, src):
+                src_to_rebuild.append(src)
+        after = time.time()
+        log_my("%f (check compile needed)" % (after - before))
+        log_debug("  check which sources need to be compiled - done (%f)" % (after - before))
+        log_debug("  file map size = %d" % len(app.fileMap))
+        log_debug("  deps tested cnt = %d" % app.depsTestedCnt)
+
+    log_debug("  compiling sources (%d)" % len(src_to_rebuild))
+    ev_list = []
+    for src in src_to_rebuild:
+        ev = app.thread_pool.add_task(compile_source_file_threaded, (app, src))
+        ev_list.append(ev)
+
+    app.thread_pool.wait_for(ev_list)
+    log_debug("  compiling sources - done")
+
+    if app.cppcheck and app.cppcheck_path and len(src_all):
+        log_debug("  generating cppcheck results (%d)" % len(src_all))
+
+        cppcheck_file_list = app.tmpBaseDir + "/" + "cppcheckFileList"
+        f = open(cppcheck_file_list, "w")
+        for src_path in src_all:
+            f.write(os.path.abspath(src_path))
+            f.write("\n")
+        f.close()
+
+        cppcheck_cmd = ["cppcheck"]
+        if app.cppcheck_xml:
+            cppcheck_cmd.append("--xml-version=2")
+        if app.cppcheck_suppressions:
+            cppcheck_cmd.append("--suppressions")
+            cppcheck_cmd.append(app.cppcheck_suppressions)
+
+        cppcheck_threads = ''
+        if app.cppcheck_threads_cnt and str(app.cppcheck_threads_cnt).isdigit() and int(app.cppcheck_threads_cnt) > 0:
+            cppcheck_threads= app.cppcheck_threads_cnt
+        else:
+            cppcheck_threads = app.thread_cnt
+
+        if app.cppcheck_warnings:
+            cppcheckWarnings = app.cppcheck_warnings
+        else:
+            cppcheckWarnings = "warning,portability,performance"
+
+        cppcheck_cmd += ["--enable=" + cppcheckWarnings, "-q", "-j", str(cppcheck_threads), "--file-list=" + cppcheck_file_list, "-rp=" + norm_path(app.srmRoot + "/../")]
+        (res, output, erroutput) = call(cppcheck_cmd, True)
+        if res != 0:
+            log_error("Failed to run cppcheck")
+            log_error(cppcheck_cmd)
+            exit_app(app, 1)
+
+        if len(erroutput):
+            f = open(app.cppcheck_path, "w")
+            f.write(erroutput)
+            f.close()
+            if app.cppcheck_console:
+                log_error("%s" % erroutput)
+
+def compile_exec(app, execName, srcList):
+    product = get_exec_product(app, execName)
+
+    relinkNeeded = check_relink_needed(app, product, srcList, checkLibsRelink=True)
+    if check_changes_ldlibs(app):
+        relinkNeeded = True
+
+    if not relinkNeeded:
+        return
+
+    log_task("Linking [%s]" % execName)
+
+    cmd = [app.cc]
+    cmd += app.FinalExecFlags
+    cmd += app.LdFlags
+    for src in srcList:
+        cmd.append(src_to_obj(app, src))
+
+    cmd += app.FinalLdLibs
+
+    product_tmp = product + ".tmp"
+    cmd += ["-o", product_tmp]
+
+    if app.verbose:
+        log_task_verbose(cmd)
+    (res, output, _) = call(cmd)
+    if res != 0:
+        log_error("Failed to link executable [%s]" % execName)
+        log_error(cmd)
+        exit_app(app, 1)
+
+    os.rename(product_tmp, product)
+
+
+def compile_solib(app):
+    libName = get_solib_file_name(app)
+    product = get_solib_product(app)
+
+    relinkNeeded = check_relink_needed(app, product, app.srcList, checkLibsRelink=app.checkLibsRelink)
+    if check_changes_ldlibs(app):
+        relinkNeeded = True
+    if check_changes_solibflags(app):
+        relinkNeeded = True
+
+    if not relinkNeeded:
+        return
+
+    log_task("Linking dynamic library [%s]" % libName)
+
+    cmd = [app.cc]
+    cmd += app.FinalSolibFlags
+    cmd += app.LdFlags
+    for src in app.srcList:
+        cmd.append(src_to_obj(app, src))
+
+    cmd += app.FinalLdLibs
+
+    product_tmp = product + ".tmp"
+    cmd += ["-o", product_tmp]
+
+    if app.verbose:
+        log_task_verbose(cmd)
+    (res, output, _) = call(cmd)
+    if res != 0:
+        log_error("Failed to link dynamic library [%s]" % libName)
+        log_error(cmd)
+        exit_app(app, 1)
+
+    os.rename(product_tmp, product)
+
+def compile_alib(app):
+    libName = get_alib_file_name(app)
+    product = get_alib_product(app)
+
+    relinkNeeded = check_relink_needed(app, product, app.srcList, checkLibsRelink=app.checkLibsRelink)
+    if check_changes_ldlibs(app):
+        relinkNeeded = True
+
+    if not relinkNeeded:
+        return
+
+    log_task("Linking static library [%s]" % libName)
+
+    cmd = [app.ar, "cru"]
+    cmd += app.FinalAlibFlags
+    product_tmp = product + ".tmp"
+    cmd += [product_tmp]
+
+    for src in app.srcList:
+        cmd.append(src_to_obj(app, src))
+
+    if app.verbose:
+        log_task_verbose(cmd)
+    (res, output, _) = call(cmd)
+    if res != 0:
+        log_error("Failed to link static library [%s]" % libName)
+        log_error(cmd)
+        exit_app(app, 1)
+
+    os.rename(product_tmp, product)
+
+def compile_headers(app):
+    for hdr in app.hdrList:
+        if not os.path.isfile(app.origCwd + hdr):
+            log_error("Given header is not a file [%s]" % hdr)
+            exit_app(app, 1)
+        product = hdr_to_product(app, hdr)
+        if not os.path.isfile(product):
+            log_debug("Copying [%s] as [%s]" % (hdr, product))
+            ensure_dir(product)
+            copy_file(app.origCwd + hdr, product)
+        else:
+            hdr_mtime = get_mtime(app.origCwd + hdr)
+            product_mtime = get_mtime(product)
+            if hdr_mtime > product_mtime:
+                log_debug("Overwriting [%s] as [%s]" % (hdr, product))
+                copy_file(app.origCwd + hdr, product)
+
+
+def generate_pkgconfig_body(app):
+    s  = "Name: %s\n" % app.libName
+    s += "Version: 1.0.0\n"
+    s += "Requires: %s\n" % join_string_list(app.exportedDepsList)
+    s += "Description: %s\n" % app.description
+
+    if app.staticLinking:
+        s += "Libs: -l%s %s\n" % (app.libName, join_string_list(app.staticLibsNotFound))
+    else:
+        s += "Libs: -l%s %s\n" % (app.libName, join_string_list(app.exportedLdLibs))
+
+    s += "CFlags: %s\n" % join_string_list(app.exportedFlags)
+    return s
+
+def compile_pkgconfig(app):
+    new_body = generate_pkgconfig_body(app)
+
+    product = get_pkgconfig_product(app)
+
+    if os.path.isfile(product):
+        f = open(product, "r")
+        old_body = f.read()
+        f.close()
+
+        if old_body == new_body:
+            return
+        log_warn("pkg-config body changed")
+        log_warn("OLD:\n%s" % old_body)
+        log_warn("NEW:\n%s" % new_body)
+        os.remove(product)
+
+    log_task("Writing pkg body to [%s]" % os.path.basename(product))
+    ensure_dir(product)
+    f = open(product, "wb")
+    f.write(new_body)
+    f.close()
+
+
+#----------------------------------------------
+# application : install
+#----------------------------------------------
+
+def install_headers(app):
+    for hdr in app.hdrList:
+        product = hdr_to_product(app, hdr)
+        cross = product_to_cross(app, product)
+        if check_install_neeeded(app, product, cross):
+            log_task("Installing header [%s]" % hdr)
+            copy_file_sync_mtime(product, cross)
+
+
+def install_pkgconfig(app):
+    product = get_pkgconfig_product(app)
+    cross = product_to_cross(app, product)
+    if check_install_neeeded(app, product, cross):
+        log_task("Installing pkg-config [%s]" % os.path.basename(product))
+        copy_file_sync_mtime(product, cross)
+
+
+def install_link(app, src, dst):
+    if not os.path.islink(src):
+        if os.path.exists(src):
+            if os.path.isfile(src):
+                log_warn("[%s] is not a link, but a regular file" % src)
+                os.remove(src)
+            elif os.path.isdir(src):
+                log_warn("[%s] is not a link, removing recursively" % src)
+                shutil.rmtree(src)
+            else:
+                log_warn("[%s] is not a link, what's that?" % src)
+                #shutil.rmtree(src)
+                exit_app(app, 1)
+    else:
+        old_dst = os.readlink(src)
+        if old_dst == dst:
+            return
+        log_warn("[%s] points to [%s], should point to [%s]" % (src, old_dst, dst))
+        os.remove(src)
+
+    log_task("Linking [%s] -> [%s]" % (os.path.basename(src), dst))
+    os.symlink(dst, src)
+
+
+def install_solib(app):
+    product = get_solib_product(app)
+    cross = product_to_cross(app, product)
+    target = product_to_target(app, product)
+
+    needInstall = False
+    if check_install_neeeded(app, product, cross):
+        needInstall = True
+    elif check_install_neeeded(app, product, target):
+        needInstall = True
+
+    if needInstall:
+        t = time.time()
+        #log_task("Installing [%s] to [%s]" % (product, cross))
+        log_task("Installing solib [%s] to cross-root" % get_solib_file_name(app))
+        copy_file_sync_mtime(product, cross, t)
+        #log_task("Installing [%s] to [%s]" % (product, target))
+        log_task("Installing solib [%s] to target-root" % get_solib_file_name(app))
+        copy_file_sync_mtime(product, target, t)
+
+    # now links
+    product_basename = os.path.basename(product)
+    for lnk in solib_to_links(app, cross, True):
+        install_link(app, lnk,  product_basename)
+    for lnk in solib_to_links(app, target, False):
+        install_link(app, lnk,  product_basename)
+
+def install_alib(app):
+    product = get_alib_product(app)
+    cross = product_to_cross(app, product)
+    if check_install_neeeded(app, product, cross):
+        log_task("Installing static lib [%s]" % get_alib_file_name(app))
+        copy_file_sync_mtime(product, cross)
+
+def install_exec(app, execName):
+    product = get_exec_product(app, execName)
+    target = product_to_target(app, product)
+    if check_install_neeeded(app, product, target):
+        log_task("Installing exec [%s]" % execName)
+        copy_file_sync_mtime(product, target)
+
+
+#----------------------------------------------
+# application : clean
+#----------------------------------------------
+
+def clean_all(app):
+    log_task("cleaning")
+    if os.path.isdir(app.tmpBaseDir):
+        path = app.tmpBaseDir + "tmp"
+        if os.path.isdir(path):
+            shutil.rmtree(path)
+        # do not remove products, as they will be rebuild from new temps anyway,
+        # (as for headers, we don't want to remove them anyway)
+
+
+#----------------------------------------------
+# application : main
+#----------------------------------------------
+
+def add_exec_deps(app, path):
+    # all package config ended with '-exec-deps.pc' are treated as exec only dependency
+
+    dirname = app.crossRoot + path
+
+    if not os.path.isdir(dirname):
+        return
+
+    files = os.listdir(dirname)
+    suffix = '-exec-deps.pc'
+    exec_deps = filter(lambda x: x.endswith(suffix), files)
+
+    for f in exec_deps:
+        pkg = os.path.splitext(f)
+        app.execDepsList.append(pkg[0])
+
+
+def main_process(app):
+
+    needPreClean  = False
+    needCompile   = True
+    needInstall   = True
+    needPostClean = False
+
+    goals = sys.argv[1:]
+    log_debug_args("goals are %s" % goals)
+    if len(goals) > 0:
+        if app.preprocess:
+            needCompile = True
+        elif len(goals) == 1 and goals[0] == "all":
+            pass
+        else:
+            needPreClean  = (goals[0] == "clean")
+            needCompile   = ("compile" in goals)
+            needInstall   = ("install" in goals)
+            needPostClean = (goals[len(goals)-1] == "clean")
+            if needInstall:
+                needCompile = True
+
+
+    if needPreClean:
+        clean_all(app)
+
+    if needCompile or needInstall:
+        st = time.time()
+        ensure_dir(app.tmpBaseDir)
+        log_my("%f (prepare)" % (time.time() - st))
+
+    if needCompile:
+        if app.execName != None or len(app.customExecNames) > 0:
+            st = time.time()
+            add_exec_deps(app, "usr/lib/pkgconfig/")
+            add_exec_deps(app, "usr/local/lib/pkgconfig/")
+            log_my("%f (add_exec_deps)" % (time.time() - st))
+
+        st = time.time()
+        calc_pkg_config(app, app.depsList, True)
+        calc_pkg_config(app, app.execDepsList, False)
+        log_my("%f (calc_pkg_config)" % (time.time() - st))
+
+        st = time.time()
+        check_changes_cppflags(app)
+        check_changes_cflags(app)
+        check_changes_cxxflags(app)
+        check_changes_srclist(app)
+        log_my("%f (check_changes)" % (time.time() - st))
+
+        st = time.time()
+        compile_sources(app)
+        compile_headers(app)
+        log_my("%f (compile_*)" % (time.time() - st))
+
+        if app.preprocess:
+            return
+
+        # when linking, we can have plenty of .o files in a single command-line,
+        # so it's better to switch to temp dir, so we could use relative path when passing .o filenames
+        os.chdir(app.tmpBaseDir)
+        app.inOrigCwd = False
+
+        if app.libName != None:
+            st = time.time()
+            compile_solib(app)
+            compile_alib(app)
+            compile_pkgconfig(app)
+            log_my("%f (libs)" % (time.time() - st))
+
+        if app.execName != None:
+            st = time.time()
+            compile_exec(app, app.execName, app.srcList)
+            log_my("%f (exec)" % (time.time() - st))
+
+        for customExec in  app.customExecNames:
+            st = time.time()
+            compile_exec(app, customExec, app.customExecSources[customExec])
+            log_my("%f (custom_exec)" % (time.time() - st))
+
+    if needInstall:
+        st = time.time()
+        install_headers(app)
+
+        if app.libName != None:
+            install_solib(app)
+            install_alib(app)
+            install_pkgconfig(app)
+
+        if app.execName != None:
+            install_exec(app, app.execName)
+
+        for customExec in  app.customExecNames:
+            install_exec(app, customExec)
+        log_my("%f (install)" % (time.time() - st))
+
+    if needPostClean:
+        clean_all(app)
+
+    log_debug("exiting")
+    #exit_app(app, 0)
+
+
+def main():
+    st = time.time()
+    env = os.environ.copy()
+    app = AppState(env)
+
+    try:
+        main_process(app)
+    except KeyboardInterrupt:
+        log_state("KeyboardInterrupt")
+        exit_app(app, 1)
+
+    log_debug("exiting")
+    log_my("%f (total)" % (time.time() - st))
+    exit_app(app, 0)
+
+
+if __name__ == "__main__":
+    main()

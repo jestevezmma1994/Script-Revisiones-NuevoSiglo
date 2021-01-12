@@ -1,0 +1,7 @@
+digraph authDialog {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    authDialog [URL="\N.html" root=true]
+
+    authDialog -> ParentalControl
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><settings xmlns="http://cubiware.com/settings-v2.xsd"
+xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0">
+	<constant name="TextFont"><font aspect="1.0" hinting="off" subPixelPositioning="on"><path>Helvetica.ttf</path></font></constant>
+</settings>

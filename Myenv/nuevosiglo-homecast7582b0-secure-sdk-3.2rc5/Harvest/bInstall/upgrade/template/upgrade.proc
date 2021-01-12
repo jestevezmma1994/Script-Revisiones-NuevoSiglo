@@ -1,0 +1,104 @@
+#!/bin/sh
+# this file is a template for new platform specific
+# it contains all needed procedures and variables
+# read the description of each to decide which you
+# need to implement to be compliant with generic
+# Sentivision Upgrade procedure
+
+#Error codes: 
+# here add your custom error codes which you use in your procedures
+# all of them shoud be >=102 and <=150 (I hope range is enough)
+# 132 - your error code
+
+#Platform string to identify your file, it should be uniq in each other:
+_UP_PLATFORM_NAME="<some platform string>"
+#add number of your platform progress steps here (count all step_progress in the file)
+_UP_PLATFORM_STEP_CNT=0
+
+#Mandatory procedures operating on data, you should escape to "exit_upgrade" with error code if something goes criticaly wrong
+_up_get_hash () { #gets hash of current version, used to decide is upgrade is needed
+	res="not implemented"
+}
+_up_get_status () { #gets current status of upgrade, you should print OK for confirmed firmware, RESTORED for restored firmware, or some other string for other states
+	res="not implemented"
+}
+_up_set_status () {
+	res="not implemented"
+}
+
+_up_check_version() {#if any additional version checking needed do it here, got a new version number in parameter
+	res="not implemented"
+}
+
+_up_verify_firmware () { #check integrity, signatures, hashes or whatever you need, you got files names in parameter
+	res="not implemented"
+}
+
+#the most important function:
+_up_write_firmware () { #write firmware files on board, you got files name in parameter, after that stb should boot new firmware
+	res="not implemented"
+}
+
+#Optional variable which you may need in your procedures, will be initialized with initial environment
+#if you need to overwrite some already initialized variables this place is good for that purposes
+SOME_VARIABLE="SOME VALUE"
+
+#Optional procedures calling before and after each phase of upgrade, shouldn't be implemented, but do not remove them from here
+_up_before_wait_for_network () {
+        res="empty"
+}
+_up_after_wait_for_network () {
+        res="empty"
+}
+
+_up_before_wait_for_upgrade_server () {
+        res="empty"
+}
+_up_after_wait_for_upgrade_server () {
+        res="empty"
+}
+
+_up_before_version_check () {
+	res="empty"
+}
+_up_after_version_check () {
+	res="empty"
+}
+
+_up_before_initiate_upgrade () {
+	res="empty"
+}
+_up_after_initiate_upgrade () {
+	res="empty"
+}
+
+_up_before_getting_firmware () {
+	res="empty"
+}
+_up_after_getting_firmware () {
+	res="empty"
+}
+
+_up_before_firmware_verification () {
+	res="empty"
+}
+_up_after_firmware_verification () {
+	res="empty"
+}
+
+_up_before_writting_firmware () {
+	res="empty"
+}
+_up_after_writting_firmware () {
+	res="empty"
+}
+
+_up_before_complete () {
+	res="empty"
+}
+_up_after_complete () {
+	res="empty"
+}
+_up_before_main_fifo_create() {
+    res="empty"
+}

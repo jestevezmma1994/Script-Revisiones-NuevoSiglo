@@ -1,0 +1,130 @@
+<perldata>
+ <hashref memory_address="0x21716b8">
+  <item key="deps">
+   <hashref memory_address="0x21adb88">
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x16f50e8">
+    <item key="SRM_ENV">${SRM_ROOT}/SRM.environment</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x20484f0">
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/.hgignore">3491e34eb2574963781ee73c81e1ce89</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/Makefile">1a8df55d61da935375510dbb5ff6f9ad</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/OTA.json">d0cbb7dd9ce24ea9ef6451b60609cb15</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/QBShellCmdsWhitelist">447c7e67b21379171fc2ebf1ac6ec94a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/bspec.comp">a1bc3472a86f32db1316ae141d8633c6</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/cert-files/cert.pem">d9c6e3e3f7604fa070bafc8c7325f5c5</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/cert-files/key.pem">89c2bbd7d9390cc4806c832d16dc998a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/certs/cacert.pem">473536a2e2de2dcd4198cf7428fbb2ef</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/certs/certs.key">517f976da773ef833a3d662f059e0e72</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/certs/rsa.pub">b86144e34db08d5c3493d98719328ff9</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/config/conf.json">59db3cd56631900f28a3424099b7cef7</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/config/const_conf.json">510e3e9bba76990421a74e7e3e053e2c</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/config/volume">072ffcf94f7fb961ade2fc8a8f9fdc70</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/dev.tgz">f42552b92db91e2429a6d2a8629c7ab2</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/firewall.rules">73d493e11f12dda8fb5d95afc9cb0af0</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/hotplug_filter_usb_block">d41d8cd98f00b204e9800998ecf8427e</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-https/cacert.pem">473536a2e2de2dcd4198cf7428fbb2ef</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-https/cert.pem">5d485b512b7c60454668a5a320b2b816</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-https/certkey.pem">790ff7a8b3ce7bca4b9b71ded3305be0</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/ca.cert.der">a5520860f1ae2d794454ece8dcfc21be</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/ca.cert.pem">a0eecabf139b4a3a3fe2a4d3e11074b5</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/ca.key.pem">b57f1eb37a67d593f92e5e7d812c1907</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/supplier.cert.der">a26856e1158176237a9c81ddb7b096da</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/supplier.key.der">ca6e77d0d0adabda76980893572efb25</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/mkpart.conf">6aadb59a9a2847964a6e9ec252e690c7</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/profile.d/nexus_no_syslog.sh">a9c62f2ed25c4e9926b6e73b7d8d615b</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/profile.d/stb.sh">982fefe751130ef83268a86b418498e8</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/profile.d/stenv.sh">e296ffc1e44e5e39bfe39b4ccbd0f7c1</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/rcS">212095fe52412c71fbb78bc51cdcf216</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/storage.conf">88ea57ef1b81808260fb5ec333068eba</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/upgradeDVBInfo">b7924c25f86e81797b2b5c05d296813a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/upgradeInfo">c48106e007716fde2ec6fbb0b564e7eb</item>
+   </hashref>
+  </item>
+  <item key="string">Harvest/bSpec/nuevosiglo-homecast7582b0-secure/bspec.comp</item>
+  <item key="time">1605103330</item>
+  <item key="units">
+   <hashref memory_address="0x28a1c00">
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/.hgignore">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/Makefile">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/OTA.json">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/QBShellCmdsWhitelist">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/bspec.comp">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/cert-files/cert.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/cert-files/key.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/certs/cacert.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/certs/certs.key">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/certs/rsa.pub">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/config/conf.json">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/config/const_conf.json">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/config/volume">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/dev.tgz">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/firewall.rules">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/hotplug_filter_usb_block">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-https/cacert.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-https/cert.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-https/certkey.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/ca.cert.der">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/ca.cert.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/ca.key.pem">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/supplier.cert.der">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/keys/upgrade-package/supplier.key.der">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/mkpart.conf">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/profile.d/nexus_no_syslog.sh">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/profile.d/stb.sh">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/profile.d/stenv.sh">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/rcS">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/storage.conf">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/upgradeDVBInfo">a</item>
+    <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/upgradeInfo">a</item>
+    <item key="SRM_ENV">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/Makefile.mk">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-hints-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-json-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-json-partner-polices-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/extract-xml-i18n-texts">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/Makefile">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/OTA.json">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/QBShellCmdsWhitelist">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/bspec.comp">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/cert-files/cert.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/cert-files/key.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/certs/cacert.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/certs/certs.key">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/certs/rsa.pub">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/config/conf.json">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/config/const_conf.json">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/config/volume">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/dev.tgz">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/firewall.rules">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/hotplug_filter_usb_block">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-https/cacert.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-https/cert.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-https/certkey.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-package/ca.cert.der">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-package/ca.cert.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-package/ca.key.pem">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-package/supplier.cert.der">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/keys/upgrade-package/supplier.key.der">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/mkpart.conf">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/profile.d/nexus_no_syslog.sh">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/profile.d/stb.sh">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/profile.d/stenv.sh">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/rcS">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/storage.conf">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/upgradeDVBInfo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/bSpec/upgradeInfo">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/hotplug_filters/block/welho">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x17ccb88">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

@@ -1,0 +1,6 @@
+Name: SvDataBucket2
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvFoundation 
+Description: Data Bucket object serialization framework
+Libs: -lSvDataBucket2 -lexpat 
+CFlags: 

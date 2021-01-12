@@ -1,0 +1,6 @@
+Name: SvHTTPClient
+Version: 1.0.0
+Requires: QBNetManager QBStringUtils QBTextUtils SvCore SvFoundation SvQuirks fibers libcurl openssl 
+Description: Cubiware HTTP client library
+Libs: -lSvHTTPClient -lpthread 
+CFlags: 

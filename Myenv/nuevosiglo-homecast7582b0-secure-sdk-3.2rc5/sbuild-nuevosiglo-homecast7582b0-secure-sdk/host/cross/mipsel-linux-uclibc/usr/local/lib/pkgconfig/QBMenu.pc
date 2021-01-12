@@ -1,0 +1,6 @@
+Name: QBMenu
+Version: 1.0.0
+Requires: CUIT QBDataModel3 SvCore SvFoundation 
+Description: Generic menu interface library
+Libs: -lQBMenu 
+CFlags: 

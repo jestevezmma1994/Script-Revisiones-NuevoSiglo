@@ -1,0 +1,98 @@
+#!/bin/bash
+
+ROOT_DIR=${2}
+OUTPUT=${3}
+OUTPUT_STRIP=${4}
+ENABLE_CONSOLE=${5}
+INIT=${6}
+OUTPUT_MAX_SIZE=$((${7}))
+
+DTBFILE=$SRM_ROOT/target/dtb.bin
+rm -rf initramfs
+mkdir -p initramfs
+
+mksquashfs4 ${ROOT_DIR} initramfs/rootfs.img
+install -m 755 ${INIT} initramfs/init
+
+pushd initramfs
+
+mkdir dev
+mknod dev/loop0 b 7 0
+mknod dev/fp c 127 0
+if [ "$ENABLE_CONSOLE" == "yes" ]; then
+    mknod dev/console c 5 1
+fi
+mkdir sys
+mkdir tmp
+mkdir tmp/root
+mkdir tmp/images
+mkdir -p ../bootimage
+find . | cpio -H newc -o > ../bootimage/initramfs.cpio
+cp $SRM_ROOT/target/vmlinuz ../bootimage/
+
+if [ -f $DTBFILE ]; then
+    echo "Add device tree binary to cpio image"
+    cp $DTBFILE ../bootimage/
+fi
+
+cd ../bootimage/
+dd if=/dev/zero of=appading bs=3848 count=1
+echo appading > bootimage.list
+echo initramfs.cpio >> bootimage.list
+echo vmlinuz >> bootimage.list
+if [ -f $DTBFILE ]; then
+    echo dtb.bin >> bootimage.list
+fi
+cat bootimage.list | cpio -H newc -o > ../bootimage.cpio
+rm bootimage.list
+cd ..
+rm -rf bootimage
+popd
+
+byte_swap()
+{
+	OUT=""
+	CNT=$(echo -n $1 | wc -c); for i in `seq 1 2 $CNT`; do OUT+=`echo -n $1 | cut -c $(( CNT - i ))-$((CNT - i + 1))`; done
+}
+
+BOOTIMAGE_SIZE=`stat -c "%s" bootimage.cpio`
+BOOTIMAGE_ALIGNED_SIZE=$(( BOOTIMAGE_SIZE / 16 ))
+BOOTIMAGE_ALIGNED_SIZE=$(( BOOTIMAGE_ALIGNED_SIZE + 1 ))
+BOOTIMAGE_ALIGNED_SIZE=$(( BOOTIMAGE_ALIGNED_SIZE * 16 + 16))
+
+if [ $BOOTIMAGE_ALIGNED_SIZE -gt $OUTPUT_MAX_SIZE ]; then
+	echo "BOOTIMAGE size ($BOOTIMAGE_ALIGNED_SIZE) exceeds maximum allowed $OUTPUT_MAX_SIZE!"
+	exit 1
+fi
+
+echo "BOOTIMAGE_SIZE=$BOOTIMAGE_SIZE KER_AL_SIZE=$BOOTIMAGE_ALIGNED_SIZE"
+
+dd if=/dev/zero of=bootimage.cpio bs=$((BOOTIMAGE_ALIGNED_SIZE - BOOTIMAGE_SIZE)) count=1 conv=notrunc oflag=append
+
+cp bootimage.cpio $OUTPUT_STRIP
+
+# VMX header BEGIN
+echo -n qbfw > ${OUTPUT}
+# Insert total size
+byte_swap $(printf "%08x" $BOOTIMAGE_SIZE)
+echo $OUT | xxd -r -p | dd conv=notrunc oflag=append of=${OUTPUT} >/dev/null 2>&1
+# Pad to 256 bytes
+dd if=/dev/zero of=${OUTPUT} bs=248 count=1 conv=notrunc oflag=append >/dev/null 2>&1
+# Insert debug-mode vmx signature (256 bytes)
+#   * Signature magic
+echo -en "\x01\x23\x45\x67\x89\xab\xcd\xef" >> ${OUTPUT}
+#   * 24 zeroes: mode = 0 (1 byte), verifier (15 bytes), position = 0 (8 bytes)
+dd if=/dev/zero of=${OUTPUT} bs=24 count=1 conv=notrunc oflag=append >/dev/null 2>&1
+#   * data len
+echo `printf "%016x" $BOOTIMAGE_SIZE` | xxd -r -p | dd conv=notrunc oflag=append of=${OUTPUT} >/dev/null 2>&1
+#   * max data len
+echo `printf "%016x" $BOOTIMAGE_SIZE` | xxd -r -p | dd conv=notrunc oflag=append of=${OUTPUT} >/dev/null 2>&1
+#   * crc32 = 0 (means disabled crc verification)
+dd if=/dev/zero of=${OUTPUT} bs=4 count=1 conv=notrunc oflag=append >/dev/null 2>&1
+#   * pad to 256 bytes
+dd if=/dev/zero of=${OUTPUT} bs=204 count=1 conv=notrunc oflag=append >/dev/null 2>&1
+# VMX header END
+
+dd if=bootimage.cpio of=${OUTPUT} conv=notrunc oflag=append
+
+#rm -f bootimage.cpio

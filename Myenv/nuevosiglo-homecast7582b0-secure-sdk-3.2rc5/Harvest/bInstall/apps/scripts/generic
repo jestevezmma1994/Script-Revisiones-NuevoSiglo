@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ "$1" = "start" ]; then
+    mkdir -p /etc/vod/apps
+    ln -sf /etc/vod/apps /tmp/apps
+fi

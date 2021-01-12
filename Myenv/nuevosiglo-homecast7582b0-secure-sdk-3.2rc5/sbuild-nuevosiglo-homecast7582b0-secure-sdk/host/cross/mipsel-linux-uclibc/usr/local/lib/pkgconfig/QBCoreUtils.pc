@@ -1,0 +1,6 @@
+Name: QBCoreUtils
+Version: 1.0.0
+Requires: SvCore 
+Description: library that provides generic utils
+Libs: -lQBCoreUtils -lcap 
+CFlags: 

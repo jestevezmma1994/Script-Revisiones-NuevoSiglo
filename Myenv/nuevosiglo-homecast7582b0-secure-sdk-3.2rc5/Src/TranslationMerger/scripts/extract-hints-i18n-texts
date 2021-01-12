@@ -1,0 +1,207 @@
+#!/usr/bin/env python
+from __future__ import print_function
+import sys
+import optparse
+import json
+import xml.parsers.expat
+import traceback
+import time, datetime
+import StringIO
+
+
+header = """\
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\\n"
+"Report-Msgid-Bugs-To: \\n"
+"POT-Creation-Date: {0}\\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n"
+"Language-Team: LANGUAGE <LL@li.org>\\n"
+"Language: \\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"""
+
+
+class TimeZone(datetime.tzinfo):
+    def __init__(self):
+        self._offset = time.timezone
+        self._dst = time.altzone - self._offset if time.localtime().tm_isdst else 0
+
+    def utcoffset(self, dt):
+        return datetime.timedelta(seconds = -(self._offset + self._dst))
+
+    def dst(self, dt):
+        return datetime.timedelta(seconds = -self._dst)
+
+    def format(self):
+        offset = self._offset + self._dst
+        hours = offset / 3600
+        minutes = (offset - hours * 3600) / 60
+        if hours < 0:
+            return '+{0:0>2d}{1:0>2d}'.format(-hours, -minutes)
+        else:
+            return '-{0:0>2d}{1:0>2d}'.format(hours, minutes)
+
+
+class Message(object):
+    def __init__(self, id):
+        self._id = id
+
+    @property
+    def id(self):
+        return self._id
+
+    def dump(self, stream):
+        msg_id = self._id.replace('\\', '\\\\').replace('"', '\\"')
+        if msg_id.find('\n') < 0:
+            formatted_id = '"' + msg_id + '"'
+        else:
+            formatted_id = '""\n"' + '\\n"\n"'.join(msg_id.split('\n')) + '"'
+        stream.write('msgid ' + formatted_id.encode('utf-8').strip() + '\nmsgstr ""\n')
+
+
+class Buffer(object):
+    def __init__(self):
+        self._stream = None
+
+    def get_value(self):
+        if self._stream is not None:
+            value = self._stream.getvalue()
+            self._stream.close()
+            self._stream = None
+            return value
+        return None
+
+    def setup(self):
+        if self._stream is not None:
+            self._stream.close()
+        self._stream = StringIO.StringIO()
+
+    def append(self, text):
+        if self._stream is not None:
+            self._stream.write(text)
+
+
+def start_element_handler(name, attrs, text_buffer):
+    if name != 'item':
+        return
+    if u'gettext' not in attrs or attrs[u'gettext'] != u'enabled':
+        return
+    if u'gettextDomain' not in attrs:
+        return
+    if attrs[u'gettextDomain'] != u'CubiTV':
+        raise RuntimeError('the only allowed gettext domain is "CubiTV"')
+    text_buffer.setup()
+
+
+def end_element_handler(name, messages, messages_map, text_buffer):
+    if name == 'item':
+        message_id = text_buffer.get_value()
+        if message_id is not None and message_id != '':
+            if message_id not in messages_map:
+                message = Message(message_id)
+                messages.append(message)
+                messages_map[message_id] = message
+
+
+def parse_XmlPage(input_file, hint_name, text, messages, messages_map):
+    text_buffer = Buffer()
+    parser = xml.parsers.expat.ParserCreate('UTF-8', ':')
+    parser.StartElementHandler = lambda name, attrs: start_element_handler(name, attrs, text_buffer)
+    parser.EndElementHandler = lambda name: end_element_handler(name, messages, messages_map, text_buffer)
+    parser.CharacterDataHandler = lambda text: text_buffer.append(text)
+
+    try:
+        parser.Parse(text, True)
+    except Exception as ex:
+        print("extract-hints-i18n-texts: error parsing XmlPage document for hint '{}' in file '{0}'!".format(hint_name, input_file), file = sys.stderr)
+        traceback.print_exc()
+        raise
+
+
+def parse_file(input_file, messages, messages_map):
+    try:
+        with open(input_file, 'r') as f:
+            hints = json.load(f)
+    except IOError as ex:
+        print("extract-hints-i18n-texts: error reading file '{0}'!".format(input_file), file = sys.stderr)
+        traceback.print_exc()
+        raise
+    except Exception as ex:
+        print("extract-hints-i18n-texts: error parsing JSON file '{0}'!".format(input_file), file = sys.stderr)
+        traceback.print_exc()
+        raise
+
+    for hint_name, hint in hints.iteritems():
+        if '__jsonclass__' not in hint:
+            continue
+        if hint['__jsonclass__'][0] != 'QBHint':
+            continue
+        if 'widgetDescription' in hint:
+            parse_XmlPage(input_file, hint_name, hint['widgetDescription'], messages, messages_map)
+
+
+def main():
+    parser = optparse.OptionParser(description = 'Extract strings in <item> tags from XmlPage format in JSON hints files.')
+    parser.add_option('-s', '--sort-output', dest = 'sort_output', action = 'store_true',
+                      default = False, help = "generate sorted output")
+    parser.add_option('--default-domain', '-d', dest = 'default_domain', metavar = 'NAME',
+                      default = None, help = "use NAME.po for output (instead of messages.po)")
+    parser.add_option('--output', '-o', dest = 'output', metavar = 'FILE',
+                      default = 'messages.po', help = "write output to specified file")
+
+    (options, args) = parser.parse_args()
+
+    if len(args) == 0:
+        print('extract-hints-i18n-texts: invalid usage, try --help', file = sys.stderr)
+        return 1
+
+    # parse input files
+    messages = list()
+    messages_map = dict()
+    for input_file in args:
+        try:
+            parse_file(input_file, messages, messages_map)
+        except Exception as ex:
+            traceback.print_exc()
+            return 1
+
+    if options.sort_output:
+        messages.sort(key = lambda m: m.id)
+
+    # generate output
+    output_stream = None
+    try:
+        if options.output != '-':
+            output_stream = open(options.output, 'w')
+        else:
+            output_stream = sys.stdout
+
+        t = datetime.datetime.now(TimeZone())
+        time_str = t.strftime('%Y-%m-%d %H:%M') + t.tzinfo.format()
+        output_stream.write(header.format(time_str))
+        for message in messages:
+            output_stream.write('\n')
+            message.dump(output_stream)
+    except Exception as ex:
+        print("extract-hints-i18n-texts: error writing output file '{0}'!".format(options.output), file = sys.stderr)
+        traceback.print_exc()
+        return 1
+    finally:
+        if output_stream and options.output != '-':
+            output_stream.close()
+
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

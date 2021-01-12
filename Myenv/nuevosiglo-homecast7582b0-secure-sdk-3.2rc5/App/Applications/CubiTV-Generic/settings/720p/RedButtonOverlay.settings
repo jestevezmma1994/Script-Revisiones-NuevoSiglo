@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="RedButtonOverlay">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+
+        <widget name="Content">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>627</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+
+        <widget name="ButtonFrame">
+            <widget name="Background">
+                <common>
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>627</int></param>
+                    <param tag="width"><int>320</int></param>
+                    <param tag="height"><int>93</int></param>
+                </common>
+                <widget name="Focus">
+                    <param tag="bg"><bitmap><path>redButtonOverlayFocus.png</path></bitmap></param>
+                </widget>
+                <widget name="NonFocus">
+                    <param tag="bg"><bitmap><path>redButtonOverlayNonFocus.png</path></bitmap></param>
+                </widget>
+            </widget>
+
+            <widget name="ColorDot">
+                <common>
+                    <param tag="xOffset"><int>40</int></param>
+                    <param tag="yOffset"><int>30</int></param>
+                </common>
+                <widget name="red">
+                    <param tag="bg"><bitmap><path>red_button.png</path></bitmap></param>
+                </widget>
+                <widget name="green">
+                    <param tag="bg"><bitmap><path>green_button.png</path></bitmap></param>
+                </widget>
+                <widget name="yellow">
+                    <param tag="bg"><bitmap><path>yellow_button.png</path></bitmap></param>
+                </widget>
+                <widget name="blue">
+                    <param tag="bg"><bitmap><path>blue_button.png</path></bitmap></param>
+                </widget>
+            </widget>
+
+            <widget name="TextLabel">
+                <param tag="xOffset"><int>70</int></param>
+                <param tag="yOffset"><int>23</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+
+        </widget><!-- ButtonFrame -->
+    </widget><!-- RedButtonOverlay -->
+</settings>

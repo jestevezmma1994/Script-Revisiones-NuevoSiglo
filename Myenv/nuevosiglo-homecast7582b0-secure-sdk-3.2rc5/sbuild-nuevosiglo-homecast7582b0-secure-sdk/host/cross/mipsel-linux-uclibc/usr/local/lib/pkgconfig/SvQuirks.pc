@@ -1,0 +1,6 @@
+Name: SvQuirks
+Version: 1.0.0
+Requires: SvCore 
+Description: Platform Quirks Abstraction Library
+Libs: -lSvQuirks -lpthread 
+CFlags: 

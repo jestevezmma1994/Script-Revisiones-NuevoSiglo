@@ -1,0 +1,137 @@
+#!/bin/sh
+
+DM_CONFIG_PART=config
+DM_CONFIG_DEVICE=/dev/mapper/$DM_CONFIG_PART
+MMC_CONFIG_PART_LABEL=config
+
+configure_crypto() {
+	while [ ! -d /sys/class/block/mmcblk0 ]; do
+		echo "[Config] waiting for emmc"
+		sleep 1
+	done
+
+	if [ ! -d /tmp/mapper ]; then
+		mkdir -p /tmp/mapper
+	fi
+
+	if [ ! -c /dev/mapper/control ]; then
+		if [ ! -e /sys/class/misc/device-mapper/dev ]; then
+			echo "[Config] no sysfs entry for device-mapper dev"
+			return 1
+		fi
+
+		number=`cat /sys/class/misc/device-mapper/dev | awk 'BEGIN {FS = ":"} ; {print $1 " " $2}'`
+		mknod /dev/mapper/control c $number
+		if [ $? -ne 0 ]; then
+			echo "[Config] couldn't create device-mapper control device node"
+			return 1
+		fi
+	fi
+
+	ALL_DEVS=`ls /dev/mmcblk?p*`
+	for CUR_DEV in $ALL_DEVS; do
+		CUR_PART=`echo $CUR_DEV | sed 's#.*/##'`
+		if [ -d /sys/class/block/$CUR_PART ]; then
+			LABEL=`cat /sys/class/block/$CUR_PART/volname`
+			if [ "$LABEL" = "$MMC_CONFIG_PART_LABEL" ]; then
+				MMC_CONFIG_DEV=$CUR_DEV
+				MMC_CONFIG_PART=$CUR_PART
+			fi
+		fi
+	done
+	if [ -z "$MMC_CONFIG_DEV" ]; then
+		echo "[Config] config partition not found"
+		return 1
+	fi
+
+	CONFIG_DEV_SIZE=`cat /sys/class/block/$MMC_CONFIG_PART/size`
+	echo "[Config] setting up dm-crypt"
+	echo "0 $CONFIG_DEV_SIZE crypt aes-ecb `xxd -ps /etc/keys/swpk4` 0 $MMC_CONFIG_DEV 0" | dmsetup create $DM_CONFIG_PART
+	return $?
+}
+
+check_crypto() {
+	dmsetup status $DM_CONFIG_PART 1>/dev/null 2>&1 || configure_crypto
+	return $?
+}
+
+mount_part() {
+	mount -o sync,noexec,nosuid $DM_CONFIG_DEVICE /etc/vod/ 1>/dev/null 2>&1
+	return $?
+}
+
+restore_defaults() {
+	#reset partition
+	umount /etc/vod 1>/dev/null 2>&1
+	mke2fs -t ext4 $DM_CONFIG_DEVICE 1>/dev/null 2>&1 && mount_part
+	if [ $? -ne 0 ]; then
+		return 1
+	fi
+	echo "[Config] creating new config partition"
+	rm -rf /etc/vod/*
+	cp -a /etc/default-conf/* /etc/vod/
+}
+
+check_mount() {
+	check_crypto
+	if [ $? -ne 0 ]; then
+		echo "[Config] check_crypto failed"
+		exit 1
+	fi
+
+	mount | grep -q "$DM_CONFIG_DEVICE\b" || mount_part || restore_defaults
+	if [ $? -ne 0 ]; then
+		echo "[Config] mount failed"
+		exit 1
+	fi
+
+	return 0
+}
+
+verify_integrity() {
+	rm -f /etc/vod/integrity-test
+	cp /etc/default-conf/conf.json /etc/vod/integrity-test 1>&2 2>/dev/null
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	cmp /etc/default-conf/conf.json /etc/vod/integrity-test 1>&2 2>/dev/null
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	rm -f /etc/vod/integrity-test 1>&2 2>/dev/null
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+}
+
+if [ "$1" = "save" ]; then
+	echo -n "[Config] storing configuration... "
+	#check partition mount
+	check_mount
+	sync $DM_CONFIG_DEVICE
+	/usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+	echo "OK"
+else
+	if [ "$1" = "start" ]; then
+		modprobe ext4
+		check_mount
+		verify_integrity
+		#restore default settings
+		[ ! -e /etc/vod/conf.json ] && {
+			echo loading DEFAULT configuration
+			cp /etc/default-conf/* /etc/vod/
+			rm -f /etc/vod/LASTVERSION		# force on-upgrade cfg check
+			}
+	fi
+
+	for i in $(seq 1 5); do
+		/usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+		[ $? -eq "0" ] && break
+		[ ! $? -eq "0" ] && {
+			cp /etc/default-conf/* /etc/vod/
+		}
+	done
+fi

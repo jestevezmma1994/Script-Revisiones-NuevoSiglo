@@ -1,0 +1,6 @@
+Name: QBMTQueue
+Version: 1.0.0
+Requires: SvCore sv-list 
+Description: Queue with thread-safe operations
+Libs: -lQBMTQueue -lpthread 
+CFlags: 

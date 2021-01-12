@@ -1,0 +1,6 @@
+Name: QBRecordFS
+Version: 1.0.0
+Requires: QBAppKit SvCore SvFoundation SvJSON SvPlayerKit SvQuirks dataformat xtream 
+Description: storing data+meta of recorded contents
+Libs: -lQBRecordFS 
+CFlags: 

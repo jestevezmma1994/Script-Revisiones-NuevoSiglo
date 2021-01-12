@@ -1,0 +1,460 @@
+#!/usr/bin/env python
+
+###############################################################################
+## Cubiware Sp. z o.o. Software License Version 1.0
+##
+## Copyright (C) 2016 Cubiware Sp. z o.o. All rights reserved.
+##
+## Any rights which are not expressly granted in this License are entirely and
+## exclusively reserved to and by Cubiware Sp. z o.o. You may not rent, lease,
+## modify, translate, reverse engineer, decompile, disassemble, or create
+## derivative works based on this Software. You may not make access to this
+## Software available to others in connection with a service bureau,
+## application service provider, or similar business, or make any other use of
+## this Software without express written permission from Cubiware Sp. z o.o.
+##
+## Any User wishing to make use of this Software must contact
+## Cubiware Sp. z o.o. to arrange an appropriate license. Use of the Software
+## includes, but is not limited to:
+## (1) integrating or incorporating all or part of the code into a product for
+##     sale or license by, or on behalf of, User to third parties;
+## (2) distribution of the binary or source code to third parties for use with
+##     a commercial product sold or licensed by, or on behalf of, User.
+###############################################################################
+
+from __future__ import print_function
+import sys
+import re
+import struct
+import array
+
+
+C_escape_codes = {
+    '\\\\': '\\',
+    '\\\'': '\'',
+    '\\b': '\b',
+    '\\n': '\n',
+    '\\r': '\r',
+    '\\t': '\t'
+}
+
+
+linux_key_codes = {
+    '0': 11,
+    '1': 2,
+    '2': 3,
+    '3': 4,
+    '4': 5,
+    '5': 6,
+    '6': 7,
+    '7': 8,
+    '8': 9,
+    '9': 10,
+    'A': 30,
+    'APOSTROPHE': 40,
+    'B': 48,
+    'BACK': 158,
+    'BACKSLASH': 43,
+    'BACKSPACE': 14,
+    'BLUE': 0x191,
+    'BOOKMARKS': 156,
+    'C': 46,
+    'CAPSLOCK': 58,
+    'CHANNELDOWN': 0x193,
+    'CHANNELUP': 0x192,
+    'CLOSE': 206,
+    'COMMA': 51,
+    'COMPUTER': 157,
+    'CONNECT': 218,
+    'D': 32,
+    'DELETE': 111,
+    'DISPLAYTOGGLE': 0x1af,
+    'DOT': 52,
+    'DOWN': 108,
+    'E': 18,
+    'END': 107,
+    'ENTER': 28,
+    'EPG': 0x16d,
+    'EQUAL': 13,
+    'ESC': 1,
+    'EXIT': 174,
+    'F': 33,
+    'F1': 59,
+    'F10': 68,
+    'F11': 87,
+    'F12': 88,
+    'F13': 183,
+    'F14': 184,
+    'F15': 185,
+    'F16': 186,
+    'F17': 187,
+    'F18': 188,
+    'F19': 189,
+    'F2': 60,
+    'F20': 190,
+    'F21': 191,
+    'F3': 61,
+    'F4': 62,
+    'F5': 63,
+    'F6': 64,
+    'F7': 65,
+    'F8': 66,
+    'F9': 67,
+    'FASTFORWARD': 208,
+    'FN_F1': 0x1d2,
+    'FN_F2': 0x1d3,
+    'FN_F3': 0x1d4,
+    'FN_F4': 0x1d5,
+    'FN_F5': 0x1d6,
+    'FN_F6': 0x1d7,
+    'FN_F7': 0x1d8,
+    'FN_F8': 0x1d9,
+    'FN_F9': 0x1da,
+    'FN_F10': 0x1db,
+    'FN_F11': 0x1dc,
+    'FN_F12': 0x1dd,
+    'G': 34,
+    'GRAVE': 41,
+    'GREEN': 0x18f,
+    'H': 35,
+    'HELP': 138,
+    'HOME': 102,
+    'I': 23,
+    'INFO': 0x166,
+    'INSERT': 110,
+    'J': 36,
+    'K': 37,
+    'KP0': 82,
+    'KP1': 79,
+    'KP2': 80,
+    'KP3': 81,
+    'KP4': 75,
+    'KP5': 76,
+    'KP6': 77,
+    'KP7': 71,
+    'KP8': 72,
+    'KP9': 73,
+    'KPASTERISK': 55,
+    'KPDOT': 83,
+    'KPENTER': 96,
+    'KPEQUAL': 117,
+    'KPMINUS': 74,
+    'KPPLUS': 78,
+    'KPSLASH': 98,
+    'L': 38,
+    'LANGUAGE': 0x170,
+    'LAST': 0x195,
+    'LEFT': 105,
+    'LEFTALT': 56,
+    'LEFTBRACE': 26,
+    'LEFTSHIFT': 42,
+    'LIST': 0x18b,
+    'M': 50,
+    'MAIL': 155,
+    'MENU': 139,
+    'MINUS': 12,
+    'MUTE': 113,
+    'N': 49,
+    'NEXTSONG': 163,
+    'O': 24,
+    'OK': 0x160,
+    'OPTION': 0x165,
+    'P': 25,
+    'PAGEDOWN': 109,
+    'PAGEUP': 104,
+    'PAUSE': 119,
+    'PLAY': 207,
+    'PLAYPAUSE': 164,
+    'POWER': 116,
+    'PVR': 0x16e,
+    'Q': 16,
+    'R': 19,
+    'RECORD': 167,
+    'RED': 0x18e,
+    'REWIND': 168,
+    'RIGHT': 106,
+    'RIGHTALT': 100,
+    'RIGHTBRACE': 27,
+    'RIGHTCTRL': 97,
+    'RIGHTSHIFT': 54,
+    'RO': 89,
+    'S': 31,
+    'SAT': 0x17d,
+    'SCREEN': 0x177,
+    'SEMICOLON': 39,
+    'SETUP': 141,
+    'SLASH': 53,
+    'SLEEP': 142,
+    'SPACE': 57,
+    'STOP': 128,
+    'SUBTITLE': 0x172,
+    'T': 20,
+    'TAB': 15,
+    'TEXT': 0x184,
+    'TV': 0x179,
+    'U': 22,
+    'UP': 103,
+    'V': 47,
+    'VIDEO': 0x189,
+    'VOLUMEDOWN': 114,
+    'VOLUMEUP': 115,
+    'W': 17,
+    'WWW': 150,
+    'X': 45,
+    'Y': 21,
+    'YELLOW': 0x190,
+    'Z': 44
+}
+
+linux_button_codes = {
+    'LEFT': 0x110,
+    'RIGHT': 0x111,
+    'MIDDLE': 0x112
+}
+
+input_codes = {
+    'BS': 0x0008,
+    'TAB': 0x0009,
+    'FACTORY1': 0xe001,
+    'FACTORY2': 0xe002,
+    'FACTORY3': 0xe003,
+    'FACTORY4': 0xe004,
+    'ENTER': 0xe020,
+    'ABORT': 0xe021,
+    'CLEAR': 0xe022,
+    'OSK_PUNCT': 0xe023,
+    'OSK_CONVERT': 0xe025,
+    'OSK_INPUT': 0xe026,
+    'TIVO': 0xe027,
+    'SKIPFORWARD': 0xe028,
+    'INPUT': 0xe029,
+    'SLOW': 0xe02a,
+    'TIVOENTER': 0xe02b,
+    'VOLDN': 0xe02d,
+    'USB': 0xe02e,
+    'INFO': 0xe02f,
+    'SHIFT': 0xe035,
+    'META': 0xe037,
+    'CAPSLOCK': 0xe039,
+    '11': 0xe03a,
+    '12': 0xe03b,
+    'RETURN': 0xe03c,
+    'VOLUP': 0xe03d,
+    'UP': 0xe041,
+    'DOWN': 0xe042,
+    'RIGHT': 0xe043,
+    'LEFT': 0xe044,
+    'EPG': 0xe045,
+    'FUNCTION': 0xe046,
+    'THUMBDN': 0xe047,
+    'HISTORY': 0xe048,
+    'THUMBUP': 0xe049,
+    'LANGUAGE': 0xe04c,
+    'HOME': 0xe04d,
+    'CLOCK': 0xe04e,
+    'STANDBY': 0xe050,
+    'POWER': 0xe051,
+    'RELOAD': 0xe052,
+    'SETTINGS': 0xe053,
+    'TELETEXT': 0xe054,
+    'SUBTITLES': 0xe055,
+    'VOUT': 0xe056,
+    'CANCEL': 0xe058,
+    'SOURCE': 0xe05a,
+    'BACK': 0xe05b,
+    'MUTE': 0xe05c,
+    'FORWARD': 0xe05d,
+    'CHUP': 0xe061,
+    'SCREENSHOT': 0xe062,
+    'VCS': 0xe063,
+    'LOOP': 0xe064,
+    'ASPECT': 0xe065,
+    'ZOOM': 0xe065,
+    'PREV': 0xe066,
+    'MESSAGE': 0xe067,
+    'FAVORITES': 0xe068,
+    'PLAY': 0xe069,
+    'REW': 0xe06a,
+    'PAUSE': 0xe06b,
+    'FFW': 0xe06c,
+    'MENU': 0xe06d,
+    'NEXT': 0xe06e,
+    'STEP_FWD': 0xe06f,
+    'PVR': 0xe070,
+    'STOP': 0xe071,
+    'LIST': 0xe072,
+    'REC': 0xe073,
+    'TV': 0xe074,
+    'STEP_BACK': 0xe075,
+    'VOD': 0xe076,
+    'WWW': 0xe077,
+    'BOOKMARK': 0xe078,
+    'AUDIOTRACK': 0xe079,
+    'CHDN': 0xe07a,
+    'MOUSELEFT': 0xe080,
+    'MOUSEMIDDLE': 0xe081,
+    'MOUSERIGHT': 0xe082,
+    'MOUSEROLLUP': 0xe083,
+    'MOUSEROLLDN': 0xe084,
+    'MOUSEROLLLT': 0xe085,
+    'MOUSEROLLRT': 0xe086,
+    'ROTATE_CW1': 0xe090,
+    'ROTATE_CW2': 0xe091,
+    'ROTATE_CW3': 0xe092,
+    'ROTATE_CCW1': 0xe094,
+    'ROTATE_CCW2': 0xe095,
+    'ROTATE_CCW3': 0xe096,
+    'F0': 0xe0a0,
+    'F1': 0xe0a1,
+    'F2': 0xe0a2,
+    'F3': 0xe0a3,
+    'F4': 0xe0a4,
+    'F5': 0xe0a5,
+    'F6': 0xe0a6,
+    'F7': 0xe0a7,
+    'F8': 0xe0a8,
+    'F9': 0xe0a9,
+    'F10': 0xe0aa,
+    'F11': 0xe0ab,
+    'F12': 0xe0ac,
+    'F13': 0xe0ad,
+    'F14': 0xe0ae,
+    'F15': 0xe0af,
+    'F16': 0xe0b0,
+    'F17': 0xe0b1,
+    'F18': 0xe0b2,
+    'BACKTAB': 0xe0b3,
+    'PGUP': 0xe0c1,
+    'PGDN': 0xe0c2,
+    'DEL': 0xe0c3,
+    'INS': 0xe0c4,
+    'YELLOW': 0xe0e3,
+    'HELP': 0xe0e8,
+    'PLAYPAUSE': 0xe0e9,
+    'GREEN': 0xe0f0,
+    'END': 0xe0f1,
+    'SEARCH': 0xe0f3,
+    'RED': 0xe0f6,
+    'BLUE': 0xe0f7
+}
+
+
+def perror(msg):
+    print('{}: {}'.format(sys.argv[0], msg), file = sys.stderr)
+    sys.exit(1)
+
+
+class Entry(object):
+    def __init__(self, key, values):
+        self.key = self._parse_code(key)
+        self.values = [self._parse_code(v) for v in values]
+
+    def _parse_code(self, v):
+        if v.startswith('0x'):
+            return int(v[2:], base = 16)
+        elif 0x30 <= ord(v[0]) and ord(v[0]) <= 0x39:
+            return int(v)
+        elif v.startswith('\'') and v.endswith('\''):
+            return self._parse_C_char(v[1:-1])
+        elif v.startswith('KEY_'):
+            if v[4:] not in linux_key_codes:
+                raise RuntimeError('invalid key code {}'.format(v))
+            return linux_key_codes[v[4:]]
+        elif v.startswith('BTN_'):
+            if v[4:] not in linux_button_codes:
+                raise RuntimeError('invalid button code {}'.format(v))
+            return linux_button_codes[v[4:]]
+        elif v.startswith('QBKEY_'):
+            if v[6:] not in input_codes:
+                raise RuntimeError('invalid input code {}'.format(v))
+            return input_codes[v[6:]]
+        raise RuntimeError('invalid key code {}'.format(v))
+
+    def _parse_C_char(self, v):
+        if len(v) == 1:
+            return ord(v)
+        elif len(v) == 2 and v[0] == '\\':
+            if v not in C_escape_codes:
+                raise RuntimeError('invalid input code {}'.format(v))
+            return ord(C_escape_codes[v])
+        raise RuntimeError('invalid key code {}'.format(v))
+
+
+def parse_codes(src):
+    keymap = dict()
+
+    for lineno, line in enumerate(src.split('\n')):
+        line = line.strip()
+        if len(line) == 0 or line[0] == ';' or line[0] == '#' or line[:2] == '//':
+            continue
+        parts = re.sub('[ \t]+', ' ', line).split()
+        if len(parts) != 5 or not line.startswith('key(') or parts[0][-1:] != ')':
+            perror('syntax error in line {}'.format(lineno + 1))
+
+        try:
+            entry = Entry(parts[0][4:-1], parts[1:])
+        except Exception, ex:
+            perror('syntax error in line {}: {}'.format(lineno + 1, str(ex)))
+
+        if entry.key in keymap:
+            perror('duplicated entry in line {}'.format(lineno + 1))
+        keymap[entry.key] = entry
+
+    return keymap
+
+
+def is_prime_number(n, predecessors):
+    for p in predecessors:
+        if p >= n / 2:
+            return True
+        if n % p == 0:
+            break
+    return False
+
+
+def is_perfect_hash_table_size(size, entries):
+    used_buckets = set()
+    for entry in entries.itervalues():
+        hash_ = entry.key % size
+        used_buckets.add(hash_)
+    return len(used_buckets) == len(entries)
+
+
+def write_hash_table(entries, size):
+    ht = dict()
+    for entry in entries.itervalues():
+        hash_ = entry.key % size
+        ht[hash_] = entry
+    sys.stdout.write(struct.pack('<II', 0x514b4d50, size))
+    for i in range(size):
+        if i in ht:
+            entry = ht[i]
+            sys.stdout.write(struct.pack('<IIIII', entry.key, *entry.values))
+        else:
+            sys.stdout.write('\0' * 20)
+
+
+def main():
+    if len(sys.argv) != 1:
+        perror('invalid usage')
+
+    entries = parse_codes(sys.stdin.read())
+
+    primes = array.array('I')
+    primes.extend([2, 3, 5, 7])
+
+    p = 11
+    while p < 0x10000:
+        # find next prime number
+        if is_prime_number(p, primes):
+            primes.append(p)
+            if p > len(entries) and is_perfect_hash_table_size(p, entries):
+                write_hash_table(entries, p)
+                return
+        p += 2
+
+    perror('can\'t find perfect hash table for keymap with {} entries'.format(len(entries)))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,14 @@
+digraph FileBrowserMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    FileBrowser [root=true]
+    QBFileBrowserMenu
+    QBFileBrowserMenuChoice
+    QBHotplugMenu
+    QBHotplugMenuController
+
+    FileBrowser -> QBFileBrowserMenu
+    FileBrowser -> QBFileBrowserMenuChoice
+    FileBrowser -> QBHotplugMenu
+    FileBrowser -> QBHotplugMenuController
+}

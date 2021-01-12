@@ -1,0 +1,20 @@
+digraph ExternalPVRDisk {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+//PVOD
+
+    hotplugMounts [label=<\N<br/>Gathers all hotplug events<br/>Collects partitions into disks<br/>>]
+    QBPVRMounter [label=<\N<br/>Waits until whole disk layout is complete<br/>Checks if disk is PVR<br/>Mounts PVR disk to use>]
+
+    kernel -> hotplug [label=<Notifies QBHotplugHandler of all hotplug events<br/>registered at /proc/sys/kernel/hotplug>]
+    hotplug -> QBIPC [label=<Uses to create/deserialize messages>]
+    hotplug -> hotplugMounts [label=<Notifies via /var/run/hotplug/app/cubitv_usb_tree>]
+    hotplugMounts -> menuTree [label=<Provides nodes describing disk and partition structure>]
+    hotplugMounts -> QBPVRMounter [label=<Notifies about disks and partitions>]
+
+    QBHotplugMenu -> QBPVRMounter [label=<Uses to format/use disks based on user decisions>]
+    QBHotplugMenuController -> QBPVRMounter [label=<Uses to display accurate disk status>]
+
+    QBPVRMounter -> appState [label=<Notifies about current PVR disk capabilities>]
+}

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. /etc/profile
+
+rmmod em8xxx
+# /etc/init.d/network stop
+echo 0 > /dev/led_pwr

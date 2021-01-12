@@ -1,0 +1,36 @@
+#!/bin/sh -x
+
+[ ! -z "$SRM_NODES" ] || { echo "SRM_NODES is not defined" >&2; exit 1; }
+[ ! -z "$VANILLA_PATH" ] || { echo "VANILLA_PATH is not defined" >&2; exit 1; }
+[ ! -z "$DESTDIR" ] || { echo "DESTDIR is not defined" >&2; exit 1; }
+
+O_PATH=$PATH
+export DESTDIR;
+
+c=$@;
+#if echo "$c" | grep -q "\<mksquashfs\>\|\<mkcramfs\>\|\<tar[[:space:]]\+[^[:space:]]*c[^[:space:]]*"; then 
+if echo "$c" | grep -q "\<mknod\>\|\<tar[[:space:]]\+[^[:space:]]*x[^[:space:]]*" || [ "$MKDEV" == "yes" ]; then 
+#store nodes
+	PATH=$VANILLA_PATH fakeroot sh -x -c "
+		[ ! -e $SRM_NODES ] || sh $SRM_NODES || exit 1
+		PATH=$O_PATH sh -c '$c'"' || exit 1
+		cd '"$DESTDIR"'
+		rm -f '"$SRM_NODES.tmp"'
+		find ./dev -type d -exec stat -c "mkdir -p \$DESTDIR/%n" {} \; | tee -a '"$SRM_NODES.tmp"'
+		find ./dev ! -type d -exec ls -l {} \; | grep "^\(b\|c\)" | sed "s/\s*\(\S\)\S\+\s\+\S\+\s\+\S\+\s\+\S\+\s*\(\S*\),\s*\(\S*\).*\(\/dev\/\S*\)\s*$/rm -f \$DESTDIR\/\4\nmknod \$DESTDIR\/\4 \1 \2 \3/" | tee -a '"$SRM_NODES.tmp"'
+		cd -'
+		mv $SRM_NODES.tmp $SRM_NODES
+# DO NOT USE below find -type c, it does not work for some versions fakeroot
+#		find ./dev -type c -exec stat -c "rm -f \$DESTDIR/%n && mknod \$DESTDIR/%n c \$(( 0x%t )) \$(( 0x%T )) #version 1.1.0" {} \; | tee -a '"$SRM_NODES.tmp"'
+#		find ./dev -type b -exec stat -c "rm -f \$DESTDIR/%n && mknod \$DESTDIR/%n b \$(( 0x%t )) \$(( 0x%T )) #version 1.1.0" {} \; | tee -a '"$SRM_NODES.tmp"'
+else
+#restore nodes
+	PATH=$VANILLA_PATH fakeroot sh -x -c "
+		mkdir -p $DESTDIR/dev
+		touch $SRM_NODES
+		sh $SRM_NODES || exit 1
+	   	PATH=$O_PATH sh -c '$c' || exit 1"
+fi
+
+
+exit $?

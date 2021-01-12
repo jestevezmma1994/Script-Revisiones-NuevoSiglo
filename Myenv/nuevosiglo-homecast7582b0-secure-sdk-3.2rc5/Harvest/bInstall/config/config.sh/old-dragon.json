@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# WARNING NOT FINISHED ("start" command allways restores default configuration) 
+
+if [ -d /dev/mtd ]; then
+	CPART="/8"
+else
+	CPART="8"
+fi
+
+if [ "$1" = "save" ]; then 
+  echo -n "storing configuration"
+  cd /tmp
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+  echo -n .
+  rm -f /tmp/config.tar.gz
+  tar czf /tmp/config.tar.gz vod/
+  echo -n .
+  md5sum /tmp/config.tar.gz > /tmp/config.tar.gz.md5
+  echo -n .
+  flashcp /tmp/config.tar.gz /dev/mtd${CPART}
+  echo " OK"
+else 
+  if [ "$1" = "start" ]; then 
+    echo loading configuration from disk
+    if ! tar xzf /dev/mtd${CPART} -C /etc 2> /dev/null && \
+		[ ! -f /etc/vod/conf.json ]; then  
+      echo loading default configuration
+      cp /etc/default-conf/* /etc/vod/
+      rm -f /etv/vod/LASTVERSION		# force on-upgrade cfg check
+    fi
+  fi
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+fi

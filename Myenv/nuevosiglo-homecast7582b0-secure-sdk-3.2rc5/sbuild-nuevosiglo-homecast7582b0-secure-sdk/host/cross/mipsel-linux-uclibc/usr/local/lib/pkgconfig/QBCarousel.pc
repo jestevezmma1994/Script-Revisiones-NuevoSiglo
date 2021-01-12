@@ -1,0 +1,6 @@
+Name: QBCarousel
+Version: 1.0.0
+Requires: CUIT QBDataModel3 QBResourceManager SvCore SvFoundation SvSettingsManager swl 
+Description: A Generic Carousel widget for displaying DBObject elements
+Libs: -lQBCarousel 
+CFlags: 

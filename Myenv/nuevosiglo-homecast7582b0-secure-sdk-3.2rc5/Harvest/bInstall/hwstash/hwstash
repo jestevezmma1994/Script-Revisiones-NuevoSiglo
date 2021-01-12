@@ -1,0 +1,31 @@
+#!/bin/sh
+
+HWSTASH_KEY_ENC=/etc/hwstash/hwstash.key.enc
+HWSTASH_KEY_PLAIN=/tmp/hwstash.key.plain
+HWSTASH_IV=/etc/hwstash/hwstash.iv
+HWSTASH_PKG_ENC=/etc/hwstash/hwstash.pkg.enc
+HWSTASH_PKG_PLAIN=/tmp/hwstash.pkg.plain
+
+export NO_HDCP=1
+export IR_PROTO=none
+export IR_ADDR=0
+export QBPlatformStopLogo=0
+export QBCryptoAppDisplayLogo=1
+
+QBCryptoApp -i ${HWSTASH_KEY_ENC} -o ${HWSTASH_KEY_PLAIN} -e cas -c arris -a encryption -m Aes -b ecb -n decrypt -k encryptedArrisKey4 >/dev/null 2>&1 < /dev/null &
+
+while [ ! -p /tmp/qb_splash_app_fifo ]; do
+    sleep 1
+done
+
+mount -o bind /tmp/qb_splash_app_fifo /dev/qbsplash
+
+openssl enc -d -aes-256-cbc -K $(xxd -ps ${HWSTASH_KEY_PLAIN}) -iv $(xxd -ps ${HWSTASH_IV}) -in ${HWSTASH_PKG_ENC} -out ${HWSTASH_PKG_PLAIN}
+rm ${HWSTASH_KEY_PLAIN}
+
+mkdir -p /tmp/hwstash/
+chown root:appgroup /tmp/hwstash
+chmod ug-w,o-rwx /tmp/hwstash
+
+mount ${HWSTASH_PKG_PLAIN} /tmp/hwstash
+

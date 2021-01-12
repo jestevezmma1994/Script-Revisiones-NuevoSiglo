@@ -1,0 +1,4 @@
+data/Headers/QBSubsManager.h.i
+data/Makefile.i
+data/c.comp.i
+data/Sources/QBSubsManager.c.i

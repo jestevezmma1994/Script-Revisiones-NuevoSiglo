@@ -1,0 +1,88 @@
+#!/bin/sh
+
+# zamontuj
+# utwórz katalogi
+# odmontuj
+
+log()
+{
+  echo "prepare_mstore[$HDX] $@" 1>&2
+  #logger "format_disk[$HDX] > $@"
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR:" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+HDX=$1
+DIR=/tmp/pvr_format_tmp_dir_$HDX
+
+if [ -f /tmp/qb_format_pvr_configuration ]; then
+    regex="^label=[[:alnum:]_-]\+:type=[[:alnum:]]\+:size=[[:digit:]]\+$"
+    for line in $(grep $regex < /tmp/qb_format_pvr_configuration) ; do
+        label=$(echo $line | cut -d: -f 1 | cut -d= -f 2)
+        if [ "$label" == "MStoreVoD" ]; then
+            mstore_node=$DIR/$label"_node"
+            mstore_dir=$DIR/$label"_dir"
+            call_v mount -o noexec $mstore_node $mstore_dir
+            [ $RES -ne 0 ] && exit 7
+
+            call_v chown 0:1000 $mstore_dir
+            [ $RES -ne 0 ] && exit 7
+
+            call_v chmod g+rwx $mstore_dir
+            [ $RES -ne 0 ] && exit 7
+
+            call_v mkdir -p $mstore_dir/Quadricast/STB/MPackManager/work
+            [ $RES -ne 0 ] && exit 7
+            
+            call_v chown 0:1000 $mstore_dir/Quadricast/STB/MPackManager/work
+            [ $RES -ne 0 ] && exit 7
+
+            call_v chmod g+rwx $mstore_dir/Quadricast/STB/MPackManager/work
+            [ $RES -ne 0 ] && exit 7
+
+            call_v mkdir -p $mstore_dir/Quadricast/STB/storage/VOD
+            [ $RES -ne 0 ] && exit 7
+
+            call_v chown 0:1000 $mstore_dir/Quadricast/STB/storage/VOD
+            [ $RES -ne 0 ] && exit 7
+
+            call_v chmod g+rwx $mstore_dir/Quadricast/STB/storage/VOD
+            [ $RES -ne 0 ] && exit 7
+
+            call_v umount $mstore_dir
+            [ $RES -ne 0 ] && exit 7
+
+            exit 0
+        fi
+    done
+fi
+

@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+    
+    <widget name="MoviePage">
+
+        <widget name="Background">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>588</int></param>
+            <param tag="height"><int>419</int></param>
+            <param tag="bg">
+                <bitmap><path>bg_info_whole.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="ContentImage">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>28</int></param>
+            <param tag="width"><int>548</int></param>
+            <param tag="height"><int>374</int></param>
+            <param tag="bg">
+                <bitmap><path>wait-icon.png</path></bitmap>
+            </param>
+        </widget>
+    
+        <widget name="CategoryImage">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>28</int></param>
+            <param tag="width"><int>548</int></param>
+            <param tag="height"><int>374</int></param>
+            <param tag="bg">
+                <bitmap><path>wait-category.png</path></bitmap>
+            </param>
+        </widget>
+    </widget>
+
+    <widget name="arrowUp">
+        <param tag="xOffset"><int>260</int></param>
+        <param tag="yOffset"><int>13</int></param>
+        <param tag="width"><int>20</int></param>
+        <param tag="height"><int>14</int></param>
+        <param tag="bg">
+            <bitmap><path>arrow/arrow_up_active.png</path></bitmap>
+        </param>
+    </widget>
+
+    <widget name="arrowDown">
+        <param tag="xOffset"><int>260</int></param>
+        <param tag="yOffset"><int>414</int></param>
+        <param tag="width"><int>20</int></param>
+        <param tag="height"><int>14</int></param>
+        <param tag="bg">
+            <bitmap><path>arrow/arrow_down_active.png</path></bitmap>
+        </param>
+    </widget>
+
+    <widget name="menu">
+        <param tag="extraSpace"><int>270</int></param>
+        <widget name="menu">
+            <param tag="xOffset"><int>75</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>837</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="activeItemYOffset"><int>335</int></param>
+            <param tag="itemSpacing"><int>48</int></param>
+            <param tag="xtraSpace"><int>12</int></param>
+            <param tag="xtraSpaceAbove"><int>227</int></param>
+            <param tag="scrollDuration"><double>0.3</double></param>
+        </widget>
+        <widget name="carousel">
+            <param tag="xOffset"><int>578</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>588</int></param>
+            <param tag="height"><int>576</int></param>
+            <param tag="slotWidth"><int>588</int></param>
+            <param tag="slotHeight"><int>440</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="rowNumber"><int>1</int></param>
+            <param tag="columnNumber"><int>5</int></param>
+            <param tag="firstFocusableColumn"><int>2</int></param>
+            <param tag="lastFocusableColumn"><int>2</int></param>
+            <param tag="firstVisibleColumn"><int>1</int></param>
+            <param tag="lastVisibleColumn"><int>3</int></param>
+            <param tag="verticalSpacing"><int>0</int></param>
+            <param tag="horizontalSpacing"><int>0</int></param>
+            <param tag="scrollMaxSpeed"><int>3000</int></param>
+            <param tag="scrollAcceleration"><double>50</double></param>
+            <param tag="focus">
+                <bitmap><path>data_16x9/redframe_dvdbox.png</path></bitmap>
+            </param>
+            <widget name="Slot">
+                <param tag="font">
+                    <ref constant="NormalFont"/>
+                </param>
+                <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+                <param tag="textColor"><color>cfcfcfff</color></param>
+                <param tag="textAlign"><string>right</string></param>
+                <param tag="width"><int>588</int></param>
+                <param tag="height"><int>420</int></param>
+                <param tag="bg"><bitmap><path>pip.png</path></bitmap></param>
+            </widget>
+            <widget name="Focus">
+                <param tag="width"><int>588</int></param>
+                <param tag="height"><int>420</int></param>
+                <param tag="bg"><bitmap><path>ramka_tv.png</path></bitmap></param>
+            </widget>
+        </widget>
+    </widget>
+
+</settings>

@@ -1,0 +1,6 @@
+Name: QBTunerHAL
+Version: 1.0.0
+Requires: QBDemux QBDemuxHAL-nexus QBPlatformHAL QBTuner SvCore error_log nexus 
+Description: Cubiware tuner Hardware Abstraction Layer for nexus library
+Libs: -lQBTunerHAL 
+CFlags: 

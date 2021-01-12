@@ -1,0 +1,24 @@
+# Each line is interpreted as having two fields. First field is the
+# name of the keymap file (without .map suffix) to be loaded, when
+# device name matches the regular expression in the second field.
+#
+# First field begins with first non-whitespace character and consists
+# of non-whitespace characters. Fields are separated by a run whitespace
+# characters (at least one of them). The rest of the line forms the
+# second field. Lines with invalid format are silently ignored.
+
+hidkbd			(HID|USB).*[Kk]eyboard
+hidkbd			SCISSORS.*[Kk]eyboard
+hidkbd			Apple Keyboard
+hidkbd			AT Translated Set 2 keyboard
+Philips_USB_IR		Philips RCS USB IR Combo Device
+smp8634_remote_IR	smp8634_remote_IR/RF
+hidmouse		[Mm]ouse
+ipaq			(gpio-keys|asic2 keyboard)
+micom_input_ToyaHD	micom_(input|rc|fp)
+raw_hansun_007f  nexus_ir_007f
+raw_homecast_4040_rev3  nexus_ir_4040
+raw_yuxing_01fe  nexus_ir_01fe
+raw_intek_006e   nexus_ir_006e
+raw_claro_8080   nexus_ir_8080
+

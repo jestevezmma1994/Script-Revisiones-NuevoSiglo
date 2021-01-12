@@ -1,0 +1,13 @@
+#!/bin/sh
+
+. /etc/profile
+
+modprobe usbserial
+modprobe ftdi_sio
+modprobe pl2303
+
+{
+	while true; do
+		/sbin/getty -n -i -L -l /bin/sh 115200 ttyUSB0 vt100
+	done
+} &

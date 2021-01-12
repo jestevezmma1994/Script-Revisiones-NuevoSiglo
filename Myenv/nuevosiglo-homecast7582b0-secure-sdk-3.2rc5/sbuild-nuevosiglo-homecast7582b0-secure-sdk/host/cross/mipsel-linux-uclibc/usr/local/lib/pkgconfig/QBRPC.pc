@@ -1,0 +1,6 @@
+Name: QBRPC
+Version: 1.0.0
+Requires: SvCore SvFoundation 
+Description: Cubiware RPC endpoint library
+Libs: -lQBRPC -lpthread 
+CFlags: 

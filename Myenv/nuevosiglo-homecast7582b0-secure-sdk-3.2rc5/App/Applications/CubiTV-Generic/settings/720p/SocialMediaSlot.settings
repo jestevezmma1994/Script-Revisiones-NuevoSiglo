@@ -1,0 +1,392 @@
+<?xml version="1.0" ?>
+<settings version="2.0" xmlns="http://cubiware.com/settings-v2.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Colors.settings"/>
+
+    <!-- Template widgets -->
+
+    <widget name="label">
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="textColor"><ref constant="TextColor_Active"/></param>
+        <param tag="inactiveTextColor"><ref constant="TextColor_Inactive"/></param>
+        <param tag="disabledTextColor"><ref constant="TextColor_Disabled"/></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="vertAlign"><string>top</string></param>
+    </widget>
+
+    <widget name="counter">
+        <param tag="width"><int>100</int></param>
+        <param tag="height"><int>25</int></param>
+        
+        <widget name="Icon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>25</int></param>
+            <param tag="height"><int>20</int></param>
+        </widget>
+
+        <widget name="Text" import="label">
+            <param tag="xOffset"><int>27</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>75</int></param>
+            <param tag="height"><int>25</int></param>
+            <param tag="fontSize"><int>18</int></param>
+        </widget>
+    </widget>
+
+    <widget name="comment">
+        <param tag="width"><int>275</int></param>
+        <param tag="height"><int>80</int></param>
+
+        <widget name="Author" import="label">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>275</int></param>
+        </widget>
+
+        <widget name="Text" import="label">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="fontSize"><int>18</int></param>
+            <param tag="textColor"><color>7f7f7fff</color></param>
+            <param tag="width"><int>275</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>2</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+            <param tag="vertAlign"><string>middle</string></param>
+        </widget>
+
+        <widget name="Date" import="label">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>110</int></param>
+            <param tag="fontSize"><int>16</int></param>
+        </widget>
+
+        <!-- right_footer_icon & right_footer_number -->
+        <widget name="Counter" import="counter">
+            <param tag="xOffset"><int>150</int></param>
+            <param tag="yOffset"><int>60</int></param>
+        </widget>
+    </widget>
+
+    <!-- News feed without picture -->
+    <widget name="ItemDetailsNoPic">
+        <widget name="Title" import="label">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="width"><int>220</int></param>
+            <param tag="height"><int>70</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>3</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+
+        <widget name="Text" import="label">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>110</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>235</int></param>
+            <param tag="textColor"><ref constant="TextColor_Inactive"/></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>10</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+
+        <widget name="Counter0" import="counter">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>380</int></param>
+        </widget>
+
+        <widget name="Counter1" import="counter">
+            <param tag="xOffset"><int>120</int></param>
+            <param tag="yOffset"><int>380</int></param>
+        </widget>
+
+        <widget name="Comment0" import="comment">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>15</int></param>
+        </widget>
+
+        <widget name="Comment1" import="comment">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>110</int></param>
+        </widget>
+    </widget>
+
+    <!-- News feed without text -->
+    <widget name="ItemDetailsNoText">
+        <widget name="Title" import="label">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="width"><int>220</int></param>
+            <param tag="height"><int>70</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>3</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+        <!--
+        <widget name="Title" import="label">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>230</int></param>
+            <param tag="width"><int>220</int></param>
+            <param tag="height"><int>70</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>3</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+        -->
+
+        <widget name="Picture">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>15</int></param>
+            <param tag="width"><int>275</int></param>
+            <param tag="height"><int>190</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+        <!--
+        <widget name="Picture">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="width"><int>550</int></param>
+            <param tag="height"><int>200</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+        -->
+
+        <widget name="Counter0" import="counter">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>380</int></param>
+        </widget>
+
+        <widget name="Counter1" import="counter">
+            <param tag="xOffset"><int>120</int></param>
+            <param tag="yOffset"><int>380</int></param>
+        </widget>
+
+        <widget name="Comment0" import="comment">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>230</int></param>
+        </widget>
+
+        <widget name="Comment1" import="comment">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>325</int></param>
+        </widget>
+    </widget>
+
+    <!-- Full news feed -->
+    <widget name="ItemDetails">
+        <widget name="Title" import="label">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="width"><int>220</int></param>
+            <param tag="height"><int>70</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>3</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+
+        <widget name="Text" import="label">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>110</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>235</int></param>
+            <param tag="textColor"><ref constant="TextColor_Inactive"/></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>10</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+
+        <widget name="Picture">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>15</int></param>
+            <param tag="width"><int>275</int></param>
+            <param tag="height"><int>190</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+
+        <widget name="Counter0" import="counter">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>380</int></param>
+        </widget>
+
+        <widget name="Counter1" import="counter">
+            <param tag="xOffset"><int>120</int></param>
+            <param tag="yOffset"><int>380</int></param>
+        </widget>
+
+        <widget name="Comment0" import="comment">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>230</int></param>
+        </widget>
+
+        <widget name="Comment1" import="comment">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>325</int></param>
+        </widget>
+    </widget>
+
+    <widget name="TopList-template">
+        <param tag="width"><int>260</int></param>
+        <param tag="height"><int>80</int></param>
+
+        <widget name="Icon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>35</int></param>
+            <param tag="height"><int>25</int></param>
+        </widget>
+
+        <widget name="Text" import="label">
+            <param tag="xOffset"><int>45</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>220</int></param>
+        </widget>
+    </widget>
+
+    <widget name="BottomList-template">
+        <param tag="width"><int>580</int></param>
+        <param tag="height"><int>80</int></param>
+
+        <widget name="Icon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>35</int></param>
+            <param tag="height"><int>25</int></param>
+        </widget>
+
+        <widget name="Text" import="label">
+            <param tag="xOffset"><int>45</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>485</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+    </widget>
+
+    <widget name="Profile">
+        <common>
+            <param tag="xOffset"><int>35</int></param>
+        </common>
+
+        <widget name="Title" import="label">
+            <param tag="yOffset"><int>15</int></param>
+            <param tag="width"><int>520</int></param>
+            <param tag="height"><int>70</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>1</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+
+        <widget name="Picture">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>55</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>200</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+
+        <widget name="TopListHeader" import="label">
+            <param tag="yOffset"><int>55</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>25</int></param>
+        </widget>
+
+        <widget name="TopList0" import="TopList-template">
+            <param tag="yOffset"><int>85</int></param>
+        </widget>
+
+        <widget name="TopList1" import="TopList-template">
+            <param tag="yOffset"><int>115</int></param>
+        </widget>
+
+        <widget name="TopList2" import="TopList-template">
+            <param tag="yOffset"><int>145</int></param>
+        </widget>
+
+        <widget name="TopList3" import="TopList-template">
+            <param tag="yOffset"><int>175</int></param>
+        </widget>
+
+        <widget name="TopList4" import="TopList-template">
+            <param tag="yOffset"><int>205</int></param>
+        </widget>
+
+        <widget name="BottomListHeader" import="label">
+            <param tag="yOffset"><int>240</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>25</int></param>
+        </widget>
+
+        <widget name="BottomList0" import="BottomList-template">
+            <param tag="yOffset"><int>270</int></param>
+        </widget>
+
+        <widget name="BottomList1" import="BottomList-template">
+            <param tag="yOffset"><int>300</int></param>
+        </widget>
+
+        <widget name="BottomList2" import="BottomList-template">
+            <param tag="yOffset"><int>330</int></param>
+        </widget>
+    </widget>
+
+    <widget name="Gallery">
+
+        <widget name="Title" import="label">
+            <param tag="xOffset"><int>25</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="width"><int>540</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+        </widget>
+
+        <widget name="Description" import="label">
+            <param tag="xOffset"><int>25</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>210</int></param>
+            <param tag="height"><int>280</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>10</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+
+        <widget name="Picture">
+            <param tag="xOffset"><int>260</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>305</int></param>
+            <param tag="height"><int>280</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="Picture">
+
+        <widget name="Title" import="label">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>365</int></param>
+            <param tag="width"><int>550</int></param>
+            <param tag="height"><int>25</int></param>
+        </widget>
+
+        <widget name="Picture">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>15</int></param>
+            <param tag="width"><int>550</int></param>
+            <param tag="height"><int>330</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+</settings>
+

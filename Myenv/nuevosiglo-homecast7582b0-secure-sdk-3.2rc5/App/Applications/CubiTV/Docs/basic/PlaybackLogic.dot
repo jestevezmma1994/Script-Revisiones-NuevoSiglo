@@ -1,0 +1,11 @@
+digraph PlaybackLogic {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    PlaybackLogic [root=true]
+    PlaybackLogic -> TVLogic
+    PlaybackLogic -> AnyPlayerLogic
+    PlaybackLogic -> AudioTrackLogic
+    PlaybackLogic -> PlaylistLogic
+    PlaybackLogic -> QBParentalControlLogic
+    PlaybackLogic -> SubtitleTrackLogic
+}

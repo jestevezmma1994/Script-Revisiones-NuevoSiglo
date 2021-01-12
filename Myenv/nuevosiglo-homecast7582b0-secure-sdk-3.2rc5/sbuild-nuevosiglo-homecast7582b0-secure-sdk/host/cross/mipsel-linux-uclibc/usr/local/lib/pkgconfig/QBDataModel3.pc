@@ -1,0 +1,6 @@
+Name: QBDataModel3
+Version: 1.0.0
+Requires: QBAppKit QBStringUtils SvCore SvFoundation 
+Description: Cubiware Abstract Data Model Library
+Libs: -lQBDataModel3 -lexpat 
+CFlags: 

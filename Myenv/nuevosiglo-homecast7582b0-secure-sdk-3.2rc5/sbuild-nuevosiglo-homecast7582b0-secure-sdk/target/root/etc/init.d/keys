@@ -1,0 +1,50 @@
+#!/bin/sh
+
+mkdir -p /tmp/keys
+chown 0:1000 /tmp/keys
+chmod 750 /tmp/keys
+
+HDCP_PART=`cat /proc/mtd | grep "\<hdcp\>" | cut -d':' -f1`
+HDCP_KEY_SIZE=2236
+
+if [ ! -z "$HDCP_PART" ]; then
+	if [ -f /sys/class/mtd/$HDCP_PART/type ]; then
+		if [ "$(cat /sys/class/mtd/$HDCP_PART/type)" = "nand" ]; then
+			nandcat -l $HDCP_KEY_SIZE /dev/$HDCP_PART >/tmp/keys/hdcp.bin
+		else
+			dd if=/dev/$HDCP_PART of=/tmp/keys/hdcp.bin bs=$HDCP_KEY_SIZE count=1
+		fi
+	else
+		dd if=/dev/$HDCP_PART of=/tmp/keys/hdcp.bin bs=$HDCP_KEY_SIZE count=1
+	fi
+fi
+
+CRYPT_PART=`cat /proc/mtd | grep "\<cryptoguard\>" | cut -d':' -f1`
+
+if [ ! -z "$CRYPT_PART" ]; then
+	if [ -f /sys/class/mtd/$CRYPT_PART/type ]; then
+		if [ "$(cat /sys/class/mtd/$CRYPT_PART/type)" = "nand" ]; then
+			nandcat /dev/$CRYPT_PART >/tmp/keys/cryptoguard.nvram
+		else
+			dd if=/dev/$CRYPT_PART of=/tmp/keys/cryptoguard.nvram
+		fi
+	else
+		dd if=/dev/$CRYPT_PART of=/tmp/keys/cryptoguard.nvram
+	fi
+fi
+
+PLAYREADY_PART=`cat /proc/mtd | grep "\<playready\>" | cut -d':' -f1`
+
+if [ ! -z "$PLAYREADY_PART" ]; then
+    /usr/local/bin/install_drm_bin.sh "$PLAYREADY_PART" /tmp/keys/playready.bin
+fi
+
+WIDEVINE_PART=`cat /proc/mtd | grep "\<widevine\>" | cut -d':' -f1`
+
+if [ ! -z "$WIDEVINE_PART" ]; then
+    /usr/local/bin/install_drm_bin.sh "$WIDEVINE_PART" /tmp/keys/widevine.bin
+fi
+
+chown -R 0:1000 /tmp/keys
+chmod 550 /tmp/keys
+chmod -R 440 /tmp/keys/*

@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <constant name="PopupXOffset">
+        <int>340</int>
+    </constant>
+    <constant name="PopupYOffset">
+        <int>280</int>
+    </constant>
+
+    <widget name="QBHotplugUSBNotifierPopup">
+        <param tag="centered"><bool>true</bool></param>
+    </widget>
+    
+    <widget name="EPGContext">
+        <widget name="Fingerprint">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightTrigger">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="VerticalEPGWindow">
+        <widget name="Fingerprint">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightTrigger">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="QBMainMenuContext">
+        <widget name="Fingerprint">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="QBPVRPlayerContext">
+        <widget name="Fingerprint">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ConaxPopupManagerPINPopup">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightManagerPINPopup">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightIPTVManagerPINPopup">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightIPTVMMI">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+        <widget name="ViewRightIPTVUserMessage">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ConaxPopupManager">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+        <widget name="ViewRightTrigger">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightPopup">
+            <param tag="centered"><bool>false</bool></param>
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+    </widget>
+    <widget name="SvTVContext">
+        <widget name="Fingerprint">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ConaxPopupManager">
+            <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ConaxPopupManagerPINPopup">
+            <param tag="centered"><bool>true</bool></param>
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightManagerPINPopup">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightIPTVManagerPINPopup">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightIPTVMMI">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+        <widget name="ViewRightIPTVUserMessage">
+            <param tag="enabled"><bool>true</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightPopup">
+            <param tag="centered"><bool>false</bool></param>
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="ViewRightTrigger">
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+        <widget name="CryptoguardPopupManager">
+            <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="enabled"><bool>true</bool></param>
+        </widget>
+    </widget>
+    <widget name="QBChannelScanningSimpleContext">
+        <widget name="SkinDialog">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+    </widget>
+    <widget name="QBChannelScanningManualContext">
+        <widget name="QBHotplugUSBNotifierPopup">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+        <widget name="SkinDialog">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+    </widget>
+    <widget name="QBStandbyContext">
+        <widget name="ConaxMailIndicator">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+        <widget name="QBReminder">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+        <widget name="CountdownDialog">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+        <widget name="QBHotplugUSBNotifierPopup">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+        <widget name="SkinDialog">
+            <param tag="enabled"><bool>false</bool></param>
+        </widget>
+    </widget>
+    <widget name="Volume">
+        <param tag="xOffset"><int>1000</int></param>
+        <param tag="yOffset"><int>454</int></param>
+    </widget>
+    <widget name="CountdownDialog">
+        <param tag="xOffset"><int>280</int></param>
+        <param tag="yOffset"><int>200</int></param>
+    </widget>
+    <widget name="UpgradeDialog">
+        <param tag="xOffset"><int>280</int></param>
+        <param tag="yOffset"><int>200</int></param>
+    </widget>
+    <widget name="Fingerprint">
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="ConaxPopupManager">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="ConaxPopupManagerPINPopup">
+        <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+        <param tag="yOffset"><int>350</int></param>
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="ViewRightIPTVMMI">
+         <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="ViewRightManagerPINPopup">
+            <param tag="enabled"><bool>false</bool></param>
+            <param tag="centered"><bool>true</bool></param>
+    </widget>
+    <widget name="ViewRightIPTVManagerPINPopup">
+        <param tag="enabled"><bool>false</bool></param>
+        <param tag="centered"><bool>true</bool></param>
+    </widget>
+    <widget name="ViewRightIPTVUserMessage">
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="ViewRightPopup">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="ViewRightTrigger">
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="LatensStateScreen">
+        <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="LatensRemoteMessageScreen">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="LatensOverlayScreen">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="ConaxMailIndicator">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="QBReminder">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="SkinDialog">
+        <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+        <param tag="yOffset"><ref constant="PopupYOffset"/></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="CryptoguardPopupManager">
+        <param tag="xOffset"><ref constant="PopupXOffset"/></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="enabled"><bool>false</bool></param>
+    </widget>
+    <widget name="CryptoguardPopupManagerSTBDialog">
+        <param tag="enabled"><bool>true</bool></param>
+        <param tag="centered"><bool>true</bool></param>
+    </widget>
+    <widget name="CryptoguardPopupManagerOSDDialog">
+        <param tag="enabled"><bool>true</bool></param>
+        <param tag="centered"><bool>true</bool></param>
+    </widget>
+    <widget name="QBUSBSpeedTest">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+    <widget name="ViewrightTriggerUpgradeDialog">
+        <param tag="centered"><bool>true</bool></param>
+        <param tag="enabled"><bool>true</bool></param>
+    </widget>
+</settings>

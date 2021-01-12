@@ -1,0 +1,19 @@
+digraph ContextsLogic {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    ContextsLogic [root=true]
+
+    ContextsLogic -> AnyPlayerLogic
+    ContextsLogic -> AppStartupWaiterLogic
+    ContextsLogic -> ChannelScanningLogic
+    ContextsLogic -> EPGLogic
+    ContextsLogic -> GUILogic
+    ContextsLogic -> MainMenuLogic
+    ContextsLogic -> SatelliteSetupLogic
+    ContextsLogic -> SearchResultsLogic
+    ContextsLogic -> StandbyLogic
+    ContextsLogic -> TVLogic
+    ContextsLogic -> VerticalEPGLogic
+    ContextsLogic -> VoDLogic
+    ContextsLogic -> WizardLogic
+}

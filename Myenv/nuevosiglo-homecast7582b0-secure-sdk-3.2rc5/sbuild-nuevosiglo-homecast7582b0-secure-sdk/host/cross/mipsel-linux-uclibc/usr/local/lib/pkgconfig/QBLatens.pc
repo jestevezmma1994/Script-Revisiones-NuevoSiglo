@@ -1,0 +1,6 @@
+Name: QBLatens
+Version: 1.0.0
+Requires: QBCAS QBLatensLibLoader SvCore SvFoundation SvPlayerKit dataformat fibers mpeg2 
+Description: Latens library implementation - stub
+Libs: -lQBLatens 
+CFlags: 

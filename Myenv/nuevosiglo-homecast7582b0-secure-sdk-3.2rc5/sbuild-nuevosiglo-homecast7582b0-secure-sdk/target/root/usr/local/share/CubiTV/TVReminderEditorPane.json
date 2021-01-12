@@ -1,0 +1,122 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop channel recording",
+        "text": "Stop recording",
+
+        "__jsonclass__": [
+                    "QBBasicPaneItemParams",
+                    []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "record with nPVR",
+        "text": "Record with nPVR",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "delete nPVR recording",
+        "text": "Delete NPvr recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop keyword nPVR recording",
+        "text": "Stop keyword recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "stop series nPVR recording",
+        "text": "Stop series recording",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "record series with nPVR",
+        "text": "Record series with nPVR",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "record keyword with nPVR",
+        "text": "Record keyword with nPVR",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "start-over",
+        "text": "Play from the beginning",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "continue",
+        "text": "Continue",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "record channel",
+        "text": "Record",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "show similar",
+        "text": "Show similar",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    },
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "more info",
+        "text": "More info",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+{
+    "credit": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+
+        "resolve": [
+            "person"
+        ]
+    },
+
+    "category": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "typeKey": "leafObjectType"
+    }
+}
+

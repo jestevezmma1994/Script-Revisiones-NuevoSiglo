@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Title.settings"/>
+    <xi:include href="Dialog.settings"/>
+    <xi:include href="Animation.settings"/>
+
+    <widget name="Popup">
+        <param tag="title"><string><i18n:gettext>Data buffering. Please wait ...</i18n:gettext></string></param>
+        <widget name="Animation" import="animation-template"></widget>
+    </widget>
+</settings>

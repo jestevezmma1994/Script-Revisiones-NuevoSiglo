@@ -1,0 +1,13 @@
+digraph RecordingMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Recording [root=true]
+
+    QBNPvrMenu
+    QBReminderMenu
+    QBPVRMenu
+
+    Recording -> QBNPvrMenu
+    Recording -> QBReminderMenu
+    Recording -> QBPVRMenu
+}

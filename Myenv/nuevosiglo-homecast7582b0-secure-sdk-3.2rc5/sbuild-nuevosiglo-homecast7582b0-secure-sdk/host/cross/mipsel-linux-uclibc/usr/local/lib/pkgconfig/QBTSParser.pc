@@ -1,0 +1,6 @@
+Name: QBTSParser
+Version: 1.0.0
+Requires: QBTextUtils SvCore SvPlayerKit libcrypto 
+Description: Collection of parsers/filters for transport stream
+Libs: -lQBTSParser 
+CFlags: 

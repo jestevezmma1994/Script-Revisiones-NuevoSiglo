@@ -1,0 +1,6 @@
+Name: fibers
+Version: 1.0.0
+Requires: SvCore SvProfile SvQuirks 
+Description: fibers library
+Libs: -lfibers -lpthread -lstdc++ -lpthread -lstdc++ 
+CFlags: 

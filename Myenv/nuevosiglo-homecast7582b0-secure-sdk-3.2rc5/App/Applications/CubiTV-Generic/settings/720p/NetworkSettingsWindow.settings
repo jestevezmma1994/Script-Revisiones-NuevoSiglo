@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Dialog.settings"/>
+    <xi:include href="BasicPane.settings"/>
+    <xi:include href="CustomerLogo.settings"/>
+
+    <widget name="NetworkSettingsWindow">
+        <common>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><int>18</int></param>
+        </common>
+
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="bg">
+            <bitmap><path>bg_mainbg.png</path></bitmap>
+        </param>
+
+        <widget name="NetworkSettingsWindow.Title">
+            <param tag="xOffset"><int>80</int></param>
+            <param tag="yOffset"><int>32</int></param>
+            <param tag="width"><int>680</int></param>
+            <param tag="height"><int>40</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="text"><string><i18n:gettext>Network Settings Window</i18n:gettext></string></param>
+        </widget>
+        <widget name="NetworkSettingsWindow.interface">
+            <param tag="xOffset"><int>240</int></param>
+            <param tag="yOffset"><int>200</int></param>
+            <param tag="yOffsetStep"><int>70</int></param>
+            <param tag="width"><int>440</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="textColor"><color>000000ff</color></param>
+            <param tag="fontSize"><int>24</int></param>
+            <param tag="padding"><int>20</int></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="bg">
+                <bitmap><path>frame_list_focus.png</path></bitmap>
+            </param>
+            <param tag="inactiveBg">
+                <bitmap><path>frame_list_nonfocus.png</path></bitmap>
+            </param>
+            <param tag="icon"><bitmap><path>white/iconw_settings.png</path></bitmap></param>
+        </widget>
+        <widget name="NetworkSettingsWindow.done">
+            <param tag="caption"><string><i18n:gettext>Done</i18n:gettext></string></param>
+            <param tag="xOffset"><int>570</int></param>
+            <param tag="yOffset"><int>570</int></param>
+            <param tag="width"><int>130</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="textColor"><color>000000ff</color></param>
+            <param tag="fontSize"><int>24</int></param>
+            <param tag="padding"><int>20</int></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="bg">
+                <bitmap><path>frame_list_focus.png</path></bitmap>
+            </param>
+            <param tag="inactiveBg">
+                <bitmap><path>frame_list_nonfocus.png</path></bitmap>
+            </param>
+        </widget>
+        <widget name="NetworkSettingsWindow.routing">
+            <param tag="caption"><string><i18n:gettext>Routing settings</i18n:gettext></string></param>
+            <param tag="xOffset"><int>520</int></param>
+            <param tag="yOffset"><int>500</int></param>
+            <param tag="width"><int>230</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="textColor"><color>000000ff</color></param>
+            <param tag="fontSize"><int>24</int></param>
+            <param tag="padding"><int>20</int></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="bg">
+                <bitmap><path>frame_list_focus.png</path></bitmap>
+            </param>
+            <param tag="inactiveBg">
+                <bitmap><path>frame_list_nonfocus.png</path></bitmap>
+            </param>
+        </widget>
+        <widget name="NetworkSettingsWindow.desc">
+            <param tag="text"><string><i18n:gettext>Please configure network</i18n:gettext></string></param>
+            <param tag="xOffset"><int>100</int></param>
+            <param tag="yOffset"><int>460</int></param>
+            <param tag="width"><int>1080</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="fontSize"><int>24</int></param>
+        </widget>
+        <widget name="NetworkSettingsWindow.description">
+            <param tag="xOffset"><int>600</int></param>
+            <param tag="yOffset"><int>300</int></param>
+            <param tag="width"><int>340</int></param>
+            <param tag="height"><int>55</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><int>26</int></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+    </widget>
+</settings>

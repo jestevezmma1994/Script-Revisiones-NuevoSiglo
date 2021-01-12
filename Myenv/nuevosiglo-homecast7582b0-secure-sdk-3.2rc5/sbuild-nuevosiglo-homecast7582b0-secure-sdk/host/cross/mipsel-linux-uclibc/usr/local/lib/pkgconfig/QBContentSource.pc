@@ -1,0 +1,6 @@
+Name: QBContentSource
+Version: 1.0.0
+Requires: QBTuner SvCore 
+Description: types defining data source for audio/video
+Libs: -lQBContentSource 
+CFlags: 

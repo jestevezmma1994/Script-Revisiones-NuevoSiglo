@@ -1,0 +1,3 @@
+component CxPlayReady-NuevoSiglo-homecast-test
+makefile=Makefile.test
+

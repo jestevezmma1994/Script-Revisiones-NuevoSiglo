@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+<settings version="2.0"
+          xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <constant name="DescriptionFontSize"><int>36</int></constant>
+    <constant name="ButtonFontSize"><int>26</int></constant>
+    <constant name="ButtonSelected"><bitmap><path>button_focus.png</path></bitmap></constant>
+    <constant name="ButtonUnselected"><bitmap><path>button_nonfocus.png</path></bitmap></constant>
+
+    <xi:include href="CustomerLogo.settings"/>
+    <xi:include href="Title.settings"/>
+    <xi:include href="Dialog.settings"/>
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Animation.settings"/>
+
+    <widget name="ChannelScanning">
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="sideMenuSettingsEnabled"><bool>false</bool></param>
+        </common>
+
+        <widget name="Window">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+        </widget>
+
+        <widget name="Input">
+            <param tag="yOffset"><int>100</int></param>
+            <param tag="ySpacing"><int>21</int></param>
+        </widget>
+
+        <widget name="ComboBox">
+            <param tag="width"><int>201</int></param>
+            <param tag="height"><int>39</int></param>
+            <param tag="bgColor"><color>00000000</color></param>
+            <widget name="Active">
+                <param tag="bg"><bitmap><path>combo_focus.png</path></bitmap></param>
+                <param tag="width"><int>131</int></param>
+                <param tag="height"><int>39</int></param>
+                <param tag="xOffset"><int>35</int></param>
+                <param tag="yOffset"><int>0</int></param>
+            </widget>
+            <widget name="Inactive">
+                <param tag="bg"><bitmap><path>combo_nonfocus.png</path></bitmap></param>
+                <param tag="width"><int>131</int></param>
+                <param tag="height"><int>39</int></param>
+                <param tag="xOffset"><int>35</int></param>
+                <param tag="yOffset"><int>0</int></param>
+            </widget>
+            <widget name="Box">
+                <param tag="xOffset"><int>35</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>131</int></param>
+                <param tag="height"><int>39</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <widget name="Label">
+					<param tag="xOffset"><int>0</int></param>
+					<param tag="yOffset"><int>9</int></param>
+					<param tag="width"><int>131</int></param>
+					<param tag="height"><int>24</int></param>
+					<param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+					<param tag="textAlign"><string>center</string></param>
+				</widget>
+            </widget>
+            <widget name="Arrow">
+                <common>
+                    <param tag="width"><int>20</int></param>
+                    <param tag="height"><int>28</int></param>
+                </common>
+                <widget name="Left">
+                    <param tag="inactive"><bitmap><path>arrow/arrow_full_left_inactive.png</path></bitmap></param>
+                    <param tag="active"><bitmap><path>arrow/arrow_full_left_active.png</path></bitmap></param>
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>5</int></param>
+                </widget>
+                <widget name="Right">
+                    <param tag="inactive"><bitmap><path>arrow/arrow_full_right_inactive.png</path></bitmap></param>
+                    <param tag="active"><bitmap><path>arrow/arrow_full_right_active.png</path></bitmap></param>
+                    <param tag="xOffset"><int>181</int></param>
+                    <param tag="yOffset"><int>5</int></param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="UltraWideComboBox" import="ChannelScanning.ComboBox">
+            <param tag="width"><int>541</int></param>
+            <widget name="Active">
+                <param tag="width"><int>471</int></param>
+            </widget>
+            <widget name="Inactive">
+                <param tag="width"><int>471</int></param>
+            </widget>
+            <widget name="Box">
+                <param tag="width"><int>471</int></param>
+                <widget name="Label">
+                    <param tag="width"><int>471</int></param>
+                </widget>
+            </widget>
+            <widget name="Arrow">
+                <widget name="Right">
+                    <param tag="xOffset"><int>521</int></param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="Satellite">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>515</int></param>
+                <param tag="yOffset"><int>150</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>150</int></param>
+                <param tag="width"><int>489</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Satellite Name</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="FrequencyInput">
+            <param tag="width"><int>201</int></param>
+            <param tag="height"><int>39</int></param>
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>201</int></param>
+                <param tag="height"><int>39</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <widget name="Active">
+                    <param tag="bg"><bitmap><path>combo_focus.png</path></bitmap></param>
+                    <param tag="width"><int>131</int></param>
+                    <param tag="height"><int>39</int></param>
+                    <param tag="xOffset"><int>35</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                </widget>
+                <widget name="Inactive">
+                    <param tag="bg"><bitmap><path>combo_nonfocus.png</path></bitmap></param>
+                    <param tag="width"><int>131</int></param>
+                    <param tag="height"><int>39</int></param>
+                    <param tag="xOffset"><int>35</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                </widget>
+                <widget name="Box">
+                    <param tag="xOffset"><int>35</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>131</int></param>
+                    <param tag="height"><int>39</int></param>
+                    <param tag="bgColor"><color>00000000</color></param>
+                    <widget name="Label">
+						<param tag="xOffset"><int>0</int></param>
+						<param tag="yOffset"><int>9</int></param>
+						<param tag="width"><int>131</int></param>
+						<param tag="height"><int>24</int></param>
+						<param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+						<param tag="textAlign"><string>center</string></param>
+					</widget>
+                </widget>
+                <widget name="Arrow">
+                    <common>
+                        <param tag="width"><int>20</int></param>
+                        <param tag="height"><int>28</int></param>
+                    </common>
+                    <widget name="Left">
+                        <param tag="inactive"><bitmap><path>arrow/arrow_full_left_inactive.png</path></bitmap></param>
+                        <param tag="active"><bitmap><path>arrow/arrow_full_left_active.png</path></bitmap></param>
+                        <param tag="xOffset"><int>0</int></param>
+                        <param tag="yOffset"><int>5</int></param>
+                    </widget>
+                    <widget name="Right">
+                        <param tag="inactive"><bitmap><path>arrow/arrow_full_right_inactive.png</path></bitmap></param>
+                        <param tag="active"><bitmap><path>arrow/arrow_full_right_active.png</path></bitmap></param>
+                        <param tag="xOffset"><int>181</int></param>
+                        <param tag="yOffset"><int>5</int></param>
+                    </widget>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="Frequency">
+            <widget name="Input" import="ChannelScanning.FrequencyInput">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="yOffset"><int>150</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>150</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Frequency</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="FrequencyMin">
+            <widget name="Input" import="ChannelScanning.FrequencyInput">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="yOffset"><int>150</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>150</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Start Frequency</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="FrequencyMax">
+            <widget name="Input" import="ChannelScanning.FrequencyInput">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="yOffset"><int>210</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>210</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>End Frequency</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="FrequencyJump">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="yOffset"><int>270</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>270</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Bandwidth</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+        
+        <widget name="Standard">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="yOffset"><int>330</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>330</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Standard</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="Polarization">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="width"><int>240</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Polarization</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="SymbolRate">
+            <param tag="xOffset"><int>675</int></param>
+            <param tag="width"><int>131</int></param>
+            <param tag="height"><int>40</int></param>
+            <widget name="Box">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>131</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="active"><bitmap><path>combo_whole_focus.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>combo_whole_nonfocus.png</path></bitmap></param>
+            </widget>
+            <widget name="Choice">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>131</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="simpleBackspace"><bool>true</bool></param>
+                <param tag="inactiveTextColor"><color>ffffffff</color></param>
+                <param tag="textAlign"><string>center</string></param>
+                <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Symbol Rate</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="Extra">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="Modulation">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Modulation</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+        
+        <widget name="SpectralInversionMode">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Spectral Inversion Mode</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+        </widget>
+
+        <widget name="UseNITSDT">
+            <widget name="ComboBox">
+                <param tag="xOffset"><int>640</int></param>
+                <param tag="yOffset"><int>447</int></param>
+            </widget>
+            <widget name="Description">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>450</int></param>
+                <param tag="width"><int>614</int></param>
+                <param tag="height"><int>40</int></param>
+                <param tag="fontSize"><ref constant="DescriptionFontSize"/></param>
+                <param tag="text"><string><i18n:gettext>Use NIT/SDT</i18n:gettext></string></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+
+        </widget>
+
+        <widget name="Popup">
+            <param tag="title"><string><i18n:gettext>Scanning channels</i18n:gettext></string></param>
+            <param tag="hasBreakButton"><bool>true</bool></param>
+            <widget name="Progress">
+                <param tag="align"><string>center</string></param>
+                <param tag="width"><int>608</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="bg"><bitmap><path>bar_progress_empty.png</path></bitmap></param>
+                <param tag="bar"><bitmap><path>bar_progress_full.png</path></bitmap></param>
+            </widget>
+
+            <widget name="LockStatus">
+                <param tag="lockOn"><bitmap><path>icons_found.png</path></bitmap></param>
+                <param tag="lockOff"><bitmap><path>icons_signallost.png</path></bitmap></param>
+                <widget name="Box">
+                    <param tag="width"><int>608</int></param>
+                    <param tag="height"><int>20</int></param>
+                    <param tag="bgColor"><color>00000000</color></param>
+                </widget>
+                <widget name="Icon">
+                    <param tag="width"><int>20</int></param>
+                    <param tag="height"><int>20</int></param>
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="bgColor"><color>00000000</color></param>
+                </widget>
+                <widget name="Label">
+                    <param tag="width"><int>588</int></param>
+                    <param tag="height"><int>20</int></param>
+                    <param tag="xOffset"><int>30</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                    <param tag="textAlign"><string>left</string></param>
+                </widget>
+            </widget>
+
+            <widget name="Status">
+                <widget name="Box">
+                    <param tag="width"><int>644</int></param>
+                    <param tag="height"><int>60</int></param>
+                    <param tag="bgColor"><color>00000000</color></param>
+                </widget>
+
+                <widget name="Strength">
+                    <common>
+                        <param tag="height"><int>25</int></param>
+                        <param tag="yOffset"><int>5</int></param>
+                        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                        <param tag="textAlign"><string>left</string></param>
+                    </common>
+                    <widget name="Low">
+                        <param tag="width"><int>70</int></param>
+                        <param tag="xOffset"><int>0</int></param>
+                        <param tag="text"><string>0</string></param>
+                    </widget>
+                    <widget name="Title">
+                        <param tag="width"><int>280</int></param>
+                        <param tag="xOffset"><int>0</int></param>
+                        <param tag="text"><string><i18n:gettext>Signal Strength</i18n:gettext></string></param>
+                        <param tag="textAlign"><string>center</string></param>
+                    </widget>
+                    <widget name="High">
+                        <param tag="width"><int>70</int></param>
+                        <param tag="xOffset"><int>250</int></param>
+                        <param tag="text"><string>100</string></param>
+                    </widget>
+                    <widget name="Gauge">
+                        <param tag="width"><int>280</int></param>
+                        <param tag="height"><int>29</int></param>
+                        <param tag="xOffset"><int>0</int></param>
+                        <param tag="bg"><bitmap><path>bar_indicator_empty.png</path></bitmap></param>
+                        <param tag="bar"><bitmap><path>bar_indicator_full.png</path></bitmap></param>
+                        <param tag="yOffset"><int>35</int></param>
+                    </widget>
+                </widget>
+
+                <widget name="Quality">
+                    <common>
+                        <param tag="height"><int>25</int></param>
+                        <param tag="yOffset"><int>5</int></param>
+                        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                        <param tag="textAlign"><string>left</string></param>
+                    </common>
+                    <widget name="Low">
+                        <param tag="width"><int>70</int></param>
+                        <param tag="xOffset"><int>342</int></param>
+                        <param tag="text"><string>0</string></param>
+                    </widget>
+                    <widget name="Title">
+                        <param tag="width"><int>280</int></param>
+                        <param tag="xOffset"><int>342</int></param>
+                        <param tag="text"><string><i18n:gettext>Signal Quality</i18n:gettext></string></param>
+                        <param tag="textAlign"><string>center</string></param>
+                    </widget>
+                    <widget name="High">
+                        <param tag="xOffset"><int>592</int></param>
+                        <param tag="width"><int>70</int></param>
+                        <param tag="text"><string>100</string></param>
+                    </widget>
+                    <widget name="Gauge">
+                        <param tag="width"><int>280</int></param>
+                        <param tag="height"><int>29</int></param>
+                        <param tag="xOffset"><int>342</int></param>
+                        <param tag="yOffset"><int>35</int></param>
+                        <param tag="bg"><bitmap><path>bar_indicator_empty.png</path></bitmap></param>
+                        <param tag="bar"><bitmap><path>bar_indicator_full.png</path></bitmap></param>
+                    </widget>
+                </widget>
+            </widget>
+
+            <widget name="Animation" import="animation-template"></widget>
+        </widget>
+
+            <widget name="NoTunerPopup">
+                <param tag="title"><string><i18n:gettext>All tuners are in use</i18n:gettext></string></param>
+                <param tag="info"><string><i18n:gettext>All tuners are in use. There are probably too many ongoing recordings.</i18n:gettext></string></param>
+            </widget>
+
+            <widget name="Dialog" import="Dialog">
+                <param tag="inputPolicy"><string>lenientModal</string></param>
+            </widget>
+
+            <widget name="SatelliteNotSetupDialog" import="ChannelScanning.Dialog">
+                <param tag="width"><int>920</int></param>
+                <param tag="title"><string><i18n:gettext>Satellite &#37;s is not setup yet</i18n:gettext></string></param>
+                <param tag="info"><string><i18n:gettext>Would You like to do it now?</i18n:gettext></string></param>
+                <widget name="TitleLabel">
+                    <param tag="width"><int>920</int></param>
+                </widget>
+                <widget name="Label">
+                    <param tag="width"><int>782</int></param>
+                </widget>
+                <widget name="ButtonsBox">
+                    <param tag="xOffset"><int>56</int></param>
+                    <param tag="width"><int>808</int></param>
+                </widget>
+            </widget>
+
+            <widget name="DropPopup">
+                <param tag="title"><string><i18n:gettext>Drop channels?</i18n:gettext></string></param>
+                <param tag="wait"><string><i18n:gettext>Please wait...</i18n:gettext></string></param>
+                <param tag="waitTitle"><string><i18n:gettext>Dropping...</i18n:gettext></string></param>
+                <param tag="question"><string><i18n:gettext>Are you sure that you want to drop all channels?</i18n:gettext></string></param>
+                <widget name="Animation" import="animation-template"></widget>
+            </widget>
+
+            <widget name="FailurePopup">
+                <param tag="title"><string><i18n:gettext>Scanning failed</i18n:gettext></string></param>
+                <param tag="info"><string><i18n:gettext>Service Not Found - Please Contact your service representative.</i18n:gettext></string></param>
+            </widget>
+
+            <widget name="Start">
+                <param tag="xOffset"><int>550</int></param>
+                <param tag="yOffset"><int>510</int></param>
+                <param tag="width"><int>180</int></param>
+                <param tag="height"><int>41</int></param>
+                <param tag="textColor"><color>000000ff</color></param>
+                <param tag="bg"><ref constant="ButtonSelected"/></param>
+                <param tag="inactiveBg"><ref constant="ButtonUnselected"/></param>
+                <param tag="fontSize"><ref constant="ButtonFontSize"/></param>
+            </widget>
+
+            <widget name="Drop">
+                <param tag="xOffset"><int>550</int></param>
+                <param tag="yOffset"><int>570</int></param>
+                <param tag="width"><int>180</int></param>
+                <param tag="height"><int>41</int></param>
+                <param tag="textColor"><color>000000ff</color></param>
+                <param tag="bg"><ref constant="ButtonSelected"/></param>
+                <param tag="inactiveBg"><ref constant="ButtonUnselected"/></param>
+                <param tag="fontSize"><ref constant="ButtonFontSize"/></param>
+            </widget>
+
+            <widget name="Results">
+                <widget name="Box">
+                    <param tag="height"><int>60</int></param>
+                    <param tag="width"><int>600</int></param>
+                    <param tag="bgColor"><color>00000000</color></param>
+                    <param tag="align"><string>center</string></param>
+                </widget>
+                <widget name="Success">
+                    <param tag="width"><int>20</int></param>
+                    <param tag="height"><int>20</int></param>
+                    <param tag="bg"><bitmap><path>icons_found.png</path></bitmap></param>
+                </widget>
+                <widget name="Failure">
+                    <param tag="width"><int>20</int></param>
+                    <param tag="height"><int>20</int></param>
+                    <param tag="bg"><bitmap><path>icons_notfound.png</path></bitmap></param>
+                </widget>
+                <widget name="Video">
+                    <widget name="Description">
+                        <param tag="xOffset"><int>25</int></param>
+                        <param tag="yOffset"><int>0</int></param>
+                        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                    </widget>
+                    <widget name="Tick">
+                        <param tag="xOffset"><int>0</int></param>
+                        <param tag="yOffset"><int>0</int></param>
+                    </widget>
+                </widget>
+                <widget name="Radio">
+                    <widget name="Description">
+                        <param tag="xOffset"><int>25</int></param>
+                        <param tag="yOffset"><int>30</int></param>
+                        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                    </widget>
+                    <widget name="Tick">
+                        <param tag="xOffset"><int>0</int></param>
+                        <param tag="yOffset"><int>30</int></param>
+                    </widget>
+                </widget>
+            </widget>
+
+    </widget>
+</settings>

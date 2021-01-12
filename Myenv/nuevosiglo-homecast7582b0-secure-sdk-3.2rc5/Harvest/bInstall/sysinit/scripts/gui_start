@@ -1,0 +1,26 @@
+#!/bin/sh
+
+while true; do
+    [ -f /etc/profile ] && . /etc/profile
+
+    if [ -f /proc/mpmode ] && [ `cat /proc/mpmode` = "1" ]; then
+        GUI=mpmode;
+    fi
+    if [ "$GUI" = "" ]; then
+        GUI=default;
+    fi
+    if [ ! -e "/etc/gui.d/$GUI" ]; then
+        GUI=default;
+    fi
+
+    echo exec GUI: $GUI >> /tmp/gui
+
+    if [ -e "/etc/gui.d/$GUI" ]; then
+        /etc/gui.d/$GUI > /dev/null 2>&1 </dev/null
+        touch /var/run/guirestart
+        restart_gui
+    else
+        echo /etc/gui.d/$GUI not found, sleeping >> /tmp/gui
+        sleep 300
+    fi
+done

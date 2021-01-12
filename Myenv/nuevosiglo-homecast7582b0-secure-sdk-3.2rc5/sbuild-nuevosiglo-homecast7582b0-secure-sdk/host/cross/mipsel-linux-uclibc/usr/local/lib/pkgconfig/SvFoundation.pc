@@ -1,0 +1,6 @@
+Name: SvFoundation
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvQuirks sv-list 
+Description: Foundation Framework
+Libs: -lSvFoundation -lpthread -lpthread 
+CFlags: 

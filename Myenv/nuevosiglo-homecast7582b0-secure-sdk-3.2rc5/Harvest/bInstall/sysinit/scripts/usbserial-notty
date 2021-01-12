@@ -1,0 +1,8 @@
+#!/bin/sh
+
+. /etc/profile
+
+modprobe usbserial
+modprobe ftdi_sio
+modprobe pl2303
+

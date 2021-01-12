@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><settings xmlns="http://cubiware.com/settings-v2.xsd"
+xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0">
+  <xi:include href="TextFont.settings"/>
+  <widget name="MainWindow">
+	<common>
+      <param tag="font"><ref constant="TextFont"/></param>
+      <param tag="textColor"><color>efefefff</color></param>
+	</common>
+
+    <param tag="width"><int>720</int></param>
+    <param tag="height"><int>480</int></param>
+    <param tag="bgColor"><color>4f4f4fff</color></param>
+    <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+
+    <widget name="NewVersion">
+      <param tag="xOffset"><int>360</int></param>
+      <param tag="yOffset"><int>430</int></param>
+      <param tag="width"><int>312</int></param>
+      <param tag="height"><int>44</int></param>
+	  <param tag="fontSize"><int>18</int></param>
+	  <param tag="textAlign"><string>right</string></param>
+    </widget>
+
+    <widget name="ScanningFrequency">
+      <param tag="xOffset"><int>360</int></param>
+      <param tag="yOffset"><int>400</int></param>
+      <param tag="width"><int>312</int></param>
+      <param tag="height"><int>44</int></param>
+	  <param tag="fontSize"><int>18</int></param>
+	  <param tag="textAlign"><string>right</string></param>
+    </widget>
+
+    <widget name="PreviousVersion">
+      <param tag="xOffset"><int>48</int></param>
+      <param tag="yOffset"><int>430</int></param>
+      <param tag="width"><int>312</int></param>
+      <param tag="height"><int>44</int></param>
+      <param tag="fontSize"><int>18</int></param>
+      <param tag="textAlign"><string>left</string></param>
+    </widget>
+
+    <widget name="Info">
+      <param tag="xOffset"><int>0</int></param>
+      <param tag="yOffset"><int>60</int></param>
+      <param tag="width"><int>720</int></param>
+      <param tag="height"><int>100</int></param>
+      <param tag="fontSize"><int>28</int></param>
+      <param tag="textAlign"><string>center</string></param>
+    </widget>
+
+    <widget name="LongInfo">
+      <param tag="xOffset"><int>0</int></param>
+      <param tag="yOffset"><int>310</int></param>
+      <param tag="width"><int>720</int></param>
+      <param tag="height"><int>115</int></param>
+      <param tag="fontSize"><int>20</int></param>
+      <param tag="textAlign"><string>center</string></param>
+      <param tag="multiLine"><bool>true</bool></param>
+    </widget>
+
+    <widget name="ProgressBar">
+      <param tag="xOffset"><int>48</int></param>
+      <param tag="yOffset"><int>268</int></param>
+      <param tag="width"><int>632</int></param>
+      <param tag="height"><int>29</int></param>
+	  <param tag="fontSize"><int>24</int></param>
+	  <param tag="bg"><bitmap><path>bar_progress_empty.png</path></bitmap></param>
+      <param tag="bar"><bitmap><path>bar_progress_full.png</path></bitmap></param>
+    </widget>
+
+    <widget name="CustomerLogo">
+      <param tag="xOffset"><int>500</int></param>
+      <param tag="yOffset"><int>17</int></param>
+      <param tag="width"><int>185</int></param>
+      <param tag="height"><int>33</int></param>
+      <param tag="bg"><bitmap><path>logo_long.png</path></bitmap></param>
+    </widget>
+
+    <widget name="Animation">
+      <param tag="width"><int>89</int></param>
+      <param tag="height"><int>89</int></param>
+      <param tag="xOffset"><int>315</int></param>
+      <param tag="yOffset"><int>155</int></param>
+      <param tag="bgColor"><color>00000000</color></param>
+      <param tag="stepDuration"><double>0.8</double></param>
+      <param tag="stepsCount"><int>12</int></param>
+      <param tag="frame0"><bitmap><path>animation/searching_10.png</path></bitmap></param>
+      <param tag="frame1"><bitmap><path>animation/searching_20.png</path></bitmap></param>
+      <param tag="frame2"><bitmap><path>animation/searching_30.png</path></bitmap></param>
+      <param tag="frame3"><bitmap><path>animation/searching_40.png</path></bitmap></param>
+      <param tag="frame4"><bitmap><path>animation/searching_50.png</path></bitmap></param>
+      <param tag="frame5"><bitmap><path>animation/searching_60.png</path></bitmap></param>
+      <param tag="frame6"><bitmap><path>animation/searching_70.png</path></bitmap></param>
+      <param tag="frame7"><bitmap><path>animation/searching_80.png</path></bitmap></param>
+      <param tag="frame8"><bitmap><path>animation/searching_90.png</path></bitmap></param>
+      <param tag="frame9"><bitmap><path>animation/searching_100.png</path></bitmap></param>
+      <param tag="frame10"><bitmap><path>animation/searching_110.png</path></bitmap></param>
+      <param tag="frame11"><bitmap><path>animation/searching_120.png</path></bitmap></param>
+	</widget>
+
+  </widget>
+
+</settings>

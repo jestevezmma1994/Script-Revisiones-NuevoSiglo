@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+	
+    <xi:include href="fonts.settings"/>
+
+    <widget name="QBHelpInfoWindow">
+
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+	        <param tag="font"><ref constant="NormalFont"/></param>
+        </common>
+
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+		
+	    <widget name="CaptionBig">
+	        <param tag="text"><string><i18n:gettext>HELP</i18n:gettext></string></param>
+	        <param tag="xOffset"><int>600</int></param>
+	        <param tag="yOffset"><int>220</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>70</int></param>
+            <param tag="fontSize"><int>66</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="font"><ref constant="BoldFont"/></param>
+        </widget>
+
+        <widget name="logoHelp">
+	        <param tag="xOffset"><int>515</int></param>
+	        <param tag="yOffset"><int>224</int></param>
+	        <param tag="width"><int>70</int></param>
+	        <param tag="height"><int>70</int></param>
+	        <param tag="bg"><bitmap><path>question_big_icon.png</path></bitmap></param>
+	    </widget>
+		
+        <widget name="CaptionSmall">
+            <param tag="xOffset"><int>200</int></param>
+            <param tag="yOffset"><int>350</int></param>
+            <param tag="width"><int>880</int></param>
+            <param tag="height"><int>400</int></param>
+            <param tag="fontSize"><int>37</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>5</int></param>
+            <param tag="isMarkup"><bool>true</bool></param>
+            <param tag="text"><string><i18n:gettext><![CDATA[<p>For any issues related to services,<br/>please contact help desk number <font size="47" color="#e0192c">123456</font></p>]]></i18n:gettext></string></param>
+        </widget>
+
+        <widget name="windowInfo">
+	        <param tag="xOffset"><int>0</int></param>
+	        <param tag="yOffset"><int>660</int></param>
+	        <param tag="width"><int>1280</int></param>
+	        <param tag="height"><int>81</int></param>
+	        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+	        <param tag="textAlign"><string>center</string></param>
+	        <param tag="fadeDuration"><double>0.5</double></param>
+	        <param tag="text"><string><i18n:gettext>Press Back to go to previous screen</i18n:gettext></string></param>
+	    </widget>
+
+    </widget>
+</settings>

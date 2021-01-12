@@ -1,0 +1,6 @@
+Name: TranslationMergerHeaders
+Version: 1.0.0
+Requires: 
+Description: Translation merger headers
+Libs: -lTranslationMergerHeaders 
+CFlags: 

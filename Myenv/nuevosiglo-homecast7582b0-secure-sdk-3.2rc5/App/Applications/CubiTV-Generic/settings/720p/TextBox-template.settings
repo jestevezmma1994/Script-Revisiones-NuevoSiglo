@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Colors.settings"/>
+    <xi:include href="ScrollView.settings"/>
+    
+    <widget name="TextBox-template" import="ScrollView">
+        <param tag="itemWidth"><int>800</int></param>
+        <param tag="itemMinHeight"><int>10</int></param>
+        <param tag="itemSpacing"><int>0</int></param>
+        <param tag="width"><int>800</int></param>
+        <param tag="height"><int>400</int></param>
+        <param tag="paragraphLimit"><int>250</int></param>
+
+        <widget name="viewport">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>800</int></param>
+            <param tag="height"><int>400</int></param>
+            <param tag="xStep"><int>20</int></param>
+            <param tag="yStep"><int>20</int></param>
+            <param tag="xMaxVelocity"><double>1000</double></param>
+            <param tag="yMaxVelocity"><double>1000</double></param>
+            <param tag="xAccelerationRatio"><double>20</double></param>
+            <param tag="yAccelerationRatio"><double>20</double></param>
+            <param tag="screenAcceleration"><double>100</double></param>
+        </widget>
+        
+        <widget name="text">
+            <param tag="width"><int>800</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="textColor"><ref constant="TextColor_Active"/></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+    </widget>
+</settings>
+
+    

@@ -1,0 +1,3 @@
+component logo-test
+makefile = Makefile.test
+depends = libpng-host

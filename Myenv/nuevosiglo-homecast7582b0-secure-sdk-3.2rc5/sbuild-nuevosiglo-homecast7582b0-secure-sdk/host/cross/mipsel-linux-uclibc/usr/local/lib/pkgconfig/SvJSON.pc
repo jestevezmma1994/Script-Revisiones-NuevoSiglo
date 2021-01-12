@@ -1,0 +1,6 @@
+Name: SvJSON
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvFoundation lightjson 
+Description: JSON library
+Libs: -lSvJSON -lpthread 
+CFlags: 

@@ -1,0 +1,6 @@
+Name: mpeg2
+Version: 1.0.0
+Requires: mpeg-common 
+Description: quirks for mpeg parser - generic wrapper
+Libs: -lmpeg2 
+CFlags: 

@@ -1,0 +1,2218 @@
+<?xml version="1.0" ?><tree version="1.0" xmlns="http://cubiware.com/activetree-v1.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd">
+
+    <node id="VOD">
+        <attr name="caption"><i18n:gettext>VOD</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_movies_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_movies_nonfocus.png</attr>
+        <attr name="VODServiceType" type="string">CONFIG</attr>
+        <attr name="Innov8onServiceTag" type="string">VOD</attr>
+        <attr name="displayMode" type="string">showByDefault</attr>
+        <attr name="TraxisWebCatalog" type="string">TVOD</attr>
+        <attr name="TraxisWebIngoreSubscriptionProducts" type="bool">true</attr>
+        <attr name="TraxisWebEnableMyRentals" type="bool">true</attr>
+        <attr name="TraxisWebEnableSearch" type="bool">true</attr>
+        <attr name="TraxisWebCategoriesSortOrder" type="string">Ordinal</attr>
+        <attr name="TraxisWebTitlesSortOrder" type="string">Ordinal</attr>
+        <attr name="TraxisWebMaxCachedAssets" type="int">200</attr>
+        <attr name="TraxisWebMaxSearchResults" type="int">150</attr>
+    </node>
+
+    <node id="TIVI">
+        <attr name="caption"><i18n:gettext>TV</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_tv_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_tv_nonfocus.png</attr>
+        <attr name="hints" type="string">tv_hint</attr>
+        <node id="TVG">
+            <attr name="caption"><i18n:gettext>TV Guide</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_tvprogram_small.png</attr>
+        </node>
+        <!--node id="TVSH">
+            <attr name="caption"><i18n:gettext>Search by name</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_search.png</attr>
+        </node-->
+        <!--node id="SearchByCategory">
+            <attr name="caption"><i18n:gettext>Search by category</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_search.png</attr>
+        </node-->
+        <!--node id="reminders">
+            <attr name="caption"><i18n:gettext>Reminders</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_dir_reminder.png</attr>
+        </node-->
+    </node>
+
+    <!-- AMERELES Buscador Global-->
+    <node id="SEARCHBOLD">
+        <attr name="caption"><i18n:gettext>Buscador</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_search_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_search_nonfocus.png</attr>
+        <node id="SEARCHBOLDBYNAME">
+            <attr name="caption"><i18n:gettext>Buscador</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_search.png</attr>
+        </node>
+        <attr name="displayMode" type="string">showByDefault</attr>
+    </node>
+    <!-- AMERELES Buscador Global-->
+    
+    <node id="FAVS">
+        <attr name="caption"><i18n:gettext>Favorites</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_favourites_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_favourites_nonfocus.png</attr>
+        <attr name="hints" type="string">favorites_hint</attr>
+    </node>
+
+    <node id="PVR">
+        <attr name="caption"><i18n:gettext>PVR</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_pvr_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_pvr_nonfocus.png</attr>
+        <attr name="hints" type="string">pvr_hint</attr>
+        <attr name="shortcut" type="string">PVR</attr>
+    </node>
+
+    <!--node id="NPvr">
+        <attr name="caption"><i18n:gettext>Network PVR</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_network_pvr_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_network_pvr_nonfocus.png</attr>
+        <attr name="shortcut" type="string">NPvr</attr>
+        <attr name="hints" type="string">npvr_hint</attr>
+        <node id="npvr-server-status">
+            <attr name="caption"><i18n:gettext>Network PVR Quota</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>unknown</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+        </node>
+        <node id="npvr-scheduled">
+            <attr name="caption"><i18n:gettext>Scheduled Recordings</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>0 recordings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_dir_schedule.png</attr>
+        </node>
+        <node id="npvr-ongoing">
+            <attr name="caption"><i18n:gettext>Ongoing Recordings</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>0 recordings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_dir_ongoing.png</attr>
+        </node>
+        <node id="npvr-completed">
+            <attr name="caption"><i18n:gettext>Completed Recordings</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>0 recordings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_dir_completedrec.png</attr>
+        </node>
+        <node id="npvr-failed">
+            <attr name="caption"><i18n:gettext>Failed Recordings</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>0 recordings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_dir_error.png</attr>
+            <attr name="npvrMenuItem:big" type="string">yes</attr>
+        </node>
+        <node id="npvr-deleted">
+            <attr name="caption"><i18n:gettext>Deleted Recordings</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>0 recordings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_dir_deleted.png</attr>
+        </node>
+    </node-->
+
+    <node id="RDIO">
+        <attr name="caption"><i18n:gettext>Radio</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_radio_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_radio_nonfocus.png</attr>
+        <attr name="hints" type="string">radio_hint</attr>
+        <!--node id="RDG">
+            <attr name="caption"><i18n:gettext>Radio Guide</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_tvprogram_small.png</attr>
+        </node-->
+        <!--node id="RDSH">
+            <attr name="caption"><i18n:gettext>Search by name</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_search.png</attr>
+        </node-->
+    </node>
+
+    <node id="IRADIO">
+        <attr name="caption"><i18n:gettext>Internet Radio</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_iradio_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_iradio_nonfocus.png</attr>
+        <attr name="WebServiceType" type="string">CONFIG</attr>
+        <attr name="Innov8onServiceTag" type="string">IRADIO</attr>
+        <attr name="displayMode" type="string">showByDefault</attr>
+    </node>
+
+    <!--node id="WEB">
+        <attr name="caption"><i18n:gettext>WEB on TV</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_webontv_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_webontv_nonfocus.png</attr>
+        <attr name="WebServiceType" type="string">CONFIG</attr>
+        <attr name="Innov8onServiceTag" type="string">WEB</attr>
+        <attr name="displayMode" type="string">showByDefault</attr>
+    </node-->
+
+    <!--node id="DSMCC">
+        <attr name="caption"><i18n:gettext>DSMCC Feeds</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_webontv_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_webontv_nonfocus.png</attr>
+        <attr name="VODServiceType" type="string">DSMCC</attr>
+    </node-->
+
+    <!--node id="XTRS">
+        <attr name="caption"><i18n:gettext>Extras</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_extras_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_extras_nonfocus.png</attr>
+        <attr name="WebServiceType" type="string">CONFIG</attr>
+        <attr name="Innov8onServiceTag" type="string">XTRS</attr>
+        <attr name="displayMode" type="string">showByDefault</attr>
+    </node-->
+
+    <node id="HotplugMounts">
+        <attr name="caption"><i18n:gettext>USB</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_usb_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_usb_nonfocus.png</attr>
+    </node>
+
+    <!--node id="WEBSHELL">
+        <attr name="caption"><i18n:gettext>WebShell</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_webontv_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_webontv_nonfocus.png</attr>
+        <node id="WEATHERAPP">
+            <attr name="caption"><i18n:gettext>Weather</i18n:gettext></attr>
+            <attr name="appType" type="string">webBrowser</attr>
+            <attr name="URI" type="string">http://www.cubiware.com/html5/cubi-weatherapp/</attr>
+        </node>
+        <node id="YOUTUBE">
+            <attr name="caption"><i18n:gettext>YouTube</i18n:gettext></attr>
+            <attr name="appType" type="string">webBrowser</attr>
+            <attr name="customUserAgent" type="string">iTunes-AppleTV/4.1</attr>
+            <attr name="URI" type="string">http://www.youtube.com/tv?launch=menu</attr>
+            <attr name="DIALAppName" type="string">YouTube</attr>
+        </node>
+        <node id="YOUTUBE_Pre-certification_Debug">
+            <attr name="caption"><i18n:gettext>YouTube</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>Pre-certification debug options</i18n:gettext></attr>
+            <attr name="appType" type="string">webBrowser</attr>
+            <attr name="customUserAgent" type="string">iTunes-AppleTV/4.1</attr>
+            <attr name="URI" type="string">http://www.youtube.com/tv?launch=menu&amp;fps=1&amp;env_isVideoInfoVisible=1&amp;env_forceFullAnimation=1</attr>
+            <attr name="DIALAppName" type="string">YouTube</attr>
+        </node>
+        <node id="YOUTUBE_Remote_Debug">
+            <attr name="caption"><i18n:gettext>YouTube</i18n:gettext></attr>
+            <attr name="subcaption"><i18n:gettext>Remote debugging</i18n:gettext></attr>
+            <attr name="appType" type="string">webBrowser</attr>
+            <attr name="customUserAgent" type="string">iTunes-AppleTV/4.1</attr>
+            <attr name="URI" type="string">http://www.youtube.com/tv?launch=menu</attr>
+            <attr name="DIALAppName" type="string">YouTube</attr>
+            <attr name="remoteDebug" type="bool">true</attr>
+            <attr name="remoteDebugPort" type="int">9222</attr>
+        </node>
+        <node id="OPERATVSTORE">
+            <attr name="caption"><i18n:gettext>TV Store</i18n:gettext></attr>
+            <attr name="appType" type="string">webBrowser</attr>
+            <attr name="URI" type="string">https://demo.tvstore.opera.com</attr>
+        </node>
+        <node id="YOUTUBE_Tests">
+            <attr name="caption"><i18n:gettext>YouTube Tests</i18n:gettext></attr>
+            <node id="YOUTUBE_Tests_Endurance">
+                <attr name="caption"><i18n:gettext>Endurance Testing (+3 hrs)</i18n:gettext></attr>
+                <attr name="appType" type="string">webBrowser</attr>
+                <attr name="URI" type="string">https://www.youtube.com/tv?automationRoutine=bw&amp;fps=1&amp;env_isVideoInfoVisible=1&amp;env_forceFullAnimation=1#browse-sets?c=FEwhat_to_watch</attr>
+            </node>
+            <node id="YOUTUBE_Tests_Audio-Video_Sync">
+                <attr name="caption"><i18n:gettext>Audio-Video Sync</i18n:gettext></attr>
+                <attr name="appType" type="string">webBrowser</attr>
+                <attr name="URI" type="string">https://www.youtube.com/tv?#/watch?mode=transport&amp;v=ipzR9bhei_o&amp;launch=menu&amp;fps=1&amp;env_isVideoInfoVisible=1&amp;env_forceFullAnimation=1</attr>
+            </node>
+            <node id="YOUTUBE_Tests_Qualification_Engine">
+                <attr name="caption"><i18n:gettext>YouTube Qualification Engine</i18n:gettext></attr>
+                <node id="YOUTUBE_Tests_Conformance">
+                    <attr name="caption"><i18n:gettext>Conformance</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://qual-e.appspot.com</attr>
+                </node>
+                <node id="YOUTUBE_Tests_MSE">
+                    <attr name="caption"><i18n:gettext>MSE</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://yt-dash-mse-test.commondatastorage.googleapis.com/unit-tests/2016.html?command=run</attr>
+                </node>
+                <node id="YOUTUBE_Tests_EME">
+                    <attr name="caption"><i18n:gettext>EME</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://yt-dash-mse-test.commondatastorage.googleapis.com/unit-tests/2016.html?test_type=encryptedmedia-test</attr>
+                </node>
+                <node id="YOUTUBE_Tests_Progressive">
+                    <attr name="caption"><i18n:gettext>Progressive</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://yt-dash-mse-test.commondatastorage.googleapis.com/unit-tests/2016.html?test_type=progressive-test</attr>
+                </node>
+                <node id="YOUTUBE_Tests_Adaptive_Bit_Rate">
+                    <attr name="caption"><i18n:gettext>Adaptive Bit Rate</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://dash-mse-test.appspot.com/dash-player.html?url=http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd</attr>
+                </node>
+                <node id="YOUTUBE_Tests_DRM">
+                    <attr name="caption"><i18n:gettext>DRM</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://dash-mse-test.appspot.com/dash-player.html?url=http://yt-dash-mse-test.commondatastorage.googleapis.com/media/oops_cenc-20121114-signedlicenseurl-manifest.mpd</attr>
+                </node>
+                <node id="YOUTUBE_Tests_SSL_1">
+                    <attr name="caption"><i18n:gettext>SSL 1</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">https://self-signed.badssl.com/</attr>
+                </node>
+                <node id="YOUTUBE_Tests_SSL_2">
+                    <attr name="caption"><i18n:gettext>SSL 2</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">https://expired.badssl.com/</attr>
+                </node>
+                <node id="YOUTUBE_Tests_Web_Audio">
+                    <attr name="caption"><i18n:gettext>Web Audio</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://qual-e.appspot.com/webaudio.html</attr>
+                </node>
+            </node>
+            <node id="YOUTUBE_Tests_WebP">
+                <attr name="caption"><i18n:gettext>WebP</i18n:gettext></attr>
+                <node id="YOUTUBE_Tests_WebP_1">
+                    <attr name="caption"><i18n:gettext>WebP Image 1</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://www.gstatic.com/webp/gallery/1.webp</attr>
+                </node>
+                <node id="YOUTUBE_Tests_WebP_2">
+                    <attr name="caption"><i18n:gettext>WebP Image 2</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://www.gstatic.com/webp/gallery/2.webp</attr>
+                </node>
+                <node id="YOUTUBE_Tests_WebP_3">
+                    <attr name="caption"><i18n:gettext>WebP Image 3</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://www.gstatic.com/webp/gallery/3.webp</attr>
+                </node>
+                <node id="YOUTUBE_Tests_WebP_4">
+                    <attr name="caption"><i18n:gettext>WebP Image 4</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://www.gstatic.com/webp/gallery/4.webp</attr>
+                </node>
+                <node id="YOUTUBE_Tests_WebP_5">
+                    <attr name="caption"><i18n:gettext>WebP Image 5</i18n:gettext></attr>
+                    <attr name="appType" type="string">webBrowser</attr>
+                    <attr name="URI" type="string">http://www.gstatic.com/webp/gallery/5.webp</attr>
+                </node>
+            </node>
+        </node>
+    </node-->
+
+    <node id="STPC">
+        <attr name="caption"><i18n:gettext>Parental control</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_parental_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_parental_nonfocus.png</attr>
+        <node id="PCLockingStatus">
+            <attr name="caption"><i18n:gettext>Locking Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <node id="PCLockingStatusOn">
+                <attr name="caption"><i18n:gettext>On</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_STATE" type="string">ON</attr>
+            </node>
+            <node id="PCLockingStatusOffAuto">
+                <attr name="caption"><i18n:gettext>Off (Auto Relock)</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_STATE" type="string">OFF_AUTO</attr>
+            </node>
+            <node id="PCLockingStatusOff">
+                <attr name="caption"><i18n:gettext>Off (Relock Manually)</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_STATE" type="string">OFF</attr>
+            </node>
+        </node>
+        <node id="PCLockedRatings">
+            <attr name="caption"><i18n:gettext>Locked Ratings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <attr name="PCRatingsSelectionMode" type="string">Group</attr>
+            <attr name="PCRatingSelectionMode" type="string">Locking</attr>
+            <node id="AGE">
+                <attr name="caption"><i18n:gettext>Age</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_STANDARD" type="string">[AGE={}]</attr>
+                <node id="CLR">
+                    <attr name="caption"><i18n:gettext>Permitir todos</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">CLEAR</attr>
+                </node>
+                <node id="6YRS">
+                    <attr name="caption"><i18n:gettext>For 6+ year old</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[AGE=6]</attr>
+                </node>
+                <node id="12YR">
+                    <attr name="caption"><i18n:gettext>For 12+ year old</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[AGE=12]</attr>
+                </node>
+                <node id="16YR">
+                    <attr name="caption"><i18n:gettext>For 16+ year old</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[AGE=16]</attr>
+                </node>
+                <node id="18YR">
+                    <attr name="caption"><i18n:gettext>For 18+ year old</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="age" type="int">18</attr>
+                    <attr name="PC" type="string">[AGE=18]</attr>
+                </node>
+            </node>
+            <node id="MPAA">
+                <attr name="caption"><i18n:gettext>MPAA</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_STANDARD" type="string">[MPAA={}]</attr>
+                <node id="MPAA_CLR">
+                    <attr name="caption"><i18n:gettext>Permitir todos</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">CLEAR</attr>
+                </node>
+                <node id="MPAA_G">
+                    <attr name="caption"><i18n:gettext>G</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[MPAA={G}]</attr>
+                </node>
+                <node id="MPAA_PG">
+                    <attr name="caption"><i18n:gettext>PG</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[MPAA={PG}]</attr>
+                </node>
+                <node id="MPAA_PG_13">
+                    <attr name="caption"><i18n:gettext>PG-13</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[MPAA={PG13}]</attr>
+                </node>
+                <node id="MPAA_R">
+                    <attr name="caption"><i18n:gettext>R</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[MPAA={R}]</attr>
+                </node>
+                <node id="MPAA_NC_17">
+                    <attr name="caption"><i18n:gettext>NC-17</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[MPAA={NC17}]</attr>
+                </node>
+                <node id="MPAA_X">
+                    <attr name="caption"><i18n:gettext>X</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="PC" type="string">[MPAA={X}]</attr>
+                </node>
+            </node>
+        </node>
+        <!-- BEGIN AMERELES Bloquear títulos según control parental -->
+        <!--node id="PCHideTitles"> 
+            <attr name="caption"><i18n:gettext>Hide Adult Titles</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <node id="PCHideTitlesOn">
+                <attr name="caption"><i18n:gettext>Always</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_HIDE_TITLES" type="string">ALWAYS</attr>
+            </node>
+            <node id="PCHideTitlesOffAuto">
+                <attr name="caption"><i18n:gettext>Never</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_HIDE_TITLES" type="string">NEVER</attr>
+            </node>
+            <node id="PCHideTitlesOff">
+                <attr name="caption"><i18n:gettext>Follow Parental Control</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="PC_HIDE_TITLES" type="string">FOLLOW_PC</attr>
+            </node>
+        </node-->
+        <!-- END AMERELES Bloquear títulos según control parental -->
+        
+        <node id="PCVODPurchase"> <!-- //RAL: : worakround VOD purchase PIN -->
+            <attr name="caption"><i18n:gettext>PIN para compras</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="tickType" type="string">RADIO</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <attr name="configurationName" type="string">PURCHASE_AUTH</attr>
+            <node id="PCVODPurchaseON">
+                <attr name="caption"><i18n:gettext>On</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="configurationValue" type="string">on</attr>
+            </node>
+            <node id="PCVODPurchaseOFF">
+                <attr name="caption"><i18n:gettext>Off</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="configurationValue" type="string">off</attr>
+            </node>
+        </node>
+        
+        <node id="PCVODAdultPinAuth"> <!-- BEGIN VODAdultPinAuth -->
+            <attr name="caption"><i18n:gettext>VOD Adult PIN</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="tickType" type="string">RADIO</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <attr name="configurationName" type="string">VOD_ADULT_PIN_AUTH</attr>
+            <node id="PCVODAdultPinAuthON">
+                <attr name="caption"><i18n:gettext>On</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="configurationValue" type="string">on</attr>
+            </node>
+            <node id="PCVODAdultPinAuthOFF">
+                <attr name="caption"><i18n:gettext>Off</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="configurationValue" type="string">off</attr>
+            </node>
+        </node> <!-- END VODAdultPinAuth -->
+        <!-- AMERELES No realiza cambios en la configuración -->
+        <!--node id="PCAdultContentBlocking">
+            <attr name="caption"><i18n:gettext>Adult Content Blocking</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="tickType" type="string">RADIO</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <attr name="configurationName" type="string">PC_ADULT_CONTENT_BLOCKING</attr>
+            <node id="PCAdultContentBlockingOn">
+                <attr name="caption"><i18n:gettext>On</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="configurationValue" type="string">ON</attr>
+            </node>
+            <node id="PCAdultContentBlockingOff">
+                <attr name="caption"><i18n:gettext>Off</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <attr name="configurationValue" type="string">OFF</attr>
+            </node>
+        </node-->
+        <node id="PCLockedTime">
+            <attr name="caption"><i18n:gettext>Locked Time</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="hints" type="string">lockedTime_hint</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+        </node>
+        <node id="PCChangePin">
+            <attr name="caption"><i18n:gettext>Change PIN</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+        </node>
+        <node id="PCBlockedChannels">
+            <attr name="caption"><i18n:gettext>Block Channels</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <attr name="hints" type="string">blockedChannels_hint</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+        </node>
+    </node>
+
+    <node id="ViewRightIPTV">
+        <attr name="caption"><i18n:gettext>ViewRightIPTV</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_subscriber_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_subscriber_nonfocus.png</attr>
+
+        <node id="ViewRightIPTVInfo">
+            <attr name="caption"><i18n:gettext>About ViewRightIPTV CA</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+            <node id="ViewRightIPTVCaSysId">
+                <attr name="caption"><i18n:gettext>Conditional access system ID</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+            <node id="ViewRightIPTVLibraryVersion">
+                <attr name="caption"><i18n:gettext>Version</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+            <node id="ViewRightIPTVUniqueId">
+                <attr name="caption"><i18n:gettext>Unique Id</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+        </node>
+        <node id="ViewRightIPTVConnectivity">
+            <attr name="caption"><i18n:gettext>VCAS connectivity</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+    </node>
+    <!--AMERELES Añadir el menú de Conax dentro del menú de configuración
+    <node id="Conax">
+        <attr name="caption"><i18n:gettext>Conax</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_subscriber_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_subscriber_nonfocus.png</attr>
+
+        <node id="ConaxInfo">
+            <attr name="caption"><i18n:gettext>About Conax CA</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ConaxSubscriptions">
+            <attr name="caption"><i18n:gettext>Subscription Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ConaxEventStatus">
+            <attr name="caption"><i18n:gettext>Event Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ConaxTokenStatus">
+            <attr name="caption"><i18n:gettext>Tokens Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ConaxMail">
+            <attr name="caption"><i18n:gettext>Mailbox</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_message.png</attr>
+        </node>
+        <node id="ConaxMaturityRating">
+            <attr name="caption"><i18n:gettext>Maturity Rating</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+            <node id="ConaxRatingG">
+                <attr name="caption"><i18n:gettext>G: General Audience</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+            <node id="ConaxRatingPG">
+                <attr name="caption"><i18n:gettext>PG: Parental Guidance</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+            <node id="ConaxRatingA">
+                <attr name="caption"><i18n:gettext>A: Over 18</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+            <node id="ConaxRatingX">
+                <attr name="caption"><i18n:gettext>X: Erotic</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+        </node>
+        <node id="ConaxChangePin">
+            <attr name="caption"><i18n:gettext>Change CA pin</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_parental.png</attr>
+        </node>
+    </node>
+     AMERELES Añadir el menú de Conax dentro del menú de configuración -->
+    <node id="Cryptoguard">
+        <attr name="caption"><i18n:gettext>CryptoGuard</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_subscriber_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_subscriber_nonfocus.png</attr>
+        <node id="CryptoguardInfo">
+            <attr name="caption"><i18n:gettext>About CryptoGuard CA</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="CryptoguardSubscriptions">
+            <attr name="caption"><i18n:gettext>Subscription Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="CryptoguardEventStatus">
+            <attr name="caption"><i18n:gettext>Event Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+    </node>
+
+    <node id="Cryptoguard2">
+        <attr name="caption"><i18n:gettext>CryptoGuard</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_subscriber_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_subscriber_nonfocus.png</attr>
+    </node>
+    
+    <node id="ViewRight">
+        <attr name="caption"><i18n:gettext>ViewRight DVB</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_subscriber_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_subscriber_nonfocus.png</attr>
+        <node id="ViewRightMode">
+            <attr name="caption"><i18n:gettext>Mode</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ViewRightCheckPairing">
+            <attr name="caption"><i18n:gettext>Check pairing</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+            <node id="ViewRightPairing">
+                <attr name="caption"><i18n:gettext>Pairing status</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+        </node>
+        <node id="ViewRightPurse">
+            <attr name="caption"><i18n:gettext>Check purse</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+            <node id="ViewRightPurseEmpty">
+                <attr name="caption"><i18n:gettext>Empty</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+        </node>
+        <node id="ViewRightSerialNo">
+            <attr name="caption"><i18n:gettext>Serial Number</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ViewRightChipId">
+            <attr name="caption"><i18n:gettext>Box Id</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ViewRightLibVersion">
+            <attr name="caption"><i18n:gettext>Library version</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="ViewRightLibDate">
+            <attr name="caption"><i18n:gettext>Library date</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+    </node>
+
+    <node id="LatensEngineering">
+        <attr name="caption"><i18n:gettext>Latens</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_subscriber_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_subscriber_nonfocus.png</attr>
+
+        <node id="LatensCASVersion">
+            <attr name="caption"><i18n:gettext>CAS Version</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="LatensSSM">
+            <attr name="caption"><i18n:gettext>SSM</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="LatensSTBID">
+            <attr name="caption"><i18n:gettext>STB ID</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+         <node id="LatensCheckCode">
+            <attr name="caption"><i18n:gettext>Check Code</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+         <node id="LatensVCID">
+            <attr name="caption"><i18n:gettext>VCID</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+        <node id="LatensBootLoader">
+            <attr name="caption"><i18n:gettext>Boot Loader</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_card.png</attr>
+        </node>
+    </node>
+
+    <node id="NEWSTGS">
+        <attr name="caption"><i18n:gettext>Configuration</i18n:gettext></attr>
+        <attr name="icon" type="string">icon/iconm_settings_focus.png</attr>
+        <attr name="iconSmall" type="string">icon/iconm_settings_nonfocus.png</attr>
+        
+        <!-- AMERELES Añadir el menú de Conax dentro del menú de configuración -->
+        <node id="Conax">
+            <attr name="caption"><i18n:gettext>Conax</i18n:gettext></attr>
+            <attr name="icon" type="string">icon/iconw_settings.png</attr>
+            <attr name="iconSmall" type="string">icon/iconw_settings.png</attr>
+
+            <node id="ConaxInfo">
+                <attr name="caption"><i18n:gettext>About Conax CA</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+            <node id="ConaxSubscriptions">
+                <attr name="caption"><i18n:gettext>Subscription Status</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+            <node id="ConaxEventStatus">
+                <attr name="caption"><i18n:gettext>Event Status</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+            <node id="ConaxTokenStatus">
+                <attr name="caption"><i18n:gettext>Tokens Status</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_card.png</attr>
+            </node>
+            <node id="ConaxMail">
+                <attr name="caption"><i18n:gettext>Mailbox</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_message.png</attr>
+            </node>
+            <node id="ConaxMaturityRating">
+                <attr name="caption"><i18n:gettext>Maturity Rating</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+                <node id="ConaxRatingG">
+                    <attr name="caption"><i18n:gettext>G: General Audience</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+                <node id="ConaxRatingPG">
+                    <attr name="caption"><i18n:gettext>PG: Parental Guidance</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+                <node id="ConaxRatingA">
+                    <attr name="caption"><i18n:gettext>A: Over 18</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+                <node id="ConaxRatingX">
+                    <attr name="caption"><i18n:gettext>X: Erotic</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+            </node>
+            <node id="ConaxChangePin">
+                <attr name="caption"><i18n:gettext>Change CA pin</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_parental.png</attr>
+            </node>
+        </node>
+        <!-- AMERELES Añadir el menú de Conax dentro del menú de configuración -->
+
+        <node id="ChannelInstallation">
+            <attr name="caption"><i18n:gettext>Channel Installation</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            <attr name="ParentalControl" type="string">yes</attr>
+            <node id="SatelliteSetup">
+                <attr name="caption"><i18n:gettext>Satellite Setup</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="action" type="string">Satellite setup</attr>
+                <attr name="autoTestDisable" type="bool">true</attr>
+            </node>
+            <node id="AutomaticScanning">
+                <attr name="caption"><i18n:gettext>Automatic Channel Scanning</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="type" type="string">manual</attr>
+                <attr name="action" type="string">Channel scanning</attr>
+                <attr name="scanType" type="string">automatic</attr>
+                <attr name="autoTestDisable" type="bool">true</attr>
+            </node>
+            <node id="ManualScanning">
+                <attr name="caption"><i18n:gettext>Manual Channel Scanning</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="type" type="string">manual</attr>
+                <attr name="action" type="string">Channel scanning</attr>
+                <attr name="scanType" type="string">manual</attr>
+                <attr name="autoTestDisable" type="bool">true</attr>
+            </node>
+        </node>
+        
+        <node id="DiagnosticsChannelStatus">
+            <attr name="caption"><i18n:gettext>Channel Status</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            <attr name="type" type="string">channelStatus</attr>
+            <attr name="action" type="string">Diagnostics</attr>
+        </node>
+
+        <node id="UpdateVODServices"> <!-- AMERELES Update VoD Services -->
+            <attr name="caption"><i18n:gettext>Update VOD Services</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            <attr name="action" type="string">Update VOD Services</attr>
+        </node>
+        
+        <node id="OUTC">
+            <attr name="caption"><i18n:gettext>A/V Output Settings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+
+            <node id="VideoSettings">
+                <attr name="caption"><i18n:gettext>Video Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="TVSYSTEM">
+                    <attr name="caption"><i18n:gettext>TV System</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">TVSYSTEM</attr>
+                    <node id="PAL">
+                        <attr name="caption"><i18n:gettext>PAL</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PAL</attr>
+                        <attr name="action" type="string">Set TV System</attr>
+                    </node>
+                    <node id="NTSC">
+                        <attr name="caption"><i18n:gettext>NTSC</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">NTSC</attr>
+                        <attr name="action" type="string">Set TV System</attr>
+                    </node>
+                </node>
+                <node id="AutomaticFrameRateSelection">
+                    <attr name="caption"><i18n:gettext>Automatic Frame Rate Selection</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">AUTOMATICFRAMERATE</attr>
+                    <node>
+                        <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">enabled</attr>
+                        <attr name="action" type="string">Enable automatic frame rate selection</attr>
+                    </node>
+                    <node>
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">disabled</attr>
+                        <attr name="action" type="string">Disable automatic frame rate selection</attr>
+                    </node>
+                </node>
+                <node id="AspectRatio">
+                    <attr name="caption"><i18n:gettext>TV Size</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">ASPECT</attr>
+                    <node id="AspectRatio_16:9">
+                        <attr name="caption"><i18n:gettext>16:9</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>For HD or Widescreen TV</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">16:9</attr>
+                    </node>
+                    <node id="AspectRatio_4:3">
+                        <attr name="caption"><i18n:gettext>4:3</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>For classic TV</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">4:3</attr>
+                    </node>
+                    <node id="AspectRatio_Auto">
+                        <attr name="caption"><i18n:gettext>Auto</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">AUTO</attr>
+                    </node>
+                </node>
+                <node id="VideoContentMode">
+                    <attr name="caption"><i18n:gettext>Display Format</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">VIDEO_CONTENT_MODE_HD</attr>
+                    <node id="VCM_Letterbox">
+                        <attr name="caption"><i18n:gettext>Letterbox / Pillarbox</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">LETTERBOX</attr>
+                    </node>
+                    <node id="VCM_PanScan">
+                        <attr name="caption"><i18n:gettext>Pan and Scan</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PANSCAN</attr>
+                    </node>
+                    <node id="VCM_Stretched">
+                        <attr name="caption"><i18n:gettext>Stretched</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">STRETCHED</attr>
+                    </node>
+                </node>
+                <node id="HDMI">
+                    <attr name="caption"><i18n:gettext>HDMI</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+
+                    <node id="VideoContentModeHD">
+                        <attr name="caption"><i18n:gettext>Display Format</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">VIDEO_CONTENT_MODE_HD</attr>
+                        <node id="VCMHD_Stretched">
+                            <attr name="caption"><i18n:gettext>Stretched</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">STRETCHED</attr>
+                        </node>
+                        <node id="VCMHD_Letterbox">
+                            <attr name="caption"><i18n:gettext>Letterbox</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">LETTERBOX</attr>
+                        </node>
+                        <node id="VCMHD_PanScan">
+                            <attr name="caption"><i18n:gettext>Pan and Scan</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">PANSCAN</attr>
+                        </node>
+                        <!--
+                            AMERELES SER-715
+                            El Stretched (Zoom) del SDK 1.0 estaba mal y hacía lo que ahora hace el Pan Scan.
+                            El Stretched y el Fullscreen son iguales.
+                        -->
+                    </node>
+
+                    <node id="HDMIFormat">
+                        <attr name="caption"><i18n:gettext>HDMI Video Format</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">VIDEOOUTHD</attr>
+                        <node id="automaticFormat">
+                            <attr name="caption"><i18n:gettext>Automatic</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">Auto</attr>
+                            <attr name="action" type="string">Enable HDMI automatic mode</attr>
+                        </node>
+                        <!--node id="576p:480p">
+                            <attr name="caption"><i18n:gettext>576p/480p</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">LOWRES</attr>
+                            <attr name="action" type="string">Set HD output mode</attr>
+                        </node-->
+                        <node id="720p">
+                            <attr name="caption"><i18n:gettext>720p</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">720P</attr>
+                            <attr name="action" type="string">Set HD output mode</attr>
+                        </node>
+                        <node id="1080i">
+                            <attr name="caption"><i18n:gettext>1080i</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">1080I</attr>
+                            <attr name="action" type="string">Set HD output mode</attr>
+                        </node>
+                        <!--node id="originalFormat">
+                            <attr name="caption"><i18n:gettext>Original Format</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">Orig</attr>
+                            <attr name="action" type="string">Enable HDMI original mode</attr>
+                        </node-->
+                    </node>
+                </node>
+
+                <node id="AVOUT">
+                    <attr name="caption"><i18n:gettext>Analog Outputs</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <node id="AspectRatioSD">
+                        <attr name="caption"><i18n:gettext>TV Size</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">ASPECT</attr>
+                        <node id="AspectRatioSD_16:9">
+                            <attr name="caption"><i18n:gettext>16:9</i18n:gettext></attr>
+                            <attr name="subcaption"><i18n:gettext>For HD or Widescreen TV</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">16:9</attr>
+                        </node>
+                        <node id="AspectRatioSD_4:3">
+                            <attr name="caption"><i18n:gettext>4:3</i18n:gettext></attr>
+                            <attr name="subcaption"><i18n:gettext>For classic TV</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">4:3</attr>
+                        </node>
+                        <node id="AspectRatioSD_Auto">
+                            <attr name="caption"><i18n:gettext>Auto</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">AUTO</attr>
+                        </node>
+                    </node>
+                    <node id="VideoContentModeSD">
+                        <attr name="caption"><i18n:gettext>Display Format</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">VIDEO_CONTENT_MODE_SD</attr>
+                        <node id="VCMSD_Stretched">
+                            <attr name="caption"><i18n:gettext>Stretched</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">STRETCHED</attr>
+                        </node>
+                        <node id="VCMSD_Letterbox">
+                            <attr name="caption"><i18n:gettext>Letterbox / Pillarbox</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">LETTERBOX</attr>
+                        </node>
+                        <node id="VCMSD_PanScan">
+                            <attr name="caption"><i18n:gettext>Pan and Scan</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">PANSCAN</attr>
+                        </node>
+                    </node>
+                    <node id="SCARTSignalType">
+                        <attr name="caption"><i18n:gettext>SCART Signal Type</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">VIDEOOUTEURO</attr>
+                        <node id="CVBS">
+                            <attr name="caption"><i18n:gettext>CVBS</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">CVBS</attr>
+                            <attr name="action" type="string">Set SCART signal type</attr>
+                        </node>
+                        <node id="ERGB">
+                            <attr name="caption"><i18n:gettext>RGB</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">RGB</attr>
+                            <attr name="action" type="string">Set SCART signal type</attr>
+                        </node>
+                    </node>
+                    <node id="RFModulator">
+                          <attr name="caption"><i18n:gettext>RF Channel</i18n:gettext></attr>
+                          <attr name="icon" type="string">white/iconw_settings.png</attr>
+                          <attr name="configurationName" type="string">RFMODULATORCHANNEL</attr>
+                          <node>
+                            <attr name="caption"><i18n:gettext>Channel 3</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">3</attr>
+                            <attr name="action" type="string">Set RF Modulator</attr>
+                          </node>
+                          <node>
+                            <attr name="caption"><i18n:gettext>Channel 4</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">4</attr>
+                            <attr name="action" type="string">Set RF Modulator</attr>
+                          </node>
+                          <node>
+                            <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">disabled</attr>
+                            <attr name="action" type="string">Set RF Modulator</attr>
+                          </node>
+                    </node>
+                </node>
+            </node>
+
+            <node id="AudioSettings">
+                <attr name="caption"><i18n:gettext>Audio Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+
+                <node id="TVDA">
+                    <attr name="caption"><i18n:gettext>Digital Audio</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">MULTICHANNELAUDIO</attr>
+                     <node id="DAYE">
+                        <attr name="caption"><i18n:gettext>Multichannel</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">YES</attr>
+                        <attr name="action" type="string">Toggle multichannel mode</attr>
+                    </node>
+                    <node id="DANO">
+                        <attr name="caption"><i18n:gettext>Stereo</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">NO</attr>
+                        <attr name="action" type="string">Toggle multichannel mode</attr>
+                    </node>
+                </node>
+
+                <node id="SPDIFAudioDelay">
+                    <attr name="caption"><i18n:gettext>S/PDIF A/V Sync</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="action" type="string">Setup S/PDIF audio delay</attr>
+                </node>
+            </node>
+        </node>
+        <node id="LNGS">
+            <attr name="caption"><i18n:gettext>Languages</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            <node id="MLNG">
+                <attr name="caption"><i18n:gettext>Menu Language</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">LANG</attr>
+                <node id="MLES">
+                    <attr name="caption" type="string">Español</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">es_MX.UTF-8</attr>
+                </node>
+                <node id="MLEN">
+                    <attr name="caption" type="string">English</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">en_US.UTF-8</attr>
+                </node>
+                <node id="MLDE">
+                    <attr name="caption" type="string">Deutsch</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">de_DE.UTF-8</attr>
+                </node>
+                <node id="MLPL">
+                    <attr name="caption" type="string">Polski</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">pl_PL.UTF-8</attr>
+                </node>
+                <node id="MLLA">
+                    <attr name="caption" type="string">Latīna</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">la.UTF-8</attr>
+                </node>
+            </node>
+            <node id="ALNG">
+                <attr name="caption"><i18n:gettext>Primary Audio Language</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">AUDIOLANG</attr>
+                <node id="ALNG_English">
+                    <attr name="caption"><i18n:gettext>English</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">eng</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Polish">
+                    <attr name="caption"><i18n:gettext>Polish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">pol</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Swedish">
+                    <attr name="caption"><i18n:gettext>Swedish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">swe</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Finnish">
+                    <attr name="caption"><i18n:gettext>Finnish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">fin</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Norwegian">
+                    <attr name="caption"><i18n:gettext>Norwegian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">nor</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Danish">
+                    <attr name="caption"><i18n:gettext>Danish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">dan</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Latvian">
+                    <attr name="caption"><i18n:gettext>Latvian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                    <attr name="configurationValue" type="string">lav</attr>
+                </node>
+                <node id="ALNG_Spanish">
+                    <attr name="caption"><i18n:gettext>Spanish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">spa</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ALNG_Russian">
+                    <attr name="caption"><i18n:gettext>Russian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                    <attr name="configurationValue" type="string">rus</attr>
+                </node>
+                <node id="ALNG_Greek">
+                    <attr name="caption"><i18n:gettext>Greek</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">ell</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+            </node>
+            <node id="ASNG">
+                <attr name="caption"><i18n:gettext>Secondary Audio Language</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">AUDIOLANGSECONDARY</attr>
+                <node id="ASNG_English">
+                    <attr name="caption"><i18n:gettext>English</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">eng</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Polish">
+                    <attr name="caption"><i18n:gettext>Polish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">pol</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Swedish">
+                    <attr name="caption"><i18n:gettext>Swedish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">swe</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Finnish">
+                    <attr name="caption"><i18n:gettext>Finnish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">fin</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Norwegian">
+                    <attr name="caption"><i18n:gettext>Norwegian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">nor</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Danish">
+                    <attr name="caption"><i18n:gettext>Danish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">dan</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Latvian">
+                    <attr name="caption"><i18n:gettext>Latvian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">lav</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Spanish">
+                    <attr name="caption"><i18n:gettext>Spanish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">spa</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Russian">
+                    <attr name="caption"><i18n:gettext>Russian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">rus</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+                <node id="ASNG_Greek">
+                    <attr name="caption"><i18n:gettext>Greek</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">ell</attr>
+                    <attr name="action" type="string">Change audio language</attr>
+                </node>
+            </node>
+            <node id="SLNG">
+                <attr name="caption"><i18n:gettext>Primary Subtitle Language</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">SUBTITLESLANG</attr>
+                <node id="SPOF">
+                    <attr name="caption"><i18n:gettext>Off</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">off</attr>
+                </node>
+                <node id="SPEN">
+                    <attr name="caption"><i18n:gettext>English</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">eng</attr>
+                </node>
+                <node id="SPPL">
+                    <attr name="caption"><i18n:gettext>Polish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">pol</attr>
+                </node>
+                <node id="SLNG_Swedish">
+                    <attr name="caption"><i18n:gettext>Swedish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">swe</attr>
+                </node>
+                <node id="SLNG_Finnish">
+                    <attr name="caption"><i18n:gettext>Finnish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">fin</attr>
+                </node>
+                <node id="SLNG_Norwegian">
+                    <attr name="caption"><i18n:gettext>Norwegian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">nor</attr>
+                </node>
+                <node id="SLNG_Danish">
+                    <attr name="caption"><i18n:gettext>Danish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">dan</attr>
+                </node>
+                <node id="SLNG_Latvian">
+                    <attr name="caption"><i18n:gettext>Latvian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">lav</attr>
+                </node>
+                <node id="SLNG_Spanish">
+                    <attr name="caption"><i18n:gettext>Spanish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">spa</attr>
+                </node>
+                <node id="SLNG_Russian">
+                    <attr name="caption"><i18n:gettext>Russian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">rus</attr>
+                </node>
+                <node id="SLNG_Greek">
+                    <attr name="caption"><i18n:gettext>Greek</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">ell</attr>
+                </node>
+            </node>
+            <node id="SSNG">
+                <attr name="caption"><i18n:gettext>Secondary Subtitle Language</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">SUBTITLESLANGSECONDARY</attr>
+                <node id="SSOF">
+                    <attr name="caption"><i18n:gettext>Off</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">off</attr>
+                </node>
+                <node id="SSEN">
+                    <attr name="caption"><i18n:gettext>English</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">eng</attr>
+                </node>
+                <node id="SSPL">
+                    <attr name="caption"><i18n:gettext>Polish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">pol</attr>
+                </node>
+                <node id="SSPL_Swedish">
+                    <attr name="caption"><i18n:gettext>Swedish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">swe</attr>
+                </node>
+                <node id="SSPL_Finnish">
+                    <attr name="caption"><i18n:gettext>Finnish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">fin</attr>
+                </node>
+                <node id="SSPL_Norwegian">
+                    <attr name="caption"><i18n:gettext>Norwegian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">nor</attr>
+                </node>
+                <node id="SSPL_Danish">
+                    <attr name="caption"><i18n:gettext>Danish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">dan</attr>
+                </node>
+                <node id="SSPL_Latvian">
+                    <attr name="caption"><i18n:gettext>Latvian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">lav</attr>
+                </node>
+                <node id="SSPL_Spanish">
+                    <attr name="caption"><i18n:gettext>Spanish</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">spa</attr>
+                </node>
+                <node id="SSPL_Russian">
+                    <attr name="caption"><i18n:gettext>Russian</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">rus</attr>
+                </node>
+                <node id="SSPL_Greek">
+                    <attr name="caption"><i18n:gettext>Greek</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">ell</attr>
+                </node>
+            </node>
+            <node id="HOHE">
+                <attr name="caption"><i18n:gettext>Hard of Hearing Subtitles</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">HARDOFHEARING</attr>
+                <node id="HOHEEnabled">
+                    <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">1</attr>
+                </node>
+                <node id="HOHEDisabled">
+                    <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">0</attr>
+                </node>
+            </node>
+            <node id="AudioTrackType">
+                    <attr name="caption"><i18n:gettext>Preferred Audio Track</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">AUDIOTRACKTYPE</attr>
+                    <node id="Normal">
+                        <attr name="caption"><i18n:gettext>Normal</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">normal</attr>
+                        <attr name="action" type="string">Change audio track type</attr>
+                    </node>
+                    <node id="HardOfHearing">
+                        <attr name="caption"><i18n:gettext>Hard of Hearing</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">hard-of-hearing</attr>
+                        <attr name="action" type="string">Change audio track type</attr>
+                    </node>
+                    <node id="VisuallyImpaired">
+                        <attr name="caption"><i18n:gettext>Visually Impaired</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">visually-impaired</attr>
+                        <attr name="action" type="string">Change audio track type</attr>
+                    </node>
+            </node>
+            <node id="CC">
+                <attr name="caption"><i18n:gettext>Closed Captioning</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">CLOSED_CAPTION_CHANNEL_MODE</attr>
+                <node id="CC_OFF">
+                    <attr name="caption"><i18n:gettext>Off</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">CLOSED_CAPTION_CHANNEL_MODE</attr>
+                    <attr name="configurationValue" type="string">off</attr>
+                </node>
+                <node id="CC_MANUAL">
+                    <attr name="caption"><i18n:gettext>Manual</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">CLOSED_CAPTION_CHANNEL_MODE</attr>
+                    <attr name="configurationValue" type="string">Manual</attr>
+                </node>
+                <node id="CC_AUTOMATIC">
+                    <attr name="caption"><i18n:gettext>Automatic</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">CLOSED_CAPTION_CHANNEL_MODE</attr>
+                    <attr name="configurationValue" type="string">Automatic</attr>
+                </node>
+                <node id="ACC">
+                    <attr name="caption"><i18n:gettext>Analog Closed Captioning</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <node id="ACC_PC">
+                        <attr name="caption"><i18n:gettext>CC Primary Channel</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">CLOSED_CAPTION_CHANNEL_PRI</attr>
+                        <node id="ACC_PC_CC1">
+                            <attr name="caption"><i18n:gettext>CC1</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">CC1</attr>
+                        </node>
+                        <node id="ACC_PC_CC3">
+                            <attr name="caption"><i18n:gettext>CC3</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">CC3</attr>
+                        </node>
+                    </node>
+                    <node id="ACC_SC">
+                        <attr name="caption"><i18n:gettext>CC Secondary Channel</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">CLOSED_CAPTION_CHANNEL_SEC</attr>
+                        <node id="ACC_SC_CC1">
+                            <attr name="caption"><i18n:gettext>CC1</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">CC1</attr>
+                        </node>
+                        <node id="ACC_SC_CC3">
+                            <attr name="caption"><i18n:gettext>CC3</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">CC3</attr>
+                        </node>
+                    </node>
+                </node>
+                <node id="DCC">
+                    <attr name="caption"><i18n:gettext>Digital Closed Captioning</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <node id="DCC_PL">
+                        <attr name="caption"><i18n:gettext>CC Primary Language</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">CLOSED_CAPTION_LANG_PRI</attr>
+                        <node id="DCC_PL_OFF">
+                            <attr name="caption"><i18n:gettext>off</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">off</attr>
+                        </node>
+                        <node id="DCC_PL_ENG">
+                            <attr name="caption"><i18n:gettext>eng</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">eng</attr>
+                        </node>
+                        <node id="DCC_PL_SPA">
+                            <attr name="caption"><i18n:gettext>spa</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">spa</attr>
+                        </node>
+                        <node id="DCC_PL_DUT">
+                            <attr name="caption"><i18n:gettext>dut</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">dut</attr>
+                        </node>                        
+                    </node>
+                    <node id="DCC_SL">
+                        <attr name="caption"><i18n:gettext>CC Secondary Language</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationName" type="string">CLOSED_CAPTION_LANG_SEC</attr>
+                        <node id="DCC_SL_OFF">
+                            <attr name="caption"><i18n:gettext>off</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">off</attr>
+                        </node>
+                        <node id="DCC_SL_ENG">
+                            <attr name="caption"><i18n:gettext>eng</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">eng</attr>
+                        </node>
+                        <node id="DCC_SL_SPA">
+                            <attr name="caption"><i18n:gettext>spa</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">spa</attr>
+                        </node>
+                        <node id="DCC_SL_DUT">
+                            <attr name="caption"><i18n:gettext>dut</i18n:gettext></attr>
+                            <attr name="icon" type="string">white/iconw_settings.png</attr>
+                            <attr name="configurationValue" type="string">dut</attr>
+                        </node> 
+                    </node>
+                </node>
+            </node>
+        </node>
+        <node id="LOUT">
+            <attr name="caption"><i18n:gettext>User Interface</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            
+            <node id="MainMenuTransparency"> 
+                <attr name="caption"><i18n:gettext>Menu Transparency</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">MENU_TRANSPARENCY</attr>
+                <node id="MENU_TRANSPARENCY_0">
+                    <attr name="caption">0%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">0</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_10">
+                    <attr name="caption">10%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">10</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_20">
+                    <attr name="caption">20%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">20</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_30">
+                    <attr name="caption">30%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">30</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_40">
+                    <attr name="caption">40%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">40</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_50">
+                    <attr name="caption">50%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">50</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_60">
+                    <attr name="caption">60%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">60</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_70">
+                    <attr name="caption">70%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">70</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_80">
+                    <attr name="caption">80%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">80</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_90">
+                    <attr name="caption">90%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">90</attr>
+                </node>
+                <node id="MENU_TRANSPARENCY_100">
+                    <attr name="caption">100%</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">100</attr>
+                </node>
+            </node>
+            <node id="FavouritesNumbering">
+                <attr name="caption"><i18n:gettext>Favorites Numbering</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">DEFAULT_FAV_NUMBERING</attr>
+                <node id="FavouritesNumberingByIndex">
+                    <attr name="caption"><i18n:gettext>By Index</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">index</attr>
+                </node>
+                <node id="FavouritesNumberingByNumber">
+                    <attr name="caption"><i18n:gettext>By Channel Number</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">number</attr>
+                </node>
+            </node>
+            <node id="ScreensaverTimeout">
+                <attr name="caption"><i18n:gettext>Screensaver Timeout</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">SCREENSAVERTIMEOUT</attr>
+                <node id="ScreensaverDisabled">
+                    <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">0</attr>
+                </node>
+                <node id="5MIN">
+                    <attr name="caption"><i18n:gettext>5 minutes</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">5</attr>
+                </node>
+                <node id="10MIN">
+                    <attr name="caption"><i18n:gettext>10 minutes</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">10</attr>
+                </node>
+                <node id="15MIN">
+                    <attr name="caption"><i18n:gettext>15 minutes</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">15</attr>
+                </node>
+            </node>
+            <node id="HEIO">
+                <attr name="caption"><i18n:gettext>OSD/Banner Display Time</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">HIDEINFORMATION</attr>
+                <node id="2SEC">
+                    <attr name="caption"><i18n:gettext>2 seconds</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">2</attr>
+                </node>
+                <node id="5SEC">
+                    <attr name="caption"><i18n:gettext>5 seconds</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">5</attr>
+                </node>
+                <node id="10SE">
+                    <attr name="caption"><i18n:gettext>10 seconds</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">10</attr>
+                </node>
+                <node id="15SE">
+                    <attr name="caption"><i18n:gettext>15 seconds</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">15</attr>
+                </node>
+            </node>
+        </node>
+        
+        <node id="SYST">
+            <attr name="caption"><i18n:gettext>System Settings</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            <node id="RSTR">
+                <attr name="caption"><i18n:gettext>Restart Device</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="Confirmation" type="string">yes</attr>
+                <attr name="autoTestDisable" type="bool">true</attr>
+            </node>
+            <node id="RestoreDefaults">
+                <attr name="caption"><i18n:gettext>Restore Factory Defaults</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="ParentalControl" type="string">yes</attr>
+                <attr name="autoTestDisable" type="bool">true</attr>
+            </node>
+            <!-- AMERELES #3739 Reinicio automático de STBs híbridos-->
+            <node id="AutomaticReboot">
+                <attr name="caption"><i18n:gettext>Mantenimiento automático</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">AUTOMATICREBOOT</attr>
+                <node>
+                    <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">enabled</attr>
+                    <attr name="action" type="string">Enable automatic maintenance</attr>
+                </node>
+                <node>
+                    <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">disabled</attr>
+                    <attr name="action" type="string">Disable automatic maintenance</attr>
+                </node>
+            </node>
+            <node id="DeviceName">
+                <attr name="caption"><i18n:gettext>Name This Device</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+
+            <node id="Recording">
+                <attr name="caption"><i18n:gettext>Recording Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+
+                <node id="FormatHardDisk">
+                    <attr name="caption"><i18n:gettext>Format Hard Disk</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="ParentalControl" type="string">yes</attr>
+                    <attr name="ParentalControlText" type="string"><i18n:gettext>Please enter parental control PIN to remove all recordings</i18n:gettext></attr>
+                    <attr name="autoTestDisable" type="bool">true</attr>
+                </node>
+    
+                <node id="InstantTimeshift">
+                     <attr name="caption"><i18n:gettext>Instant Timeshift</i18n:gettext></attr>
+                     <attr name="icon" type="string">white/iconw_settings.png</attr>
+                     <attr name="configurationName" type="string">INSTANTTIMESHIFT</attr>
+                     <node id="InstantTimeshiftDisabled">
+                         <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                         <attr name="icon" type="string">white/iconw_settings.png</attr>
+                         <attr name="configurationValue" type="string">0</attr>
+                     </node>
+                     <node id="InstantTimeshiftEnabled">
+                         <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                         <attr name="icon" type="string">white/iconw_settings.png</attr>
+                         <attr name="configurationValue" type="string">1</attr>
+                     </node>
+                </node>
+                            
+                <node id="PVRStartMargin">
+                    <attr name="caption"><i18n:gettext>PVR Start Margin</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">PVRSTARTMARGIN</attr>
+                    <node id="PVRSTARTMARGIN0MIN">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                    <node id="PVRSTARTMARGIN1MIN">
+                        <attr name="caption"><i18n:gettext>1 minute</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">1</attr>
+                    </node>
+                    <node id="PVRSTARTMARGIN2MIN">
+                        <attr name="caption"><i18n:gettext>2 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">2</attr>
+                    </node>
+                    <node id="PVRSTARTMARGIN5MIN">
+                        <attr name="caption"><i18n:gettext>5 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">5</attr>
+                    </node>
+                    <node id="PVRSTARTMARGIN10MIN">
+                        <attr name="caption"><i18n:gettext>10 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">10</attr>
+                    </node>
+                </node>
+                <node id="PVREndMargin">
+                    <attr name="caption"><i18n:gettext>PVR End Margin</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">PVRENDMARGIN</attr>
+                    <node id="PVRENDMARGIN0MIN">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                    <node id="PVRENDMARGIN5MIN">
+                        <attr name="caption"><i18n:gettext>5 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">5</attr>
+                    </node>
+                    <node id="PVRENDMARGIN10MIN">
+                        <attr name="caption"><i18n:gettext>10 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">10</attr>
+                    </node>
+                    <node id="PVRENDMARGIN15MIN">
+                        <attr name="caption"><i18n:gettext>15 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">15</attr>
+                    </node>
+                    <node id="PVRENDMARGIN20MIN">
+                        <attr name="caption"><i18n:gettext>20 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">20</attr>
+                    </node>
+                    <node id="PVRENDMARGIN30MIN">
+                        <attr name="caption"><i18n:gettext>30 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">30</attr>
+                    </node>
+                </node>
+                <node id="PVR_QUOTA_AUTOCLEAN">
+                    <attr name="caption"><i18n:gettext>Autodelete Oldest Recordings</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">PVR_QUOTA_AUTOCLEAN</attr>
+                    <node id="PVR_QUOTA_AUTOCLEAN_OFF">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                    <node id="PVR_QUOTA_AUTOCLEAN_ON">
+                        <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">1</attr>
+                    </node>
+                </node>
+                <node id="PVR_QUOTA_DEFAULT">
+                    <attr name="caption"><i18n:gettext>Default PVR Quota</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">PVR_QUOTA_DEFAULT</attr>
+                    <node id="PVR_QUOTA_DEFAULT_10">
+                        <attr name="caption"><i18n:gettext>10GB</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">10</attr>
+                    </node>
+                    <node id="PVR_QUOTA_DEFAULT_20">
+                        <attr name="caption"><i18n:gettext>20GB</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">20</attr>
+                    </node>
+                    <node id="PVR_QUOTA_DEFAULT_50">
+                        <attr name="caption"><i18n:gettext>50GB</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">50</attr>
+                    </node>
+                    <node id="PVR_QUOTA_DEFAULT_100">
+                        <attr name="caption"><i18n:gettext>100GB</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">100</attr>
+                    </node>
+                    <node id="PVR_QUOTA_DEFAULT_200">
+                        <attr name="caption"><i18n:gettext>200GB</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">200</attr>
+                    </node>
+                    <node id="PVR_QUOTA_DEFAULT_500">
+                        <attr name="caption"><i18n:gettext>500GB</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">500</attr>
+                    </node>
+                    <node id="PVR_QUOTA_DEFAULT_0">
+                        <attr name="caption"><i18n:gettext>Unlimited</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                </node>
+                <node id="NPVRStartMargin">
+                    <attr name="caption"><i18n:gettext>NPVR Start Margin</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">NPVRSTARTMARGIN</attr>
+                    <node id="NPVRSTARTMARGIN0MIN">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                    <node id="NPVRSTARTMARGIN5MIN">
+                        <attr name="caption"><i18n:gettext>5 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">5</attr>
+                    </node>
+                    <node id="NPVRSTARTMARGIN10MIN">
+                        <attr name="caption"><i18n:gettext>10 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">10</attr>
+                    </node>
+                    <node id="NPVRSTARTMARGIN15MIN">
+                        <attr name="caption"><i18n:gettext>15 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">15</attr>
+                    </node>
+                </node>
+                <node id="NPVREndMargin">
+                    <attr name="caption"><i18n:gettext>NPVR End Margin</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">NPVRENDMARGIN</attr>
+                    <node id="NPVRENDMARGIN0MIN">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                    <node id="NPVRENDMARGIN5MIN">
+                        <attr name="caption"><i18n:gettext>5 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">5</attr>
+                    </node>
+                    <node id="NPVRENDMARGIN10MIN">
+                        <attr name="caption"><i18n:gettext>10 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">10</attr>
+                    </node>
+                    <node id="NPVRENDMARGIN15MIN">
+                        <attr name="caption"><i18n:gettext>15 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">15</attr>
+                    </node>
+                </node>
+            </node>
+            <!--node id="Playback">
+                <attr name="caption"><i18n:gettext>Playback Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node-->
+            <node id="CECTV">
+                <attr name="caption"><i18n:gettext>TV Control</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">CEC</attr>
+                <node>
+                    <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">disabled</attr>
+                </node>
+                <node>
+                    <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">enabled</attr>
+                </node>
+            </node>
+            <node id="Standby">
+                <attr name="caption"><i18n:gettext>Standby Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="AutoStandbyMode">
+                    <attr name="caption"><i18n:gettext>Auto Standby</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">AUTO_POWER_TIMEOUT</attr>
+                    <node id="Disabled">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">DISABLED</attr>
+                    </node>
+                    <node id="1Hour">
+                        <attr name="caption"><i18n:gettext>1 Hour</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PT60M</attr>
+                    </node>
+                    <node id="2Hours">
+                        <attr name="caption"><i18n:gettext>2 Hours</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PT120M</attr>
+                    </node>
+                    <node id="4Hours">
+                        <attr name="caption"><i18n:gettext>4 Hours</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PT240M</attr>
+                    </node>
+                    <node id="6Hours">
+                        <attr name="caption"><i18n:gettext>6 Hours</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PT360M</attr>
+                    </node>
+                    <node id="8Hours">
+                        <attr name="caption"><i18n:gettext>8 Hours</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PT480M</attr>
+                    </node>
+                </node>
+                <node id="Frontpanel clock">
+                    <attr name="caption"><i18n:gettext>Frontpanel Clock In Standby</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">STANDBYFRONTPANELCLOCK</attr>
+                    <node>
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">OFF</attr>
+                    </node>
+                    <node>
+                        <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">ON</attr>
+                    </node>
+                </node>
+                <!--node id="RCBUTTON">
+                    <attr name="caption"><i18n:gettext>RCU Power Button</i18n:gettext></attr>
+                    <attr name="configurationName" type="string">RC_POWER</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <node id="RCACTIVE">
+                        <attr name="caption"><i18n:gettext>Active Standby</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>Normal power consumption, fast recovery</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">ACTIVE</attr>
+                    </node>
+                    <node id="RCPASSIVE">
+                        <attr name="caption"><i18n:gettext>Passive Standby</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>Low power consumption, slow recovery</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PASSIVE</attr>
+                    </node>
+                    <node id="RCCOMBINED">
+                        <attr name="caption"><i18n:gettext>Prompt</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>Prompt when pressed</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">COMBINED</attr>
+                    </node>
+                </node-->
+                <!--node id="FPBUTTON">
+                    <attr name="caption"><i18n:gettext>Front Panel Power Button</i18n:gettext></attr>
+                    <attr name="configurationName" type="string">FP_POWER</attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <node id="FPACTIVE">
+                        <attr name="caption"><i18n:gettext>Active Standby</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>Normal power consumption, fast recovery</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">ACTIVE</attr>
+                    </node>
+                    <node id="FPPASSIVE">
+                        <attr name="caption"><i18n:gettext>Passive Standby</i18n:gettext></attr>
+                        <attr name="subcaption"><i18n:gettext>Low power consumption, slow recovery</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">PASSIVE</attr>
+                    </node>
+                </node-->
+                <node id="StandByTimerTimeout">
+                    <attr name="caption"><i18n:gettext>Timer</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">STANDBYTIMERTIMEOUT</attr>
+                    <node id="StandByTimerTimeoutDisabled">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">0</attr>
+                    </node>
+                    <node id="10MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>10 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">10</attr>
+                    </node>
+                    <node id="20MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>20 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">20</attr>
+                    </node>
+                    <node id="30MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>30 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">30</attr>
+                    </node>
+                    <node id="60MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>60 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">60</attr>
+                    </node>
+                    <node id="90MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>90 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">90</attr>
+                    </node>
+                    <node id="120MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>120 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">120</attr>
+                    </node>
+                    <node id="150MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>150 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">150</attr>
+                    </node>
+                    <node id="180MIN_STANDBY_TIMER">
+                        <attr name="caption"><i18n:gettext>180 minutes</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">180</attr>
+                    </node>
+                </node>
+            </node>      
+            <node id="VFATCODEPAGE">
+                <attr name="caption"><i18n:gettext>File Browser Character Set</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="configurationName" type="string">VFATCODEPAGE</attr>
+                <node id="LATINUS">
+                    <attr name="caption"><i18n:gettext>Latin US</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">437</attr>
+                </node>
+                <node id="WEUR">
+                    <attr name="caption"><i18n:gettext>Western European</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">850</attr>
+                </node>
+                <node id="CEUR">
+                    <attr name="caption"><i18n:gettext>Central European</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationValue" type="string">852</attr>
+                </node>
+            </node>
+            <!--node id="Time Settings">
+                <attr name="caption"><i18n:gettext>Time Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="Time Zone">
+                    <attr name="caption"><i18n:gettext>Time Zone</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">AUTOTZ</attr>
+                    <node id="AUTOTZEnabled">
+                        <attr name="caption"><i18n:gettext>Automatic</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">YES</attr>
+                        <attr name="action" type="string">Enable automatic time zone</attr>
+                    </node>
+                    <node id="AUTOTZDisabled">
+                        <attr name="caption"><i18n:gettext>Manual</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">NO</attr>
+                        <attr name="action" type="string">Disable automatic time zone</attr>
+                    </node>
+                    <node id="TimeZone">
+                        <attr name="caption"><i18n:gettext>Select Time Zone</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    </node>
+                </node>
+            </node-->    
+            <node id="CallerId">
+                <attr name="caption"><i18n:gettext>Caller ID</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="CallerIdStatus">
+                    <attr name="caption"><i18n:gettext>Caller ID Status</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">CALLID_STATE</attr>
+                    <node id="CallerIdEnabled">
+                        <attr name="caption"><i18n:gettext>Enabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">Enabled</attr>
+                    </node>
+                    <node id="CallerIdDisabled">
+                        <attr name="caption"><i18n:gettext>Disabled</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">Disabled</attr>
+                    </node>
+                </node>
+                <node id="CallerIdBannerTimeout">
+                    <attr name="caption"><i18n:gettext>Banner Timeout</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="configurationName" type="string">CALLID_TIMEOUT</attr>
+                    <node id="CallerIdBanner5">
+                        <attr name="caption"><i18n:gettext>5 seconds</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">5</attr>
+                    </node>
+                    <node id="CallerIdBanner15">
+                        <attr name="caption"><i18n:gettext>15 seconds</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">15</attr>
+                    </node>
+                    <node id="CallerIdBanner30">
+                        <attr name="caption"><i18n:gettext>30 seconds</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">30</attr>
+                    </node>
+                    <node id="CallerIdBanner60">
+                        <attr name="caption"><i18n:gettext>60 seconds</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="configurationValue" type="string">60</attr>
+                    </node>
+                </node>
+                <node id="CallerIdHistory">
+                    <attr name="caption"><i18n:gettext>Call History</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+            </node>
+            <!--node id="RCUPairing">
+                <attr name="caption"><i18n:gettext>RCU Pairing</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="StartRCUPairing">
+                    <attr name="caption"><i18n:gettext>Start RCU Pairing</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+            </node-->
+        </node>
+        <node id="SYIN">
+            <attr name="caption"><i18n:gettext>System Information</i18n:gettext></attr>
+            <attr name="icon" type="string">white/iconw_settings.png</attr>
+            <node id="NetworkStatus">
+                <attr name="caption"><i18n:gettext>IP Network</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="NATStatus">
+                    <attr name="caption"><i18n:gettext>NAT Status</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                </node>
+            </node>
+            <node id="NetworkSetupScreen">
+                <attr name="caption"><i18n:gettext>Network Settings</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="action" type="string">Network Setup</attr>
+            </node>
+            <node id="SFWE">
+                <attr name="caption"><i18n:gettext>Software</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <node id="FWVR">
+                    <attr name="caption"><i18n:gettext>Firmware Version</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="subcaption"><i18n:gettext>0.00-CURRENT</i18n:gettext></attr>
+                </node>
+                <node id="UPDATE_STATUS">
+                    <attr name="caption"><i18n:gettext>Status: Not available</i18n:gettext></attr>
+                    <attr name="icon">white/iconw_settings.png</attr>
+                    <attr name="subcaption"></attr>
+                </node>
+            </node>
+            <node id="chip_id">
+                <attr name="caption"><i18n:gettext>Chip id</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+            <node id="MiddlewareStatus">
+                <attr name="caption"><i18n:gettext>CubiTV Portal Connectivity</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node>
+            <!--node id="MiddlewareAddress">
+                <attr name="caption"><i18n:gettext>CubiTV Portal Address</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node-->
+            <!--node id="PushServerStatus">
+                <attr name="caption"><i18n:gettext>PushServer Connectivity</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node-->
+            <!--node id="ViewRightWebStatus">
+                <attr name="caption"><i18n:gettext>ViewRight Web Connectivity</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+            </node-->
+            <node id="Diagnostics">
+                <attr name="caption"><i18n:gettext>Diagnostics</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="ParentalControl" type="string">no</attr>
+                <node id="SecretVersion">
+                    <attr name="caption"><i18n:gettext>Software Version</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">extraSwVersion</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node>
+                <!--node id="DiagnosticsChannelStatus">
+                    <attr name="caption"><i18n:gettext>Channel Status</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">channelStatus</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node-->
+                <node id="DiagnosticsSummary">
+                    <attr name="caption"><i18n:gettext>Summary</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">summary</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node>
+                <node id="DiagnosticsTunerStatistics">
+                    <attr name="caption"><i18n:gettext>RF Tuner Statistics</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">tunerStatistics</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node>
+                <node id="DiagnosticsSettopStatus">
+                    <attr name="caption"><i18n:gettext>STB Status</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">settopStatistics</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node>
+                <node id="DiagnosticsInterfaceStatus">
+                    <attr name="caption"><i18n:gettext>Interface Status</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">interfaceStatus</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node>
+                <node id="DiagnosticsMPEGStatistics">
+                    <attr name="caption"><i18n:gettext>MPEG Statistics</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <node id="DiagnosticsDVBTablesStatus">
+                        <attr name="caption"><i18n:gettext>DVB Tables status</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="type" type="string">dvbTableStatus</attr>
+                        <attr name="action" type="string">Diagnostics</attr>
+                    </node>
+                    <node id="DiagnosticsDVBTablesDetails">
+                        <attr name="caption"><i18n:gettext>DVB Tables Details</i18n:gettext></attr>
+                        <attr name="icon" type="string">white/iconw_settings.png</attr>
+                        <attr name="type" type="string">dvbTablesDetails</attr>
+                        <attr name="action" type="string">Diagnostics</attr>
+                    </node>
+                </node>
+                <node id="DiagnosticsInteractiveServices">
+                    <attr name="caption"><i18n:gettext>Interactive Services</i18n:gettext></attr>
+                    <attr name="icon" type="string">white/iconw_settings.png</attr>
+                    <attr name="type" type="string">interactiveServices</attr>
+                    <attr name="action" type="string">Diagnostics</attr>
+                </node>
+            </node>
+            <node id="QRCodeInfo">
+                <attr name="caption"><i18n:gettext>QR code</i18n:gettext></attr>
+                <attr name="icon" type="string">white/iconw_settings.png</attr>
+                <attr name="action" type="string">QRCodeInfo</attr>
+            </node>
+        </node>
+    </node>
+</tree>

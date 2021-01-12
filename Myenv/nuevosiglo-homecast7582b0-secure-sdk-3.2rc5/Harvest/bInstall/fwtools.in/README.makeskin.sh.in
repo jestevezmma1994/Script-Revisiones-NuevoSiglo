@@ -1,0 +1,22 @@
+_TOOL_NAME_
+-----------
+
+This tool is just an easy way of creating application skin package.
+
+This tool assumes that its invoked in the "skintools" root directory.
+Some assumptions were made as to make this tool as easy to use as possible.
+For detailed information head to the scripts and read the comments.
+
+It is required to run '_TOOL_NAME_ -p' before making any modifications to files inside.
+If any files are changed before using prepare mod, then _TOOL_NAME_ will refuse to work
+
+Invocation:
+
+  _TOOL_NAME_ -p
+    Creates copy of 'skindata_orig' directory to make skin package.
+
+  _TOOL_NAME_ [OPTIONS] <skin_name>
+    Creates new skin package.
+    OPTIONS:
+        -f   Creates full skin package instead of differential
+        -s   Manually set app version

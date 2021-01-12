@@ -1,0 +1,28 @@
+== I. Preparing image for signing ==
+  a) Enter sbuild directory
+  b) Run command:
+silo make shell
+./vmx_release/mkimage_for_signing.sh [<output_image_name>]
+  c) Image to sign will be written to the same directory with default name ROOTFS.vmx (or with given name if is passed to the script)
+  d) Before sending it to Verimatrix it must pgp-ed with Verimatrix key
+
+== II. Creating packages (upgrade, nfsroot) with signed images ==
+  a) cd to sbuild-* directory
+  b) run following commands (giving signed application image as parameter)
+silo make shell
+./vmx_release/qbnfsrootgen.sh <signed_app_image> <nfsroot_package> <output_folder>
+./vmx_release/qbupgradegen.sh <signed_app_image> <nfsroot_package> <output_folder>
+  Example:
+silo make shell
+./vmx_release/qbnfsrootgen.sh ROOTFS.vmx.signed inovo-inovo7582b0-secure-cubitv-nfsroot-1.1rc5.tgz .
+./vmx_release/qbupgradegen.sh ROOTFS.vmx.signed inovo-inovo7582b0-secure-cubitv-nfsroot-1.1rc5.tgz .
+  c) For above example, we get following packages on output:
+     inovo-inovo7582b0-secure-cubitv-nfsroot-1.1rc5_signed.tgz
+     inovo-inovo7582b0-secure-cubitiv-upgrade-1.1rc5_signed.tgz
+
+== III. Creating factory images ==
+  a) Get newest security tools from repository Var/security (branch 1):
+silo pull repo Var/security from 1 
+  b) install it: 'make install' or 'make install-local' (second one installs scripts to ~/bin directory)
+  c) run prep_release script with passing path to signed application image as paramater, example:
+prep_release inovo-inovo7582b0-secure-cubitv-1.1rc5 -i ROOTFS_1.1rc5_secure_signed.vmx -m

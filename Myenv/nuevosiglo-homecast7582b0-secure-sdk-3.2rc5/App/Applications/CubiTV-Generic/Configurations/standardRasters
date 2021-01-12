@@ -1,0 +1,57 @@
+{
+
+"comment": [
+	"standardRasters file.",
+	"'Elements' array contains an array of standard rasters. Fields of each",
+	"element are described below:",
+	"[REQUIRED] id - string",
+	"[REQUIRED] type - string - tuner type 'cab', 'sat', 'ter'",
+	"[REQUIRED] band - integer - frequency jump of raster",
+	"[REQUIRED] modulation - array of modulation strings",
+	"[REQUIRED] freq_min - integer - frequency minimum of raster",
+    "[REQUIRED] freq_max - integer - frequency maximum of raster",
+    "[OPTIONAL] useHalfFrequencies - boolean - do we use half frequencies"
+],
+
+"elements" : [
+	{
+		"id": "DVBT_7",
+		"type": "ter",
+		"band": 7,
+		"modulation": ["QAM16", "QAM64", "QAM256", "QPSK"],		
+		"freq_min": 107500,
+		"freq_max": 296500,
+		"useHalfFrequencies" : true
+	},
+
+	{
+		"id": "DVBT_8",
+		"type": "ter",
+		"band": 8,
+		"modulation": ["QAM16", "QAM64", "QAM256", "QPSK"],
+		"freq_min": 114000,
+		"freq_max": 858000
+	},
+
+	{
+		"id": "DVBC_8",
+		"type": "cab",
+		"standard": "dvbc",
+		"band": 8,
+		"modulation": ["QAM16", "QAM64", "QAM128", "QAM256"],
+		"freq_min": 114000,
+		"freq_max": 858000
+	},
+
+	{
+		"id": "ANNEXB_6",
+		"type": "cab",
+		"standard": "annexb",
+		"band": 6,
+		"modulation": ["QAM64", "QAM256"],
+		"freq_min": 57000,
+		"freq_max": 855000
+	}
+]
+
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="ExtendedInfo">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>45</int></param>
+        <param tag="width"><int>450</int></param>
+        <param tag="boxWidth"><int>450</int></param>
+        <param tag="height"><int>720</int></param>
+    </widget>
+
+    <widget name="grid">
+        <param tag="width"><int>450</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="spacing"><int>20</int></param>
+    </widget>
+
+    <widget name="viewport">
+        <param tag="xOffset"><int>10</int></param>
+        <param tag="yOffset"><int>63</int></param>
+        <param tag="width"><int>450</int></param>
+        <param tag="height"><int>594</int></param>
+        <param tag="xStep"><int>20</int></param>
+        <param tag="yStep"><int>20</int></param>
+        <param tag="yMaxVelocity"><double>1000</double></param>
+        <param tag="yAcceleration"><double>20</double></param>
+        <param tag="screenAcceleration"><double>100</double></param>
+    </widget>
+
+    <widget name="description">
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>0</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="multiline"><bool>true</bool></param>
+    </widget>
+
+    <widget name="title">
+        <param tag="xOffset"><int>10</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>0</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="multiline"><bool>true</bool></param>
+    </widget>
+
+    <widget name="image">
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>500</int></param>
+        <param tag="defaultBitmap"><bitmap><path>category/iconc_wait.png</path></bitmap></param>
+    </widget>
+</settings>

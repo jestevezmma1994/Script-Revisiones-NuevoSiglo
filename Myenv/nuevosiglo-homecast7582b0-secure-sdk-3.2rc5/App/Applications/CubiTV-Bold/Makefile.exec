@@ -1,0 +1,29 @@
+SvMakefileTemplate = Executable
+include $(SvStandardMakefiles)/Versions/2/Before.mk
+
+SvName = cubitv
+SvDescription = Generic GUI client
+
+SvMajorVersion = 1
+SvMinorVersion = 0
+SvRevision = 0
+
+SvRequires = CubiTV CubiTV-logic QBCAS-deps
+
+CFLAGS += -std=gnu99
+CPPFLAGS += -I. -D_POSIX_SOURCE
+SvStrictWarnings = yes
+
+SvDirectoryLayoutConvention = custom
+
+AllFiles =  $(shell find . -type f -a -name '*\.c')
+SvExecutableSourceFiles = $(shell ls -t $(AllFiles))
+
+SvStrictWarnings = yes
+
+
+ifneq (,$(CUBITV_FACTORY_CONTEXT))
+    CPPFLAGS += -D$(CUBITV_FACTORY_CONTEXT)=1
+endif
+
+include $(SvStandardMakefiles)/Versions/2/After.mk

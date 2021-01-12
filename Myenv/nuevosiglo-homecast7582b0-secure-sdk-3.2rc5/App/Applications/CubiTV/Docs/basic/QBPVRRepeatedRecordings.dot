@@ -1,0 +1,8 @@
+digraph QBPVRRepeatedRecordings {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBPVRRepeatedRecordings [label="PVR Repeated recordings" URL="\N.html" root=true]
+
+    QBPVRRepeatedRecordings -> Events
+    QBPVRRepeatedRecordings -> Channels
+}

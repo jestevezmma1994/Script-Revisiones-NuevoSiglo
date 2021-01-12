@@ -1,0 +1,11 @@
+digraph Traxis {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Traxis [label="Traxis" root=true]
+
+    QBMiddlewareIdManager
+    TraxisWebMonitor
+
+    Traxis -> QBMiddlewareIdManager
+    Traxis -> TraxisWebMonitor
+}

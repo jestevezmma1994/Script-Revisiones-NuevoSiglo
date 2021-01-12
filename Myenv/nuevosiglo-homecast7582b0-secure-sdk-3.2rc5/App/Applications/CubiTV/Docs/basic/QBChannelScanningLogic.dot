@@ -1,0 +1,7 @@
+digraph QBChannelScanningLogic {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBChannelScanningLogic [URL="\N.html" root=true]
+
+    QBChannelScanningLogic -> Channels
+}

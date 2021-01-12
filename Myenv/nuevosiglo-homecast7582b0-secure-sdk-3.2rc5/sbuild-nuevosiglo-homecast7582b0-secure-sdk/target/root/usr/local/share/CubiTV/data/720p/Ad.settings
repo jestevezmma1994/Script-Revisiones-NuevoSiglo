@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <widget name="AdIcon">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>100</int></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>520</int></param>
+        <param tag="vertAlign"><string>bottom</string></param>
+        <param tag="upScale"><bool>true</bool></param>
+        <param tag="keepAspectRatio"><bool>true</bool></param>
+    </widget>
+
+</settings>
+

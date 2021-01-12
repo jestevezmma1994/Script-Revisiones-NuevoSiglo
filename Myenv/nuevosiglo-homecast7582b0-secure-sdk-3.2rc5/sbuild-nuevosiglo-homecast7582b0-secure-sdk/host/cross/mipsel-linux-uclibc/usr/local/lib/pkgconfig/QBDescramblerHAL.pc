@@ -1,0 +1,6 @@
+Name: QBDescramblerHAL
+Version: 1.0.0
+Requires: QBDemux QBDemuxHAL-nexus QBDescrambler QBTextUtils SvCore SvFoundation nexus 
+Description: Cubiware descrambler Hardware Abstraction Layer for nexus library
+Libs: -lQBDescramblerHAL 
+CFlags: 

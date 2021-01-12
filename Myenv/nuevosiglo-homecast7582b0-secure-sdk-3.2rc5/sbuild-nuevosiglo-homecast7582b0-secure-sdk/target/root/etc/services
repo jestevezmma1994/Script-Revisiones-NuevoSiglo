@@ -1,0 +1,17 @@
+telnet  23/tcp
+ssh     22/tcp
+dns     53/tcp
+dns     53/udp
+dhcp1   67/udp
+dhcp2   68/udp
+www     80/tcp    http
+www     80/udp
+ntp     123/udp
+https   443/tcp
+https   443/udp
+ike1    500/udp
+dlna1   1900/udp
+dlna2   1901/udp
+ike2    4500/udp
+docsis1 30583/udp
+docsis2 39321/udp

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+<!--
+   backgroundColor15 and fontColor15 are maximum supported color counts 
+-->
+
+
+<xi:include href="Dialog-template.settings"/>
+
+    <widget name="Watermark">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="backgroundColor0"><color>000000FF</color></param>
+        <param tag="backgroundColor1"><color>FF0000FF</color></param>
+        <param tag="backgroundColor2"><color>00FF00FF</color></param>
+        <param tag="backgroundColor3"><color>0000FFFF</color></param>
+        <param tag="backgroundColor4"><color>FFFFFFFF</color></param>
+        <param tag="fontColor0"><color>000000FF</color></param>
+        <param tag="fontColor1"><color>FF0000FF</color></param>
+        <param tag="fontColor2"><color>00FF00FF</color></param>
+        <param tag="fontColor3"><color>0000FFFF</color></param>
+        <param tag="fontColor4"><color>FFFFFFFF</color></param>
+
+        <widget name="Label" import="Dialog-template">
+            <param tag="width"><int>200</int></param>
+            <param tag="height"><int>100</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="textColor"><color>bfbfbfA0</color></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+        <widget name="Background">
+            <param tag="width"><int>200</int></param>
+            <param tag="height"><int>100</int></param>
+        </widget>
+    </widget>
+
+    <widget name="ViewrightTriggerUpgradeDialog" import="Dialog-template">
+        <param tag="inputPolicy"><string>strictModal</string></param>
+    </widget>
+    
+</settings>

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+. /etc/profile
+
+cd /tmp
+
+files=/etc/rcS.d/*
+
+if [ -e /dev/qbsplash ]; then
+	count=0
+	for i in $files; do
+		count=$((count+1));
+	done
+	echo "num_steps $count" > /dev/qbsplash
+fi
+
+for i in $files; do
+	( $i start 2>&1 ) >>/dev/null
+	[ -e /dev/qbsplash ] && echo "step" > /dev/qbsplash
+	[ -e /dev/fp ] && echo "1" > /dev/fp
+done
+
+[ -e /sys/fp/animation ] && echo "0" > /sys/fp/animation
+echo "----" > /dev/fp

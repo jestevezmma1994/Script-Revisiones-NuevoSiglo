@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="MovieInfo-template">
+
+        <widget name="Default">
+            <param tag="labelText"><string><i18n:gettext>N/A</i18n:gettext></string></param>
+        </widget>
+
+        <widget name="Background">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>419</int></param>
+            <param tag="bgColor"><color>8f8f8fff</color></param>
+        </widget>
+
+        <widget name="CartIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>32</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_cart.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="CartPromoIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>32</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_cart.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Price">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>32</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>e09f0aff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="expirationDateFormat"><string>%Y-%m-%d %H:%M:%S</string></param>
+            <param tag="priceFormat"><string>full</string></param> <!-- possible values: `full' or `skipDecimalPart' -->
+        </widget>
+
+        <widget name="GenreIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>78</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_genre.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Genre">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>78</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="CountryIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>119</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_country.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Country">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>119</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="DirectorIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>164</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_director.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Director">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>164</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="CastIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>209</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_cast.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Cast">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>209</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>136</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>3</int></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="RatingsIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>304</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_rating.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Ratings">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>304</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="RuntimeIcon">
+            <param tag="xOffset"><int>265</int></param>
+            <param tag="yOffset"><int>351</int></param>
+            <param tag="width"><int>-1</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_runtime.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Runtime">
+            <param tag="xOffset"><int>304</int></param>
+            <param tag="yOffset"><int>351</int></param>
+            <param tag="width"><int>266</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+    </widget>
+
+</settings>

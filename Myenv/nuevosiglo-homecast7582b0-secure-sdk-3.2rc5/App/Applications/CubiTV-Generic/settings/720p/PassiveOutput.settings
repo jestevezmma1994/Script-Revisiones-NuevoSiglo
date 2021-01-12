@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+
+    <widget name="PassiveOutput">
+        <common>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="SemiWideFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </common>
+        <param tag="bgColor"><color>000000df</color></param>
+        <param tag="textWidth"><int>1080</int></param>
+        <param tag="HDMI"><string>HDMI</string></param>
+        <param tag="CVBS"><string>A/V OUT</string></param>
+    </widget>
+</settings>

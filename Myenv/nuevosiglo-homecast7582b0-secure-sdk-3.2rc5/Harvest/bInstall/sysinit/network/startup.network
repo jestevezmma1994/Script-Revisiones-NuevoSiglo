@@ -1,0 +1,34 @@
+#!/bin/sh
+
+if [ -x /usr/bin/logger ]; then
+        LOGGER="/usr/bin/logger -s -p user.notice -t /etc/init.d/network "
+else
+        LOGGER=echo
+fi
+
+NETWORK_TYPE=$(svconf_ctl NETWORK_TYPE)
+MEDIUM=$(svconf_ctl MEDIUM)
+
+case "$1" in
+    start)
+        $LOGGER " START!"
+        if [ -f /etc/firewall.rules ] && [ -n "$(which iptables-restore)" ]; then
+            iptables-restore </etc/firewall.rules
+        fi
+        if [ "$NETWORK_TYPE" = "STATIC" -a "$MEDIUM" != "WIFI" ]; then
+            init_network start
+        else
+            check_networkd &
+        fi
+    ;;
+    stop)
+        $LOGGER " STOP!"
+        killall -9 check_networkd
+        killall -9 check_networkd
+        killall -9 check_networkd
+        init_network stop
+    ;;
+    *)
+        echo "Usage: $0 [start|stop]"
+    ;;
+esac

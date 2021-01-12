@@ -1,0 +1,271 @@
+SvName=CubiTV-NuevoSiglo
+
+GENERIC_STARTER_SCRIPT ?= scripts/starter-generic
+GENERIC_CORE_UPLOADER_SCRIPT ?= scripts/core-uploader
+HINTS ?= Hints/hints.json
+SYSTEM_DEBUG ?= scripts/system_debug
+SYSTEM_DEBUG_DAEMON ?= scripts/system_debugd
+CHANNEL_SCANNING_CONF_TER ?= Configurations/channelScanning-ter
+CHANNEL_SCANNING_CONF_CAB ?= Configurations/channelScanning-cab
+CHANNEL_SCANNING_CONF_SAT ?= Configurations/channelScanning-sat
+SERVICES_LIST_IP ?= Configurations/services-ip
+SERVICES_LIST_DVB ?= Configurations/services-dvb
+SERVICES_LIST_SAT ?= Configurations/services-sat
+SERVICES_LIST_HYBRID ?= Configurations/services-hybrid
+PLAYER_CONF ?= Configurations/playerConf
+CABLE_MODEM_STATUS ?= scripts/cable_modem_status
+CABLE_MODEM_STATUS_DAEMON ?= scripts/cable_modem_statusd
+OTA_URI_DEFAULT ?= Configurations/ota-uri-default
+WIZARD_OPTIONS_IP ?= Configurations/wizard-ip
+SCANNING_DEFAULT_PARAMS ?= Configurations/scanDefaultParams
+OPERATE_SCANNING_MANAGER_CONF ?= Configurations/operateScanningConf
+WIZARD_OPTIONS_DVB ?= Configurations/wizard-dvb
+WIZARD_OTPIONS_HYBRID ?= Configurations/wizard-hybrid
+VIEW_RIGHT_OPTIONS ?= Configurations/viewRightManager
+UTFCONV_LANGUAGE_MAP ?= Configurations/langMap
+FAVORITES_MENU_CONF ?= Configurations/favoritesMenu
+SKINS_DOWNLOADER_SCRIPT ?= scripts/skins_downloader
+S_INSTALL_UPGRADE_RETRY_TIMEOUT?=300
+S_INSTALL_UPGRADE_CONNECT_TIMEOUT?=300
+CLOSED_CAPTIONING_OPTIONS ?= Configurations/closedCaptioning
+LOCAL_CONFIGURATIONS ?= Configurations/Local/*
+UPDATE_CHANNEL_LOGOS ?= scripts/update_channel_logos
+
+_UPGRADE_RETRY_TIMEOUT_=37
+_UPGRADE_CONNECT_TIMEOUT_=39
+
+LOCAL_PREFIX:=/usr/local
+DATA_PREFIX:=$(LOCAL_PREFIX)/share
+
+FILES_STARTER := $(wildcard $(GENERIC_STARTER_SCRIPT))
+install-starter:
+	@echo "Installing scripts: $(FILES_STARTER)"
+	@if [ "$(FILES_STARTER)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/gui.d/"; \
+	  install -m 0755 $(FILES_STARTER) "$(DESTDIR)/etc/gui.d/cubitv"; \
+	  rm -f "$(DESTDIR)/etc/gui.d/default"; \
+	  ln -s cubitv "$(DESTDIR)/etc/gui.d/default"; \
+	  sed -i -e "s/^export HDDSUPPORT=.*/export HDDSUPPORT=${HDDSUPPORT}/g" ${DESTDIR}/etc/gui.d/cubitv; \
+	fi; \
+
+FILES_CORE_UPLOADER := $(wildcard $(GENERIC_CORE_UPLOADER_SCRIPT))
+install-core-uploader:
+	@echo "Installing scripts: $(FILES_CORE_UPLOADER)"
+	@if [ "$(FILES_CORE_UPLOADER)" != "" ]; then \
+	  install -d "$(DESTDIR)$(LOCAL_PREFIX)/sbin"; \
+	  install -m 0755 $(FILES_CORE_UPLOADER) "$(DESTDIR)$(LOCAL_PREFIX)/sbin/core-uploader"; \
+	fi; \
+
+install-misc: install-hints install-cable_modem_status install-cable_modem_status-daemon \
+		install-cs-configurations install-cs-params install-system_debug install-system_debug-daemon \
+		install-services-lists install-wizard-options install-skins-downloader \
+		install-favorites-menu install-closed-captioning-options install-view-right-options
+
+FILES_CABLE_MODEM_STATUS_DAEMON := $(wildcard $(CABLE_MODEM_STATUS_DAEMON))
+install-cable_modem_status-daemon:
+	@echo "Installing cable modem status monitor daemon: $(FILES_CABLE_MODEM_STATUS_DAEMON)"
+	@if [ "$(FILES_CABLE_MODEM_STATUS_DAEMON)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/init.d"; \
+	  install -m 0755 $(FILES_CABLE_MODEM_STATUS_DAEMON) "$(DESTDIR)/etc/init.d/cable_modem_statusd"; \
+	fi; \
+
+FILES_CABLE_MODEM_STATUS := $(wildcard $(CABLE_MODEM_STATUS))
+install-cable_modem_status:
+	@echo "Installing cable modem status monitor: $(FILES_CABLE_MODEM_STATUS)"
+	@if [ "$(FILES_CABLE_MODEM_STATUS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(LOCAL_PREFIX)/bin"; \
+	  install -m 0755 $(FILES_CABLE_MODEM_STATUS) "$(DESTDIR)$(LOCAL_PREFIX)/bin/cable_modem_status"; \
+	fi; \
+
+FILES_SYSTEM_DEBUG := $(wildcard $(SYSTEM_DEBUG))
+install-system_debug:
+	@echo "Installing system debug: $(FILES_SYSTEM_DEBUG)"
+	@if [ "$(FILES_SYSTEM_DEBUG)" != "" ]; then \
+	  install -d "$(DESTDIR)$(LOCAL_PREFIX)/bin"; \
+	  install -m 0755 $(FILES_SYSTEM_DEBUG) "$(DESTDIR)$(LOCAL_PREFIX)/bin/system_debug"; \
+	fi; \
+
+FILES_SYSTEM_DEBUG_DAEMON := $(wildcard $(SYSTEM_DEBUG_DAEMON))
+install-system_debug-daemon:
+	@echo "Installing system debug: $(FILES_SYSTEM_DEBUG_DAEMON)"
+	@if [ "$(FILES_SYSTEM_DEBUG_DAEMON)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/init.d"; \
+	  install -m 0755 $(FILES_SYSTEM_DEBUG_DAEMON) "$(DESTDIR)/etc/init.d/system_debugd"; \
+	fi; \
+
+FILES_WIZARD_OPTIONS := $(wildcard $(WIZARD_OPTIONS_IP) $(WIZARD_OPTIONS_DVB) $(WIZARD_OTPIONS_HYBRID))
+install-wizard-options:
+	@echo "Installing wizard options: $(FILES_WIZARD_OPTIONS)"
+	@if [ "$(FILES_WIZARD_OPTIONS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_WIZARD_OPTIONS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_SKINS_DOWNLOADER := $(wildcard $(SKINS_DOWNLOADER_SCRIPT))
+install-skins-downloader:
+	@echo "Installing skins downloader: $(FILES_SKINS_DOWNLOADER)"
+	@if [ "$(FILES_SKINS_DOWNLOADER)" != "" ]; then \
+	  install -d "$(DESTDIR)/usr/local/bin"; \
+	  install -m 0755 $(FILES_SKINS_DOWNLOADER) "$(DESTDIR)/usr/local/bin/skins_downloader"; \
+	  sed -i "s/_UPGRADE_RETRY_TIMEOUT_/$(S_INSTALL_UPGRADE_RETRY_TIMEOUT)/g" $(DESTDIR)/usr/local/bin/skins_downloader; \
+	  sed -i "s/_UPGRADE_CONNECT_TIMEOUT_/$(S_INSTALL_UPGRADE_CONNECT_TIMEOUT)/g" $(DESTDIR)/usr/local/bin/skins_downloader; \
+	fi; \
+
+install-scripts: install-starter install-core-uploader $(install_misc)
+
+FILES_HINTS := $(wildcard $(HINTS))
+install-hints:
+	@echo "Installing hints: $(FILES_HINTS)"
+	@if [ "$(FILES_HINTS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/hints"; \
+	  install -m 0644 $(FILES_HINTS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/hints/hints.json"; \
+	fi; \
+
+FILES_OTA_URI := $(wildcard $(OTA_URI_DEFAULT))
+install-ota_default:
+	@echo "Installing ota-defualt: $(FILES_OTA_URI)"
+	@if [ "$(FILES_OTA_URI)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/"; \
+	  install -m 0644 $(FILES_OTA_URI) "$(DESTDIR)/etc/"; \
+	fi; \
+
+FILES_SERVICES_LIST := $(wildcard $(SERVICES_LIST_IP) $(SERVICES_LIST_DVB) $(SERVICES_LIST_SAT) $(SERVICES_LIST_HYBRID))
+install-services-lists:
+	@echo "Installing service lists: $(FILES_SERVICES_LIST)"
+	@if [ "$(FILES_SERVICES_LIST)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_SERVICES_LIST) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_CS_CONF := $(wildcard $(CHANNEL_SCANNING_CONF_CAB) $(CHANNEL_SCANNING_CONF_TER) $(CHANNEL_SCANNING_CONF_SAT))
+install-cs-configurations:
+	@echo "Installing channel scanning configurations: $(FILES_CS_CONF)"
+	@if [ "$(FILES_CS_CONF)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_CS_CONF) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+	
+FILES_CS_PARAMS := $(wildcard $(SCANNING_DEFAULT_PARAMS))
+install-cs-params:
+	@echo "Installing scanning parameters: $(FILES_CS_PARAMS)"
+	@if [ "$(FILES_CS_PARAMS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_CS_PARAMS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_OSM_PARAMS := $(wildcard $(OPERATE_SCANNING_MANAGER_CONF))
+install-os-params:
+	@echo "Installing operate scanning manager configurations: $(FILES_OSM_PARAMS)"
+	@if [ "$(FILES_OSM_PARAMS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_OSM_PARAMS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_LANGUAGE_MAP := $(wildcard $(UTFCONV_LANGUAGE_MAP))
+install-language_map:
+	@echo "Installing utfconv language map: $(UTFCONV_LANGUAGE_MAP)"
+	@if [ "$(FILES_LANGUAGE_MAP)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_LANGUAGE_MAP) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_FAVORITES_MENU_CONF := $(wildcard $(FAVORITES_MENU_CONF))
+install-favorites-menu:
+	@echo "Installing favorites menu config: $(FAVORITES_MENU_CONF)"
+	@if [ "$(FILES_FAVORITES_MENU_CONF)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_FAVORITES_MENU_CONF) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_CLOSED_CAPTIONING := $(wildcard $(CLOSED_CAPTIONING_OPTIONS))
+install-closed-captioning-options:
+	@echo "Installing closed captioning options: $(CLOSED_CAPTIONING_OPTIONS)"
+	@if [ "$(FILES_CLOSED_CAPTIONING)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_CLOSED_CAPTIONING) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_VIEW_RIGHT := $(wildcard $(VIEW_RIGHT_OPTIONS))
+install-view-right-options:
+	@echo "Installing view right options: $(VIEW_RIGHT_OPTIONS)"
+	@if [ "$(FILES_VIEW_RIGHT)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	  install -m 0644 $(FILES_VIEW_RIGHT) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	fi; \
+
+FILES_LOCAL_CONFIGURATIONS := $(wildcard $(LOCAL_CONFIGURATIONS))
+install-local-configurations:
+	@echo "Installing local configuration files: $(FILES_LOCAL_CONFIGURATIONS)"
+	@if [ "$(FILES_LOCAL_CONFIGURATIONS)" != "" ]; then \
+		install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/Local"; \
+		install -m 0644 $(LOCAL_CONFIGURATIONS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/Local/"; \
+	fi; \
+	
+FILES_UPDATE_CHANNEL_LOGOS := $(wildcard $(UPDATE_CHANNEL_LOGOS))
+install-update-channel-logos:
+	@echo "Installing update channel logos: $(UPDATE_CHANNEL_LOGOS)"
+	@if [ "$(FILES_UPDATE_CHANNEL_LOGOS)" != "" ]; then \
+	  install -d "$(DESTDIR)/usr/local/bin"; \
+	  install -m 0755 $(FILES_UPDATE_CHANNEL_LOGOS) "$(DESTDIR)/usr/local/bin/update_channel_logos"; \
+	  sed -i "s/_UPGRADE_RETRY_TIMEOUT_/$(S_INSTALL_UPGRADE_RETRY_TIMEOUT)/g" $(DESTDIR)/usr/local/bin/update_channel_logos; \
+	  sed -i "s/_UPGRADE_CONNECT_TIMEOUT_/$(S_INSTALL_UPGRADE_CONNECT_TIMEOUT)/g" $(DESTDIR)/usr/local/bin/update_channel_logos; \
+	fi; \
+
+FILES_PLAYER_CONF := $(wildcard $(PLAYER_CONF))
+install-player-conf:
+	@echo "Installing update channel logos: $(PLAYER_CONF)"
+	@if [ "$(FILES_PLAYER_CONF)" != "" ]; then \
+	  install -d "$(DESTDIR)/usr/local/bin"; \
+	  install -m 0755 $(FILES_PLAYER_CONF) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/playerConf"; \
+	  sed -i "s/_UPGRADE_RETRY_TIMEOUT_/$(S_INSTALL_UPGRADE_RETRY_TIMEOUT)/g" $(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/playerConf; \
+	  sed -i "s/_UPGRADE_CONNECT_TIMEOUT_/$(S_INSTALL_UPGRADE_CONNECT_TIMEOUT)/g" $(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/playerConf; \
+	fi; \
+
+install-settings:
+	@echo "Need to install runtime data files:"; \
+	  APPMENUS=`find settings -name *.appmenu`; \
+	  if [ "$$APPMENUS" != "" ]; then \
+	    echo "  - appmenu"; \
+	    install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    for appmenu in $$APPMENUS; do \
+	      install -m 0644 $$appmenu "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    done; \
+	  fi; \
+	  JSONS=`find settings -name *.json`; \
+	  if [ "$$JSONS" != "" ]; then \
+	    echo "  - json"; \
+	    install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    for json in $$JSONS; do \
+	      install -m 0644 $$json "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    done; \
+	  fi; \
+	  MAPS=`find settings/ -name *.oskmap 2>/dev/null`; \
+	  if [ "$$MAPS" != "" ]; then \
+	    echo "  - oskmap"; \
+	    install -m 0644 $$MAPS "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	  fi; \
+	  BASEDIRS="ntsc pal 720p" ; \
+	  SETTINGSDIRS="$$BASEDIRS `cd settings && find $$BASEDIRS -mindepth 1 -maxdepth 2 -type d 2>/dev/null`"; \
+		for sdir in $$SETTINGSDIRS; do \
+		  if [ -d settings/$$sdir ]; then \
+			  echo "  - settings/$$sdir"; \
+		    FILES=`find settings/$$sdir/ -maxdepth 1 -name *.settings 2>/dev/null`; \
+		    if [ "$$FILES" != "" ]; then \
+		      install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/data/$$sdir"; \
+		      srm-host-run $(BUILD_ROOT)/bin/install-settings $$FILES $(DESTDIR)$(DATA_PREFIX)/CubiTV/data/$$sdir; \
+		    fi; \
+		  fi; \
+		done; \
+
+install: install-settings install-starter install-core-uploader install-misc install-cs-configurations install-language_map translate-orig install-os-params install-ota_default install-local-configurations install-update-channel-logos install-player-conf
+
+compile:
+
+clean:
+
+QBTranslateSettings=$(shell find settings/ -name '*.settings' -o -name '*.appmenu')
+QBTranslateJSON=$(shell find settings/ -name '*.json') \
+		$(shell find Configurations/ -type f | grep -v -E '.example$$' | xargs grep -l i18n_gettext)
+
+QBTranslatePODir=translations/
+include $(CROSS_ROOT)/usr/local/share/translations/Makefile.mk

@@ -1,0 +1,6 @@
+Name: QBCrypto
+Version: 1.0.0
+Requires: QBCrypto-common QBPlatformHAL SvCore nexus 
+Description: QBCrypto nexus implementation.
+Libs: -lQBCrypto 
+CFlags: 

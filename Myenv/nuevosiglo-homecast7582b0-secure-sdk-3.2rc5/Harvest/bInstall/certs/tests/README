@@ -1,0 +1,48 @@
+I. Testing certs's Makefile
+
+Run ./test.sh to run few tests on ../Makefile.
+
+Originally it runs 4 tests:
+1) new bspec + part
+2) old bspec + part
+2.1) old bspec (v1) + part
+3) new bspec + rootfs
+4) old bspec + rootfs
+
+When you compare (1) with (2), and (3) with (4) it should yield the similar absolute folder/file struture.
+One way to compare these would be to use "tree" command and inspect if links are correct, etc.
+
+II. Testing init_certs* scripts
+There's a new test script dedicated to testing init_certs bash scripts. It mockups runtime environment with all necessary target files and "devices", and executes the script
+under various positivie and negative conditions - after each test it compares the result of the script with the expected state:
+- positivie results (i.e. we have all the env properly set up, part certs flashed, etc) - we'll just get part certs properly verified, decrypted and copied to /tmp/ssl/private
+- negative results (i.e. partition damaged, certs not present and such) - the script shall automatically link /tmp/ssl/private to /etc/ssl/backup.
+
+All sample certs, their partition equivalenets and their CAs are provided in the deliveries folder. In addition  bspec-new, bspec-old and bspec-old-v1 contain properly formed
+target bspecs so it all checks out in positive condition.
+
+In order to test v1 (old_bspec_v1) certs/partitions:
+- set top level variable's value in mockup_runtime_test_init_certs.sh to 1:  S_INSTALL_CERT_CRYPTO_VERSION=1
+- if you wish to test against dmcrypt on your host (difficult) modify USE_DMCRYPT variable (set to "yes") - alternatively leave it the way it is
+- run the script
+
+In order to test v2 (new bspec) certs/partition:
+- set top level variable's value in mockup_runtime_test_init_certs.sh to 1:  S_INSTALL_CERT_CRYPTO_VERSION=2
+- run the script
+
+
+In both cases the script will run all the individual tests and display their status, as well as an aggregate for all the tests. Please inspect your output for more details. Still the overall
+outcome should look something like this:
+...
+******** TEST RESULT:  SUCCESS
+
+In case it says "FAILED" please review individual results and act accordingly (likely fixing new modifications in init_certs scripts)
+
+
+NOTE:
+- the test script does not do a cleanup afterwards, so you'll need to do it yourself:
+  # chmod +w result*
+  # chmod rm -rf result*
+
+  Make sure you do this and not commit these "result" folders to Harvest/bInstall repo!!!
+

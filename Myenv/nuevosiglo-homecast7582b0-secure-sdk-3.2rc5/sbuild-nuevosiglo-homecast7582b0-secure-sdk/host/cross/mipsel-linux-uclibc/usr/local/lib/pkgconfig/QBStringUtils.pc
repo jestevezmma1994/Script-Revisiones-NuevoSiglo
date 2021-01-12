@@ -1,0 +1,6 @@
+Name: QBStringUtils
+Version: 1.0.0
+Requires: QBTextUtils SvCore SvQuirks 
+Description: Utilities operating on character strings
+Libs: -lQBStringUtils -lm 
+CFlags: 

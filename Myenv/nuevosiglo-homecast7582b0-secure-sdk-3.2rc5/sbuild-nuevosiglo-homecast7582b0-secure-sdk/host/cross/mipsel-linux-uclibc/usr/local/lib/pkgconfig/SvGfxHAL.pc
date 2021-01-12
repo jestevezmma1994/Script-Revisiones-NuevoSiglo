@@ -1,0 +1,6 @@
+Name: SvGfxHAL
+Version: 1.0.0
+Requires: CAGE QBPlatformHAL SvCore SvFoundation SvGfxHAL-common 
+Description: Generic GFX HAL implementation, based on low-level QBPlatformHAL-Gfx API
+Libs: -lSvGfxHAL 
+CFlags: 

@@ -1,0 +1,53 @@
+{
+    "bodyId": "tsn:74600019081EE47",
+    "personId": "tivo:pn.1366",
+    "levelOfDetail": "high",
+    "fallbackImageObjectType": "category",
+    "note": ["contentSummaryForPersonId", "roleForPersonId", "collectionForCollectionId"],
+    "imageRuleset": [
+    {
+        "name": "carousel",
+        "rule": {
+            "height": "131",
+            "width": "175",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    },
+    {
+        "name": "cover",
+        "rule": {
+            "width": "194",
+            "height": "280",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    }
+    ],
+    "responseTemplate": [
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["person"],
+        "type": "responseTemplate",
+        "typeName": "personList"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["contentSummaryForPersonId"],
+        "type": "responseTemplate",
+        "typeName": "person"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["category","description","title","tvRating",
+                      "collectionId","collectionType","image", "tvRating"],
+        "type": "responseTemplate",
+        "typeName": "contentSummaryForPerson"
+      }
+    ]
+}

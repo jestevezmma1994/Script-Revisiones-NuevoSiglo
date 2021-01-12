@@ -1,0 +1,26 @@
+digraph Wizard {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+    init [label=<\N<br/>- uses QBInitLogicShouldEnterWizard to check if Wizard should be created<br/>- uses QBInitLogicEnterWizard to start the wizard>]
+    wizard [label=<Wizard<br/>- Creates widgets and takes user input>]
+    startMode [label=<Application starts>]
+    endStartMode [label=<Application started>]
+    manual [label=<Channel scanning>]
+    appStartupWaiter [label=<Waiting for IP channels>]
+    InitLogic [label=<Init Logic<br/>Uses QBInitLogicEnterApplication to prepare context stack>]
+    application [label=<Running application>]
+
+
+    init -> wizard [label=<Loads configuration file<br/>from QBWizardLogicGetOptionFileName>]
+    wizard -> wizard [label=<User changes application mode,<br/>QBWizardLogicModeChanged is called and<br/>options are reloaded by QBWizardLogicGetOptionFileName>]
+    wizard -> startMode [label=<Starting application in mode selected by user<br/>and stopping previous mode if needed>]
+    startMode -> endStartMode [label=<Services are starting, wizard will <br/>wait until QBWizardLogicLoadingAllServicesFinished>]
+    endStartMode -> manual [label="If user wants DVB channels"]
+    endStartMode -> InitLogic
+    manual -> wizard [label="If user decides to change settings he may go back"]
+    manual -> InitLogic 
+    InitLogic -> application
+    InitLogic -> appStartupWaiter [label="If User wants IP channels"]
+    appStartupWaiter -> application
+}

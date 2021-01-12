@@ -1,0 +1,60 @@
+#!/bin/sh
+INTERFACE_ID=$1
+COMMAND=$2
+QB_NETWORK_MANAGER_DHCLIENT_PIDS_DIR=/var/run/dhcp_client/
+DHCLIENT_PIDFILE=$QB_NETWORK_MANAGER_DHCLIENT_PIDS_DIR/$INTERFACE_ID
+RUN_DHCLIENT_PIDFILE=$QB_NETWORK_MANAGER_DHCLIENT_PIDS_DIR/run_dhclient_$INTERFACE_ID
+DHCLIENT_CONF_FILE=/etc/dhclient.conf
+DHCLIENT_SCRIPT_FILE=/etc/networking/dhclient.script
+CHECK_PERIOD=5
+DHCLIENT_CALL="dhclient -nw -pf $DHCLIENT_PIDFILE -sf $DHCLIENT_SCRIPT_FILE -cf $DHCLIENT_CONF_FILE $INTERFACE_ID"
+
+stop_and_cleanup() {
+    if [ -e $RUN_DHCLIENT_PIDFILE ]; then
+        kill -KILL `cat $RUN_DHCLIENT_PIDFILE` > /dev/null 2>&1
+        rm $RUN_DHCLIENT_PIDFILE > /dev/null 2>&1
+    fi
+
+    if [ -e $DHCLIENT_PIDFILE ]; then
+        kill -KILL `cat $DHCLIENT_PIDFILE` > /dev/null 2>&1
+        rm $DHCLIENT_PIDFILE > /dev/null 2>&1
+    fi
+}
+
+start() {
+    $DHCLIENT_CALL
+}
+
+watch() {
+    echo $$ > $RUN_DHCLIENT_PIDFILE
+    while true ;
+    do
+        DHCLIENT_IS_RUNNING=0
+        if [ -e $DHCLIENT_PIDFILE ]; then
+            DHCLIENT_IS_RUNNING=1
+            DHCLIENT_CALL_STRIPPED=`echo $DHCLIENT_CALL | tr -d " \t\n\r"`
+            PID=`cat $DHCLIENT_PIDFILE`
+            PROC_CALL_STRIPPED=`cat /proc/$PID/cmdline`
+            if [ "$DHCLIENT_CALL_STRIPPED" == "$PROC_CALL_STRIPPED" ]; then
+                kill -0 $PID > /dev/null 2>&1
+            else
+                DHCLIENT_IS_RUNNING=0
+            fi
+        fi
+
+        if [ ${?} != 0 ] || [ $DHCLIENT_IS_RUNNING == 0 ] ; then
+            rm -f $DHCLIENT_PIDFILE > /dev/null 2>&1
+            $DHCLIENT_CALL
+        fi
+        sleep $CHECK_PERIOD
+    done
+}
+
+if [ "$COMMAND" == "stop" ]; then
+    stop_and_cleanup
+elif [ "$COMMAND" == "start" ]; then
+    stop_and_cleanup
+    start
+elif [ "$COMMAND" == "watch" ]; then
+    watch
+fi

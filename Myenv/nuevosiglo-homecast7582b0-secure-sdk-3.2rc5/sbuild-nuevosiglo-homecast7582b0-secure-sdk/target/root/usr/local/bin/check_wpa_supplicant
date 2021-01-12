@@ -1,0 +1,14 @@
+#!/bin/sh
+
+INTERFACE_ID=$1
+COMMAND=$2
+DELAY=3
+
+check() {
+    sleep $DELAY
+    QBIPCSend /var/run/networking/QBNetworkManager_api "#wpaSupplicantCheck#$INTERFACE_ID#"
+}
+
+if [ "$COMMAND" == "start" ]; then
+    check
+fi

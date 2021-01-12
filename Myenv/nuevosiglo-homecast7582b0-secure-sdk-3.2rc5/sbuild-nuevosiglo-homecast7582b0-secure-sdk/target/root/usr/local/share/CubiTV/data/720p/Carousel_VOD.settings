@@ -1,0 +1,461 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Dialog-template.settings"/>
+    <xi:include href="BasicPane.settings"/>
+    <xi:include href="LoadableBasicPane.settings"/>
+    <xi:include href="OSKPane.settings"/>
+    <xi:include href="MovieInfo.settings"/>
+    <xi:include href="VODMenu.settings"/>
+    <xi:include href="Animation.settings"/>
+
+    <widget name="Dialog" import="Dialog-template">
+        <widget name="TitleLabel">
+            <param tag="multiLine"><bool>true</bool></param>
+            <param tag="maxLines"><int>1</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+    </widget>
+
+    <widget name="Carousel">
+        <widget name="Item">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>588</int></param>
+            <param tag="height"><int>419</int></param>
+        </widget>
+    </widget>
+    <widget name="MoviePage">
+        <widget name="DynamicLogo">
+            <param tag="width"><int>588</int></param>
+            <param tag="height"><int>419</int></param>
+            <param tag="xOffset"><int>500</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="horizAlign"><string>left</string></param>
+        </widget>
+        <widget name="ServerIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_server.png</path></bitmap>
+            </param>
+        </widget>
+        
+        <widget name="ExpiredIcon">
+            <param tag="xOffset"><int>150</int></param>
+            <param tag="yOffset"><int>185</int></param>
+            <param tag="width"><int>48</int></param>
+            <param tag="height"><int>53</int></param>
+            <param tag="bg">
+                <bitmap><path>expired_icon.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="CategoryIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_dir_generic.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PhotoCategoryIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_dir_image.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="VideoCategoryIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_dir_video.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="AudioCategoryIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_dir_audio.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PlaylistCategoryIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_dir_playlist.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="AudioContentIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_audio.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="VideoContentIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_play.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PhotoContentIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_image.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PlaylistContentIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_playlist.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="TVRecordContentIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_tvrec.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="RadioRecordPlaylistContentIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_radiorec.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="EmptyIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_noentry.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="NoResponseIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_noentry.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="UnbrowsableIcon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="bg">
+                <bitmap><path>white/iconw_noentry.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Background">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>588</int></param>
+            <param tag="height"><int>419</int></param>
+            <param tag="bg">
+                <bitmap><path>bg_info_whole.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Image">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>17</int></param>
+            <param tag="width"><int>240</int></param>
+            <param tag="height"><int>384</int></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="vertAlign"><string>middle</string></param>
+            <param tag="horizAlign"><string>center</string></param>
+            <param tag="bg">
+                <bitmap><path>category/iconc_wait.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PhotoContentImage">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>230</int></param>
+            <param tag="height"><int>330</int></param>
+            <param tag="bg">
+                <bitmap><path>photo.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="VideoContentImage">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>230</int></param>
+            <param tag="height"><int>330</int></param>
+            <param tag="bg">
+                <bitmap><path>video.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="AudioContentImage">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>230</int></param>
+            <param tag="height"><int>330</int></param>
+            <param tag="bg">
+                <bitmap><path>bg_radio.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PlaylistContentImage">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>230</int></param>
+            <param tag="height"><int>330</int></param>
+            <param tag="bg">
+                <bitmap><path>playlist.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="ContentImage">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>28</int></param>
+            <param tag="width"><int>548</int></param>
+            <param tag="height"><int>374</int></param>
+            <param tag="bg">
+                <bitmap><path>category/iconc_wait.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="CategoryImage">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>28</int></param>
+            <param tag="width"><int>548</int></param>
+            <param tag="height"><int>363</int></param>
+            <param tag="bg">
+                <bitmap><path>category/iconc_waitcategory.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="MovieInfo" import="MovieInfo-template">
+            <widget name="Background">
+                <param tag="xOffset"><int>265</int></param>
+            </widget>
+        </widget>
+
+        <widget name="Name">
+            <param tag="xOffset"><int>30</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>550</int></param>
+            <param tag="height"><int>40</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="Description">
+            <param tag="xOffset"><int>310</int></param>
+            <param tag="yOffset"><int>164</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="height"><int>335</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>12</int></param>
+        </widget>
+        
+        <widget name="ExpiredText">
+            <param tag="xOffset"><int>215</int></param>
+            <param tag="yOffset"><int>199</int></param>
+            <param tag="width"><int>550</int></param>
+            <param tag="height"><int>80</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+    </widget>
+
+    <widget name="arrowUp">
+        <param tag="xOffset"><int>280</int></param>
+        <param tag="yOffset"><int>-1</int></param>
+        <param tag="width"><int>20</int></param>
+        <param tag="height"><int>14</int></param>
+        <param tag="bg">
+            <bitmap><path>arrow/arrow_down_active.png</path></bitmap>
+        </param>
+    </widget>
+
+    <widget name="arrowDown">
+        <param tag="xOffset"><int>280</int></param>
+        <param tag="yOffset"><int>428</int></param>
+        <param tag="width"><int>20</int></param>
+        <param tag="height"><int>14</int></param>
+        <param tag="bg">
+            <bitmap><path>arrow/arrow_up_active.png</path></bitmap>
+        </param>
+    </widget>
+
+    <widget name="menu">
+        <param tag="extraSpace"><int>270</int></param>
+        <widget name="menu">
+            <param tag="xOffset"><int>75</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>460</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="activeItemYOffset"><int>275</int></param>
+            <param tag="itemSpacing"><int>48</int></param>
+            <param tag="xtraSpace"><int>12</int></param>
+            <param tag="xtraSpaceAbove"><int>227</int></param>
+            <param tag="scrollDuration"><double>0.3</double></param>
+        </widget>
+        <widget name="carousel">
+            <param tag="xOffset"><int>578</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>588</int></param>
+            <param tag="height"><int>576</int></param>
+            <param tag="slotWidth"><int>588</int></param>
+            <param tag="slotHeight"><int>440</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="rowNumber"><int>1</int></param>
+            <param tag="columnNumber"><int>5</int></param>
+            <param tag="firstFocusableColumn"><int>2</int></param>
+            <param tag="lastFocusableColumn"><int>2</int></param>
+            <param tag="firstVisibleColumn"><int>1</int></param>
+            <param tag="lastVisibleColumn"><int>3</int></param>
+            <param tag="verticalSpacing"><int>0</int></param>
+            <param tag="horizontalSpacing"><int>0</int></param>
+            <param tag="scrollMaxSpeed"><int>3000</int></param>
+            <param tag="scrollAcceleration"><double>50</double></param>
+            <param tag="loopEnabled"><bool>true</bool></param>
+            <param tag="focus">
+                <bitmap><path>data_16x9/redframe_dvdbox.png</path></bitmap>
+            </param>
+            <widget name="Slot">
+                <param tag="font">
+                    <ref constant="NormalFont"/>
+                </param>
+                <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+                <param tag="textColor"><color>cfcfcfff</color></param>
+                <param tag="textAlign"><string>right</string></param>
+                <param tag="width"><int>588</int></param>
+                <param tag="height"><int>400</int></param>
+                <param tag="bg"><bitmap><path>pip.png</path></bitmap></param>
+            </widget>
+            <widget name="Focus">
+                <param tag="width"><int>588</int></param>
+                <param tag="height"><int>400</int></param>
+                <param tag="bg"><bitmap><path>ramka_tv.png</path></bitmap></param>
+            </widget>
+        </widget>
+    </widget>
+
+    <widget name="purchaseInfo">
+        <param tag="width"><int>640</int></param>
+        <param tag="height"><int>150</int></param>
+        <widget name="title">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>640</int></param>
+            <param tag="height"><int>136</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>2</int></param>
+        </widget>
+        <widget name="price">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>80</int></param>
+            <param tag="width"><int>640</int></param>
+            <param tag="height"><int>136</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="textColor"><color>e09f0aff</color></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+        <widget name="rentalPeriod">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>110</int></param>
+            <param tag="width"><int>640</int></param>
+            <param tag="height"><int>136</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="textColor"><color>e09f0aff</color></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+    </widget>
+    <widget name="Popup">
+        <param tag="title"><string><i18n:gettext>Please wait</i18n:gettext></string></param>
+        <widget name="Animation" import="animation-template"></widget>
+    </widget>
+    <widget name="AuthenticationDialog">
+        <param tag="invalidPin"><string><i18n:gettext>Authentication failed. Try again.</i18n:gettext></string></param>
+        <param tag="wait"><string><i18n:gettext>Please wait.</i18n:gettext></string></param>
+        <param tag="pinEntryTitle"><string><i18n:gettext>PIN:</i18n:gettext></string></param>
+        <param tag="title"><string><i18n:gettext>Authentication required</i18n:gettext></string></param>
+        <param tag="captionPC"><string><i18n:gettext>Please enter parental control PIN to play choosen content</i18n:gettext></string></param>
+        <param tag="captionInnov8on"><string><i18n:gettext>Please enter Middleware PIN to play choosen content</i18n:gettext></string></param>
+        <param tag="captionConax"><string><i18n:gettext>Please enter Conax PIN to play choosen content</i18n:gettext></string></param>
+    </widget> 
+</settings>

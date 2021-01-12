@@ -1,0 +1,67 @@
+#!/bin/sh
+
+if [ ! -f "/etc/storage.conf" ]; then
+    # no configuration for internal disk
+    exit 0
+fi
+
+
+FORCE=
+if [ "$1" == "force" ]; then
+  FORCE=yes
+fi
+
+
+dev2majorminor() {
+    while read major minor blocks dev; do
+        [ "$dev" = "$1" ] && echo $major $minor && break;
+    done < /proc/partitions
+}
+
+
+PVR_DATA_DEV=
+PVR_META_DIR=
+
+DEV_LINE=`cat /etc/storage.conf | grep SVS_ADDRESS | grep "qb_internal_storage" | head -n 1`
+[ $? -ne 0 ] && return;
+PVR_DATA_DEV=${DEV_LINE#*/}
+PVR_DATA_DEV="/${PVR_DATA_DEV%% *}"
+
+DIR_LINE=`cat /etc/storage.conf | grep SVS_ADDRESS | grep -v "$PVR_DATA_DEV" | tail -n 1`
+[ $? -ne 0 ] && return;
+PVR_META_DIR=/${DIR_LINE#*/}
+PVR_META_DIR=${PVR_META_DIR%% *}
+
+if [ ! -d "$PVR_META_DIR" ] || [ ! -b "$PVR_DATA_DEV" ]; then
+    echo failed to parse legacy pvr format
+    return;
+fi
+
+PVR_DATA_DEV_LINK=`readlink -f "$PVR_DATA_DEV"`
+if [ -z "$PVR_DATA_DEV_LINK" ]; then
+    echo "$PVR_DATA_DEV" is not linked to valid device
+    return;
+fi
+
+chown -R 1000:1000 $PVR_META_DIR
+chmod -R ug+rw $PVR_META_DIR
+
+if [ "$FORCE" != "yes" ]; then
+    qb_pvr_migration $PVR_META_DIR
+    if [ $? -eq 0 ]; then
+        QBRecordFSProbe  "$PVR_META_DIR"  "$PVR_DATA_DEV_LINK"
+        if [ $? -eq 0 ]; then
+            echo storage is already correctly formatted for pvr
+            return;
+        fi
+    fi
+fi
+
+PVR_DATA_DEV_LINK=${PVR_DATA_DEV_LINK#*/dev/}
+PVR_DATA_DEV_LINK=${PVR_DATA_DEV_LINK%% *}
+
+MAJOR_MINOR=`dev2majorminor $PVR_DATA_DEV_LINK`;
+
+echo formatting storage for pvr
+qb_format_pvr_prepare_partitions  $PVR_META_DIR  $MAJOR_MINOR
+echo formatting storage for pvr - $?

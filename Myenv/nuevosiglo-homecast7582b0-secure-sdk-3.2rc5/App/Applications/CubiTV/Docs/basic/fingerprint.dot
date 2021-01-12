@@ -1,0 +1,7 @@
+digraph fingerprint {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    fingerprint [label="QBFingerprint" URL="\N.html" root=true]
+
+    fingerprint -> Time
+}

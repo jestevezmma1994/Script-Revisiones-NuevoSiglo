@@ -1,0 +1,6 @@
+Name: mpeg-common
+Version: 1.0.0
+Requires: QBPCRatings QBTSParser QBTextUtils SvPlayerKit dataformat error_log sdp sv-list utfconv 
+Description: mpeg parser library
+Libs: -lmpeg-common 
+CFlags: 

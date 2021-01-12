@@ -1,0 +1,9 @@
+
+clean compile:
+	@echo nothing to do here
+
+install:
+	@echo "mkdir $(DESTDIR)/etc/playready"
+	mkdir -m 0750 -p $(DESTDIR)/etc/playready
+	cp -a files-production/* $(DESTDIR)/etc/playready
+

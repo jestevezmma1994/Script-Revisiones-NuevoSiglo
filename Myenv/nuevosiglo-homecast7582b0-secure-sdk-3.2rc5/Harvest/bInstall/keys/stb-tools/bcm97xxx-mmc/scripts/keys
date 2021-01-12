@@ -1,0 +1,100 @@
+#!/bin/sh
+
+mkdir -p /tmp/keys
+chown 0:1000 /tmp/keys
+chmod 750 /tmp/keys
+
+BLK_PARTITONS=`ls /sys/class/block | grep mmcblk0p`
+
+get_partition_by_volname()
+{
+	P=`cat /proc/mtd | grep "\<$1\>" | cut -d':' -f1`
+	if [ -z $P ]; then
+		for P in $BLK_PARTITONS; do
+			C=`cat /sys/class/block/$P/volname`
+			if [ "$C" = "$1" ]; then
+				echo "$P"
+				break
+			fi
+		done
+	else
+		echo "$P"
+	fi
+}
+
+HDCP_PART=`get_partition_by_volname "hdcp"`
+HDCP_KEY_SIZE=3212
+
+echo "HDCP_PART=$HDCP_PART"
+
+if [ ! -z "$HDCP_PART" ]; then
+	if [ -f /sys/class/mtd/$HDCP_PART/type ]; then
+		if [ "$(cat /sys/class/mtd/$HDCP_PART/type)" = "nand" ]; then
+			nandcat -l $HDCP_KEY_SIZE /dev/$HDCP_PART >/tmp/keys/hdcp.bin
+		else
+			dd if=/dev/$HDCP_PART of=/tmp/keys/hdcp.bin bs=$HDCP_KEY_SIZE count=1
+		fi
+	else
+		dd if=/dev/$HDCP_PART of=/tmp/keys/hdcp.bin bs=$HDCP_KEY_SIZE count=1
+	fi
+fi
+
+CRYPT_PART=`get_partition_by_volname "cryptoguard"`
+echo "CRYPT_PART=$CRYPT_PART"
+
+if [ ! -z "$CRYPT_PART" ]; then
+	if [ -f /sys/class/mtd/$CRYPT_PART/type ]; then
+		if [ "$(cat /sys/class/mtd/$CRYPT_PART/type)" = "nand" ]; then
+			nandcat /dev/$CRYPT_PART >/tmp/keys/cryptoguard.nvram
+		else
+			dd if=/dev/$CRYPT_PART of=/tmp/keys/cryptoguard.nvram
+		fi
+	else
+		dd if=/dev/$CRYPT_PART of=/tmp/keys/cryptoguard.nvram
+	fi
+fi
+
+PLAYREADY_PART=`get_partition_by_volname "playready"`
+echo "PLAYREADY_PART=$PLAYREADY_PART"
+
+if [ ! -z "$PLAYREADY_PART" ]; then
+    /usr/local/bin/install_drm_bin.sh "$PLAYREADY_PART" /tmp/keys/playready.bin
+fi
+
+WIDEVINE_PART=`get_partition_by_volname "widevine"`
+echo "WIDEVINE_PART=$WIDEVINE_PART"
+
+if [ ! -z "$WIDEVINE_PART" ]; then
+    /usr/local/bin/install_drm_bin.sh "$WIDEVINE_PART" /tmp/keys/widevine.bin
+fi
+
+BP30_PART=`get_partition_by_volname "bp30"`
+echo "BP30_PART=$BP30_PART"
+
+BP30_MD5SUM="unknown"
+BP31_MD5SUM="unknown"
+
+if [ ! -z "$BP30_PART" ]; then
+	/usr/local/bin/install_drm_bin.sh "$BP30_PART" /tmp/keys/bp3.bin
+	BP30_MD5SUM=`md5sum /tmp/keys/bp3.bin | cut  -d ' ' -f 1`
+	NVRAM_BP3MD5SUM=`setnv | grep SV_BP3MD5SUM | cut -d '=' -f 2`
+	if [ -z "$NVRAM_BP3MD5SUM" ]; then
+		echo "keys: First boot, storing bp3 md5sum in nvram"
+		setnv SV_BP3MD5SUM $BP30_MD5SUM
+		NVRAM_BP3MD5SUM=$BP30_MD5SUM
+	fi
+fi
+
+BP31_PART=`get_partition_by_volname "bp31"`
+if [ ! "$NVRAM_BP3MD5SUM" = "$BP30_MD5SUM" ] && [ ! -z "$BP31_PART" ]; then
+	echo "keys: Use backup bp3 partition (bp31) instead of (bp30)"
+	/usr/local/bin/install_drm_bin.sh "$BP31_PART" /tmp/keys/bp3.bin
+	BP31_MD5SUM=`md5sum /tmp/keys/bp3.bin | cut  -d ' ' -f 1`
+	if [ ! "$NVRAM_BP3MD5SUM" = "$BP31_MD5SUM" ]; then
+		echo "keys: unable to load valid bp3 provisioning file"
+	fi
+fi
+
+chown -R 0:1000 /tmp/keys
+chmod 550 /tmp/keys
+chmod -R 440 /tmp/keys/*

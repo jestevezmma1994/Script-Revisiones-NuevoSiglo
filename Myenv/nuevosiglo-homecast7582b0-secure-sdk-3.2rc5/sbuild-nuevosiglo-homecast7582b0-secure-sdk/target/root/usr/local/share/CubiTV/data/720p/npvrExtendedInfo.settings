@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="npvrExtendedInfo">
+        <param tag="xOffset"><int>880</int></param>
+        <param tag="yOffset"><int>110</int></param>
+        <param tag="width"><int>380</int></param>
+        <param tag="height"><int>520</int></param>
+        <param tag="fadeDuration"><double>0.1</double></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="multiline"><bool>true</bool></param>
+        <param tag="maxLines"><int>18</int></param>
+    </widget>
+
+</settings>

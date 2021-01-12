@@ -1,0 +1,44 @@
+#!/bin/sh
+exit 0
+
+NETWORK_CM_ETH_BRIDGE=$(svconf_ctl NETWORK_CM_ETH_BRIDGE)
+
+if [ "$NETWORK_CM_ETH_BRIDGE" = "enabled" ]; then
+    insmod bcmscbeth.ko eth_bridge=1
+    sleep 1
+    ip link set dev bcm1 name eth0
+    ifconfig bcm0:0 192.168.17.10
+else
+    insmod bcmscbeth.ko
+    sleep 1
+    ip link set dev bcm0 name eth0
+    ifconfig eth0:0 192.168.17.10
+fi
+
+mkdir -p /tmp/docsis
+mknod /tmp/docsis/mtdocap1 c 98 1
+mknod /tmp/docsis/mtdocap2 c 98 2
+rm /tmp/docsis/d.bin /tmp/docsis/p.bin >/dev/null 2>&1
+ln -s /tmp/docsis/mtdocap1 /tmp/docsis/d.bin
+ln -s /tmp/docsis/mtdocap2 /tmp/docsis/p.bin
+DYN_PART=`cat /proc/mtd | grep "\<dyncfg\>" | sed "s/mtd\([[:digit:]]*\).*/\1/"`
+DYN_SIZE=`cat /proc/mtd | grep "\<dyncfg\>" | cut -d " " -f2`
+PER_PART=`cat /proc/mtd | grep "\<permcfg\>" | sed "s/mtd\([[:digit:]]*\).*/\1/"`
+PER_SIZE=`cat /proc/mtd | grep "\<permcfg\>" | cut -d " " -f2`
+DO0_PART=`cat /proc/mtd | grep "\<docsis0\>" | sed "s/mtd\([[:digit:]]*\).*/\1/"`
+DO0_SIZE=`cat /proc/mtd | grep "\<docsis0\>" | cut -d " " -f2`
+DO1_PART=`cat /proc/mtd | grep "\<docsis1\>" | sed "s/mtd\([[:digit:]]*\).*/\1/"`
+DO1_SIZE=`cat /proc/mtd | grep "\<docsis1\>" | cut -d " " -f2`
+
+insmod mtdocap.ko debug=0 \
+        dyn=1,$DYN_PART,0x000000,0x$DYN_SIZE,0x$DYN_SIZE \
+        perm=2,$PER_PART,0x000000,0x$PER_SIZE,0x$PER_SIZE \
+        docsis0=4,$DO0_PART,0x000000,0x$DO0_SIZE,0x$DO0_SIZE \
+        docsis1=5,$DO1_PART,0x000000,0x$DO1_SIZE,0x$DO1_SIZE
+
+
+if [ "$NETWORK_CM_ETH_BRIDGE" = "enabled" ]; then
+    rnonvolhost bcm0 192.168.17.10 192.168.17.1 /tmp/docsis/p.bin /tmp/docsis/d.bin >/dev/null 2>&1 &
+else
+    rnonvolhost eth0 192.168.17.10 192.168.17.1 /tmp/docsis/p.bin /tmp/docsis/d.bin >/dev/null 2>&1 &
+fi

@@ -1,0 +1,6 @@
+Name: CubiTV-logic
+Version: 1.0.0
+Requires: CubiTV QBCAS-deps TraxisWebClient 
+Description: CubiTV logics core
+Libs: -lCubiTV-logic 
+CFlags: 

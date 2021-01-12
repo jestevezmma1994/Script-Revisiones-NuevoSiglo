@@ -1,0 +1,6 @@
+Name: iso-codes
+Version: 1.0.0
+Requires: 
+Description: language iso codes.
+Libs: -liso-codes 
+CFlags: 

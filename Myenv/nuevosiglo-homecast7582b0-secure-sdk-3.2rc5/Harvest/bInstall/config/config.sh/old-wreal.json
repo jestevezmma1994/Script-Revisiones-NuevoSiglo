@@ -1,0 +1,46 @@
+#!/bin/sh
+
+CONF="/dev/"`cat /proc/mtd | grep "\"config\"" | cut -d: -f1`
+CONFB="/dev/"`cat /proc/mtd | grep "\"configB\"" | cut -d: -f1`
+
+if [ ! -c $CONF -o ! -c $CONF ]; then
+	echo "error: config device not found" >&2
+	exit 1
+fi
+
+if [ "$1" = "save" ]; then 
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+  echo -n "storing configuration"
+  mount -o remount,rw,noexec /
+  echo -n .
+  cd /tmp
+  tar czf config.tar.gz vod/
+  echo -n .
+  flashcp config.tar.gz $CONFB
+  echo -n .
+  flashcp config.tar.gz $CONF
+  echo -n .
+  rm -f config.tar.gz
+  rm -rf /tmp/upfs
+  echo " OK"
+
+elif [ "$1" = "start" ]; then 
+    echo loading configuration from disk
+	if ( ( ! tar xzf $CONF -C /etc ) && \
+	( flashcp $CONFB $CONF && ! tar xzf $CONF -C /etc ) ) || \
+		[ ! -f /etc/vod/conf.json ]; then
+      echo loading default configuration
+      cp /etc/default-conf/* /etc/vod/
+      rm -f /etc/vod/LASTVERSION		# force on-upgrade cfg check
+	fi
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+
+elif [ "$1" = "erase" ]; then 
+	# Erasing configuration from FLASH forces using default setting
+	# on next system start. It is particulary useful after downloading
+	# final software image during production cycle, when production
+	# configuration should be replaced with one, contained in the image.
+    echo erasing configuration from FLASH
+	flash_erase $CONF
+	flash_erase $CONFB
+fi

@@ -1,0 +1,16 @@
+# Terminal color codes
+SvHilightColor         = $(SvTerminalColorGreen)
+SvNoticeColor          = $(SvTerminalColorCyan)
+SvWarningColor         = $(SvTerminalColorYellow)
+SvErrorColor           = $(SvTerminalColorRed)
+SvNormalColor          = $(SvTerminalColorNormal)
+
+#SvTerminalColorBlack   := $(shell tput setaf 0)
+SvTerminalColorRed     := $(shell tput setaf 1)
+SvTerminalColorGreen   := $(shell tput setaf 2)
+SvTerminalColorYellow  := $(shell tput setaf 3)
+#SvTerminalColorBlue    := $(shell tput setaf 4)
+#SvTerminalColorMagenta := $(shell tput setaf 5)
+SvTerminalColorCyan    := $(shell tput setaf 6)
+#SvTerminalColorWhite   := $(shell tput bold)$(shell tput setaf 7)
+SvTerminalColorNormal  := $(shell tput sgr0)

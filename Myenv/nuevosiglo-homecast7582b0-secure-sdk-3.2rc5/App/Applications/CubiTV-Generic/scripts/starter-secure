@@ -1,0 +1,193 @@
+#!/bin/sh
+
+exec_resetter()
+{
+    resetter --favorites --lastSeen --channels --reminders --volume --conf --appData --upgrade --networkConf --casData
+}
+
+BOOT_KEY=`cat /proc/cmdline | sed -e "s#.*onbootkey=\([^ ]*\).*#\1#g"`
+if [ "$BOOT_KEY" == "0x41" ]; then
+    echo "Boot key: UP"
+elif [ "$BOOT_KEY" == "0x42" ]; then
+    echo "Boot key: DOWN"
+    exec_resetter
+elif [ "$BOOT_KEY" == "0x43" ]; then
+    echo "Boot key: LEFT"
+elif [ "$BOOT_KEY" == "0x44" ]; then
+    echo "Boot key: RIGHT"
+    exec_resetter
+elif [ "$BOOT_KEY" == "0x45" ]; then
+    echo "Boot key: MENU"
+elif [ "$BOOT_KEY" == "0x66" ]; then
+    echo "Boot key: POWER"
+else
+    echo "No boot key"
+fi
+
+echo "0" > /sys/fp/animation
+
+COUNTERDIR=/etc/vod/sanityChecker
+CRASHCOUNTER=`cat $COUNTERDIR/crashCounter 2>/dev/null`
+LONGCOUNTER=`cat $COUNTERDIR/longCounter 2>/dev/null`
+STARTCOUNTER=`cat $COUNTERDIR/startCounter 2>/dev/null`
+
+if [ -z $CRASHCOUNTER ]; then
+    CRASHCOUNTER=0
+fi
+if [ -z $STARTCOUNTER ]; then
+    STARTCOUNTER=0
+fi
+if [ -z $LONGCOUNTER ]; then
+    LONGCOUNTER=0
+fi
+
+if [ $STARTCOUNTER -gt 3 ]; then
+    touch /etc/vod/factoryReset
+    touch /tmp/factoryReset
+
+    rm $COUNTERDIR/*
+fi
+
+if [ $(($CRASHCOUNTER + $LONGCOUNTER)) -gt 10 ]; then
+    if [ -f /etc/vod/ota-uri-last ]; then
+        cp -d /etc/vod/ota-uri-last /etc/vod/ota-uri
+    elif [ -f /etc/vod/ota-uri-current ]; then
+        cp -d /etc/vod/ota-uri-current /etc/vod/ota-uri
+    elif [ -f /etc/ota-uri-default ]; then
+        cp -d /etc/ota-uri-default /etc/vod/ota-uri
+    fi
+    touch /etc/vod/http-upgrade-available
+    rm $COUNTERDIR/*
+fi
+
+if [ -f /tmp/factoryReset -o -f /etc/vod/factoryReset ]; then
+    exec_resetter
+    rm -rf /etc/vod/factoryReset
+    rm -rf /tmp/factoryReset
+fi
+
+if [ -f /tmp/formatHardDisk -o -f /etc/vod/formatHardDisk ]; then
+    rm -Rf /etc/vod/schedules/*
+    rm -Rf /etc/vod/schedules
+    rm -rf /etc/vod/groupRec
+    rm -rf /etc/vod/formatHardDisk
+    rm -rf /tmp/formatHardDisk
+fi
+
+store_config.sh
+
+[ -f /etc/profile ] && . /etc/profile
+[ -f /usr/local/bin/firmware_version.sh ] && . /usr/local/bin/firmware_version.sh
+
+[ ! -d /tmp/http ] && mkdir /tmp/http
+rm -rf /tmp/cache
+mkdir /tmp/cache
+mkdir -p /etc/vod/app/
+
+# try to perform auto upgrade
+if [ -e /var/lock/upgrade ]; then
+	echo Waiting for upgrade to finish
+	sleep 5
+	exit 1
+fi
+
+if [ -e /etc/vod/http-upgrade-available ]; then
+	wait_for_network -t 90
+	rm -f /etc/vod/http-upgrade-available
+fi
+
+# try HTTP upgrade
+upgrade_cli.sh --auto
+
+export QBINPUT_DRIVERS=-TTY
+export SV_LOGTAG="CubiTV"
+export SV_NO_TREE_EFFECTS=1
+export HDDSUPPORT=
+export PREFILL_TIMEOUT=200
+export QBDecoderNoClosedCaption=1
+
+export HTTPConnectionsRestarts=1
+
+
+
+# set timezone to Europe/Warsaw
+#export TZ="CET-1CEST-2,M3.5.0,M10.5.0/3"
+TIMEZONE="$(qbconf_ctl TIMEZONE)"
+if [ ! -z $TIMEZONE ]; then
+	export TZ=$TIMEZONE
+fi
+
+if [ -z "$LANG" ] || [ "$LANG" == "POSIX" ]; then
+	# set default language
+	export LANG=en_US.UTF-8
+	export LC_ALL=en_US.UTF-8
+fi
+
+if [ -f /etc/vod/ota-uri ]; then
+    URI="$(cat /etc/vod/ota-uri)"
+    URI_TYPE=$(echo $URI | cut -d: -f1)
+    store_config.sh
+    if [ $URI_TYPE == "qbcarousel" ]; then
+        #backup the URI, it might be needed later
+        cp -d /etc/vod/ota-uri /etc/vod/ota-uri-last
+        # remove this file to avoid endless loop
+        rm -f /etc/vod/ota-uri
+        echo "Upgrading..." >/dev/fp
+        # run standalone OTA application
+        QBUpgrade -u "$URI" -c /etc/upgradeDVBInfo
+        # if upgrade failed, delete all ota files and force ota upgrade
+        if [ $? -ne 0 ]; then
+            echo "QBUpgrade failed"
+            resetter --upgrade --force-ota
+        fi
+        # reboot STB if OTA application failed
+        echo "Rebooting...">/dev/fp
+        /usr/local/bin/soft-reboot.sh
+    elif [ $URI_TYPE == "file" ]; then
+        rm -f /etc/vod/ota-uri
+        mv /shared/upgrade/ /tmp/
+        /usr/local/bin/upgrade --upgrade-server file:///tmp/upgrade
+        status=$?
+        echo "Rebooting...">/dev/fp
+        /usr/local/bin/soft-reboot.sh
+    fi
+    rm -f /etc/vod/ota-uri
+fi
+
+
+APPUSERDIRS="/tmp/cache /tmp/http /etc/vod/app /etc/vod/conf.xml"
+
+chown 1000:1000 $APPUSERDIRS
+chmod ug+rwx $APPUSERDIRS
+chmod o-rwx $APPUSERDIRS
+
+if [ -f /usr/local/bin/factory_tool.sh ]; then
+    # run factory tool if it exists
+    /usr/local/bin/factory_tool.sh
+fi
+
+echo "Starting...">/dev/fp
+/usr/local/bin/cubitv
+killall -9 cubitv
+
+echo -n "V" > /dev/watchdog
+
+rm -rf /tmp/syslog_prefix
+
+if [ -f /tmp/factoryReset -o -f /etc/vod/factoryReset ]; then
+    exec_resetter
+    rm -rf /etc/vod/factoryReset
+    rm -rf /tmp/factoryReset
+fi
+
+if [ -f /tmp/formatHardDisk -o -f /etc/vod/formatHardDisk ]; then
+    rm -Rf /etc/vod/schedules/*
+    rm -Rf /etc/vod/schedules
+    rm -Rf /etc/vod/groupRec
+    rm -rf /etc/vod/formatHardDisk
+    rm -rf /tmp/formatHardDisk
+fi
+
+
+echo "Rebooting...">/dev/fp
+soft-reboot.sh

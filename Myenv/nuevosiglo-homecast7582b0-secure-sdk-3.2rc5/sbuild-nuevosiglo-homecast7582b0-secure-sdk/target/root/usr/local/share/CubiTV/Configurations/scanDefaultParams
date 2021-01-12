@@ -1,0 +1,35 @@
+{
+    "automatic": {
+        "freqJump": 6,
+        "symbolRate": 5360,
+        "modulation": "QAM256",
+        "freqMin": 405000,
+        "__jsonclass__": [
+            "QBChannelScanningConfUserParams",
+            []
+        ],
+        "freqMax": 405000
+    },  
+    "manual": {
+        "freqJump": 6,
+        "symbolRate": 5360,
+        "modulation": "QAM256",
+        "freqMin": 405000,
+        "__jsonclass__": [
+            "QBChannelScanningConfUserParams",
+            []
+        ],
+        "freqMax": 405000
+    },
+    "factoryScan": {
+        "freqJump": 6,
+        "symbolRate": 5360,
+        "modulation": "QAM256",
+        "freqMin": 405000,
+        "__jsonclass__": [
+            "QBChannelScanningConfUserParams",
+            []
+        ],
+        "freqMax": 405000
+    }
+}

@@ -1,0 +1,56 @@
+<perldata>
+ <hashref memory_address="0x17ff7e0">
+  <item key="build" defined="false"></item>
+  <item key="buildpkg">Platforms_BCM_logo_logo_nuevosiglo_comp-86b67119cb6afeb16bd2da0fa070f587.tgz</item>
+  <item key="description">
+   <hashref memory_address="0x18111b8">
+    <item key="comment">Splash logos for BCM platform</item>
+    <item key="id">132</item>
+    <item key="owner">nrondan</item>
+    <item key="path">Platforms/BCM/logo</item>
+    <item key="vcs">hg</item>
+   </hashref>
+  </item>
+  <item key="dir" defined="false"></item>
+  <item key="ds_ext">
+   <hashref memory_address="0x1810f78">
+    <item key="dir" defined="false"></item>
+    <item key="ds_ext">
+     <hashref memory_address="0x1810f78">
+     </hashref>
+    </item>
+    <item key="file" defined="false"></item>
+    <item key="host">bold007@192.168.1.251</item>
+    <item key="locdir" defined="false"></item>
+    <item key="locfile" defined="false"></item>
+    <item key="locrepo" defined="false"></item>
+    <item key="params" defined="false"></item>
+    <item key="remdir" defined="false"></item>
+    <item key="remfile" defined="false"></item>
+    <item key="remrepo" defined="false"></item>
+    <item key="repo" defined="false"></item>
+    <item key="repodir" defined="false"></item>
+    <item key="repofile" defined="false"></item>
+    <item key="root">/silo/branches/254</item>
+    <item key="tag" defined="false"></item>
+    <item key="vcs" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="file">Platforms/BCM/logo/logo-nuevosiglo.comp</item>
+  <item key="host">bold007@192.168.1.251</item>
+  <item key="locdir">Platforms/BCM/logo</item>
+  <item key="locfile">Platforms/BCM/logo/logo-nuevosiglo.comp</item>
+  <item key="locpref"></item>
+  <item key="locrepo">Platforms/BCM/logo</item>
+  <item key="params" defined="false"></item>
+  <item key="remdir">ssh://bold007@192.168.1.251//silo/branches/254/hg/Platforms/BCM/logo/./</item>
+  <item key="remfile">ssh://bold007@192.168.1.251//silo/branches/254/hg/Platforms/BCM/logo/logo-nuevosiglo.comp</item>
+  <item key="remrepo">ssh://bold007@192.168.1.251//silo/branches/254/hg/Platforms/BCM/logo</item>
+  <item key="repo">Platforms/BCM/logo</item>
+  <item key="repodir">./</item>
+  <item key="repofile">logo-nuevosiglo.comp</item>
+  <item key="root">/silo/branches/254</item>
+  <item key="tag" defined="false"></item>
+  <item key="vcs">hg</item>
+ </hashref>
+</perldata>

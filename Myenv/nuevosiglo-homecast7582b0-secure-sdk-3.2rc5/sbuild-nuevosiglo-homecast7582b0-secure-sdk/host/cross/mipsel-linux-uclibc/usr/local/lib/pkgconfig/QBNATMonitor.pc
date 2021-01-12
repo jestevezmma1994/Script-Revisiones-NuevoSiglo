@@ -1,0 +1,6 @@
+Name: QBNATMonitor
+Version: 1.0.0
+Requires: QBAppKit QBNetManager QBStun SvCore SvFoundation fibers 
+Description: Tool for NAT (Network Address Translation) monitoring
+Libs: -lQBNATMonitor 
+CFlags: 

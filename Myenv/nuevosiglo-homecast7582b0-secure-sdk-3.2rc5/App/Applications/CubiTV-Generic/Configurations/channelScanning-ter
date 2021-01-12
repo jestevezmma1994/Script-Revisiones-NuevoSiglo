@@ -1,0 +1,36 @@
+[
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "automatic",
+        "name" : "DVB-T Automatic full scan",
+        "tunerType" : "ter",
+        "chaseChannels" : false,
+        "onlyActual" : true,
+        "useStandardRasters" : true,
+        "extra" : "auto",
+        "dropAll" : true,
+        "needLcn" : false,
+        "needName" : true,
+        "automaticScanParams" : [ 
+            "range", "polarization", "modulation"
+        ]
+    },
+    {
+        "__jsonclass__": [
+                "QBChannelScanningConf",
+                []
+        ],
+        "i18n_gettext": [ "name" ],
+        "id" : "manual",
+        "name" : "DVB-T Manual",
+        "tunerType" : "ter",
+        "onlyActual" : true,
+        "useStandardRasters" : true,
+        "needLcn" : false,
+        "needName" : true
+    }
+]

@@ -1,0 +1,4 @@
+Name: nexus
+Description: nexus for linking only
+Version: 1.0.0
+Libs: -lnexus

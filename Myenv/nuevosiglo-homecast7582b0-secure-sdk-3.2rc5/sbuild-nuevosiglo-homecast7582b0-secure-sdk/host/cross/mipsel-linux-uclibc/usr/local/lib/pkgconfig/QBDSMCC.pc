@@ -1,0 +1,6 @@
+Name: QBDSMCC
+Version: 1.0.0
+Requires: CAGE QBAppKit QBContentManager QBDSMCCClient QBResourceManager QBTSParser QBTextUtils QBTunerFilter SvCore SvFoundation SvGfxHAL SvJSON fibers 
+Description: Cubiware DSM-CC library
+Libs: -lQBDSMCC 
+CFlags: 

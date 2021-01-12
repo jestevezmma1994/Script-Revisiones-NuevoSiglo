@@ -1,0 +1,6 @@
+Name: TraxisWebClient
+Version: 1.0.0
+Requires: NPvrManager QBAppKit QBConf QBContentManager QBDataModel3 QBDataProvider QBSearch SvCore SvEPGDataLayer SvFoundation SvHTTPClient SvJSON fibers 
+Description: Traxis.Web Client Library
+Libs: -lTraxisWebClient 
+CFlags: 

@@ -1,0 +1,20 @@
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib
+export USER=root
+export HOME=/root
+export SHELL=/bin/sh
+export LANG=POSIX
+
+for i in /etc/profile.d/*.sh ; do
+    if [ -r "$i" ]; then
+      . $i
+    fi
+done
+unset i
+
+if [ ! -z "$TIMEZONE" ]; then
+    if [ ! -d /usr/share/zoneinfo ] && [ -d /etc/zoneinfo ]; then
+        export TZDIR=/etc/zoneinfo
+    fi
+    export TZ="$TIMEZONE"
+fi

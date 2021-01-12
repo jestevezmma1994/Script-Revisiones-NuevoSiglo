@@ -1,0 +1,13 @@
+data/scripts/extract-json-partner-polices-texts.i
+data/headers.comp.i
+data/Makefile.extract.i
+data/scripts/extract-xml-i18n-texts.i
+data/scripts/extract-hints-i18n-texts.i
+data/c.comp.i
+data/extract/Makefile.mk.i
+data/Headers/TranslationMerger.h.i
+data/extract.comp.i
+data/Makefile.headers.i
+data/merge-translations.sh.i
+data/Makefile.i
+data/scripts/extract-json-i18n-texts.i

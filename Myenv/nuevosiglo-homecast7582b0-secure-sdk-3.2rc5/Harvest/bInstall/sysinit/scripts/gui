@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/etc/gui_start &
+

@@ -1,0 +1,17 @@
+#offset    #size      #src                 #dst            #name            #attributes/#comment
+0x00000000 0x02500000 /                             ROOTFS.ubi      rootfs0          ro,squbifs,upgrade,fwimage
+0x02500000 0x02500000 -                             _ROOTFS.ubi     rootfs1
+0x04A00000 0x00500000 vmlinuz                       KERNEL.gz       vmlinuz0         binary,upgrade,fwimage,3des_encrypt
+0x04F00000 0x00500000 -                             _KERNEL.gz      vmlinuz1
+0x05400000 0x00300000 sv-logo.bin                   LOGO.bin        logo             binary,upgrade,fwimage
+0x05700000 0x02800000 -                             CONFIG          config
+#offset    #size      #src                          #dst            #name            #attributes/#comment
+0x00000000 0x00080000 -                             -               cfe
+0x00080000 0x00010000 -                             MACADDR         macadr
+0x00090000 0x00010000 -                             -               hdcp
+0x000A0000 0x00010000 -                             -               cert
+0x000B0000 0x00010000 -                             -               cert_sign
+0x000C0000 0x00010000 bcm97xxx-nvram-ubifs.bin      NVRAM.bin       nvram            bootcfg,fwimage
+0x000D0000 0x00010000 bcm97xxx-nvram-ubifs.bin      _NVRAM.bin      nvramB           bootcfg,fwimage
+0x000E0000 0x00020000 -                             -               conax_store
+0x00100000 0x00100000 -                             RESERVED        reserved

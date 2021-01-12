@@ -1,0 +1,59 @@
+# QBIPStreamClient: storage_input SvPlayerControllers
+# storage_input: SvHTTPClient
+# SvHTTPClient: QBNetManager
+# QBNetManager: QBShellCmdsWhitelist QBNetworkMonitor
+^/usr/local/sbin/iwlist ra0 scan | /usr/local/sbin/iwlist_to_json > /tmp/wifiNetworkList$
+
+# QBNetworkMonitor: QBNetworkManager
+# QBNetworkManager: QBShellCmdsWhitelist
+^run_moca \(start\|stop\) &$
+^run_dhclient \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) \(start\|stop\)$
+^run_dhclient \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) watch &$
+^run_wpa_supplicant \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) \(start\|stop\) &$
+^check_wpa_supplicant \(eth[0-9]\|wlan[0-9]\|ra[0-9]\) start &$
+^run_ppp \(start\|stop\)$
+^run_racoon \(start\|stop\) &$
+^run_strongswan \(start\|stop\) &$
+
+# SvPlayerControllers: QBDecoder
+# QBDecoder: QBDecoder-common QBDemuxHAL-nexus QBPlatformHAL
+# QBDecoder-common: QBCAS QBPlatformHAL
+# QBCAS: QBCrypto QBDescramblerHAL
+# QBCrypto: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBDescramblerHAL: QBDemuxHAL-nexus
+# QBDemuxHAL-nexus: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBDemuxHAL-nexus: QBPlatformHAL
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$
+
+# QBPlatformHAL: QBShellCmdsWhitelist
+^/etc/platform.d/reinitialize$
+^echo 1 > /sys/devices/platform/brcmstb/halt_mode$
+^echo mem > /sys/power/state$
+^halt$
+^poweroff$

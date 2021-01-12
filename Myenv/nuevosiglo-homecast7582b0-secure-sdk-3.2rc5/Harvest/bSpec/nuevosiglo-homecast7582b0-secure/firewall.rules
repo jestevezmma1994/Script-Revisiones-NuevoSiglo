@@ -1,0 +1,37 @@
+# generic-secure firewall rules
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [0:0]
+:CHECKOUTBOUND - [0:0]
+:CHECKPORTS - [0:0]
+-A INPUT -i lo -j ACCEPT
+-A INPUT -s 127.0.0.0/8 ! -i lo -j DROP
+-A INPUT -f -j DROP
+-A INPUT -m addrtype --src-type UNSPEC,BLACKHOLE,PROHIBIT -j DROP
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A OUTPUT -o lo -j ACCEPT
+-A OUTPUT -o eth0 -j CHECKOUTBOUND
+-A OUTPUT -o ra0 -j CHECKOUTBOUND
+-A CHECKOUTBOUND -m state --state NEW -j CHECKPORTS
+-A CHECKOUTBOUND -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A CHECKOUTBOUND -j DROP
+-A CHECKPORTS -p tcp --dport dns -j ACCEPT
+-A CHECKPORTS -p udp --dport dns -j ACCEPT
+-A CHECKPORTS -p udp --dport dhcp1 -j ACCEPT
+-A CHECKPORTS -p udp --dport dhcp2 -j ACCEPT
+-A CHECKPORTS -p tcp --dport www -j ACCEPT
+-A CHECKPORTS -p tcp --dport 8080 -j ACCEPT
+-A CHECKPORTS -p tcp --dport https -j ACCEPT
+-A CHECKPORTS -p tcp --dport 7000:10000 -j ACCEPT
+-A CHECKPORTS -p udp --dport ntp -j ACCEPT
+-A CHECKPORTS -p tcp --dport 5443 -j ACCEPT
+-A CHECKPORTS -p tcp --dport 3000 -j ACCEPT
+-A CHECKPORTS -p tcp --dport 4510 -j ACCEPT
+-A CHECKPORTS -p tcp --dport 10380 -j ACCEPT #//branch 26, ImagesServerPort,
+-A CHECKPORTS -p udp --dport 514 -j ACCEPT #//branch 25 SyslogServer
+
+
+-A CHECKPORTS -p icmp --icmp-type echo-request -j ACCEPT
+-A CHECKPORTS -j DROP
+COMMIT

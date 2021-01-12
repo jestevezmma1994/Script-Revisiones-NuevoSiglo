@@ -1,0 +1,6 @@
+Name: storage_input
+Version: 1.0.0
+Requires: QBRecordFS SvCore SvFoundation SvHTTPClient SvPlayerKit dataformat error_log fibers 
+Description: input plugins for reading files
+Libs: -lstorage_input 
+CFlags: 

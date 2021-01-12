@@ -1,0 +1,26 @@
+digraph ConfigrationMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Configuration [root=true]
+
+    QBConfigurationMenu
+    QBParentalControlMenu
+    QBEnvMenuHandler
+    QBTimeZoneMenu
+    Skins
+    QBSkinsCarouselItemChoice
+    QBSkinsCarouselItemController
+    networkSettings
+    QBLangMenu
+
+    Skins -> QBSkinsCarouselItemChoice
+    Skins -> QBSkinsCarouselItemController
+    Configuration -> Skins
+    Configuration -> QBConfigurationMenu
+    Configuration -> QBParentalControlMenu
+    Configuration -> QBEnvMenuHandler
+    Configuration -> QBTimeZoneMenu
+    Configuration -> networkSettings
+    Configuration -> QBLangMenu
+
+}

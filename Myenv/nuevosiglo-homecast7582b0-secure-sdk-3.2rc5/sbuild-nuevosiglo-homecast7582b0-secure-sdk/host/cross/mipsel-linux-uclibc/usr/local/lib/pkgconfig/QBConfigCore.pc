@@ -1,0 +1,6 @@
+Name: QBConfigCore
+Version: 1.0.0
+Requires: SvCore lightjson 
+Description: Cubiware core configuration storing library
+Libs: -lQBConfigCore 
+CFlags: 

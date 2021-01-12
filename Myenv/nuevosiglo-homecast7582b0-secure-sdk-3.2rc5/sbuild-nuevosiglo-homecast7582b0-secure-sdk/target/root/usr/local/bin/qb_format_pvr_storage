@@ -1,0 +1,418 @@
+#!/bin/sh
+
+log()
+{
+  echo "format_disk[$HDX] $@" 1>&2
+  #logger "format_disk[$HDX] > $@"
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR:" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+# ------------------------
+# Check if device doesn't have an unexpected type
+# $1 - Device name
+check_dev_valid()
+{
+    dev_type=`/sbin/blkid -s TYPE -o value "/dev/"$1`
+    if [ ! -z "$dev_type" ]; then
+        return 1
+    else
+        return 0
+    fi
+}
+
+# ------------------------
+# Check if partition table meets requirements
+# $1 - Device node
+# $2 - Partition number
+# $3 - Expected partition type
+# $4 - Expected partition size
+check_part_table()
+{
+    part_info=$(parted -s $1 unit kiB print | grep "^ $2" | sed "s/[ ]\+/ /g")
+    part_size=$(echo $part_info | cut -d" " -f 4)
+    part_type=$(echo $part_info | cut -d" " -f 5)
+    if [ "$part_type" == "$3" -a "$part_size" == "$4" ]; then
+        return 0
+    else
+        return 1
+    fi
+
+}
+
+# ------------------------
+# Creates new partition
+# $1 - DEV_NODE
+# $2 - partition type {primary|extended|logical}
+# $3 - begining of partition [kB]
+# $4 - end of partition      [kB]
+create_partition()
+{
+    log "creating new $2 partition"
+    call parted -s $1 unit MiB mkpart $2 $3\kiB $4\kiB
+    [ $RES -ne 0 ] && exit 7
+}
+
+# ------------------------
+# Formats ext3 partition
+# $1 - Node
+# $2 - MAJOR Number
+# $3 - MINOR Number
+# $4 - Directory
+# $5 - Label
+# $6 - Encrypted
+format_ext3_partition()
+{
+    log "formatting ext3 partition"
+    call_v rm -rf $1 $4
+    call mkdir -p $4
+    [ $RES -ne 0 ] && exit 7
+
+    call mknod $1 b $2 $3
+    [ $RES -ne 0 ] && exit 7
+
+    DEST_NODE=$1
+    if [ "$6" = "encrypt" ]; then
+        META_SIZE=`cat /sys/dev/block/$2":"$3/size`
+        log dmsetup table": 0 $META_SIZE crypt aes-ecb `cat /etc/keys/meta` 0 $1 0"
+        log dmsetup "meta_"$2"_"$3
+        echo "0 $META_SIZE crypt aes-ecb `cat /etc/keys/meta` 0 $1 0" | dmsetup create "meta_"$2"_"$3
+        [ $? -ne 0 ] && exit 7
+        call_v rm -rf $1
+        DEST_NODE=/dev/mapper/"meta_"$2"_"$3
+    fi
+
+    call mke2fs $DEST_NODE -L $5
+    [ $RES -ne 0 ] && exit 7
+    call tune2fs -j $DEST_NODE
+    [ $RES -ne 0 ] && exit 7
+}
+
+# ------------------------
+# Formats fat32 partition
+# $1 - Node
+# $2 - MAJOR Number
+# $3 - MINOR Number
+# $4 - Directory
+# $5 - Label
+# $6 - readme file path
+format_fat32_partition()
+{
+    log "formatting fat32 partition"
+    call_v rm -rf $1 $4
+    call mkdir -p $4
+    [ $RES -ne 0 ] && exit 7
+
+    call mknod $1 b $2 $3
+    [ $RES -ne 0 ] && exit 7
+
+    call mkfs.fat $1 -n $5 -F 32
+    [ $RES -ne 0 ] && exit 7
+
+    call_v mount -o noexec $1 $4
+    call_v mv $6 $4/info.txt
+    call_v umount $FAT_DIR
+}
+
+
+if [ $# -ne 1 ]; then
+  log usage: "${0##*/} <device_id(e.g.sda,sdb,sdc)>"
+  exit 1;
+fi
+
+HDX=$1
+
+#echo using_dma:1  > /proc/ide/${HDX}/settings
+
+
+#-------------------------
+#-------------------------
+# temporary dir
+DIR=/tmp/pvr_format_tmp_dir_$HDX
+FAT_NODE=$DIR/fat_node
+FAT_DIR=$DIR/fat_dir
+META_NODE=$DIR/meta_node
+META_DIR=$DIR/meta_dir
+call_v umount $META_DIR
+call_v rm -rf $DIR
+call mkdir -p $DIR
+[ $RES -ne 0 ] && exit 7
+log using temporary dir $DIR
+
+
+#-------------------------
+#-------------------------
+# read storage device stats
+DEV_SIZE=
+MAJOR=
+MINOR=
+while read major minor blocks dev; do
+  [ "$dev" != "$HDX" ] && continue;
+  MAJOR=$major
+  MINOR=$minor
+  DEV_SIZE=$blocks
+  break;
+done < /proc/partitions
+
+if [ -z "$DEV_SIZE" ]; then
+  log Device $HDX not found in /proc/partitions
+  exit 1;
+fi
+
+log Device $HDX = $MAJOR:$MINOR, size=$DEV_SIZE
+
+
+#-------------------------
+#-------------------------
+# partition sizes configuration
+if [ -f /tmp/qb_format_pvr_configuration ]; then
+    META_SIZE_MB=`grep '^meta=[0-9]\+$' /tmp/qb_format_pvr_configuration | cut -d= -f 2`
+    STORAGE_SIZE_MB=`grep '^files=[0-9]\+$' /tmp/qb_format_pvr_configuration | cut -d= -f 2`
+    FAT_README_FILE=`grep '^readme_file=[a-z_/]\+$' /tmp/qb_format_pvr_configuration | cut -d= -f 2`
+fi
+
+if [ -z "$META_SIZE_MB" ]; then
+  META_SIZE_MB=1024
+fi
+
+FAT_SIZE_MB=0
+
+if [ -f "$FAT_README_FILE" ]; then
+  FAT_SIZE_MB=1
+fi
+
+if [ -z $STORAGE_SIZE_MB ]; then
+  STORAGE_SIZE_MB=$((DEV_SIZE / 1024 - META_SIZE_MB - FAT_SIZE_MB - 2))
+fi
+
+
+#-------------------------
+#-------------------------
+# make temporary dev
+DEV_NODE=$DIR/main_node
+rm -f $DEV_NODE
+call mknod $DEV_NODE b $MAJOR $MINOR
+[ $RES -ne 0 ] && exit 7
+
+
+#-------------------------
+#-------------------------
+# remove dmcrypt device
+call dmsetup remove "meta_"$MAJOR"_"$((MINOR + 1))
+
+#-------------------------
+#-------------------------
+# partition table
+log creating new partition table
+
+rebuild_part_table=0
+call_v check_dev_valid $HDX
+[ $RES -eq 1 ] && rebuild_part_table=1
+call_v check_part_table $DEV_NODE 1 primary $((META_SIZE_MB*1024))\kiB
+[ $RES -eq 1 ] && rebuild_part_table=1
+call_v check_part_table $DEV_NODE 2 primary $((STORAGE_SIZE_MB*1024))\kiB
+[ $RES -eq 1 ] && rebuild_part_table=1
+[ ! -f /tmp/qb_format_partition_conf ] || rebuild_part_table=1
+
+if [ -f "$FAT_README_FILE" ]; then
+	call_v check_part_table $DEV_NODE 3 primary $((FAT_SIZE_MB*1024))\kiB
+	[ $RES -eq 1 ] && rebuild_part_table=1
+fi
+
+if [ -f /tmp/qb_format_pvr_configuration ]; then
+
+    part=3
+    regex="^label=[[:alnum:]_-]\+:type=[[:alnum:]]\+:size=[[:digit:]]\+$"
+    for line in $(grep $regex < /tmp/qb_format_pvr_configuration) ; do
+        size=$(echo $line | cut -d: -f 3 | cut -d= -f 2)
+        call_v check_part_table $DEV_NODE $part primary $((size*1024))\kiB
+        [ $RES -eq 1 ] && rebuild_part_table=1
+        part=$((part + 1))
+    done
+fi
+
+if [ $rebuild_part_table -eq 1 ]; then
+    # erase old partition table
+    call dd if=/dev/zero of=$DEV_NODE bs=1M count=1
+    [ $RES -ne 0 ] && exit 7
+
+    # make new partition table
+    call parted -s $DEV_NODE mklabel msdos
+    [ $RES -ne 0 ] && exit 7
+    call parted -s $DEV_NODE print 1>&2
+    [ $RES -ne 0 ] && exit 7
+
+    # flush direct access
+    hdparm -f $DEV_NODE >/dev/null 2>&1
+
+    #-------------------------
+    #-------------------------
+    # make ext3 partition
+    log "creating ext3 partition for metadata"
+    from=1024
+    to=$((from + META_SIZE_MB*1024))
+    create_partition $DEV_NODE primary $from $to
+
+    #-------------------------
+    #-------------------------
+    # make xtream partition
+    log "creating xtream partition for data"
+    from=$to
+    to=$((from + STORAGE_SIZE_MB * 1024))
+    create_partition $DEV_NODE primary $from $to
+
+    #-------------------------
+    #-------------------------
+    # make fat partition
+    if [ -f "$FAT_README_FILE" ]; then
+        log "creating fat partition for windows readable README"
+        from=$to
+        to=$((from + FAT_SIZE_MB*1024))
+        create_partition $DEV_NODE "primary fat32" $from $to
+    fi
+
+    if [ -f /tmp/qb_format_pvr_configuration ]; then
+
+        # Create extended partition on rest of the drive.
+        # Any additional partitions will be created on that partition as logical partitions.
+        # XXX: for now, don't create extended partition, as after formating it's not recognized by kernel
+        # stb will never finish checking stb compatibility
+        # create_partition $DEV_NODE extended $to $DEV_SIZE
+        # Add 1 KiB space. Logical partition can't start at the same location as extended partition.
+        # to=$((to + 1))
+        # numbering of logical partitions starts from 5
+
+        regex="^label=[[:alnum:]_-]\+:type=[[:alnum:]]\+:size=[[:digit:]]\+$"
+        for line in $(grep $regex < /tmp/qb_format_pvr_configuration) ; do
+            size=$(echo $line | cut -d: -f 3 | cut -d= -f 2)
+            from=$((to + 1))
+            to=$((from + size*1024 - 1))
+            # create_partition $DEV_NODE logical $from $to
+            create_partition $DEV_NODE primary $from $to
+        done
+    fi
+
+fi
+
+if [ ! -f /tmp/qb_format_partition_conf ] || ([ -f /tmp/qb_format_partition_conf ] && grep -q 'ts\|pvr' /tmp/qb_format_partition_conf) ; then
+    #-------------------------
+    # Format ext3
+    if [ "yes" = "yes" ]; then
+        format_ext3_partition $META_NODE $MAJOR $((MINOR+1)) $META_DIR "PVR_Meta" "encrypt"
+        META_NODE=/dev/mapper/"meta_"$MAJOR"_"$((MINOR + 1))
+    else
+        format_ext3_partition $META_NODE $MAJOR $((MINOR+1)) $META_DIR "PVR_Meta"
+    fi
+
+
+    DATA_NODE=$DIR/data_node
+    call mknod $DATA_NODE b $MAJOR $((MINOR+2))
+    [ $RES -ne 0 ] && exit 7
+
+
+    #-------------------------
+    #-------------------------
+    # Format for pvr
+
+    call_v mount -o noexec $META_NODE $META_DIR
+    [ $RES -ne 0 ] && exit 7
+    call_v chown 0:1000 $META_DIR
+    [ $RES -ne 0 ] && exit 7
+    call_v chmod g+rwx $META_DIR
+    [ $RES -ne 0 ] && exit 7
+
+    call_v qb_format_pvr_prepare_partitions  $META_DIR  $MAJOR  $((MINOR+2))
+    [ $RES -ne 0 ] && exit 7
+
+    if [ -f "$FAT_README_FILE" ]; then
+        format_fat32_partition $FAT_NODE $MAJOR $((MINOR+3)) $FAT_DIR "PVR" $FAT_README_FILE
+    fi
+fi
+
+
+if [ -f /tmp/qb_format_pvr_configuration ]; then
+
+    part=3
+    if [ -f "$FAT_README_FILE" ]; then
+        part=4
+    fi
+    regex="^label=[[:alnum:]_-]\+:type=[[:alnum:]]\+:size=[[:digit:]]\+$"
+    for line in $(grep $regex < /tmp/qb_format_pvr_configuration) ; do
+        label=$(echo $line | cut -d: -f 1 | cut -d= -f 2)
+        fs_type=$(echo $line | cut -d: -f 2 | cut -d= -f 2)
+        part_node=$DIR/$label"_node"
+        part_dir=$DIR/$label"_dir"
+        if [ -f /tmp/qb_format_partition_conf ] && ! grep -q $label /tmp/qb_format_partition_conf ; then
+            continue;
+        fi;
+        log "Format partition $label"
+        case $fs_type in
+            "ext3")
+                format_ext3_partition $part_node $MAJOR $((MINOR+part)) $part_dir $label
+                ;;
+            *)
+                log "Unknown file system \"$fs_type\"."
+                exit 7
+        esac
+        part=$((part + 1))
+    done
+fi
+
+
+#-------------------------
+#-------------------------
+# call custom handlers
+if [ -d /etc/partition.d ]; then
+    for line in $(cat /usr/local/share/CubiTV/Configurations/possiblePartitions | tr "\",\[\]" " "); do
+        SCRIPT='/etc/partition.d/qb_format_'$line'_prepare_partition'
+        if [ -f /tmp/qb_format_partition_conf ] && ! grep -q $line /tmp/qb_format_partition_conf ; then
+            continue;
+        fi;
+        if [ -x $SCRIPT ]; then
+            log "Prepare partition $line with script $SCRIPT"
+            call_v $SCRIPT $HDX
+            [ $RES -ne 0 ] && log "$SCRIPT call failed"
+        fi
+    done
+fi
+
+#-------------------------
+#-------------------------
+# flush changes
+hdparm -f $DEV_NODE >/dev/null 2>&1
+
+call_v umount $META_DIR
+call dmsetup remove "meta_"$MAJOR"_"$((MINOR+1))
+call_v rm -rf $DIR
+
+log success
+exit 0

@@ -1,0 +1,6 @@
+Name: QBAppKit
+Version: 1.0.0
+Requires: SvCore SvFoundation SvJSON SvQuirks fibers 
+Description: Set of utilities useful for building complex applications
+Libs: -lQBAppKit 
+CFlags: 

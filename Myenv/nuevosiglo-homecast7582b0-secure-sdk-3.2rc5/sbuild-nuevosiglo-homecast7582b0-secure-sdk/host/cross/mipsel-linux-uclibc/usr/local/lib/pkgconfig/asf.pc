@@ -1,0 +1,6 @@
+Name: asf
+Version: 1.0.0
+Requires: SvCore dataformat 
+Description: asf parser
+Libs: -lasf 
+CFlags: 

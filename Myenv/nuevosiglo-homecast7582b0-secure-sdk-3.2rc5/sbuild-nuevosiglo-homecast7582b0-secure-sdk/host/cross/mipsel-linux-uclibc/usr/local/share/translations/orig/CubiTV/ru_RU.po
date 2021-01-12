@@ -1,0 +1,2198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Russian\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-24 13:28+0200\n"
+"PO-Revision-Date: 2012-05-30 11:14+0100\n"
+"Last-Translator: Marek Bejgier <marekb@cubiware.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid " / minute"
+msgstr " / минута"
+
+msgid " H"
+msgstr " H"
+
+msgid " V"
+msgstr " V"
+
+msgid "%A %x"
+msgstr "%A %x"
+
+#, c-format
+msgid "%A %x %X"
+msgstr "%A %x %X"
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "остался %d HD час"
+msgstr[1] "осталось %d HD часа"
+msgstr[2] "осталось %d HD часов"
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "остался %d HD час"
+msgstr[1] "осталось %d HD часа"
+msgstr[2] "осталось %d HD часов"
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "остался %d SD час"
+msgstr[1] "осталось %d SD часа"
+msgstr[2] "осталось %d SD часов"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "Осталась %d  попытка. "
+msgstr[1] "Осталось %d  попытки. "
+msgstr[2] "Осталось %d  попыток. "
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d из %d"
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i новых или обновленных) Радио каналов"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i новых или обновленных) ТВ каналов"
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i радио канал"
+msgstr[1] "%i радио канала"
+msgstr[2] "%i радио каналов"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i запись"
+msgstr[1] "%i записи"
+msgstr[2] "%i записей"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i напоминание"
+msgstr[1] "%i напоминания"
+msgstr[2] "%i напоминаний"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i тв канал"
+msgstr[1] "%i тв канала"
+msgstr[2] "%i тв каналов"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "найден %s: %i канал"
+msgstr[1] "найдено %s: %i канала"
+msgstr[2] "найдено %s: %i каналов"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d день %dh)"
+msgstr[1] "(%d дня %dh)"
+msgstr[2] "(%d дней %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d день)"
+msgstr[1] "(%d дня)"
+msgstr[2] "(%d дней)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d час)"
+msgstr[1] "(%d часа)"
+msgstr[2] "(%d часов)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr "(%dh %dmin)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%dmin)"
+
+msgid "(all)"
+msgstr "(все)"
+
+msgid "(hard of hearing)"
+msgstr "(слабослышащий)"
+
+msgid "(no label)"
+msgstr "(метка отсутствует)"
+
+msgid "(none)"
+msgstr "(никакой)"
+
+msgid "(unsupported)"
+msgstr "(неподдерживаемый)"
+
+msgid "(visually impaired)"
+msgstr "(слабовидящий)"
+
+msgid "0 recordings"
+msgstr "0 записей"
+
+msgid "0.00-CURRENT"
+msgstr "0.00-ТЕКУЩИЙ"
+
+msgid "000 unknown"
+msgstr "000 неизвестный"
+
+msgid "1 minute"
+msgstr "1 минута"
+
+msgid "10 minutes"
+msgstr "10 минут"
+
+msgid "10 seconds"
+msgstr "10 секунд"
+
+msgid "100GB"
+msgstr "100GB"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10GB"
+
+msgid "15 minutes"
+msgstr "15 минут"
+
+msgid "15 seconds"
+msgstr "15 секунд"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "2 minutes"
+msgstr "2 минуты"
+
+msgid "2 seconds"
+msgstr "2 секунды"
+
+msgid "20 minutes"
+msgstr "20 минут"
+
+msgid "200GB"
+msgstr "200GB"
+
+msgid "20GB"
+msgstr "20GB"
+
+msgid "22 kHz Tone"
+msgstr "22 kHz тон"
+
+msgid "30 minutes"
+msgstr "30 минут"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 минут"
+
+msgid "5 seconds"
+msgstr "5 секунд"
+
+msgid "500GB"
+msgstr "500GB"
+
+msgid "50GB"
+msgstr "50GB"
+
+msgid "576p/480p"
+msgstr "576p/480p"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "A problem occurred"
+msgstr "Проблема"
+
+msgid "A/V Output Settings"
+msgstr "Установки A/V выхода"
+
+msgid "A: Over 18"
+msgstr "A: больше 18"
+
+msgid "About Conax CA"
+msgstr "О Conax CA"
+
+msgid "Access denied"
+msgstr "Нет доступа"
+
+msgid "Add new list"
+msgstr "Добавить новый список"
+
+msgid "Add/remove channels"
+msgstr "Добавить/удалить каналы"
+
+msgid "All tuners are in use"
+msgstr "Все тюнеры используются"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr "Все тюнеры используются. Вероятно, слишком много текущих записей."
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr "Ошибка. Свяжитесь с проваидером.\n"
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Вы уверены что хотите удалить все каналы?"
+
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+msgid "Arts/Culture"
+msgstr "Искусство/Культура"
+
+msgid "Ask again later"
+msgstr "Напомнить позже"
+
+msgid "Audio Track"
+msgstr "Звуковая дорожка"
+
+msgid "Authentication failed. Try again."
+msgstr "Ошибка аутентификации. Попробуйте еще раз."
+
+msgid "Authentication required"
+msgstr "Требуется аутентификация"
+
+msgid "Auto"
+msgstr "Авто"
+
+msgid "Auto Download"
+msgstr "Автозагрузка"
+
+msgid "Auto Install"
+msgstr "Автоустановка"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Автоудаление старых записей"
+
+msgid "Automatic"
+msgstr "Автоматический"
+
+msgid "Automatic Channel Scanning"
+msgstr "Автоматический поиск каналов"
+
+#, c-format
+msgid "Automatic update will start in %u second."
+msgid_plural "Automatic update will start in %u seconds."
+msgstr[0] "Автоматическое обновление начнется через %u секунду."
+msgstr[1] "Автоматическое обновление начнется через %u секунды."
+msgstr[2] "Автоматическое обновление начнется через %u секунд."
+
+msgid "Available Transponders"
+msgstr "Доступные ретрансляторы"
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr "Неправильный URL: %d"
+
+#, c-format
+msgid "Bad format: %d"
+msgstr "Неправильный формат: %d"
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr "Неправильный ответ сервера: %d"
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Баланс: %d токен"
+msgstr[1] "Баланс: %d токена"
+msgstr[2] "Баланс: %d токенов"
+
+msgid "Band Select"
+msgstr "Выбор диапазона"
+
+msgid "Bandwidth"
+msgstr "Полоса пропускания"
+
+msgid "Bandwidth [MHz]"
+msgstr "Полоса пропускания [MHz]"
+
+msgid "Begin format now"
+msgstr "Начать форматирование сейчас "
+
+msgid "Block Channels"
+msgstr "Блокировать каналы"
+
+msgid "Buy"
+msgstr "Купить"
+
+msgid "C-band"
+msgstr "C-диапазон"
+
+msgid "CA PIN has been changed."
+msgstr "CA PIN был изменен"
+
+msgid "CA SYS ID"
+msgstr "CA SYS ID"
+
+msgid "CET / CEST"
+msgstr "CET / CEST"
+
+msgid "CLT / CLST"
+msgstr "CLT / CLST"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "Cable"
+msgstr "Кабельный"
+
+msgid "Cable AnnexB"
+msgstr "Кабельный AnnexB"
+
+msgid "Cable DVB-C"
+msgstr "Кабельный DVB-C"
+
+msgid "Cable modem status"
+msgstr "Статус кабельного модема"
+
+msgid "Cancel"
+msgstr "Отменить"
+
+msgid "Cancel scheduled recording"
+msgstr "Отменить запланированную запись"
+
+msgid "Card Inserted"
+msgstr "Карта вставлена"
+
+msgid "Card Number"
+msgstr "Номер карты"
+
+msgid "Card Problem - check card"
+msgstr "Проблема карты - проверьте карту"
+
+msgid "Card Type"
+msgstr "Тип карты"
+
+msgid "Card is correct"
+msgstr "Подходящая карта"
+
+msgid "Change CA PIN failed."
+msgstr "Изменение CA PIN не удалось."
+
+msgid "Change CA pin"
+msgstr "Изменить CA pin"
+
+msgid "Change PIN"
+msgstr "Изменить PIN"
+
+msgid "Changing pin failed."
+msgstr "Изменение pin не удалось."
+
+msgid "Channel"
+msgstr "Канал"
+
+msgid "Channel Frequency [kHz]"
+msgstr "Частота канала [kHz]"
+
+msgid "Channel Installation"
+msgstr "Установка каналов"
+
+msgid "Channel Scanning"
+msgstr "Поиск каналов"
+
+msgid "Channel Status"
+msgstr "Статус канала"
+
+msgid "Channel not available"
+msgstr "Канал недоступен"
+
+msgid "Channel scanning"
+msgstr "Поиск каналов"
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Канал: %s\n"
+"Событие: %s\n"
+"Время: %s-%s\n"
+
+msgid "Checking compatibility..."
+msgstr "Проверка совместимости..."
+
+msgid "Children's/Youth Programmes"
+msgstr "Детские/Юношеские программы"
+
+msgid "Chip ID"
+msgstr "Идентификатор чипа"
+
+msgid "Chip id"
+msgstr "Идентификатор чипа"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Communication error"
+msgstr "Ошибка связи"
+
+msgid "Compatible with PVR"
+msgstr "Совместим с PVR"
+
+msgid "Completed Recordings"
+msgstr "Завершенные записи"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Configuration"
+msgstr "Конфигурация"
+
+msgid "Configure"
+msgstr "Конфигурировать"
+
+msgid "Confirm"
+msgstr "Подтвердить"
+
+msgid "Confirmation Required"
+msgstr "Требуется подтверждение"
+
+msgid "Continue"
+msgstr "Продолжить"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr "Не удается загрузить список каналов. Функциональность может быть ограничена."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Не удается остановить устройство, попробуйте еще раз (ошибка 2)"
+
+msgid "Create new directory"
+msgstr "Создать новый каталог"
+
+msgid "Custom LNB"
+msgstr "Конфигурирование LNB вручную"
+
+msgid "DHCP"
+msgstr "DHCP"
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS1"
+msgstr "DNS1"
+
+msgid "DNS2"
+msgstr "DNS2"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr "DRM ошыбка: %d"
+
+msgid "DVB-C Automatic"
+msgstr "DVB-C автоматический"
+
+msgid "DVB-C Manual"
+msgstr "DVB-C ручной"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT автоматический"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 ручной"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT автоматический"
+
+msgid "DVB-T Automatic full scan"
+msgstr "Полное автоматич. сканирование DVB-T"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T ручной"
+
+msgid "Daily"
+msgstr "Ежедневно"
+
+msgid "Danish"
+msgstr "Датский"
+
+msgid "Date"
+msgstr "Дата"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr "Ошыбка загрузки: %d"
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "Default PVR Quota"
+msgstr "Квота PVR по умолчанию"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Задержать начало записи %s"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete all"
+msgstr "Удалить все"
+
+msgid "Delete all active"
+msgstr "Удалить все активные"
+
+msgid "Delete all failed"
+msgstr "Удалить все неудавшиеся"
+
+msgid "Delete all scheduled"
+msgstr "Удалить все запланированные"
+
+msgid "Delete file"
+msgstr "Удалить файл"
+
+msgid "Device is not responding"
+msgstr "Устроиство не отвечает"
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "DiSEqC Port %c"
+
+msgid "DiSEqC Switch"
+msgstr "DiSEqC переключатель"
+
+msgid "Digital Audio"
+msgstr "Цифровое аудио"
+
+msgid "Directory name already exists"
+msgstr "Имя папки уже сушествует"
+
+msgid "Directory name cannot be empty"
+msgstr "Название папки не может быть пустым"
+
+msgid "Disable"
+msgstr "Отключить"
+
+msgid "Disabled"
+msgstr "Отключен"
+
+msgid "Display Format (HDMI)"
+msgstr "Формат экрана (HDMI)"
+
+msgid "Display Format (SCART)"
+msgstr "Формат экрана (SCART)"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "Не выключайте ресивер во время обновления прошивки."
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Download now"
+msgstr "Скачать сейчас"
+
+msgid "Drop"
+msgstr "Удалить"
+
+msgid "Drop channels?"
+msgstr "Удалить каналы?"
+
+msgid "Dropping..."
+msgstr "Удаляю..."
+
+msgid "EET / EEST"
+msgstr "EET / EEST"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "ОШИБКА: Отправка вопроса на смарткарту не удалась. "
+
+msgid "Edit"
+msgstr "Редактировать"
+
+msgid "Education/Science/Factual topics"
+msgstr "Образование/Наука/Факты"
+
+msgid "Empty folder"
+msgstr "Пустая папка"
+
+msgid "Enabled"
+msgstr "Включен"
+
+msgid "End Frequency"
+msgstr "Конечная частота"
+
+msgid "End time"
+msgstr "Время окончания"
+
+msgid "English"
+msgstr "Английский"
+
+msgid "Entitled"
+msgstr "Имеющий право"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Error occured"
+msgstr "Произошла ошыбка"
+
+msgid "Event Status"
+msgstr "Статус события"
+
+msgid "Extra"
+msgstr "Дополнительно"
+
+msgid "Extras"
+msgstr "Дополнительно"
+
+msgid "FATAL ERROR"
+msgstr "ФАТАЛЬНАЯ ОШИБКА"
+
+msgid "Failed Recordings"
+msgstr "Неудавшиеся записи"
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Не удалось получить информацию с карты (ошибка = 0x%x)"
+
+msgid "Favorites"
+msgstr "Избранные"
+
+msgid "File not found"
+msgstr "Файл не найден"
+
+#, c-format
+msgid "File not found: %d"
+msgstr "Файл не найден: %d"
+
+msgid "Finish"
+msgstr "Закончить"
+
+msgid "Finnish"
+msgstr "Финский"
+
+msgid "Firmware Version"
+msgstr "Версия прошивки"
+
+msgid "Firmware update"
+msgstr "Обновление прошивки"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr "Обновление прошивки требуется чтобы ресивер работал правильно."
+
+msgid "First Time Installation"
+msgstr "Первоначальная установка"
+
+msgid "For 12+ year old"
+msgstr "Для 12+ летних"
+
+msgid "For 16+ year old"
+msgstr "Для 16+ летних"
+
+msgid "For 18+ year old"
+msgstr "Для 18+ летних"
+
+msgid "For 6+ year old"
+msgstr "Для 6+ летних"
+
+msgid "Format Hard Disk"
+msgstr "Форматировать жесткий диск"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr "Формат не поддерживается: %d"
+
+msgid "Format successful"
+msgstr "Форматирование успешно"
+
+msgid "Formatting this disk will permanently erase all data on it. Do you want to continue?"
+msgstr "Форамтирование диска удалит все данные. Продолжить?"
+
+msgid "Formatting..."
+msgstr "Форматирование ..."
+
+msgid "Frequency"
+msgstr "Частота"
+
+msgid "Frequency Range"
+msgstr "Диапазон частоты"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Частота: %d.%02d MHz%s %s %s"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Часы передней панели в режиме ожидания"
+
+msgid "Fullscreen"
+msgstr "Полный экран"
+
+msgid "G: General Audience"
+msgstr "G: для всех возрастных групп"
+
+msgid "GMT"
+msgstr "GMT"
+
+msgid "GMT / BST"
+msgstr "GMT / BST"
+
+msgid "Gateway"
+msgstr "Шлюз"
+
+msgid "Go!"
+msgstr "Вперед!"
+
+msgid "Greek"
+msgstr "Греческий"
+
+msgid "Group Number"
+msgstr "Номер группы"
+
+msgid "Guide"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "Видео формат HDMI"
+
+msgid "HFC MAC ID"
+msgstr "HFC MAC ID"
+
+msgid "Hard of Hearing"
+msgstr "Слабослышащий"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Субтитры для слабослышащих"
+
+msgid "Helsinki, Athens, Kaliningrad"
+msgstr "Хельсинки, Афины, Калининград"
+
+msgid "Horizontal"
+msgstr "Горизонтальный"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Network"
+msgstr "IP Сеть"
+
+msgid "In order to record selected program you need to stop one of the following recordings/schedules"
+msgstr "Для того чтобы записать выбранную программу нужно остановить одну из следующих записей"
+
+msgid "Incorrect CA Card"
+msgstr "Неверная CA карта"
+
+msgid "Incorrect Card"
+msgstr "Неверная карта"
+
+msgid "Incorrect Conax Card"
+msgstr "Неподходящая Conax карта"
+
+msgid "Incorrect old PIN."
+msgstr "Неверный старый PIN."
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Установка\n"
+"\n"
+"Чтобы начать автоматический поиск каналов нажмите ОК."
+
+msgid "Install now"
+msgstr "Установить сейчас"
+
+msgid "Instant Timeshift"
+msgstr "Моментальный сдвиг во времени"
+
+msgid "Interface Version"
+msgstr "Версия интерфейса"
+
+msgid "Internet Radio"
+msgstr "Интернет радио"
+
+msgid "Keyword"
+msgstr "Ключевое слово"
+
+msgid "Ku-band"
+msgstr "Ku-диапазон"
+
+msgid "Ku-band BSS"
+msgstr "Ku-диапазон BSS"
+
+msgid "Ku-band FSS"
+msgstr "Ku-диапазон FSS"
+
+msgid "Ku-band Universal"
+msgstr "Ku-диапазон универсальный"
+
+msgid "LNB Setup"
+msgstr "Установка LNB"
+
+msgid "LNB Type"
+msgstr "Тип LNB"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Languages"
+msgstr "Языки"
+
+msgid "Latvian"
+msgstr "Латвийский"
+
+msgid "Leisure hobbies"
+msgstr "Хобби"
+
+msgid "Letterbox"
+msgstr "Letterbox"
+
+msgid "List name already exists"
+msgstr "Имя списка уже существует"
+
+msgid "List name cannot be empty"
+msgstr "Имя списка не может быть пустым"
+
+#, c-format
+msgid "List no. %u"
+msgstr "Список no. %u"
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "Local Oscillator Frequency"
+msgstr "Частота локального осциллятора"
+
+msgid "Lock"
+msgstr "Блокировать"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Статус блокировки - НЕТ СИГНАЛА"
+
+msgid "Lock status - OK"
+msgstr "Статус блокировки - OK"
+
+msgid "Login"
+msgstr "Войти"
+
+msgid "London, Belfast"
+msgstr "Лондон, Белфаст"
+
+msgid "Lost tuner access"
+msgstr "Потерян доступ к тюнеру"
+
+msgid "MAC address"
+msgstr "MAC адрес"
+
+msgid "MSK"
+msgstr "MSK"
+
+msgid "Manual"
+msgstr "Ручной"
+
+msgid "Manual Channel Scanning"
+msgstr "Ручной поиск каналов"
+
+msgid "Manual Configuration"
+msgstr "Ручная установка"
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Блокировка по возрастному ограничению\n"
+"\n"
+"Рейтинг программы: %s\n"
+"Уровень карты: %s\n"
+"Введите CA PIN чтобы разблокировать"
+
+msgid "Maturity Rating"
+msgstr "Возрастное ограничение"
+
+msgid "Menu Language"
+msgstr "Язык меню"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Message - NEW!"
+msgstr "Новое сообщение!"
+
+msgid "Messages"
+msgstr "Сообщения"
+
+msgid "CubiTV Portal Connectivity"
+msgstr "Соединение с промежуточным ПО"
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr "Модуляция"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Модуляция: %s"
+
+msgid "More info"
+msgstr "Больше информации"
+
+msgid "Moscow, Saint Petersburg"
+msgstr "Москва, Санкт-Петербург"
+
+msgid "Mounting..."
+msgstr "Соединение ..."
+
+msgid "Move"
+msgstr "Переместить"
+
+msgid "Movie/Drama"
+msgstr "Фильм/Драма"
+
+msgid "Multichannel"
+msgstr "Многоканальный"
+
+msgid "Music/Ballet/Dance"
+msgstr "Музыка/Балет/Танцы"
+
+msgid "My Rentals"
+msgstr "Мой прокат"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "НЕТ СИГНАЛА"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Netmask"
+msgstr "Netmask"
+
+msgid "Network Medium"
+msgstr "Тип сети"
+
+msgid "Network Name"
+msgstr "Имя провайдера"
+
+msgid "Network Selection"
+msgstr "Выбор сети"
+
+msgid "Network Settings"
+msgstr "Настройки сети"
+
+msgid "Network Type"
+msgstr "Тип сети"
+
+msgid "Network mask"
+msgstr "Маска сети"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr "Поле подтверждения CA PIN не заполнено"
+
+msgid "New CA PIN field is not complete"
+msgstr "Поле нового CA PIN не заполнено"
+
+msgid "New PIN confirmation field is not complete."
+msgstr "Поле подтверждения нового PIN не заполнено"
+
+msgid "New PIN field is not complete."
+msgstr "Поле нового PIN не заполнено"
+
+msgid "New PIN:"
+msgstr "Новый PIN:"
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Новая версия прошивки %s от %s доступна."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Новая версия прошивки %s доступна."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Новая версия прошивки: %s"
+
+msgid "New pins don't match."
+msgstr "Новые PIN не совпадают."
+
+msgid "New recording cannot be scheduled due to many conflicts with previously scheduled recordings"
+msgstr "Новая запись не может быть запланирована из-за многочисл. конфликтов с ранее запланиров. записями"
+
+msgid "News/Cultural affairs"
+msgstr "Новости/Культурные события"
+
+msgid "No Access (error code 1)"
+msgstr "Нет доступа (код ошыбки 1)"
+
+msgid "No Access (error code 10)"
+msgstr "Нет доступа (код ошыбки 10)"
+
+msgid "No Access (error code 11)"
+msgstr "Нет доступа (код ошыбки 11)"
+
+msgid "No Access (error code 12)"
+msgstr "Нет доступа (код ошыбки 12)"
+
+msgid "No Access (error code 2)"
+msgstr "Нет доступа (код ошыбки 2)"
+
+msgid "No Access (error code 3)"
+msgstr "Нет доступа (код ошыбки 3)"
+
+msgid "No Access (error code 4)"
+msgstr "Нет доступа (код ошыбки 4)"
+
+msgid "No Access (error code 5)"
+msgstr "Нет доступа (код ошыбки 5)"
+
+msgid "No Access (error code 6)"
+msgstr "Нет доступа (код ошыбки 6)"
+
+msgid "No Access (error code 7)"
+msgstr "Нет доступа (код ошыбки 7)"
+
+msgid "No Access (error code 8)"
+msgstr "Нет доступа (код ошыбки 8)"
+
+msgid "No Access (error code 9)"
+msgstr "Нет доступа (код ошыбки 9)"
+
+msgid "No Card Inserted"
+msgstr "Карта не вставлена"
+
+msgid "No DiSEqC"
+msgstr "No DiSEqC"
+
+msgid "No access"
+msgstr "Нет доступа"
+
+#, c-format
+msgid "No access (error code %i)"
+msgstr "Нет доступа (код ошыбки  %i)"
+
+msgid "No access - geographical blackout"
+msgstr "Нет доступа - в этом регионе прием запрещен"
+
+msgid "No access - network block"
+msgstr "Нет доступа - блокировка сети"
+
+msgid "No channel"
+msgstr "Нет каналов"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Каналы не установлены.\n"
+"Требуется поиск каналов."
+
+msgid "No credits"
+msgstr "Кредитов нет"
+
+msgid "No debits"
+msgstr "Дебетов нет"
+
+msgid "No entries"
+msgstr "Нет записей."
+
+msgid "No events"
+msgstr "Нет событий"
+
+msgid "No list"
+msgstr "Нет списка"
+
+msgid "No messages"
+msgstr "Нет сообщений"
+
+msgid "No purses"
+msgstr "Нет покупок"
+
+msgid "No results"
+msgstr "Нет результатов"
+
+msgid "No subscriptions"
+msgstr "Нет подписки"
+
+msgid "No title"
+msgstr "Нет названия"
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "Обнаружено несовместимое запоминающее устройство (ошибка 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "Обнаружено несовместимое запоминающее устройство (ошибка 3)"
+
+msgid "Normal"
+msgstr "Обычный"
+
+msgid "Norwegian"
+msgstr "Норвежский"
+
+msgid "Not Entitled"
+msgstr "Не имеет права"
+
+msgid "Not enough tokens - please recharge Your card"
+msgstr "Не хватает токенов - пожалуйста пополните Вашу карту"
+
+msgid "Not entitled"
+msgstr "Не имеет права"
+
+msgid "Number of Sessions"
+msgstr "Номер сессий"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OSD/Banner Display Time"
+msgstr "Время отображения OSD/баннера"
+
+msgid "Off"
+msgstr "Выкл."
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Old CA PIN field is not complete"
+msgstr "Поле старого CA PIN не заполнено"
+
+msgid "Old PIN field is not complete."
+msgstr "Поле старого PIN не заполнено"
+
+msgid "Old PIN:"
+msgstr "Старый PIN:"
+
+msgid "Old pin is invalid."
+msgstr "Неверный старый PIN."
+
+msgid "On"
+msgstr "Вкл"
+
+msgid "Ongoing Recordings"
+msgstr "Текущие записи"
+
+msgid "Original Format"
+msgstr "Оригинальный формат"
+
+msgid "Override"
+msgstr "Отменить"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PG: Parental Guidance"
+msgstr "PG: с присутствием родителей"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "Идентификация PIN заблокирована на %d минуту"
+msgstr[1] "Идентификация PIN заблокирована на %d минуты"
+msgstr[2] "Идентификация PIN заблокирована на %d минут"
+
+msgid "PIN change"
+msgstr "Замена PIN"
+
+msgid "PIN confirmation does not match."
+msgstr "Подтверждение PIN не соответствует."
+
+msgid "PIN:"
+msgstr "PIN:"
+
+msgid "PLPID"
+msgstr "PLPID"
+
+msgid "PVR"
+msgstr "PVR"
+
+msgid "PVR End Margin"
+msgstr "PVR конец "
+
+msgid "PVR Start Margin"
+msgstr "PVR начало"
+
+msgid "Parental control"
+msgstr "Родительский контроль"
+
+msgid "Paris, Berlin, Warsaw, Rome"
+msgstr "Париж, Берлин, Варшава, Рим"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Pin change successful."
+msgstr "Изменение Pin успешно."
+
+msgid "Play"
+msgstr "Воспроизвести"
+
+msgid "Play Trailer"
+msgstr "Проиграть трейлер"
+
+msgid "Play from the beginning"
+msgstr "Воспроизвести с самого начала"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr "Воспроизведение с ошибкой кода: %d"
+
+msgid "Playlist error"
+msgstr "Ошибка воспроизведения"
+
+msgid "Please Wait"
+msgstr "Пожалуйста ждите"
+
+msgid "Please confirm new CA PIN:"
+msgstr "Пожалуйста подтвердите новый CA PIN:"
+
+msgid "Please enter CA PIN"
+msgstr "Введите CA PIN"
+
+msgid "Please enter CA PIN:"
+msgstr "Пожалуйста введите CA PIN:"
+
+msgid "Please enter Conax PIN"
+msgstr "Введите Conax PIN"
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr "Пожалуйста, введите PIN-код Conax для воспроизведения"
+
+msgid "Please enter Middleware PIN"
+msgstr "Пожалуйста, введите PIN-код Middleware"
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr "Пожалуйста, введите PIN-код Middleware для воспроизведения"
+
+msgid "Please enter WEP key"
+msgstr "Введите WEP ключ"
+
+msgid "Please enter WPA password"
+msgstr "Введите WEP пароль"
+
+msgid "Please enter WPA2 password"
+msgstr "Введите WPA2 пароль"
+
+msgid "Please enter new CA PIN:"
+msgstr "Пожалуйста введите новый CA PIN:"
+
+msgid "Please enter parental control PIN"
+msgstr "Введите PIN-код родительского контроля"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr "Введите PIN-код родительского контроля для воспроизв. выбранного содержания"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr "Введите PIN-код родительского контроля чтобы удалить все записи"
+
+msgid "Please wait"
+msgstr "Пожалуйста ждите"
+
+msgid "Please wait, loading…"
+msgstr "Подождите, идет загрузка…"
+
+msgid "Please wait."
+msgstr "Пожалуйста ждите."
+
+msgid "Please wait..."
+msgstr "Пожалуйста ждите..."
+
+msgid "Polarization"
+msgstr "Поляризация"
+
+msgid "Polish"
+msgstr "Польский"
+
+msgid "Preferred Audio Track"
+msgstr "Предпочтительная звуковая дорожка"
+
+msgid "Press OK to browse"
+msgstr "Нажмите OK для просмотра"
+
+msgid "Press OK to browse or OPT to format for PVR"
+msgstr "Нажмите OK для просмотра или OPT чтобы отформатировать для PVR"
+
+msgid "Press OPT to format for PVR"
+msgstr "Нажмите OPT чтобы отформатировать для PVR"
+
+msgid "Press Opt for more options"
+msgstr "Нажмите Opt для выбора больших опций"
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Предыдущая версия прошивки: %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Цена: %i.%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Цена: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Основной язык аудио"
+
+msgid "Primary Subtitle Language"
+msgstr "Основной язык субтитров"
+
+msgid "Proceed"
+msgstr "Продолжить"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr "протокол не поддерживается: %d"
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Покупка: %s"
+
+msgid "Quality"
+msgstr "Качество"
+
+msgid "Quota"
+msgstr "Квота"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Radio"
+msgstr "Радио"
+
+msgid "Rearrange list"
+msgstr "Перегруппировать список"
+
+msgid "Record"
+msgstr "Запись"
+
+msgid "Record always"
+msgstr "Записать всегда"
+
+msgid "Record repeatedly"
+msgstr "Записать повторно"
+
+msgid "Remind me"
+msgstr "Напомнить"
+
+msgid "Reminder"
+msgstr "Напоминание"
+
+msgid "Reminders"
+msgstr "Напоминания"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "Remove channel"
+msgstr "Удалить канал"
+
+msgid "Remove dir"
+msgstr "Удалить каталог"
+
+msgid "Remove list"
+msgstr "Удалить список"
+
+msgid "Remove reminder"
+msgstr "Удалить напоминание"
+
+msgid "Rename dir"
+msgstr "Переименовать каталог"
+
+msgid "Rename list"
+msgstr "Переименовать список"
+
+msgid "Rent"
+msgstr "Аренда"
+
+msgid "Rental period expired"
+msgstr "Период аренды истек"
+
+msgid "Rental period for this content has expired."
+msgstr "Срок аренды для этого содержимого истек."
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Срок аренды: %i %s"
+
+msgid "Repeat"
+msgstr "Повторить"
+
+msgid "Repeat new PIN:"
+msgstr "Повторите новый PIN:"
+
+msgid "Resolve conflicts"
+msgstr "Решить конфликты"
+
+msgid "Restart Device"
+msgstr "Перезагрузите устройство"
+
+msgid "Restore Factory Defaults"
+msgstr "Восстановление заводских настроек"
+
+msgid "Results - Failure"
+msgstr "Результат - неудача"
+
+msgid "Results - Success"
+msgstr "Результат - успешно"
+
+msgid "Retrieving channel list"
+msgstr "Получение списка каналов"
+
+msgid "Reykjavík"
+msgstr "Рейкьявик"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "S/PDIF A/V Sync"
+msgstr "S/PDIF A/V Sync"
+
+msgid "SCART Signal Type"
+msgstr "Тип сигнала SCART"
+
+msgid "Santiago"
+msgstr "Сантиаго"
+
+msgid "Satellite"
+msgstr "Спутниковый"
+
+msgid "Satellite %s is not setup yet"
+msgstr "%s спутника еще не установлены"
+
+msgid "Satellite Info"
+msgstr "Информация о спутнике"
+
+msgid "Satellite Name"
+msgstr "Название спутника"
+
+msgid "Satellite Name:"
+msgstr "Название спутника:"
+
+msgid "Satellite Setup"
+msgstr "Настройки спутника"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Saving..."
+msgstr "Сохранение..."
+
+msgid "Scan Type"
+msgstr "Тип поиска"
+
+msgid "Scanning Standard"
+msgstr "Стандарт поиска"
+
+msgid "Scanning channels"
+msgstr "Поиск каналов"
+
+msgid "Schedule keyword recording"
+msgstr "Запланировать запись по ключевым словам"
+
+msgid "Schedule manual recording"
+msgstr "Запланировать запись в ручном режиме"
+
+msgid "Scheduled Recordings"
+msgstr "Запланированные записи"
+
+msgid "Screensaver Timeout"
+msgstr "Тайм-аут заставки"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Search in progress..."
+msgstr "Идет поиск..."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "Поиск: %d результат"
+msgstr[1] "Поиск: %d результата"
+msgstr[2] "Поиск: %d результатов"
+
+msgid "Searching for channels"
+msgstr "Поиск каналов"
+
+msgid "Searching..."
+msgstr "Поиск..."
+
+msgid "Secondary Audio Language"
+msgstr "Второй язык аудио"
+
+msgid "Secondary Subtitle Language"
+msgstr "Второй язык субтитров"
+
+msgid "Select OK to remove all data from your disk."
+msgstr "Выберите ОК для удаления всех данных с диска"
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Выберите задержку аудио на %s выходе"
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Выберите новое возрастное ограничение (требуется CA PIN )"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr "Ошибка коммуникации с сервером: %d"
+
+msgid "Service Name"
+msgstr "Имя сервиса"
+
+msgid "Setup"
+msgstr "Установка"
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Сократить запись на %s"
+
+msgid "Show similar"
+msgstr "Показать похожих"
+
+msgid "Show/Game show"
+msgstr "Шоу/Телеигра"
+
+msgid "Sign Off"
+msgstr "Выйти"
+
+msgid "Signal - OK"
+msgstr "Сигнал - OK"
+
+msgid "Signal Quality"
+msgstr "Качество сигнала"
+
+msgid "Signal Strength"
+msgstr "Уровень сигнала"
+
+msgid "Signal lost - check cable"
+msgstr "Сигнал отсутствует - проверьте кабель"
+
+msgid "Social Media"
+msgstr "Социальная сеть"
+
+msgid "Social/Political issues/Economics"
+msgstr "Общественные/Политические выпуски/Экономика"
+
+msgid "Software"
+msgstr "Программное обеспечение"
+
+msgid "Software Update"
+msgstr "Обновление ПО"
+
+msgid "Software Version"
+msgstr "Версия ПО"
+
+msgid "Spanish"
+msgstr "Испанский"
+
+msgid "Special"
+msgstr "Особый"
+
+msgid "Sports"
+msgstr "Спорт"
+
+msgid "Standard"
+msgstr "Стандарт"
+
+msgid "Start"
+msgstr "Начало"
+
+msgid "Start Frequency"
+msgstr "Начальная частота "
+
+msgid "Start date                End date"
+msgstr "Дата начала                Дата окончания"
+
+msgid "Start date      End date"
+msgstr "Дата начала      Дата окончания"
+
+msgid "Start time"
+msgstr "Время начала"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Please enter CA PIN to start viewing:"
+msgstr ""
+"Начало просмотра\n"
+"%s\n"
+"Осталось минут просмотра: %i\n"
+"Введите CA PIN для начала просмотра:"
+
+msgid "Static"
+msgstr "Статический"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "Статус: скачано %u%% "
+
+msgid "Status: Download scheduled"
+msgstr "Статус: Скачивание запланированно"
+
+msgid "Status: Not available"
+msgstr "Статус: Недоступен"
+
+msgid "Stereo"
+msgstr "Стерео"
+
+msgid "Stop"
+msgstr "Остановить"
+
+msgid "Stop channel recording"
+msgstr "Остановить запись канала"
+
+msgid "Stop keyword recording"
+msgstr "Остановить запись по ключевым словам"
+
+msgid "Stop recording"
+msgstr "Остановить запись"
+
+msgid "Stop repeated recording"
+msgstr "Остановить многократную запись"
+
+msgid "Stop using for PVR"
+msgstr "Остановить использование для PVR"
+
+msgid "Strength"
+msgstr "Уровень"
+
+msgid "Stretched"
+msgstr "Вытянутый"
+
+msgid "Subscription Status"
+msgstr "Статус подписки"
+
+msgid "Subtitle Language"
+msgstr "Язык субтитров"
+
+msgid "Swedish"
+msgstr "Шведский"
+
+msgid "Switch to channel"
+msgstr "Переключиться на канал"
+
+msgid "Symbol Rate"
+msgstr "Символьная скорость"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Символьная скорость: %d"
+
+msgid "System Information"
+msgstr "Системная информация"
+
+msgid "System Settings"
+msgstr "Системные установки"
+
+msgid "TV"
+msgstr "ТВ"
+
+msgid "TV Aspect Ratio"
+msgstr "Соотношение сторон ТВ"
+
+msgid "TV Guide"
+msgstr "TВ-гид"
+
+msgid "TV System"
+msgstr "TВ система"
+
+msgid "Terrestrial"
+msgstr "Наземный"
+
+msgid "There are too many ongoing recordings. Please stop some to watch this channel again."
+msgstr "Слишком много текущих записей. Пожалуйста, прекратите некоторые для просмотра этого канала."
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "Это действие инициирует перезагрузку устройства. Вы уверены?"
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Это напоминание отменит следующие напоминания:\n"
+
+msgid "Time Zone"
+msgstr "Часовой пояс"
+
+#, c-format
+msgid "Title: %s"
+msgstr "Название: %s"
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Доступ токена\n"
+"%s\n"
+"%d токен(ы)%s\n"
+"Баланс покупки: %s %d токенов\n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "Состояние токенов"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Токены: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Last access: %s"
+msgstr ""
+"Токены: %d\n"
+"Последний доступ: %s"
+
+msgid "Too many simultaneous recordings."
+msgstr "Слишком много одновременных записей."
+
+#, c-format
+msgid "Track %d"
+msgstr "Трек %d"
+
+msgid "Trailer"
+msgstr "Трейлер"
+
+msgid "Tuner Type"
+msgstr "Тип приемника"
+
+msgid "Tuner is not available"
+msgstr "Тюнер не доступен"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Unable to change settings while recording is active"
+msgstr "Невозможно изменить настройки пока запись активна"
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Не удается сохранить. Ключевое слово слишком короткое."
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr "Неожиданный ответ сервера: %d"
+
+msgid "Unknown"
+msgstr "Неизвестный"
+
+msgid "Unlimited"
+msgstr "Неограниченный"
+
+msgid "Unlock"
+msgstr "Разблокировать"
+
+msgid "Unmounting..."
+msgstr "Отключение ..."
+
+msgid "Unread messages!"
+msgstr "Непрочитанные сообщения!"
+
+msgid "Update now"
+msgstr "Обновить сейчас"
+
+msgid "Update will take about 10 minutes. During this time screen may blink and you won't be able to use your STB."
+msgstr "Обновление займет около 10 минут. За это время экран может мигать и вы не сможете использовать ваш ресивер."
+
+msgid "Use NIT/SDT"
+msgstr "Используйте NIT/SDT"
+
+msgid "Use for PVR"
+msgstr "Использовать для PVR"
+
+msgid "Used for PVR"
+msgstr "Используется для PVR"
+
+msgid "User Interface"
+msgstr "Интерфейс пользователя"
+
+msgid "VOD"
+msgstr "VOD"
+
+#, c-format
+msgid "Version: %s"
+msgstr "Версия: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Версия: %s, Сеть: %s"
+
+msgid "Vertical"
+msgstr "Вертикальный"
+
+msgid "Visually Impaired"
+msgstr "Слабовидящие"
+
+msgid "WEB on TV"
+msgstr "Интернет ТВ"
+
+msgid "Waiting for channels"
+msgstr "Ожидание каналов"
+
+msgid "Waiting for channels..."
+msgstr "Ожидание каналов..."
+
+msgid "Weekdays"
+msgstr "Будни"
+
+msgid "Weekends"
+msgstr "Выходные"
+
+msgid "Weekly"
+msgstr "Еженедельно"
+
+msgid "WiFi Network Type"
+msgstr "Тип безпроводной сети"
+
+msgid "WiFi Password"
+msgstr "WiFi пароль"
+
+msgid "WiFi Session ID"
+msgstr "WiFi Session ID"
+
+msgid "WiFi settings"
+msgstr "Установки WiFi сети"
+
+msgid "Wired (Ethernet)"
+msgstr "Проводной (Ethernet)"
+
+msgid "Wireless (WiFi)"
+msgstr "Беспроводной (WiFi)"
+
+msgid "Would You like to do it now?"
+msgstr "Желаете сделать это сейчас?"
+
+msgid "Wrong CA PIN."
+msgstr "Неправильный CA PIN."
+
+msgid "X: Erotic"
+msgstr "X: Эротика"
+
+msgid "You are not entitled to view this channel"
+msgstr "Нет прав для просмотра этого канала"
+
+msgid "You are not entitled to view this content"
+msgstr "Нет прав для просмотра этого содержания"
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "Для новой записи недостаточно свободного места. "
+
+msgid "You got mail"
+msgstr "Вы получили сообщение"
+
+msgid "You have too many directories."
+msgstr "Слишком много каталогов."
+
+msgid "You have too many favorites lists."
+msgstr "Слишком много списков избранных. "
+
+msgid "You have too many keyword recordings."
+msgstr "Слишком много записей ключевых слов."
+
+msgid "You have too many recordings."
+msgstr "Слишком много записей"
+
+#, fuzzy, c-format
+msgid "You will be soon zapped to %s."
+msgstr "You will be soon zapped to %s."
+
+#, c-format
+msgid "Your TV is currently connected to an inactive output on this set-top box. Please press VOUT button on your remote control to activate this output or connect your TV to the %s output."
+msgstr "Ваш телевизор на данный момент подключен к неактивному выходу ресивера. Нажмите кнопку VOUT на пульте дистанционного управления чтобы активировать этот выход или подключите телевизор к выходу %s."
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would you like to:\n"
+"\n"
+msgstr[0] ""
+"Новая запись конфликтует с %i ранее запланированной записью. Желаете:\n"
+"\n"
+msgstr[1] ""
+"Новая запись конфликтует с %i ранее запланированными записями. Желаете:\n"
+"\n"
+msgstr[2] ""
+"Новая запись конфликтует с %i ранее запланированными записями. Желаете:\n"
+"\n"
+
+msgid "[completed]"
+msgstr "[завершено]"
+
+msgid "[failed]"
+msgstr "[не удалось]"
+
+msgid "[interrupted]"
+msgstr "[прервано]"
+
+msgid "[missed]"
+msgstr "[пропущено]"
+
+msgid "[recording]"
+msgstr "[запись]"
+
+msgid "[scheduled]"
+msgstr "[запланировано]"
+
+msgid "[stopped manually]"
+msgstr "[остановлено вручную]"
+
+msgid "[stopped – no source]"
+msgstr "[остановлено – нет источника]"
+
+msgid "[stopped – no space]"
+msgstr "[остановлено – нет места]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] "Примерно %d SD час"
+msgstr[1] "Примерно %d SD часа"
+msgstr[2] "Примерно %d SD часов"
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "остался примерно %d час"
+msgstr[1] "осталось примерно %d часа"
+msgstr[2] "осталось примерно %d часов"
+
+msgid "automatic"
+msgstr "автоматический"
+
+msgid "chkflash"
+msgstr "Проверка флэш разделов"
+
+msgid "config"
+msgstr "Запись конфигурации"
+
+msgid "done"
+msgstr "завершено"
+
+msgid "download"
+msgstr "Загрузка пакета прошивки"
+
+msgid "element"
+msgstr "Элемент"
+
+msgid "format_long"
+msgstr ""
+"Идет форматирование диска\n"
+"\n"
+"Форматирование может занять от 3 до 5 минут.\n"
+"Пожалуйста НЕ ВЫКЛЮЧАЙТЕ ресивер или  питание.\n"
+"\n"
+"Ресивер продолжит включение\n"
+"после окончания форматирования."
+
+msgid "formating"
+msgstr "форматирование"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "час"
+msgstr[1] "часа"
+msgstr[2] "часов"
+
+msgid "kernel"
+msgstr "Обработка KERNEL"
+
+msgid "less than HD hour left"
+msgstr "осталось меньше одного HD часа"
+
+msgid "less than hour left"
+msgstr "осталось меньше часа"
+
+msgid "logo"
+msgstr "Обработка LOGO"
+
+msgid "manual"
+msgstr "ручной"
+
+msgid "new"
+msgstr "новый"
+
+msgid "off"
+msgstr "выкл"
+
+msgid "prev"
+msgstr "пред."
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "результат"
+msgstr[1] "результата"
+msgstr[2] "результатов"
+
+msgid "rootfs"
+msgstr "Обработка ROOTFS"
+
+msgid "today"
+msgstr "сегодня"
+
+msgid "tomorrow"
+msgstr "завтра"
+
+msgid "unknown"
+msgstr "неизвестный"
+
+msgid "unlimited"
+msgstr "неограниченный"
+
+msgid "upgrade_long"
+msgstr ""
+"Обновление прошивки может занять от 10 до 15 минут.\n"
+"Пожалуйста не выключайте ресивер или питание.\n"
+"Ресивер перезапустится автоматически после завершения обновления."
+
+msgid "usr"
+msgstr "Обработка USR"
+
+msgid "verify"
+msgstr "Проверка установленного файла"
+
+msgid "writing"
+msgstr "Установка прошивки"
+
+#, fuzzy
+#~ msgid "%i.%02i %s"
+#~ msgstr "%i.%02i %s"
+
+#~ msgid "576p"
+#~ msgstr "576p"
+
+#~ msgid "Bad URL [%d]"
+#~ msgstr "Недействительный URL [%d]"
+
+#~ msgid "Bad server response [%d]"
+#~ msgstr "Неверный ответ сервера [%d]"
+
+#~ msgid "Cable modem"
+#~ msgstr "Кабельный модем"
+
+#~ msgid "Changing application mode requires device reboot. Are you sure?"
+#~ msgstr ""
+#~ "Изменение режима приложения требует перезагрузки устройства. Вы уверены?"
+
+#~ msgid "DRM error [%d]"
+#~ msgstr "Ошибка DRM [%d]"
+
+#~ msgid "Decoder error [%d]"
+#~ msgstr "Ошибка декодера [%d]"
+
+#~ msgid "Español"
+#~ msgstr "Испанский"
+
+#~ msgid "Estonian"
+#~ msgstr "Эстонский"
+
+#~ msgid "File not found [%d]"
+#~ msgstr "Файл не найден"
+
+#~ msgid "Format not supported [%d]"
+#~ msgstr "Формат не поддерживается [%d]"
+
+#~ msgid "HDTV"
+#~ msgstr "HDTV"
+
+#~ msgid "Latviešu"
+#~ msgstr "Латвийский"
+
+#~ msgid "MUST format storage for use, press OPT button"
+#~ msgstr "Должны форматировать устройство для хранения, нажмите кнопку OPT"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %d)"
+#~ msgstr ""
+#~ "Нет доступа\n"
+#~ "Не активирован (код ошибки %d)"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %i)"
+#~ msgstr ""
+#~ "Нет доступа\n"
+#~ "Не активирован(код ошибки %i)"
+
+#~ msgid "Playback failed with error code %d"
+#~ msgstr "Воспроизведение не удалось - код ошибки %d"
+
+#~ msgid "Polski"
+#~ msgstr "Польский"
+
+#~ msgid "Protocol not supported [%d]"
+#~ msgstr "Протокол не поддерживается [%d]"
+
+#~ msgid "Scheduled recordings"
+#~ msgstr "Запланированные записи"
+
+#~ msgid "Server communication error [%d]"
+#~ msgstr "Ошибка подключения к серверу [%d]"
+
+#~ msgid "Suomi"
+#~ msgstr "Финский"
+
+#~ msgid "Svenska"
+#~ msgstr "Шведский"
+
+#~ msgid "Transaction failed"
+#~ msgstr "Транзакция не удалась"
+
+#~ msgid "Unknown error"
+#~ msgstr "Неизвестная ошибка"
+
+#~ msgid "You have too many manual recordings."
+#~ msgstr "Слишком много записей."
+
+#~ msgid "You have too many recordings"
+#~ msgstr "Слишком много записей"
+
+#~ msgid "about %d SD hour"
+
+#~ msgid_plural "about %d SD hours"
+#~ msgstr[0] "приблизительно %d SD час"
+#~ msgstr[1] "приблизительно %d SD часа"
+#~ msgstr[2] "приблизительно %d SD часов"

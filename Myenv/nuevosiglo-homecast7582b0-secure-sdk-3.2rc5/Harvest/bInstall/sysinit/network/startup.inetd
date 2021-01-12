@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$1" in 
+    start)
+	/usr/sbin/inetd
+	;;
+    stop)
+	killall -9 inetd
+	;;
+    *)
+	echo "Usage: $0 [start|stop]"
+	;;
+esac

@@ -1,0 +1,6 @@
+Name: QBSecurityUtils
+Version: 1.0.0
+Requires: SvCore 
+Description: library for secure handling of files and other crypto-related primitives
+Libs: -lQBSecurityUtils -lcrypto 
+CFlags: 

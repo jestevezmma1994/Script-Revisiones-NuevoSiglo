@@ -1,0 +1,6 @@
+Name: QBNetworkMonitor
+Version: 1.0.0
+Requires: QBDataModel3 QBIPC QBNetworkManager QBStringUtils SvCore SvFoundation 
+Description: Network Monitor Library
+Libs: -lQBNetworkMonitor 
+CFlags: 

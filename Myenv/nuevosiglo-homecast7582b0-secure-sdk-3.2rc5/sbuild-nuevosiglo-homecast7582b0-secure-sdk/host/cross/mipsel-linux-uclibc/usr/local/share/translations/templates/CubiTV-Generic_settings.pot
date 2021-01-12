@@ -1,0 +1,1421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-11 12:01-0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "%A %x"
+msgstr ""
+
+msgid "%a, %b %e, %Y %H:%M"
+msgstr ""
+
+msgid "0 recordings"
+msgstr ""
+
+msgid "0.00-CURRENT"
+msgstr ""
+
+msgid "1 Hour"
+msgstr ""
+
+msgid "1 minute"
+msgstr ""
+
+msgid "10 minutes"
+msgstr ""
+
+msgid "10 seconds"
+msgstr ""
+
+msgid "100GB"
+msgstr ""
+
+msgid "1080i"
+msgstr ""
+
+msgid "10GB"
+msgstr ""
+
+msgid "120 minutes"
+msgstr ""
+
+msgid "15 minutes"
+msgstr ""
+
+msgid "15 seconds"
+msgstr ""
+
+msgid "150 minutes"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "180 minutes"
+msgstr ""
+
+msgid "2 Hours"
+msgstr ""
+
+msgid "2 minutes"
+msgstr ""
+
+msgid "2 seconds"
+msgstr ""
+
+msgid "20 minutes"
+msgstr ""
+
+msgid "200GB"
+msgstr ""
+
+msgid "20GB"
+msgstr ""
+
+msgid "22 kHz Tone"
+msgstr ""
+
+msgid "30 minutes"
+msgstr ""
+
+msgid "30 seconds"
+msgstr ""
+
+msgid "4 Hours"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "5 minutes"
+msgstr ""
+
+msgid "5 seconds"
+msgstr ""
+
+msgid "500GB"
+msgstr ""
+
+msgid "50GB"
+msgstr ""
+
+msgid "576p/480p"
+msgstr ""
+
+msgid "6 Hours"
+msgstr ""
+
+msgid "60 minutes"
+msgstr ""
+
+msgid "60 seconds"
+msgstr ""
+
+msgid "720p"
+msgstr ""
+
+msgid "8 Hours"
+msgstr ""
+
+msgid "90 minutes"
+msgstr ""
+
+msgid "<p>For any issues related to services,<br/>please contact help desk number <font size=\"47\" color=\"#e0192c\">123456</font></p>"
+msgstr ""
+
+msgid "<p>Press Exit to hide Caller ID bar. Press <img src=\"icons_green_button.png\"/> button to redirect call to voice mail</p>"
+msgstr ""
+
+msgid "A/V Output Settings"
+msgstr ""
+
+msgid "A: Over 18"
+msgstr ""
+
+msgid "About Conax CA"
+msgstr ""
+
+msgid "About CryptoGuard CA"
+msgstr ""
+
+msgid "About ViewRightIPTV CA"
+msgstr ""
+
+msgid "Active Standby"
+msgstr ""
+
+msgid "Adaptive Bit Rate"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Add new satellite"
+msgstr ""
+
+msgid "Adult Content Blocking"
+msgstr ""
+
+msgid "All tuners are in use"
+msgstr ""
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr ""
+
+msgid "Alternative font"
+msgstr ""
+
+msgid "Alternative font recommended"
+msgstr ""
+
+msgid "Analog Closed Captioning"
+msgstr ""
+
+msgid "Analog Outputs"
+msgstr ""
+
+msgid "Application Font"
+msgstr ""
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr ""
+
+msgid "Audio-Video Sync"
+msgstr ""
+
+msgid "Authentication failed - PIN is blocked. Wait around 10 minutes."
+msgstr ""
+
+msgid "Authentication failed. Not enough in purse"
+msgstr ""
+
+msgid "Authentication failed. Try again."
+msgstr ""
+
+msgid "Authentication failed. Wrong Pin was entered."
+msgstr ""
+
+msgid "Authentication required"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Auto Standby"
+msgstr ""
+
+msgid "Autodelete Oldest Recordings"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Automatic Channel Scanning"
+msgstr ""
+
+msgid "Available Transponders"
+msgstr ""
+
+msgid "BER"
+msgstr ""
+
+msgid "Bandwidth"
+msgstr ""
+
+msgid "Bandwidth [MHz]"
+msgstr ""
+
+msgid "Banner Timeout"
+msgstr ""
+
+msgid "Block Channels"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+msgid "Box ID:"
+msgstr ""
+
+msgid "Box Id"
+msgstr ""
+
+msgid "By Channel Number"
+msgstr ""
+
+msgid "By Index"
+msgstr ""
+
+msgid "CA PIN has been changed."
+msgstr ""
+
+msgid "CA PIN validation"
+msgstr ""
+
+msgid "CAS Version"
+msgstr ""
+
+msgid "CAST:"
+msgstr ""
+
+msgid "CC Primary Channel"
+msgstr ""
+
+msgid "CC Primary Language"
+msgstr ""
+
+msgid "CC Secondary Channel"
+msgstr ""
+
+msgid "CC Secondary Language"
+msgstr ""
+
+msgid "CC1"
+msgstr ""
+
+msgid "CC2"
+msgstr ""
+
+msgid "CC3"
+msgstr ""
+
+msgid "CC4"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "Call History"
+msgstr ""
+
+msgid "Caller ID"
+msgstr ""
+
+msgid "Caller ID Status"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Catchup TV"
+msgstr ""
+
+msgid "Central European"
+msgstr ""
+
+msgid "Change CA PIN failed."
+msgstr ""
+
+msgid "Change CA pin"
+msgstr ""
+
+msgid "Change PIN"
+msgstr ""
+
+msgid "Changing pin failed."
+msgstr ""
+
+msgid "Channel 3"
+msgstr ""
+
+msgid "Channel 4"
+msgstr ""
+
+msgid "Channel Frequency [kHz]"
+msgstr ""
+
+msgid "Channel Installation"
+msgstr ""
+
+msgid "Channel Name"
+msgstr ""
+
+msgid "Channel Status"
+msgstr ""
+
+msgid "Channel scanning"
+msgstr ""
+
+msgid "Check Code"
+msgstr ""
+
+msgid "Check pairing"
+msgstr ""
+
+msgid "Check purse"
+msgstr ""
+
+msgid "Chip id"
+msgstr ""
+
+msgid "Clear all"
+msgstr ""
+
+msgid "Closed Captioning"
+msgstr ""
+
+msgid "Completed Recordings"
+msgstr ""
+
+msgid "Conax"
+msgstr ""
+
+msgid "Conditional access system ID"
+msgstr ""
+
+msgid "Configuration"
+msgstr ""
+
+msgid "Conformance"
+msgstr ""
+
+msgid "Connection problem"
+msgstr ""
+
+msgid "Content owners use Microsoft PlayReadyTM content access technology to protect their intellectual property, including copyrighted content. This device uses PlayReady technology to access PlayReady-protected content and/or WMDRM protected content. If the device fails to properly enforce restrictions on content usage, content owners may require Microsoft to revoke the device's ability to consume PlayReady-protected content. Revocation should not affect unprotected content or content protected by other content access technologies. Content owners may require you to upgrade PlayReady to access their content. If you decline an upgrade, you will not be able to access content that requires the upgrade."
+msgstr ""
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr ""
+
+msgid "CryptoGuard"
+msgstr ""
+
+msgid "CubiTV Portal Address"
+msgstr ""
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "DNS1"
+msgstr ""
+
+msgid "DNS2"
+msgstr ""
+
+msgid "DRM"
+msgstr ""
+
+msgid "DSMCC Feeds"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "DVB Tables status"
+msgstr ""
+
+msgid "Danish"
+msgstr ""
+
+msgid "Data buffering. Please wait ..."
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Default Channel"
+msgstr ""
+
+msgid "Default PVR Quota"
+msgstr ""
+
+msgid "Degrees"
+msgstr ""
+
+msgid "Deleted Recordings"
+msgstr ""
+
+msgid "DiSEqC Switch"
+msgstr ""
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Digital Audio"
+msgstr ""
+
+msgid "Digital Closed Captioning"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Disk Formating"
+msgstr ""
+
+msgid "Display Format"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Drop channels?"
+msgstr ""
+
+msgid "Dropping to voicemail failed - Please Contact your service representative."
+msgstr ""
+
+msgid "Dropping..."
+msgstr ""
+
+msgid "EME"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit satellite"
+msgstr ""
+
+msgid "Empty"
+msgstr ""
+
+msgid "Enable/Disable"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "End Frequency"
+msgstr ""
+
+msgid "Endurance Testing (+3 hrs)"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Enter WiFi Password"
+msgstr ""
+
+msgid "Enter WiFi SSID"
+msgstr ""
+
+msgid "Episodes:"
+msgstr ""
+
+msgid "Event Status"
+msgstr ""
+
+msgid "Extras"
+msgstr ""
+
+msgid "Failed Recordings"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Favorites Numbering"
+msgstr ""
+
+msgid "File Browser Character Set"
+msgstr ""
+
+msgid "Finnish"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr ""
+
+msgid "Font with Cyryllic and Greek"
+msgstr ""
+
+msgid "For 12+ year old"
+msgstr ""
+
+msgid "For 16+ year old"
+msgstr ""
+
+msgid "For 18+ year old"
+msgstr ""
+
+msgid "For 6+ year old"
+msgstr ""
+
+msgid "For HD or Widescreen TV"
+msgstr ""
+
+msgid "For classic TV"
+msgstr ""
+
+msgid "Format Hard Disk"
+msgstr ""
+
+msgid "Formatting this disk will permanently erase all data on it. Do you want to continue?"
+msgstr ""
+
+msgid "Frequency"
+msgstr ""
+
+msgid "Frequency Range"
+msgstr ""
+
+msgid "Front Panel Power Button"
+msgstr ""
+
+msgid "Frontpanel Clock In Standby"
+msgstr ""
+
+msgid "G: General Audience"
+msgstr ""
+
+msgid "Gateway"
+msgstr ""
+
+msgid "Go!"
+msgstr ""
+
+msgid "Greek"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr ""
+
+msgid "HELP"
+msgstr ""
+
+msgid "Hard of Hearing"
+msgstr ""
+
+msgid "Hard of Hearing Subtitles"
+msgstr ""
+
+msgid "Hemisphere"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "IP Network"
+msgstr ""
+
+msgid "Incorrect old PIN."
+msgstr ""
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+
+msgid "Instant Timeshift"
+msgstr ""
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "Interface Status"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "LNB Setup"
+msgstr ""
+
+msgid "LNB Type"
+msgstr ""
+
+msgid "Languages"
+msgstr ""
+
+msgid "Latens"
+msgstr ""
+
+msgid "Latin US"
+msgstr ""
+
+msgid "Latvian"
+msgstr ""
+
+msgid "Letterbox / Pillarbox"
+msgstr ""
+
+msgid "Library date"
+msgstr ""
+
+msgid "Library version"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Local Oscillator Frequency"
+msgstr ""
+
+msgid "Locked Ratings"
+msgstr ""
+
+msgid "Locked Time"
+msgstr ""
+
+msgid "Locking Status"
+msgstr ""
+
+msgid "Low power consumption, slow recovery"
+msgstr ""
+
+msgid "MAC Address:"
+msgstr ""
+
+msgid "MPEG Statistics"
+msgstr ""
+
+msgid "MSE"
+msgstr ""
+
+msgid "Mailbox"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Manual Channel Scanning"
+msgstr ""
+
+msgid "Manual PAT Channel Scanning"
+msgstr ""
+
+msgid "Maturity Rating"
+msgstr ""
+
+msgid "Menu Language"
+msgstr ""
+
+msgid "Menu Transparency"
+msgstr ""
+
+msgid "Messages"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr ""
+
+msgid "Multichannel"
+msgstr ""
+
+msgid "Mux ID"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "NAT Status"
+msgstr ""
+
+msgid "NPVR End Margin"
+msgstr ""
+
+msgid "NPVR Start Margin"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Name This Device"
+msgstr ""
+
+msgid "Netmask"
+msgstr ""
+
+msgid "Network Name"
+msgstr ""
+
+msgid "Network PVR"
+msgstr ""
+
+msgid "Network PVR Quota"
+msgstr ""
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "Network Settings Window"
+msgstr ""
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New CA PIN field is not complete"
+msgstr ""
+
+msgid "New PIN confirmation field is not complete."
+msgstr ""
+
+msgid "New PIN field is not complete."
+msgstr ""
+
+msgid "New PIN:"
+msgstr ""
+
+msgid "New pins don't match."
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Normal power consumption, fast recovery"
+msgstr ""
+
+msgid "Norwegian"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "OSD/Banner Display Time"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Off (Auto Relock)"
+msgstr ""
+
+msgid "Off (Relock Manually)"
+msgstr ""
+
+msgid "Old CA PIN field is not complete"
+msgstr ""
+
+msgid "Old PIN field is not complete."
+msgstr ""
+
+msgid "Old PIN:"
+msgstr ""
+
+msgid "Old pin is invalid."
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Ongoing Recordings"
+msgstr ""
+
+msgid "Only for testing"
+msgstr ""
+
+msgid "Original Format"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "PG: Parental Guidance"
+msgstr ""
+
+msgid "PIN Change"
+msgstr ""
+
+msgid "PIN confirmation does not match."
+msgstr ""
+
+msgid "PIN:"
+msgstr ""
+
+msgid "PLPID"
+msgstr ""
+
+msgid "PVR"
+msgstr ""
+
+msgid "PVR End Margin"
+msgstr ""
+
+msgid "PVR Start Margin"
+msgstr ""
+
+msgid "Pairing Remote Controller"
+msgstr ""
+
+msgid "Pairing status"
+msgstr ""
+
+msgid "Pan and Scan"
+msgstr ""
+
+msgid "Parental control"
+msgstr ""
+
+msgid "Passive Standby"
+msgstr ""
+
+msgid "Pin change successful."
+msgstr ""
+
+msgid "Playback Settings"
+msgstr ""
+
+msgid "Please Wait"
+msgstr ""
+
+msgid "Please configure network"
+msgstr ""
+
+msgid "Please confirm new CA PIN:"
+msgstr ""
+
+msgid "Please enter CA PIN:"
+msgstr ""
+
+msgid "Please enter Conax PIN"
+msgstr ""
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter Middleware PIN"
+msgstr ""
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter new CA PIN:"
+msgstr ""
+
+msgid "Please enter parental control PIN"
+msgstr ""
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr ""
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr ""
+
+msgid "Please wait"
+msgstr ""
+
+msgid "Please wait, loading ..."
+msgstr ""
+
+msgid "Please wait, loading..."
+msgstr ""
+
+msgid "Please wait."
+msgstr ""
+
+msgid "Please wait..."
+msgstr ""
+
+msgid "Polarization"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Pre-certification debug options"
+msgstr ""
+
+msgid "Preferred Audio Track"
+msgstr ""
+
+msgid "Press Back to go to previous screen"
+msgstr ""
+
+msgid "Press EPG to enter grid view"
+msgstr ""
+
+msgid "Press EPG to enter list view"
+msgstr ""
+
+msgid "Press RED button for more features"
+msgstr ""
+
+msgid "Press Restart Now button to restart."
+msgstr ""
+
+msgid "Press and hold \"OK\" and \"MENU\" buttons until diode on remote blinks."
+msgstr ""
+
+msgid "Primary Audio Language"
+msgstr ""
+
+msgid "Primary Subtitle Language"
+msgstr ""
+
+msgid "Progressive"
+msgstr ""
+
+msgid "Prompt"
+msgstr ""
+
+msgid "Prompt when pressed"
+msgstr ""
+
+msgid "PushServer Connectivity"
+msgstr ""
+
+msgid "QR code"
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid "RCU Pairing"
+msgstr ""
+
+msgid "RCU Power Button"
+msgstr ""
+
+msgid "RF Channel"
+msgstr ""
+
+msgid "RF Tuner Statistics"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "Radio Guide"
+msgstr ""
+
+msgid "Recommended Titles:"
+msgstr ""
+
+msgid "Recording Settings"
+msgstr ""
+
+msgid "Reminders"
+msgstr ""
+
+msgid "Remote debugging"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Remove satellite"
+msgstr ""
+
+msgid "Repeat new PIN:"
+msgstr ""
+
+msgid "Restart Device"
+msgstr ""
+
+msgid "Restore Factory Defaults"
+msgstr ""
+
+msgid "Restore defaults"
+msgstr ""
+
+msgid "Retrieving channel list"
+msgstr ""
+
+msgid "Routing settings"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "S/PDIF A/V Sync"
+msgstr ""
+
+msgid "SCART Signal Type"
+msgstr ""
+
+msgid "SIMILAR TITLES:"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "SSL 1"
+msgstr ""
+
+msgid "SSL 2"
+msgstr ""
+
+msgid "SSM"
+msgstr ""
+
+msgid "STB ID"
+msgstr ""
+
+msgid "STB Mode has changed"
+msgstr ""
+
+msgid "STB Mode update is required to make the STB work correctly."
+msgstr ""
+
+msgid "STB Status"
+msgstr ""
+
+msgid "SUBSCRIBER INFO"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Satellite %s is not setup yet"
+msgstr ""
+
+msgid "Satellite Info"
+msgstr ""
+
+msgid "Satellite Name"
+msgstr ""
+
+msgid "Satellite Name:"
+msgstr ""
+
+msgid "Satellite Setup"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Scanning channels"
+msgstr ""
+
+msgid "Scanning failed"
+msgstr ""
+
+msgid "Scheduled Recordings"
+msgstr ""
+
+msgid "Screensaver Timeout"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search by category"
+msgstr ""
+
+msgid "Search by name"
+msgstr ""
+
+msgid "Searching for channels"
+msgstr ""
+
+msgid "Searching..."
+msgstr ""
+
+msgid "Secondary Audio Language"
+msgstr ""
+
+msgid "Secondary Subtitle Language"
+msgstr ""
+
+msgid "Select Time Zone"
+msgstr ""
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Serial Number / VSC:"
+msgstr ""
+
+msgid "Service Not Found - Please Contact your service representative."
+msgstr ""
+
+msgid "Set the preferred gateway"
+msgstr ""
+
+msgid "Signal Quality"
+msgstr ""
+
+msgid "Signal Strength"
+msgstr ""
+
+msgid "Software"
+msgstr ""
+
+msgid "Software Version"
+msgstr ""
+
+msgid "Sort satellites"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Spectral Inversion Mode"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Standby Mode"
+msgstr ""
+
+msgid "Standby Settings"
+msgstr ""
+
+msgid "Start Frequency"
+msgstr ""
+
+msgid "Start RCU Pairing"
+msgstr ""
+
+msgid "Status: Not available"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Strength"
+msgstr ""
+
+msgid "Stretched"
+msgstr ""
+
+msgid "Subscription Status"
+msgstr ""
+
+msgid "Such task already exists."
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Swedish"
+msgstr ""
+
+msgid "Symbol Rate"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "System Settings"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "TV Control"
+msgstr ""
+
+msgid "TV Guide"
+msgstr ""
+
+msgid "TV Size"
+msgstr ""
+
+msgid "TV Store"
+msgstr ""
+
+msgid "TV System"
+msgstr ""
+
+msgid "The directory will be deleted."
+msgstr ""
+
+msgid "The limit of simultaneous tasks has been exceeded."
+msgstr ""
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr ""
+
+msgid "This channel is not available for your operator"
+msgstr ""
+
+msgid "Time Mode"
+msgstr ""
+
+msgid "Time Settings"
+msgstr ""
+
+msgid "Time Zone"
+msgstr ""
+
+msgid "Timer"
+msgstr ""
+
+msgid "Title text template"
+msgstr ""
+
+msgid ""
+"To start USB Speed Test Utility press OK.\n"
+"The USB Speed Test Utility will measure performance of your USB drive to obtain optimal timeshift and recordings parameters.\n"
+"The USB Speed Test Utility will be unavailable until next USB drive format."
+msgstr ""
+
+msgid "Tokens Status"
+msgstr ""
+
+msgid "Transponders"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "USB"
+msgstr ""
+
+msgid "USB Speed Test Utility"
+msgstr ""
+
+msgid "Unable to change settings while recording is active"
+msgstr ""
+
+msgid "Unable to reach host. Functionality may be limited."
+msgstr ""
+
+msgid "Unique Id"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Use NIT/SDT"
+msgstr ""
+
+msgid "User Interface"
+msgstr ""
+
+msgid "VCAS connectivity"
+msgstr ""
+
+msgid "VCID"
+msgstr ""
+
+msgid "VOD"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "ViewRight DVB"
+msgstr ""
+
+msgid "ViewRight Web Connectivity"
+msgstr ""
+
+msgid "ViewRightIPTV"
+msgstr ""
+
+msgid "Visually Impaired"
+msgstr ""
+
+msgid "Voicemail error"
+msgstr ""
+
+msgid "WEB on TV"
+msgstr ""
+
+msgid "Waiting for channels"
+msgstr ""
+
+msgid "Waiting for middleware"
+msgstr ""
+
+msgid "Weather"
+msgstr ""
+
+msgid "Web Audio"
+msgstr ""
+
+msgid "WebP"
+msgstr ""
+
+msgid "WebP Image 1"
+msgstr ""
+
+msgid "WebP Image 2"
+msgstr ""
+
+msgid "WebP Image 3"
+msgstr ""
+
+msgid "WebP Image 4"
+msgstr ""
+
+msgid "WebP Image 5"
+msgstr ""
+
+msgid "WebShell"
+msgstr ""
+
+msgid "Western European"
+msgstr ""
+
+msgid "Would You like to do it now?"
+msgstr ""
+
+msgid "Wrong CA PIN."
+msgstr ""
+
+msgid "Wrong CA PIN. Try again."
+msgstr ""
+
+msgid "Wrong Start time and End time. Start time must be other than End time."
+msgstr ""
+
+msgid "X: Erotic"
+msgstr ""
+
+msgid "YouTube"
+msgstr ""
+
+msgid "YouTube Qualification Engine"
+msgstr ""
+
+msgid "YouTube Tests"
+msgstr ""
+
+msgid "dut"
+msgstr ""
+
+msgid "eng"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "spa"
+msgstr ""
+
+msgid "unknown"
+msgstr ""

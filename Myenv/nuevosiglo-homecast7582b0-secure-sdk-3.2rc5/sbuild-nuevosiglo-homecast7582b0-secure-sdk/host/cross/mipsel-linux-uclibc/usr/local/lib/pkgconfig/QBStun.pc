@@ -1,0 +1,6 @@
+Name: QBStun
+Version: 1.0.0
+Requires: QBAsyncResolver SvCore fibers ionet 
+Description: Simple Traversal of UDP through NATs protocol implementation on fibers library
+Libs: -lQBStun 
+CFlags: 

@@ -1,0 +1,6 @@
+Name: QBM3uParser
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvFoundation SvPlayerKit 
+Description: Cubiware m3u parser library
+Libs: -lQBM3uParser 
+CFlags: 

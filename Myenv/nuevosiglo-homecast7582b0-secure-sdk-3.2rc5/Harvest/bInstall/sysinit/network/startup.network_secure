@@ -1,0 +1,26 @@
+#!/bin/sh
+
+NETWORK_TYPE=$(svconf_ctl NETWORK_TYPE)
+MEDIUM=$(svconf_ctl MEDIUM)
+
+case "$1" in
+    start)
+        if [ -f /etc/firewall.rules ] && [ -n "$(which iptables-restore)" ]; then
+            iptables-restore </etc/firewall.rules
+        fi
+        if [ "$NETWORK_TYPE" = "STATIC" -a "$MEDIUM" != "WIFI" ]; then
+            init_network start
+        else
+            check_networkd &
+        fi
+    ;;
+    stop)
+        killall -9 check_networkd
+        killall -9 check_networkd
+        killall -9 check_networkd
+        init_network stop
+    ;;
+    *)
+        echo "Usage: $0 [start|stop]"
+    ;;
+esac

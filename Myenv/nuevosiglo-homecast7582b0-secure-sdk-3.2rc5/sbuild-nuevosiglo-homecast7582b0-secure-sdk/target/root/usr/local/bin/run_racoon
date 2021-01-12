@@ -1,0 +1,62 @@
+#!/bin/sh
+COMMAND=$1
+RACOON_XAUTH_CONF=vpn.racoon.xauth-psk
+SERVER_ADDR=`qbnetconf_ctl $RACOON_XAUTH_CONF.server_ip` 
+SERVER_PSK_PASSWD=`qbnetconf_ctl $RACOON_XAUTH_CONF.server_psk_passwd`
+XAUTH_LOGIN=`qbnetconf_ctl $RACOON_XAUTH_CONF.xauth_login`
+XAUTH_PASSWD=`qbnetconf_ctl $RACOON_XAUTH_CONF.xauth_passwd`
+IDENTIFIER=`qbnetconf_ctl $RACOON_XAUTH_CONF.identifier`
+PEERS_IDENTIFIER=`qbnetconf_ctl $RACOON_XAUTH_CONF.peers_identifier`
+RACOON_RUNTIME_DIR=/var/run/racoon
+SOCK=$RACOON_RUNTIME_DIR/racoon.sock
+CONF_TEMPLATE=/etc/racoon/racoon.conf
+CONF=/tmp/racoon.conf
+PSK=/tmp/psk
+RUN_RACOON_PIDFILE=$RACOON_RUNTIME_DIR/run_racoon
+
+stop_and_cleanup() {
+    killall racoon > /dev/null 2>&1
+    killall racoonctl > /dev/null 2>&1
+    rm $SOCK > /dev/null 2>&1
+    rm $PSK > /dev/null 2>&1
+    
+    if [ -e $RUN_RACOON_PIDFILE ]; then
+        kill -KILL `cat $RUN_RACOON_PIDFILE` > /dev/null 2>&1
+        rm $RUN_RACOON_PIDFILE > /dev/null 2>&1
+    fi
+}
+
+prepare_conf() {
+    cp $CONF_TEMPLATE $CONF
+    sed -i 's/$SERVER_IP/'\"$SERVER_ADDR\"'/g' $CONF
+    sed -i 's/$XAUTH_LOGIN/'$XAUTH_LOGIN'/g' $CONF
+    sed -i 's/$IDENTIFIER/'$IDENTIFIER'/g' $CONF
+    sed -i 's/$PEERS_IDENTIFIER/'$PEERS_IDENTIFIER'/g' $CONF
+    SERVER_IP=`ping -q -c 1 -t 1 $SERVER_ADDR | grep PING | sed -e "s/).*//" | sed -e "s/.*(//"`
+    echo "$PEERS_IDENTIFIER $SERVER_PSK_PASSWD" > $PSK
+    echo "$XAUTH_LOGIN $XAUTH_PASSWD" >> $PSK
+    chown root:appgroup $PSK
+    chmod 400 $PSK
+}
+
+start() {
+    echo $$ > $RUN_RACOON_PIDFILE
+    racoon -f $CONF
+    while true; do
+        if [ -e $SOCK ]; then
+            racoonctl -s $SOCK vc $SERVER_ADDR
+            if [ ${?} == 0 ]; then
+                break
+            fi
+        fi
+        sleep 1
+    done
+}
+
+if [ "$COMMAND" == "stop" ]; then
+    stop_and_cleanup
+elif [ "$COMMAND" == "start" ]; then
+    stop_and_cleanup
+    prepare_conf
+    start
+fi

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="BasicPane.settings"/>
+    <xi:include href="XMBMenuItem.settings"/>
+    <xi:include href="XMBMenuItemFocus.settings"/>
+    <xi:include href="Animation.settings"/>
+
+    <widget name="WaitPane">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>45</int></param>
+        <param tag="width"><int>320</int></param>
+        <param tag="boxWidth"><int>320</int></param>
+        <param tag="height"><int>720</int></param>
+    </widget>
+
+    <widget name="WaitAnimation" import="animation-template">
+        <param tag="xOffset"><int>87</int></param>
+        <param tag="yOffset"><int>300</int></param>
+    </widget>
+</settings>

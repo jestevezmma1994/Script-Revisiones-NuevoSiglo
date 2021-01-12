@@ -1,0 +1,4 @@
+#!/bin/sh
+echo -n "hs8001" >/etc/vod/ARCH
+
+

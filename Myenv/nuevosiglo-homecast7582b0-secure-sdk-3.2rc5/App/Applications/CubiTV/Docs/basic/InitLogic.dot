@@ -1,0 +1,8 @@
+digraph InitLogic {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    InitLogic [label="QBInitLogic" URL="\N.html" root=true]
+
+    InitLogic -> Wizard
+    InitLogic -> Channels
+}

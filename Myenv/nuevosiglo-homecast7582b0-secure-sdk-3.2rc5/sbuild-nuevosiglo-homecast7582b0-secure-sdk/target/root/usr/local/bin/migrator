@@ -1,0 +1,106 @@
+#!/bin/sh
+
+BASE_MIGRATIONS_PATH="/usr/local/share/migrations/"
+MIGRATIONS_PATH="$BASE_MIGRATIONS_PATH/`cat $BASE_MIGRATIONS_PATH/base`"
+
+# converts version number to full form (e.g. 7 -> 7.0.0, 7.5 -> 7.5.0, 7.5-1 -> 7.5.1)
+normalize() {
+    normal=$(echo $1 | tr "\-" ".")
+    while [ 1 ]; do
+        res=`echo "$normal" | grep ".*\..*\..*"` # contains two dots?
+        if [ $? -eq 1 ]; then
+            normal="$normal.0"
+        else
+            break
+        fi
+    done
+    echo "$normal"
+}
+
+is_greater_than()
+{
+    for FIELD in 1 2 3; do
+        FIRST=`normalize $1 | cut -d. -f $FIELD`
+        SECOND=`normalize $2 | cut -d. -f $FIELD`
+        if [ "$FIRST" -gt "$SECOND" ]; then
+            return 1
+        elif [ "$FIRST" -lt "$SECOND" ]; then
+            return 0
+        fi
+    done
+    return 0
+}
+
+sort_versions() {
+    { for VERSION in $1; do
+        echo -n `normalize $VERSION`
+        echo "=$VERSION"
+      done;
+    } | tr " " "\n" | sort -s -t. -k1,1n -k2,2n -k3,3n | cut -d= -f 2
+}
+
+CONFIG_VERSION=`svconf_ctl -n CONFIG_VERSION`
+if [ -z $CONFIG_VERSION ]; then
+    if [ -f /etc/vod/LASTVERSION ]; then
+        CONFIG_VERSION=`cat /etc/vod/LASTVERSION | cut -d- -f 2`
+    else
+        CONFIG_VERSION="0.0"
+    fi
+fi
+ORIGINAL_CONFIG_VERSION=`svconf_ctl -n ORIGINAL_CONFIG_VERSION`
+if [ -z $ORIGINAL_CONFIG_VERSION ]; then
+    ORIGINAL_CONFIG_VERSION=$CONFIG_VERSION
+fi
+MAXIMAL_CONFIG_VERSION=`svconf_ctl -n -i /etc/default-conf/conf.link CONFIG_VERSION`
+
+echo "STB original=$ORIGINAL_CONFIG_VERSION current=$CONFIG_VERSION software=$MAXIMAL_CONFIG_VERSION"
+
+if [ "x$CONFIG_VERSION" = "x$MAXIMAL_CONFIG_VERSION" ]; then
+    echo "no migration needed"
+    exit 0
+fi
+
+if [ "$CONFIG_VERSION" = "CURRENT" ]; then
+    echo "migration from CURRENT not supported"
+    exit 0
+fi
+
+MIGRATIONS=`ls $MIGRATIONS_PATH/migrate_to_* 2>/dev/null`
+
+if [ -z "$MIGRATIONS" ]; then
+    echo "no migrations to be found"
+    exit 0
+fi
+
+
+MIGRATIONS_VERSIONS=""
+for MIGRATION in $MIGRATIONS; do
+    MIGRATIONS_VERSIONS="$MIGRATIONS_VERSIONS `echo $MIGRATION | cut -d_ -f 3`"
+done
+
+#make a sorted list with all migrations versions and our version
+VERSIONS="`sort_versions "$MIGRATIONS_VERSIONS"`"
+
+#find all needed migrations
+VERSIONS_FOUND=""
+for VERSION in $VERSIONS; do
+    is_greater_than $VERSION $CONFIG_VERSION
+    if [ $? -eq 1 ]; then
+        VERSIONS_FOUND="$VERSIONS_FOUND $VERSION"
+    fi
+done
+if [ -z "$VERSIONS_FOUND" ]; then
+    echo "no needed migrations"
+    exit 0
+fi
+
+echo "found needed migrations $VERSIONS_FOUND"
+#VERSIONS_FOUND is sorted, so all migrations will be done in proper order
+for VERSION in $VERSIONS_FOUND; do
+    echo "executing migration to $VERSION"
+    $MIGRATIONS_PATH/migrate_to_$VERSION
+done
+
+svconf_ctl -n CONFIG_VERSION $VERSION
+
+echo "migration process finished"

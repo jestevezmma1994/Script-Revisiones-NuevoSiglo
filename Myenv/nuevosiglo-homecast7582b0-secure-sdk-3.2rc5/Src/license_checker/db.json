@@ -1,0 +1,4398 @@
+{
+    "8188eu.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "CFE": {
+        "license": "BRCM",
+        "package": "BRCM CFE"
+    },
+    "CGatesFuseVerifier": {
+        "license": "QB"
+    },
+    "HDE-test": {
+        "license": "QB"
+    },
+    "MPA_client": {
+        "license": "BSD-3C",
+        "package": "remoti"
+    },
+    "NPI_server": {
+        "license": "BSD-3C",
+        "package": "remoti"
+    },
+    "QBChannelScanningConfMigrator": {
+        "license": "QB"
+    },
+    "QBConax.ko": {
+        "license": "QB"
+    },
+    "QBConax2.ko": {
+        "license": "QB"
+    },
+    "QBConax2_ioctl.ko": {
+        "license": "QB"
+    },
+    "QBCryptoApp": {
+        "license": "QB"
+    },
+    "QBCryptoExternal-test": {
+        "license": "QB"
+    },
+    "QBCryptoExternal.ko": {
+        "license": "QB"
+    },
+    "QBCryptoExternal_ioctl.ko": {
+        "license": "QB"
+    },
+    "QBDIALServerDemo": {
+        "license": "QB"
+    },
+    "QBDescrambler.ko": {
+        "license": "QB"
+    },
+    "QBDescrambler_ioctl.ko": {
+        "license": "QB"
+    },
+    "QBHALDemo": {
+        "license": "QB"
+    },
+    "QBHotplugDaemon": {
+        "license": "QB"
+    },
+    "QBHotplugHandler": {
+        "license": "QB"
+    },
+    "QBIPCSend": {
+        "license": "QB"
+    },
+    "QBIPCSystemCallDaemon": {
+        "license": "QB"
+    },
+    "QBInputDump": {
+        "license": "QB"
+    },
+    "QBInputRecord": {
+        "license": "QB"
+    },
+    "QBInputWaitForKey": {
+        "license": "QB"
+    },
+    "QBKaonMPFactoryTool": {
+        "license": "QB"
+    },
+    "QBNetlinkDaemon": {
+        "license": "QB"
+    },
+    "QBNetwork-conf_migrator": {
+        "license": "QB"
+    },
+    "QBNetworkManager": {
+        "license": "QB"
+    },
+    "QBNexusPlaypump.ko": {
+        "license": "QB"
+    },
+    "QBNexusPlaypump_device.ko": {
+        "license": "QB"
+    },
+    "QBRecordFSMigration": {
+        "license": "QB"
+    },
+    "QBRecordFSProbe": {
+        "license": "QB"
+    },
+    "QBSecureUpgrade": {
+        "license": "QB"
+    },
+    "QBTunerFilterDump": {
+        "license": "QB"
+    },
+    "QBTunerReadDemo": {
+        "license": "QB"
+    },
+    "QBUpgrade": {
+        "license": "QB"
+    },
+    "QBWiFiNetworkConfMigrator": {
+        "license": "QB"
+    },
+    "QBZTEIndividualizationTool": {
+        "license": "QB"
+    },
+    "SIMPLE_client": {
+        "license": "BSD-3C",
+        "package": "remoti"
+    },
+    "WindowServer": {
+        "license": "QB"
+    },
+    "ZRC_client": {
+        "comment": "However this code is subject to additional TI-proprietary license. Check out OpenSource/remoti/Makefile for more info",
+        "license": "BSD-3C",
+        "package": "remoti"
+    },
+    "_copyright": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "asix.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "bcmdriver.ko": {
+        "comment": "This is obviously BRCM module, but its license is set to Prioprietary thus we don't know the true license just by looking at the .ko file. So we will assume QB is as strong as BRCM here.",
+        "license": "QB"
+    },
+    "blkid": {
+        "license": "LGPLv2",
+        "package": "utils-linux"
+    },
+    "brctl": {
+        "license": "GPLv2",
+        "package": "bridge-utils"
+    },
+    "bread": {
+        "license": "QB"
+    },
+    "browser": {
+        "comment": "This work is derivative of BRCM browser example",
+        "license": "QB"
+    },
+    "busybox": {
+        "license": "GPLv2",
+        "package": "BusyBox"
+    },
+    "bwrite": {
+        "license": "QB"
+    },
+    "cas_core.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "cas_event.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "cas_info.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "cas_tool.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "cdc_ether.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "charon": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "checksign": {
+        "license": "QB"
+    },
+    "clear": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "conax_core.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "conax_event.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "conax_info.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "conax_tool.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "controller.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "cubitv": {
+        "license": "QB"
+    },
+    "curl": {
+        "license": "MIT",
+        "package": "cURL"
+    },
+    "dbclient": {
+        "license": "MIT",
+        "package": "Dropbear SSH"
+    },
+    "descrambler.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "dhclient": {
+        "license": "BSD",
+        "package": "DHCP ISC"
+    },
+    "dmsetup": {
+        "license": "GPLv2",
+        "package": "LVM2"
+    },
+    "docsis_init": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "docsis_monitor": {
+        "license": "QB"
+    },
+    "dropbear": {
+        "license": "MIT",
+        "package": "Dropbear SSH"
+    },
+    "dropbearkey": {
+        "license": "MIT",
+        "package": "Dropbear SSH"
+    },
+    "drvnvram_ioctl.ko": {
+        "license": "Intek",
+        "package": "Intek Driver"
+    },
+    "drvscart_ioctl.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "drvtuner_core.ko": {
+        "license": "Intek",
+        "package": "Intek Driver"
+    },
+    "drvtuner_ioctl.ko": {
+        "license": "Intek",
+        "package": "Intek Driver"
+    },
+    "drvusrio_ioctl.ko": {
+        "license": "Intek",
+        "package": "Intek Driver"
+    },
+    "ehci-brcm.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ehci-hcd.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "embx.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "embxloopback.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "embxmailbox.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "embxshell.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "embxshm.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "embxshmc.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "evdev.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ext2.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ext3.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ext4.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "fat.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "flash_erase": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "flashcp": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "free": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "ftdi_sio.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "fw_printenv": {
+        "license": "QB"
+    },
+    "get_addr": {
+        "license": "QB"
+    },
+    "gst-device-monitor-1.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "gst-discoverer-1.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "gst-inspect-1.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "gst-launch-1.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "gst-play-1.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "gst-plugin-scanner": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "gst-ptp-helper": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "gst-stats-1.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "gst-typefind-1.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "hcd-stm.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "hid-generic.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "hid.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "hwmon.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "i2c-algo-bit.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "i2c-core.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "i2c-dev.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "i2c-stm.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ics.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ics_user.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ieee80211.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ieee80211_crypt.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ieee80211_crypt_wep.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "iomem.ko": {
+        "license": "QB"
+    },
+    "ip_client": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "ip_tables.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ip_tunnel.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "iperf": {
+        "license": "BSD",
+        "package": "iperf"
+    },
+    "ipt_addrtype.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "iptable_filter.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "iptable_nat.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "iptable_raw.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "iwconfig": {
+        "license": "GPLv2",
+        "package": "wireless_tools"
+    },
+    "jbd.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "jbd2.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "jffs2.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "latens_http_proxy": {
+        "license": "QB"
+    },
+    "latens_sign_verifier": {
+        "license": "QB"
+    },
+    "ld-linux-armhf.so.3": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "ld-linux-x86-64.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "ld-linux.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "ld-uClibc.so.0": {
+        "license": "LGPLv2.1",
+        "package": "uClibc"
+    },
+    "ld.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "lib4758cca.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libAMAZON.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libATESSSO.so": {
+        "license": "QB"
+    },
+    "libAXE.so": {
+        "license": "QB"
+    },
+    "libBrokenLocale.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libCAGE.so": {
+        "license": "QB"
+    },
+    "libCCEPG.so": {
+        "license": "QB"
+    },
+    "libCCWidgets.so": {
+        "license": "QB"
+    },
+    "libCUIT.so": {
+        "license": "QB"
+    },
+    "libCubiConnect-logic.so": {
+        "license": "QB"
+    },
+    "libCubiConnect.so": {
+        "license": "QB"
+    },
+    "libCubiTV-Columbus-Logic.so": {
+        "license": "QB"
+    },
+    "libCubiTV-Columbus-Panama-Logic.so": {
+        "license": "QB"
+    },
+    "libCubiTV-Supercanal-logic.so": {
+        "license": "QB"
+    },
+    "libCubiTV-NuevoSiglo-logic.so": {
+        "license": "QB"
+    },
+    "libCubiTV-TAG-logic.so": {
+        "license": "QB"
+    },
+    "libCubiTV-logic.so": {
+        "license": "QB"
+    },
+    "libCubiTV.so": {
+        "license": "QB"
+    },
+    "libCubiwareMWClient.so": {
+        "license": "QB"
+    },
+    "libCutvManager.so": {
+        "license": "QB"
+    },
+    "libCxPlayReadyHAL-common.so": {
+        "license": "QB"
+    },
+    "libCxPlayReadyHAL.so": {
+        "license": "QB"
+    },
+    "libDIALServer.so.0.1": {
+        "comment": "In fact DIAL code is MIT-licensed (C) by Netflix. However they embedd a BSD-2C code there, so... assume BSD-2C for the whole thing",
+        "license": "BSD",
+        "package": "dial-reference"
+    },
+    "libEGL.so": {
+        "comment": "This is really a symbolic link to libMali.so... so something not really supported by license_checker, so we needed to add libEGL by hand",
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libFakeNPvrPlugin.so": {
+        "license": "QB"
+    },
+    "libGLESv2.so": {
+        "comment": "This is really a symbolic link to libMali.so... so something not really supported by license_checker, so we needed to add libEGL by hand",
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libKILHMC111.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libKILKSTB4007.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libKILVM1320.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libKILVM5000.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libKILVMM1003.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libKILVMM1014.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libKILVMM1023.so": {
+        "license": "Kaon",
+        "package": "ViewRight DVB"
+    },
+    "libMali.so": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libMillicom-Utils.so": {
+        "license": "QB"
+    },
+    "libMsFS.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libNPvrManager.so": {
+        "license": "QB"
+    },
+    "libQBAdvert.so": {
+        "license": "QB"
+    },
+    "libQBAppComponentsManager.so": {
+        "license": "QB"
+    },
+    "libQBAppKit.so": {
+        "license": "QB"
+    },
+    "libQBAppLogsService.so": {
+        "license": "QB"
+    },
+    "libQBApplicationController.so": {
+        "license": "QB"
+    },
+    "libQBAppsManager.so": {
+        "license": "QB"
+    },
+    "libQBAsyncResolver.so": {
+        "license": "QB"
+    },
+    "libQBAudio.so": {
+        "license": "QB"
+    },
+    "libQBAudioHAL-alsa.so": {
+        "license": "QB"
+    },
+    "libQBCAS.so": {
+        "license": "QB"
+    },
+    "libQBCASCommon.so": {
+        "license": "QB"
+    },
+    "libQBCASCommonCryptoguard.so": {
+        "license": "QB"
+    },
+    "libQBCASCommonExternal.so": {
+        "license": "QB"
+    },
+    "libQBCASCommonGeneric.so": {
+        "license": "QB"
+    },
+    "libQBCASInternalEcmService.so": {
+        "license": "QB"
+    },
+    "libQBCASKeyManager.so": {
+        "license": "QB"
+    },
+    "libQBCall2ActionClient.so": {
+        "license": "QB"
+    },
+    "libQBCardDriver.so": {
+        "license": "QB"
+    },
+    "libQBCardDriverHAL-stapi-base-sys-stubs.so": {
+        "license": "QB"
+    },
+    "libQBCardDriverHAL.so": {
+        "license": "QB"
+    },
+    "libQBCarousel.so": {
+        "license": "QB"
+    },
+    "libQBCatManager.so": {
+        "license": "QB"
+    },
+    "libQBClosedCaptionSubsManager.so": {
+        "license": "QB"
+    },
+    "libQBConax.so": {
+        "license": "QB"
+    },
+    "libQBConax2.so": {
+        "license": "QB"
+    },
+    "libQBConax2.so.1.0.0": {
+        "comment": "This is Ali QBCOnax2 implementation, so the name may be a little bit misleading",
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libQBConaxCommon.so": {
+        "license": "QB"
+    },
+    "libQBConaxCrypto.so": {
+        "license": "QB"
+    },
+    "libQBConaxCryptoHAL.so": {
+        "license": "QB"
+    },
+    "libQBConaxCustomHandlers.so": {
+        "license": "QB"
+    },
+    "libQBConaxDataProtocol.so": {
+        "license": "QB"
+    },
+    "libQBConaxEMMPullService.so": {
+        "license": "QB"
+    },
+    "libQBConaxHDEService.so": {
+        "license": "QB"
+    },
+    "libQBConaxLibrary.so": {
+        "license": "QB"
+    },
+    "libQBConaxPlayReady.so": {
+        "license": "QB"
+    },
+    "libQBConaxStore.so": {
+        "license": "QB"
+    },
+    "libQBConaxStoreHAL.so": {
+        "license": "QB"
+    },
+    "libQBConf.so": {
+        "license": "QB"
+    },
+    "libQBConfig.so": {
+        "license": "QB"
+    },
+    "libQBConfigCore.so": {
+        "license": "QB"
+    },
+    "libQBContentManager.so": {
+        "license": "QB"
+    },
+    "libQBContentSource.so": {
+        "license": "QB"
+    },
+    "libQBCoreUtils.so": {
+        "license": "QB"
+    },
+    "libQBCrypto-common.so": {
+        "license": "QB"
+    },
+    "libQBCrypto.so": {
+        "license": "QB"
+    },
+    "libQBCryptoExternal.so": {
+        "license": "QB"
+    },
+    "libQBDIALServerManager.so": {
+        "license": "QB"
+    },
+    "libQBDLNAClient.so": {
+        "license": "QB"
+    },
+    "libQBDRMManager.so": {
+        "license": "QB"
+    },
+    "libQBDSMCC.so": {
+        "license": "QB"
+    },
+    "libQBDSMCCClient.so": {
+        "license": "QB"
+    },
+    "libQBDVBMuxesMap.so": {
+        "license": "QB"
+    },
+    "libQBDVBScanner.so": {
+        "license": "QB"
+    },
+    "libQBDVBTableMonitor.so": {
+        "license": "QB"
+    },
+    "libQBDataCache.so": {
+        "license": "QB"
+    },
+    "libQBDataModel3.so": {
+        "license": "QB"
+    },
+    "libQBDataProvider.so": {
+        "license": "QB"
+    },
+    "libQBDecoder-common.so": {
+        "license": "QB"
+    },
+    "libQBDecoder.so": {
+        "license": "QB"
+    },
+    "libQBDemux.so": {
+        "license": "QB"
+    },
+    "libQBDemuxHAL-ali.so": {
+        "license": "QB"
+    },
+    "libQBDemuxHAL-mstar.so": {
+        "license": "QB"
+    },
+    "libQBDemuxHAL-nexus.so": {
+        "license": "QB"
+    },
+    "libQBDemuxHAL-soft.so": {
+        "license": "QB"
+    },
+    "libQBDemuxHAL-stapi.so": {
+        "license": "QB"
+    },
+    "libQBDescrambler.so": {
+        "license": "QB"
+    },
+    "libQBDescramblerHAL-common.so": {
+        "license": "QB"
+    },
+    "libQBDescramblerHAL.so": {
+        "license": "QB"
+    },
+    "libQBDiagnostics.so": {
+        "license": "QB"
+    },
+    "libQBDvbSubs.so": {
+        "license": "QB"
+    },
+    "libQBDvbSubsManager.so": {
+        "license": "QB"
+    },
+    "libQBExtSubsManager.so": {
+        "license": "QB"
+    },
+    "libQBFSReader.so": {
+        "license": "QB"
+    },
+    "libQBGlobalColorTransformation.so": {
+        "license": "QB"
+    },
+    "libQBHlsKeyProvider.so": {
+        "license": "QB"
+    },
+    "libQBICSmartcard.so": {
+        "license": "QB"
+    },
+    "libQBIPC.so": {
+        "license": "QB"
+    },
+    "libQBIPCSocket.so": {
+        "license": "QB"
+    },
+    "libQBIPDemuxFilter.so": {
+        "license": "QB"
+    },
+    "libQBIPStreamClient.so": {
+        "license": "QB"
+    },
+    "libQBId3Parser.so": {
+        "license": "QB"
+    },
+    "libQBInput.so": {
+        "license": "QB"
+    },
+    "libQBLatens.so": {
+        "license": "QB"
+    },
+    "libQBLatensHAL.so": {
+        "license": "QB"
+    },
+    "libQBLatensInterface.so": {
+        "license": "QB"
+    },
+    "libQBLatensLibLoader.so": {
+        "license": "QB"
+    },
+    "libQBM3uParser.so": {
+        "license": "QB"
+    },
+    "libQBMTQueue.so": {
+        "license": "QB"
+    },
+    "libQBMWClient.so": {
+        "license": "QB"
+    },
+    "libQBMWClientDemo.so": {
+        "license": "QB"
+    },
+    "libQBMenu.so": {
+        "license": "QB"
+    },
+    "libQBMiddlewareManager.so": {
+        "license": "QB"
+    },
+    "libQBMosaicService.so": {
+        "license": "QB"
+    },
+    "libQBMp4Parser.so": {
+        "license": "QB"
+    },
+    "libQBNATMonitor.so": {
+        "license": "QB"
+    },
+    "libQBNULLPVRProvider.so": {
+        "license": "QB"
+    },
+    "libQBNetManager.so": {
+        "license": "QB"
+    },
+    "libQBNetlink.so": {
+        "license": "QB"
+    },
+    "libQBNetworkManager.so": {
+        "license": "QB"
+    },
+    "libQBNetworkMonitor.so": {
+        "license": "QB"
+    },
+    "libQBNexusPlaypump.so": {
+        "license": "QB"
+    },
+    "libQBOSD.so": {
+        "license": "QB"
+    },
+    "libQBOSK.so": {
+        "license": "QB"
+    },
+    "libQBOffers.so": {
+        "license": "QB"
+    },
+    "libQBOffersManager.so": {
+        "license": "QB"
+    },
+    "libQBOpenSSL.so": {
+        "license": "QB"
+    },
+    "libQBPCRatings.so": {
+        "license": "QB"
+    },
+    "libQBPVRProvider.so": {
+        "license": "QB"
+    },
+    "libQBPlatformConfigHAL-stapi.so": {
+        "license": "QB"
+    },
+    "libQBPlatformHAL-common.so": {
+        "license": "QB"
+    },
+    "libQBPlatformHAL.so": {
+        "license": "QB"
+    },
+    "libQBPlayReady.so": {
+        "license": "QB"
+    },
+    "libQBPlayReadyInterface.so": {
+        "license": "QB"
+    },
+    "libQBPlayReadyManager.so": {
+        "license": "QB"
+    },
+    "libQBPlayerContext.so": {
+        "license": "QB"
+    },
+    "libQBPlayerControllers.so": {
+        "license": "QB"
+    },
+    "libQBRPC++.so": {
+        "license": "QB"
+    },
+    "libQBRPC.so": {
+        "license": "QB"
+    },
+    "libQBRPCInterfaces++.so": {
+        "license": "QB"
+    },
+    "libQBRPCInterfaces.so": {
+        "license": "QB"
+    },
+    "libQBRecordFS.so": {
+        "license": "QB"
+    },
+    "libQBReencryptionManager.so": {
+        "license": "QB"
+    },
+    "libQBResourceManager.so": {
+        "license": "QB"
+    },
+    "libQBRf4ceHAL.so": {
+        "license": "QB"
+    },
+    "libQBSHMem.so": {
+        "license": "QB"
+    },
+    "libQBSMPTETTPngDecoder.so": {
+        "license": "QB"
+    },
+    "libQBSchedManager.so": {
+        "license": "QB"
+    },
+    "libQBScte27Subs.so": {
+        "license": "QB"
+    },
+    "libQBSearch.so": {
+        "license": "QB"
+    },
+    "libQBSecureLogManager.so": {
+        "license": "QB"
+    },
+    "libQBSecurePackage.so": {
+        "license": "QB"
+    },
+    "libQBSecurityUtils.so": {
+        "license": "QB"
+    },
+    "libQBServices.so": {
+        "license": "QB"
+    },
+    "libQBShellCmds.so": {
+        "license": "QB"
+    },
+    "libQBSmartCardMonitor.so": {
+        "license": "QB"
+    },
+    "libQBSmartcard2-interface.so": {
+        "license": "QB"
+    },
+    "libQBSmartcardTweaks.so": {
+        "license": "QB"
+    },
+    "libQBSmoothStreaming.so": {
+        "license": "QB"
+    },
+    "libQBSplashLib.so": {
+        "license": "QB"
+    },
+    "libQBStaticStorage.so": {
+        "license": "QB"
+    },
+    "libQBStringUtils.so": {
+        "license": "QB"
+    },
+    "libQBStun.so": {
+        "license": "QB"
+    },
+    "libQBSubsManager.so": {
+        "license": "QB"
+    },
+    "libQBTSParser.so": {
+        "license": "QB"
+    },
+    "libQBTVContext.so": {
+        "license": "QB"
+    },
+    "libQBTeletextDisplayer.so": {
+        "license": "QB"
+    },
+    "libQBTeletextManager.so": {
+        "license": "QB"
+    },
+    "libQBTextSubsManager.so": {
+        "license": "QB"
+    },
+    "libQBTextUtils.so": {
+        "license": "QB"
+    },
+    "libQBTileGrid.so": {
+        "license": "QB"
+    },
+    "libQBToolboxDigitalClient.so": {
+        "license": "QB"
+    },
+    "libQBTuner.so": {
+        "license": "QB"
+    },
+    "libQBTunerFilter.so": {
+        "license": "QB"
+    },
+    "libQBTunerHAL.so": {
+        "license": "QB"
+    },
+    "libQBTunerManager.so": {
+        "license": "QB"
+    },
+    "libQBTunerMonitor.so": {
+        "license": "QB"
+    },
+    "libQBTunerReserver.so": {
+        "license": "QB"
+    },
+    "libQBUSBPerfTester.so": {
+        "license": "QB"
+    },
+    "libQBUdpReader.so": {
+        "license": "QB"
+    },
+    "libQBUnitTestUtils.so": {
+        "license": "QB"
+    },
+    "libQBUpgrade.so": {
+        "license": "QB"
+    },
+    "libQBUtils.so": {
+        "license": "QB"
+    },
+    "libQBVBITeletext.so": {
+        "license": "QB"
+    },
+    "libQBViewRight.so": {
+        "license": "QB"
+    },
+    "libQBViewRightDvb-interface.so": {
+        "license": "QB"
+    },
+    "libQBViewRightECMHandler.so": {
+        "license": "QB"
+    },
+    "libQBViewRightEMMHandler.so": {
+        "license": "QB"
+    },
+    "libQBViewRightHAL-common.so": {
+        "license": "QB"
+    },
+    "libQBViewRightHAL.so": {
+        "license": "QB"
+    },
+    "libQBViewRightIPTV-common.so": {
+        "license": "QB"
+    },
+    "libQBViewRightIPTV.so": {
+        "license": "QB"
+    },
+    "libQBViewRightIPTVHAL.so": {
+        "license": "QB"
+    },
+    "libQBViewRightIndividualization.so": {
+        "license": "QB"
+    },
+    "libQBViewRightIndividualizationImpl.so": {
+        "license": "QB"
+    },
+    "libQBViewRightWeb.so": {
+        "license": "QB"
+    },
+    "libQBViewport.so": {
+        "license": "QB"
+    },
+    "libQBVmSmartcardLibrary.so": {
+        "license": "QB"
+    },
+    "libQBVoDClient.so": {
+        "license": "QB"
+    },
+    "libQBWS.so": {
+        "license": "QB"
+    },
+    "libQBWebSocket.so": {
+        "license": "QB"
+    },
+    "libQBWebVTTSubsManager.so": {
+        "license": "QB"
+    },
+    "libQBWidgets.so": {
+        "license": "QB"
+    },
+    "libQBWindows.so": {
+        "license": "QB"
+    },
+    "libQBXHTMLWidgets.so": {
+        "license": "QB"
+    },
+    "libQuadriCast-BDMDVBInterface.so": {
+        "license": "QB"
+    },
+    "libQuadriCast-MStore.so.1.0": {
+        "license": "Quadrille",
+        "package": "Quadricast"
+    },
+    "libQuadriCast-MStoreVoD.so": {
+        "license": "QB"
+    },
+    "libSegFault.so": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libSvCLI.so": {
+        "license": "QB"
+    },
+    "libSvConf.so": {
+        "license": "QB"
+    },
+    "libSvCore.so": {
+        "license": "QB"
+    },
+    "libSvDRM.so": {
+        "license": "QB"
+    },
+    "libSvDataBucket2.so": {
+        "license": "QB"
+    },
+    "libSvEPG.so": {
+        "license": "QB"
+    },
+    "libSvEPGDataLayer.so": {
+        "license": "QB"
+    },
+    "libSvFoundation.so": {
+        "license": "QB"
+    },
+    "libSvGfxHAL-GLES20.so": {
+        "license": "QB"
+    },
+    "libSvGfxHAL-common.so": {
+        "license": "QB"
+    },
+    "libSvGfxHAL.so": {
+        "license": "QB"
+    },
+    "libSvHTTPClient.so": {
+        "license": "QB"
+    },
+    "libSvJSON.so": {
+        "license": "QB"
+    },
+    "libSvJSONRPC.so": {
+        "license": "QB"
+    },
+    "libSvPlayerControllers.so": {
+        "license": "QB"
+    },
+    "libSvPlayerKit.so": {
+        "license": "QB"
+    },
+    "libSvPlayerManager.so": {
+        "license": "QB"
+    },
+    "libSvProfile.so": {
+        "license": "QB"
+    },
+    "libSvQuirks.so": {
+        "license": "QB"
+    },
+    "libSvResourceBundle.so": {
+        "license": "QB"
+    },
+    "libSvRtsp.so": {
+        "license": "QB"
+    },
+    "libSvSettingsManager.so": {
+        "license": "QB"
+    },
+    "libSvXMLRPCClient.so": {
+        "license": "QB"
+    },
+    "libTiVoClient.so": {
+        "license": "QB"
+    },
+    "libTiVoLite-Millicom-logic.so": {
+        "license": "QB"
+    },
+    "libTiVoLite.so": {
+        "license": "QB"
+    },
+    "libTiVoLiteUI.so": {
+        "license": "QB"
+    },
+    "libTiVoPartnerPolicies.so": {
+        "license": "QB"
+    },
+    "libTiVoServices.so": {
+        "license": "QB"
+    },
+    "libTranslationMergerHeaders.so": {
+        "license": "QB"
+    },
+    "libTraxisWebClient.so": {
+        "license": "QB"
+    },
+    "libUMP.so": {
+        "comment": "Part of ALi DDK/AUI release, contains libump.so in binary form, but this is most likely Apache 2.0 license for the original",
+        "license": "ALi",
+        "package": "libump"
+    },
+    "libX11-xcb.so.1": {
+        "license": "MIT",
+        "package": "Xlib"
+    },
+    "libX11.so.6": {
+        "license": "MIT",
+        "package": "Xlib"
+    },
+    "libXMB2.so": {
+        "license": "QB"
+    },
+    "libXau.so.6": {
+        "license": "MIT",
+        "package": "Xlib"
+    },
+    "libXext.so.6": {
+        "license": "MIT",
+        "package": "Xlib"
+    },
+    "libZTEindividual.so": {
+        "license": "ZTE",
+        "package": "ZTE Individualization"
+    },
+    "libaep.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libaliplatform-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalipltflog-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislavsync.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislcc.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislce.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislcic-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislcli.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalisldis.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalisldmx.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalisldsc.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislevent.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislfake-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislhdmi.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislinput.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislnim.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislotp-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislpe.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislsbm.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislscart-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislsdec.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislsmc.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislsnd.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislsoc-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislstandby.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislstorage.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislsysinfo.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalisltrng.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalisltsg.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalisltsi.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislvbi.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislvdec.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libalislwatchdog-0.0.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libaliunity.so.0": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libanl.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libapiACE.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiACP.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiAUDIO.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiCEC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiDAC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiDLC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiDMX.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiGFX.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiGOP.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiGPD.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiHDMITX.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiJPEG.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiPNL.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiSWI2C.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiVDEC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libapiXC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libasan.so.0": {
+        "license": "MIT",
+        "package": "glibc"
+    },
+    "libasf.so": {
+        "license": "QB"
+    },
+    "libasm.so.1": {
+        "license": "GPLv2",
+        "package": "glibc"
+    },
+    "libasound.so.2": {
+        "license": "LGPLv2",
+        "package": "alsa"
+    },
+    "libata.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "libatalla.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libatomic.so.1": {
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libattr.so.1": {
+        "license": "LGPLv2.1",
+        "package": "attr"
+    },
+    "libaui.so": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libautoplayer.so": {
+        "license": "QB"
+    },
+    "libavcodec.so.53": {
+        "license": "LGPLv2.1",
+        "package": "FFmpeg"
+    },
+    "libavdevice.so.53": {
+        "license": "LGPLv2.1",
+        "package": "FFmpeg"
+    },
+    "libavformat.so.53": {
+        "license": "LGPLv2.1",
+        "package": "FFmpeg"
+    },
+    "libavutil.so.51": {
+        "license": "LGPLv2.1",
+        "package": "FFmpeg"
+    },
+    "libb_os.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libb_playback_ip.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libb_psip.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbcrypt.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbcrypt2.so.1.0": {
+        "license": "VMX",
+        "package": "ViewRight DVB"
+    },
+    "libbdlna-dmc.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbdlna-dmp.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbdlna-dms-aal.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbdlna-dms.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbdlna-nexus.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libbdlna.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libblkid.so.1": {
+        "license": "LGPLv2.1",
+        "package": "utils-linux"
+    },
+    "libc.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libc.so.6": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libcairo-script-interpreter.so.2": {
+        "license": "LGPLv2.1",
+        "package": "Cairo"
+    },
+    "libcairo.so.2": {
+        "license": "LGPLv2.1",
+        "package": "Cairo"
+    },
+    "libcap.so.2": {
+        "license": "BSD",
+        "package": "libcap"
+    },
+    "libcapi.so": {
+        "license": "SSLeay",
+        "package": "libcap"
+    },
+    "libcares.so.2": {
+        "license": "MIT",
+        "package": "c-ares"
+    },
+    "libcashmere.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libcfont.so.0": {
+        "license": "GPLv2",
+        "package": "console-tools"
+    },
+    "libcharon.so.0": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libcharset.so.1": {
+        "license": "LGPLv2",
+        "package": "libiconv"
+    },
+    "libcheck.so.0": {
+        "license": "LGPLv2.1",
+        "package": "check"
+    },
+    "libchil.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libcidn.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libcmndrm.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libcmndrm_tl.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libcmndrmprdy.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libcom_err.so.2": {
+        "license": "MIT",
+        "package": "e2fsprogs"
+    },
+    "libconsole.so.0": {
+        "license": "GPLv2",
+        "package": "console-tools"
+    },
+    "libcontainers.so": {
+        "license": "QB"
+    },
+    "libcrc32c.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "libcrypt.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libcrypt.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libcrypto.so.1.0.0": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libcswift.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libctutils.so.0": {
+        "license": "GPLv2",
+        "package": "console-tools"
+    },
+    "libcurl.so.4": {
+        "license": "MIT",
+        "package": "cURL"
+    },
+    "libdataformat.so": {
+        "license": "QB"
+    },
+    "libdevmapper.so.1.02": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirect-1.4.so.6": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirect-1.7.so.1": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirect-1.7.so.7": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirectfb-1.4.so.6": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirectfb-1.7.so.1": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirectfb-1.7.so.7": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirectfb_alic3503.so": {
+        "license": "ALi",
+        "package": "ALi DDK/AUI"
+    },
+    "libdirectfb_bcmnexus_gfx.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_ir.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_ir_keycodes_cirnec.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_ir_keycodes_generic.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_ir_keycodes_passthrough.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_ir_keycodes_remotea.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_sys-14.1.so.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_sys-15.1.so.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_bcmnexus_sys-16.1.so.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdirectfb_dummy.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirectfb_fbdev.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdirectfbwm_default.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libdl.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libdl.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libdrm.so.2": {
+        "license": "MIT",
+        "package": "libdrm"
+    },
+    "libdrm_intel.so.1": {
+        "license": "MIT",
+        "package": "libdrm"
+    },
+    "libdrm_radeon.so.1": {
+        "license": "MIT",
+        "package": "libdrm"
+    },
+    "libdrmrootfs.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libdrvAESDMA.so": {
+        "license": "GPLv2",
+        "package": "MI SDK"
+    },
+    "libdrvCA2.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvCH34.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvCIPHER.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvCPU.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvDDC2BI.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvDEMOD.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvDSCMB2.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvGPIO.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvHWI2C.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvIPAUTH.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvIR.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvMPIF.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvMSPI.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvMVOP.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvPCMCIA.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvPM.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvPWM.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvPWS.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvRTC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvSAR.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvSC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvSERFLASH.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvURDMA.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvVBI.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvVE.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvWBLE.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvWDT.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libdrvdvbt2_extdemod.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libe2p.so.2": {
+        "license": "LGPLv2",
+        "package": "e2fsprogs"
+    },
+    "libedit.so.0": {
+        "license": "BSD-4C",
+        "package": "libedit"
+    },
+    "libelf.so.1": {
+        "license": "GPLv2",
+        "package": "glibc"
+    },
+    "liberror_log.so": {
+        "license": "QB"
+    },
+    "libexpat.so.1": {
+        "license": "MIT",
+        "package": "expat"
+    },
+    "libexslt.so.0": {
+        "license": "MIT",
+        "package": "expat"
+    },
+    "libext2fs.so.2": {
+        "license": "LGPLv2",
+        "package": "e2fsprogs"
+    },
+    "libffi.so.5": {
+        "license": "MIT",
+        "package": "libffi"
+    },
+    "libffi.so.6": {
+        "license": "MIT",
+        "package": "libffi"
+    },
+    "libfibers.so": {
+        "license": "QB"
+    },
+    "libfontconfig.so.1": {
+        "license": "MIT",
+        "package": "fontconfig"
+    },
+    "libform.so.5": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "libfreetype.so.6": {
+        "license": "FTL",
+        "package": "FreeType"
+    },
+    "libfusion-1.4.so.6": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libfusion-1.7.so.1": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libfusion-1.7.so.7": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libgalileo.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libgcc_s.so.1": {
+        "exception": "1",
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libgif.so.4": {
+        "license": "MIT",
+        "package": "GIFLIB"
+    },
+    "libgif.so.7": {
+        "license": "MIT",
+        "package": "GIFLIB"
+    },
+    "libgio-2.0.so.0": {
+        "license": "LGPLv2",
+        "package": "GLib"
+    },
+    "libglib-2.0.so.0": {
+        "license": "LGPLv2",
+        "package": "GLib"
+    },
+    "libgmodule-2.0.so.0": {
+        "license": "LGPLv2",
+        "package": "GLib"
+    },
+    "libgmp.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libgmp.so.27": {
+        "comment": "libgmp",
+        "license": "GPLv2",
+        "package": "GNU Multi Precision Arithmetic Library"
+    },
+    "libgobject-2.0.so.0": {
+        "license": "LGPLv2",
+        "package": "GLib"
+    },
+    "libgomp.so.1": {
+        "exception": "1",
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libgost.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libgstaccurip.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstadaptivedemux-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstadder.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstadpcmdec.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstadpcmenc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstaiff.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstalaw.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstallocators-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstalpha.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstalphacolor.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstapetag.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstapp-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstapp-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstapp.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstasf.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-ugly"
+    },
+    "libgstasfmux.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstaudio-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstaudio-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstaudioconvert.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstaudiofx.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstaudiofxbad.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstaudiomixer.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstaudioparsers.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstaudiorate.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstaudioresample.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstaudiotestsrc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstaudiovisualizers.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstauparse.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstautoconvert.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstautodetect.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstavi.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstbadaudio-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstbadbase-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstbadvideo-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstbase-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstbase-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstbasecamerabinsrc-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstbayer.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstcamerabin2.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstcdda-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstcodecparsers-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstcoloreffects.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstcompositor.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstcontroller-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstcontroller-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstcoreelements.so": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstcoreindexers.so": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstcoretracers.so": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstcurl.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstcutter.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstdashdemux.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdataprotocol-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstdataurisrc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdebug.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstdebugutilsbad.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdecklink.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdecodebin.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstdecodebin2.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstdeinterlace.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstdtls.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdtmf.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstdvbsuboverlay.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdvdlpcmdec.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-ugly"
+    },
+    "libgstdvdspu.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstdvdsub.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-ugly"
+    },
+    "libgsteffectv.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstencodebin.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstequalizer.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstfestival.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstffmpegcolorspace.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstfft-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstfft-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstfieldanalysis.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstflv.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstflxdec.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstfreeverb.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstfrei0r.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstgaudieffects.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstgdp.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstgeometrictransform.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstgoom.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstgoom2k1.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgsthls.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgsticydemux.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstid3demux.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstid3tag.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstimagefreeze.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstinsertbin-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstinter.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstinterfaces-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstinterlace.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstinterleave.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstisomp4.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstivfparse.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstivtc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstjp2kdecimator.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstjpeg.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstjpegformat.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstlevel.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstmatroska.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstmidi.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstmpegpsdemux.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstmpegpsmux.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstmpegts-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstmpegtsdemux.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstmpegtsmux.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstmpg123.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-ugly"
+    },
+    "libgstmulaw.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstmultifile.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstmultipart.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstmxf.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstnavigationtest.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstnet-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstnet-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstnetbuffer-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstnetsim.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstoss4audio.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstossaudio.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstpbutils-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstpbutils-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstpcapparse.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstphotography-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstplayback.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstplaybin.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-good"
+    },
+    "libgstplayer-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstpnm.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstrawparse.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstreamer-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstreamer-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gstreamer"
+    },
+    "libgstremovesilence.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstreplaygain.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstriff-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstriff-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstrmdemux.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-ugly"
+    },
+    "libgstrtp-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstrtp-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstrtp.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstrtpmanager.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstrtponvif.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstrtsp-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstrtsp-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstrtsp.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstsdp-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstsdp-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstsdpelem.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsegmentclip.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstshapewipe.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstshm.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsiren.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsmooth.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsmoothstreaming.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsmpte.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstsouphttpsrc.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstspectrum.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstspeed.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgststereo.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsubenc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstsubparse.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgsttag-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgsttag-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgsttypefindfunctions.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstudp.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgsturidownloader-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvcdsrc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvideo-0.10.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstvideo-1.0.so.0": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstvideobox.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstvideoconvert.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstvideocrop.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstvideofilter.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstvideofiltersbad.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvideoframe_audiolevel.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvideomixer.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstvideoparsersbad.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvideorate.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstvideoscale.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstvideosignal.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvideotestsrc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstvmnc.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgstvolume.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-base"
+    },
+    "libgstwavenc.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstwavparse.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstxingmux.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-ugly"
+    },
+    "libgsty4mdec.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgsty4menc.so": {
+        "license": "LGPLv2.1",
+        "package": "gst-plugins-good"
+    },
+    "libgstyadif.so": {
+        "license": "LGPLv2",
+        "package": "gst-plugins-bad"
+    },
+    "libgtest.so.0": {
+        "license": "BSD-3C",
+        "package": "protobuf"
+    },
+    "libgtest_main.so.0": {
+        "license": "BSD-3C",
+        "package": "protobuf"
+    },
+    "libgthread-2.0.so.0": {
+        "license": "LGPLv2",
+        "package": "GLib"
+    },
+    "libharfbuzz.so.0": {
+        "license": "MIT",
+        "package": "HarfBuzz"
+    },
+    "libiconv.so.2": {
+        "license": "LGPLv2",
+        "package": "libiconv"
+    },
+    "libicoreresourcemanager_test.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libicudata.so.43": {
+        "comment": "Acutally ICU data files are distributed under difference licenses, e.g. BSD-3C, etc. However no idea which carries this data..",
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libicui18n.so.43": {
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libicuio.so.43": {
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libicule.so.43": {
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libiculx.so.43": {
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libicutu.so.43": {
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libicuuc.so.43": {
+        "license": "MIT",
+        "package": "ICU"
+    },
+    "libidirectfbfont_dgiff.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libidirectfbimageprovider_dfiff.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libidirectfbimageprovider_nexus.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libidirectfbwindows_default.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libiniparser.so": {
+        "license": "MIT",
+        "package": "iniParser"
+    },
+    "libinit-14.1.so.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libinit-15.1.so.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libinit-16.1.so.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libintek_conax.so": {
+        "comment": "Originally this was Intek's code, now heavily modified by QB. So we will mark it QB for the time being",
+        "license": "QB"
+    },
+    "libintl.so.8": {
+        "license": "LGPLv2.1",
+        "package": "gettext"
+    },
+    "libionet.so": {
+        "license": "QB"
+    },
+    "libiso-codes.so.1.0": {
+        "license": "LGPLv2.1",
+        "package": "iso-codes"
+    },
+    "libitm.so.1": {
+        "license": "GPLv3e",
+        "package": "gcc runtime"
+    },
+    "libiwater_default.so": {
+        "license": "LGPLv2.1",
+        "package": "DirectFB"
+    },
+    "libixml.so.2": {
+        "license": "BSD",
+        "package": "libupnp"
+    },
+    "libjemalloc.so.1": {
+        "license": "BSD",
+        "package": "jemalloc"
+    },
+    "libjemalloc.so.2": {
+        "license": "BSD",
+        "package": "jemalloc"
+    },
+    "libjpeg.so.7": {
+        "license": "BSD-4C",
+        "package": "libjpeg"
+    },
+    "libjpeg.so.8": {
+        "license": "BSD-4C",
+        "package": "libjpeg"
+    },
+    "libjpeg.so.9": {
+        "license": "BSD-4C",
+        "package": "libjpeg"
+    },
+    "libkeyutils.so.1": {
+        "license": "LGPLv2",
+        "package": "keyutils"
+    },
+    "libkpParsers.so": {
+        "license": "QB"
+    },
+    "liblatenscasapp-DVB.so.1.0": {
+        "license": "Latens",
+        "package": "Latens CAS"
+    },
+    "liblatenscasapp-IP.so.1.0": {
+        "license": "Latens",
+        "package": "Latens CAS"
+    },
+    "liblatenscasapp-OTT.so.1.0": {
+        "license": "Latens",
+        "package": "Latens CAS"
+    },
+    "liblatenslibloader.so": {
+        "license": "QB"
+    },
+    "liblatensvadapp-DVB.so.1.0": {
+        "license": "Latens",
+        "package": "Latens CAS"
+    },
+    "liblatensvadapp-IP.so.1.0": {
+        "license": "Latens",
+        "package": "Latens CAS"
+    },
+    "liblatensvadapp-OTT.so.1.0": {
+        "license": "Latens",
+        "package": "Latens CAS"
+    },
+    "liblibnsbmp.so.0.1": {
+        "license": "MIT",
+        "package": "libnsbmp"
+    },
+    "liblightjson.so": {
+        "license": "QB"
+    },
+    "liblinux.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "liblogColors.so": {
+        "license": "QB"
+    },
+    "libm.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libm.so.6": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libmemusage.so": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libmenu.so.5": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "libmi.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libmpeg-common.so": {
+        "license": "QB"
+    },
+    "libmpeg2.so": {
+        "license": "QB"
+    },
+    "libmpg123.so.0": {
+        "license": "LGPLv2.1",
+        "package": "mpg123"
+    },
+    "libmsAPI_DTE.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libmsAPI_GEGOP.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libmsAPI_XC.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libmstar_drivers.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libmudflap.so.0": {
+        "exception": "1",
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libmudflapth.so.0": {
+        "exception": "1",
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libmwgif.so": {
+        "license": "MStar",
+        "package": "MI SDK"
+    },
+    "libmxml.so.1": {
+        "license": "LGPLv2",
+        "package": "Mini-XML"
+    },
+    "libncurses.so.5": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "libncurses.so.6": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "libnetsnmp.so.30": {
+        "license": "BSD-3C",
+        "package": "Net-SNMP"
+    },
+    "libnexus.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libnig.so": {
+        "license": "Arris",
+        "package": "Tunner driver for Arris/Vodafone PoC Platform"
+    },
+    "libnsl.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnsl.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_compat.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_db.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_dns.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_files.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_hesiod.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_nis.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnss_nisplus.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libnuron.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libnxpl.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libobjc.so.4": {
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "liboemcrypto_tl.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libopera.so.3.6": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "liboperamalloc.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "libout123.so.0": {
+        "license": "LGPLv2.1",
+        "package": "mpg123"
+    },
+    "libpadlock.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libpanel.so.5": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "libpciaccess.so.0": {
+        "license": "MIT",
+        "package": "Xorg"
+    },
+    "libpcprofile.so": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libpixman-1.so.0": {
+        "license": "MIT",
+        "package": "pixman"
+    },
+    "libplayready.so.1.0": {
+        "license": "MSFT",
+        "package": "MSFT PlayReady DPK"
+    },
+    "libplayreadypk.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libplayreadypk_host.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libpng.so.3": {
+        "license": "libpng",
+        "package": "libpng"
+    },
+    "libpng12.so.0": {
+        "license": "libpng",
+        "package": "libpng"
+    },
+    "libpng14.so.14": {
+        "license": "libpng",
+        "package": "libpng"
+    },
+    "libpng15.so.15": {
+        "license": "libpng",
+        "package": "libpng"
+    },
+    "libpng16.so.16": {
+        "license": "libpng",
+        "package": "libpng"
+    },
+    "libpolarssl.so": {
+        "license": "GPLv2",
+        "package": "PolarSSL"
+    },
+    "libpolarssl.so.5": {
+        "license": "GPLv2",
+        "package": "PolarSSL"
+    },
+    "libpolarssl.so.7": {
+        "license": "GPLv2",
+        "package": "PolarSSL"
+    },
+    "libproc-3.2.7.so": {
+        "license": "LGPLv2",
+        "package": "glibc"
+    },
+    "libproc-3.2.8.so": {
+        "license": "LGPLv2",
+        "package": "glibc"
+    },
+    "libprotobuf-lite.so.8": {
+        "license": "BSD-3C",
+        "package": "protobuf"
+    },
+    "libprotobuf.so.8": {
+        "license": "BSD-3C",
+        "package": "protobuf"
+    },
+    "libprotoc.so.8": {
+        "license": "BSD-3C",
+        "package": "protobuf"
+    },
+    "libpthread.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libqrencode.so.3": {
+        "license": "LGPLv2.1",
+        "package": "libqrencode"
+    },
+    "libquadmath.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libremoti-clientlib.so.1.0": {
+        "license": "BSD-3C",
+        "package": "remoti"
+    },
+    "libresolv.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libresolv.so.2": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "librt.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "librt.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libsdp.so": {
+        "license": "QB"
+    },
+    "libsoup-2.4.so.1": {
+        "license": "LGPLv2",
+        "package": "libsoup"
+    },
+    "libsqlite3.so.0": {
+        "license": "FREE",
+        "package": "SQLite"
+    },
+    "libsrai.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libss.so.2": {
+        "license": "MIT",
+        "package": "e2fsprogs"
+    },
+    "libssl.so.1.0.0": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libssp.so.0": {
+        "exception": "1",
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libstapi.so": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "libstapp.so": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "libstdc++.so.6": {
+        "exception": "1",
+        "license": "GPLv3e",
+        "package": "glibc"
+    },
+    "libstorage_input.so": {
+        "license": "QB"
+    },
+    "libstrongswan-aes.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-attr.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-cmac.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-constraints.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-des.so": {
+        "comment": "In fact this plugin contains BSD-4C like clauses, needs attribution",
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-dnskey.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-fips-prf.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-gmp.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-hmac.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-kernel-netlink.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-md5.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-nonce.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-openssl.so": {
+        "comment": "Well, there's a special exception for openssl in strongswan that allows for this GPL/SSLeay combo, so we add exceptions for this particular license",
+        "exceptions": [
+            "SSLeay"
+        ],
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pem.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pgp.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pkcs1.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pkcs12.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pkcs7.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pkcs8.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-pubkey.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-random.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-rc2.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-resolve.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-revocation.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-sha1.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-sha2.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-socket-default.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-sshkey.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-stroke.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-updown.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-vici.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-x509.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-xauth-generic.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan-xcbc.so": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libstrongswan.so.0": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libsureware.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libsv-list.so": {
+        "license": "QB"
+    },
+    "libsvtuner.so": {
+        "license": "QB"
+    },
+    "libswl.so": {
+        "license": "QB"
+    },
+    "libthread_db.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libthreadutil.so.6": {
+        "license": "BSD",
+        "package": "glibc"
+    },
+    "libtinfo.so.6": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "libtsan.so.0": {
+        "license": "MIT",
+        "package": "gcc runtime"
+    },
+    "libtshdrbuilder.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libubacktrace.so.0": {
+        "license": "LGPLv2.1",
+        "package": "uClibc"
+    },
+    "libubsec.so": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "libupnp.so.6": {
+        "license": "BSD",
+        "package": "libupnp"
+    },
+    "libusb-1.0.so.0": {
+        "license": "LGPLv2.1",
+        "package": "libusb"
+    },
+    "libutfconv.so": {
+        "license": "QB"
+    },
+    "libutil.so.0": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libutil.so.1": {
+        "license": "LGPLv2.1",
+        "package": "glibc"
+    },
+    "libuuid.so.1": {
+        "license": "BSD-3C",
+        "package": "e2fsprogs"
+    },
+    "libuva.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "libuvabackend-dummy.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "libuvabackend-simplePlayer.so": {
+        "license": "QB"
+    },
+    "libuvadrmbackendloader.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "libv3ddriver.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libvici.so.0": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "libviewrightweb.so": {
+        "license": "VMX",
+        "package": "ViewRight WEB"
+    },
+    "libviewrightweb.so.1.0": {
+        "license": "VMX",
+        "package": "ViewRight WEB"
+    },
+    "libviewrightweb.so.1.0.0": {
+        "license": "VMX",
+        "package": "ViewRight WEB"
+    },
+    "libvmclient.so": {
+        "license": "VMX",
+        "package": "ViewRight"
+    },
+    "libvmlog.so": {
+        "license": "QB"
+    },
+    "libvriptvclient.so": {
+        "license": "VMX",
+        "package": "ViewRight IPTV"
+    },
+    "libvriptvclientDEV.so": {
+        "license": "VMX",
+        "package": "ViewRight IPTV"
+    },
+    "libvrwebclient.so": {
+        "license": "VMX",
+        "package": "ViewRight WEB"
+    },
+    "libvrwebclientDEV.so": {
+        "license": "VMX",
+        "package": "ViewRight WEB"
+    },
+    "libwebkit-brcm.so.1.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libwebkit-video-brcm.so.1.0": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libwebkit.so.2.0": {
+        "license": "LGPLv2.1",
+        "package": "WebKit"
+    },
+    "libwebsockets.so.0": {
+        "license": "LGPLv2.1",
+        "package": "libwebsockets"
+    },
+    "libwvcdm.so": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "libxcb-atom.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-aux.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-damage.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-dri2.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-event.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-icccm.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-image.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-keysyms.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-property.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-randr.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-record.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-render.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-reply.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-res.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-screensaver.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-shape.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-shm.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-sync.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-xfixes.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-xinerama.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb-xtest.so.0": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxcb.so.1": {
+        "license": "MIT",
+        "package": "libxcb"
+    },
+    "libxml2.so.2": {
+        "license": "MIT",
+        "package": "libxml2"
+    },
+    "libxslt.so.1": {
+        "license": "MIT",
+        "package": "libxml2"
+    },
+    "libxtream.so": {
+        "license": "QB"
+    },
+    "libz.so.1": {
+        "license": "ZLIB",
+        "package": "zlib"
+    },
+    "libzonetrace.so": {
+        "license": "QB"
+    },
+    "log_writer": {
+        "license": "QB"
+    },
+    "lxload.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "mbcache.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "mclose": {
+        "license": "QB"
+    },
+    "mcs7830.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "mdrv-ir.ko": {
+        "license": "GPLv2",
+        "package": "MI SDK"
+    },
+    "mdump": {
+        "license": "QB"
+    },
+    "micom_input.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "micom_reboot": {
+        "license": "QB"
+    },
+    "mke2fs": {
+        "license": "GPLv2",
+        "package": "e2fsprogs"
+    },
+    "mkfs.fat": {
+        "license": "GPLv3",
+        "package": "dosfstools3"
+    },
+    "mkfs.fat.2.11": {
+        "license": "GPLv2",
+        "package": "dosfstools2"
+    },
+    "mme.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "mme_host.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "mme_user.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "mocactl": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "mocad": {
+        "license": "BRCM",
+        "package": "BRCM URSR"
+    },
+    "mopen": {
+        "license": "QB"
+    },
+    "mousedev.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "mptool": {
+        "license": "Intek",
+        "package": "Intek Driver"
+    },
+    "mread": {
+        "license": "QB"
+    },
+    "msdos.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "mt7610u_sta.ko": {
+        "license": "GPLv2",
+        "package": "DPA_MT7610u_wifi_sta_v3004_rev1_20140529"
+    },
+    "mt7610u_sta_net.ko": {
+        "license": "GPLv2",
+        "package": "DPA_MT7610u_wifi_sta_v3004_rev1_20140529"
+    },
+    "mt7610u_sta_util.ko": {
+        "license": "GPLv2",
+        "package": "DPA_MT7610u_wifi_sta_v3004_rev1_20140529"
+    },
+    "mt7650u_sta.ko": {
+        "license": "GPLv2",
+        "package": "mt7610u_wifi_sta_v3002_dpo_20130916"
+    },
+    "mt7650u_sta_net.ko": {
+        "license": "GPLv2",
+        "package": "DPA_MT7610u_wifi_sta_v3004_rev1_20140529"
+    },
+    "mt7650u_sta_util.ko": {
+        "license": "GPLv2",
+        "package": "DPA_MT7610u_wifi_sta_v3004_rev1_20140529"
+    },
+    "mtdinfo": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "mwrite": {
+        "license": "QB"
+    },
+    "nandcat": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "nandtest": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "nandwrite": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "net1080.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "netio.ko": {
+        "license": "QB"
+    },
+    "nexus.ko": {
+        "comment": "This is obviously BRCM module, but it's license is set to Prioprietary thus we don't know the true license just by looking at the .ko file. So we will assume QB is as strong as BRCM here.",
+        "license": "QB"
+    },
+    "nf_conntrack.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nf_conntrack_ipv4.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nf_defrag_ipv4.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nf_nat.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_base.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp1250.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp1251.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp437.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp737.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp775.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp850.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp852.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp855.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp865.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp866.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_cp869.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_iso8859-1.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_iso8859-13.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_iso8859-2.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_iso8859-7.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nls_utf8.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "nscsdsrv": {
+        "license": "QB"
+    },
+    "nscserver": {
+        "license": "QB"
+    },
+    "ntfs.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ntpdate": {
+        "license": "NTP",
+        "package": "ntp"
+    },
+    "ohci-brcm.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ohci-hcd.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "ooif.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "openssl": {
+        "license": "SSLeay",
+        "package": "OpenSSL"
+    },
+    "opera": {
+        "license": "QB"
+    },
+    "parted": {
+        "license": "GPLv2",
+        "package": "parted"
+    },
+    "pegasus.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "pgrep": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "ping": {
+        "license": "BSD-4C",
+        "package": "iputils"
+    },
+    "pioctl": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "pki": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "pkill": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "pl2303.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "plainrsa-gen": {
+        "license": "BSD-3C",
+        "package": "ipsec-tools"
+    },
+    "player_demo": {
+        "license": "QB"
+    },
+    "progress": {
+        "license": "QB"
+    },
+    "ps": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "qbconf_ctl": {
+        "license": "QB"
+    },
+    "qbconf_xml2json": {
+        "license": "QB"
+    },
+    "qbfusefs": {
+        "license": "QB"
+    },
+    "qbsandbox": {
+        "license": "QB"
+    },
+    "qbwebkit": {
+        "license": "QB"
+    },
+    "racoon": {
+        "license": "BSD-3C",
+        "package": "ipsec-tools"
+    },
+    "racoonctl": {
+        "license": "BSD-3C",
+        "package": "ipsec-tools"
+    },
+    "rand": {
+        "license": "QB"
+    },
+    "recover_hdcp": {
+        "license": "Crenova",
+        "package": "HDCP partition recovery app"
+    },
+    "remoti-server": {
+        "license": "BSD-3C",
+        "package": "remoti"
+    },
+    "remoti-testapp": {
+        "comment": "(Same as ZRC_client) This code is subject to additional TI-proprietary license. Check out OpenSource/remoti/Makefile for more info",
+        "license": "Kaon",
+        "package": "remoti"
+    },
+    "resetter": {
+        "license": "QB"
+    },
+    "rng-core.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "rt5370sta.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "rt5572sta.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "sata_stm.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "scepclient": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "scsi_mod.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "scsi_wait_scan.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "sd_mod.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "send_cp_udp_packet": {
+        "license": "QB"
+    },
+    "setkey": {
+        "license": "BSD-3C",
+        "package": "ipsec-tools"
+    },
+    "setnv": {
+        "license": "QB"
+    },
+    "shell_cmds": {
+        "license": "QB"
+    },
+    "sit.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "slabtop": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "slashproc.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "smartcard.ko": {
+        "license": "Intek",
+        "package": "Intek CAS"
+    },
+    "snmpget": {
+        "license": "BSD-3C",
+        "package": "Net-SNMP"
+    },
+    "snmpset": {
+        "license": "BSD-3C",
+        "package": "Net-SNMP"
+    },
+    "softdog.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "stapi_core_stripped.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "stapi_ioctl_stripped.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "starter": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "storyteller.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "stos_core.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "stpti4_ioctl.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "stroke": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "stsys_ioctl.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "sttbx_early_core.ko": {
+        "license": "STMicro",
+        "package": "STAPI"
+    },
+    "svcli": {
+        "license": "QB"
+    },
+    "svconf_ctl": {
+        "license": "QB"
+    },
+    "swanctl": {
+        "license": "GPLv2",
+        "package": "strongswan"
+    },
+    "top": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "triggerreceiver.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "tset": {
+        "license": "MIT",
+        "package": "ncurses"
+    },
+    "tune2fs": {
+        "license": "GPLv2",
+        "package": "e2fsprogs"
+    },
+    "tunnel4.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "u-boot": {
+        "license": "GPLv2",
+        "package": "u-boot"
+    },
+    "ubiattach": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubicrc32": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubidetach": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubiformat": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubimkvol": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubinfo": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubinize": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubirename": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubirmvol": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubirsvol": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "ubiupdatevol": {
+        "license": "GPLv2",
+        "package": "mtd-utils"
+    },
+    "unsquashfs": {
+        "license": "GPLv2",
+        "package": "squashfs"
+    },
+    "unzip": {
+        "license": "INFO-ZIP",
+        "package": "UnZip"
+    },
+    "usb-brcm.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usb-common.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usb-storage.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usbcore.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usbhid.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usbmon.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usbnet.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "usbserial.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "vfat.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "videoplayer.so": {
+        "license": "Opera",
+        "package": "Opera"
+    },
+    "vmstat": {
+        "license": "GPLv2",
+        "package": "procps"
+    },
+    "vmx_sign_verifier": {
+        "license": "QB"
+    },
+    "wait_for_network": {
+        "license": "QB"
+    },
+    "wakeup_drv.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "wpa_cli": {
+        "license": "BSD",
+        "package": "wpa_supplicant"
+    },
+    "wpa_passphrase": {
+        "license": "BSD",
+        "package": "wpa_supplicant"
+    },
+    "wpa_priv": {
+        "license": "BSD",
+        "package": "wpa_supplicant"
+    },
+    "wpa_supplicant": {
+        "license": "BSD",
+        "package": "wpa_supplicant"
+    },
+    "wread": {
+        "license": "QB"
+    },
+    "wwrite": {
+        "license": "QB"
+    },
+    "x_tables.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xdelete": {
+        "license": "QB"
+    },
+    "xformat": {
+        "license": "QB"
+    },
+    "xformat2": {
+        "license": "QB"
+    },
+    "xfrm6_mode_beet.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xfrm6_mode_transport.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xfrm6_mode_tunnel.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xlist": {
+        "license": "QB"
+    },
+    "xopen": {
+        "license": "QB"
+    },
+    "xread": {
+        "license": "QB"
+    },
+    "xt_addrtype.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xt_conntrack.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xt_pkttype.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xt_state.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xt_tcpudp.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "xtables-multi": {
+        "license": "GPLv2",
+        "package": "iptables"
+    },
+    "xwrite": {
+        "license": "QB"
+    },
+    "xxd": {
+        "license": "MIT",
+        "package": "xxd"
+    },
+    "zaurus.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "zd1201.ko": {
+        "license": "GPLv2",
+        "package": "Linux"
+    },
+    "zlib_deflate.ko": {
+        "license": "GPLv2",
+        "package": "zlib"
+    }
+}

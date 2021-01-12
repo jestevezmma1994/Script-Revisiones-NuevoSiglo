@@ -1,0 +1,6 @@
+Name: QBIPStreamClient
+Version: 1.0.0
+Requires: QBDRMManager QBId3Parser QBStringUtils SvCore SvFoundation SvPlayerControllers SvPlayerKit SvQuirks dataformat expat fibers mpeg2 storage_input 
+Description: Streaming support library
+Libs: -lQBIPStreamClient 
+CFlags: 

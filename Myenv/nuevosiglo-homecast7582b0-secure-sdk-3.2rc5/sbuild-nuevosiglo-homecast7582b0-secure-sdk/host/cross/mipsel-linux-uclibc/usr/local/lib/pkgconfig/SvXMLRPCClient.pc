@@ -1,0 +1,6 @@
+Name: SvXMLRPCClient
+Version: 1.0.0
+Requires: SvHTTPClient SvJSON 
+Description: XML-RPC client library
+Libs: -lSvXMLRPCClient -lexpat 
+CFlags: 

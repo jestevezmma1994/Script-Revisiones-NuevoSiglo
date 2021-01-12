@@ -1,0 +1,12 @@
+digraph MiscMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Misc [root=true]
+    QBBrowserMenu
+    QBGamesMenu
+    QBStaticUrlsMenu
+
+    Misc -> QBBrowserMenu
+    Misc -> QBGamesMenu
+    Misc -> QBStaticUrlsMenu
+}

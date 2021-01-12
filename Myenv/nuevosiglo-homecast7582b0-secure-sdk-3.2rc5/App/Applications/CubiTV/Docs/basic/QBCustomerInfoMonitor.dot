@@ -1,0 +1,7 @@
+digraph QBCustomerInfoMonitor {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBCustomerInfoMonitor [URL="\N.html" root=true]
+
+    QBCustomerInfoMonitor -> CubiMW
+}

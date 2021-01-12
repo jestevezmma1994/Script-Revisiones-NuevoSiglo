@@ -1,0 +1,17 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="TVPreview">
+        <widget name="TVPreview.ChannelName">
+            <param tag="xOffset"><int>10</int></param>
+            <param tag="yOffset"><int>193</int></param>
+            <param tag="width"><int>384</int></param>
+            <param tag="height"><int>35</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                        <param tag="textColor"><color>9e9e9eff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="vertAlign"><string>center</string></param>
+        </widget>
+    </widget>
+</settings>

@@ -1,0 +1,6 @@
+Name: viewrightweb
+Version: 1.0.0
+Requires: 
+Description: Null implementation of Verimatrix ViewRightWeb library..
+Libs: -lviewrightweb 
+CFlags: 

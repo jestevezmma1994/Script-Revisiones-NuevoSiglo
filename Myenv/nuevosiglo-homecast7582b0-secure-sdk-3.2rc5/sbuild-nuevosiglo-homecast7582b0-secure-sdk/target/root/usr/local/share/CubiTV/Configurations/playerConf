@@ -1,0 +1,35 @@
+{
+    "errorHandlingPolicy" : "none",
+    "avSyncMode" : {
+        "liveDvb" : "autoPts"
+    },
+    "waitForCorrectIFrame" : true,
+    "decodeIPStreamBeforeFirstECMProcessed" : true,
+    "usePidFilteringForIPStream" : false,
+    "eit" : {
+        "usePresentFollowingActual" : true,
+        "usePresentFollowingOther" : false
+    },
+    "defaultBufferSize" : 5242880,
+    "bufferSizes" : {
+        "smoothStreaming" : {
+            "live" : 5242880,
+            "onDemand" : 10000000
+        }
+    },
+    "prefillOnDemand" : {
+        "bufferSec" : 8,
+        "bufferBytes" : 8000000
+    },
+    "smoothStreaming" : {
+        "pipelining" : true,
+        "variantCalculator" : "bufferDuration",
+        "bufferDuration" : {
+            "initialBitrateLevel" : "middle"
+        }
+    },
+    "dash" : {
+        "curlBufferSize" : 1500
+    }
+}
+

@@ -1,0 +1,43 @@
+digraph CubiMW {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+    QBCAS 
+    QBNetManager
+    smartCardMonitor [label=<\N<br/>When smartcard state changes it obtains current smartcard info>]
+    QBMiddlewareIdManager [label=<\N<br/>Uses smartcard ID or eth0 mac address as ID>]
+    QBConfig
+    QBProvidersControllerService [label=<\N<br/>When id changes it restarts itself<br/>Removes all services, menus, providers<br/>Calls stb.GetServices to obtain current list of services>]
+    QBAdService [label=<\N<br/>When id changes it restarts itself>]
+    QBPushReceiver [label=<\N<br/>When id changes id restarts itself>]
+    QBCustomerInfoMonitor [label=<\N<br/>When id changes id restarts itself>]
+    Innov8onProvider [label=<\N<br/>Communicates with CubiMW to obtain content>]
+    XMBCarousel [label=<\N<br/>Shows both XMBVerticalMenu and QBCarousel>]
+    XMB
+    innov8onCarouselItemChoice [label=<\N<br/>Handles user choices regarding content provided by Innov8onProvider>]
+    innov8onCarouselItemController [label=<\N<br/>Creates widgets that display content provided by Innov8onProvider>]
+    onMenuEnter [label=<When user enters a menu>]
+
+    QBCAS -> smartCardMonitor [label=<Notifies about smartcard state>]
+    smartCardMonitor -> QBMiddlewareIdManager [label=<Notifies about smartcard id if changed>]
+    QBNetManager -> QBMiddlewareIdManager [label=<Provides info about interfaces and their MAC addresses>]
+    QBMiddlewareIdManager -> QBConfig [label=<Checks MIDDLEWARE_ID variable to see<br/>if smartcard id or mac addres should be used>]
+    QBMiddlewareIdManager -> QBAdService [label=<Notifies that middleware id has changed>]
+    QBMiddlewareIdManager -> QBPushReceiver [label=<Notifies that middleware id has changed>]
+    QBMiddlewareIdManager -> QBCustomerInfoMonitor [label=<Notifies that middleware id has changed>]
+    QBMiddlewareIdManager -> QBProvidersControllerService [label=<Notifies that middleware id has changed>]
+    QBProvidersControllerService -> carouselMenu [label=<For each entitled service creates a new carousel menu and mounts it and registers controllers>]
+    carouselMenu -> innov8onCarouselItemChoice [label=<Creates and registers>]
+    carouselMenu -> QBInnov8onCarouselMenuCreate [label=<Calls>]
+    QBInnov8onCarouselMenuCreate -> innov8onCarouselItemController [label=<Creates and registers>]
+    innov8onCarouselItemController -> XMBCarousel [label=<Creates to display a single level of items>]
+    QBInnov8onCarouselMenuCreate -> Innov8onProvider [label=<Creates to obtain from MW the whole service>]
+    QBProvidersControllerService -> menuTree [label=<Mounts provider created by controller>]
+    mainmenu -> menuTree [label=<Creates and keeps in appGlobals>]
+    menuTree -> XMB [label=<Used as data source>]
+    mainmenu -> XMB [label=<Creates>]
+    XMB -> innov8onCarouselItemController [label=<Requests creation of single level menu>]
+    XMBCarousel -> onMenuEnter
+    onMenuEnter -> QBContentTree [label=<Requests data via QBTreeModel/QBTreeIterator interface>]
+    QBContentTree -> Innov8onProvider [label=<Translates QBTreeIterator functions into requests for data>]
+}

@@ -1,0 +1,23 @@
+<perldata>
+ <hashref memory_address="0x14c3d60">
+  <item key="App/Applications/CubiTV-Bold/exec.comp">dep-1605103297-9569976dbb790566461a0bcfa0044087-App_Applications_CubiTV-Bold_exec_comp.xml</item>
+  <item key="App/Applications/CubiTV-Bold/logic.comp">dep-1605103295-4ffa0122df01c14732e03bfa294f65c6-App_Applications_CubiTV-Bold_logic_comp.xml</item>
+  <item key="App/Applications/CubiTV-Generic/files.comp">dep-1605103292-12893390efae12da48b861fe24ec9359-App_Applications_CubiTV-Generic_files_comp.xml</item>
+  <item key="App/Applications/CubiTV-NuevoSiglo/exec.comp">dep-1605103317-a9d5f65639683d45c9ce496f506df7ee-App_Applications_CubiTV-NuevoSiglo_exec_comp.xml</item>
+  <item key="App/Applications/CubiTV-NuevoSiglo/logic.comp">dep-1605103307-2261986ad46d63a3e77a1511a40f81d1-App_Applications_CubiTV-NuevoSiglo_logic_comp.xml</item>
+  <item key="App/Applications/CubiTV/CubiTV.comp">dep-1605103288-984d151c9ba553727dbf51ae15e1f6ba-App_Applications_CubiTV_CubiTV_comp.xml</item>
+  <item key="App/Components/QBSubsManager/c.comp">dep-1605103248-28f3a7f90a2551503c558d7fea65aed7-App_Components_QBSubsManager_c_comp.xml</item>
+  <item key="App/Components/QBTextSubsManager/c.comp">dep-1605103249-c81efc36268acc46e9ed6fea156291e5-App_Components_QBTextSubsManager_c_comp.xml</item>
+  <item key="Files/CubiTV/NuevoSiglo/c.comp">dep-1605103321-e24767b88c7b690b2105994222c253eb-Files_CubiTV_NuevoSiglo_c_comp.xml</item>
+  <item key="Files/Resources/CubiTV/c.comp">dep-1605103319-a526fb240046fbe8cae3eff8331f940b-Files_Resources_CubiTV_c_comp.xml</item>
+  <item key="Files/Resources/Selectors/c.comp">dep-1605103320-a2fb0964c9d2c94f9e83c1d235f02231-Files_Resources_Selectors_c_comp.xml</item>
+  <item key="Harvest/bInstall/install.comp">dep-1605103368-4e5e04e472163c4ca3482988544e2a88-Harvest_bInstall_install_comp.xml</item>
+  <item key="Harvest/bSpec/nuevosiglo-homecast7582b0-secure/bspec.comp">dep-1605103330-2e12d5f7ab2fcae68cf96c31d3ff2615-Harvest_bSpec_nuevosiglo-homecast7582b0-secure_bspec_comp.xml</item>
+  <item key="Platforms/BCM/logo/logo-nuevosiglo.comp">dep-1605103244-86b67119cb6afeb16bd2da0fa070f587-Platforms_BCM_logo_logo-nuevosiglo_comp.xml</item>
+  <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/production.comp">dep-1605103331-09ba45bb469bb79db44339cb775c8fa4-Src_CxPlayReady-NuevoSiglo_homecast_7582_production_comp.xml</item>
+  <item key="Src/TranslationMerger/c.comp">dep-1605103328-f5246c55ce447d32acdd352523bdf623-Src_TranslationMerger_c_comp.xml</item>
+  <item key="Src/TranslationMerger/extract.comp">dep-1605103329-fc1e7ff98f184fec9ba61f4815144511-Src_TranslationMerger_extract_comp.xml</item>
+  <item key="Src/driver-installer/c.comp">dep-1605103241-b9e523985fd406ae34215779e90291ff-Src_driver-installer_c_comp.xml</item>
+  <item key="Src/license_checker/c.comp">dep-1605103242-b8b9a387a94960a1fcdee4313a8103c2-Src_license_checker_c_comp.xml</item>
+ </hashref>
+</perldata>

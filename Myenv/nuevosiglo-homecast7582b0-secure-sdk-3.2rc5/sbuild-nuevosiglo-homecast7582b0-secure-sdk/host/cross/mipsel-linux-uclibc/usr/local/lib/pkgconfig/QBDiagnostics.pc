@@ -1,0 +1,6 @@
+Name: QBDiagnostics
+Version: 1.0.0
+Requires: CUIT QBDVBTableMonitor QBTuner QBTunerMonitor SvCore SvEPGDataLayer SvFoundation SvPlayerKit dataformat mpeg2 svtuner 
+Description: Cubiware Diagnostics Library
+Libs: -lQBDiagnostics 
+CFlags: 

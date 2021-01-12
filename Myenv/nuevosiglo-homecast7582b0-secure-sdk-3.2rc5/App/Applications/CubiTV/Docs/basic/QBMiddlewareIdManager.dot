@@ -1,0 +1,7 @@
+digraph QBMiddlewareIdManager {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBMiddlewareIdManager [URL="\N.html" root=true]
+
+    QBMiddlewareIdManager -> CubiMW
+}

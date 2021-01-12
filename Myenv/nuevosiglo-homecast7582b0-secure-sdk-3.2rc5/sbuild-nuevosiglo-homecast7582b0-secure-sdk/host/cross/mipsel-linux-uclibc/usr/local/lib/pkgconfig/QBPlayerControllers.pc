@@ -1,0 +1,6 @@
+Name: QBPlayerControllers
+Version: 1.0.0
+Requires: CUIT CubiwareMWClient QBCatManager QBConaxPlayReady QBCoreUtils QBDataProvider QBNATMonitor QBServices QBStringUtils QBTunerReserver QBUtils SvCore SvDataBucket2 SvEPGDataLayer SvFoundation SvPlayerKit SvPlayerManager SvXMLRPCClient TraxisWebClient autoplayer 
+Description: Player Controllers Collection
+Libs: -lQBPlayerControllers 
+CFlags: 

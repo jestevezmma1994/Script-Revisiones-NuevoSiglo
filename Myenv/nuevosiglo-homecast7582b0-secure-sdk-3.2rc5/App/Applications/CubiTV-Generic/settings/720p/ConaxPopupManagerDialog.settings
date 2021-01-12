@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="Dialog">
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>ffffffff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </common>
+
+        <param tag="width"><int>740</int></param>
+        <param tag="height"><int>160</int></param>
+        <param tag="bg"><bitmap><path>bg_popup.png</path></bitmap></param>
+        <param tag="topPadding"><int>56</int></param>
+        <param tag="bottomPadding"><int>96</int></param>
+        <param tag="panelSpacing"><int>12</int></param>
+        <param tag="buttonSpacing"><int>16</int></param>
+        <param tag="showDuration"><double>0.25</double></param>
+        <param tag="resizeDuration"><double>0.3</double></param>
+        <param tag="fadeDuration"><double>0.45</double></param>
+
+        <widget name="Icon">
+            <param tag="xOffset"><int>10</int></param>
+            <param tag="yOffset"><int>6</int></param>
+            <param tag="width"><int>32</int></param>
+            <param tag="height"><int>32</int></param>
+        </widget>
+
+        <widget name="TitleLabel">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>4</int></param>
+            <param tag="width"><int>740</int></param>
+            <param tag="height"><int>43</int></param>
+            <param tag="font">
+                <ref constant="SemiWideFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+
+        <widget name="Panel">
+            <param tag="xOffset"><int>48</int></param>
+            <param tag="width"><int>644</int></param>
+            <param tag="height"><int>4</int></param>
+            <param tag="horizPadding"><int>8</int></param>
+            <param tag="vertPadding"><int>20</int></param>
+            <param tag="vertSpacing"><int>12</int></param>
+
+            <widget name="Caption">
+                <param tag="xOffset"><int>8</int></param>
+                <param tag="yOffset"><int>4</int></param>
+                <param tag="width"><int>600</int></param>
+                <param tag="height"><int>24</int></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>bfbfbfff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+
+            <widget name="Separator">
+                <param tag="xOffset"><int>8</int></param>
+                <param tag="yOffset"><int>30</int></param>
+                <param tag="width"><int>608</int></param>
+                <param tag="height"><int>2</int></param>
+                <param tag="bgColor"><color>8f8f8fff</color></param>
+            </widget>
+        </widget>
+
+        <widget name="Label">
+            <param tag="width"><int>608</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>bfbfbfff</color></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+
+        <widget name="Animation">
+            <param tag="align"><string>center</string></param>
+        </widget>
+
+        <widget name="InputField">
+            <param tag="xOffset"><int>48</int></param>
+            <param tag="width"><int>644</int></param>
+            <param tag="height"><int>43</int></param>
+            <param tag="spacing"><int>20</int></param>
+
+            <widget name="Caption">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="height"><int>43</int></param>
+                <param tag="textAlign"><string>right</string></param>
+                <param tag="textColor"><color>bfbfbfff</color></param>
+            </widget>
+
+            <widget name="IDInput">
+                <param tag="xOffset"><int>354</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>284</int></param>
+                <param tag="height"><int>43</int></param>
+                <param tag="digitsCount"><int>7</int></param>
+                <param tag="horizAlign"><string>left</string></param>
+                <param tag="horizSpacing"><int>12</int></param>
+
+                <widget name="Digit">
+                    <param tag="width"><int>43</int></param>
+                    <param tag="height"><int>43</int></param>
+                    <param tag="bg">
+                        <bitmap><path>field_pin_focus.png</path></bitmap>
+                    </param>
+                    <param tag="inactiveBg">
+                        <bitmap><path>field_pin_nonfocus.png</path></bitmap>
+                    </param>
+                    <param tag="marker">
+                        <bitmap><path>symbol_pin.png</path></bitmap>
+                    </param>
+                    <param tag="fadeDuration"><double>0.15</double></param>
+                </widget>
+            </widget>
+
+            <widget name="PINInput">
+                <param tag="xOffset"><int>210</int></param>
+                <param tag="digitsCount"><int>4</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>284</int></param>
+                <param tag="height"><int>43</int></param>
+                <param tag="horizAlign"><string>left</string></param>
+                <param tag="horizSpacing"><int>12</int></param>
+
+                <widget name="Digit">
+                    <param tag="width"><int>43</int></param>
+                    <param tag="height"><int>43</int></param>
+                    <param tag="bg">
+                        <bitmap><path>field_pin_focus.png</path></bitmap>
+                    </param>
+                    <param tag="inactiveBg">
+                        <bitmap><path>field_pin_nonfocus.png</path></bitmap>
+                    </param>
+                    <param tag="marker">
+                        <bitmap><path>symbol_pin.png</path></bitmap>
+                    </param>
+                    <param tag="fadeDuration"><double>0.15</double></param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="PINInput">
+            <common>
+                <param tag="digitsCount"><int>4</int></param>
+            </common>
+            <param tag="width"><int>608</int></param>
+            <param tag="height"><int>43</int></param>
+            <param tag="horizAlign"><string>center</string></param>
+            <param tag="horizSpacing"><int>12</int></param>
+            <widget name="Digit">
+                <param tag="width"><int>43</int></param>
+                <param tag="height"><int>43</int></param>
+                <param tag="bg">
+                    <bitmap><path>field_pin_focus.png</path></bitmap>
+                </param>
+                <param tag="inactiveBg">
+                    <bitmap><path>field_pin_nonfocus.png</path></bitmap>
+                </param>
+                <param tag="marker">
+                    <bitmap><path>symbol_pin.png</path></bitmap>
+                </param>
+                <param tag="fadeDuration"><double>0.15</double></param>
+            </widget>
+        </widget>
+    </widget>
+</settings>

@@ -1,0 +1,6 @@
+Name: QBConaxPlayReady
+Version: 1.0.0
+Requires: QBAppKit QBConf QBCoreUtils QBCrypto QBMTQueue QBPlayReadyInterface QBSecureLogManager QBSmartcard2-interface QBStringUtils QBTextUtils SvCore SvFoundation SvHTTPClient SvJSON fibers playready uuid 
+Description: MS PlayReady wrapper
+Libs: -lQBConaxPlayReady 
+CFlags: 

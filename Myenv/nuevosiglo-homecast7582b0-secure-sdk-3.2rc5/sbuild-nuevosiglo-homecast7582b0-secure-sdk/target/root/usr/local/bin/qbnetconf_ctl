@@ -1,0 +1,15 @@
+#!/bin/sh
+CONF_KEY=$1
+QB_NETWORK_MANAGER_DEFAULT_CONF=/etc/networking/QBNetworkManagerConf.json
+QB_NETWORK_MANAGER_CONST_CONF=/etc/QBNetworkManagerConf.json
+QB_NETWORK_MANAGER_CONF=/etc/vod/networking/QBNetworkManagerConf.json
+
+RET_VAL=`qbconf_ctl -n -i $QB_NETWORK_MANAGER_CONST_CONF $CONF_KEY`
+if [ "$RET_VAL" == "" ] ; then
+    RET_VAL=`qbconf_ctl -n -i $QB_NETWORK_MANAGER_CONF $CONF_KEY`
+    if [ "$RET_VAL" == "" ] ; then
+        RET_VAL=`qbconf_ctl -n -i $QB_NETWORK_MANAGER_DEFAULT_CONF $CONF_KEY`
+    fi
+fi
+
+echo $RET_VAL

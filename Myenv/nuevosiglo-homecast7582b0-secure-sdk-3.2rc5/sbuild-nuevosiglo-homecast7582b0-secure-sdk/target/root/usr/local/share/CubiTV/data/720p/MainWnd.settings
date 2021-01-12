@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="clock.settings"/>
+    <xi:include href="fonts.settings"/>
+    <xi:include href="CustomerLogo.settings"/>
+    <xi:include href="ContextSwitcher.settings"/>
+
+    <widget name="MainWindow">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="frame"><bool>false</bool></param>
+        <widget name="Bg">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="bg">
+                <bitmap><path>bg_mainbg.png</path></bitmap>
+            </param>
+        </widget>
+    </widget>
+
+    <widget name="Caption">
+        <param tag="xOffset"><int>70</int></param>
+        <param tag="yOffset"><int>20</int></param>
+        <param tag="width"><int>1046</int></param>
+        <param tag="height"><int>720</int></param>
+
+        <widget name="icon">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>640</int></param>
+            <param tag="width"><int>800</int></param>
+            <param tag="height"><int>45</int></param>
+            <param tag="horizAlign"><string>left</string></param>
+            <param tag="defaultBitmap">
+                <bitmap><path>empty.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="label">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>870</int></param>
+            <param tag="height"><int>45</int></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="fadeDuration"><double>0.15</double></param>
+        </widget>
+    </widget>
+    <widget name="ChannelFrame">
+        <param tag="xOffset"><int>10</int></param>
+        <param tag="yOffset"><int>22</int></param>
+        <param tag="width"><int>175</int></param>
+        <param tag="height"><int>55</int></param>
+        <widget name="frame">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>175</int></param>
+            <param tag="minWidth"><int>175</int></param>
+            <param tag="height"><int>55</int></param>
+            <param tag="bg"><bitmap><path>frame_channel.png</path></bitmap></param>
+            <param tag="rightMargin"><int>20</int></param>
+        </widget>
+        <widget name="logo">
+            <param tag="xOffset"><int>109</int></param>
+            <param tag="yOffset"><int>6</int></param>
+            <param tag="width"><int>44</int></param>
+            <param tag="height"><int>44</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="tmpBg"><bitmap><path>white/iconw_tv_big.png</path></bitmap>
+            </param>
+        </widget>
+        <widget name="name">
+            <common>
+                <param tag="width"><int>400</int></param>
+                <param tag="height"><int>45</int></param>
+                <param tag="xOffset"><int>169</int></param>
+                <param tag="yOffset"><int>6</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            </common>
+            <widget name="Disabled">
+                <param tag="textColor"><color>7f7f7fff</color></param>
+            </widget>
+        </widget>
+        <widget name="number">
+            <common>
+                <param tag="width"><int>80</int></param>
+                <param tag="height"><int>45</int></param>
+                <param tag="xOffset"><int>18</int></param>
+                <param tag="yOffset"><int>6</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="textAlign"><string>right</string></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+            </common>
+            <widget name="Disabled">
+                <param tag="textColor"><color>7f7f7fff</color></param>
+            </widget>
+        </widget>
+    </widget>
+</settings>

@@ -1,0 +1,28 @@
+<page width="540" height="720" align="left" valign="center" bgalpha="#00" bgcolor="#000000">
+    <row height="240"/>
+
+	<row height="120" valign="top">
+		<item width="540" height="96" size="18" maxlines="6" wrap="space" textalign="left">%DESCRIPTION%</item>
+	</row>
+
+	<row height="20"/>
+
+  <row>
+    <row width="300">
+      <row>
+        <item color="#5792b7">From: </item><item width="230" maxlines="1">%FROM%</item>
+      </row>
+      <row>
+        <item color="#5792b7">Views: </item><item width="230" maxlines="1">%VIEWS%</item>
+      </row>
+    </row>
+    <row width="240">
+      <row align="right">
+        <item color="#5792b7">Category: </item><item maxlines="1" textalign="right">%CATEGORY%</item>
+      </row>
+      <row align="right">
+        <item color="#5792b7">Added: </item><item maxlines="1" textalign="right">%ADDED%</item>
+      </row>
+    </row>
+  </row>
+</page>

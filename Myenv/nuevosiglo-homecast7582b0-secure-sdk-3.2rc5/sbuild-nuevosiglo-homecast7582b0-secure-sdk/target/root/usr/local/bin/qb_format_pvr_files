@@ -1,0 +1,159 @@
+#!/bin/sh
+
+log()
+{
+  echo "format_pvr_files[$DATA_NODE] $@" 1>&2
+  #echo "format_pvr_files[$DATA_NODE] $@" 1>/tmp/mymesg 1>&2
+  #logger "format_pvr_files[$DATA_NODE] > $@"
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR: (res=$RES)" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+
+if [ $# -ne 3 ]; then
+  log usage: "${0##*/} <meta_root> <data_node> <data_size>"
+  exit 1;
+fi
+
+CONF_FILE=/tmp/qb_format_pvr_configuration
+get_value()
+{
+  if [ -f $CONF_FILE ]; then
+    RET=`grep '^'$1'=[0-9]\+$' $CONF_FILE | cut -d= -f 2`
+    if [ ! -z $RET ]; then
+      echo $RET
+    else
+      echo ""
+    fi
+  fi
+}
+
+META_DIR=$1
+DATA_NODE=$2
+DEV_SIZE=$3
+
+#-------------------------
+# partition sizes configuration
+PART_SIZE=$DEV_SIZE
+PART_SIZE_MB=$((PART_SIZE / 1024))
+
+TSH_SIZE_MB=`get_value timeshift`
+
+if [ -z $TSH_SIZE_MB ] ; then
+  if [ -z "$TIMESHIFT_PART_PERC" ]; then
+    TIMESHIFT_PART_PERC=5
+  fi
+  TSH_SIZE_MB=$((PART_SIZE_MB * TIMESHIFT_PART_PERC / 100))
+fi
+
+#-------------------------
+# Format xtream
+
+log formatting xtream partition size is $PART_SIZE_MB
+
+FROM_MB=0
+
+# timeshift
+if [ "$TSH_SIZE_MB" != "0" ]; then
+  log formatting xtream partition for timeshift
+  BLOCK_SIZE_KB=$((32 * 1024))
+  MAX_FILES=16
+  call xformat2  $DATA_NODE  $BLOCK_SIZE_KB  $MAX_FILES  $FROM_MB  $TSH_SIZE_MB
+  if [ $RES -ne 0 ]; then
+    log formatting partition for timeshift failed
+    exit 1
+  fi
+
+  FROM_MB=$TSH_SIZE_MB
+fi
+
+REC_SIZE_MB=`get_value files`
+
+if [ -z $REC_SIZE_MB ]; then
+  # all the rest for recording files
+  REC_SIZE_MB=$((PART_SIZE_MB - FROM_MB))
+fi
+
+if [ "$REC_SIZE_MB" != "0" ]; then
+  log formatting xtream partition for files
+
+  BLOCK_SIZE_KB=$((4 * 1024))
+  MAX_FILES=1500
+  call xformat2  $DATA_NODE  $BLOCK_SIZE_KB  $MAX_FILES  $FROM_MB  $REC_SIZE_MB
+  if [ $RES -ne 0 ]; then
+    log formatting partition for recordings failed
+    exit 1
+  fi
+fi
+
+#-------------------------
+#-------------------------
+# Clear old data on meta partition
+call_v rm -rf $META_DIR/rec
+[ $RES -ne 0 ] && exit 7
+call_v rm -rf $META_DIR/.qb_pvr_*
+[ $RES -ne 0 ] && exit 7
+
+# Store xtream config on meta-partition
+log creating configuration file on metadata partition
+
+META_CONFIG=$META_DIR/.qb_pvr_partition_config
+call_v touch $META_CONFIG
+[ $RES -ne 0 ] && exit 7
+call_v chown -R 1000:1000 $META_DIR
+[ $RES -ne 0 ] && exit 7
+call_v chmod -R ug+rwX $META_DIR
+[ $RES -ne 0 ] && exit 7
+
+RECLIMIT=`get_value reclimit`
+
+# store version
+echo -e "version=1" >> $META_CONFIG
+echo -e "align=1024" >> $META_CONFIG
+if [ ! -z "$RECLIMIT" ]; then
+	echo -e "reclimit=$RECLIMIT" >> $META_CONFIG
+fi 
+# store offsets
+if [ ! -z "$TSH_SIZE_MB" ] && [ $TSH_SIZE_MB != "0" ]; then
+  echo -e "timeshift=0" >> $META_CONFIG
+fi
+if [ ! -z $REC_SIZE_MB ] && [ "$REC_SIZE_MB" != "0" ]; then
+  echo -e "files=$FROM_MB" >> $META_CONFIG
+fi
+
+# Copy partition config file
+call_v rm -rf $META_DIR/.qb_partition_config
+if [ -f /tmp/qb_format_pvr_configuration ]; then
+    call_v cp /tmp/qb_format_pvr_configuration $META_DIR/.qb_partition_config
+fi
+
+log success

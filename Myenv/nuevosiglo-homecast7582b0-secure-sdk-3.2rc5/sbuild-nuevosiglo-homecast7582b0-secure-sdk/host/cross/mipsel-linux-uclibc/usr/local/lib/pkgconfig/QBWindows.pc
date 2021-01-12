@@ -1,0 +1,6 @@
+Name: QBWindows
+Version: 1.0.0
+Requires: CAGE CUIT QBInput QBWidgets SvCore SvFoundation SvSettingsManager 
+Description: Common windows
+Libs: -lQBWindows 
+CFlags: 

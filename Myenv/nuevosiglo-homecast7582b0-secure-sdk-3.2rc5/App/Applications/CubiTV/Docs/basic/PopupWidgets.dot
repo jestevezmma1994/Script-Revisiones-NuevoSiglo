@@ -1,0 +1,27 @@
+digraph PopupWidgets {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    PopupWidgets [label="Popup/Dialog" root=true]
+
+    QBDialog
+    QBPINInput
+    audioDelayDialog
+    authDialog
+    confirmationDialog
+    countdownDialog
+    npvrDialog
+    pinChangeDialog
+    scanningDialog
+    upgradeDialog
+
+    PopupWidgets -> QBDialog
+    PopupWidgets -> QBPINInput
+    PopupWidgets -> audioDelayDialog
+    PopupWidgets -> authDialog
+    PopupWidgets -> confirmationDialog
+    PopupWidgets -> countdownDialog
+    PopupWidgets -> npvrDialog
+    PopupWidgets -> pinChangeDialog
+    PopupWidgets -> scanningDialog
+    PopupWidgets -> upgradeDialog
+}

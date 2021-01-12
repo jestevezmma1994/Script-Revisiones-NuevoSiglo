@@ -1,0 +1,6 @@
+Name: autoplayer
+Version: 1.0.0
+Requires: QBAsyncResolver QBCAS QBContentSource QBCrypto QBDRMManager QBDecoder QBDemux QBDescrambler QBPlayReadyInterface QBPlayReadyManager QBRecordFS QBSecureLogManager QBStringUtils QBStun QBTSParser QBTextUtils QBUdpReader SvPlayerControllers SvPlayerKit SvProfile SvQuirks SvRtsp asf containers dataformat error_log fibers ionet mpeg2 storage_input svtuner 
+Description: Sentivision auto player
+Libs: -lautoplayer 
+CFlags: 

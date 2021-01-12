@@ -1,0 +1,760 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    version="2.0">
+
+    <constant name="DurationFormatM"><int>0</int></constant>
+    <constant name="DurationFormatH"><int>1</int></constant>
+    <constant name="DurationFormatD"><int>2</int></constant>
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="StarRatings.settings"/>
+    <xi:include href="Title.settings"/>
+    <xi:include href="Dialog.settings"/>
+    <xi:include href="Animation.settings"/>
+
+    <widget name="description-label-template">
+        <param tag="width"><int>250</int></param>
+        <param tag="height"><int>25</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="textColor"><color>cfcfcfff</color></param>
+        <param tag="textAlign"><string>left</string></param>
+    </widget>
+    <widget name="description-icon-template">
+        <param tag="xOffset"><int>10</int></param>
+    </widget>
+    <widget name="Popup">
+        <param tag="title"><string><i18n:gettext>Please wait</i18n:gettext></string></param>
+        <widget name="Animation" import="animation-template"></widget>
+    </widget>
+    <widget name="MovieDetails">
+        <param tag="width"><int>398</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="xOffset"><int>882</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="bgColor"><color>000000df</color></param>
+        <param tag="showDelay"><double>3.5</double></param>
+        <widget name="Title">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>103</int></param>
+            <param tag="width"><int>328</int></param>
+            <param tag="height"><int>80</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>2</int></param>
+            <param tag="font"><ref constant="BoldFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+        <widget name="Description">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>225</int></param>
+            <param tag="width"><int>328</int></param>
+            <param tag="height"><int>170</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Description"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>6</int></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+        <widget name="DescriptionLong">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>225</int></param>
+            <param tag="width"><int>328</int></param>
+            <param tag="height"><int>400</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Description"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>15</int></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+        <widget name="Info">
+            <param tag="xOffset"><int>10</int></param>
+            <param tag="yOffset"><int>398</int></param>
+            <param tag="width"><int>328</int></param>
+            <param tag="height"><int>340</int></param>
+            <param tag="castStringSeparator"><string>, </string></param>
+
+            <widget name="GenreIcon" import="description-icon-template">
+                <param tag="yOffset"><int>35</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_genre.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Genre" import="description-label-template">
+                <param tag="xOffset"><int>50</int></param>
+                <param tag="yOffset"><int>38</int></param>
+            </widget>
+            <widget name="CountryIcon" import="description-icon-template">
+                <param tag="yOffset"><int>63</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_country.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Country" import="description-label-template">
+                <param tag="xOffset"><int>50</int></param>
+                <param tag="yOffset"><int>67</int></param>
+            </widget>
+            <widget name="DirectorIcon" import="description-icon-template">
+                <param tag="yOffset"><int>89</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_director.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Director" import="description-label-template">
+                <param tag="xOffset"><int>50</int></param>
+                <param tag="yOffset"><int>95</int></param>
+            </widget>
+            <widget name="CastIcon" import="description-icon-template">
+                <param tag="yOffset"><int>119</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_cast.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Cast" import="description-label-template">
+                <param tag="xOffset"><int>50</int></param>
+                <param tag="yOffset"><int>123</int></param>
+                <param tag="maxLines"><int>3</int></param>
+            </widget>
+            <widget name="RatingsIcon" import="description-icon-template">
+                <param tag="yOffset"><int>147</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_rating.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Ratings" import="description-label-template">
+                <param tag="xOffset"><int>50</int></param>
+                <param tag="yOffset"><int>151</int></param>
+            </widget>
+            <widget name="RuntimeIcon" import="description-icon-template">
+                <param tag="yOffset"><int>174</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_runtime.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Runtime" import="description-label-template">
+                <param tag="xOffset"><int>50</int></param>
+                <param tag="yOffset"><int>179</int></param>
+            </widget>
+        </widget>
+    </widget>
+    <widget name="QBVoDMovieDetails">
+        <widget name="Window">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+        </widget>
+        <widget name="Cover">
+            <param tag="width"><int>258</int></param>
+            <param tag="height"><int>371</int></param>
+            <param tag="xOffset"><int>42</int></param>
+            <param tag="yOffset"><int>17</int></param>
+            <widget name="Image">
+                <param tag="width"><int>240</int></param>
+                <param tag="height"><int>353</int></param>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>10</int></param>
+                <param tag="keepAspectRatio"><bool>true</bool></param>
+                <param tag="crop"><bool>true</bool></param>
+                <param tag="upScale"><bool>true</bool></param>
+                <param tag="bg"><bitmap><path>cover_placeholder.png</path></bitmap></param>
+                <param tag="bgPerson"><bitmap><path>cast_placeholder.png</path></bitmap></param>
+                <param tag="bgLocked"><bitmap><path>movie_details_pc.png</path></bitmap></param>
+            </widget>
+            <widget name="Focus">
+                <param tag="width"><int>240</int></param>
+                <param tag="height"><int>361</int></param>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>8</int></param>
+                <param tag="bg">
+                    <bitmap><path>cover_focus_small.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="PlayImage">
+                <param tag="width"><int>240</int></param>
+                <param tag="height"><int>361</int></param>
+                <param tag="bg">
+                    <bitmap><path>play_button.png</path></bitmap>
+                </param>
+            </widget>
+        </widget>
+        <widget name="Title">
+            <param tag="width"><int>891</int></param>
+            <param tag="height"><int>80</int></param>
+            <param tag="xOffset"><int>295</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>2</int></param>
+            <param tag="font"><ref constant="BoldFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="textColor"><color>f8f8f8ff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+        <widget name="Description">
+            <param tag="width"><int>890</int></param>
+            <param tag="height"><int>200</int></param>
+            <param tag="xOffset"><int>295</int></param>
+            <param tag="yOffset"><int>75</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>f8f8f8ff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>7</int></param>
+            <param tag="breakMarker"><string>…</string></param>
+        </widget>
+        <widget name="MovieInfo">
+            <param tag="xOffset"><int>289</int></param>
+            <param tag="yOffset"><int>280</int></param>
+            <param tag="width"><int>991</int></param>
+            <param tag="height"><int>40</int></param>
+            <param tag="castStringSeparator"><string>, </string></param>
+            <widget name="description-label-template">
+                <param tag="width"><int>250</int></param>
+                <param tag="height"><int>25</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>f8f8f8ff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+            <widget name="description-icon-template">
+                <param tag="xOffset"><int>10</int></param>
+            </widget>
+            <widget name="RuntimeIcon" import="QBVoDMovieDetails.MovieInfo.description-icon-template">
+                <param tag="yOffset"><int>7</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_runtime.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Runtime" import="QBVoDMovieDetails.MovieInfo.description-label-template">
+                <param tag="width"><int>120</int></param>
+                <param tag="xOffset"><int>40</int></param>
+                <param tag="yOffset"><int>10</int></param>
+            </widget>
+            <widget name="RatingsIcon" import="QBVoDMovieDetails.MovieInfo.description-icon-template">
+                <param tag="xOffset"><int>160</int></param>
+                <param tag="yOffset"><int>7</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_rating.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Ratings" import="QBVoDMovieDetails.MovieInfo.description-label-template">
+                <param tag="width"><int>120</int></param>
+                <param tag="xOffset"><int>195</int></param>
+                <param tag="yOffset"><int>10</int></param>
+            </widget>
+            <widget name="GenreIcon" import="QBVoDMovieDetails.MovieInfo.description-icon-template">
+                <param tag="xOffset"><int>315</int></param>
+                <param tag="yOffset"><int>7</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_genre.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Genre" import="QBVoDMovieDetails.MovieInfo.description-label-template">
+                <param tag="width"><int>375</int></param>
+                <param tag="xOffset"><int>350</int></param>
+                <param tag="yOffset"><int>10</int></param>
+            </widget>
+            <widget name="PriceIcon" import="QBVoDMovieDetails.MovieInfo.description-icon-template">
+                <param tag="xOffset"><int>725</int></param>
+                <param tag="yOffset"><int>7</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_cart.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="PricePromoIcon" import="QBVoDMovieDetails.MovieInfo.description-icon-template">
+                <param tag="xOffset"><int>725</int></param>
+                <param tag="yOffset"><int>7</int></param>
+                <param tag="bg">
+                    <bitmap><path>icons_cart_promo.png</path></bitmap>
+                </param>
+            </widget>
+            <widget name="Price" import="QBVoDMovieDetails.MovieInfo.description-label-template">
+                <param tag="xOffset"><int>755</int></param>
+                <param tag="yOffset"><int>10</int></param>
+                <param tag="textColor"><color>f0af0fff</color></param>
+                <param tag="durationFormat"><ref constant="DurationFormatH"/></param>
+                <param tag="expirationDateFormat"><string>%Y-%m-%d %H:%M:%S</string></param>
+            </widget>
+            <widget name="Animation" import="animation-template">
+                <param tag="xOffset"><int>760</int></param>
+                <param tag="yOffset"><int>5</int></param>
+                <param tag="width"><int>32</int></param>
+                <param tag="height"><int>32</int></param>
+            </widget>
+        </widget>
+        <!--<widget name="MovieBackground">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="width"><int>960</int></param>
+            <param tag="height"><int>290</int></param>
+            <param tag="keepAspectRatio"><bool>true</bool></param>
+            <param tag="crop"><bool>true</bool></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="bgColor"><color>00000000</color></param>
+            <param tag="vertAlign"><string>top_middle</string></param>
+        </widget>
+        <widget name="MovieBackgroundTint">
+            <param tag="xOffset"><int>290</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="width"><int>960</int></param>
+            <param tag="height"><int>290</int></param>
+            <param tag="bgColor"><color>00000070</color></param>
+        </widget>-->
+        <widget name="SliderCover">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>430</int></param>
+            <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+            <param tag="crop"><bool>true</bool></param>
+            <param tag="vertAlign"><string>top</string></param>
+        </widget>
+        <widget name="Slider">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>430</int></param>
+            <param tag="slidedYOffset"><int>230</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>800</int></param>
+            <widget name="EpisodesCarousel">
+                <param tag="xOffset"><int>25</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>1280</int></param>
+                <param tag="height"><int>267</int></param>
+                <widget name="Title">
+                    <param tag="width"><int>300</int></param>
+                    <param tag="height"><int>30</int></param>
+                    <param tag="xOffset"><int>50</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="maxLines"><int>1</int></param>
+                    <param tag="font"><ref constant="NormalFont"/></param>
+                    <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                    <param tag="textColor"><color>f8f8f8ff</color></param>
+                    <param tag="textAlign"><string>left</string></param>
+                    <param tag="text"><string><i18n:gettext>Episodes:</i18n:gettext></string></param>
+                </widget>
+                <widget name="TitleFocus">
+                    <param tag="xOffset"><int>15</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>171</int></param>
+                    <param tag="height"><int>30</int></param>
+                    <param tag="bg">
+                        <bitmap><path>season_focus.png</path></bitmap>
+                    </param>
+                </widget>
+                <widget name="Carousel">
+                    <param tag="xOffset"><int>20</int></param>
+                    <param tag="yOffset"><int>20</int></param>
+                    <param tag="width"><int>1390</int></param>
+                    <param tag="height"><int>199</int></param>
+                    <param tag="slotWidth"><int>239</int></param>
+                    <param tag="slotHeight"><int>179</int></param>
+                    <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+                    <param tag="rowNumber"><int>1</int></param>
+                    <param tag="columnNumber"><int>7</int></param>
+                    <param tag="firstFocusableColumn"><int>1</int></param>
+                    <param tag="defaultFocusColumn"><int>1</int></param>
+                    <param tag="lastFocusableColumn"><int>3</int></param>
+                    <param tag="firstVisibleColumn"><int>0</int></param>
+                    <param tag="lastVisibleColumn"><int>6</int></param>
+                    <param tag="verticalSpacing"><int>0</int></param>
+                    <param tag="horizontalSpacing"><int>27</int></param>
+                    <param tag="scrollMaxSpeed"><int>2000</int></param>
+                    <param tag="scrollAcceleration"><double>40</double></param>
+                    <param tag="orientation"><string>horizontal</string></param>
+                    <param tag="setObjectDelay"><double>0.5</double></param>
+                    <param tag="initialFocusColumn"><int>0</int></param>
+                    <param tag="autoWrap"><bool>true</bool></param>
+                    <param tag="skipFirstElement"><bool>false</bool></param>
+                    <param tag="loopEnabled"><bool>false</bool></param>
+                    <param tag="showEmptySlots"><bool>false</bool></param>
+                    <widget name="Slot">
+                        <param tag="width"><int>239</int></param>
+                        <param tag="height"><int>179</int></param>
+                        <param tag="bg"><bitmap><path>cover_placeholder_wide.png</path></bitmap></param>
+                        <param tag="bgLocked"><bitmap><path>grid_pc_cover_wide.png</path></bitmap></param>
+                        <param tag="duration"><double>0.3</double></param>
+                        <param tag="upScale"><bool>true</bool></param>
+                        <param tag="keepAspectRatio"><bool>false</bool></param>
+                        <widget name="Label">
+                            <param tag="xOffset"><int>2</int></param>
+                            <param tag="yOffset"><int>131</int></param>
+                            <param tag="width"><int>235</int></param>
+                            <param tag="height"><int>46</int></param>
+                            <param tag="font"><ref constant="NormalFont"/></param>
+                            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                            <param tag="textColor"><color>cfcfcfff</color></param>
+                            <param tag="textAlign"><string>center</string></param>
+                            <param tag="vertAlign"><string>center</string></param>
+                            <param tag="multiline"><bool>true</bool></param>
+                            <param tag="maxLines"><int>2</int></param>
+                            <param tag="breakMarker"><string>…</string></param>
+                            <widget name="Background">
+                                <param tag="xOffset"><int>0</int></param>
+                                <param tag="yOffset"><int>131</int></param>
+                                <param tag="width"><int>239</int></param>
+                                <param tag="height"><int>48</int></param>
+                                <param tag="bgColor"><color>000000b2</color></param>
+                            </widget>
+                        </widget>
+                    </widget>
+                    <widget name="Focus">
+                        <param tag="width"><int>256</int></param>
+                        <param tag="height"><int>199</int></param>
+                        <param tag="bg"><bitmap><path>episode_focus.png</path></bitmap></param>
+                    </widget>
+                </widget>
+            </widget>
+            <widget name="RecommendedCarousel">
+                <param tag="xOffset"><int>25</int></param>
+                <param tag="yOffset"><int>215</int></param>
+                <param tag="width"><int>1280</int></param>
+                <param tag="height"><int>267</int></param>
+                <widget name="Title">
+                    <param tag="width"><int>300</int></param>
+                    <param tag="height"><int>30</int></param>
+                    <param tag="xOffset"><int>50</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="maxLines"><int>1</int></param>
+                    <param tag="font"><ref constant="NormalFont"/></param>
+                    <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                    <param tag="textColor"><color>f8f8f8ff</color></param>
+                    <param tag="textAlign"><string>left</string></param>
+                    <param tag="text"><string><i18n:gettext>Recommended Titles:</i18n:gettext></string></param>
+                </widget>
+                <widget name="Carousel">
+                    <param tag="xOffset"><int>20</int></param>
+                    <param tag="yOffset"><int>20</int></param>
+                    <param tag="width"><int>1408</int></param>
+                    <param tag="height"><int>239</int></param>
+                    <param tag="slotWidth"><int>142</int></param>
+                    <param tag="slotHeight"><int>209</int></param>
+                    <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+                    <param tag="rowNumber"><int>1</int></param>
+                    <param tag="columnNumber"><int>10</int></param>
+                    <param tag="firstFocusableColumn"><int>1</int></param>
+                    <param tag="defaultFocusColumn"><int>1</int></param>
+                    <param tag="lastFocusableColumn"><int>3</int></param>
+                    <param tag="firstVisibleColumn"><int>0</int></param>
+                    <param tag="lastVisibleColumn"><int>8</int></param>
+                    <param tag="verticalSpacing"><int>0</int></param>
+                    <param tag="horizontalSpacing"><int>27</int></param>
+                    <param tag="scrollMaxSpeed"><int>2000</int></param>
+                    <param tag="scrollAcceleration"><double>40</double></param>
+                    <param tag="orientation"><string>horizontal</string></param>
+                    <param tag="setObjectDelay"><double>0.5</double></param>
+                    <param tag="initialFocusColumn"><int>0</int></param>
+                    <param tag="autoWrap"><bool>true</bool></param>
+                    <param tag="skipFirstElement"><bool>false</bool></param>
+                    <param tag="loopEnabled"><bool>false</bool></param>
+                    <widget name="Slot">
+                        <param tag="width"><int>142</int></param>
+                        <param tag="height"><int>209</int></param>
+                        <param tag="bg"><bitmap><path>cover_placeholder.png</path></bitmap></param>
+                        <param tag="bgLocked"><bitmap><path>grid_pc_cover.png</path></bitmap></param>
+                        <param tag="duration"><double>0.3</double></param>
+                        <param tag="upScale"><bool>true</bool></param>
+                        <param tag="keepAspectRatio"><bool>false</bool></param>
+                        <widget name="Label">
+                            <param tag="xOffset"><int>2</int></param>
+                            <param tag="yOffset"><int>161</int></param>
+                            <param tag="width"><int>138</int></param>
+                            <param tag="height"><int>46</int></param>
+                            <param tag="font"><ref constant="NormalFont"/></param>
+                            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                            <param tag="textColor"><color>cfcfcfff</color></param>
+                            <param tag="textAlign"><string>center</string></param>
+                            <param tag="vertAlign"><string>center</string></param>
+                            <param tag="multiline"><bool>true</bool></param>
+                            <param tag="maxLines"><int>2</int></param>
+                            <param tag="breakMarker"><string>…</string></param>
+                            <widget name="Background">
+                                <param tag="xOffset"><int>0</int></param>
+                                <param tag="yOffset"><int>161</int></param>
+                                <param tag="width"><int>142</int></param>
+                                <param tag="height"><int>48</int></param>
+                                <param tag="bgColor"><color>000000b2</color></param>
+                            </widget>
+                        </widget>
+                    </widget>
+                    <widget name="Focus">
+                        <param tag="width"><int>159</int></param>
+                        <param tag="height"><int>229</int></param>
+                        <param tag="bg"><bitmap><path>similar_focus.png</path></bitmap></param>
+                    </widget>
+                </widget>
+            </widget>
+        </widget>
+        <widget name="SeasonsMenu">
+            <param tag="xOffset"><int>1000</int></param>
+            <param tag="yOffset"><int>50</int></param>
+            <param tag="width"><int>200</int></param>
+            <param tag="height"><int>228</int></param>
+            <widget name="Title">
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>30</int></param>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>1</int></param>
+                <param tag="maxLines"><int>1</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>f8f8f8ff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="text"><string><i18n:gettext>CAST:</i18n:gettext></string></param>
+            </widget>
+            <widget name="Menu">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>30</int></param>
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>185</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="activeItemYOffset"><int>30</int></param>
+                <param tag="itemSpacing"><int>62</int></param>
+                <param tag="scrollDuration"><double>0.2</double></param>
+                <param tag="vertPadding"><int>0</int></param>
+                <param tag="slideMode"><int>1</int></param>
+                <param tag="loopEnabled"><bool>false</bool></param>
+                <widget name="bg">
+                    <param tag="width"><int>200</int></param>
+                    <param tag="height"><int>185</int></param>
+                    <param tag="bg"><bitmap><path>bg_xmb.png</path></bitmap></param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="SeasonName">
+            <param tag="width"><int>200</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>f8f8f8ff</color></param>
+            <param tag="disabledTextColor"><color>5f5f5fff</color></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="leftPadding"><int>10</int></param>
+            <param tag="subcaptionSpacing"><int>6</int></param>
+            <param tag="normalDim"><int>255</int></param>
+            <param tag="inactiveDim"><int>255</int></param>
+            <param tag="focusFadeTime"><double>0.2</double></param>
+            <param tag="showTime"><double>0.2</double></param>
+            <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="maxTextWidth"><int>236</int></param>
+            <param tag="icon"><bitmap><path>white/iconw_tv_big.png</path></bitmap></param>
+            <param tag="searchIcon"><bitmap><path>white/iconw_search_big.png</path></bitmap></param>
+            <param tag="focusXOffset"><int>0</int></param>
+            <param tag="focusYOffset"><int>0</int></param>
+            <param tag="iconWidth"><int>44</int></param>
+            <param tag="iconHeight"><int>44</int></param>
+            <param tag="hideInactiveFocus"><bool>true</bool></param>
+
+            <widget name="focus">
+                <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>66</int></param>
+                <param tag="minWidth"><int>200</int></param>
+            </widget>
+
+            <widget name="inactiveFocus">
+                <param tag="bg"><bitmap><path>frame_xmb_nonfocus.png</path></bitmap></param>
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>66</int></param>
+                <param tag="minWidth"><int>200</int></param>
+            </widget>
+        </widget>
+
+        <widget name="CastMenu">
+            <param tag="xOffset"><int>209</int></param>
+            <param tag="yOffset"><int>320</int></param>
+            <param tag="width"><int>520</int></param>
+            <param tag="height"><int>162</int></param>
+            <widget name="Title">
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>25</int></param>
+                <param tag="xOffset"><int>80</int></param>
+                <param tag="yOffset"><int>1</int></param>
+                <param tag="maxLines"><int>1</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>f8f8f8ff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="text"><string><i18n:gettext>CAST:</i18n:gettext></string></param>
+            </widget>
+            <widget name="Strip">
+                <param tag="xOffset"><int>80</int></param>
+                <param tag="yOffset"><int>21</int></param>
+                <param tag="focusXOffset"><int>-4</int></param>
+                <param tag="focusYOffset"><int>-4</int></param>
+                <param tag="width"><int>400</int></param>
+                <param tag="height"><int>132</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="itemSpacing"><int>15</int></param>
+                <param tag="maxWidgets"><int>4</int></param>
+                <widget name="Slot">
+                    <param tag="width"><int>78</int></param>
+                    <param tag="height"><int>78</int></param>
+                    <param tag="bg"><bitmap><path>cast_placeholder_crop.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>true</bool></param>
+                    <param tag="vertAlign"><string>top_middle</string></param>
+                    <param tag="crop"><bool>true</bool></param>
+                </widget>
+                <widget name="Focus">
+                    <param tag="xOffset"><int>80</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>80</int></param>
+                    <param tag="height"><int>88</int></param>
+                    <param tag="bg"><bitmap><path>movie_button_focus.png</path></bitmap></param>
+                </widget>
+            </widget>
+            <widget name="ActorLabel">
+                <param tag="xOffset"><int>82</int></param>
+                <param tag="yOffset"><int>110</int></param>
+                <param tag="width"><int>140</int></param>
+                <param tag="height"><int>45</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>cfcfcfff</color></param>
+                <param tag="textAlign"><string>center</string></param>
+                <param tag="vertAlign"><string>center</string></param>
+                <param tag="multiline"><bool>true</bool></param>
+                <param tag="maxLines"><int>2</int></param>
+                <param tag="breakMarker"><string>…</string></param>
+                <widget name="Background">
+                    <param tag="xOffset"><int>81</int></param>
+                    <param tag="yOffset"><int>109</int></param>
+                    <param tag="width"><int>144</int></param>
+                    <param tag="height"><int>47</int></param>
+                    <param tag="bgColor"><color>000000b2</color></param>
+                </widget>
+            </widget>
+        </widget>
+        <widget name="ButtonsMenu">
+            <param tag="xOffset"><int>1050</int></param>
+            <param tag="yOffset"><int>345</int></param>
+            <param tag="width"><int>350</int></param>
+            <param tag="height"><int>100</int></param>
+            <widget name="Title">
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>0</int></param>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>1</int></param>
+                <param tag="maxLines"><int>1</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>f8f8f8ff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="text"><string><i18n:gettext>CAST:</i18n:gettext></string></param>
+            </widget>
+            <widget name="Strip">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="focusXOffset"><int>-4</int></param>
+                <param tag="focusYOffset"><int>-4</int></param>
+                <param tag="width"><int>400</int></param>
+                <param tag="height"><int>100</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="itemSpacing"><int>5</int></param>
+                <param tag="maxWidgets"><int>2</int></param>
+                <widget name="SlotMyListButton">
+                    <param tag="width"><int>72</int></param>
+                    <param tag="height"><int>72</int></param>
+                    <param tag="bg"><bitmap><path>add_to_favorite_inactive.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                 <widget name="SlotTrailerButton">
+                    <param tag="width"><int>72</int></param>
+                    <param tag="height"><int>72</int></param>
+                    <param tag="bg"><bitmap><path>play_trailer.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                <widget name="SlotMyListButtonLit">
+                    <param tag="width"><int>72</int></param>
+                    <param tag="height"><int>72</int></param>
+                    <param tag="bg"><bitmap><path>add_to_favorite_active.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                <widget name="Focus">
+                    <param tag="xOffset"><int>0</int></param>
+                    <param tag="yOffset"><int>0</int></param>
+                    <param tag="width"><int>80</int></param>
+                    <param tag="height"><int>82</int></param>
+                    <param tag="bg"><bitmap><path>movie_button_focus.png</path></bitmap></param>
+                </widget>
+            </widget>
+        </widget>
+
+        <widget name="LikeButtonsMenu">
+            <param tag="xOffset"><int>70</int></param>
+            <param tag="yOffset"><int>382</int></param>
+            <param tag="width"><int>350</int></param>
+            <param tag="height"><int>100</int></param>
+            <widget name="Title">
+                <param tag="width"><int>200</int></param>
+                <param tag="height"><int>0</int></param>
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>1</int></param>
+                <param tag="maxLines"><int>1</int></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>f8f8f8ff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="text"><string><i18n:gettext>CAST:</i18n:gettext></string></param>
+            </widget>
+            <widget name="Strip">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="focusXOffset"><int>-7</int></param>
+                <param tag="focusYOffset"><int>-6</int></param>
+                <param tag="width"><int>400</int></param>
+                <param tag="height"><int>100</int></param>
+                <param tag="bgColor"><color>00000000</color></param>
+                <param tag="itemSpacing"><int>10</int></param>
+                <param tag="maxWidgets"><int>2</int></param>
+                <widget name="SlotLikeButton">
+                    <param tag="width"><int>41</int></param>
+                    <param tag="height"><int>38</int></param>
+                    <param tag="bg"><bitmap><path>like_inactive.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                 <widget name="SlotDislikeButton">
+                    <param tag="width"><int>41</int></param>
+                    <param tag="height"><int>38</int></param>
+                    <param tag="bg"><bitmap><path>dislike_inactive.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                <widget name="SlotLikeButtonLit">
+                    <param tag="width"><int>41</int></param>
+                    <param tag="height"><int>38</int></param>
+                    <param tag="bg"><bitmap><path>like_active.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                 <widget name="SlotDislikeButtonLit">
+                    <param tag="width"><int>41</int></param>
+                    <param tag="height"><int>38</int></param>
+                    <param tag="bg"><bitmap><path>dislike_active.png</path></bitmap></param>
+                    <param tag="keepAspectRatio"><bool>false</bool></param>
+                </widget>
+                <widget name="Focus">
+                    <param tag="width"><int>80</int></param>
+                    <param tag="height"><int>52</int></param>
+                    <param tag="bg"><bitmap><path>like_button_focus.png</path></bitmap></param>
+                </widget>
+            </widget>
+        </widget>
+    </widget>
+
+    <widget name="AuthDialogMessage">
+        <param tag="captionPC"><string><i18n:gettext>Please enter parental control PIN</i18n:gettext></string></param>
+        <param tag="captionInnov8on"><string><i18n:gettext>Please enter Middleware PIN</i18n:gettext></string></param>
+        <param tag="captionConax"><string><i18n:gettext>Please enter Conax PIN</i18n:gettext></string></param>
+    </widget>
+</settings>

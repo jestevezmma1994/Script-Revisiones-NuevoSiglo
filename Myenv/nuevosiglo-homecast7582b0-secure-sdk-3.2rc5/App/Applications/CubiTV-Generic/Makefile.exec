@@ -1,0 +1,22 @@
+SvStandardMakefiles = $(CROSS_ROOT)/usr/local/include/SvStandardMakefiles
+SvMakefileTemplate = Executable
+include $(SvStandardMakefiles)/Versions/2/Before.mk
+
+SvName = cubitv
+SvDescription = Generic GUI client
+
+SvMajorVersion = 1
+SvMinorVersion = 0
+SvRevision = 0
+
+SvRequires = CubiTV QBCAS-deps
+
+CPPFLAGS += -I.
+
+SvDirectoryLayoutConvention = custom
+
+SvExecutableSourceFiles :=
+
+SvQBShellCmdsWhitelists = ./QBShellCmdsWhitelist
+
+include $(SvStandardMakefiles)/Versions/2/After.mk

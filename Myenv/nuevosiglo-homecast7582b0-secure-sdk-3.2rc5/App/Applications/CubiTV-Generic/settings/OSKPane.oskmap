@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osk-map xmlns="http://cubiware.com/osk-map-v1.xsd"
+         version="1.0">
+
+    <layouts>
+        <layout id="en_US.UTF-8" default="yes"/>
+        <layout id="en_US.UTF-8_capital"/>
+        <layout id="et_EE.UTF-8"/>
+        <layout id="et_EE.UTF-8_capital"/>
+        <layout id="lv_LV.UTF-8"/>
+        <layout id="lv_LV.UTF-8_capital"/>
+        <layout id="pl_PL.UTF-8"/>
+        <layout id="pl_PL.UTF-8_capital"/>
+    </layouts>
+
+    <keys>
+        <key id="0" initial="true">
+            <position><x>0</x><y>0</y></position>
+            <caption layout="en_US.UTF-8">a</caption>
+            <caption layout="et_EE.UTF-8">a</caption>
+            <caption layout="lv_LV.UTF-8">a</caption>
+            <caption layout="pl_PL.UTF-8">a</caption>
+            <caption layout="en_US.UTF-8_capital">A</caption>
+            <caption layout="et_EE.UTF-8_capital">A</caption>
+            <caption layout="lv_LV.UTF-8_capital">A</caption>
+            <caption layout="pl_PL.UTF-8_capital">A</caption>
+            <value layout="en_US.UTF-8">a</value>
+            <value layout="et_EE.UTF-8">a</value>
+            <value layout="lv_LV.UTF-8">a</value>
+            <value layout="pl_PL.UTF-8">a</value>
+            <value layout="en_US.UTF-8_capital">A</value>
+            <value layout="et_EE.UTF-8_capital">A</value>
+            <value layout="lv_LV.UTF-8_capital">A</value>
+            <value layout="pl_PL.UTF-8_capital">A</value>
+        </key>
+        <key id="1">
+            <position><x>1</x><y>0</y></position>
+            <caption layout="en_US.UTF-8">b</caption>
+            <caption layout="et_EE.UTF-8">b</caption>
+            <caption layout="lv_LV.UTF-8">ā</caption>
+            <caption layout="pl_PL.UTF-8">ą</caption>
+            <caption layout="en_US.UTF-8_capital">B</caption>
+            <caption layout="et_EE.UTF-8_capital">B</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ā</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ą</caption>
+            <value layout="en_US.UTF-8">b</value>
+            <value layout="et_EE.UTF-8">b</value>
+            <value layout="lv_LV.UTF-8">ā</value>
+            <value layout="pl_PL.UTF-8">ą</value>
+            <value layout="en_US.UTF-8_capital">B</value>
+            <value layout="et_EE.UTF-8_capital">B</value>
+            <value layout="lv_LV.UTF-8_capital">Ā</value>
+            <value layout="pl_PL.UTF-8_capital">Ą</value>
+        </key>
+        <key id="2">
+            <position><x>2</x><y>0</y></position>
+            <caption layout="en_US.UTF-8">c</caption>
+            <caption layout="et_EE.UTF-8">c</caption>
+            <caption layout="lv_LV.UTF-8">b</caption>
+            <caption layout="pl_PL.UTF-8">b</caption>
+            <caption layout="en_US.UTF-8_capital">C</caption>
+            <caption layout="et_EE.UTF-8_capital">C</caption>
+            <caption layout="lv_LV.UTF-8_capital">B</caption>
+            <caption layout="pl_PL.UTF-8_capital">B</caption>
+            <value layout="en_US.UTF-8">c</value>
+            <value layout="et_EE.UTF-8">c</value>
+            <value layout="lv_LV.UTF-8">b</value>
+            <value layout="pl_PL.UTF-8">b</value>
+            <value layout="en_US.UTF-8_capital">C</value>
+            <value layout="et_EE.UTF-8_capital">C</value>
+            <value layout="lv_LV.UTF-8_capital">B</value>
+            <value layout="pl_PL.UTF-8_capital">B</value>
+        </key>
+        <key id="3">
+            <position><x>3</x><y>0</y></position>
+            <caption layout="en_US.UTF-8">d</caption>
+            <caption layout="et_EE.UTF-8">d</caption>
+            <caption layout="lv_LV.UTF-8">c</caption>
+            <caption layout="pl_PL.UTF-8">c</caption>
+            <caption layout="en_US.UTF-8_capital">D</caption>
+            <caption layout="et_EE.UTF-8_capital">D</caption>
+            <caption layout="lv_LV.UTF-8_capital">C</caption>
+            <caption layout="pl_PL.UTF-8_capital">C</caption>
+            <value layout="en_US.UTF-8">d</value>
+            <value layout="et_EE.UTF-8">d</value>
+            <value layout="lv_LV.UTF-8">c</value>
+            <value layout="pl_PL.UTF-8">c</value>
+            <value layout="en_US.UTF-8_capital">D</value>
+            <value layout="et_EE.UTF-8_capital">D</value>
+            <value layout="lv_LV.UTF-8_capital">C</value>
+            <value layout="pl_PL.UTF-8_capital">C</value>
+        </key>
+        <key id="4">
+            <position><x>4</x><y>0</y></position>
+            <caption layout="en_US.UTF-8">e</caption>
+            <caption layout="et_EE.UTF-8">e</caption>
+            <caption layout="lv_LV.UTF-8">č</caption>
+            <caption layout="pl_PL.UTF-8">ć</caption>
+            <caption layout="en_US.UTF-8_capital">E</caption>
+            <caption layout="et_EE.UTF-8_capital">E</caption>
+            <caption layout="lv_LV.UTF-8_capital">Č</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ć</caption>
+            <value layout="en_US.UTF-8">e</value>
+            <value layout="et_EE.UTF-8">e</value>
+            <value layout="lv_LV.UTF-8">č</value>
+            <value layout="pl_PL.UTF-8">ć</value>
+            <value layout="en_US.UTF-8_capital">E</value>
+            <value layout="et_EE.UTF-8_capital">E</value>
+            <value layout="lv_LV.UTF-8_capital">Č</value>
+            <value layout="pl_PL.UTF-8_capital">Ć</value>
+        </key>
+        <key id="5" initial="true">
+            <position><x>5</x><y>0</y></position>
+            <caption layout="en_US.UTF-8">f</caption>
+            <caption layout="et_EE.UTF-8">f</caption>
+            <caption layout="lv_LV.UTF-8">d</caption>
+            <caption layout="pl_PL.UTF-8">d</caption>
+            <caption layout="en_US.UTF-8_capital">F</caption>
+            <caption layout="et_EE.UTF-8_capital">F</caption>
+            <caption layout="lv_LV.UTF-8_capital">D</caption>
+            <caption layout="pl_PL.UTF-8_capital">D</caption>
+            <value layout="en_US.UTF-8">f</value>
+            <value layout="et_EE.UTF-8">f</value>
+            <value layout="lv_LV.UTF-8">d</value>
+            <value layout="pl_PL.UTF-8">d</value>
+            <value layout="en_US.UTF-8_capital">F</value>
+            <value layout="et_EE.UTF-8_capital">F</value>
+            <value layout="lv_LV.UTF-8_capital">D</value>
+            <value layout="pl_PL.UTF-8_capital">D</value>
+        </key>
+        <key id="6">
+            <position><x>0</x><y>1</y></position>
+            <caption layout="en_US.UTF-8">g</caption>
+            <caption layout="et_EE.UTF-8">g</caption>
+            <caption layout="lv_LV.UTF-8">e</caption>
+            <caption layout="pl_PL.UTF-8">e</caption>
+            <caption layout="en_US.UTF-8_capital">G</caption>
+            <caption layout="et_EE.UTF-8_capital">G</caption>
+            <caption layout="lv_LV.UTF-8_capital">E</caption>
+            <caption layout="pl_PL.UTF-8_capital">E</caption>
+            <value layout="en_US.UTF-8">g</value>
+            <value layout="et_EE.UTF-8">g</value>
+            <value layout="lv_LV.UTF-8">e</value>
+            <value layout="pl_PL.UTF-8">e</value>
+            <value layout="en_US.UTF-8_capital">G</value>
+            <value layout="et_EE.UTF-8_capital">G</value>
+            <value layout="lv_LV.UTF-8_capital">E</value>
+            <value layout="pl_PL.UTF-8_capital">E</value>
+        </key>
+        <key id="7">
+            <position><x>1</x><y>1</y></position>
+            <caption layout="en_US.UTF-8">h</caption>
+            <caption layout="et_EE.UTF-8">h</caption>
+            <caption layout="lv_LV.UTF-8">ē</caption>
+            <caption layout="pl_PL.UTF-8">ę</caption>
+            <caption layout="en_US.UTF-8_capital">H</caption>
+            <caption layout="et_EE.UTF-8_capital">H</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ē</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ę</caption>
+            <value layout="en_US.UTF-8">h</value>
+            <value layout="et_EE.UTF-8">h</value>
+            <value layout="lv_LV.UTF-8">ē</value>
+            <value layout="pl_PL.UTF-8">ę</value>
+            <value layout="en_US.UTF-8_capital">H</value>
+            <value layout="et_EE.UTF-8_capital">H</value>
+            <value layout="lv_LV.UTF-8_capital">Ē</value>
+            <value layout="pl_PL.UTF-8_capital">Ę</value>
+        </key>
+        <key id="8">
+            <position><x>2</x><y>1</y></position>
+            <caption layout="en_US.UTF-8">i</caption>
+            <caption layout="et_EE.UTF-8">i</caption>
+            <caption layout="lv_LV.UTF-8">f</caption>
+            <caption layout="pl_PL.UTF-8">f</caption>
+            <caption layout="en_US.UTF-8_capital">I</caption>
+            <caption layout="et_EE.UTF-8_capital">I</caption>
+            <caption layout="lv_LV.UTF-8_capital">F</caption>
+            <caption layout="pl_PL.UTF-8_capital">F</caption>
+            <value layout="en_US.UTF-8">i</value>
+            <value layout="et_EE.UTF-8">i</value>
+            <value layout="lv_LV.UTF-8">f</value>
+            <value layout="pl_PL.UTF-8">f</value>
+            <value layout="en_US.UTF-8_capital">I</value>
+            <value layout="et_EE.UTF-8_capital">I</value>
+            <value layout="lv_LV.UTF-8_capital">F</value>
+            <value layout="pl_PL.UTF-8_capital">F</value>
+        </key>
+        <key id="9">
+            <position><x>3</x><y>1</y></position>
+            <caption layout="en_US.UTF-8">j</caption>
+            <caption layout="et_EE.UTF-8">j</caption>
+            <caption layout="lv_LV.UTF-8">g</caption>
+            <caption layout="pl_PL.UTF-8">g</caption>
+            <caption layout="en_US.UTF-8_capital">J</caption>
+            <caption layout="et_EE.UTF-8_capital">J</caption>
+            <caption layout="lv_LV.UTF-8_capital">G</caption>
+            <caption layout="pl_PL.UTF-8_capital">G</caption>
+            <value layout="en_US.UTF-8">j</value>
+            <value layout="et_EE.UTF-8">j</value>
+            <value layout="lv_LV.UTF-8">g</value>
+            <value layout="pl_PL.UTF-8">g</value>
+            <value layout="en_US.UTF-8_capital">J</value>
+            <value layout="et_EE.UTF-8_capital">J</value>
+            <value layout="lv_LV.UTF-8_capital">G</value>
+            <value layout="pl_PL.UTF-8_capital">G</value>
+        </key>
+        <key id="10" initial="true">
+            <position><x>4</x><y>1</y></position>
+            <caption layout="en_US.UTF-8">k</caption>
+            <caption layout="et_EE.UTF-8">k</caption>
+            <caption layout="lv_LV.UTF-8">ģ</caption>
+            <caption layout="pl_PL.UTF-8">h</caption>
+            <caption layout="en_US.UTF-8_capital">K</caption>
+            <caption layout="et_EE.UTF-8_capital">K</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ģ</caption>
+            <caption layout="pl_PL.UTF-8_capital">H</caption>
+            <value layout="en_US.UTF-8">k</value>
+            <value layout="et_EE.UTF-8">k</value>
+            <value layout="lv_LV.UTF-8">ģ</value>
+            <value layout="pl_PL.UTF-8">h</value>
+            <value layout="en_US.UTF-8_capital">K</value>
+            <value layout="et_EE.UTF-8_capital">K</value>
+            <value layout="lv_LV.UTF-8_capital">Ģ</value>
+            <value layout="pl_PL.UTF-8_capital">H</value>
+        </key>
+        <key id="11">
+            <position><x>5</x><y>1</y></position>
+            <caption layout="en_US.UTF-8">l</caption>
+            <caption layout="et_EE.UTF-8">l</caption>
+            <caption layout="lv_LV.UTF-8">h</caption>
+            <caption layout="pl_PL.UTF-8">i</caption>
+            <caption layout="en_US.UTF-8_capital">L</caption>
+            <caption layout="et_EE.UTF-8_capital">L</caption>
+            <caption layout="lv_LV.UTF-8_capital">H</caption>
+            <caption layout="pl_PL.UTF-8_capital">I</caption>
+            <value layout="en_US.UTF-8">l</value>
+            <value layout="et_EE.UTF-8">l</value>
+            <value layout="lv_LV.UTF-8">h</value>
+            <value layout="pl_PL.UTF-8">i</value>
+            <value layout="en_US.UTF-8_capital">L</value>
+            <value layout="et_EE.UTF-8_capital">L</value>
+            <value layout="lv_LV.UTF-8_capital">H</value>
+            <value layout="pl_PL.UTF-8_capital">I</value>
+        </key>
+        <key id="12">
+            <position><x>0</x><y>2</y></position>
+            <caption layout="en_US.UTF-8">m</caption>
+            <caption layout="et_EE.UTF-8">m</caption>
+            <caption layout="lv_LV.UTF-8">i</caption>
+            <caption layout="pl_PL.UTF-8">j</caption>
+            <caption layout="en_US.UTF-8_capital">M</caption>
+            <caption layout="et_EE.UTF-8_capital">M</caption>
+            <caption layout="lv_LV.UTF-8_capital">I</caption>
+            <caption layout="pl_PL.UTF-8_capital">J</caption>
+            <value layout="en_US.UTF-8">m</value>
+            <value layout="et_EE.UTF-8">m</value>
+            <value layout="lv_LV.UTF-8">i</value>
+            <value layout="pl_PL.UTF-8">j</value>
+            <value layout="en_US.UTF-8_capital">M</value>
+            <value layout="et_EE.UTF-8_capital">M</value>
+            <value layout="lv_LV.UTF-8_capital">I</value>
+            <value layout="pl_PL.UTF-8_capital">J</value>
+        </key>
+        <key id="13">
+            <position><x>1</x><y>2</y></position>
+            <caption layout="en_US.UTF-8">n</caption>
+            <caption layout="et_EE.UTF-8">n</caption>
+            <caption layout="lv_LV.UTF-8">ī</caption>
+            <caption layout="pl_PL.UTF-8">k</caption>
+            <caption layout="en_US.UTF-8_capital">N</caption>
+            <caption layout="et_EE.UTF-8_capital">N</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ī</caption>
+            <caption layout="pl_PL.UTF-8_capital">K</caption>
+            <value layout="en_US.UTF-8">n</value>
+            <value layout="et_EE.UTF-8">n</value>
+            <value layout="lv_LV.UTF-8">ī</value>
+            <value layout="pl_PL.UTF-8">k</value>
+            <value layout="en_US.UTF-8_capital">N</value>
+            <value layout="et_EE.UTF-8_capital">N</value>
+            <value layout="lv_LV.UTF-8_capital">Ī</value>
+            <value layout="pl_PL.UTF-8_capital">K</value>
+        </key>
+        <key id="14">
+            <position><x>2</x><y>2</y></position>
+            <caption layout="en_US.UTF-8">o</caption>
+            <caption layout="et_EE.UTF-8">o</caption>
+            <caption layout="lv_LV.UTF-8">j</caption>
+            <caption layout="pl_PL.UTF-8">l</caption>
+            <caption layout="en_US.UTF-8_capital">O</caption>
+            <caption layout="et_EE.UTF-8_capital">O</caption>
+            <caption layout="lv_LV.UTF-8_capital">J</caption>
+            <caption layout="pl_PL.UTF-8_capital">L</caption>
+            <value layout="en_US.UTF-8">o</value>
+            <value layout="et_EE.UTF-8">o</value>
+            <value layout="lv_LV.UTF-8">j</value>
+            <value layout="pl_PL.UTF-8">l</value>
+            <value layout="en_US.UTF-8_capital">O</value>
+            <value layout="et_EE.UTF-8_capital">O</value>
+            <value layout="lv_LV.UTF-8_capital">J</value>
+            <value layout="pl_PL.UTF-8_capital">L</value>
+        </key>
+        <key id="15" initial="true">
+            <position><x>3</x><y>2</y></position>
+            <caption layout="en_US.UTF-8">p</caption>
+            <caption layout="et_EE.UTF-8">p</caption>
+            <caption layout="lv_LV.UTF-8">k</caption>
+            <caption layout="pl_PL.UTF-8">ł</caption>
+            <caption layout="en_US.UTF-8_capital">P</caption>
+            <caption layout="et_EE.UTF-8_capital">P</caption>
+            <caption layout="lv_LV.UTF-8_capital">K</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ł</caption>
+            <value layout="en_US.UTF-8">p</value>
+            <value layout="et_EE.UTF-8">p</value>
+            <value layout="lv_LV.UTF-8">k</value>
+            <value layout="pl_PL.UTF-8">ł</value>
+            <value layout="en_US.UTF-8_capital">P</value>
+            <value layout="et_EE.UTF-8_capital">P</value>
+            <value layout="lv_LV.UTF-8_capital">K</value>
+            <value layout="pl_PL.UTF-8_capital">Ł</value>
+        </key>
+        <key id="16">
+            <position><x>4</x><y>2</y></position>
+            <caption layout="en_US.UTF-8">q</caption>
+            <caption layout="et_EE.UTF-8">q</caption>
+            <caption layout="lv_LV.UTF-8">ķ</caption>
+            <caption layout="pl_PL.UTF-8">m</caption>
+            <caption layout="en_US.UTF-8_capital">Q</caption>
+            <caption layout="et_EE.UTF-8_capital">Q</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ķ</caption>
+            <caption layout="pl_PL.UTF-8_capital">M</caption>
+            <value layout="en_US.UTF-8">q</value>
+            <value layout="et_EE.UTF-8">q</value>
+            <value layout="lv_LV.UTF-8">ķ</value>
+            <value layout="pl_PL.UTF-8">m</value>
+            <value layout="en_US.UTF-8_capital">Q</value>
+            <value layout="et_EE.UTF-8_capital">Q</value>
+            <value layout="lv_LV.UTF-8_capital">Ķ</value>
+            <value layout="pl_PL.UTF-8_capital">M</value>
+        </key>
+        <key id="17">
+            <position><x>5</x><y>2</y></position>
+            <caption layout="en_US.UTF-8">r</caption>
+            <caption layout="et_EE.UTF-8">r</caption>
+            <caption layout="lv_LV.UTF-8">l</caption>
+            <caption layout="pl_PL.UTF-8">n</caption>
+            <caption layout="en_US.UTF-8_capital">R</caption>
+            <caption layout="et_EE.UTF-8_capital">R</caption>
+            <caption layout="lv_LV.UTF-8_capital">L</caption>
+            <caption layout="pl_PL.UTF-8_capital">N</caption>
+            <value layout="en_US.UTF-8">r</value>
+            <value layout="et_EE.UTF-8">r</value>
+            <value layout="lv_LV.UTF-8">l</value>
+            <value layout="pl_PL.UTF-8">n</value>
+            <value layout="en_US.UTF-8_capital">R</value>
+            <value layout="et_EE.UTF-8_capital">R</value>
+            <value layout="lv_LV.UTF-8_capital">L</value>
+            <value layout="pl_PL.UTF-8_capital">N</value>
+        </key>
+        <key id="18">
+            <position><x>0</x><y>3</y></position>
+            <caption layout="en_US.UTF-8">s</caption>
+            <caption layout="et_EE.UTF-8">s</caption>
+            <caption layout="lv_LV.UTF-8">ļ</caption>
+            <caption layout="pl_PL.UTF-8">ń</caption>
+            <caption layout="en_US.UTF-8_capital">S</caption>
+            <caption layout="et_EE.UTF-8_capital">S</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ļ</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ń</caption>
+            <value layout="en_US.UTF-8">s</value>
+            <value layout="et_EE.UTF-8">s</value>
+            <value layout="lv_LV.UTF-8">ļ</value>
+            <value layout="pl_PL.UTF-8">ń</value>
+            <value layout="en_US.UTF-8_capital">S</value>
+            <value layout="et_EE.UTF-8_capital">S</value>
+            <value layout="lv_LV.UTF-8_capital">Ļ</value>
+            <value layout="pl_PL.UTF-8_capital">Ń</value>
+        </key>
+        <key id="19">
+            <position><x>1</x><y>3</y></position>
+            <caption layout="en_US.UTF-8">t</caption>
+            <caption layout="et_EE.UTF-8">š</caption>
+            <caption layout="lv_LV.UTF-8">m</caption>
+            <caption layout="pl_PL.UTF-8">o</caption>
+            <caption layout="en_US.UTF-8_capital">T</caption>
+            <caption layout="et_EE.UTF-8_capital">Š</caption>
+            <caption layout="lv_LV.UTF-8_capital">M</caption>
+            <caption layout="pl_PL.UTF-8_capital">O</caption>
+            <value layout="en_US.UTF-8">t</value>
+            <value layout="et_EE.UTF-8">š</value>
+            <value layout="lv_LV.UTF-8">m</value>
+            <value layout="pl_PL.UTF-8">o</value>
+            <value layout="en_US.UTF-8_capital">T</value>
+            <value layout="et_EE.UTF-8_capital">Š</value>
+            <value layout="lv_LV.UTF-8_capital">M</value>
+            <value layout="pl_PL.UTF-8_capital">O</value>
+        </key>
+        <key id="20" initial="true">
+            <position><x>2</x><y>3</y></position>
+            <caption layout="en_US.UTF-8">u</caption>
+            <caption layout="et_EE.UTF-8">z</caption>
+            <caption layout="lv_LV.UTF-8">n</caption>
+            <caption layout="pl_PL.UTF-8">ó</caption>
+            <caption layout="en_US.UTF-8_capital">U</caption>
+            <caption layout="et_EE.UTF-8_capital">Z</caption>
+            <caption layout="lv_LV.UTF-8_capital">N</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ó</caption>
+            <value layout="en_US.UTF-8">u</value>
+            <value layout="et_EE.UTF-8">z</value>
+            <value layout="lv_LV.UTF-8">n</value>
+            <value layout="pl_PL.UTF-8">ó</value>
+            <value layout="en_US.UTF-8_capital">U</value>
+            <value layout="et_EE.UTF-8_capital">Z</value>
+            <value layout="lv_LV.UTF-8_capital">N</value>
+            <value layout="pl_PL.UTF-8_capital">Ó</value>
+        </key>
+        <key id="21">
+            <position><x>3</x><y>3</y></position>
+            <caption layout="en_US.UTF-8">v</caption>
+            <caption layout="et_EE.UTF-8">ž</caption>
+            <caption layout="lv_LV.UTF-8">ņ</caption>
+            <caption layout="pl_PL.UTF-8">p</caption>
+            <caption layout="en_US.UTF-8_capital">V</caption>
+            <caption layout="et_EE.UTF-8_capital">Ž</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ņ</caption>
+            <caption layout="pl_PL.UTF-8_capital">P</caption>
+            <value layout="en_US.UTF-8">v</value>
+            <value layout="et_EE.UTF-8">ž</value>
+            <value layout="lv_LV.UTF-8">ņ</value>
+            <value layout="pl_PL.UTF-8">p</value>
+            <value layout="en_US.UTF-8_capital">V</value>
+            <value layout="et_EE.UTF-8_capital">Ž</value>
+            <value layout="lv_LV.UTF-8_capital">Ņ</value>
+            <value layout="pl_PL.UTF-8_capital">P</value>
+        </key>
+        <key id="22">
+            <position><x>4</x><y>3</y></position>
+            <caption layout="en_US.UTF-8">w</caption>
+            <caption layout="et_EE.UTF-8">t</caption>
+            <caption layout="lv_LV.UTF-8">o</caption>
+            <caption layout="pl_PL.UTF-8">r</caption>
+            <caption layout="en_US.UTF-8_capital">W</caption>
+            <caption layout="et_EE.UTF-8_capital">T</caption>
+            <caption layout="lv_LV.UTF-8_capital">O</caption>
+            <caption layout="pl_PL.UTF-8_capital">R</caption>
+            <value layout="en_US.UTF-8">w</value>
+            <value layout="et_EE.UTF-8">t</value>
+            <value layout="lv_LV.UTF-8">o</value>
+            <value layout="pl_PL.UTF-8">r</value>
+            <value layout="en_US.UTF-8_capital">W</value>
+            <value layout="et_EE.UTF-8_capital">T</value>
+            <value layout="lv_LV.UTF-8_capital">O</value>
+            <value layout="pl_PL.UTF-8_capital">R</value>
+        </key>
+        <key id="23">
+            <position><x>5</x><y>3</y></position>
+            <caption layout="en_US.UTF-8">x</caption>
+            <caption layout="et_EE.UTF-8">u</caption>
+            <caption layout="lv_LV.UTF-8">p</caption>
+            <caption layout="pl_PL.UTF-8">s</caption>
+            <caption layout="en_US.UTF-8_capital">X</caption>
+            <caption layout="et_EE.UTF-8_capital">U</caption>
+            <caption layout="lv_LV.UTF-8_capital">P</caption>
+            <caption layout="pl_PL.UTF-8_capital">S</caption>
+            <value layout="en_US.UTF-8">x</value>
+            <value layout="et_EE.UTF-8">u</value>
+            <value layout="lv_LV.UTF-8">p</value>
+            <value layout="pl_PL.UTF-8">s</value>
+            <value layout="en_US.UTF-8_capital">X</value>
+            <value layout="et_EE.UTF-8_capital">U</value>
+            <value layout="lv_LV.UTF-8_capital">P</value>
+            <value layout="pl_PL.UTF-8_capital">S</value>
+        </key>
+        <key id="24">
+            <position><x>0</x><y>4</y></position>
+            <caption layout="en_US.UTF-8">y</caption>
+            <caption layout="et_EE.UTF-8">v</caption>
+            <caption layout="lv_LV.UTF-8">r</caption>
+            <caption layout="pl_PL.UTF-8">ś</caption>
+            <caption layout="en_US.UTF-8_capital">Y</caption>
+            <caption layout="et_EE.UTF-8_capital">V</caption>
+            <caption layout="lv_LV.UTF-8_capital">R</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ś</caption>
+            <value layout="en_US.UTF-8">y</value>
+            <value layout="et_EE.UTF-8">v</value>
+            <value layout="lv_LV.UTF-8">r</value>
+            <value layout="pl_PL.UTF-8">ś</value>
+            <value layout="en_US.UTF-8_capital">Y</value>
+            <value layout="et_EE.UTF-8_capital">V</value>
+            <value layout="lv_LV.UTF-8_capital">R</value>
+            <value layout="pl_PL.UTF-8_capital">Ś</value>
+        </key>
+        <key id="25">
+            <position><x>1</x><y>4</y></position>
+            <caption layout="en_US.UTF-8">z</caption>
+            <caption layout="et_EE.UTF-8">w</caption>
+            <caption layout="lv_LV.UTF-8">s</caption>
+            <caption layout="pl_PL.UTF-8">t</caption>
+            <caption layout="en_US.UTF-8_capital">Z</caption>
+            <caption layout="et_EE.UTF-8_capital">W</caption>
+            <caption layout="lv_LV.UTF-8_capital">S</caption>
+            <caption layout="pl_PL.UTF-8_capital">T</caption>
+            <value layout="en_US.UTF-8">z</value>
+            <value layout="et_EE.UTF-8">w</value>
+            <value layout="lv_LV.UTF-8">s</value>
+            <value layout="pl_PL.UTF-8">t</value>
+            <value layout="en_US.UTF-8_capital">Z</value>
+            <value layout="et_EE.UTF-8_capital">W</value>
+            <value layout="lv_LV.UTF-8_capital">S</value>
+            <value layout="pl_PL.UTF-8_capital">T</value>
+        </key>
+        <key id="26">
+            <position><x>2</x><y>4</y></position>
+            <caption layout="en_US.UTF-8">1</caption>
+            <caption layout="et_EE.UTF-8">õ</caption>
+            <caption layout="lv_LV.UTF-8">š</caption>
+            <caption layout="pl_PL.UTF-8">u</caption>
+            <caption layout="en_US.UTF-8_capital">1</caption>
+            <caption layout="et_EE.UTF-8_capital">Õ</caption>
+            <caption layout="lv_LV.UTF-8_capital">Š</caption>
+            <caption layout="pl_PL.UTF-8_capital">U</caption>
+            <value layout="en_US.UTF-8">1</value>
+            <value layout="et_EE.UTF-8">õ</value>
+            <value layout="lv_LV.UTF-8">š</value>
+            <value layout="pl_PL.UTF-8">u</value>
+            <value layout="en_US.UTF-8_capital">1</value>
+            <value layout="et_EE.UTF-8_capital">Õ</value>
+            <value layout="lv_LV.UTF-8_capital">Š</value>
+            <value layout="pl_PL.UTF-8_capital">U</value>
+        </key>
+        <key id="27">
+            <position><x>3</x><y>4</y></position>
+            <caption layout="en_US.UTF-8">2</caption>
+            <caption layout="et_EE.UTF-8">ä</caption>
+            <caption layout="lv_LV.UTF-8">t</caption>
+            <caption layout="pl_PL.UTF-8">w</caption>
+            <caption layout="en_US.UTF-8_capital">2</caption>
+            <caption layout="et_EE.UTF-8_capital">Ä</caption>
+            <caption layout="lv_LV.UTF-8_capital">T</caption>
+            <caption layout="pl_PL.UTF-8_capital">W</caption>
+            <value layout="en_US.UTF-8">2</value>
+            <value layout="et_EE.UTF-8">ä</value>
+            <value layout="lv_LV.UTF-8">t</value>
+            <value layout="pl_PL.UTF-8">w</value>
+            <value layout="en_US.UTF-8_capital">2</value>
+            <value layout="et_EE.UTF-8_capital">Ä</value>
+            <value layout="lv_LV.UTF-8_capital">T</value>
+            <value layout="pl_PL.UTF-8_capital">W</value>
+        </key>
+        <key id="28">
+            <position><x>4</x><y>4</y></position>
+            <caption layout="en_US.UTF-8">3</caption>
+            <caption layout="et_EE.UTF-8">ö</caption>
+            <caption layout="lv_LV.UTF-8">u</caption>
+            <caption layout="pl_PL.UTF-8">y</caption>
+            <caption layout="en_US.UTF-8_capital">3</caption>
+            <caption layout="et_EE.UTF-8_capital">Ö</caption>
+            <caption layout="lv_LV.UTF-8_capital">U</caption>
+            <caption layout="pl_PL.UTF-8_capital">Y</caption>
+            <value layout="en_US.UTF-8">3</value>
+            <value layout="et_EE.UTF-8">ö</value>
+            <value layout="lv_LV.UTF-8">u</value>
+            <value layout="pl_PL.UTF-8">y</value>
+            <value layout="en_US.UTF-8_capital">3</value>
+            <value layout="et_EE.UTF-8_capital">Ö</value>
+            <value layout="lv_LV.UTF-8_capital">U</value>
+            <value layout="pl_PL.UTF-8_capital">Y</value>
+        </key>
+        <key id="29">
+            <position><x>5</x><y>4</y></position>
+            <caption layout="en_US.UTF-8">4</caption>
+            <caption layout="et_EE.UTF-8">ü</caption>
+            <caption layout="lv_LV.UTF-8">ū</caption>
+            <caption layout="pl_PL.UTF-8">z</caption>
+            <caption layout="en_US.UTF-8_capital">4</caption>
+            <caption layout="et_EE.UTF-8_capital">Ü</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ū</caption>
+            <caption layout="pl_PL.UTF-8_capital">Z</caption>
+            <value layout="en_US.UTF-8">4</value>
+            <value layout="et_EE.UTF-8">ü</value>
+            <value layout="lv_LV.UTF-8">ū</value>
+            <value layout="pl_PL.UTF-8">z</value>
+            <value layout="en_US.UTF-8_capital">4</value>
+            <value layout="et_EE.UTF-8_capital">Ü</value>
+            <value layout="lv_LV.UTF-8_capital">Ū</value>
+            <value layout="pl_PL.UTF-8_capital">Z</value>
+        </key>
+        <key id="30">
+            <position><x>0</x><y>5</y></position>
+            <caption layout="en_US.UTF-8">5</caption>
+            <caption layout="et_EE.UTF-8">x</caption>
+            <caption layout="lv_LV.UTF-8">v</caption>
+            <caption layout="pl_PL.UTF-8">ż</caption>
+            <caption layout="en_US.UTF-8_capital">5</caption>
+            <caption layout="et_EE.UTF-8_capital">X</caption>
+            <caption layout="lv_LV.UTF-8_capital">V</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ż</caption>
+            <value layout="en_US.UTF-8">5</value>
+            <value layout="et_EE.UTF-8">x</value>
+            <value layout="lv_LV.UTF-8">v</value>
+            <value layout="pl_PL.UTF-8">ż</value>
+            <value layout="en_US.UTF-8_capital">5</value>
+            <value layout="et_EE.UTF-8_capital">X</value>
+            <value layout="lv_LV.UTF-8_capital">V</value>
+            <value layout="pl_PL.UTF-8_capital">Ż</value>
+        </key>
+        <key id="31">
+            <position><x>1</x><y>5</y></position>
+            <caption layout="en_US.UTF-8">6</caption>
+            <caption layout="et_EE.UTF-8">y</caption>
+            <caption layout="lv_LV.UTF-8">z</caption>
+            <caption layout="pl_PL.UTF-8">ź</caption>
+            <caption layout="en_US.UTF-8_capital">6</caption>
+            <caption layout="et_EE.UTF-8_capital">Y</caption>
+            <caption layout="lv_LV.UTF-8_capital">Z</caption>
+            <caption layout="pl_PL.UTF-8_capital">Ź</caption>
+            <value layout="en_US.UTF-8">6</value>
+            <value layout="et_EE.UTF-8">y</value>
+            <value layout="lv_LV.UTF-8">z</value>
+            <value layout="pl_PL.UTF-8">ź</value>
+            <value layout="en_US.UTF-8_capital">6</value>
+            <value layout="et_EE.UTF-8_capital">Y</value>
+            <value layout="lv_LV.UTF-8_capital">Z</value>
+            <value layout="pl_PL.UTF-8_capital">Ź</value>
+        </key>
+        <key id="32">
+            <position><x>2</x><y>5</y></position>
+            <caption layout="en_US.UTF-8">7</caption>
+            <caption layout="lv_LV.UTF-8">ž</caption>
+            <caption layout="en_US.UTF-8_capital">7</caption>
+            <caption layout="lv_LV.UTF-8_capital">Ž</caption>
+            <value layout="en_US.UTF-8">7</value>
+            <value layout="lv_LV.UTF-8">ž</value>
+            <value layout="en_US.UTF-8_capital">7</value>
+            <value layout="lv_LV.UTF-8_capital">Ž</value>
+        </key>
+        <key id="33">
+            <position><x>3</x><y>5</y></position>
+            <caption layout="en_US.UTF-8">8</caption>
+            <caption layout="en_US.UTF-8_capital">8</caption>
+            <value layout="en_US.UTF-8">8</value>
+            <value layout="en_US.UTF-8_capital">8</value>
+        </key>
+        <key id="34">
+            <position><x>4</x><y>5</y></position>
+            <caption layout="en_US.UTF-8">9</caption>
+            <caption layout="en_US.UTF-8_capital">9</caption>
+            <value layout="en_US.UTF-8">9</value>
+            <value layout="en_US.UTF-8_capital">9</value>
+        </key>
+        <key id="35">
+            <position><x>5</x><y>5</y></position>
+            <caption layout="en_US.UTF-8">0</caption>
+            <caption layout="en_US.UTF-8_capital">0</caption>
+            <value layout="en_US.UTF-8">0</value>
+            <value layout="en_US.UTF-8_capital">0</value>
+        </key>
+
+        <key id="backspace" type="backspace">
+            <size>
+                <width>2</width>
+            </size>
+            <position>
+                <x>4</x><y>6</y>
+            </position>
+            <bitmap><path>backspace</path></bitmap>
+        </key>
+
+        <key id="shift" type="layout">
+            <size>
+                <width>2</width>
+            </size>
+            <position>
+                <x>0</x><y>7</y>
+            </position>
+            <bitmap><path>shift</path></bitmap>
+        </key>
+
+        <!-- seventh row: SPACE -->
+        <key id="space">
+            <size>
+                <width>2</width>
+            </size>
+            <position>
+                <x>2</x><y>7</y>
+            </position>
+            <caption>space</caption>
+            <value> </value>
+        </key>
+
+        <!-- sixth row: NUMBER .com ENTER -->
+        <key id="enter" type="enter">
+            <size>
+                <width>2</width>
+            </size>
+            <position>
+                <x>4</x><y>7</y>
+            </position>
+            <caption>enter</caption>
+        </key>
+
+    </keys>
+
+</osk-map>

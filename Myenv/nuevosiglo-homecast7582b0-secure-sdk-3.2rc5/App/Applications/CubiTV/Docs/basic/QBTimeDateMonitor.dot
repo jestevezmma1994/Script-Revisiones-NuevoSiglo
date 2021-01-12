@@ -1,0 +1,7 @@
+digraph QBTimeDateMonitor {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBTimeDateMonitor [URL="\N.html" root=true]
+
+    QBTimeDateMonitor -> Time
+}

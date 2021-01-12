@@ -1,0 +1,75 @@
+#!/bin/sh
+
+log()
+{
+  echo "qb_pvr_mount_usb_rw[$DEV_NODE] > $@" 1>&2
+  #echo "qb_pvr_mount_usb_rw[$DEV_NODE] > $@" >> /tmp/mymesg
+  #logger "qb_pvr_mount_usb_rw[$DEV_NODE] > $@"
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR: (res=$RES)" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+
+if [ $# -ne 2 ]; then
+  log usage: "${0##*/} <short_dev(sda|sdb|...)> (yes|no)"
+  exit 1;
+fi
+
+HDX=$1
+IS_RW=$2
+
+
+if [ "$IS_RW" == "yes" ]; then
+
+  call_v  mount  -o barrier=1,remount,rw,noexec  /tmp/automount/${HDX}1/dev  /tmp/automount/${HDX}1/root
+  [ $RES -ne 0 ] && exit 7
+
+  call_v  chmod  g+w  /tmp/automount/${HDX}2/dev
+  [ $RES -ne 0 ] && exit 7
+
+  call_v  chown -R 1000:1000 /tmp/automount/${HDX}1/root
+  [ $RES -ne 0 ] && exit 7
+
+  call_v  chmod -R ug+rw /tmp/automount/${HDX}1/root
+  [ $RES -ne 0 ] && exit 7
+
+else
+
+  call_v  chmod  g-w  /tmp/automount/${HDX}2/dev
+  [ $RES -ne 0 ] && exit 7
+
+  call_v  mount  -o barrier=1,remount,ro,noexec  /tmp/automount/${HDX}1/dev  /tmp/automount/${HDX}1/root
+  [ $RES -ne 0 ] && exit 7
+
+fi
+
+log success

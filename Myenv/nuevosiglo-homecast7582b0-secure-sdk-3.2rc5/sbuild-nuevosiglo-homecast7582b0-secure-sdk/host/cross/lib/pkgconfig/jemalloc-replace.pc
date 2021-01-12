@@ -1,0 +1,12 @@
+
+prefix=$${BUILD_ROOT}/usr
+exec_prefix=${prefix}
+libdir=$${BUILD_ROOT}/usr//lib
+includedir=${prefix}/include
+
+Name:       jemalloc-replace
+Description:    jemalloc malloc implementation
+Version:    3.3.0
+Cflags:     -I${includedir}
+Libs:       -L${libdir} -ljemalloc
+

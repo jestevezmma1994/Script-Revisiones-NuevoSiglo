@@ -1,0 +1,84 @@
+msgid "Language"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "Latin"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "DVB Mode"
+msgstr ""
+
+msgid "IP Mode"
+msgstr ""
+
+msgid "Hybrid Mode"
+msgstr ""
+
+msgid "IP channels"
+msgstr ""
+
+msgid "EPG for IP channels"
+msgstr ""
+
+msgid "Web Services"
+msgstr ""
+
+msgid "Tuner Type"
+msgstr ""
+
+msgid "Cable"
+msgstr ""
+
+msgid "Cable AnnexB"
+msgstr ""
+
+msgid "Cable DVB-C"
+msgstr ""
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Scanning Standard"
+msgstr ""
+
+msgid "Scan Type"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "NID selection"
+msgstr ""
+
+msgid "ONID selection"
+msgstr ""
+
+msgid "DVB channels"
+msgstr ""
+
+msgid "DVB-C NIT Automatic"
+msgstr ""
+
+msgid "DVB-C Manual"
+msgstr ""
+

@@ -1,0 +1,6 @@
+Name: QuadriCast-MStoreVoD
+Version: 1.0.0
+Requires: QBContentManager QBDVBScanner QBDataModel3 QBStringUtils QBTunerReserver QuadriCast-BDMDVBInterface QuadriCast-MStore SvCore SvFoundation SvQuirks 
+Description: QuadriCast MStore VoD provider
+Libs: -lQuadriCast-MStoreVoD 
+CFlags: 

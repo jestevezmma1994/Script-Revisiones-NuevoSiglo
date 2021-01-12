@@ -1,0 +1,99 @@
+#!/bin/sh
+
+log()
+{
+  echo "prepare_paritions[$HDX] $@" 1>&2
+  #logger "prepare_paritions[$HDX] > $@"
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR: (res=$RES)" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+
+if [ $# -ne 3 ]; then
+  log usage: "${0##*/} <meta_root> <data_dev_major> <data_dev_minor>"
+  exit 1;
+fi
+
+META_DIR=$1
+MAJOR=$2
+MINOR=$3
+
+
+#-------------------------
+#-------------------------
+# temporary dir
+DIR=/tmp/qb_pvr_format_prepare_partitions_dir_$MAJOR_$MINOR
+call_v rm -rf $DIR
+call mkdir -p $DIR
+[ $RES -ne 0 ] && exit 7
+log using temporary dir $DIR
+
+
+#-------------------------
+#-------------------------
+# read storage device stats
+DEV_SIZE=
+while read major minor blocks dev; do
+  [ "$major" != "$MAJOR" ] && continue;
+  [ "$minor" != "$MINOR" ] && continue;
+  DEV_SIZE=$blocks
+  HDX=$dev
+  break;
+done < /proc/partitions
+
+if [ -z "$DEV_SIZE" ]; then
+  log Device $HDX not found in /proc/partitions
+  exit 1;
+fi
+
+log Device $HDX = $MAJOR:$MINOR, size=$DEV_SIZE
+
+
+#-------------------------
+#-------------------------
+# xtream partition
+DATA_NODE=$DIR/data_node
+call mknod $DATA_NODE b $MAJOR $MINOR
+[ $RES -ne 0 ] && exit 7
+
+
+call_v  qb_format_pvr_files  $META_DIR  $DATA_NODE  $DEV_SIZE
+[ $RES -ne 0 ] && exit 7
+
+
+#-------------------------
+#-------------------------
+
+call_v rm -rf $DIR
+
+log success
+exit 0

@@ -1,0 +1,6 @@
+Name: QBWidgets
+Version: 1.0.0
+Requires: CAGE QBServices SvCore SvFoundation libqrencode swl 
+Description: Cubiware widgets
+Libs: -lQBWidgets 
+CFlags: 

@@ -1,0 +1,7 @@
+digraph QBPushReceiver {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBPushReceiver [URL="\N.html" root=true]
+
+    QBPushReceiver -> CubiMW
+}

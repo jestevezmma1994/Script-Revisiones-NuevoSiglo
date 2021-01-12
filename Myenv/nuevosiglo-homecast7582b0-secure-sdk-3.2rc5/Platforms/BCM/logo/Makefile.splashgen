@@ -1,0 +1,93 @@
+.PHONY: clean
+
+##
+# To setup custom splash please add environment variable SPLASH_PROJECT in Your project file.
+# Please put custom splash images in path QBSplash/images/$(SPLASH_PROJECT).
+##
+SPLASH_PROJECT ?= generic
+
+MAX_SPLASH_SIZE_HEX := $(shell mapreader.pl $(S_MAP_DIR)/all.maps size src=sv-logo.bin)
+MAX_SPLASH_SIZE := $(shell printf "%d" $(MAX_SPLASH_SIZE_HEX))
+
+BOARD_NAME := $(S_STB_VENDOR)-$(S_STB_REVISION)
+
+PROFILE_SRC_DIR ?= $(MAGNUM_PLATFORM)
+ifneq (,$(wildcard QBSplash/profiles/$(BOARD_NAME)))
+    $(info Found profiles for $(BOARD_NAME), using it)
+    PROFILE_SRC_DIR := $(BOARD_NAME)
+else
+    $(info Using default profiles for $(MAGNUM_PLATFORM))
+endif
+
+SPLASH_OUTPUT_PROFILE ?= 720p50_PAL
+SPLASH_IMAGE := splash.bin
+PROFILE_BIN := vdc_$(PROFILE_SRC_DIR)_$(SPLASH_OUTPUT_PROFILE).bin
+PREVIEW_DIR := splash_preview
+
+SRCS := QBSplash/QBSplash.c QBSplash/QBSplashGen.c QBSplash/QBSplashMapping.c
+OBJS := $(SRCS:%.c=%.o)
+DEPS := $(SRCS:%.c=%.d)
+
+DUMP_SRCS := QBSplash/QBSplashVDCDump.c
+DUMP_OBJS := $(DUMP_SRCS:%.c=%.o)
+DUMP_DEPS := $(DUMP_SRCS:%.c=%.d)
+
+TARGET := QBSplashGen
+DUMP_TARGET := QBSplashVDCDump
+
+LIBPNG_CFLAGS := $(shell srm-local-run pkg-config --cflags libpng)
+LIBPNG_LDFLAGS := $(shell srm-local-run pkg-config --libs libpng)
+
+CC := srm-local-run gcc
+CFLAGS := -DQBSPLASH_DEBUG -DQB_SPLASH_MAPPING_TO_BUFFER -std=c99 $(LIBPNG_CFLAGS) -I./QBBoot -IQBSplash
+CFLAGS += -IQBSplash/profiles/$(PROFILE_SRC_DIR) -IQBSplash/images/$(SPLASH_PROJECT) -DPROFILE_NAME=$(SPLASH_OUTPUT_PROFILE)
+LDFLAGS := $(LIBPNG_LDFLAGS) -lm
+
+$(PREVIEW_DIR):
+	mkdir $(PREVIEW_DIR)
+
+$(SPLASH_IMAGE): $(TARGET) $(PROFILE_BIN) $(IMGS) $(PREVIEW_DIR)
+	./QBSplashGen QBSplash/images/$(SPLASH_PROJECT)/ $(PROFILE_BIN) $(SPLASH_IMAGE)
+	mv layout_*.png $(PREVIEW_DIR)
+	mv preview_*.png $(PREVIEW_DIR)
+
+$(PROFILE_BIN): $(DUMP_TARGET)
+	./QBSplashVDCDump $(PROFILE_BIN)
+
+install:
+	$(eval SPLASH_SIZE := $(shell stat -c %s $(SPLASH_IMAGE)))
+	@echo "Checking splash size: $(SPLASH_SIZE) <= $(MAX_SPLASH_SIZE)"
+	@if [ $(SPLASH_SIZE) -gt $(MAX_SPLASH_SIZE) ]; then echo -e "\x1b[31mSplash image is too large to fit on flash\x1b[39m"; exit 1; fi
+ifneq ($(shell mapreader.pl $(S_MAP_DIR)/all.maps attr src=sv-logo.bin | grep -o "qbimage"),)
+	@echo "Creating QBBinaryImage"
+	@srm-host-run $(SRM_ROOT)/host/local/usr/bin/mkqbbinaryimage.py --mode static --encryption aes256-cbc $(S_INSTALL_KEYSERVER_SYM_SPLASH_KEY_ID) $(S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID) $(SPLASH_IMAGE) sv-logo.bin
+else
+	@mv $(SPLASH_IMAGE) sv-logo.bin
+endif
+	@install -m 644 sv-logo.bin $(DESTDIR)/../sv-logo.bin
+
+compile: $(SPLASH_IMAGE)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+$(DUMP_TARGET): $(DUMP_OBJS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -MMD -c $< -o $@
+
+-include $(DEPS)
+
+clean:
+	rm -f $(DEPS)
+	rm -f $(OBJS)
+	rm -f $(TARGET)
+	rm -f $(DUMP_DEPS)
+	rm -f $(DUMP_OBJS)
+	rm -f $(DUMP_TARGET)
+	rm -f $(SPLASH_IMAGE)
+	rm -f $(PROFILE_BIN)
+	rm -f $(PREVIEW_DIR)/*.png
+	rm -df $(PREVIEW_DIR)
+	rm -f sv-logo.bin

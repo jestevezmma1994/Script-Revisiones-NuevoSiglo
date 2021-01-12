@@ -1,0 +1,6 @@
+Name: SvRtsp
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvPlayerKit error_log fibers ionet 
+Description: Cubiware Real Time Streaming Protocol library
+Libs: -lSvRtsp 
+CFlags: 

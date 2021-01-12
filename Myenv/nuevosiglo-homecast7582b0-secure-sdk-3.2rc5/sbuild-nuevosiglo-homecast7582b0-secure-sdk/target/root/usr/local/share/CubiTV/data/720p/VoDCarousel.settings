@@ -1,0 +1,312 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="clock.settings"/>
+    <xi:include href="Title.settings"/>
+    <xi:include href="Dialog.settings"/>
+    <xi:include href="Animation.settings"/>
+
+    <widget name="description-label-template">
+        <param tag="width"><int>250</int></param>
+        <param tag="height"><int>25</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="textColor"><color>cfcfcfff</color></param>
+        <param tag="textAlign"><string>left</string></param>
+    </widget>
+    <widget name="description-icon-template">
+        <param tag="xOffset"><int>10</int></param>
+    </widget>
+
+    <widget name="Window">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="bg"><bitmap><path>bg_mainbg.png</path></bitmap></param>
+	</widget>
+
+    <widget name="MovieTitle">
+        <param tag="xOffset"><int>75</int></param>
+        <param tag="yOffset"><int>105</int></param>
+        <param tag="width"><int>340</int></param>
+        <param tag="height"><int>30</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>cfcfcfff</color></param>
+        <param tag="textAlign"><string>left</string></param>
+    </widget>
+
+    <widget name="Description">
+        <param tag="xOffset"><int>75</int></param>
+        <param tag="yOffset"><int>150</int></param>
+        <param tag="width"><int>340</int></param>
+        <param tag="height"><int>170</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>cfcfcfff</color></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="multiline"><bool>true</bool></param>
+        <param tag="maxLines"><int>6</int></param>
+        <param tag="vertAlign"><string>top</string></param>
+        <param tag="breakMarker"><string>…</string></param>
+    </widget>
+
+    <widget name="InfoIcons">
+        <param tag="xOffset"><int>920</int></param>
+        <param tag="yOffset"><int>30</int></param>
+        <param tag="width"><int>1024</int></param>
+        <param tag="height"><int>40</int></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="fadeDuration"><double>0.3</double></param>
+
+        <widget name="HD">
+            <param tag="xOffset"><int>220</int></param>
+            <param tag="yOffset"><int>5</int></param>
+            <param tag="width"><int>29</int></param>
+            <param tag="height"><int>29</int></param>
+            <param tag="bitmaps"><array>
+                <bitmap key="bitmap0"><path>infoIcons/iconi_hd_inactive.png</path></bitmap>
+                <bitmap key="bitmap1"><path>infoIcons/iconi_hd_active.png</path></bitmap>
+            </array></param>
+        </widget>
+        <widget name="rating">
+            <param tag="xOffset"><int>250</int></param>
+            <param tag="yOffset"><int>5</int></param>
+            <param tag="width"><int>29</int></param>
+            <param tag="height"><int>29</int></param>
+            <param tag="bitmaps"><array>
+                <bitmap key="AGE_NR"><path>infoIcons/iconi_nolimits_inactive.png</path></bitmap>
+                <bitmap key="AGE_1"><path>infoIcons/iconi-1-active.png</path></bitmap>
+                <bitmap key="AGE_2"><path>infoIcons/iconi-2-active.png</path></bitmap>
+                <bitmap key="AGE_3"><path>infoIcons/iconi-3-active.png</path></bitmap>
+                <bitmap key="AGE_4"><path>infoIcons/iconi-4-active.png</path></bitmap>
+                <bitmap key="AGE_5"><path>infoIcons/iconi-5-active.png</path></bitmap>
+                <bitmap key="AGE_6"><path>infoIcons/iconi-6-active.png</path></bitmap>
+                <bitmap key="AGE_7"><path>infoIcons/iconi-7-active.png</path></bitmap>
+                <bitmap key="AGE_8"><path>infoIcons/iconi-8-active.png</path></bitmap>
+                <bitmap key="AGE_9"><path>infoIcons/iconi-9-active.png</path></bitmap>
+                <bitmap key="AGE_10"><path>infoIcons/iconi-10-active.png</path></bitmap>
+                <bitmap key="AGE_11"><path>infoIcons/iconi-11-active.png</path></bitmap>
+                <bitmap key="AGE_12"><path>infoIcons/iconi-12-active.png</path></bitmap>
+                <bitmap key="AGE_13"><path>infoIcons/iconi-13-active.png</path></bitmap>
+                <bitmap key="AGE_14"><path>infoIcons/iconi-14-active.png</path></bitmap>
+                <bitmap key="AGE_15"><path>infoIcons/iconi-15-active.png</path></bitmap>
+                <bitmap key="AGE_16"><path>infoIcons/iconi-16-active.png</path></bitmap>
+                <bitmap key="AGE_17"><path>infoIcons/iconi-17-active.png</path></bitmap>
+                <bitmap key="AGE_18"><path>infoIcons/iconi-18-active.png</path></bitmap>
+                <!-- MPAA -->
+                <bitmap key="MPAA_NR"><path>infoIcons/iconi_NR_inactive.png</path></bitmap>
+                <bitmap key="MPAA_NRA"><path>infoIcons/iconi_NRA_active.png</path></bitmap>
+                <bitmap key="MPAA_G"><path>infoIcons/iconi_MPAA-G_active.png</path></bitmap>
+                <bitmap key="MPAA_PG"><path>infoIcons/iconi_MPAA-PG_active.png</path></bitmap>
+                <bitmap key="MPAA_PG13"><path>infoIcons/iconi_MPAA-PG-13_active.png</path></bitmap>
+                <bitmap key="MPAA_R"><path>infoIcons/iconi_MPAA-R_active.png</path></bitmap>
+                <bitmap key="MPAA_NC17"><path>infoIcons/iconi_MPAA-NC-17_active.png</path></bitmap>
+                <!-- FCC -->
+                <bitmap key="VCHIP_NR"><path>infoIcons/iconi_NR_inactive.png</path></bitmap>
+                <bitmap key="VCHIP_NRA"><path>infoIcons/iconi_NRA_active.png</path></bitmap>
+                <bitmap key="VCHIP_TV-Y"><path>infoIcons/iconi_TV-Y_active.png</path></bitmap>
+                <bitmap key="VCHIP_TV-Y7"><path>infoIcons/iconi_TV-Y7_active.png</path></bitmap>
+                <bitmap key="VCHIP_TV-G"><path>infoIcons/iconi_TV-G_active.png</path></bitmap>
+                <bitmap key="VCHIP_TV-PG"><path>infoIcons/iconi_TV-PG_active.png</path></bitmap>
+                <bitmap key="VCHIP_TV-14"><path>infoIcons/iconi_TV-14_active.png</path></bitmap>
+                <bitmap key="VCHIP_TV-MA"><path>infoIcons/iconi_TV-MA_active.png</path></bitmap>
+                <!-- Mexico -->
+                <bitmap key="MEX_AA"><path>infoIcons/iconi_aa_active.png</path></bitmap>
+                <bitmap key="MEX_A"><path>infoIcons/iconi_a_active.png</path></bitmap>
+                <bitmap key="MEX_B"><path>infoIcons/iconi_b_active.png</path></bitmap>
+                <bitmap key="MEX_B15"><path>infoIcons/iconi_b15_active.png</path></bitmap>
+                <bitmap key="MEX_C"><path>infoIcons/iconi_c_active.png</path></bitmap>
+                <bitmap key="MEX_D"><path>infoIcons/iconi_d_active.png</path></bitmap>
+            </array></param>
+        </widget>
+    </widget>
+
+    <widget name="MovieInfo">
+        <param tag="xOffset"><int>460</int></param>
+        <param tag="yOffset"><int>75</int></param>
+        <param tag="width"><int>300</int></param>
+        <param tag="height"><int>340</int></param>
+
+        <widget name="PriceIcon" import="description-icon-template">
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_cart.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="PricePromoIcon" import="description-icon-template">
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_cart.png</path></bitmap>
+            </param>
+        </widget>
+
+
+        <widget name="Price" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="textColor"><color>e09f0aff</color></param>
+            <param tag="expirationDateFormat"><string>%Y-%m-%d %H:%M:%S</string></param>
+        </widget>
+
+        <widget name="GenreIcon" import="description-icon-template">
+            <param tag="yOffset"><int>35</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_genre.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Genre" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>38</int></param>
+        </widget>
+
+        <widget name="CountryIcon" import="description-icon-template">
+            <param tag="yOffset"><int>58</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_country.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Country" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>62</int></param>
+        </widget>
+
+        <widget name="DirectorIcon" import="description-icon-template">
+            <param tag="yOffset"><int>87</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_director.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Director" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>91</int></param>
+        </widget>
+
+        <widget name="CastIcon" import="description-icon-template">
+            <param tag="yOffset"><int>114</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_cast.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Cast" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>118</int></param>
+            <param tag="height"><int>50</int></param>
+            <param tag="multiline"><bool>true</bool></param>
+            <param tag="maxLines"><int>2</int></param>
+            <param tag="vertAlign"><string>top</string></param>
+        </widget>
+
+        <widget name="RatingsIcon" import="description-icon-template">
+            <param tag="yOffset"><int>163</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_rating.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Ratings" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>166</int></param>
+        </widget>
+
+        <widget name="RuntimeIcon" import="description-icon-template">
+            <param tag="yOffset"><int>188</int></param>
+            <param tag="bg">
+                <bitmap><path>icons_runtime.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="Runtime" import="description-label-template">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>191</int></param>
+        </widget>
+    </widget>
+
+    <widget name="Carousel">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>330</int></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>326</int></param>
+        <param tag="slotWidth"><int>204</int></param>
+        <param tag="slotHeight"><int>301</int></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="rowNumber"><int>1</int></param>
+        <param tag="columnNumber"><int>10</int></param>
+        <param tag="firstFocusableColumn"><int>3</int></param>
+        <param tag="lastFocusableColumn"><int>3</int></param>
+        <param tag="firstVisibleColumn"><int>1</int></param>
+        <param tag="lastVisibleColumn"><int>7</int></param>
+        <param tag="verticalSpacing"><int>0</int></param>
+        <param tag="horizontalSpacing"><int>0</int></param>
+        <param tag="scrollMaxSpeed"><int>4500</int></param>
+        <param tag="scrollAcceleration"><double>20</double></param>
+        <param tag="orientation"><string>horizontal</string></param>
+        <param tag="setObjectDelay"><double>0.5</double></param>
+        <widget name="Slot">
+            <param tag="width"><int>204</int></param>
+            <param tag="height"><int>301</int></param>
+            <param tag="bg"><bitmap><path>cover_placeholder.png</path></bitmap></param>
+            <param tag="bgLocked"><bitmap><path>movie_details_pc.png</path></bitmap></param>
+            <param tag="duration"><double>0.2</double></param>
+            <param tag="upScale"><bool>true</bool></param>
+            <param tag="keepAspectRatio"><bool>false</bool></param>
+        </widget>
+        <widget name="Focus">
+            <param tag="width"><int>229</int></param>
+            <param tag="height"><int>326</int></param>
+            <param tag="bg"><bitmap><path>dvd_focus.png</path></bitmap></param>
+        </widget>
+    </widget>
+
+    <widget name="Clock" import="clock">
+    </widget>
+
+    <widget name="TrailerPreview">
+        <param tag="xOffset"><int>815</int></param>
+        <param tag="yOffset"><int>80</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="width"><int>404</int></param>
+        <param tag="height"><int>232</int></param>
+        <param tag="border"><int>5</int></param>
+        <widget name="Frame">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>404</int></param>
+            <param tag="height"><int>232</int></param>
+            <param tag="cutY"><int>43</int></param>
+            <param tag="bg"><bitmap><path>frame_minipicture.png</path></bitmap></param>
+        </widget>
+
+        <widget name="Title" import="description-label-template">
+            <param tag="xOffset"><int>15</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>375</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+    </widget>
+
+    <widget name="TrailerPlaceholder">
+        <param tag="xOffset"><int>815</int></param>
+        <param tag="yOffset"><int>80</int></param>
+        <param tag="width"><int>404</int></param>
+        <param tag="height"><int>232</int></param>
+        <param tag="bg"><bitmap><path>trailer_placeholder.png</path></bitmap></param>
+    </widget>
+
+    <widget name="Popup">
+        <param tag="title"><string><i18n:gettext>Please wait</i18n:gettext></string></param>
+        <widget name="Animation" import="animation-template"></widget>
+    </widget>
+    
+</settings>

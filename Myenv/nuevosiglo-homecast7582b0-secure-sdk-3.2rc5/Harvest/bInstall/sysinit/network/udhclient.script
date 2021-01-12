@@ -1,0 +1,78 @@
+#!/bin/sh
+
+[ -f /etc/profile.d/stb.sh ] && . /etc/profile.d/stb.sh
+
+calcmask()
+{
+    lo=$(($mask-16))
+    if [ $lo -lt 0 ]; then
+	lo=0
+    fi
+    hi=$((16-$mask+$lo))
+    lo=$((16-$lo))
+    hibits=$((65535>>$hi))
+    hibits=$(($hibits<<$hi))
+    lobits=$((65535>>$lo))
+    lobits=$(($lobits<<$lo))
+
+    netmask=$(($hibits>>8)).$(($hibits&255)).$(($lobits>>8)).$(($lobits&255))
+}
+
+mkdir -p /var/run/dhcp
+
+echo 0 > /var/run/dhcp/status
+case $1 in
+    deconfig)
+	# ifconfig $interface 0.0.0.0
+	echo 1 > /var/run/dhcp/status
+	rm -f /var/lock/network
+	;;
+    bound | renew)
+	calcmask
+	tmp=""
+	if [ "$mtu" != "" ]; then
+	    tmp="$tmp mtu $mtu"
+	fi
+	if [ "$broadcast" != "" ]; then
+	    tmp="$tmp broadcast $broadcast"
+	fi
+	ifconfig $interface $ip netmask $netmask $tmp
+	ip6=`printf "2002:%02x%02x:%02x%02x::1/16" \`echo $ip | sed 's/\./ /g'\``
+	ifconfig $interface inet6 addr $ip6
+        route del default
+	if [ "$router" != "" ]; then
+	    route add default gw $router
+	else
+	    route add default $interface
+	fi
+  while [ -f /var/lock/resolv.conf.lock ]; do sleep 1; done
+  touch /var/lock/resolv.conf.lock
+	[ -f /etc/resolv.conf ] && {
+		grep -v -E '^search[[:space:]]+|^nameserver[[:space:]]+(([[:digit:]]+.){3}[[:digit:]]+)$' /etc/resolv.conf > /tmp/resolv.conf.tmp
+		cat /tmp/resolv.conf.tmp > /etc/resolv.conf
+		rm -f /tmp/resolv.conf.tmp
+	}
+	echo "search $domain" >> /etc/resolv.conf
+	for i in $dns; do 
+		echo "nameserver $i" >> /etc/resolv.conf
+	done
+  rm -f /var/lock/resolv.conf.lock
+
+	echo $serverid > /var/run/dhcp/server
+	echo $lease > /var/run/dhcp/lease
+	echo $message > /var/run/dhcp/nack
+	# information for status display
+    {
+    	echo 2
+    	echo $ip
+    	echo $router
+    	echo $domain
+    	echo $dns
+    	echo $mtu
+    	echo $netmask
+    } > /var/run/dhcp/status
+	echo > /var/lock/network
+	;;
+    nak)
+	;;
+esac

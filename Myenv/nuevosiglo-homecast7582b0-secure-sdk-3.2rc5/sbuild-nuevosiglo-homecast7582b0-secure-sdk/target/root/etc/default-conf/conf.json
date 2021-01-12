@@ -1,0 +1,234 @@
+{
+    "MEDIUM": "CABLE",
+    "NETWORK": {
+        "TYPE": "AUTO",
+        "STATIC": {
+            "IP": "192.168.16.225",
+            "GATEWAY": "192.168.16.1",
+            "MASK": "255.255.255.0"
+        }
+    },
+    "WIFI": {
+        "PASS": "",
+        "TYPE": "NONE",
+        "SSID": ""
+    },
+    "WIRELESS_ENC": "NONE",
+    "UPGRADE": {
+        "SERVER": "http://nsupg.nuevosiglo.com.uy"
+    },
+    "PREFIXIP": "http://nsmw.boldmss.com/stb/api_without_ssl",
+    "PREFIX": "http://nsmw.boldmss.com/stb/api_without_ssl",
+    "CASSERVER": {
+        "ADDRESS": "",
+        "PORT": ""
+    },
+    "VCAS_BOOT_ADDRESS": "vcas.cubiware.com",
+    "NTPSERVER": "ntp1.nuevosiglo.com.uy",
+    "HYBRIDMODE": "HYBRID",
+    "GUI": "default",
+    "IPREMOTE": "disabled",
+    "TVSYSTEM": "PAL",
+    "VIDEOOUTHD": "automatic",
+    "HDOUTORIGINALMODE": "disabled",
+    "HDOUTAUTOMATICMODE": "enabled",
+    "VIDEOOUTSD": "PAL",
+    "DUALOUTPUT": "ALL",
+    "LANG": "es_MX.UTF-8",
+    "AUDIOLANG": "spa",
+    "AUDIOLANGSECONDARY": "eng",
+    "SUBTITLESLANG": "spa",
+    "SUBTITLESLANGSECONDARY": "eng",
+    "HARDOFHEARING": "0",
+    "ASPECT": "16:9",
+    "AUDIOTRACKTYPE": "normal",
+    "MULTICHANNELAUDIO": "NO",
+    "SPDIFAUDIODELAY": "0",
+    "VIDEO_CONTENT_MODE_SD": "FULLSCREEN",
+    "VIDEO_CONTENT_MODE_HD": "FULLSCREEN",
+    "INSTANTTIMESHIFT": "0",
+    "PVRSTARTMARGIN": "2",
+    "PVRENDMARGIN": "5",
+    "PVR_QUOTA_DEFAULT": "50",
+    "PVR_QUOTA_AUTOCLEAN": "0",
+    "NPVRSTARTMARGIN": "5",
+    "NPVRENDMARGIN": "5",
+    "HIDEINFORMATION": "5",
+    "HIDEINFORMATIONCHANNEL": "180",
+    "SCREENSAVERTIMEOUT": "0",
+    "EPGVIEW": "grid",
+    "VIDEOOUTEURO": "CVBS",
+    "RFMODULATORCHANNEL": "3",
+    "PC_PIN": "1111",
+    "PC_MASTER_PIN": "1379",
+    "PC": "[AGE=0]",
+    "PC_STATE": "ON",
+    "PC_HIDE_TITLES": "FOLLOW_PC",
+    "PC_RELOCK_HOURS_MAX": "8",
+    "PC_ADULT_CONTENT_BLOCKING": "ON",
+    "FBLINES": "720",
+    "TIMEZONE": "ART3",
+    "LOG": {
+        "SECURE_LOG_MODE": "pushserver",
+        "TYPE": "LOCAL",
+        "SERVER": "log.cubiware.com",
+        "LEVEL": "7",
+        "MAXSIZE": "1024"
+    },
+    "DVBUPGRADE": {
+        "URI": "qbcarousel:freq=362000&pid=2009",
+        "ENABLED": "enabled",
+        "TIMEOUT": "600",
+        "AUTODOWNLOAD": "enabled",
+        "AUTOINSTALL": "enabled"
+    },
+    "VOD_SERVICE": "Innov8on",
+    "PREV_AD_BITRATE": "0",
+    "MIDDLEWARE_ID": "SCID",
+    "EVENTIS_GROUP_ID": "1",
+    "SCAN_FREQ": "362000",
+    "EPG_FREQ": "0",
+    "FRONTPANELCONTENT": "CHANNELNAME",
+    "STANDBYFRONTPANELCLOCK": "ON",
+    "DEACTIVATE_STANDBY": "NO",
+    "REMOTE_DEBUG": "disabled",
+    "REMOTE_DEBUG_URL": "",
+    "FTPUSER": "",
+    "FTPPASS": "",
+    "FTPPATH": "/",
+    "DEFAULTTUNERTYPE": "cab",
+    "CHANNELSCANNINGCONF": "automatic",
+    "USE_CABLE_MODEM": "NO",
+    "IR_ADDR": "006e",
+    "IR_PROTO": "nec",
+    "IR_KEYPAD": "0",
+    "IR_HOLDTIME": "0",
+    "FIRSTBOOT": "YES",
+    "PIN_TYPE": "PC",
+    "SKIN": {
+        "NAME": "default",
+        "URL": "",
+        "MANIFEST": ""
+    },
+    "FONT": "default",
+    "CONFIG_VERSION": "3.2",
+    "ORIGINAL_CONFIG_VERSION": "3.2",
+    "SCANSTANDARD": "annexb",
+    "NID": "",
+    "ONID": "",
+    "DEFAULT_FAV_NUMBERING": "number",
+    "MENU_TRANSPARENCY": "20",
+    "VODVIEW": "vod1",
+    "CLOSED_CAPTION_DEFAULT_CHANNEL": "off",
+    "CLOSED_CAPTION_CHANNEL_MODE": "Automatic",
+    "CLOSED_CAPTION_CHANNEL_PRI": "off",
+    "CLOSED_CAPTION_CHANNEL_SEC": "off",
+    "CLOSED_CAPTION_LANG_PRI": "off",
+    "CLOSED_CAPTION_LANG_SEC": "off",
+    "AUTOTZ": "NO",
+    "AUTOTIME": "YES",
+    "STANDBYTIMERTIMEOUT": "0",
+    "SATSORTTYPE": "position",
+    "RC_POWER": "ACTIVE",
+    "FP_POWER": "PASSIVE",
+    "DEFAULTSATELLITE": "Eutelsat 16A (16.0E)",
+    "SATELLITE_LOOPBACK": "NO",
+    "AUTO_POWER": "ACTIVE",
+    "AUTO_POWER_TIMEOUT": "DISABLED",
+    "QBINPUT_EVENT_PLAYER_PORT": "9876",
+    "CALLID_STATE": "enabled",
+    "CALLID_TIMEOUT": "15",
+    "CX_PR_OPERATOR_ID": "2765",
+    "PROVIDERS": {
+        "CHANNELS": {
+            "DVB": "enabled",
+            "IP": "cubimw"
+        },
+        "EPG": {
+            "DVB": "eit",
+            "IP": "cubimw"
+        },
+        "NPVR": "unusedOption",
+        "CUTV": "cubimw",
+        "VOD": "cubimw",
+        "WEBSERVICES": "cubimw"
+    },
+    "SV_FOUNDATION_DEBUG": "0",
+    "VFATCODEPAGE": "437",
+    "AUTOMATICFRAMERATE": "enabled",
+    "CEC": "disabled",
+    "PVR_REENCRYPTION": "disabled",
+    "PVR_README": "disabled",
+    "EXT_SUBS_ENCODING": "UTF-8",
+    "USB_PVR_LIMITS": {
+        "MAX_COST": "22",
+        "SPEED_TEST": "disabled",
+        "CURRENTLY_WATCHED_ONLY": "disabled"
+    },
+    "PURCHASE_AUTH": "off",
+    "VOD_ADULT_PIN_AUTH": "on",
+    "MOVIECITY": {
+        "SERVICE": "enabled",
+        "API_USER": "BOLD:",
+        "API_PASS": "nuevosiglo902012",
+        "DEVICE_TYPE": "TSTB",
+        "URI_PATTERN": "moviecity...akamaihd.net"
+    },
+    "FOX": {
+        "SERVICE": "enabled",
+        "PROXY": "http://papi.boldmss.com/nuevosiglo",
+        "URI_PATTERN": "^http://.*.FOX.*$"
+    },
+    "HBO": {
+        "PROXY": "http://papi.boldmss.com/nuevosiglo",
+        "URI_PATTERN": "^http://.*.HBO.*$"
+    },
+    "TURNER": {
+        "PROXY": "http://papi.boldmss.com/nuevosiglo",
+        "URI_PATTERN": "^http://.*.TURNER.*$"
+    },
+    "USAGELOGS": {
+        "SERVER": "mad.nuevosiglo.com.uy",
+        "ENABLED": "enabled",
+        "IDENTIFIER": "NS-USER",
+        "PORT": "514"
+    },
+    "PERIODICSCANNING": {
+        "ENABLED": "enabled",
+        "PERIOD": "3600"
+    },
+    "VOD3FAKECATEGORIES": {
+        "ENABLED": "enabled",
+        "FAKESOURCE": "http://fake.empty.vod.3.category"
+    },
+    "TUNER": {
+        "SPECTRAL_INVERSION_MODE": "normal"
+    },
+    "UI": {
+        "SUBTITLES": {
+            "COLOR": "#FFFF00FF",
+            "FONTSIZE": "42",
+            "STYLE": "bold"
+        }
+    },
+    "LOGOS_IN_SERVER": {
+        "ENABLED": "enabled",
+        "IMAGE_SERVER_URL": "http://logoscanales.nuevosiglo.com.uy/channelLogos/nuevosiglo",
+        "LOCAL_URL": "/etc/vod/app/channelLogos/"
+    },
+    "mwPROXY": {
+        "ENABLED": "enabled",
+        "URL": "http://dynamic.nuevosiglo.com.uy/stb/api_without_ssl",
+        "SERVICES": "6,8,10,13,26,27"
+    },
+    "CONTENTTRACKING": {
+        "ENABLED": "enabled",
+        "SERVER": "http://vodtracking.nuevosiglo.com.uy/nuevosiglo"
+    },
+    "PALSYSTEM": "CN",
+    "QBDecoderNoClosedCaption": "1",
+    "QBSSGatewayTimeoutMaxRetries": "15",
+    "QBSSGatewayTimeoutRetryDelay": "2000",
+    "DEINTERLACE_MODE": "forceDisable",
+    "AUTOMATICREBOOT": "enabled"
+}

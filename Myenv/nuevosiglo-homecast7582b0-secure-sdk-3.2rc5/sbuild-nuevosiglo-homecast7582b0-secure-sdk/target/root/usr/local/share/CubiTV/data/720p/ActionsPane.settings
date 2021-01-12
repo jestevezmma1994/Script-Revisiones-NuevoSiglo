@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Colors.settings"/>
+    <xi:include href="BasicPane.settings"/>
+    <xi:include href="ScrollView.settings"/>
+
+    <widget name="label-template">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>425</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="textAlign"><string>left</string></param>
+        <param tag="textColor"><ref constant="TextColor_Active"/></param>
+        <param tag="inactiveTextColor"><ref constant="TextColor_Inactive"/></param>
+        <param tag="disabledTextColor"><ref constant="TextColor_Disabled"/></param>
+        <param tag="vertAlign"><string>middle</string></param>
+    </widget>
+
+    <widget name="BasicPane">
+    </widget>
+
+    <widget name="MoreInfo">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>500</int></param>
+        <param tag="height"><int>720</int></param>
+
+        <widget name="grid">
+            <param tag="width"><int>425</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="spacing"><int>10</int></param>
+        </widget>
+
+        <widget name="viewport">
+            <param tag="xOffset"><int>30</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="width"><int>425</int></param>
+            <param tag="height"><int>660</int></param>
+            <param tag="xStep"><int>20</int></param>
+            <param tag="yStep"><int>20</int></param>
+            <param tag="yMaxVelocity"><double>1000</double></param>
+            <param tag="yAcceleration"><double>20</double></param>
+            <param tag="screenAcceleration"><double>100</double></param>
+        </widget>
+
+        <widget name="label" import="label-template">
+            <param tag="fontSize"><ref constant="FontSize_Big"/></param>
+            <param tag="multiline"><bool>true</bool></param>
+        </widget>
+
+        <widget name="text" import="label-template">
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="multiline"><bool>true</bool></param>
+        </widget>
+    </widget>
+
+    <widget name="ScrollView">
+        <param tag="itemWidth"><int>420</int></param>
+        <param tag="itemMinHeight"><int>120</int></param>
+    </widget>
+
+    <widget name="Comment">
+
+        <widget name="title" import="label-template">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        </widget>
+
+        <widget name="subcaption" import="label-template">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>40</int></param>
+            <param tag="width"><int>345</int></param>
+            <param tag="height"><int>24</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+
+        <widget name="text" import="label-template">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>70</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>-1</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="multiLine"><bool>true</bool></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <!--<param tag="maxLines"><int>4</int></param>-->
+            <!--<param tag="breakMarker"><string>…</string></param>-->
+        </widget>
+
+        <widget name="likes" import="label-template">
+            <param tag="xOffset"><int>350</int></param>
+            <param tag="yOffset"><int>40</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+
+        <widget name="likeIcon">
+            <param tag="xOffset"><int>320</int></param>
+            <param tag="yOffset"><int>40</int></param>
+            <param tag="width"><int>25</int></param>
+            <param tag="height"><int>20</int></param>
+            <param tag="bg">
+                <bitmap><path>wait-icon.png</path></bitmap>
+            </param>
+
+        </widget>
+    </widget>
+
+</settings>
+

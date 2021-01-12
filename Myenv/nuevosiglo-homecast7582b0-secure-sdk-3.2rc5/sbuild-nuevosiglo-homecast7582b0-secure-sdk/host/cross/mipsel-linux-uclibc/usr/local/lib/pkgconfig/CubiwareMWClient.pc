@@ -1,0 +1,6 @@
+Name: CubiwareMWClient
+Version: 1.0.0
+Requires: NPvrManager QBConaxPlayReady QBContentManager QBDataModel3 QBDataProvider QBNetworkMonitor QBSecureLogManager QBServices SvCore SvFoundation SvHTTPClient SvPlayerKit SvXMLRPCClient TranslationMergerHeaders fibers 
+Description: Cubiware Middleware Client Library
+Libs: -lCubiwareMWClient 
+CFlags: 

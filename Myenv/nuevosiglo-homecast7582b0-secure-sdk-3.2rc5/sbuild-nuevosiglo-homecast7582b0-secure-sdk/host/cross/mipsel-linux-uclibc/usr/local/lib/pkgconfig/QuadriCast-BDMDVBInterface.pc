@@ -1,0 +1,6 @@
+Name: QuadriCast-BDMDVBInterface
+Version: 1.0.0
+Requires: QBAppKit QBDVBScanner QBDVBTableMonitor QBMTQueue QBTunerReserver SvEPGDataLayer SvPlayerKit fibers mpeg2 svtuner 
+Description: DVB interface for Mstore
+Libs: -lQuadriCast-BDMDVBInterface 
+CFlags: 

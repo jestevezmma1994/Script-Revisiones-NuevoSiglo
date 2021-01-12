@@ -1,0 +1,6 @@
+Name: SvPlayerKit
+Version: 1.0.0
+Requires: SvCore SvFoundation SvQuirks fibers iso-codes 
+Description: Player Kit
+Libs: -lSvPlayerKit 
+CFlags: 

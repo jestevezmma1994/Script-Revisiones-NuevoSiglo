@@ -1,0 +1,6 @@
+Name: QBNetManager
+Version: 1.0.0
+Requires: QBNetworkMonitor QBShellCmds SvCore SvFoundation SvJSON SvQuirks fibers 
+Description: Network Manager Library
+Libs: -lQBNetManager 
+CFlags: 

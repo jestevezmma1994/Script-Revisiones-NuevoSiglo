@@ -1,0 +1,14 @@
+[
+    {
+        "name": "YouTube",
+        "corsAllowedOrigin": ".youtube.com",
+        "useAdditionalData": true,
+        "type": "WebBrowser",
+        "params": {
+            "url": "https://www.youtube.com/tv",
+            "customUserAgent": "iTunes-AppleTV/4.1",
+            "spatialNavigation": false,
+            "handlePopups": false
+        }
+    }
+]

@@ -1,0 +1,35 @@
+digraph Monitoring {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Monitoring [label="Monitoring" root=true]
+
+    QBTimeDateMonitor
+    TraxisWebMonitor
+    cableModemMonitor
+    dvbTimeDate
+    epgMonitor
+    hotplugMounts
+    inputWatcher
+    sanityChecker
+    sdtMonitor
+    smartCardMonitor
+    tunerMonitor
+    upgradeWatcher
+    videoFormatMonitor
+    watchdog
+
+    Monitoring -> QBTimeDateMonitor
+    Monitoring -> TraxisWebMonitor
+    Monitoring -> cableModemMonitor
+    Monitoring -> dvbTimeDate
+    Monitoring -> epgMonitor
+    Monitoring -> hotplugMounts
+    Monitoring -> inputWatcher
+    Monitoring -> sanityChecker
+    Monitoring -> sdtMonitor
+    Monitoring -> smartCardMonitor
+    Monitoring -> tunerMonitor
+    Monitoring -> upgradeWatcher
+    Monitoring -> videoFormatMonitor
+    Monitoring -> watchdog
+}

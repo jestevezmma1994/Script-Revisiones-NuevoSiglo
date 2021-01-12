@@ -1,0 +1,23 @@
+<page width="440" height="120" align="left" valign="center" bgalpha="#00" bgcolor="#000000">
+  <row height="12"/>
+	<row>
+		<item width="440" height="28" size="22">%TITLE%</item>
+	</row>
+  <row>
+      <item width="440"><img scale="nonuniform" src="thin_blue_line.png"/></item>
+  </row>
+	<row width="440">
+    <row width="340">
+		  <item width="340" maxlines="1" height="26" size="18" textalign="left">%FROM%</item>
+    </row>
+    <row width="100" align="right">
+      <item width="100" maxlines="1" height="26" size="18" textalign="right">%TIME%</item>
+    </row>
+	</row>
+	<row width="440">
+      %RATING%
+    <row width="350" align="right">
+		  <item maxlines="1" wrap="auto" height="26" size="18" textalign="right">%VIEWS%</item>
+    </row>
+	</row>
+</page>

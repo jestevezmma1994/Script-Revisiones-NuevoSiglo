@@ -1,0 +1,21 @@
+#!/bin/sh
+
+TAG=$1
+
+if [ "$TAG" != "" ]; then
+
+cd /var/log
+DIR=$TAG-`date +%d%m%y-%H%M`
+mkdir $DIR
+cp messages $DIR/
+cp /tmp/gui* $DIR/
+
+tar czvf $DIR.tgz $DIR
+rm -rf $DIR
+
+fi
+
+echo 0 > /dev/led_hd
+rmmod em8xxx >/dev/null 2>&1
+modprobe em8xxx >/dev/null 2>&1
+    

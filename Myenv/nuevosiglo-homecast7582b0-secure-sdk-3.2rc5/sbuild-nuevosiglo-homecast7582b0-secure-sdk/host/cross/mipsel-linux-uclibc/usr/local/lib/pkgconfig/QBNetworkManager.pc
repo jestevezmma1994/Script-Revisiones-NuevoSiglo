@@ -1,0 +1,6 @@
+Name: QBNetworkManager
+Version: 1.0.0
+Requires: QBConfigCore QBCoreUtils QBIPCSocket QBNetlink QBShellCmds SvCore 
+Description: new Network Manager Library
+Libs: -lQBNetworkManager 
+CFlags: 

@@ -1,0 +1,8 @@
+#!/bin/sh
+COMMAND=$1
+
+if [ "$COMMAND" == "stop" ]; then
+    killall pppd
+elif [ "$COMMAND" == "start" ]; then
+    pppd call default
+fi

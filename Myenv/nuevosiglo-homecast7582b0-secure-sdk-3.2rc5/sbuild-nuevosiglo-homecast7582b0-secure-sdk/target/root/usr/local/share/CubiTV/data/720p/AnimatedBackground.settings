@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+	<xi:include href="CustomerLogo.settings"/>
+
+    <widget name="AnimatedBackground">
+    	<param tag="useCustomerLogo"><bool>false</bool></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <widget name="logo">
+            <param tag="bg"><bitmap><path>logo_long.png</path></bitmap></param>
+            <param tag="stepTime"><double>10.0</double></param>
+        </widget>
+    </widget>
+</settings>

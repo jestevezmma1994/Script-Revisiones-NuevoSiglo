@@ -1,0 +1,7 @@
+digraph smartCardMonitor {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    smartCardMonitor [URL="\N.html" root=true]
+
+    smartCardMonitor -> CubiMW
+}

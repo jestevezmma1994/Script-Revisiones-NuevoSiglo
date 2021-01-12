@@ -1,0 +1,6 @@
+Name: QBSchedManager
+Version: 1.0.0
+Requires: QBCoreUtils QBRecordFS QBSecureLogManager SvCore SvFoundation SvJSON SvPlayerKit SvPlayerManager fibers 
+Description: Cubiware PVR scheduler library
+Libs: -lQBSchedManager 
+CFlags: 

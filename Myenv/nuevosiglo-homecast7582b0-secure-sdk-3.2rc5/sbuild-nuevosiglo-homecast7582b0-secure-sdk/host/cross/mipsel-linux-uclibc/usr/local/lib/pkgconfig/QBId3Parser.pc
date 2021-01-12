@@ -1,0 +1,6 @@
+Name: QBId3Parser
+Version: 1.0.0
+Requires: SvCore SvFoundation SvPlayerKit 
+Description: Cubiware ID3 parser library
+Libs: -lQBId3Parser 
+CFlags: 

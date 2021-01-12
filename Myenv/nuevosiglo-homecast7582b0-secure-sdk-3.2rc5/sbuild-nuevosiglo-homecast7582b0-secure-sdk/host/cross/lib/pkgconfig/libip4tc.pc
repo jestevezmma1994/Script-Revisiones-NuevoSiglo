@@ -1,0 +1,10 @@
+prefix=$${CROSS_ROOT}/usr
+exec_prefix=${prefix}
+libdir=$${CROSS_ROOT}/usr//lib
+includedir=${prefix}/include
+
+Name:		libip4tc
+Description:	iptables IPv4 ruleset ADT and kernel interface
+Version:	1.4.21
+Libs:		-L${libdir} -lip4tc
+Cflags:		-I${includedir}

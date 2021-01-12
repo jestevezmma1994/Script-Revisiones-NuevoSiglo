@@ -1,0 +1,6 @@
+#!/bin/sh
+
+resetter --favorites --lastSeen --channels --reminders --volume --conf --appData --upgrade --networkConf --casData
+
+rm -rf /etc/vod/factoryReset
+rm -rf /tmp/factoryReset

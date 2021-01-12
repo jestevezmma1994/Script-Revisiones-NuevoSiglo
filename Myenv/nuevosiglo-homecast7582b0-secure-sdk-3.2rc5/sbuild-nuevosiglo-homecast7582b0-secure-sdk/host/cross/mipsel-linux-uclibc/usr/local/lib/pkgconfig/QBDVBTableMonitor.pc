@@ -1,0 +1,6 @@
+Name: QBDVBTableMonitor
+Version: 1.0.0
+Requires: QBAppKit QBConfig QBTSParser QBTunerFilter SvCore SvFoundation mpeg2 
+Description: SDT and NIT table monitor
+Libs: -lQBDVBTableMonitor 
+CFlags: 

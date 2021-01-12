@@ -1,0 +1,100 @@
+#!/bin/sh
+
+TEMP_DIR=`mktemp -d S_MOCKUP_PREFIX_STUB/tmp/XXXXXX`
+
+cleanup()
+{
+    oec=$?
+    rm -rf $TEMP_DIR >/dev/null 2>&1
+    exit $oec
+}
+
+trap "cleanup" EXIT
+
+issue_error()
+{
+    echo $1
+    chmod u+w S_MOCKUP_PREFIX_STUB/tmp/ssl -R
+    rm -rf S_MOCKUP_PREFIX_STUB/tmp/ssl/private
+    ln -sf S_MOCKUP_PREFIX_STUB/etc/ssl/backup S_MOCKUP_PREFIX_STUB/tmp/ssl/private
+    chown root:appgroup S_MOCKUP_PREFIX_STUB/tmp/ssl
+    chmod ug-w,o-rwx S_MOCKUP_PREFIX_STUB/tmp/ssl -R
+    exit 4
+}
+
+get_partition_and_size_by_volname()
+{
+    BLK_PARTITONS=`ls S_MOCKUP_PREFIX_STUB/sys/class/block | grep mmcblk0p`
+    P=`cat S_MOCKUP_PREFIX_STUB/proc/mtd | grep "\<$1\>" | cut -d':' -f1`
+    if [ -z $P ]; then
+        for P in $BLK_PARTITONS; do
+            C=`cat S_MOCKUP_PREFIX_STUB/sys/class/block/$P/volname`
+            if [ "$C" = "$1" ]; then
+                SIZE=`cat S_MOCKUP_PREFIX_STUB/sys/class/block/$P/size`
+                #/sys/class/block/XXXX/size returns values in 512-byte blocks
+                echo "$P" "$(($SIZE * 512))"
+                break
+            fi
+        done
+    else
+        SIZE=`cat S_MOCKUP_PREFIX_STUB/sys/class/mtd/$P/size`
+        echo "$P" "$SIZE"
+    fi
+}
+
+if [ "$1" = "start" ]; then
+    rm -rf S_MOCKUP_PREFIX_STUB/tmp/ssl
+    mkdir -m 0750 -p S_MOCKUP_PREFIX_STUB/tmp/ssl/private
+
+    CERT_DEV_INFO=`get_partition_and_size_by_volname "cert"`
+
+    if [ "x$CERT_DEV_INFO" = "x" ]; then
+        issue_error "Certificates partition not found"
+    fi
+
+    CERT_DEV_NODE=`echo $CERT_DEV_INFO | cut -d " " -f1`
+    CERT_DEV=S_MOCKUP_PREFIX_STUB/dev/$CERT_DEV_NODE
+    CERT_DEV_SIZE=`echo $CERT_DEV_INFO | cut -d " " -f2`
+
+    dd if=$CERT_DEV of=$TEMP_DIR/sign_header bs=1 count=256 >/dev/null 2>&1 || issue_error
+    dd if=$CERT_DEV of=$TEMP_DIR/header bs=1 count=64 skip=512 >/dev/null 2>&1 || issue_error
+
+    openssl dgst -sha256 -verify S_MOCKUP_PREFIX_STUB/etc/ssl/transport/rsa.pub -signature $TEMP_DIR/sign_header $TEMP_DIR/header >/dev/null 2>&1 || \
+        { issue_error "Could not verify header!"; }
+
+    FS_SIZE=`cat $TEMP_DIR/header | head -n 1 | cut -d \! -f 1`
+
+    [ -z "$FS_SIZE" ] && { issue_error "FS size not found!"; }
+    [ -z "${FS_SIZE##*[!0-9]*}" ] && { issue_error "FS size is not a number!"; }
+    if [ "$FS_SIZE" -gt "$CERT_DEV_SIZE" ]; then { issue_error "FS bigger than device!"; } ; fi
+    if [ "$FS_SIZE" -lt 33 ]; then { issue_error "FS too small!"; } ; fi
+
+    dd if=$CERT_DEV of=$TEMP_DIR/sign_data bs=1 count=256 skip=256 >/dev/null 2>&1 || issue_error
+    dd if=$CERT_DEV of=$TEMP_DIR/iv bs=1 count=32 skip=576 >/dev/null 2>&1 || issue_error
+
+    dd if=$CERT_DEV of=$TEMP_DIR/header_and_iv_and_data bs=1 count=$(($FS_SIZE+64)) skip=512 >/dev/null 2>&1 || \
+        { issue_error "Couldn't dump device contents!"; }
+
+    openssl dgst -sha256 -verify S_MOCKUP_PREFIX_STUB/etc/ssl/transport/rsa.pub -signature $TEMP_DIR/sign_data $TEMP_DIR/header_and_iv_and_data >/dev/null 2>&1 || \
+        { issue_error "Could not verify cert part!"; }
+
+    dd if=$TEMP_DIR/header_and_iv_and_data of=$TEMP_DIR/fs_dump bs=1 count=$(($FS_SIZE-32)) skip=96 >/dev/null 2>&1 || \
+        { issue_error "Couldn't dump fs_dump"; }
+
+    openssl enc -d -aes-256-cbc -K `cat S_MOCKUP_PREFIX_STUB/etc/ssl/transport/certs.key` -iv "`cat $TEMP_DIR/iv`" -in $TEMP_DIR/fs_dump -out $TEMP_DIR/fs_dump.tgz >/dev/null 2>&1 || \
+        { issue_error "Could not decrypt archive!"; }
+
+    tar xzf $TEMP_DIR/fs_dump.tgz -C S_MOCKUP_PREFIX_STUB/tmp/ssl/private || \
+        { issue_error "Could not extract archive!"; }
+
+    chown root:appgroup S_MOCKUP_PREFIX_STUB/tmp/ssl -R
+    chmod ug-w,o-rwx S_MOCKUP_PREFIX_STUB/tmp/ssl -R
+
+elif [ "$1" = "stop" ]; then
+    if [ -d S_MOCKUP_PREFIX_STUB/tmp/ssl ]; then
+        chmod u+w S_MOCKUP_PREFIX_STUB/tmp/ssl -R
+    fi
+
+    rm -rf S_MOCKUP_PREFIX_STUB/tmp/ssl
+fi
+

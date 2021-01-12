@@ -1,0 +1,15 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+IPCPATH="/var/run/networking/QBNetworkManager_api"
+
+iface=`echo "$IFNAME" | tr -cd '[:alnum:]_'`
+ip=`echo "$IPLOCAL" | tr -cd '.[:digit:]'`
+netmask="255.255.255.255"
+gateway="0.0.0.0"
+dns=`echo "$DNS1" | tr -cd '.[:digit:]'`
+dns2=`echo "$DNS2" | tr -cd '.[:digit:]'`
+
+QBIPCSend $IPCPATH "#pppStatusChanged#$iface#up#$ip#$netmask#$gateway#$dns#$dns2#"
+
+exit 0

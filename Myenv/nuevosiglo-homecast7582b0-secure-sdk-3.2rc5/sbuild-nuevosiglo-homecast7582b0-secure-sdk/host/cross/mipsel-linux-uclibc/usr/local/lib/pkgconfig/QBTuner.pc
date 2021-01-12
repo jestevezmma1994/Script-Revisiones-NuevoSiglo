@@ -1,0 +1,6 @@
+Name: QBTuner
+Version: 1.0.0
+Requires: QBDemux QBPlatformHAL-common QBStaticStorage SvCore SvFoundation SvJSON error_log fibers 
+Description: High level tuner control API and utilities for managing tuner-related data
+Libs: -lQBTuner 
+CFlags: 

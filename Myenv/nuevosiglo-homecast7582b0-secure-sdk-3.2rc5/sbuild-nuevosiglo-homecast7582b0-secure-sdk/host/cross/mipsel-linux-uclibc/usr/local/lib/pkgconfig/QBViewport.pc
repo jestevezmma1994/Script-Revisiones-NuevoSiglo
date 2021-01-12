@@ -1,0 +1,6 @@
+Name: QBViewport
+Version: 1.0.0
+Requires: QBPlatformHAL-common SvCore SvFoundation dataformat 
+Description: object-oriented api for controlling video/audio output options.
+Libs: -lQBViewport 
+CFlags: 

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+IPCPATH="/var/run/networking/QBNetworkManager_api"
+
+parse_dns() {
+    set -- $1
+    dns="$1"
+    dns2="$2"
+}
+
+parse_dns "$new_domain_name_servers"
+
+iface=`echo "$interface" | tr -cd '[:alnum:]_'`
+dhcpstatus=`echo "$reason" | tr -cd '[:alpha:]'`
+ip=`echo "$new_ip_address" | tr -cd '.[:digit:]'`
+dns=`echo "$dns" | tr -cd '.[:digit:]'`
+dns2=`echo "$dns2" | tr -cd '.[:digit:]'`
+gateway=`echo "$new_routers" | tr -cd '.[:digit:]'`
+netmask=`echo "$new_subnet_mask" | tr -cd '.[:digit:]'`
+domain=`echo "$new_domain_name" | tr -cd '. [:alnum:]'`
+
+QBIPCSend $IPCPATH "#dhcpStatusChanged#$iface#$dhcpstatus#$ip#$netmask#$gateway#$dns#$dns2#$domain#"
+
+exit 0

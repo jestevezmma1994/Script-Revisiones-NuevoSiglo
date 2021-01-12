@@ -1,0 +1,6 @@
+Name: QBScte27Subs
+Version: 1.0.0
+Requires: CAGE CUIT QBSubsManager SvCore SvFoundation SvPlayerControllers SvPlayerManager 
+Description: SCTE27 Subtitle manager
+Libs: -lQBScte27Subs 
+CFlags: 

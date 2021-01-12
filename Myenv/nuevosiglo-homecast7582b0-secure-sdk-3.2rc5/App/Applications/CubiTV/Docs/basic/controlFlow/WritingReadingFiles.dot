@@ -1,0 +1,23 @@
+digraph WritingReadingFiles {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+
+    serviceWrite [label=<An arbirary service<br/>Wants to write objects as JSON file to local storage>]
+    JSONserializer [label=<QB\N<br/>- Uses SvJSON to serialize<br/>- Uses QBStaticStorage to save<br/>- Schedules saving after a period of time to<br/>handle frequent serializations to the same file>]
+    QBStaticStorage [label=<\N<br/>Waits a little and writes latest file version to storage>]
+    serviceWrite -> JSONserializer
+    JSONserializer -> SvJSON [label=<For serialization>]
+    JSONserializer -> QBStaticStorage [label=<For saving>]
+    QBStaticStorage -> vod
+    vod  [label=</etc/vod/>]
+    QBStaticStorage -> tmp 
+    tmp [label=</tmp/>]
+
+    serviceRead [label=<An arbitrary service<br/>Wants to parse JSON file from local storage into objects>]
+    utils [label=<fileToBuffer<br/>- Deprecated, use SvDataCreateFromFile>]
+    serviceRead -> utils
+    serviceRead -> SvDataCreateFromFile
+    utils -> SvJSONParseString
+    SvDataCreateFromFile -> SvJSONParseString
+}

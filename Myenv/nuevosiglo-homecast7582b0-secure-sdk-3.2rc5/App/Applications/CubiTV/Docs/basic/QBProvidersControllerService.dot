@@ -1,0 +1,7 @@
+digraph QBProvidersControllerService {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBProvidersControllerService [URL="\N.html" root=true]
+
+    QBProvidersControllerService -> CubiMW
+}

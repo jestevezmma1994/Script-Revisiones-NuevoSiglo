@@ -1,0 +1,16 @@
+digraph MovieWidgets {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    MovieWidgets [label="Movie" root=true]
+    QBXMBItemConstructor
+    QBMovieInfo
+    QBFSEntryInfo
+    XMBCarousel
+    eventISMovieInfo
+
+    MovieWidgets -> QBXMBItemConstructor
+    MovieWidgets -> QBMovieInfo
+    MovieWidgets -> QBFSEntryInfo
+    MovieWidgets -> XMBCarousel
+    MovieWidgets -> eventISMovieInfo
+}

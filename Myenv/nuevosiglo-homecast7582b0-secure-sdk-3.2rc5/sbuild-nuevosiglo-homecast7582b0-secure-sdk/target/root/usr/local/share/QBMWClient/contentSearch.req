@@ -1,0 +1,76 @@
+{
+    "bodyId": "tsn:74600019081EE47",
+    "mergeOverridingContent": true,
+    "imageRuleset": [
+    {
+        "name": "carousel",
+        "rule": {
+            "height": "131",
+            "width": "175",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    },
+    {
+        "name": "cover",
+        "rule": {
+            "width": "194",
+            "height": "280",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    }
+    ],
+    "orderBy": [
+        "seasonNumber", "episodeNum"
+    ],
+    "responseTemplate" : [
+    {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["contentGroup"],
+        "type": "responseTemplate",
+        "typeName": "contentGroupList"
+    },
+    {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["example"],
+        "type": "responseTemplate",
+        "typeName": "contentGroup"
+    },
+    {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["content"],
+        "type": "responseTemplate",
+        "typeName": "contentList"
+    },
+    {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["contentType","category","description","hdtv","title","tvRating","isEpisode","releaseDate",
+        "seasonNumber","collectionId","originalAirdate","rating","collectionType",
+        "episodeNum","matchedField","collectionDescription","episodic","contentId","credit","image", "movieRuntime",
+        "broadcastOfferGroupForContentId", "broadbandOfferGroupForContentId" ],
+        "type": "responseTemplate",
+        "typeName": "content"
+    },
+    {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["example"],
+        "type": "responseTemplate",
+        "typeName": "offerGroup"
+    },
+    {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["duration", "movieYear"],
+        "type": "responseTemplate",
+        "typeName": "offer"
+    }
+    ]
+}

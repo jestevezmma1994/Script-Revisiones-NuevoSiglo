@@ -1,0 +1,36 @@
+<perldata>
+ <hashref memory_address="0x1c07358">
+  <item key="deps">
+   <hashref memory_address="0x1c48bb8">
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x1b75790">
+    <item key="SRM_PROJECT">nuevosiglo-homecast7582b0-secure-sdk</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x1a5a0a8">
+    <item key="Files/Resources/Selectors/Makefile">73883c720ac6c285f5097e853a3b241a</item>
+    <item key="Files/Resources/Selectors/files/nuevosiglo-hnc2200co-sdk">13b23051d500847744eb9f3e4fd457ff</item>
+    <item key="Files/Resources/Selectors/files/nuevosiglo-homecast7582b0-secure-sdk">2366b3bc1087617a903788af201178c3</item>
+   </hashref>
+  </item>
+  <item key="string">Files/Resources/Selectors/c.comp</item>
+  <item key="time">1605103320</item>
+  <item key="units">
+   <hashref memory_address="0x21d4f98">
+    <item key="Files/Resources/Selectors/Makefile">a</item>
+    <item key="Files/Resources/Selectors/files/nuevosiglo-hnc2200co-sdk">a</item>
+    <item key="Files/Resources/Selectors/files/nuevosiglo-homecast7582b0-secure-sdk">a</item>
+    <item key="SRM_PROJECT">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/SELECTOR">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x2390e90">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

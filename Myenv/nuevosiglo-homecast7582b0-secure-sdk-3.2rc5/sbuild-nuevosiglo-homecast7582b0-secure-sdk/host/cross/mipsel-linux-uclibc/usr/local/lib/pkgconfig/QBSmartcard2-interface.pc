@@ -1,0 +1,6 @@
+Name: QBSmartcard2-interface
+Version: 1.0.0
+Requires: QBCAS SvCore SvFoundation 
+Description: Cubiware wrapper for low-level QBConax smartcard interface - version 2
+Libs: -lQBSmartcard2-interface 
+CFlags: 

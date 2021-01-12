@@ -1,0 +1,35 @@
+#!/bin/sh
+# Launch all scripts in ./hotplug_recall.d/
+
+set -e
+DIR=/usr/local/bin/hotplug_recall.d/
+
+[ ! -d "$DIR" ] && exit 0
+cd "$DIR"
+
+
+log()
+{
+  #logger "hotplug_recall > $@"
+  #[ 1 -eq 1 ] && echo -e "hotplug_recall > $@" >> /tmp/mymesg
+  return
+}
+
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib:/usr/lib"
+
+set +e
+
+for script in ./*;
+do
+  log "script [$script] ..."
+  [ ! -x "$script" ] && continue;
+  log "script [$script] : executing ..."
+  $script
+  res=$?
+  if [ $res -ne 0 ]; then
+    log "script [$script] -> $res";
+  else
+    log "script [$script] -> ok"
+  fi
+done

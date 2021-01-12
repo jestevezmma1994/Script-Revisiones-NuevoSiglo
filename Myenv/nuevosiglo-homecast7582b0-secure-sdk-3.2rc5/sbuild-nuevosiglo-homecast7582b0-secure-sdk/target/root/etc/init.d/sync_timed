@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$1" in 
+    start)
+	/usr/local/bin/sync_timed.sh 2>/dev/null >/dev/null &
+	;;
+    stop)
+	killall sync_timed.sh 2>/dev/null >/dev/null
+	;;
+    *)
+	echo "Usage: $0 [start|stop]"
+	;;
+esac

@@ -1,0 +1,6 @@
+Name: SvGfxHAL-common
+Version: 1.0.0
+Requires: QBPlatformHAL-common SvCore SvFoundation 
+Description: Platform independent part of Cubiware Graphics HAL
+Libs: -lSvGfxHAL-common 
+CFlags: 

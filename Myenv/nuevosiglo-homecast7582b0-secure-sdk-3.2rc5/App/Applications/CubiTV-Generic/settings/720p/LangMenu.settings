@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="langBar">
+        <common>
+            <param tag="font"><ref constant="NarrowFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="fadeDuration"><double>0.2</double></param>
+            <param tag="textColor"><color>efefefff</color></param>
+        </common>
+
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>496</int></param>
+        <param tag="xOffset"><int>274</int></param>
+        <param tag="yOffset"><int>112</int></param>
+        <param tag="activeItemXOffset"><int>0</int></param>
+        <param tag="itemSpacing"><int>0</int></param>
+        <param tag="menuSpacing"><int>302</int></param>
+        <param tag="menuXOffset"><int>0</int></param>
+        <param tag="scrollDuration"><double>0.2</double></param>
+        <param tag="fadeDuration"><double>0.25</double></param>
+        <param tag="immobileMode"><bool>true</bool></param>
+        <param tag="hideDelay"><double>2.0</double></param>
+
+        <widget name="smallBg">
+            <param tag="height"><int>310</int></param>
+            <param tag="width"><int>298</int></param>
+            <param tag="bg"><bitmap><path>bg_xmb.png</path></bitmap></param>
+        </widget>
+        <widget name="smallMenu">
+            <param tag="width"><int>300</int></param>
+            <param tag="height"><int>430</int></param>
+            <param tag="activeItemYOffset"><int>185</int></param>
+            <param tag="itemSpacing"><int>62</int></param>
+            <param tag="vertPadding"><int>28</int></param>
+            <param tag="scrollDuration"><double>0.2</double></param>
+            <param tag="fadeDuration"><double>0.25</double></param>
+        </widget>
+
+        <widget name="bigBg">
+            <param tag="height"><int>496</int></param>
+            <param tag="width"><int>318</int></param>
+            <param tag="bg"><bitmap><path>bg_xmb.png</path></bitmap></param>
+        </widget>
+        <widget name="bigMenu">
+            <param tag="width"><int>320</int></param>
+            <param tag="height"><int>496</int></param>
+            <param tag="activeItemYOffset"><int>185</int></param>
+            <param tag="itemSpacing"><int>62</int></param>
+            <param tag="vertPadding"><int>28</int></param>
+            <param tag="scrollDuration"><double>0.2</double></param>
+            <param tag="fadeDuration"><double>0.25</double></param>
+        </widget>
+
+    </widget>
+
+    <widget name="LangItem">
+        <param tag="xOffset"><int>80</int></param>
+        <param tag="yOffset"><int>20</int></param>
+        <param tag="width"><int>320</int></param>
+        <param tag="height"><int>66</int></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="focusFadeTime"><double>0.2</double></param>
+        <param tag="subcaptionSpacing"><int>6</int></param>
+        <param tag="textEnd"><string>...</string></param>
+        <param tag="boxBitmap"><bitmap><path>frame_language.png</path></bitmap></param>
+        <param tag="tickMarkOn"><bitmap><path>check_on.png</path></bitmap></param>
+        <param tag="tickMarkOff"><bitmap><path>check_off.png</path></bitmap></param>
+        <widget name="focus">
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="minWidth"><int>320</int></param>
+            <param tag="maxWidth"><int>320</int></param>
+        </widget>
+        <widget name="inactiveFocus">
+            <param tag="bg"><bitmap><path>frame_xmb_nonfocus.png</path></bitmap></param>
+            <param tag="minWidth"><int>320</int></param>
+            <param tag="maxWidth"><int>320</int></param>
+        </widget>
+    </widget>
+    <widget name="ScrollBarSmall">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>300</int></param>
+        <param tag="height"><int>508</int></param>
+        <param tag="fadeDuration"><double>0.2</double></param>
+        <widget name="arrowHigh">
+            <param tag="xOffset"><int>140</int></param>
+            <param tag="yOffset"><int>197</int></param>
+            <param tag="active"><bitmap><path>arrow/arrow_down_active.png</path></bitmap></param>
+            <param tag="inactive"><bitmap><path>arrow/arrow_down_inactive.png</path></bitmap></param>
+        </widget>
+        <widget name="arrowLow">
+            <param tag="xOffset"><int>140</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="active"><bitmap><path>arrow/arrow_up_active.png</path></bitmap></param>
+            <param tag="inactive"><bitmap><path>arrow/arrow_up_inactive.png</path></bitmap></param>
+        </widget>
+    </widget>
+    <widget name="ScrollBarBig">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>300</int></param>
+        <param tag="height"><int>508</int></param>
+        <param tag="fadeDuration"><double>0.2</double></param>
+        <widget name="arrowHigh">
+            <param tag="xOffset"><int>140</int></param>
+            <param tag="yOffset"><int>472</int></param>
+            <param tag="active"><bitmap><path>arrow/arrow_down_active.png</path></bitmap></param>
+            <param tag="inactive"><bitmap><path>arrow/arrow_down_inactive.png</path></bitmap></param>
+        </widget>
+        <widget name="arrowLow">
+            <param tag="xOffset"><int>140</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="active"><bitmap><path>arrow/arrow_up_active.png</path></bitmap></param>
+            <param tag="inactive"><bitmap><path>arrow/arrow_up_inactive.png</path></bitmap></param>
+        </widget>
+    </widget>
+</settings>

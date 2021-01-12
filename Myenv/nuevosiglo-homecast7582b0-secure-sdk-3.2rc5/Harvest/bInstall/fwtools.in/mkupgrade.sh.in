@@ -1,0 +1,133 @@
+#!/bin/bash
+# This file was generated automatically by SvInstall
+
+UPGRADE_FILES="S_UPGRADE_FILES"
+FW_NAME=S_FW_NAME
+RELEASE=S_RELEASE
+CPWD=$PWD
+PATH=$PWD:$PATH
+
+if [ "$S_RUN_OFFLINE" = "yes" ]; then
+	[ "$#" = "4" ] || { echo "usage: $0 <src_dir> <dst_file> <release> <upgrade_key_file>";exit 1;}
+else
+	[ $# -ge 2 ] || { echo "usage: $0 <src_dir> <dst_file> [<release>]";exit 1;}
+fi
+
+[ ! -z "$UPGRADE_FILES" ] || { echo "error: upgrade files are undefined! you should add flag 'upgrade' to upgradable objects in your chip's map file"; exit 1;}
+
+SRC=$1
+DST=$2
+if [ "$S_RUN_OFFLINE" = "yes" ]; then
+	RELEASE=$3
+	UPGRADE_KEY_FILE=$4
+else
+	if [ -n "$3" ]; then
+		RELEASE=$3
+	fi
+fi
+
+FAKE_SIG=0DF7384E7939A78F73E02E69BE5E3DED4870FA86ADCC5CB02335FDD47830A358CE4DC77C60C9E8B637C2BB08FBC51F8D62B7392A5670F89E96CFE3FE3C5D9D36BEB449FC69CAE41E6F8BB2D82B7BCFFECD5917B3A6FF7B74B23CF7111EDF99B6C88A949CE61665C83AA9DB92E11B8930A7FB2794ECEC44A4376BDC880B7F8CCA
+
+cd $SRC || exit $?
+# BOOT is always RSA
+if [ "$S_RUN_OFFLINE" = "yes" ]; then
+	# using original SIGNATURE_FILE
+	SIGNATURE_FILE=$FW_NAME.sig
+else
+	if [ "S_SECURE_BOOT" = "yes" ]; then
+		rm -f $FW_NAME.sig
+		if [ "$S_INSTALL_USE_KEYSERVER" == "yes" ]; then
+			for i in $UPGRADE_FILES; do
+				RESULT=`srm-host-run jclient sign _S_INSTALL_KEYSERVER_RSA_BOOT_HASH_ -t $i with $S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID` || exit $?
+				RESULT=`echo $RESULT | awk '{print toupper($1)};'` || exit $?
+				echo "$i.sig="$RESULT >> $FW_NAME.sig || exit $?
+				SIGNATURE_FILE=$FW_NAME.sig
+			done
+		else
+			cp -af $S_BOOTKEYS_DIR/rsa_pub.txt .
+			cp -af $S_BOOTKEYS_DIR/rsa_priv.txt .
+			cp -af $S_BOOTKEYS_DIR/id_rsa.pub .
+			cp -af $S_BOOTKEYS_DIR/id_rsa .
+			[ -e rsa_pub.txt -a -e rsa_priv.txt ] && is_polar=yes
+			[ -e id_rsa.pub -a -e id_rsa ] && is_openssl=yes
+			if [ ! $is_polar -a ! $is_openssl ]; then
+				for i in $UPGRADE_FILES; do
+					echo "$i.sig="$FAKE_SIG >> $FW_NAME.sig || exit $?
+					SIGNATURE_FILE=$FW_NAME.sig
+				done
+			else
+				for i in $UPGRADE_FILES; do
+					if [ $is_openssl == "yes" ]; then
+						RESULT=`openssl _S_INSTALL_KEYSERVER_RSA_BOOT_HASH_ -_S_INSTALL_KEYSERVER_RSA_BOOT_HASH_ -sign id_rsa -hex $i` ||  exit $?
+						RESULT=`echo $RESULT | awk '{print toupper($2)};'` || exit $?
+						echo "$i.sig="$RESULT >> $FW_NAME.sig || exit $?
+					elif [ $is_polar == "yes" ]; then
+						if ! polarssl_rsa_sign $i; then
+							echo "polarssl_rsa_sign failed!"
+							echo "make sure OpenSource/polarssl host component is built and bootloader keys are present"
+							exit 1
+						fi
+						echo "$i.sig="$(cat $i.sig | tr -d " \r\n") >> $FW_NAME.sig
+					fi
+					SIGNATURE_FILE=$FW_NAME.sig
+				done
+			fi
+		fi
+	fi
+fi
+
+rm -f $FW_NAME.size
+for i in $UPGRADE_FILES; do
+	echo "$i.size="$(stat -c %s $i) >> $FW_NAME.size
+done
+SIZES_FILE=$FW_NAME.size
+md5sum $UPGRADE_FILES > $FW_NAME.md5 || exit $?
+tar cf $FW_NAME.tgz --use-compress-prog=pigz $UPGRADE_FILES $SIGNATURE_FILE $SIZES_FILE $FW_NAME.md5 || exit $?
+md5sum $FW_NAME.tgz > $FW_NAME.tgz.md5 || exit $?
+echo "#RELEASE $RELEASE" >> $FW_NAME.tgz.md5 || exit $?
+echo "$RELEASE" > version || exit $?
+# Old ECDSA signature
+if [ "S_SECURE_UPGRADE" = "yes" ]; then
+if [ "$S_INSTALL_LEGACY_ECDSA_UPGRADE" == "yes" ]; then
+	SECURE_FILES="$FW_NAME.cert.der $FW_NAME.tgz.sig"
+	cp $CPWD/supplier.cert.der $FW_NAME.cert.der
+	cp $CPWD/supplier.cert.der server.cert.der
+	sign -c $CPWD/supplier.cert.der -k $CPWD/supplier.key.der -i $FW_NAME.tgz || exit $?
+fi
+fi
+# New RSA-style upgrade
+if [ "$S_INSTALL_CREATE_RSA_UPGRADE" == "yes" ]; then
+    # Sign individual deliverable files and put this into the manifest
+	for i in $FW_NAME.tgz.md5 $FW_NAME.tgz version $FW_NAME.size; do
+        if [ "$S_RUN_OFFLINE" = "yes" ]; then
+            FSIZE=`stat -c %s $i` || exit $?
+            FSIG=`openssl sha256 -sha256 -sign $UPGRADE_KEY_FILE -hex $i` || exit $?
+            FSIG=`echo $FSIG | awk '{print $2}'` || exit $?
+            echo "$i,$FSIZE,$FSIG" >> $FW_NAME.manifest || exit $?
+        elif [ "$S_INSTALL_USE_KEYSERVER" == "yes" ]; then
+            FSIZE=`stat -c %s $i` || exit $?
+            FSIG=`srm-host-run jclient sign _S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH_ -t $i with $S_INSTALL_KEYSERVER_RSA_UPGRADE_OUTER_KEY_ID` || exit $?
+            echo "$i,$FSIZE,$FSIG" >> $FW_NAME.manifest  || exit $?
+        else
+            FSIZE=`stat -c %s $i` || exit $?
+            [ -f $S_INSTALL_BSPEC/keys/upgrade-package/id_rsa.package ] || exit $?
+            FSIG=`openssl _S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH_ -_S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH_ -sign $S_INSTALL_BSPEC/keys/upgrade-package/id_rsa.package -hex $i` || exit $?
+            FSIG=`echo $FSIG | awk '{print $2}'` || exit $?
+            echo "$i,$FSIZE,$FSIG" >> $FW_NAME.manifest || exit $?
+        fi
+	done
+    # Sign manifest itself
+    if [ "$S_RUN_OFFLINE" = "yes" ]; then
+        openssl sha256 -sha256 -sign $UPGRADE_KEY_FILE $FW_NAME.manifest > $FW_NAME.manifest.sig || exit $?
+    elif [ "$S_INSTALL_USE_KEYSERVER" == "yes" ]; then
+    	FSIG=`srm-host-run jclient sign _S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH_ -t $FW_NAME.manifest with $S_INSTALL_KEYSERVER_RSA_UPGRADE_OUTER_KEY_ID` || exit $?
+        echo $FSIG | xxd -r -p >$FW_NAME.manifest.sig || exit $?
+	else
+        openssl _S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH_ -_S_INSTALL_KEYSERVER_RSA_UPGRADE_HASH_ -sign $S_INSTALL_BSPEC/keys/upgrade-package/id_rsa.package $FW_NAME.manifest > $FW_NAME.manifest.sig || exit $?
+    fi
+	MANIFEST_FILES="$FW_NAME.manifest $FW_NAME.manifest.sig"
+fi
+tar cf up_pack.tgz --use-compress-prog=pigz version $FW_NAME.size $FW_NAME.tgz $SECURE_FILES $FW_NAME.tgz.md5 $MANIFEST_FILES || exit $?
+rm -f $MANIFEST_FILES
+cd -
+mv $SRC/up_pack.tgz $DST || exit $?

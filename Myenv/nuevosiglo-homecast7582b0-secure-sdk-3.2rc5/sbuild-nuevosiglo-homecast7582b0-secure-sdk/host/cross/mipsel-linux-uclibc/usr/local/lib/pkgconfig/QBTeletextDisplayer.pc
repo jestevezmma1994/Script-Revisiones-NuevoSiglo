@@ -1,0 +1,6 @@
+Name: QBTeletextDisplayer
+Version: 1.0.0
+Requires: CUIT QBSubsManager QBTeletextManager SvCore SvPlayerControllers SvSettingsManager swl 
+Description: widget to display teletext
+Libs: -lQBTeletextDisplayer 
+CFlags: 

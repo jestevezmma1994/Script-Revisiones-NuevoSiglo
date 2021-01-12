@@ -1,0 +1,2 @@
+#!/bin/sh
+${SRM_BUILD_DIR}/bin/cross-uclibc-strip "$@"

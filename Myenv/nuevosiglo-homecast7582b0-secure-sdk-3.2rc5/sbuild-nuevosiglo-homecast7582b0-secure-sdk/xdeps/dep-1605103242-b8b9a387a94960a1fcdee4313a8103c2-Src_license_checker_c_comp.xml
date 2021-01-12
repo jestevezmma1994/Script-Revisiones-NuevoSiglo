@@ -1,0 +1,41 @@
+<perldata>
+ <hashref memory_address="0x2057c90">
+  <item key="deps">
+   <hashref memory_address="0x2404080">
+    <item key="Src/driver-installer/c.comp">2</item>
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x23527b8">
+    <item key="BUILD_ROOT">${SRM_ROOT}/host/local</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x23ad418">
+    <item key="Src/license_checker/Makefile">90ab406ebe404984ff4d79400db8d3a6</item>
+    <item key="Src/license_checker/check_licenses.py">6b355fb1cd4b34d2fee5f85a8561068c</item>
+    <item key="Src/license_checker/db.json">28b90439c8ca782e79f56c46f81a3f6e</item>
+   </hashref>
+  </item>
+  <item key="string">Src/license_checker/c.comp</item>
+  <item key="time">1605103242</item>
+  <item key="units">
+   <hashref memory_address="0x2bb3008">
+    <item key="BUILD_ROOT">a</item>
+    <item key="Src/license_checker/Makefile">a</item>
+    <item key="Src/license_checker/check_licenses.py">a</item>
+    <item key="Src/license_checker/db.json">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/local/bin/check_licenses.py">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/local/usr/local/share/license_checker/db.json">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/drivers/PROP_WITHOUT_DDP_DTSHD_WMA/lib/modules/3.3.8-3.3/nexus/nexus.ko">m</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/lib/libnexus.so">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/lib/modules/3.3.8-3.3/nexus/nexus.ko">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x234a9b0">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

@@ -1,0 +1,56 @@
+<perldata>
+ <hashref memory_address="0x17a9360">
+  <item key="build" defined="false"></item>
+  <item key="buildpkg">Harvest_bSpec_nuevosiglo_hnc2200co_secure_bspec_comp-f299a91acaa4c6c5ea1e42b8d1d785fb.tgz</item>
+  <item key="description">
+   <hashref memory_address="0x2af52f0">
+    <item key="comment">nuevosiglo homecast secure conf</item>
+    <item key="id">21</item>
+    <item key="owner">bold007</item>
+    <item key="path">Harvest/bSpec/nuevosiglo-hnc2200co-secure</item>
+    <item key="vcs">hg</item>
+   </hashref>
+  </item>
+  <item key="dir" defined="false"></item>
+  <item key="ds_ext">
+   <hashref memory_address="0x23f6a28">
+    <item key="dir" defined="false"></item>
+    <item key="ds_ext">
+     <hashref memory_address="0x23f6a28">
+     </hashref>
+    </item>
+    <item key="file" defined="false"></item>
+    <item key="host">bold007@192.168.1.251</item>
+    <item key="locdir" defined="false"></item>
+    <item key="locfile" defined="false"></item>
+    <item key="locrepo" defined="false"></item>
+    <item key="params" defined="false"></item>
+    <item key="remdir" defined="false"></item>
+    <item key="remfile" defined="false"></item>
+    <item key="remrepo" defined="false"></item>
+    <item key="repo" defined="false"></item>
+    <item key="repodir" defined="false"></item>
+    <item key="repofile" defined="false"></item>
+    <item key="root">/silo/branches/254</item>
+    <item key="tag" defined="false"></item>
+    <item key="vcs" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="file">Harvest/bSpec/nuevosiglo-hnc2200co-secure/bspec.comp</item>
+  <item key="host">bold007@192.168.1.251</item>
+  <item key="locdir">Harvest/bSpec/nuevosiglo-hnc2200co-secure</item>
+  <item key="locfile">Harvest/bSpec/nuevosiglo-hnc2200co-secure/bspec.comp</item>
+  <item key="locpref"></item>
+  <item key="locrepo">Harvest/bSpec/nuevosiglo-hnc2200co-secure</item>
+  <item key="params" defined="false"></item>
+  <item key="remdir">ssh://bold007@192.168.1.251//silo/branches/254/hg/Harvest/bSpec/nuevosiglo-hnc2200co-secure/./</item>
+  <item key="remfile">ssh://bold007@192.168.1.251//silo/branches/254/hg/Harvest/bSpec/nuevosiglo-hnc2200co-secure/bspec.comp</item>
+  <item key="remrepo">ssh://bold007@192.168.1.251//silo/branches/254/hg/Harvest/bSpec/nuevosiglo-hnc2200co-secure</item>
+  <item key="repo">Harvest/bSpec/nuevosiglo-hnc2200co-secure</item>
+  <item key="repodir">./</item>
+  <item key="repofile">bspec.comp</item>
+  <item key="root">/silo/branches/254</item>
+  <item key="tag" defined="false"></item>
+  <item key="vcs">hg</item>
+ </hashref>
+</perldata>

@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 13:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "(Description blocked by Parental Control)"
+msgstr ""
+
+msgid "(Description blocked)"
+msgstr ""
+
+msgid "(Title Blocked)"
+msgstr ""
+
+msgid "(no label)"
+msgstr ""
+
+msgid "(unsupported)"
+msgstr ""
+
+msgid "Every Day"
+msgstr ""
+
+msgid "Fridays"
+msgstr ""
+
+msgid "HDTV"
+msgstr ""
+
+msgid "Mondays"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "Saturdays"
+msgstr ""
+
+msgid "Sundays"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "Thursdays"
+msgstr ""
+
+msgid "Tuesdays"
+msgstr ""
+
+msgid "Unknown Device"
+msgstr ""
+
+msgid "Wednesdays"
+msgstr ""
+
+msgid "Weekdays"
+msgstr ""
+
+msgid "Weekends"
+msgstr ""
+
+#, c-format
+msgid ""
+"Your TV is currently connected to an inactive output on this set-top box. "
+"Please press VOUT button on your remote control to activate this output or "
+"connect your TV to the %s output."
+msgstr ""

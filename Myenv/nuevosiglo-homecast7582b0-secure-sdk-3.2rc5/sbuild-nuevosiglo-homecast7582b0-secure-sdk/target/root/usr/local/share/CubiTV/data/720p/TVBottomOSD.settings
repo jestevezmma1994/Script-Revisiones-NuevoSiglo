@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="OSDTS">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>200</int></param>
+        <param tag="bg"><bitmap><path>osd/bar_osd_bottom.png</path></bitmap></param>
+        <param tag="duration"><double>0.3</double></param>
+        <param tag="hideDelay"><double>3.0</double></param>
+        <param tag="mode"><string>bottom</string></param>
+
+        <widget name="Advert">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>100</int></param>
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+    </widget>
+
+    <widget name="TSOSD">
+        <param tag="height"><int>200</int></param>
+        <param tag="width"><int>1200</int></param>
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>-2</int></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="spacing"><int>5</int></param>
+        <widget name="timeLabelTS">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>3</int></param>
+            <param tag="width"><int>600</int></param>
+            <param tag="height"><int>505</int></param>
+            <param tag="margin"><int>0</int></param>
+            <widget name="label">
+                <param tag="width"><int>700</int></param>
+                <param tag="height"><int>43</int></param>
+                <param tag="xOffset"><int>8</int></param>
+                <param tag="yOffset"><int>-8</int></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="font"><ref constant="NormalFont"/></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            </widget>
+            <widget name="box">
+                <param tag="xOffset"><int>12</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="height"><int>27</int></param>
+                <param tag="bg"><bitmap><path>osd/bar_time.png</path></bitmap></param>
+                <param tag="maxWidth"><int>500</int></param>
+            </widget>
+        </widget>
+        <widget name="progressArea">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>67</int></param>
+            <param tag="height"><int>134</int></param>
+            <param tag="width"><int>850</int></param>
+        </widget>
+        <widget name="viewport">
+            <param tag="xOffset"><int>5</int></param>
+            <param tag="yOffset"><int>50</int></param>
+            <param tag="height"><int>134</int></param>
+            <param tag="width"><int>850</int></param>
+        </widget>
+        <widget name="nextEventCaption">
+            <param tag="xOffset"><int>529</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="height"><int>44</int></param>
+            <param tag="width"><int>310</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+        </widget>
+        <widget name="currentEventCaption">
+            <param tag="xOffset"><int>25</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="height"><int>44</int></param>
+            <param tag="width"><int>480</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+        </widget>
+
+        <widget name="currentEvent">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>6</int></param>
+            <param tag="height"><int>52</int></param>
+            <param tag="width"><int>504</int></param>
+            <param tag="bg"><bitmap><path>osd/bar_progress.png</path></bitmap></param>
+        </widget>
+
+        <widget name="nextEvent">
+            <param tag="xOffset"><int>504</int></param>
+            <param tag="yOffset"><int>6</int></param>
+            <param tag="height"><int>52</int></param>
+            <param tag="width"><int>344</int></param>
+            <param tag="bg"><bitmap><path>osd/bar_progress.png</path></bitmap></param>
+        </widget>
+        <widget name="progress">
+            <param tag="height"><int>44</int></param>
+            <param tag="width"><int>1160</int></param>
+            <param tag="xOffset"><int>-1160</int></param>
+            <param tag="yOffset"><int>16</int></param>
+        </widget>
+        <widget name="timeshiftCurrent">
+            <param tag="height"><int>52</int></param>
+            <param tag="width"><int>504</int></param>
+            <param tag="xOffset"><int>5</int></param>
+            <param tag="yOffset"><int>56</int></param>
+
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="bg"><bitmap><path>empty.png</path></bitmap></param>
+            <param tag="bar"><bitmap><path>osd/bar_timeshift_curent.png</path></bitmap></param>
+        </widget>
+        <widget name="timeshiftNext">
+            <param tag="height"><int>52</int></param>
+            <param tag="width"><int>344</int></param>
+            <param tag="xOffset"><int>509</int></param>
+            <param tag="yOffset"><int>56</int></param>
+
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="bg"><bitmap><path>empty.png</path></bitmap></param>
+            <param tag="bar"><bitmap><path>osd/bar_timeshift_next.png</path></bitmap></param>
+        </widget>
+        <widget name="currentTimeStamp">
+            <param tag="xOffset"><int>40</int></param>
+            <param tag="yOffset"><int>110</int></param>
+            <param tag="height"><int>16</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+        <widget name="nextTimeStamp">
+            <param tag="xOffset"><int>418</int></param>
+            <param tag="yOffset"><int>110</int></param>
+            <param tag="height"><int>16</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+        <widget name="endTimeStamp">
+            <param tag="xOffset"><int>637</int></param>
+            <param tag="yOffset"><int>110</int></param>
+            <param tag="height"><int>16</int></param>
+            <param tag="width"><int>250</int></param>
+            <param tag="textAlign"><string>right</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+        <widget name="timeMarkTS">
+            <param tag="bg"><bitmap><path>osd/marker_progress_whole.png</path></bitmap></param>
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>0</int></param>
+        </widget>
+        <widget name="timeMark">
+            <param tag="bg"><bitmap><path>osd/marker_progress_bottom.png</path></bitmap></param>
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>33</int></param>
+        </widget>
+        <widget name="multiplier">
+            <param tag="xOffset"><int>100</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="height"><int>16</int></param>
+            <param tag="width"><int>50</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+        <widget name="status">
+            <param tag="xOffset"><int>40</int></param>
+            <param tag="yOffset"><int>16</int></param>
+            <param tag="width"><int>64</int></param>
+            <param tag="height"><int>76</int></param>
+            <param tag="iconHideDelay"><int>2</int></param>
+            <param tag="bitmaps"><array>
+                <bitmap key="tv"><path>empty.png</path></bitmap>
+                <bitmap key="play"><path>osd/button_play.png</path></bitmap>
+                <bitmap key="pause"><path>osd/button_pause.png</path></bitmap>
+                <bitmap key="pauseNotAvailable"><path>osd/button_pause_not_available.png</path></bitmap>
+                <bitmap key="fw"><path>osd/button_fw.png</path></bitmap>
+                <bitmap key="fwNotAvailable"><path>osd/button_fw_not_available.png</path></bitmap>
+                <bitmap key="rw"><path>osd/button_rw.png</path></bitmap>
+            </array></param>
+        </widget>
+        <widget name="timeshiftInformation">
+            <param tag="xOffset"><int>895</int></param>
+            <param tag="yOffset"><int>137</int></param>
+            <param tag="height"><int>20</int></param>
+            <param tag="width"><int>115</int></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+        </widget>
+    </widget>
+
+</settings>

@@ -1,0 +1,50 @@
+{
+  "version": "2.0",
+  "interfaces": {
+    "eth0" :{
+      "medium": "ethernet",
+      "type": "dhcp",
+      "ip": "192.168.1.225",
+      "gateway": "192.168.1.1",
+      "mask": "255.255.255.0",
+      "domain": "cubiware.com",
+      "dns": "192.168.1.1",
+      "dns2": "192.168.1.2",
+      "routing": "wan+lan",
+      "gateway_tenure": "1",
+      "fallback": {
+        "type": "static",
+        "ip": "192.168.1.225",
+        "gateway": "192.168.1.1",
+        "mask": "255.255.255.0",
+        "dns": "192.168.1.1",
+        "routing": "wan+lan"
+      }
+    },
+    "ra0": {
+      "medium": "wifi",
+      "type": "dhcp",
+      "ip": "192.168.1.226",
+      "gateway": "192.168.1.1",
+      "mask": "255.255.255.0",
+      "dns": "192.168.1.1",
+      "dns2": "192.168.1.2",
+      "routing": "wan+lan",
+      "gateway_tenure": "0",
+      "fallback": {
+        "type": "static",
+        "ip": "192.168.1.226",
+        "gateway": "192.168.1.1",
+        "mask": "255.255.255.0",
+        "dns": "192.168.1.1",
+        "routing": "wan+lan"
+      }
+    },
+    "ppp0": {
+      "medium": "3g",
+      "type": "3g",
+      "routing": "wan+lan",
+      "gateway_tenure": "3"
+    }
+  }
+}

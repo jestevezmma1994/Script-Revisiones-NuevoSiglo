@@ -1,0 +1,4 @@
+#!/bin/sh
+modprobe evdev
+modprobe joydev
+modprobe usbhid

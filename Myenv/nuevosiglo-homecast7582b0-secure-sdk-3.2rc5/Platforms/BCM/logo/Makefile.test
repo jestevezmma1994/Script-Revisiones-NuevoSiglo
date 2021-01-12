@@ -1,0 +1,58 @@
+ifeq ($(S_USE_QBSPLASH),yes)
+
+TEST_FLAGS=
+EXT_FLAGS=
+
+ifneq ($(filter $(CROSS_ARCH),i686-linux-gnu x86_64-linux-gnu),)
+TEST_FLAGS="MAGNUM_PLATFORM=97552"
+else
+ifeq ($(filter $(MAGNUM_PLATFORM),97552),97552)
+EXT_FLAGS="MAGNUM_PLATFORM=97362"
+else
+EXT_FLAGS="MAGNUM_PLATFORM=97552"
+endif
+endif
+
+clean:
+	@rm -f $(DESTDIR)/../splash_*.bin
+
+compile:
+	make -f Makefile.splashgen SPLASH_PROJECT=test/full $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_full.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/only_anim $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_only_anim.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/only_logo $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_only_logo.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/only_bg $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_only_bg.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/only_bar $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_only_bar.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/without_anim $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_without_anim.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/without_logo $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_without_logo.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/without_bar $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_without_bar.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/without_bg $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_without_bg.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/bg_bar $(TEST_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_bg_bar.bin
+	@rm splash.bin
+	make -f Makefile.splashgen SPLASH_PROJECT=test/full $(TEST_FLAGS) $(EXT_FLAGS) clean compile
+	@install -m 644 splash.bin $(DESTDIR)/../splash_invalid_vdc.bin
+	@rm splash.bin
+
+install:
+
+else
+include Makefile.old
+endif

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<settings version="2.0"
+    xmlns="http://cubiware.com/settings-v2.xsd"
+    xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <widget name="ScrollView">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>0</int></param>
+        <param tag="width"><int>420</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="itemWidth"><int>420</int></param>
+        <param tag="itemMinHeight"><int>60</int></param>
+        <param tag="itemSpacing"><int>30</int></param>
+
+        <widget name="viewport">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>10</int></param>
+            <param tag="width"><int>420</int></param>
+            <param tag="height"><int>700</int></param>
+            <param tag="xStep"><int>20</int></param>
+            <param tag="yStep"><int>20</int></param>
+            <param tag="yMaxVelocity"><double>1000</double></param>
+            <param tag="yAcceleration"><double>20</double></param>
+            <param tag="screenAcceleration"><double>100</double></param>
+        </widget>
+    </widget>
+
+</settings>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><tree version="1.0" xmlns="http://cubiware.com/activetree-v1.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd">
+
+    <node id="EditSatellite">
+        <attr name="caption"><i18n:gettext>Edit satellite</i18n:gettext></attr>
+    </node>
+
+    <node id="RestoreSatellite">
+        <attr name="caption"><i18n:gettext>Restore defaults</i18n:gettext></attr>
+
+        <node id="RestoreSatellite.OK">
+            <attr name="caption"><i18n:gettext>OK</i18n:gettext></attr>
+        </node>
+
+        <node id="RestoreSatellite.Cancel">
+            <attr name="caption"><i18n:gettext>Cancel</i18n:gettext></attr>
+        </node>
+    </node>
+
+    <node id="EditTransponders">
+        <attr name="caption"><i18n:gettext>Transponders</i18n:gettext></attr>
+
+        <node id="EditTransponders.Add">
+            <attr name="caption"><i18n:gettext>Add</i18n:gettext></attr>
+        </node>
+
+        <node id="EditTransponders.Edit">
+            <attr name="caption"><i18n:gettext>Edit</i18n:gettext></attr>
+        </node>
+
+        <node id="EditTransponders.Toggle">
+            <attr name="caption"><i18n:gettext>Enable/Disable</i18n:gettext></attr>
+        </node>
+
+        <node id="EditTransponders.Remove">
+            <attr name="caption"><i18n:gettext>Remove</i18n:gettext></attr>
+        </node>
+    </node>
+
+</tree>

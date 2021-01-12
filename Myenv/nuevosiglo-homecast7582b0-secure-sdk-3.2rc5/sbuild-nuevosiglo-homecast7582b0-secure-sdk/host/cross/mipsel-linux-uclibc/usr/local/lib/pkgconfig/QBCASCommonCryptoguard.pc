@@ -1,0 +1,6 @@
+Name: QBCASCommonCryptoguard
+Version: 1.0.0
+Requires: QBCAS SvCore SvFoundation 
+Description: Stub for QBCASCommon implementation for Cryptoguard 2.0
+Libs: -lQBCASCommonCryptoguard 
+CFlags: 

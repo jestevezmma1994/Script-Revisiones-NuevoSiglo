@@ -1,0 +1,6 @@
+Name: QBMp4Parser
+Version: 1.0.0
+Requires: SvCore SvFoundation SvPlayerKit storage_input 
+Description: Cubiware mp4 parser library
+Libs: -lQBMp4Parser 
+CFlags: 

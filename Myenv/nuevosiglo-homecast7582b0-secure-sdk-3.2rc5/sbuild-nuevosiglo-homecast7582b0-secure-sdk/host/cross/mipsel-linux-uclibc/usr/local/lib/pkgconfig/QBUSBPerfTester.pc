@@ -1,0 +1,6 @@
+Name: QBUSBPerfTester
+Version: 1.0.0
+Requires: SvFoundation SvJSON dataformat fibers 
+Description: library and scripts for testing USB performance
+Libs: -lQBUSBPerfTester 
+CFlags: 

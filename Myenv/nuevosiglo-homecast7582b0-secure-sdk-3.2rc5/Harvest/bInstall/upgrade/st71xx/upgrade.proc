@@ -1,0 +1,220 @@
+#!/bin/sh
+
+. /etc/strings.txt
+
+#Error codes: 
+# 102 - unable to get slot number
+# 104 - rootfs write error
+# 105 - kernel write error
+# 106 - logo write error
+
+#Platform string to identify your file, it should be uniq in each other:
+_UP_PLATFORM_NAME="st71xx"
+
+#add number of your platform progress steps here (count all step_progress in the file)
+_UP_PLATFORM_STEP_CNT=0
+
+
+#set expected file names
+_UP_PLATFORM_TAR_FILES="_UPGRADE_FILES_"
+#"ROOTFS.sqsh KERNEL.ub LOGO.bin USR.sqsh"
+
+#set expected tar.gz pipe name, the tee will power them with the upgrade package stream.
+_UP_PLATFORM_TAR_PIPES=$(for i in  $_UP_PLATFORM_TAR_FILES; do echo $i.pipe; done)
+#"rootfs kernel logo usr"
+
+#Mandatory procedures operating on data, you should escape to "exit_upgrade" with error code if something goes criticaly wrong
+_up_get_hash () { #gets hash of current version, used to decide is upgrade is needed
+	printnv "qb_version" | cut -d'=' -f2
+}
+_up_get_status () { #gets current status of upgrade, you should print OK for confirmed firmware, RESTORED for restored firmware, or some other string for other states
+	printnv "qb_status" | cut -d'=' -f2
+}
+_up_set_status () {
+	setnv "qb_status=$1"
+}
+
+_up_check_version() { #if any additional version checking needed do it here, got a new version number in parameter
+	res="not needed in unsecure version"
+}
+
+_up_verify_firmware () { #check integrity, signatures, hashes or whatever you need, you got files names in parameter
+	res="not needed in unsecure version"
+}
+
+#the most important function:
+_up_write_firmware () { #write firmware files on board, you got files name in parameter, after that stb should boot new firmware
+	HASH=$1
+	shift
+
+	#get current slot number
+	SLOT=$(printnv "qb_slot" | tail -n 1 | cut -d'=' -f2-)
+	[ -z "$SLOT" ] && SLOT=1 #the default slot number is 1
+	#upgrade to inverted slot number (0->1 or 1->0)
+	SLOT=$(( ! $SLOT ))
+	echo "I:0981: selected slot #$SLOT"
+
+	#set partition paths
+	KPART=`cat /proc/mtd | grep "\<vmlinuz$(( $SLOT ))\>" | cut -d':' -f1`
+	RPART=`cat /proc/mtd | grep "\<rootfs$(( $SLOT ))\>" | cut -d':' -f1`
+	LPART=`cat /proc/mtd | grep "\<logo\>" | cut -d':' -f1`
+	KSPART=`cat /proc/mtd | grep "\<keystore$(( $SLOT ))\>" | cut -d':' -f1`
+	ECMPART=`cat /proc/mtd | grep "\<ecm$(( $SLOT ))\>" | cut -d':' -f1`
+	UPART=`grep ".d.$" /proc/partitions | head -n1 | sed "s/.*\(.d.\)$/\1/g"`$(( _UPGRADE_USR_BASE_PART_NO_ + SLOT ));
+	[ -z "$KPART" -o -z "$RPART" ] && exit_upgrade 103 "flash partition not found";
+	echo $KPART > KPART
+	echo $RPART > RPART
+	echo $LPART > LPART
+	echo $UPART > UPART
+
+	#help function
+	_up_write_and_feedback () {
+		PIPE="$1.pipe"
+		FILE="$1"
+		WRITER="$2"
+		DEVICE="$3"
+		OPTIONAL="$4"
+		mkfifo $FILE.wc.pipe
+		{ #feedback
+			if [ ! -z "$DEVICE" -a -e "$DEVICE" ]; then #only if device defined
+				mkfifo $FILE
+				cat $FILE.wc.pipe | wc -c > $FILE.size && head -c $(cat $FILE.size) $DEVICE > $FILE;
+			else
+				cat $FILE.wc.pipe > /dev/null;
+			fi
+		} & #feedback
+
+		cat $PIPE | tar xO $FILE | tee $FILE.wc.pipe | \
+			$WRITER$DEVICE >$PIPE.log 2>&1; \
+			res=$?;
+
+		if [ "$OPTIONAL" = "optional" ] && [ ! -e $FILE.size -o "$(cat $FILE.size)" = "0" ]; then #ok and erase
+			echo 0; [ ! -e "$DEVICE" ] ||  dd if=/dev/zero of=$DEVICE bs=32k count=1;
+		else
+			echo $res;
+		fi > $PIPE.?;
+	}
+
+	#process rootfs in background job, keep background job ID in file back_pids
+	{
+		if echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.sqsh\b"; then
+			_up_write_and_feedback ROOTFS.sqsh "flashcp -v - " /dev/$RPART
+		elif echo "_UPGRADE_FILES_" | grep -s "\bROOTFS.tgz\b"; then
+			umount /dev/$(echo $RPART | sed s/mtd/mtdblock/) 2>/dev/null
+			flash_erase /dev/$RPART 2>/dev/null
+			mkdir -p ROOTFS.mountpoint
+			mount -t jffs2 /dev/$(echo $RPART | sed s/mtd/mtdblock/) ROOTFS.mountpoint
+			_up_write_and_feedback ROOTFS.tgz "tar zx -C ROOTFS.mountpoint"
+			umount ROOTFS.mountpoint
+			sync
+		fi
+	} &
+
+	#process kernel in background job, keep background job ID in file back_pids
+	_up_write_and_feedback KERNEL.ub "flashcp -v - " /dev/$KPART &
+
+	#process usr optional partition
+	_up_write_and_feedback USR.sqsh "dd of=" /dev/$UPART optional &
+
+	#process keystore optional partition
+	_up_write_and_feedback KEYSTORE.bin "flashcp -v - " /dev/$KSPART optional &
+
+	#process ecm_firmware optional partition
+	_up_write_and_feedback ECMFW.bin "flashcp -v - " /dev/$ECMPART optional &
+
+	#process logo only if it different than current one
+	# the package may not contain logo
+	echo "I:0990: processing logo"
+	skip_logo () {
+		echo 0 > LOGO.bin.pipe.?; echo "I:0999: $1, skipped"; exit 0;
+	};
+
+	{
+		cat LOGO.bin.pipe | tar x LOGO.bin || skip_logo "logo not found in pack";
+		[ -z "$LPART" -o ! -e /dev/$LPART ] && skip_logo "logo partition not found";
+		[ ! -e LOGO.bin ] && skip_logo "logo partition not found";
+		head -c `cat LOGO.bin | wc -c` /dev/$LPART | cmp -s LOGO.bin - && skip_logo "logo not changed"
+		flashcp -v LOGO.bin /dev/$LPART >/dev/null 2>&1; echo $? > LOGO.bin.pipe.?;
+	} & echo $! >> back_pids
+
+	#keep slot it and HASH for firmware confirmation
+	echo $SLOT > SLOT;
+	echo $HASH > HASH;
+}
+
+_up_verify_firmware () {
+	res="empty" #no additional firmware verification is requared
+}
+
+_up_confirm_firmware () {	
+	SLOT=`cat SLOT`
+	HASH=`cat HASH`
+	[ -z "$SLOT" ] && exit_upgrade 104 "slot number file not found"
+	[ -z "$HASH" ] && exit_upgrade 104 "hash file not found"
+	setnv "qb_slot=$SLOT" "qb_status=NEW" "qb_version=$HASH" $(cat $FW_NAME.sig | grep "KERNEL\|ROOTFS" | sed -e "s/KERNEL.ub.sig/vmlinuz${SLOT}_sign/g" -e "s/ROOTFS.sqsh.sig/rootfs${SLOT}_sign/")
+	[ -e image.sizes ] && setnv $(cat image.sizes | grep "KERNEL" | sed -e "s/KERNEL.*=/vmlinuz${SLOT}_size=/g")
+}
+
+#Optional variable which you may need in your procedures, will be initialized with initial environment
+#if you need to overwrite some already initialized variables this place is good for that purposes
+#SOME_VARIABLE="SOME VALUE"
+
+#Optional procedures calling before and after each phase of upgrade, shouldn't be implemented, but do not remove them from here
+_up_before_wait_for_network () {
+        res="empty"
+}
+_up_after_wait_for_network () {
+        res="empty"
+}
+
+_up_before_wait_for_upgrade_server () {
+        res="empty"
+}
+_up_after_wait_for_upgrade_server () {
+        res="empty"
+}
+
+_up_before_version_check () {
+	res="empty"
+}
+_up_after_version_check () {
+	res="empty"
+}
+
+_up_before_initiate_upgrade () {
+	res="empty"
+}
+_up_after_initiate_upgrade () {
+	res="empty"
+}
+
+_up_before_getting_firmware () {
+	res="empty"
+}
+_up_after_getting_firmware () {
+	res="empty"
+}
+
+_up_before_firmware_verification () {
+	res="empty"
+}
+_up_after_firmware_verification () {
+	res="empty"
+}
+
+_up_before_writting_firmware () {
+	res="empty"
+}
+_up_after_writting_firmware () {
+	res="empty"
+}
+
+_up_before_complete () {
+	res="empty"
+}
+_up_after_complete () {
+	res="empty"
+}
+_up_before_main_fifo_create() {
+	res="empty"
+}

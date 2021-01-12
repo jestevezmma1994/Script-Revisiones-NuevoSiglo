@@ -1,0 +1,315 @@
+msgid "Catch-up TV - continue"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Catch-up TV - play"
+msgstr ""
+
+msgid "Volver a empezar"
+msgstr ""
+
+msgid "Play from the beginning"
+msgstr ""
+
+msgid "Ir a vivo"
+msgstr ""
+
+msgid "Remove reminder"
+msgstr ""
+
+msgid "Remind me"
+msgstr ""
+
+msgid "Stop recording"
+msgstr ""
+
+msgid "Stop channel recording"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+msgid "Record always"
+msgstr ""
+
+msgid "Stop recording always"
+msgstr ""
+
+msgid "Record repeatedly"
+msgstr ""
+
+msgid "Stop recording repeatedly"
+msgstr ""
+
+msgid "More info"
+msgstr ""
+
+msgid "Record past event with nPVR"
+msgstr ""
+
+msgid "Record with nPVR"
+msgstr ""
+
+msgid "Delete NPvr recording"
+msgstr ""
+
+msgid "Record keyword with nPVR"
+msgstr ""
+
+msgid "Stop keyword recording"
+msgstr ""
+
+msgid "Record series with nPVR"
+msgstr ""
+
+msgid "Stop series recording"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Rent"
+msgstr ""
+
+msgid "Play Trailer"
+msgstr ""
+
+msgid "Agregar a Mi lista"
+msgstr ""
+
+msgid "Quitar de Mi lista"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Scan Type"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "DVB-C NIT Automatic"
+msgstr ""
+
+msgid "DVB-C Manual"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "MAC Address"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "Device Name"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr ""
+
+msgid "Tuned Frequency"
+msgstr ""
+
+msgid "MPEG Service Number"
+msgstr ""
+
+msgid "Channel Name"
+msgstr ""
+
+msgid "Channel Number"
+msgstr ""
+
+msgid "Pre FEC BER"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "Chip ID"
+msgstr ""
+
+msgid "Short Term Error"
+msgstr ""
+
+msgid "Long Term Error"
+msgstr ""
+
+msgid "RF Signal Status"
+msgstr ""
+
+msgid "SmartCard ID"
+msgstr ""
+
+msgid "Guide Data"
+msgstr ""
+
+msgid "Channel Map"
+msgstr ""
+
+msgid "Audio Status"
+msgstr ""
+
+msgid "Video Status"
+msgstr ""
+
+msgid "SmartCard Subscription Status"
+msgstr ""
+
+msgid "RF Tuner Statistics"
+msgstr ""
+
+msgid "Carrier Lock"
+msgstr ""
+
+msgid "Modulation"
+msgstr ""
+
+msgid "Signal Level"
+msgstr ""
+
+msgid "TSID"
+msgstr ""
+
+msgid "Symbol Rate"
+msgstr ""
+
+msgid "DVB Table Status"
+msgstr ""
+
+msgid "PAT Status"
+msgstr ""
+
+msgid "PMT Status"
+msgstr ""
+
+msgid "CAT Status"
+msgstr ""
+
+msgid "NIT Status"
+msgstr ""
+
+msgid "TDT Status"
+msgstr ""
+
+msgid "SDT Status"
+msgstr ""
+
+msgid "EIT Status"
+msgstr ""
+
+msgid "STB Status"
+msgstr ""
+
+msgid "SmartCard Status"
+msgstr ""
+
+msgid "Uptime"
+msgstr ""
+
+msgid "Idle Time"
+msgstr ""
+
+msgid "User Time"
+msgstr ""
+
+msgid "System Time"
+msgstr ""
+
+msgid "Thread Count"
+msgstr ""
+
+msgid "Virtual Memory"
+msgstr ""
+
+msgid "Number of Pages"
+msgstr ""
+
+msgid "Total Memory"
+msgstr ""
+
+msgid "Memory Used"
+msgstr ""
+
+msgid "Free Memory"
+msgstr ""
+
+msgid "Buffers"
+msgstr ""
+
+msgid "Interface Status"
+msgstr ""
+
+msgid "HDMI Status"
+msgstr ""
+
+msgid "Ethernet Status"
+msgstr ""
+
+msgid "USB Status"
+msgstr ""
+
+msgid "Interactive Services"
+msgstr ""
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "DVB Tables Details"
+msgstr ""
+
+msgid "PID"
+msgstr ""
+
+msgid "SID"
+msgstr ""
+
+msgid "PCR"
+msgstr ""
+
+msgid "Program Number"
+msgstr ""
+
+msgid "Version Number"
+msgstr ""
+
+msgid "Channel Status"
+msgstr ""
+
+msgid "Mux ID"
+msgstr ""
+
+msgid "Network Name"
+msgstr ""
+
+msgid "PLPID"
+msgstr ""
+
+msgid "Bandwidth [MHz]"
+msgstr ""
+
+msgid "Polarization"
+msgstr ""
+
+msgid "Signal Level Number"
+msgstr ""
+
+msgid "Quality Level Number"
+msgstr ""
+
+msgid "Quality Level"
+msgstr ""
+
+msgid "Software Version"
+msgstr ""
+
+msgid "Full Software Version"
+msgstr ""
+

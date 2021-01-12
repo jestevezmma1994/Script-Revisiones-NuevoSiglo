@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="Dialog-template.settings"/>
+
+    <widget name="Dialog" import="Dialog-template">
+        <param tag="bg"><bitmap><path>empty.png</path></bitmap></param>
+
+        <widget name="TitleLabel">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="yOffset"><int>4</int></param>
+            <param tag="width"><int>700</int></param>
+            <param tag="height"><int>20</int></param>
+            <param tag="font">
+                <ref constant="SemiWideFont"/>
+            </param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="textColor"><color>cfcfcfff</color></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+
+        <widget name="Panel">
+            <param tag="xOffset"><int>20</int></param>
+            <param tag="width"><int>700</int></param>
+            <param tag="height"><int>4</int></param>
+            <param tag="horizPadding"><int>5</int></param>
+            <param tag="vertPadding"><int>0</int></param>
+            <param tag="vertSpacing"><int>0</int></param>
+
+            <widget name="Caption">
+                <param tag="xOffset"><int>8</int></param>
+                <param tag="yOffset"><int>4</int></param>
+                <param tag="width"><int>600</int></param>
+                <param tag="height"><int>24</int></param>
+                <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                <param tag="textColor"><color>bfbfbfff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+            </widget>
+        </widget>
+
+        <widget name="Label">
+            <param tag="width"><int>710</int></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="textColor"><color>bfbfbfff</color></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+
+    </widget>
+
+</settings>

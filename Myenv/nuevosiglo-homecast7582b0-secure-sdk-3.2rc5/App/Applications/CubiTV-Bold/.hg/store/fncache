@@ -1,0 +1,12 @@
+data/Logic/AnyPlayerLogic.c.i
+data/Logic/TVLogic.c.i
+data/exec.comp.i
+data/Logic/StandbyLogic.c.i
+data/Logic/InitLogic.c.i
+data/DVBScannerPlugins/SIDAsChannelNumberPlugin.h.i
+data/Logic/ChannelScanningLogic.c.i
+data/Makefile.exec.i
+data/Services/BackgroundScanner.c.i
+data/DVBScannerPlugins/SIDAsChannelNumberPlugin.c.i
+data/Makefile.logic.i
+data/logic.comp.i

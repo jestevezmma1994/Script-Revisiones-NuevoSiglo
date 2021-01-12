@@ -1,0 +1,194 @@
+<?xml version="1.0" ?><settings version="2.0" xmlns="http://cubiware.com/settings-v2.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="fonts.settings"/>
+    <xi:include href="ContextMenu.settings"/>
+
+    <widget name="CallerIdStatus">
+        <param tag="duration"><double>0.5</double></param>
+
+        <widget name="Bar">
+            <param tag="xOffset"><int>0</int></param>
+            <param tag="yOffset"><int>720</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>154</int></param>
+            <param tag="bg"><bitmap><path>bar_caller_id.png</path></bitmap></param>
+        </widget>
+
+        <widget name="Phone">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>20</int></param>
+            <param tag="bg"><bitmap><path>icons_calling.png</path></bitmap></param>
+        </widget>
+
+        <widget name="CallingMessage">
+            <param tag="xOffset"><int>120</int></param>
+            <param tag="yOffset"><int>25</int></param>
+            <param tag="width"><int>830</int></param>
+            <param tag="multiLine"><bool>true</bool></param>
+            <param tag="bgColor"><color>001680ed</color></param>
+            <param tag="text"><string/></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+        </widget>
+
+        <widget name="LineMessage">
+            <param tag="xOffset"><int>955</int></param>
+            <param tag="yOffset"><int>25</int></param>
+            <param tag="width"><int>380</int></param>
+            <param tag="multiLine"><bool>true</bool></param>
+            <param tag="bgColor"><color>001680ed</color></param>
+            <param tag="text"><string/></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Title"/></param>
+        </widget>
+
+        <widget name="Hint">
+            <param tag="xOffset"><int>50</int></param>
+            <param tag="yOffset"><int>75</int></param>
+            <param tag="width"><int>880</int></param>
+            <param tag="multiLine"><bool>false</bool></param>
+            <param tag="bgColor"><color>001680ed</color></param>
+            <param tag="markupText"><string><i18n:gettext><![CDATA[<p>Press Exit to hide Caller ID bar. Press <img src="icons_green_button.png"/> button to redirect call to voice mail</p>]]></i18n:gettext></string></param>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="textAlign"><string>left</string></param>
+            <param tag="vertAlign"><string>top</string></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="hintIcon"><bitmap><path>icons_green_button.png</path></bitmap></param>
+        </widget>
+    </widget>
+
+    <widget name="FailurePopup">
+        <param tag="title"><string><i18n:gettext>Voicemail error</i18n:gettext></string></param>
+        <param tag="info"><string><i18n:gettext>Dropping to voicemail failed - Please Contact your service representative.</i18n:gettext></string></param>
+    </widget>
+
+    <widget name="MenuItem">
+        <widget name="Item">
+            <param tag="xOffset"><int>80</int></param>
+            <param tag="yOffset"><int>36</int></param>
+            <param tag="width"><int>400</int></param>
+            <param tag="height"><int>66</int></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="spacing"><int>10</int></param>
+            <param tag="leftPadding"><int>10</int></param>
+            <param tag="epgSpacing"><int>2</int></param>
+            <param tag="normalDim"><int>255</int></param>
+            <param tag="inactiveDim"><int>255</int></param>
+            <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+            <param tag="focusXOffset"><int>0</int></param>
+            <param tag="focusYOffset"><int>0</int></param>
+            <param tag="focusFadeTime"><double>0.3</double></param>
+            <param tag="showTime"><double>0.3</double></param>
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="focusMinWidth"><int>237</int></param>
+            <param tag="tickMarkOn"><bitmap><path>check_on.png</path></bitmap></param>
+            <param tag="tickMarkOff"><bitmap><path>check_off.png</path></bitmap></param>
+            <param tag="radioMarkOn"><bitmap><path>check_on.png</path></bitmap></param>
+            <param tag="radioMarkOff"><bitmap><path>check_off.png</path></bitmap></param>
+            <param tag="phoneIcon"><bitmap><path>icons_calling.png</path></bitmap></param>
+            <param tag="hideInactiveText"><bool>true</bool></param>
+            <param tag="subcaptionSpacing"><int>6</int></param>
+        </widget>
+        <widget name="focus">
+            <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+            <param tag="minWidth"><int>237</int></param>
+            <param tag="maxWidth"><int>759</int></param>
+        </widget>
+        <widget name="disabledFocus">
+            <param tag="bg"><bitmap><path>frame_xmb_nonfocus.png</path></bitmap></param>
+            <param tag="minWidth"><int>237</int></param>
+            <param tag="maxWidth"><int>759</int></param>
+       </widget>
+    </widget>
+
+    <widget name="CallDetailsSideMenu" import="SideMenu-template">
+        <widget name="frame">
+            <param tag="width"><int>360</int></param>
+        </widget>
+    </widget>
+
+    <widget name="CallDetails">
+        <common>
+            <param tag="textColor"><color>ffffffff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+        </common>
+
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>100</int></param>
+        <param tag="width"><int>360</int></param>
+        <param tag="height"><int>250</int></param>
+
+        <widget name="CallerName">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>34</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="Number">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>30</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>34</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="Line">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>34</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="Date">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>90</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>34</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="Time">
+            <param tag="xOffset"><int>35</int></param>
+            <param tag="yOffset"><int>120</int></param>
+            <param tag="width"><int>360</int></param>
+            <param tag="height"><int>34</int></param>
+            <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="OKButton">
+            <param tag="xOffset"><int>140</int></param>
+            <param tag="yOffset"><int>170</int></param>
+            <param tag="width"><int>80</int></param>
+            <param tag="height"><int>41</int></param>
+                    <param tag="bg"><bitmap><path>button_focus.png</path></bitmap></param>
+                    <param tag="inactiveBg"><bitmap><path>button_nonfocus.png</path></bitmap></param>
+            <param tag="font"><ref constant="NormalFont"/></param>
+            <param tag="fontSize"><int>26</int></param>
+            <param tag="textColor"><color>000000ff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+        </widget>
+
+    </widget>
+
+</settings>

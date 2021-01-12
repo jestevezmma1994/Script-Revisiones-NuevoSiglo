@@ -1,0 +1,8 @@
+	This package contain tools for generating certificates/keys tools.
+
+ssh - basic script for generating a RSA key pair. The public key (id_rsa.pub) will be used as aouthorized key on the STB and the private key (id_rsa) should be used for connecting the STB.
+
+upgrade-pack - a set of certificates for upgrade package.
+	ca-gen.sh - use the script to generate a certificate issuer CA cert/keys, the ca.cert.der public certificate should be placed on the STB to authorize supplier certificater issued with the CA.
+	ecgen.sh - use the script to generate software supplier certificate. The certificate will be used to sign firmware for upgarde and will be verified with issuer ca.cert.der which will be placed on STB.
+	

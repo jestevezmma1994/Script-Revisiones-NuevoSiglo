@@ -1,0 +1,101 @@
+#!/bin/sh
+
+DM_APPS_PART=apps
+DM_APPS_DEVICE=/dev/mapper/$DM_APPS_PART
+MMC_APPS_PART_LABEL=apps
+
+configure_crypto() {
+	while [ ! -d /sys/class/block/mmcblk0 ]; do
+		echo "[Apps] waiting for emmc"
+		sleep 1
+	done
+
+	if [ ! -d /tmp/mapper ]; then
+		mkdir -p /tmp/mapper
+	fi
+
+	if [ ! -c /dev/mapper/control ]; then
+		if [ ! -e /sys/class/misc/device-mapper/dev ]; then
+			echo "[Apps] no sysfs entry for device-mapper dev"
+			return 1
+		fi
+
+		number=`cat /sys/class/misc/device-mapper/dev | awk 'BEGIN {FS = ":"} ; {print $1 " " $2}'`
+		mknod /dev/mapper/control c $number
+		if [ $? -ne 0 ]; then
+			echo "[Apps] couldn't create device-mapper control device node"
+			return 1
+		fi
+	fi
+
+    MMC_APPS_DEV=""
+    MMC_APPS_PART=""
+	ALL_DEVS=`ls /dev/mmcblk?p?`
+	for CUR_DEV in $ALL_DEVS; do
+		CUR_PART=`echo $CUR_DEV | sed 's#.*/##'`
+		if [ -d /sys/class/block/$CUR_PART ]; then
+			LABEL=`cat /sys/class/block/$CUR_PART/volname`
+			if [ "$LABEL" = "$MMC_APPS_PART_LABEL" ]; then
+				MMC_APPS_DEV=$CUR_DEV
+				MMC_APPS_PART=$CUR_PART
+			fi
+		fi
+	done
+	if [ -z "$MMC_APPS_DEV" ]; then
+		echo "[Apps] apps partition not found"
+		return 1
+	fi
+
+	APPS_DEV_SIZE=`cat /sys/class/block/$MMC_APPS_PART/size`
+	echo "[Apps] setting up dm-crypt"
+	echo "0 $APPS_DEV_SIZE crypt aes-ecb `xxd -ps /etc/keys/swpk4` 0 $MMC_APPS_DEV 0" | dmsetup create $DM_APPS_PART
+	return $?
+}
+
+check_crypto() {
+	dmsetup status $DM_APPS_PART 1>/dev/null 2>&1 || configure_crypto
+	return $?
+}
+
+mount_part() {
+	mkdir -p /tmp/apps
+	mount -o sync,noexec $DM_APPS_DEVICE /tmp/apps 1>/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		return 1
+	fi
+	chown upgradeuser:appgroup /tmp/apps
+	chmod 750 /tmp/apps
+	return $?
+}
+
+restore_defaults() {
+	umount /tmp/apps 1>/dev/null 2>&1
+	mke2fs -t ext4 $DM_APPS_DEVICE 1>/dev/null 2>&1 && mount_part
+	if [ $? -ne 0 ]; then
+		return 1
+	fi
+	echo "[Apps] creating new apps partition"
+	rm -rf /tmp/apps/*
+}
+
+check_mount() {
+	check_crypto
+	if [ $? -ne 0 ]; then
+		echo "[Apps] check_crypto failed"
+		exit 1
+	fi
+
+	mount | grep -q "$DM_APPS_DEVICE\b" || mount_part || restore_defaults
+	if [ $? -ne 0 ]; then
+		echo "[Apps] mount failed"
+		exit 1
+	fi
+
+	return 0
+}
+
+if [ "$1" = "start" ]; then
+    modprobe ext4
+    check_mount
+fi
+

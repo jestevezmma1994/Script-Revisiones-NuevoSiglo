@@ -1,0 +1,125 @@
+#!/usr/bin/ python
+# encoding: utf-8
+# -*- coding: latin-1 -*-
+
+import hgapi
+import json
+import re
+import os
+import subprocess
+import sys
+import cgitb 
+import inspect
+import HTML
+
+
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+
+Par1 = sys.argv[1]
+beginstring = "silo pull release nuevosiglo-homecast7582b0-secure-sdk-"
+allstring =beginstring + Par1
+actualdir = os.getcwd()
+carpetafinal = actualdir + "/nuevosiglo-homecast7582b0-secure-sdk-" + Par1
+z="nothing"
+os.system(allstring)
+
+listofrepos = [
+   "/App/Applications/CubiTV",
+   #"/App/Applications/CubiTV-Bold",
+   #"/App/Applications/CubiTV-Generic",
+    "/App/Applications/CubiTV-NuevoSiglo",
+   #"/App/Components/QBSubsManager",
+	#"/App/Components/QBTextSubsManager", 
+   "/Files/CubiTV/NuevoSiglo",
+    "/Files/Resources/CubiTV",
+   #"/Files/Resources/Selectors",
+   #"/Harvest/bInstall", 
+	#"/Harvest/bSpec/bold-homecast7582b0-debug", 
+	#"/Harvest/bSpec/bold-homecast7582b0-secure", 
+	#"/Harvest/bSpec/generic",
+	#"/Harvest/bSpec/nuevosiglo-hnc2200co-debug", 
+	#"/Harvest/bSpec/nuevosiglo-hnc2200co-secure", 
+	#"/Harvest/bSpec/nuevosiglo-homecast7582b0-debug", 
+    "/Harvest/bSpec/nuevosiglo-homecast7582b0-secure",
+   #"/P/nuevosiglo", 
+	#"/Platforms/BCM/logo", 
+	#"/Src/CxPlayReady-NuevoSiglo",
+	#"/Src/TranslationMerger", 
+	#"/Src/driver-installer", 
+	#"/Src/license_checker" 
+   ]
+
+t = HTML.Table(header_row=['Versión',   'Tipo de Cambio',   'Últimos 10 cambios'])
+    
+for r in listofrepos:
+ orden = carpetafinal+r
+ os.chdir(orden)
+ repo = hgapi.Repo('.')
+ num = repo.hg_rev()
+ i = 1
+ listofrevisions = []
+ while  i <= 10:
+  temp = repo.revision(num)
+  txt = temp.desc
+  x = re.search("^[[]",txt)
+  if x :
+   start = "["
+   end = "]"
+   y = txt[txt.find(start)+len(start):txt.find(end)]
+  else :
+   y = "empty"
+  setattr(temp,'ticket',y)
+  htmlfile = '../../../../' + 'Tabla_Revisiones.html'
+  f=open(htmlfile,'a',encoding = 'utf-8')
+  if temp.ticket == "empty":
+   ticket = " "
+  elif temp.ticket != "empty":
+   ticket ="<br>" + "<b>" + "Ticket :"  + "</b>" + "<a href=http://redmine.boldmss.com/issues/" + str(temp.ticket) + ">" + str(temp.ticket)  +"</a>"
+  numrev = "<b>" + "Número de Revisión :" + "</b>" + str(temp.rev)
+  fecha = "<br>" + "<b>" + "Fecha :" + "</b>" + str(temp.date) + "<br>"
+  desc =  "<b>" + "Descripción :" + "</b>" + temp.desc + "<br>"
+  mostrar = numrev + ticket + fecha + desc
+  
+  
+  if r != z :
+   if r == "/App/Applications/CubiTV" :
+    r1 =  "Cambios en Funcionalidades CUBI"    
+   if r == "/App/Applications/CubiTV-NuevoSiglo" :
+    r1 = "Cambios en Funcionalidades BOLD"
+   if r == "/Files/CubiTV/NuevoSiglo" :
+    r1 = "Cambios Visuales BOLD"   
+   if r == "/Files/Resources/CubiTV" :
+    r1 = "Cambios Visuales BOLD"
+   if r == "/Harvest/bSpec/nuevosiglo-homecast7582b0-secure":
+    r1 = "Cambios BOLD"   
+   z = r
+   row1 = [Par1,r1,mostrar]
+   t.rows.append(row1)
+  elif r == z:
+   row1[2] += "<br><br><br>" + mostrar
+   
+  num = num - 1
+  i += 1
+   
+
+ 
+ t1 = "<div class=" + "my" + ">"
+ t2 = "</div>"
+ t3 = "<style>  table{ width:100%}   </style>"
+ htmlcode = str(t)
+ 
+ t4 = t3 + t1 + htmlcode +t2 
+
+f.write(t4)
+f.close()  
+
+  
+
+
+
+
+
+

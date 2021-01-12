@@ -1,0 +1,34 @@
+[
+    {
+        "vendor": "ATA     ",
+            "__jsonclass__": [
+                "QBPVODStorage",
+                []
+            ],
+            "model": "WDC WD10JUCT-63J"
+    },
+    {
+        "vendor": "WDC WD10",
+            "__jsonclass__": [
+                "QBPVODStorage",
+                []
+            ],
+            "model": "JUCT-63J6SY0    "
+    },
+    {
+        "vendor": "ATA     ",
+            "__jsonclass__": [
+                "QBPVODStorage",
+                []
+            ],
+            "model": "ST1000LM024 HN-M"
+    },
+    {
+        "vendor": "ST1000LM",
+            "__jsonclass__": [
+                "QBPVODStorage",
+                []
+            ],
+            "model": "024 HN-M101MBB  "
+    }
+]

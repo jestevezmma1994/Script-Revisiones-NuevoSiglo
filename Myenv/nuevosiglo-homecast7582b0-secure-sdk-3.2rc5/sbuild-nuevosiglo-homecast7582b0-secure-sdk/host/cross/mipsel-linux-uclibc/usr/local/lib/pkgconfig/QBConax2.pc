@@ -1,0 +1,6 @@
+Name: QBConax2
+Version: 1.0.0
+Requires: SvCore 
+Description: Cubiware generic api for communicating with Conax Smartcard, version 2
+Libs: -lQBConax2 
+CFlags: 

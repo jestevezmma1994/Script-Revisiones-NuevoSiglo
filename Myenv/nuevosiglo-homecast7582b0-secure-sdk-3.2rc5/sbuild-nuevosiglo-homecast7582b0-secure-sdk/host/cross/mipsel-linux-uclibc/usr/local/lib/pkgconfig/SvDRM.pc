@@ -1,0 +1,6 @@
+Name: SvDRM
+Version: 1.0.0
+Requires: SvCore SvFoundation SvPlayerKit error_log fibers 
+Description: Sentivision DRM library on fibers
+Libs: -lSvDRM 
+CFlags: 

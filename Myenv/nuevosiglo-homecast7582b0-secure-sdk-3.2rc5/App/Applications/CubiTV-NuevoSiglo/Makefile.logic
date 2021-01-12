@@ -1,0 +1,34 @@
+SvMakefileTemplate = Library
+include $(SvStandardMakefiles)/Versions/2/Before.mk
+
+SvName = CubiTV-NuevoSiglo-logic
+SvDescription = CubiTV NuevoSiglo logics core
+
+SvMajorVersion = 1
+SvMinorVersion = 0
+SvRevision = 0
+
+SvRequires = CubiTV
+
+CFLAGS += -std=gnu99
+CPPFLAGS += -I.
+SvStrictWarnings = yes
+
+SvDirectoryLayoutConvention = custom
+
+AllFiles =  $(shell find . -type f -a \( -name '*\.[csm]' -o -name '*\.cpp' -o -name '*\.sx' -o -name '*\.cc' \))
+AllHeaderFiles = $(shell find . -type f -a -name '*.h')
+SvLibrarySourceFiles := $(AllFiles)
+SvLibraryHeaderFiles := $(AllHeaderFiles)
+
+SvStrictWarnings = yes
+
+
+ifneq (,$(CUBITV_FACTORY_CONTEXT))
+    CPPFLAGS += -D$(CUBITV_FACTORY_CONTEXT)=1
+endif
+
+include $(SvStandardMakefiles)/Versions/2/After.mk
+
+QBTranslateSources=$(shell find -name '*.[ch]')
+include $(CROSS_ROOT)/usr/local/share/translations/Makefile.mk

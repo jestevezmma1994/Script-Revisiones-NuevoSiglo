@@ -1,0 +1,6 @@
+Name: QBTextUtils
+Version: 1.0.0
+Requires: SvCore 
+Description: Cubiware text utils used to calculate checksums and to convert to/from binary data
+Libs: -lQBTextUtils 
+CFlags: 

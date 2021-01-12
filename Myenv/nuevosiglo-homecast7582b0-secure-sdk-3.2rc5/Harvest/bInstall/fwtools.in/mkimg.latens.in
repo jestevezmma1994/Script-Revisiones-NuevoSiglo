@@ -1,0 +1,92 @@
+#!/bin/bash
+ENABLE_CONSOLE=$4
+
+mkdir -p initramfs
+mksquashfs4 $2 initramfs/rootfs.img -no-progress
+
+cd initramfs
+
+install -m 755 $5 ./init
+echo ./init >list
+echo ./rootfs.img >>list
+echo dev >>list
+mkdir dev
+echo tmp >>list
+mkdir tmp
+echo tmp/root >>list
+mkdir tmp/root
+echo tmp/images >>list
+mkdir tmp/images
+echo dev/loop0 >>list
+mknod dev/loop0 b 7 0
+echo sys >>list
+mkdir sys
+echo dev/fp >>list
+mknod dev/fp c 127 0
+
+if [[ "$ENABLE_CONSOLE" == "yes" ]]; then
+	cd dev
+	mknod console c 5 1
+	cd ..
+	echo dev/console >>list
+fi
+
+
+cpio -H newc -o > ../initramfs.cpio <list
+cd ..
+gzip initramfs.cpio
+
+byte_swap()
+{
+	OUT=""
+	CNT=$(echo -n $1 | wc -c); for i in `seq 1 2 $CNT`; do OUT+=`echo -n $1 | cut -c $(( CNT - i ))-$((CNT - i + 1))`; done
+}
+
+QB_SIGNATURE_SIZE=16
+KER_SIZE=`stat -c "%s" $1`
+KER_ALIGNED=$(( KER_SIZE / 16 ))
+KER_ALIGNED=$(( KER_ALIGNED + 1 ))
+KER_ALIGNED=$(( KER_ALIGNED * 16 ))
+FS_SIZE=`stat -c "%s" initramfs.cpio.gz`
+FS_ALIGNED=$(( FS_SIZE / 16 ))
+FS_ALIGNED=$(( FS_ALIGNED + 1 ))
+FS_ALIGNED=$(( FS_ALIGNED * 16 ))
+# Padding is done only between kernel and rootfs
+KER_ALIGNED=$(( KER_ALIGNED + FS_ALIGNED - FS_SIZE))
+TOTAL_SIZE=$(( QB_SIGNATURE_SIZE + KER_ALIGNED + FS_SIZE + 16))
+echo "FS=$FS_SIZE TOTAL=$TOTAL_SIZE KER_AL=$KER_ALIGNED FS_AL=$FS_ALIGNED"
+
+# QB header BEGIN
+echo -n qbfw > $3
+# Insert total size
+byte_swap $(printf "%08x" $TOTAL_SIZE)
+echo $OUT | xxd -r -p | dd conv=notrunc oflag=append of=$3 >/dev/null 2>&1
+# Pad to 256 bytes
+dd if=/dev/zero of=$3 bs=248 count=1 conv=notrunc oflag=append >/dev/null 2>&1
+# QB header END
+# QB test signature header BEGIN
+echo -n abcd >> $3
+# Insert total size
+byte_swap $(printf "%08x" $TOTAL_SIZE)
+echo $OUT | xxd -r -p | dd conv=notrunc oflag=append of=$3 >/dev/null 2>&1
+# Pad to 16 bytes
+dd if=/dev/zero of=$3 bs=8 count=1 conv=notrunc oflag=append >/dev/null 2>&1
+# QB test signature header END
+# Insert kernel
+dd if=$1 of=$3 conv=notrunc oflag=append
+# Align kernel to 16 byte boundary (padding for rootfs is also here)
+dd if=/dev/zero of=$3 bs=$((KER_ALIGNED - KER_SIZE)) count=1 conv=notrunc oflag=append
+# Insert fs
+dd if=initramfs.cpio.gz of=$3 conv=notrunc oflag=append
+# Insert kernel size
+byte_swap $(printf "%08x" $KER_ALIGNED)
+echo $OUT | xxd -r -p | dd conv=notrunc oflag=append of=$3
+# Insert fs size
+byte_swap $(printf "%08x" $FS_SIZE)
+echo $OUT | xxd -r -p | dd conv=notrunc oflag=append of=$3
+# Pad to 16 bytes
+dd if=/dev/zero of=$3 bs=8 count=1 conv=notrunc oflag=append
+# End of signed data
+
+rm -f initramfs.cpio.gz
+rm -rf initramfs

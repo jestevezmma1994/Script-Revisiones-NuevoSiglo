@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ -z $COMPILER_PATH ]; then
+    echo WARNING: `pwd`: uclibc-ranlib $@ diverted to cross-toolchain >> ${SRM_ROOT}/cross.warnings
+fi
+exec ${SRM_BUILD_DIR}/bin/cross-uclibc-ranlib "$@"

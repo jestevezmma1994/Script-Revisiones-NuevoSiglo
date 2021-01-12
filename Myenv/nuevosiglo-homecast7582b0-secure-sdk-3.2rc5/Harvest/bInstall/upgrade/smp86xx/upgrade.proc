@@ -1,0 +1,166 @@
+#!/bin/sh
+
+. boot_config_tools.sh
+. /etc/strings.txt
+
+#Error codes: 
+# 102 - unable to get slot number
+# 103 - flash partition not found
+# 104 - call organization error (some parameter not passed or something)
+
+#Platform string to identify your file, it should be uniq in each other:
+_UP_PLATFORM_NAME="smp86xx"
+
+#add number of your platform progress steps here (count all step_progress in the file)
+_UP_PLATFORM_STEP_CNT=0
+
+#set expected tar.gz pipe name, the tee will power them with the upgrade package stream.
+_UP_PLATFORM_TAR_PIPES="rootfs kernel"
+
+#set expected file names
+_UP_PLATFORM_TAR_FILES="ROOTFS.sqsh KERNEL.xrpc"
+
+#Mandatory procedures operating on data, you should escape to "exit_upgrade" with error code if something goes criticaly wrong
+_up_get_hash () { #gets hash of current version, used to decide is upgrade is needed
+	get_boot_config u.bootvrsn | sed "s/\"\(.*\)\"/\1/"
+}
+_up_get_status () { #gets current status of upgrade, you should print OK for confirmed firmware, RESTORED for restored firmware, or some other string for other states
+	get_boot_config u.bootstat | sed "s/\"\(.*\)\"/\1/"
+}
+_up_set_status () {
+	set_boot_config u.bootstat "\"$1\""
+}
+
+_up_check_version() { #if any additional version checking needed do it here, got a new version number in parameter
+	res="not needed in unsecure version"
+}
+
+_up_verify_firmware () { #check integrity, signatures, hashes or whatever you need, you got files names in parameter
+	res="not needed in unsecure version"
+}
+
+#the most important function:
+_up_write_firmware () { #write firmware files on board, you got files name in parameter, after that stb should boot new firmware
+	HASH=$1
+	shift
+
+    #get current slot number
+	boot_slot.sh
+	SLOT=$?
+	[ "$SLOT" = "2" ] && exit_upgrade 102
+    #upgrade to inverted slot number (0->1 or 1->0)
+	SLOT=$(( ! $SLOT ))
+	echo "I:0981: selected slot #$SLOT"
+
+    #set partiotion paths
+	if [ "0" = "$SLOT" ]; then
+		KERN_PART_ID=S_INSTALL_UPGRADE_SLOT0_KERN_PART_ID
+		ROOT_PART_ID=S_INSTALL_UPGRADE_SLOT0_ROOT_PART_ID
+	else
+		KERN_PART_ID=S_INSTALL_UPGRADE_SLOT1_KERN_PART_ID
+		ROOT_PART_ID=S_INSTALL_UPGRADE_SLOT1_ROOT_PART_ID
+	fi
+	KPART=`cat /proc/mtd | grep "\b$KERN_PART_ID\b" | cut -d':' -f1`
+	RPART=`cat /proc/mtd | grep "\b$ROOT_PART_ID\b" | cut -d':' -f1`
+	[ -z "$KPART" -o -z "$RPART" ] && exit_upgrade 103 "flash partition not found";
+    echo $KPART > KPART
+    echo $RPART > RPART
+
+    #help function
+    _up_write_and_feedback () {
+        PIPE=$1
+        FILE=$2
+        FLASH=$3
+        mkfifo $FILE.wc.pipe $FILE
+        { head -c `cat $FILE.wc.pipe | wc -c` $FLASH > $FILE;} & #feedback
+        cat $PIPE | tar xO $FILE | tee $FILE.wc.pipe | \
+		    flashcp -v - $FLASH >$PIPE.log 2>&1; \
+		    echo $? > $PIPE.?;
+    }
+
+    #process rootfs in background job, keep background job ID in file back_pids
+    _up_write_and_feedback rootfs ROOTFS.sqsh /dev/$RPART &
+
+    #process kernel in background job, keep background job ID in file back_pids
+    _up_write_and_feedback kernel KERNEL.xrpc /dev/$KPART &
+
+    #keep slot it and HASH for firmware confirmation
+	echo $SLOT > SLOT;
+	echo $HASH > HASH;
+}
+
+_up_verify_firmware () {
+	res="empty" #no additional firmware verification is requared
+}
+
+_up_confirm_firmware () {	
+    SLOT=`cat SLOT`
+    HASH=`cat HASH`
+    [ -z "$SLOT" ] && exit_upgrade 104 "slot number file not found"
+    [ -z "$HASH" ] && exit_upgrade 104 "hash file not found"
+	set_boot_config u.bootslnr $SLOT u.bootstat "\"NEW\"" u.bootvrsn "\"$HASH\""
+}
+
+#Optional variable which you may need in your procedures, will be initialized with initial environment
+#if you need to overwrite some already initialized variables this place is good for that purposes
+#SOME_VARIABLE="SOME VALUE"
+
+#Optional procedures calling before and after each phase of upgrade, shouldn't be implemented, but do not remove them from here
+_up_before_wait_for_network () {
+        res="empty"
+}
+_up_after_wait_for_network () {
+        res="empty"
+}
+
+_up_before_wait_for_upgrade_server () {
+        res="empty"
+}
+_up_after_wait_for_upgrade_server () {
+        res="empty"
+}
+
+_up_before_version_check () {
+	res="empty"
+}
+_up_after_version_check () {
+	res="empty"
+}
+
+_up_before_initiate_upgrade () {
+	res="empty"
+}
+_up_after_initiate_upgrade () {
+	res="empty"
+}
+
+_up_before_getting_firmware () {
+	res="empty"
+}
+_up_after_getting_firmware () {
+	res="empty"
+}
+
+_up_before_firmware_verification () {
+	res="empty"
+}
+_up_after_firmware_verification () {
+	res="empty"
+}
+
+_up_before_writting_firmware () {
+	res="empty"
+}
+_up_after_writting_firmware () {
+	res="empty"
+}
+
+_up_before_complete () {
+	res="empty"
+}
+_up_after_complete () {
+	res="empty"
+}
+_up_before_main_fifo_create() {
+    res="empty"
+}

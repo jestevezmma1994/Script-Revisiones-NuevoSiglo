@@ -1,0 +1,29 @@
+{
+
+"comment": [
+	"Audio Language iso639 specific codes mapping configuration file.",
+
+	"i18n_gettext array contains field names, which values should be translated",
+	"by gettext. There is a script which extracts each value of that field value",
+	"and creates gettext template *.pot. 'i18n_gettext' field is optional",
+
+	"'Mapping' array contains an array of mapping entries. Fields of each",
+	"element are described below:",
+	"[REQUIRED] iso639codes - array of strings - array of iso639 that should be mapped in unusual way",
+	"[REQUIRED] name - string - Language name that should be used for specified codes"
+],
+
+"i18n_gettext" : [ "name" ],
+
+"mapping" : [
+	{
+		"iso639codes": ["org", "mul", "qaa"],
+		"name": "Original"
+	},
+	{
+		"iso639codes": ["aux", "qad"],
+		"name": "Audio description"
+	}
+]
+
+}

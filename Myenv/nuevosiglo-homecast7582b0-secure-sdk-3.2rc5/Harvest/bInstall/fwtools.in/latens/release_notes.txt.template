@@ -1,0 +1,23 @@
+== Application version ==
+
+_APPLICATION_VERSION_
+
+== Images for testing upgrade ==
+
+_APPLICATION_VERSION_CURRENT_
+
+== Used libraries version ==
+LatensVaD version (IP):      _LATENS_VAD_LIB_IP_
+LatensVaD version (DVB):     _LATENS_VAD_LIB_DVB_
+LatensCas version (IP):      _LATENS_CAS_LIB_IP_
+LatensCas version (DVB):     _LATENS_CAS_LIB_DVB_
+
+== Changes/bug fixes since previous version ( TODO - FILL WITH PREVIOUS VERSION) ==
+ * TODO
+
+== Remarks ==
+ * Default PIN: 1234
+ * cleaning CAS store from CAS Engineering menu: 
+   - press keys sequence: "RED 3 6 7 6 2 8" in CAS Engineering menu
+ * hidden Manual channel scanning
+   - go to menu Configuration -> System Information and press keys sequence "6 9 8 0"

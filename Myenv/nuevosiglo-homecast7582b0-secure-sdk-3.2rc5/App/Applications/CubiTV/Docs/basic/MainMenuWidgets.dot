@@ -1,0 +1,30 @@
+digraph MainMenuWidgets {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    MainMenuWidgets [label="Main menu" root=true]
+    QBMenuCaption
+    QBNATStatusIndicator
+    QBXMBItemConstructor
+    QBNetworkStatusIndicator
+    QBTraxisStateIndicator
+    SideMenu
+    QBTitle
+    XMBCarousel
+    customerLogo
+    QBStatusIndicator
+    QBIndicatorsPane
+    QBMenuCaptionGetter
+
+    MainMenuWidgets -> QBMenuCaption
+    MainMenuWidgets -> QBNATStatusIndicator
+    MainMenuWidgets -> QBXMBItemConstructor
+    MainMenuWidgets -> QBNetworkStatusIndicator
+    MainMenuWidgets -> QBTraxisStateIndicator
+    MainMenuWidgets -> SideMenu
+    MainMenuWidgets -> QBTitle
+    MainMenuWidgets -> XMBCarousel
+    MainMenuWidgets -> customerLogo
+    MainMenuWidgets -> QBStatusIndicator
+    MainMenuWidgets -> QBIndicatorsPane
+    MainMenuWidgets -> QBMenuCaptionGetter
+}

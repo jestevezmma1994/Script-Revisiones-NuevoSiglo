@@ -1,0 +1,80 @@
+{
+    "count": "50",
+    "levelOfDetail": "high",
+    "note": [
+      "childMixForMixId",
+      "searchRequestSummaryForSearchRequestId",
+      "collectionForCollectionId"
+    ],
+    "offset": "0",
+    "omitDisabledChildMixes": "false",
+    "orderBy": "displayRank",
+    "imageRuleset": [
+    {
+        "name": "grid",
+        "rule": {
+            "width": "153",
+            "height": "226",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    },
+    {
+        "name": "cover",
+        "rule": {
+            "width": "194",
+            "height": "280",
+            "ruleType": "bestMatchDimension",
+            "type": "imageRule"
+        },
+        "type": "imageRuleset"
+    }
+    ],
+    "responseTemplate": [
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["mixMapping", "isTop", "isBottom"],
+        "type": "responseTemplate",
+        "typeName": "mixMappingList"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["childMix"],
+        "type": "responseTemplate",
+        "typeName": "mixMapping"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["mixId", "title", "leafObjectType", "hasContentLeafChildren", "objectId", "collectionId", "image", "gridItemType", "collectionForCollectionId"],
+        "type": "responseTemplate",
+        "typeName": "mix"
+      },
+      {
+        "includeAllFields": "true",
+        "includeRequiredFields": "true",
+        "fieldName": ["category","description","hdtv","title","tvRating","hasLiveOffers","objectIdAndType","partnerId","partnerCollectionId",
+                      "collectionId","hasThreeDOffers","collectionType","episodic","descriptionLanguage","credit","image", "rating",
+                      "mpaaRating", "starRating", "thumbsRating", "broadbandOfferGroupForCollectionId", "broadcastOfferGroupForCollectionId"],
+        "type": "responseTemplate",
+        "typeName": "collection"
+      },
+      {
+          "includeAllFields": "true",
+          "includeRequiredFields": "true",
+          "fieldName": ["example"],
+          "type": "responseTemplate",
+          "typeName": "offerGroup"
+      },
+      {
+          "includeAllFields": "true",
+          "includeRequiredFields": "true",
+          "fieldName": ["duration", "movieYear"],
+          "type": "responseTemplate",
+          "typeName": "offer"
+      }
+    ]
+}

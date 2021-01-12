@@ -1,0 +1,13 @@
+digraph CASMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    CASMenus [label="CAS Menus" root=true]
+    QBConaxMenuHandler
+    QBConaxMenuItemController
+    QBViewRightMenu
+
+    CASMenus -> QBConaxMenuHandler
+    CASMenus -> QBConaxMenuItemController
+    CASMenus -> QBViewRightMenu
+
+}

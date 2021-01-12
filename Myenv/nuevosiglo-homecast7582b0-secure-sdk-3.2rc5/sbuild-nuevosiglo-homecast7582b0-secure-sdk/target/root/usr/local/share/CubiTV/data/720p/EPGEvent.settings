@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <widget name="EPGWidget">
+        <param tag="height"><int>62</int></param> 
+        <param tag="textColor"><color>efefefef</color></param>
+
+        <param tag="focusBg">
+                <bitmap><path>frame_epg_focus.png</path></bitmap>
+        </param>
+        <param tag="nonFocusBg">
+                <bitmap><path>frame_epg_nonfocus.png</path></bitmap>
+        </param>
+        <!-- AMERELES EPG: CatchUp con barra diferencial -->
+        <param tag="cutvNonFocusBg">
+                <bitmap><path>frame_epg_cutv_nonfocus.png</path></bitmap>
+        </param>
+        <param tag="scheduleBg">
+                <bitmap><path>frame_epg_nonfocus.png</path></bitmap>
+        </param>
+        <param tag="recordingBg">
+                <bitmap><path>frame_epg_nonfocus.png</path></bitmap>
+        </param>
+        <param tag="completeBg">
+                <bitmap><path>frame_epg_nonfocus.png</path></bitmap>
+        </param>
+        <param tag="recordableBg">
+                <bitmap><path>frame_epg_npvr.png</path></bitmap>
+        </param>
+    </widget>
+
+</settings>

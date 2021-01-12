@@ -1,0 +1,33 @@
+[
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption" ],
+        "id": "lang",
+        "screenNumber": 0,
+        "caption": "Language",
+        "default_comment": "//RAL: Spanish as default language.",
+        "default": "es_MX.UTF-8",
+        "ids": {
+            "es_MX.UTF-8": "Spanish",
+            "en_US.UTF-8": "English"
+        }
+    },
+    {
+        "__jsonclass__": [
+            "QBWizardOption",
+            []
+        ],
+        "i18n_gettext": [ "caption", "automatic", "manual" ],
+        "id": "scan",
+        "screenNumber": 0,
+        "caption": "Scan Type",
+        "default": "automatic",
+        "ids": {
+            "automatic": "Automatic",
+            "manual": "Manual"
+        }
+    }
+]

@@ -1,0 +1,6 @@
+Name: QBDRMManager
+Version: 1.0.0
+Requires: QBAppKit SvCore SvFoundation dataformat 
+Description: Cubiware generic DRM Manager
+Libs: -lQBDRMManager 
+CFlags: 

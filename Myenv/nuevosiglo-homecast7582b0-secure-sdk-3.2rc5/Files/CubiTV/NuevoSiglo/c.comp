@@ -1,0 +1,7 @@
+component CubiTV-NuevoSiglo-files
+makefile=Makefile.files
+depends=TranslationMerger SvSettingsManager
+provides=CubiTV-NuevoSiglo-files
+translate=yes
+
+#X-domains = files

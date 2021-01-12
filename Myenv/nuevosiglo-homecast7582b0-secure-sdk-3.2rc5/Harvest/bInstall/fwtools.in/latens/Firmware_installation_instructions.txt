@@ -1,0 +1,145 @@
+== Firmware installation instruction ==
+
+=== I. Software Release package content ===
+There are separate packages for FieldDebug and Production images. They both contain similar files with the difference that 
+first contains FieldDebug (fd) image with all needed stuff and scripts and second contains Production (pd) image with all needed stuff and scripts.
+Below file list is for FieldDebug version. List for Production version is the same with only changed images names where needed.
+
+ * scripts/ - folder containing helper scripts for signing and generating install SW packages
+   * qbheader.sh - helper script, which adds QB header to image (it is already called by qbnfsrootgen.sh and qbupgradegen.sh scripts) 
+   * qbsignature.sh - creates QB fake signature for unsigned application image
+   * qbnfsrootgen.sh - replaces application image in nfsroot package
+   * qbupgradegen.sh - generates upgrade package using nfsroot package and signed application image
+   * mkupgrade.sh - helper script for creating upgade (NOT to use directly!)
+   * packagegen_util.sh - helper functions
+   * ota/ - folder containing scripts for generating OTA streams
+ * tools/ - folder containinig base packages used to generate upgrade and nfsroot packages:
+   * mmp-cp7584a1-pd-secure-cubitv-nfsroot-[VERSION].tgz - base nfsroot package used for generating upgrade and nfsroot packages with signed image
+   * mmp-cp7584a1-pd-cubitv-nfsroot-[VERSION].tgz - base debug nfsroot package used as installer for secure nfsroot packages
+   * LOGO.bin - splash image
+   * cp7584a1-img-smp.sig - file containing signature of LOGO.bin
+   * Firmware_installation_instructions.txt - this instruction
+ * images/ - application images:
+   * Polsat_IPS3000MMP_Application_FieldDebug_[VERSION].unsigned - unsigned application image
+   * Polsat_IPS3000MMP_Application_FieldDebug_CURRENT.unsigned - unsigned application image (the same application as above but with different version - use for testing upgrade functionality only)
+   * release_notes.txt
+ * ses/ - containing archive with all security files
+   * config - most important config files extracted from kernel and rootfs, like: busybox, network, kernle config, all files listing, etc.
+   * fwfiles/clear
+     * ROOTFS.dec.kernel - unencrypted gzipped kernel
+     * ROOTFS.dec.rootfs - unencrypted gzipped root filesystem
+   * fwfiles/rsa-public
+     * boot.pub - public key for verifying splash signature
+     * certs.pub - public key for Middleware
+     * upgrade.pub - public key for verifying upgrade package
+
+
+
+=== II. Application Image Signing and upgrade instruction ===
+1. Remarks:
+  * Signing procedure for all images is the same, in this instruction we use image:
+Polsat_IPS3000MMP_Application_FieldDebug_2.0rc8.unsigned
+ 
+2. Signing application image:
+  assume the output signed file is: Polsat_IPS3000MMP_Application_FieldDebug_2.0rc8.signed
+  *) Perform Latens sign procedure, or
+  *) For debug/test purposes (to run it on Development Bootloader), use qbsignature.sh script (Remark: such image will not be able to upgrade via HTTP/OTA!):
+
+scripts/qbsignature.sh images/Polsat_IPS3000MMP_Application_FieldDebug_2.0rc8.unsigned signed/Polsat_IPS3000MMP_Application_FieldDebug_2.0rc8.signed
+
+3. Preparing nfsroot install package 
+  a) Execute command:
+scripts/qbnfsrootgen.sh signed/Polsat_IPS3000MMP_Application_FieldDebug_2.0rc8.signed tools/mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8.tgz out
+  b) Generated upgrade .tgz archive will be written to given output directory. For given example it is: out/mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8_signed.tgz
+
+4. Preparing HTTP upgrade package
+  a) Execute command:
+scripts/qbupgradegen.sh <path-to-signed-image> <path-to-nfsrooth-file> <output-dir> <path-to-private-upgrade-key>
+     Example:
+scripts/qbupgradegen.sh signed/Polsat_IPS3000MMP_Application_FieldDebug_2.0rc8.signed tools/mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8.tgz out private_upgrade_key_file
+  b) Generated upgrade .tgz archive will be written to given output directory. For given example it is: out/mmp-cp7584a1-fd-secure-cubitv-upgrade-2.0rc8_signed.tgz
+
+5. Generating OTA upgrade stream with all needed tables (PMT, PAT, NIT)
+  a) Run below command passing HTTP upgrade package as -u parameter (generated in above step) and path to folder where "target" directory is located (in our case it is scripts/ota/ ). Scanning parameters like: frequency, modulation (e.g. QAM16, QAM32, QAM64, QAM128, QAM256), symbol rate can be specified in target/bSpec/OTA.json file.
+scripts/ota/create_upgrade_streams.py -u out/mmp-cp7584a1-fd-secure-cubitv-upgrade-2.0rc8_signed.tgz scripts/ota/
+
+  b) Generated stream will be written to the same directory where HTTP upgrade package is located. Its name will be the same but suffix 
+     is changed from ".tgz" to "_cab.ts". For above example it is:
+     mmp-cp7584a1-fd-secure-cubitv-upgrade-2.0rc8_signed_cab.ts
+
+6. Performing OTA upgrade
+  a) Generate OTA package for chosen scanning parameters (frequency, modulation, symbolrate) using above procedure
+  b) Scan STB to given parameters (recommended to use any stream playing video)
+  c) Change stream to OTA, and play it on the same scanning parameters
+  d) Application should automatically notice the upgrade package. If new application version is higher than version on box 
+     (the important is main version e.g. 1.2, number of RC is not checked) or new application has version CURRENT, 
+     than upgrade will be performed
+  e) Upgrade will be started automatically in 1-15 minutes. But it also can be run immediately by going to menu in GUI: 
+     System Information -> Software -> Software update. If new upgrade package was found and was accepted 
+     then you can see number of version to be installed in field "Status". Clicking that option will trigger the update immediately
+
+
+
+=== Firmware installation instructions ===
+1.  Prerequisites
+ * tftp server (assumed to be 192.168.0.1)
+ * nfs server (assumed to be 192.168.0.1)
+ * http server (assumed to be 192.168.0.1)
+ * files delivered separately:
+   * Bootloader (if not yet installed)
+   * Zeus3 BFW package (if not yet installed)
+   * HDCP key (if not yet installed))
+   * vmlinuz-install 
+
+2. Debug Bootloader Installation - it can be done via BBS or using below instruction:
+  a) Place on tftp server, signed debug version of CFE e.g. Polsat_IPS3000MMP_Bootloader_FieldDebug_2_debug.signed
+  b) Install Bootloader from CFE prompt:
+ifconfig -auto eth0; flash -noheader
+192.168.0.1:Polsat_IPS3000MMP_Bootloader_FieldDebug_2_debug.signed
+flash0.cfe; reboot
+  c) Install Zeus3 BFW package at offset 0x00760000 on SPI (partition “bseck”), e.g. using BBS
+  d) Install HDCP key at offset 0x00090000 on SPI (partition “hdcp”), e.g. using BBS
+
+3. Installation of NON-secure Software (with log, network, serial, etc. enabled)
+  a) Place vmlinuz-install file on your tftp
+  b) Unpack nfsroot package to exported nfs directory (assumed to be /home/nfsboot) using one from two below methods:
+     *) Using script nfsroot_install.sh (script uses sudo!) by passing nfsroot package containing application image to install, example:
+scripts/nfsroot_install.sh /home/nfsboot out/mmp-cp7584a1-fd-cubitv-nfsroot-2.0rc8_signed.tgz
+     *) Unpacking package manually (using sudo or as root user)
+  c) Connect to the box using serial console and stop CFE booting process
+  d) Using serial console boot Cubiware FW:
+ifconfig eth0 -auto; boot -z -elf -tftp 192.168.0.1:vmlinuz-install 'root=/dev/nfs nfsroot=192.168.0.1:/home/nfsboot,tcp ip=dhcp console=ttyS1,115200n8 highmem=1'
+  e) Install FW (after # prompt appears, if not try to press Enter few times):
+. /etc/profile
+cd /firmware
+./install.sh
+
+4. Installation of secure Software (with log, network, etc. disabled, limited serial support)
+  a) Place vmlinuz-install file on your tftp
+  b) Unpack nfsroot package to exported nfs directory (assumed to be /home/nfsboot) using one from two below methods:
+     *) Using script nfsroot_install.sh (script uses sudo!) by passing two nfsroot packages: first nfsroot is package containing 
+        signed application image to install, and second nfsroot package is non-secure package (attached to release package in tools directory)
+        which is used as installer (as installer cannot be from secure version), example:
+scripts/nfsroot_install.sh /home/nfsboot out/mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8_signed.tgz tools/mmp-cp7584a1-fd-cubitv-nfsroot-2.0rc8.tgz
+     *) Unpacking packages manually (using sudo or as root user):
+        #) Unpacking non-secure package (e.g. tools/mmp-cp7584a1-fd-cubitv-nfsroot-2.0rc8.tgz)
+        #) Delete /firmware directory inside unpacked nfsroot
+        #) Unpack /firmware directory from secure package (e.g. out/mmp-cp7584a1-fd-secure-cubitv-nfsroot-2.0rc8_signed.tgz) to unpacked nfsroot - 
+           instead of previously deleted directory
+  c) Connect to the box using serial console and stop CFE booting process
+  d) Using serial console boot Cubiware FW:
+ifconfig eth0 -auto; boot -z -elf -tftp 192.168.0.1:vmlinuz-install 'root=/dev/nfs nfsroot=192.168.0.1:/home/nfsboot,tcp ip=dhcp console=ttyS1,115200n8 highmem=1'
+  e) Install FW (after # prompt appears, if not try to press Enter few times):
+. /etc/profile
+cd /firmware
+./install.sh
+
+5. Installation of Secure Bootloader (if required):
+  a) Place on tftp server, signed secure version of CFE e.g. Polsat_IPS3000MMP_Bootloader_FieldDebug_2.signed
+  b) Install Bootloader from CFE prompt:
+ifconfig -auto eth0; flash -noheader
+192.168.0.1:Polsat_IPS3000MMP_Bootloader_FieldDebug_2.signed flash0.cfe;
+reboot
+  c) Perform lockdown
+
+

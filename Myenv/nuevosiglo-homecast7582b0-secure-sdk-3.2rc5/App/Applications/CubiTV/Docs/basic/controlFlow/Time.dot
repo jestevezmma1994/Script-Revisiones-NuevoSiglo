@@ -1,0 +1,23 @@
+digraph Time {
+    node [URL="../\N.html" shape=box]
+    graph [layout=dot ranksep=1]
+
+    DateTimeLogic
+    dvbTimeDate [label=<dvbTimeDate<br/>Selects a tuner and gathers TOT and TDT>]
+    QBTimeDateMonitor [label=<QBTimeDateMonitor<br/>Notifies all listeners about set time via<br/>dvbTimeDate and ntp>]
+    sync_timed
+    fingerprint [label=<QBFingerprint<br/>starts working after time has been set>]
+    pvrAgent [label=<QBPVRAgent>]
+    QBSchedManager [label=<QBSchedManager<br/>Recalculates all scheduled recordings>]
+
+    sync_timed -> sync_timed [label=<NTP daemon<br/>- periodically runs ntp<br/>- upon first successful synchronization creates<br/>  /var/run/ntpsync>]
+    QBTimeDateMonitor -> sync_timed [label=<Waits for sync file>]
+    dvbTimeDate -> DateTimeLogic [label=<- Calls DateTimeLogicTDTReceived<br/>- Calls DateTimeLogicTOTReceived>]
+    DateTimeLogic -> dvbTimeDate [label=<If TDT is accepted lstvDVBTimeDateUpdateTime is called>]
+    DateTimeLogic -> DateTimeLogic [label=<Analyzes TOT and sets timezone offset>]
+    dvbTimeDate -> QBTimeDateMonitor [label=<Notifies that time has been set>]
+    QBTimeDateMonitor -> fingerprint [label=<timeSet notification>]
+    QBTimeDateMonitor -> pvrAgent [label=<timeSet notification>]
+    pvrAgent -> QBSchedManager
+    
+}

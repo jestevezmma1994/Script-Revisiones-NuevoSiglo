@@ -1,0 +1,6 @@
+Name: QBDecoder
+Version: 1.0.0
+Requires: QBDecoder-common QBDemuxHAL-nexus QBPlatformHAL QBViewport SvPlayerKit dataformat error_log nexus 
+Description: Decoder implementation based on Nexus API
+Libs: -lQBDecoder 
+CFlags: 

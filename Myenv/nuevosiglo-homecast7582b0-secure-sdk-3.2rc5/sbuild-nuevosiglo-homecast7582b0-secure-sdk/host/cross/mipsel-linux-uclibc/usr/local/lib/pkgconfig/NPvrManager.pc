@@ -1,0 +1,6 @@
+Name: NPvrManager
+Version: 1.0.0
+Requires: SvCore SvEPGDataLayer SvFoundation SvPlayerKit TranslationMergerHeaders 
+Description: Cubiware Network-Based Personal Video Recording library
+Libs: -lNPvrManager 
+CFlags: 

@@ -1,0 +1,44 @@
+{
+    "tivo:pt.2990" : {
+        "name" : "Amazon Instant Video",
+        "image" : "iconAmazon"
+    },
+    "tivo:pt.4547" : {
+        "name" : "Amazon AWS",
+        "image" : "iconAmazon"
+    },
+    "tivo:pt.3095" : {
+        "name" : "TiVo"
+    },
+    "tivo:pt.3455" : {
+        "name" : "Netflix",
+        "image" : "iconNetflix"
+    },
+    "tivo:pt.3765" : {
+        "name" : "Web Video Hotlist",
+        "image" : "iconHotlist"
+    },
+    "tivo:pt.3820" : {
+        "name" : "Hulu Plus",
+        "image" : "iconHuluPlus"
+    },
+    "tivo:pt.3862" : {
+        "name" : "YouTube",
+        "image" : "iconYouTube"
+    },
+    "tivo:pt.3929" : {
+        "name" : "TiVoCast Web Video"
+    },
+    "tivo:pt.4345" : {
+        "name" : "MLB.TV",
+        "image" : "iconMlbtv"
+    },
+    "tivo:pt.4498" : {
+        "name" : "AOL On",
+        "image" : "iconAolOn"
+    },
+    "tivo:pt.4576" : {
+        "name" : "Vudu",
+        "image" : "iconVudu"
+    }
+}

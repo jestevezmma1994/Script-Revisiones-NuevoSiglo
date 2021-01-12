@@ -1,0 +1,49 @@
+digraph ContextMenus {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    ContextMenus [label="Context Menus (Side menus)" root=true]
+    Utility [label="Utility/Reusable"]
+    QBAutoMenu
+    QBBasicPane
+    QBContainerPane
+    QBContentSideMenu
+    QBContextMenu
+    QBExtendedInfoPane
+    QBFavoritesEditorPane
+    QBInnov8onExtendedInfoPane
+    QBInnov8onLoadablePane
+    QBListPane
+    QBOSKPane
+    QBParentalControlLockedTimeEditPane
+    QBRecordingEditPane
+    QBReminderEditorPane
+    QBSatelliteEditPane
+    QBSatelliteSetupEditorPane
+    QBSearchByCategoryPane
+    QBTimeEditPane
+    QBTransponderEditPane
+    QBVoDMenu
+
+    ContextMenus -> QBContextMenu
+    Utility -> QBAutoMenu
+    Utility -> QBBasicPane
+    Utility -> QBContainerPane
+    Utility -> QBListPane
+    Utility -> QBOSKPane
+    ContextMenus -> Utility
+
+    ContextMenus -> QBContentSideMenu
+    ContextMenus -> QBExtendedInfoPane
+    ContextMenus -> QBFavoritesEditorPane
+    ContextMenus -> QBInnov8onExtendedInfoPane
+    ContextMenus -> QBInnov8onLoadablePane
+    ContextMenus -> QBParentalControlLockedTimeEditPane
+    ContextMenus -> QBRecordingEditPane
+    ContextMenus -> QBReminderEditorPane
+    ContextMenus -> QBSatelliteEditPane
+    ContextMenus -> QBSatelliteSetupEditorPane
+    ContextMenus -> QBSearchByCategoryPane
+    ContextMenus -> QBTimeEditPane
+    ContextMenus -> QBTransponderEditPane
+    ContextMenus -> QBVoDMenu
+}

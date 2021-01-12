@@ -1,0 +1,6 @@
+Name: QBDVBScanner
+Version: 1.0.0
+Requires: QBPlatformHAL-common QBTuner QBTunerFilter QBTunerReserver SvCore SvFoundation SvJSON fibers 
+Description: Scanner of channels on DVB network
+Libs: -lQBDVBScanner 
+CFlags: 

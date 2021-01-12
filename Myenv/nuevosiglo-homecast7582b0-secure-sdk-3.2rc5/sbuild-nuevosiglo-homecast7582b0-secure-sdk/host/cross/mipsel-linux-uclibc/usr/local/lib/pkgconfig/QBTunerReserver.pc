@@ -1,0 +1,6 @@
+Name: QBTunerReserver
+Version: 1.0.0
+Requires: QBTuner SvCore SvFoundation 
+Description: Manages access to tuners in a multi user environment
+Libs: -lQBTunerReserver 
+CFlags: 

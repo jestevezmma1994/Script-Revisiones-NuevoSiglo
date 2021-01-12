@@ -1,0 +1,34 @@
+_TOOL_NAME_
+------------
+
+This utility creates an archive with a firmware for the STB software upgrade
+over a network.
+
+Invocation:
+
+  _TOOL_NAME_ <src_dir> <firmware_update.tgz>
+  
+where:
+    <src_dir> directory containing files needed by the image (see below)
+    <firmware_update.tgz> - filename of the firmware archive
+ 
+Firmware image source directory must contain following files:
+    
+_SRC_FILE_LIST_
+
+All the above files are provided in the fwsrc/ subdirectory.
+The the secure version of tool uses also a 'sign' utility and 
+a 'supplier.{cert,key}.der' certificate pair provided in the same directory.
+
+Created .tar.gz archive contains all the files required by the STB to perform
+a software upgrade from an http server:
+
+    version - firmware version
+    ls500ip-img-smp.tgz - firmware itself
+    ls500ip-img-smp.tgz.md5  - firmware checksum
+    ls500ip-img-smp.cert.der - provider certificates (only secure uprgade)
+    ls500ip-img-smp.tgz.sig  - firmware signature (only secure upgrade)
+
+  Example:
+  
+    # ./_TOOL_NAME_ fwsrc/ upgrade.tgz

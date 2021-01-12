@@ -1,0 +1,6 @@
+Name: SvCore
+Version: 1.0.0
+Requires: 
+Description: Sentivision Core Elements Framework
+Libs: -lSvCore -lrt -lpthread -lm -lpthread -lm -ldl 
+CFlags: 

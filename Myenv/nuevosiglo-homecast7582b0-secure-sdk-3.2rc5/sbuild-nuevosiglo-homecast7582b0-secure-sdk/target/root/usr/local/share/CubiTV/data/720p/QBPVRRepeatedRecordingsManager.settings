@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <widget name="QBPVRRepeatedRecordingsManager">
+	<param tag="keywordIconPath"><string>white/iconw_key.png</string></param>
+	<param tag="repeatIconPath"><string>white/iconw_dir_repeated.png</string></param>
+	<param tag="folderIconPath"><string>white/iconw_folder.png</string></param>
+    </widget>
+    
+</settings>

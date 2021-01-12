@@ -1,0 +1,146 @@
+<perldata>
+ <hashref memory_address="0x2b6d280">
+  <item key="deps">
+   <hashref memory_address="0x16abe48">
+    <item key="Files/Resources/CubiTV/c.comp">15</item>
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x215cdb0">
+    <item key="BUILD_ROOT">${SRM_ROOT}/host/local</item>
+    <item key="CROSS_ROOT">${SRM_ROOT}/host/cross/mipsel-linux</item>
+    <item key="GENERIC_STARTER_SCRIPT">scripts/starter-secure</item>
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x22dd2d8">
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/channelScanning-cab">c381661d73db6cb43f66e479fdbcf16b</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/diagnostics">456de8698414e17264dbfc0318bc5d5d</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/favoritesMenu">ceff66c2cff71d1c5964bfbcf78e8cce</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/langMap">8864cc0ae79edec33e4f1396b7b11df0</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/ota-uri-default">9168a34903e3e0377d3fb959140f7fcd</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/playerConf">7bf68cd28cfc09bd34148c0399d1b1a2</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/scanDefaultParams">d50e6eaa9277ca1045c5cc82c18cfd21</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/services-hybrid">b1ba1c590bf6e7b7b7d32d28d0dff5e6</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/wizard-hybrid">5381528481fb99904ec7143cf620ca3d</item>
+    <item key="Files/CubiTV/NuevoSiglo/Makefile.files">3011993d6dfce54b848234cc00b225dd</item>
+    <item key="Files/CubiTV/NuevoSiglo/scripts/starter-coredump">b0c20b8aec736506742d5b5fb20d2ca5</item>
+    <item key="Files/CubiTV/NuevoSiglo/scripts/starter-secure">b49a94e7d2d42ca565a4dda285ce2d77</item>
+    <item key="Files/CubiTV/NuevoSiglo/scripts/update_channel_logos">b7d5164bb48daf1df8da9181619c4269</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/ChannelScanningManual.settings">eaea82ffde354513d5de4faa633d0d46</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/Diagnostics.settings">7a580b3f171b5690d9237ad0c504b09d</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/EPGEvent.settings">8a557e16edb6ec6304f0bd050dce9e02</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/IPTVInactivityDialog.settings">9003bba7129b4a65250508622e6a4b20</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/QBVoDMovieDetails.settings">b551b4afd96850d97f0444b68b141a88</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVContextMenu.settings">89a9f09dd0093f3aa5e70429de37dd76</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVExtendedInfo.settings">c8e98a1a0641ac6f83609be502c9bf0b</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVTopOSD.settings">b5d57982e42cd24885102eadcb18e195</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVguide-template.settings">58583d7ed18340a9cd89b525ed67c143</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVguide.settings">42acd25ae1eb7deb807508a843a2a799</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/VoDGrid.settings">d8de850bef22d564e8b4392e61e6d262</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/WiFiNetworkChoiceMenu.settings">d67685462f255fa24bda4cac7e067960</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/pvrPlayer.settings">5bc790bb6e4f3774a5701b9ed8e442f2</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/pvrPlayer_loading.settings">fc36d620f5cb9e273497605055d68f4e</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/tvMiniGuide.settings">93de0255a0d31a4093b0d70cc06deb05</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/verticalEPG-template.settings">df10b620fe820144197bfa58c85fdc3d</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/verticalEPG.settings">9c69b0b34dc930e30fd56cc74ecf6a7b</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/CubiTV.appmenu">bbd0fcd63988d9dffce5e3d1fd772531</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/EPGReminderEditorPane.json">1b928e6d9a821525eda2053b219de523</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/OSKPane.oskmap">3bb054fbf308377255f54faae808aec8</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/QBVoDMovieMenu.json">3a72c4e7033ba6fa7a0e5ceac821472e</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/WIFIOSKPane.oskmap">2d46c9ce8931757d79e5c833b16f8313</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/newtvguideEPGReminderEditorPane.json">4492ec64077f2fcde010ce73fa08bf70</item>
+    <item key="Files/CubiTV/NuevoSiglo/translations/CubiTV/es_MX.po">d1ee152f1ced96c1b3a4ba9042367626</item>
+   </hashref>
+  </item>
+  <item key="string">Files/CubiTV/NuevoSiglo/c.comp</item>
+  <item key="time">1605103321</item>
+  <item key="units">
+   <hashref memory_address="0x2471098">
+    <item key="BUILD_ROOT">a</item>
+    <item key="CROSS_ROOT">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/channelScanning-cab">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/diagnostics">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/favoritesMenu">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/langMap">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/ota-uri-default">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/playerConf">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/scanDefaultParams">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/services-hybrid">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Configurations/wizard-hybrid">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/Makefile.files">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/scripts/starter-coredump">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/scripts/starter-secure">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/scripts/update_channel_logos">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/ChannelScanningManual.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/Diagnostics.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/EPGEvent.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/IPTVInactivityDialog.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/QBVoDMovieDetails.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVContextMenu.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVExtendedInfo.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVTopOSD.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVguide-template.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/TVguide.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/VoDGrid.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/WiFiNetworkChoiceMenu.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/pvrPlayer.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/pvrPlayer_loading.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/tvMiniGuide.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/verticalEPG-template.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/720p/verticalEPG.settings">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/CubiTV.appmenu">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/EPGReminderEditorPane.json">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/OSKPane.oskmap">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/QBVoDMovieMenu.json">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/WIFIOSKPane.oskmap">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/settings/newtvguideEPGReminderEditorPane.json">a</item>
+    <item key="Files/CubiTV/NuevoSiglo/translations/CubiTV/es_MX.po">a</item>
+    <item key="GENERIC_STARTER_SCRIPT">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/orig/CubiTV/es_MX.po">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/templates/CubiTV-NuevoSiglo_json.pot">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/cross/mipsel-linux-uclibc/usr/local/share/translations/templates/CubiTV-NuevoSiglo_settings.pot">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/host/local/bin/install-settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/gui.d/cubitv">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/gui.d/default">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/ota-uri-default">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/bin/update_channel_logos">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/channelScanning-cab">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/favoritesMenu">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/langMap">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/playerConf">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/scanDefaultParams">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/services-hybrid">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/Configurations/wizard-hybrid">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/CubiTV.appmenu">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/EPGReminderEditorPane.json">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/OSKPane.oskmap">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/QBVoDMovieMenu.json">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/WIFIOSKPane.oskmap">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/ChannelScanningManual.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/Diagnostics.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/EPGEvent.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/IPTVInactivityDialog.settings">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/QBVoDMovieDetails.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/TVContextMenu.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/TVExtendedInfo.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/TVTopOSD.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/TVguide-template.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/TVguide.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/VoDGrid.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/WiFiNetworkChoiceMenu.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/pvrPlayer.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/pvrPlayer_loading.settings">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/tvMiniGuide.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/verticalEPG-template.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/data/720p/verticalEPG.settings">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/usr/local/share/CubiTV/newtvguideEPGReminderEditorPane.json">a</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x24a72d0">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

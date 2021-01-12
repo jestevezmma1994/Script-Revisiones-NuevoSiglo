@@ -1,0 +1,11 @@
+prefix=$${CROSS_ROOT}/usr
+exec_prefix=${prefix}
+libdir=$${CROSS_ROOT}/usr//lib
+toolexeclibdir=$(libdir)
+includedir=${libdir}/libffi-3.1/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.1
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

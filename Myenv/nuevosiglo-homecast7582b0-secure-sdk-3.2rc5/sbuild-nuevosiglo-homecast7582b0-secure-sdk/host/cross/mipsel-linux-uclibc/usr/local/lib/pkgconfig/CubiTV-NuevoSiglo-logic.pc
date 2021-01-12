@@ -1,0 +1,6 @@
+Name: CubiTV-NuevoSiglo-logic
+Version: 1.0.0
+Requires: CubiTV 
+Description: CubiTV NuevoSiglo logics core
+Libs: -lCubiTV-NuevoSiglo-logic 
+CFlags: 

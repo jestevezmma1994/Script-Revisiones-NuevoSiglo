@@ -1,0 +1,88 @@
+#!/bin/sh
+
+CPART=S_INSTALL_CONFIG_PARTITION
+if [ "$CPART" = "dynamic" ]; then
+	CPART="/dev/mtdblock"`grep "\<config\>" /proc/mtd | sed "s/mtd\([[:digit:]]*\): .*/\1/"`
+	[ ! -e "$CPART" ] && echo "!!! could not find configuration partition" >&2 && exit 1
+fi
+
+j_reconfig () {
+	#make back-up
+	rm -rf /tmp/old-config
+	mkdir -p /tmp/old-config/vod
+	cp -a /etc/vod/* /tmp/old-config/vod/
+	#reset partition
+	umount $CPART
+	flash_eraseall -j `echo $CPART | sed "s/block//"`
+	mount -t jffs2 -o noexec $CPART /etc/vod/
+	#restore back-up
+	cp -a /tmp/old-config/vod/* /etc/vod/
+}
+
+restore_defaults () {
+	umount $CPART
+	flash_eraseall -j `echo $CPART | sed "s/block//"`
+	mount -t jffs2 -o noexec $CPART /etc/vod/
+	echo config partition damged, loading DEFAULT configuration
+	cp /etc/default-conf/* /etc/vod/
+	rm -f /etc/vod/LASTVERSION
+}
+
+verify_integrity () {
+	rm -f /etc/vod/integrity-test
+	cp /etc/default-conf/conf.xml /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	cmp /etc/default-conf/conf.xml /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+	rm -f /etc/vod/integrity-test >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		restore_defaults
+		return
+	fi
+}
+
+if [ "$1" = "save" ]; then 
+  echo -n "storing configuration"
+  #check partition mount
+  mount | grep -q "$CPART\b" || { #if not found in mount recongure it
+		j_reconfig
+  }
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+  echo " OK"
+else 
+  if [ "$1" = "start" ]; then 
+	#mount it as jffs2
+    mount | grep -q "$CPART\b" || mount -t jffs2 -o noexec $CPART /etc/vod/ || {
+		echo "!!! unable to mount config partition, trying to restore tar-config"
+		mkdir -p /tmp/old-conf
+		for i in `seq 1 32`; do #try to find previous tar-based config
+			{ dd if=$CPART bs=$(( 0x10000 )) skip=$i | tar zxv -C /tmp/old-conf;} >/dev/null 2>&1 && echo "old config restored" && break
+        done
+		[ ! -e /etc/vod/conf.xml ] && cp -a /tmp/old-conf/vod/* /etc/vod/
+		[ ! -e /etc/vod/conf.xml ] && { #if still no conf.xml erase partition
+			j_reconfig
+		}
+	}
+	verify_integrity
+	#restore default settings
+    [ ! -e /etc/vod/conf.xml ] && {
+      echo config was not restored, loading DEFAULT configuration
+      cp /etc/default-conf/* /etc/vod/
+      rm -f /etc/vod/LASTVERSION		# force on-upgrade cfg check
+    }
+  fi
+
+    for i in $(seq 1 5); do                    
+        /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+        [ $? -eq "0" ] && break
+        [ ! $? -eq "0" ]  && {
+            cp /etc/default-conf/* /etc/vod/      
+        }                            
+    done                
+fi

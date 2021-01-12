@@ -1,0 +1,15 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+IPCPATH="/var/run/networking/QBNetworkManager_api"
+
+case "$PLUTO_VERB:$1" in
+up-client:)
+    iptables -t nat -A POSTROUTING -o $PLUTO_INTERFACE ! -p esp -j SNAT --to-source $PLUTO_MY_SOURCEIP
+    QBIPCSend $IPCPATH "#ipSecVPNStatusChanged#connected#$PLUTO_ME#$PLUTO_MY_PORT#$PLUTO_PEER#$PLUTO_PEER_PORT#$PLUTO_MY_SOURCEIP#255.255.255.255#$PLUTO_DNS4_1#0#"
+    ;;
+down-client:)
+    iptables -t nat -D POSTROUTING -o $PLUTO_INTERFACE ! -p esp -j SNAT --to-source $PLUTO_MY_SOURCEIP
+    QBIPCSend $IPCPATH "#ipSecVPNStatusChanged#disconnected#$PLUTO_ME#$PLUTO_MY_PORT#$PLUTO_PEER#$PLUTO_PEER_PORT#$PLUTO_MY_SOURCEIP#255.255.255.255#$PLUTO_DNS4_1#0#"
+    ;;
+esac

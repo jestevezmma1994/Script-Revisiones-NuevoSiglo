@@ -1,0 +1,6 @@
+Name: QBOSK
+Version: 1.0.0
+Requires: CAGE CUIT QBAppKit QBStringUtils SvCore SvFoundation SvSettingsManager fibers swl 
+Description: Cubiware On Screen Keyboard
+Libs: -lQBOSK -lintl 
+CFlags: 

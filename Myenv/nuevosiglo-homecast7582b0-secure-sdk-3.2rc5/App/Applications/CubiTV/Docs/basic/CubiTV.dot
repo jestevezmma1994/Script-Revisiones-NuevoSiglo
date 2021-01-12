@@ -1,0 +1,21 @@
+digraph CubiTV {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    CubiTV [label="CubiTV" root=true]
+    Services
+    Logic
+    Windows
+    Menus
+    ContextMenus [label="Context Menus"]
+    Datamodels [label="Data Models"]
+    Controllers [label="Playback Controllers"]
+    Widgets
+    CubiTV -> Services
+    CubiTV -> Logic
+    CubiTV -> Windows
+    CubiTV -> Menus
+    CubiTV -> ContextMenus
+    CubiTV -> Datamodels
+    CubiTV -> Controllers
+    CubiTV -> Widgets
+}

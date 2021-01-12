@@ -1,0 +1,24 @@
+#default rules file
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [0:0]
+:STATECHECKOUTBOUND - [0:0]
+-A INPUT -i lo -j ACCEPT
+-A INPUT -m addrtype --src-type UNSPEC,BLACKHOLE,PROHIBIT -j DROP
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A OUTPUT -j STATECHECKOUTBOUND
+-A STATECHECKOUTBOUND -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
+-A STATECHECKOUTBOUND -j DROP
+# Optional rules
+# Comment to disable ping
+-A INPUT -p icmp -j ACCEPT
+# Comment to disable SSH or add similar to enable other ports
+-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 9876 -j ACCEPT
+-A INPUT -p udp -m udp --dport dlna1 -j ACCEPT
+-A INPUT -p udp -m udp --dport dlna2 -j ACCEPT
+-A INPUT -p tcp --dport 10380 -j ACCEPT #//branch 26, ImagesServerPort
+-A INPUT -m pkttype --pkt-type multicast -j ACCEPT
+
+COMMIT

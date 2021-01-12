@@ -1,0 +1,103 @@
+#!/bin/sh
+
+MEDIUM=$(svconf_ctl MEDIUM)
+NETWORK_TYPE=$(svconf_ctl NETWORK_TYPE)
+USE_CABLE_MODEM=$(svconf_ctl -n USE_CABLE_MODEM)
+
+#definition of primary network interface
+if [ "$MEDIUM" = "WIFI" ]; then
+    PRIMARY_IFACE=ra0
+else
+    if [ "$USE_CABLE_MODEM" = "YES" ]; then
+        PRIMARY_IFACE=S_INSTALL_CM_IFACE
+    else
+        PRIMARY_IFACE=eth0
+    fi
+fi
+#definition of secondary network interface
+if [ -e /sys/class/net/ra0 ]; then
+    SCNDARY_IFACE=ra0
+fi
+
+if [ -x /usr/bin/logger ]; then
+        LOGGER="/usr/bin/logger -s -p user.notice -t check_networkd"
+else
+        LOGGER=echo
+fi
+
+update_IFACE() {
+    if
+        [ -z "$SCNDARY_IFACE" ] ||
+        [ "`cat /sys/class/net/$PRIMARY_IFACE/carrier`" != "0" ]; then
+        IFACE=$PRIMARY_IFACE
+    else
+        IFACE=$SCNDARY_IFACE
+    fi
+}
+
+
+
+
+#update interface info
+update_IFACE
+
+#bring up the interface, so we can read a carrier status from the SYSFS
+ifconfig $IFACE up
+
+$LOGGER "starting init_network"
+init_network start
+LAST_LINK_STATUS=`cat /sys/class/net/$PRIMARY_IFACE/carrier`
+
+#be nice
+renice -n 20 $$
+#and demonize
+while true; do
+    #update interface info
+    update_IFACE
+
+
+    #keep primary interface UP
+    for i in $PRIMARY_IFACE $SCNDARY_IFACE; do
+        ifconfig | grep -q "^$i" && continue
+        $LOGGER "Upping iface: $i"
+        ifconfig $i up
+    done
+
+    # check the primary interface link status
+    LINK_STATUS=`cat /sys/class/net/$PRIMARY_IFACE/carrier`
+    if
+        #link status of primary interface has been changed
+        [ "$LINK_STATUS" != "$LAST_LINK_STATUS" ]
+            then
+            $LOGGER "$PRIMARY_IFACE link status changed, restarting init_network"
+            init_network restart
+            LAST_LINK_STATUS=$LINK_STATUS
+    fi
+    #$LOGGER "Old link $LAST_LINK_STATUS, new link: $LINK_STATUS"
+
+    if #only for DHCP related networks
+        [ "$NETWORK_TYPE" = "AUTO" -o "$NETWORK_TYPE" = "DHCP" ] &&
+        #dhcp is not runnig 
+        ( ( ! kill -CONT `cat /var/run/udhcpc.pid 2>/dev/null` >/dev/null ) )
+            then
+            $LOGGER "DHCP client was not found, restarting init_network"
+            init_network restart
+            sleep 5
+    fi
+
+    if ifconfig $IFACE | grep -q "inet addr:\|inet6 addr:"
+        then #primary interface is configured
+        #light on the link LED (if exists)
+        #[ ! -e /dev/led_lnk ] || echo 1 > /dev/led_lnk 2>/dev/null
+        #and sleep, the network status will be rechecked again after sleep
+        #$LOGGER "check_networkd: sleeping 5sec, $IFACE has an address `ifconfig $IFACE | grep -q \"inet addr:\|inet6 addr:\"`"
+        sleep 5
+    else #assuming the network is down and need to be updated
+        #light off the link LED (if exists)
+        #[ ! -e /dev/led_lnk ] || echo 1 > /dev/led_lnk 2>/dev/null
+        #restart the network
+        $LOGGER "network is not configured, restarting init_network"
+        init_network restart
+        sleep 5
+    fi
+done

@@ -1,0 +1,3 @@
+component splash_screen_image
+flags = export LOGO=cablemas.jpg
+makefile = Makefile.7405

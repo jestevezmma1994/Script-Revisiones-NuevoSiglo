@@ -1,0 +1,167 @@
+{
+
+"comment": [
+	"Favorites menu configuration file.",
+
+	"i18n_gettext array contains field names, which values should be translated",
+	"by gettext. There is a script which extracts each value of that field value",
+	"and creates gettext template *.pot. 'i18n_gettext' field is optional",
+
+	"'Elements' array contains an array of Favorites menu entries. Fields of each",
+	"element are described below:",
+	"[OPTIONAL] id - string - for example - to specify one of predefined ID-s,",
+	"		like TVChannels, RadioChannels.",
+	"		If used one of predefined IDs, setting name, channel_type or",
+	"		channel_numbers has no effect.",
+	"[REQUIRED] name - string - what is seen by user",
+	"[REQUIRED] channel_type - string - one of 'Radio', 'TV', 'HDTV' for all modes or 'DVBTV' , 'IPTV', 'DVBRadio', 'IPRadio' for hybrid mode",
+	"[OPTIONAL] channel_numbers - string - comma separated sequence of channel numbers, or channel",
+	"		number ranges. Example: '100-120, 543, 700-800'.",
+	"		If range is not specified, all channels matching to specified channel",
+	"		type will be selected.",
+	"[OPTIONAL] epg - boolean - default is false when channel_type='Radio', 'IPRadio', 'DVBRadio', otherwise true."
+],
+
+"i18n_gettext" : [ "name" ],
+
+"elements" : [
+	{
+		"name": "HDTV",
+		"channel_type": "HDTV",
+		"channel_numbers": "140-149, 190-199, 240-249, 290-299, 340-349, 390-399, 440-449, 490-499, 540-549, 590-599, 640-649, 940-949"
+	},
+
+	{
+		"name": "TV",
+		"id": "TVChannels",
+		"channel_type": "TV"
+	},
+
+	{
+		"name": "Radio",
+		"id": "RadioChannels",
+		"channel_type": "Radio"
+	},
+
+	{
+		"name": "DVB TV",
+		"id": "DVBTVChannels",
+		"channel_type": "DVBTV"
+	},
+
+	{
+		"name": "DVB Radio",
+		"id": "DVBRadioChannels",
+		"channel_type": "DVBRadio"
+	},
+
+	{
+		"name": "IPTV",
+		"id": "IPTVChannels",
+		"channel_type": "IPTV"
+	},
+
+	{
+		"name": "IPRadio",
+		"id": "IPRadioChannels",
+		"channel_type": "IPRadio"
+	},
+
+	{   
+		"name": "FTA",
+		"id": "FTATVChannels",
+		"channel_type": "FTA_TV"
+	},  
+
+	{   
+		"name": "Encrypted",
+		"id": "CATVChannels",
+		"channel_type": "CA_TV"
+	},
+
+    {   
+        "name": "FTA",
+        "id": "FTATVChannels",
+        "channel_type": "FTA_TV"
+    },  
+
+    {   
+         "name": "Encrypted",
+         "id": "CATVChannels",
+         "channel_type": "CA_TV"
+    },
+
+	{
+		"name": "Local",
+		"channel_type": "TV",
+		"channel_numbers": "100-149"
+	},
+
+	{
+		"name": "Russian",
+		"channel_type": "TV",
+		"channel_numbers": "150-199"
+	},
+
+	{
+		"name": "Kids",
+		"channel_type": "TV",
+		"channel_numbers": "200-249"
+	},
+
+	{
+		"name": "Films",
+		"channel_type": "TV",
+		"channel_numbers": "250-299"
+	},
+
+	{
+		"name": "Docs",
+		"channel_type": "TV",
+		"channel_numbers": "300-349"
+	},
+
+	{
+		"name": "Sport",
+		"channel_type": "TV",
+		"channel_numbers": "350-399"
+	},
+
+	{
+		"name": "Music",
+		"channel_type": "TV",
+		"channel_numbers": "400-449"
+	},
+
+	{
+		"name": "News",
+		"channel_type": "TV",
+		"channel_numbers": "450-499"
+	},
+
+	{
+		"name": "International",
+		"channel_type": "TV",
+		"channel_numbers": "500-549"
+	},
+
+	{
+		"name": "Lifestyle",
+		"channel_type": "TV",
+		"channel_numbers": "550-599"
+	},
+
+	{
+		"name": "Other",
+		"channel_type": "TV",
+		"channel_numbers": "600-899"
+	},
+
+	{
+		"name": "Baltcom SPECIAL",
+		"channel_type": "TV",
+		"channel_numbers": "900-999"
+	}
+]
+
+}

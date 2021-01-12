@@ -1,0 +1,6 @@
+Name: QBDVBMuxesMap
+Version: 1.0.0
+Requires: QBDVBScanner SvCore SvFoundation 
+Description: DVB muxes map library
+Libs: -lQBDVBMuxesMap 
+CFlags: 

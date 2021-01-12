@@ -1,0 +1,19 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+    <xi:include href="clock.settings"/>
+
+    <widget name="TVPreview">
+        <widget name="TVPreview.clock">
+            <param tag="fontSize"><ref constant="FontSize_Small"/></param>
+                        <param tag="textColor"><color>9e9e9eff</color></param>
+            <param tag="textAlign"><string>right</string></param>
+            <param tag="xOffset"><int>250</int></param>
+            <param tag="yOffset"><int>175</int></param>
+            <param tag="width"><int>90</int></param>
+            <param tag="height"><int>30</int></param>
+            <param tag="timeFormat"><string>%l:%M %p</string></param>
+            <param tag="spacing"><int>0</int></param>
+        </widget>
+    </widget>
+</settings>

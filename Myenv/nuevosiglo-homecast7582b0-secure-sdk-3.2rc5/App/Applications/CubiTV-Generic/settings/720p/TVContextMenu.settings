@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd"
+          xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="2.0">
+
+    <widget name="SideMenu">
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>720</int></param>
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>105</int></param>
+        <param tag="inactiveWidth"><int>10</int></param>
+        <param tag="fullWidthCount"><int>2</int></param>
+        <param tag="moveDuration"><double>0.25</double></param>
+        <widget name="frame">
+            <param tag="width"><int>320</int></param>
+            <param tag="height"><int>510</int></param>
+            <param tag="bgColor"><color>000000df</color></param>
+            <param tag="moveDuration"><double>0.25</double></param>
+            <widget name="border">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>2</int></param>
+                <param tag="height"><int>510</int></param>
+                <param tag="bgColor"><color>343434df</color></param>
+            </widget>
+        </widget>
+        <widget name="frame1">
+            <param tag="width"><int>320</int></param>
+            <param tag="height"><int>510</int></param>
+            <param tag="bgColor"><color>00000000</color></param>
+            <param tag="moveDuration"><double>0.25</double></param>
+           <widget name="bg">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="height"><int>510</int></param>
+                <param tag="width"><int>600</int></param>
+                <param tag="bg"><bitmap><path>bg_context.png</path></bitmap></param>
+            </widget>
+        </widget>
+    </widget>
+
+</settings>

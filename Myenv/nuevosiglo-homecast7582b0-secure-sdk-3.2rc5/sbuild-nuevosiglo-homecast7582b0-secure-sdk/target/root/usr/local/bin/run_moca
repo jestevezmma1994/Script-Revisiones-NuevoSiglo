@@ -1,0 +1,6 @@
+#!/bin/sh
+COMMAND=$1
+
+if [ "$COMMAND" == "stop" ] || [ "$COMMAND" == "start" ]; then
+    /etc/init.d/moca "$COMMAND"
+fi

@@ -1,0 +1,8 @@
+compile:
+
+clean:
+
+install:
+	@install -d $(CROSS_ROOT)/usr/local/share/translations/
+	@install -m 0644 extract/Makefile.mk $(CROSS_ROOT)/usr/local/share/translations/Makefile.mk
+	@install -m 0755 $(wildcard scripts/*) $(CROSS_ROOT)/usr/local/share/translations/

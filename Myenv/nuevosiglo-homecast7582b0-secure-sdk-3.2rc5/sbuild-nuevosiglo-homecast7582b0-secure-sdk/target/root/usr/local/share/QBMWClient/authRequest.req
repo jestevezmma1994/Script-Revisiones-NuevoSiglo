@@ -1,0 +1,9 @@
+{
+    "type":"bodyAuthenticate", 
+    "credential": {
+        "type":"usernameAndPasswordCredential", 
+        "domain":"virgin",
+        "password":"v1rg1n123", 
+        "username":"test2@vmbunker.net"
+        }
+}

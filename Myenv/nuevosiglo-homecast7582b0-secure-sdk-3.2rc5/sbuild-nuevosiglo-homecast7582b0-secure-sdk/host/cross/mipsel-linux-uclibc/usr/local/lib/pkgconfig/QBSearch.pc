@@ -1,0 +1,6 @@
+Name: QBSearch
+Version: 1.0.0
+Requires: QBDataModel3 QBStringUtils SvCore SvFoundation 
+Description: Cubiware Abstract Search Library
+Libs: -lQBSearch -lexpat 
+CFlags: 

@@ -1,0 +1,63 @@
+{
+    "UPGRADE": {
+        "SERVER": "http://nsupg.nuevosiglo.com.uy"
+    },
+    "PREFIXIP": "http://nsmw.boldmss.com/stb/api_without_ssl",
+    "PREFIX": "http://nsmw.boldmss.com/stb/api_without_ssl",
+    "GUI": "default",
+    "FBLINES": "720",
+    "MOVIECITY": {
+        "SERVICE": "enabled",
+        "API_USER": "BOLD:",
+        "API_PASS": "nuevosiglo902012",
+        "DEVICE_TYPE": "TSTB",
+        "URI_PATTERN": "moviecity...akamaihd.net"
+    },
+    "FOX": {
+        "SERVICE": "enabled",
+        "PROXY": "http://papi.boldmss.com/nuevosiglo",
+        "URI_PATTERN": "^http://.*.FOX.*$"
+    },
+    "HBO":{
+        "PROXY": "http://papi.boldmss.com/nuevosiglo",
+        "URI_PATTERN": "^http://.*.HBO.*$"
+    },
+    "TURNER":{
+        "PROXY": "http://papi.boldmss.com/nuevosiglo",
+        "URI_PATTERN": "^http://.*.TURNER.*$"
+    },
+    "USAGELOGS": {
+         "SERVER" : "mad.nuevosiglo.com.uy",
+         "ENABLED" : "enabled",
+         "IDENTIFIER" : "NS-USER",
+         "PORT":"514"
+    },
+    "VOD3FAKECATEGORIES":{
+         "ENABLED": "enabled",
+         "FAKESOURCE": "http://fake.empty.vod.3.category"
+    },
+    "UI": {
+        "SUBTITLES": {
+            "COLOR": "#FFFF00FF",
+            "FONTSIZE": "42",
+            "STYLE": "bold"
+        }
+    },
+    "LOGOS_IN_SERVER":{
+         "ENABLED": "enabled",
+         "IMAGE_SERVER_URL": "http://logoscanales.nuevosiglo.com.uy/channelLogos/nuevosiglo",
+         "LOCAL_URL": "/etc/vod/app/channelLogos/"
+    },
+    "mwPROXY":{
+        "ENABLED": "enabled",
+        "URL": "http://dynamic.nuevosiglo.com.uy/stb/api_without_ssl",
+        "SERVICES": "6,8,10,13,26,27"
+    },
+    "CONTENTTRACKING": {
+        "ENABLED" : "enabled",
+        "SERVER" : "http://vodtracking.nuevosiglo.com.uy/nuevosiglo"
+    },
+    "QBSSGatewayTimeoutMaxRetries": "15",
+    "QBSSGatewayTimeoutRetryDelay": "2000"
+}
+

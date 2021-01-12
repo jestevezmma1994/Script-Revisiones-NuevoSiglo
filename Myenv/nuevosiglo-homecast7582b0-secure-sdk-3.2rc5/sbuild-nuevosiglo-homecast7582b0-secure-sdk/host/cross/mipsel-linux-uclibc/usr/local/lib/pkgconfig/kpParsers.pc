@@ -1,0 +1,6 @@
+Name: kpParsers
+Version: 1.0.0
+Requires: SvCore storage_input 
+Description: AVI/Matroska low-level parsers, based on ra_input
+Libs: -lkpParsers 
+CFlags: 

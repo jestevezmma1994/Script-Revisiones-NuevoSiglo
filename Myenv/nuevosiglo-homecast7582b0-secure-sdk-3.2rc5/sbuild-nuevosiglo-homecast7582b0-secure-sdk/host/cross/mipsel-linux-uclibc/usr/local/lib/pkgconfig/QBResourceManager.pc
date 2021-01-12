@@ -1,0 +1,6 @@
+Name: QBResourceManager
+Version: 1.0.0
+Requires: CAGE QBAppKit SvCore SvFoundation SvGfxHAL SvHTTPClient SvQuirks fibers 
+Description: Resource manager library
+Libs: -lQBResourceManager -ljpeg -lgif 
+CFlags: 

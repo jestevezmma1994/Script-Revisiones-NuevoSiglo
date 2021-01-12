@@ -1,0 +1,22 @@
+{
+	"manager": {
+		"max_period": 86400,
+		"default_period": 3600,
+		"buffer_size": 1024,
+		"server_url": "https://d2.cubiware.com:10420/devices",
+		"local_buffer_size": 1048576,
+		"max_retries_num": 10,
+		"max_retries_num_at_restart": 0,
+		"send_timeout": 5,
+		"modules" : "*",
+		"event_types" : "*"
+	},
+	"events": {
+		"Notice.TVPlayer.EventWatched": {
+			"minDuration": 180
+		},
+		"Notice.PVRPlayer.EventWatched": {
+			"minDuration": 180
+		}
+	}
+}

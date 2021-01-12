@@ -1,0 +1,7 @@
+digraph innov8onCarouselItemChoice {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    innov8onCarouselItemChoice [URL="\N.html" root=true]
+
+    innov8onCarouselItemChoice -> CubiMW
+}

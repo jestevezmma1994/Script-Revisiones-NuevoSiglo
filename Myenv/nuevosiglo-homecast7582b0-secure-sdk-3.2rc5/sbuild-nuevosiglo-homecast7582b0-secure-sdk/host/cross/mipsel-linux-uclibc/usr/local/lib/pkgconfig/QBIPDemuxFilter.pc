@@ -1,0 +1,6 @@
+Name: QBIPDemuxFilter
+Version: 1.0.0
+Requires: SvCore SvFoundation SvPlayerKit SvPlayerManager autoplayer fibers 
+Description: PID filters for IP streams
+Libs: -lQBIPDemuxFilter 
+CFlags: 

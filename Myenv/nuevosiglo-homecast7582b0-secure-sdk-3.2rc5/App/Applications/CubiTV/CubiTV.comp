@@ -1,0 +1,3 @@
+component CubiTV
+translate=yes
+depends=TranslationMerger

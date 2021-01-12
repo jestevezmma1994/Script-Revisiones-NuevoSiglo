@@ -1,0 +1,3 @@
+component CubiTV-Bold-logic
+makefile=Makefile.logic
+translate=yes

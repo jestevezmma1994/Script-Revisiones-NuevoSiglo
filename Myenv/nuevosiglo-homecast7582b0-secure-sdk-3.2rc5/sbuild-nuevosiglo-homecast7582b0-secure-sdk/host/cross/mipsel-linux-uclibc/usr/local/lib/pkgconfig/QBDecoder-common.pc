@@ -1,0 +1,6 @@
+Name: QBDecoder-common
+Version: 1.0.0
+Requires: QBCAS QBContentSource QBDemux QBPlatformHAL QBTSParser QBViewport SvPlayerKit dataformat error_log 
+Description: Common base for all QBDecoderHAL-% implementations
+Libs: -lQBDecoder-common 
+CFlags: 

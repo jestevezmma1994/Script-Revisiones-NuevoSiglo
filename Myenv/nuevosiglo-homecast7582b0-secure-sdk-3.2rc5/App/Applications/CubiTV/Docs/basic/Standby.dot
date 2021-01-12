@@ -1,0 +1,24 @@
+digraph Standby {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Standby [label="Standby" root=true]
+
+    QBBackgroundDVBScan
+    QBCASManager
+    QBStandbyAgent
+    clocks
+    epgMonitor
+    hddStandbyManager
+    QBNoInputStandbyPlugin
+    QBStandbyAgentService
+
+
+    Standby -> QBBackgroundDVBScan
+    Standby -> QBCASManager
+    Standby -> QBStandbyAgent
+    Standby -> clocks
+    Standby -> epgMonitor
+    Standby -> hddStandbyManager
+    Standby -> QBNoInputStandbyPlugin
+    Standby -> QBStandbyAgentService
+}

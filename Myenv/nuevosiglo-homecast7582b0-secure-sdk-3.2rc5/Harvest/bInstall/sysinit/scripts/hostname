@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ ! -e /etc/vod/hostname ]; then
+    HOSTNAME=`ifconfig eth0 | grep HW | sed -e 's/.*HWaddr \([0-9A-F:]*\).*/\1/'`
+    echo $HOSTNAME > /etc/vod/hostname
+    /etc/init.d/config save
+else
+    HOSTNAME=`cat /etc/vod/hostname`
+fi
+
+hostname $HOSTNAME

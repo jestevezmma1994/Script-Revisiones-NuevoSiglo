@@ -1,0 +1,2370 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Latvian\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-04 14:46+0200\n"
+"PO-Revision-Date: 2012-07-04 14:53+0100\n"
+"Last-Translator: Marek Bejgier <marekb@cubiware.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
+
+msgid " / minute"
+msgstr " / minūte"
+
+msgid " H"
+msgstr " H"
+
+msgid " V"
+msgstr " V"
+
+#, fuzzy
+msgid "%A %x"
+msgstr "%A %x"
+
+#, c-format
+msgid "%A %x %X"
+msgstr "%A %x %X"
+
+#, fuzzy
+msgid "%a, %b %e, %Y %H:%M"
+msgstr "%a, %b %e, %Y %H:%M"
+
+#, c-format
+msgid "%d HD hour left"
+msgid_plural "%d HD hours left"
+msgstr[0] "Palikusi %d HD stunda"
+msgstr[1] "Palikušas %d HD stundas"
+msgstr[2] "Palikušas %d HD stundas"
+
+#, c-format
+msgid "about %d HD hour left"
+msgid_plural "about %d HD hours left"
+msgstr[0] "Palikusi %d HD stunda"
+msgstr[1] "Palikušas %d HD stundas"
+msgstr[2] "Palikušas %d HD stundas"
+
+#, c-format
+msgid "about %d SD hour left"
+msgid_plural "about %d SD hours left"
+msgstr[0] "Palikusi %d SD stunda"
+msgstr[1] "Palikušas %d SD stundas"
+msgstr[2] "Palikušas %d SD stundas"
+
+#, c-format
+msgid "%d attempt left."
+msgid_plural "%d attempts left"
+msgstr[0] "Palicis %d mēģinājums"
+msgstr[1] "Palikuši %d mēģinājumi"
+msgstr[2] "Palikuši %d mēģinājumi"
+
+#, c-format
+msgid "%d out of %d"
+msgstr "%d no %d"
+
+#, c-format
+msgid "%i (%i new or updated) Radio channels"
+msgstr "%i (%i jauni vai atjaunoti) Radio kanāli"
+
+#, c-format
+msgid "%i (%i new or updated) TV channels"
+msgstr "%i (%i jauni vai atjaunoti) TV kanāli"
+
+#, c-format
+msgid "%i radio channel"
+msgid_plural "%i radio channels"
+msgstr[0] "%i radio kanāls"
+msgstr[1] "%i radio kanāli"
+msgstr[2] "%i radio kanāli"
+
+#, c-format
+msgid "%i recording"
+msgid_plural "%i recordings"
+msgstr[0] "%i ieraksts"
+msgstr[1] "%i ieraksti"
+msgstr[2] "%i ieraksti"
+
+#, c-format
+msgid "%i reminder"
+msgid_plural "%i reminders"
+msgstr[0] "%i atgādinājums"
+msgstr[1] "%i atgādinājumi"
+msgstr[2] "%i atgādinājumu"
+
+#, c-format
+msgid "%i tv channel"
+msgid_plural "%i tv channels"
+msgstr[0] "%i tv kanāls"
+msgstr[1] "%i tv kanāli"
+msgstr[2] "%i tv kanāli"
+
+#, c-format
+msgid "%s: %i channel found"
+msgid_plural "%s: %i channels found"
+msgstr[0] "%s: %i atrasts kanāls"
+msgstr[1] "%s: %i atrasti kanāli"
+msgstr[2] "%s: %i atrasti kanāli"
+
+#, c-format
+msgid "(%d day %dh)"
+msgid_plural "(%d days %dh)"
+msgstr[0] "(%d diena %dh)"
+msgstr[1] "(%d dienas %dh)"
+msgstr[2] "(%d dienas %dh)"
+
+#, c-format
+msgid "(%d day)"
+msgid_plural "(%d days)"
+msgstr[0] "(%d diena)"
+msgstr[1] "(%d dienas)"
+msgstr[2] "(%d dienas)"
+
+#, c-format
+msgid "(%d hour)"
+msgid_plural "(%d hours)"
+msgstr[0] "(%d stunda)"
+msgstr[1] "(%d stundas)"
+msgstr[2] "(%d stundas)"
+
+#, c-format
+msgid "(%dh %dmin)"
+msgstr "(%dh %dmin)"
+
+#, c-format
+msgid "(%dmin)"
+msgstr "(%dmin)"
+
+msgid "(all)"
+msgstr "(visi)"
+
+msgid "(hard of hearing)"
+msgstr "(vājdzirdīgiem)"
+
+msgid "(no label)"
+msgstr "(no label)"
+
+msgid "(none)"
+msgstr "(neviens)"
+
+msgid "(unsupported)"
+msgstr "(netiek atbalstīts)"
+
+msgid "(visually impaired)"
+msgstr "(vājredzīgiem)"
+
+msgid "0 recordings"
+msgstr "0 ierakstu"
+
+msgid "0%"
+msgstr ""
+
+msgid "0.00-CURRENT"
+msgstr "0.00-PAŠLAIK"
+
+msgid "000 unknown"
+msgstr "000 nezināms"
+
+msgid "1 minute"
+msgstr "1 minūte"
+
+msgid "10 minutes"
+msgstr "10 minūtes"
+
+msgid "10 seconds"
+msgstr "10 sekundes"
+
+msgid "10%"
+msgstr ""
+
+msgid "100%"
+msgstr ""
+
+msgid "100GB"
+msgstr "100GB"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "10GB"
+msgstr "10GB"
+
+msgid "15 minutes"
+msgstr "15 minūtes"
+
+msgid "15 seconds"
+msgstr "15 sekundes"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "2 minutes"
+msgstr "2 minūtes"
+
+msgid "2 seconds"
+msgstr "2 sekundes"
+
+msgid "20 minutes"
+msgstr "20 minūtes"
+
+msgid "20%"
+msgstr ""
+
+msgid "200GB"
+msgstr "200GB"
+
+msgid "20GB"
+msgstr "20GB"
+
+msgid "22 kHz Tone"
+msgstr ""
+
+msgid "30 minutes"
+msgstr "30 minūtes"
+
+msgid "30%"
+msgstr ""
+
+msgid "40%"
+msgstr ""
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "5 minutes"
+msgstr "5 minūtes"
+
+msgid "5 seconds"
+msgstr "5 sekundes"
+
+msgid "50%"
+msgstr ""
+
+msgid "500GB"
+msgstr "500GB"
+
+msgid "50GB"
+msgstr "50GB"
+
+msgid "576p/480p"
+msgstr "576p/480p"
+
+msgid "60%"
+msgstr ""
+
+msgid "70%"
+msgstr ""
+
+msgid "720p"
+msgstr "720p"
+
+msgid "80%"
+msgstr ""
+
+msgid "90%"
+msgstr ""
+
+#, c-format
+msgid ""
+"A new disk %s %s has been found.\n"
+"Click OK to browse available disks."
+msgstr ""
+
+msgid "A problem occurred"
+msgstr "Radusies problēma"
+
+msgid "A/V Output Settings"
+msgstr "A/V Izejas uzstādījumi"
+
+msgid "A: Over 18"
+msgstr "A: vairāk par 18"
+
+msgid "About Conax CA"
+msgstr "Par Conax CA"
+
+msgid "Access denied"
+msgstr "Nav piekļuves"
+
+msgid "Add new list"
+msgstr "Pievienot jaunu sarakstu"
+
+msgid "Add/remove channels"
+msgstr "Pievienot/dzēst kanālus"
+
+msgid "All tuners are in use"
+msgstr "Visi uztvērēji ir aizņemti"
+
+msgid "All tuners are in use. There are probably too many ongoing recordings."
+msgstr "Visi uztvērēji ir aizņemti, notiek pārāk daudz ierakstu."
+
+msgid "An error has occurred. Please contact your service provider.\n"
+msgstr "Radusies problēma. Sazinieties ar pakalpojuma sniedzēju.\n"
+
+msgid "Apr"
+msgstr ""
+
+msgid "Are you sure that you want to drop all channels?"
+msgstr "Vai esat pārliecināti, ka vēlaties izdzēst visus kanālus?"
+
+msgid "Are you sure?"
+msgstr "Vai esat pārliecināts?"
+
+msgid "Arts/Culture"
+msgstr "Māksla/kultūra"
+
+msgid "Ask again later"
+msgstr "Jautāt vēlāk."
+
+msgid "Audio Track"
+msgstr "Audio ieraksts"
+
+msgid "Aug"
+msgstr ""
+
+msgid "Authentication failed. Try again."
+msgstr "Autentifikācija neizdevās. Mēģiniet vēlreiz."
+
+msgid "Authentication required"
+msgstr "Nepieciešama autentikācija"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Auto Download"
+msgstr "Automātiskā lejupielāde"
+
+msgid "Auto Install"
+msgstr "Automātiska uzstādīšana"
+
+msgid "Autodelete Oldest Recordings"
+msgstr "Automātiski dzēst vecākos ierakstus"
+
+msgid "Automatic"
+msgstr "Automātiski"
+
+msgid "Automatic Channel Scanning"
+msgstr "Automātiskā kanālu meklēšana"
+
+msgid "Automatic Time Zone"
+msgstr ""
+
+#, c-format
+msgid "Automatic update will start in %u second."
+msgid_plural "Automatic update will start in %u seconds."
+msgstr[0] "Automātiskā atjaunināšana sāksies pēc %u sekundes."
+msgstr[1] "Automātiskā atjaunināšana sāksies pēc %u sekundēm."
+msgstr[2] "Automātiskā atjaunināšana sāksies pēc %u sekundēm."
+
+msgid "Available Transponders"
+msgstr ""
+
+#, c-format
+msgid "Bad URL: %d"
+msgstr "Nepareizs URL: %d"
+
+#, c-format
+msgid "Bad format: %d"
+msgstr "Nepareizs formāts: %d"
+
+#, c-format
+msgid "Bad server response: %d"
+msgstr "Nepareiza servera atbilde: %d"
+
+#, c-format
+msgid "Balance: %d token"
+msgid_plural "Balance: %d tokens"
+msgstr[0] "Balance: %d token"
+msgstr[1] "Balance: %d tokens"
+msgstr[2] "Balance: %d tokens"
+
+msgid "Baltcom SPECIAL"
+msgstr "Baltcom īpašs"
+
+msgid "Band Select"
+msgstr "Joslas izvēle"
+
+msgid "Bandwidth"
+msgstr "Josla"
+
+msgid "Bandwidth [MHz]"
+msgstr "Josla [MHz]"
+
+msgid "Begin format now"
+msgstr "Sākt formatēt"
+
+msgid "Block Channels"
+msgstr "Bloķēt kanālus"
+
+msgid "Buy"
+msgstr "Pirkt"
+
+msgid "By Channel Number"
+msgstr "Atbilstoši kanāla numuram"
+
+msgid "By Index"
+msgstr "Atbilstoši indeksam"
+
+msgid "C-band"
+msgstr "C-band"
+
+msgid "CA PIN has been changed."
+msgstr "CA PIN ir mainīts"
+
+msgid "CA SYS ID"
+msgstr "CA SYS ID"
+
+msgid "CET / CEST"
+msgstr "CET / CEST"
+
+msgid "CLT / CLST"
+msgstr "CLT / CLST"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "Cable"
+msgstr "Kabeļu"
+
+msgid "Cable AnnexB"
+msgstr "Kabeļu AnnexB"
+
+msgid "Cable DVB-C"
+msgstr "Kabeļu DvB-C"
+
+msgid "Cable modem status"
+msgstr "Kabeļmodema statuss"
+
+msgid "Cancel"
+msgstr "Atcelt"
+
+msgid "Cancel scheduled recording"
+msgstr "Atcelt plānoto ierakstu"
+
+msgid "Card Inserted"
+msgstr "Karte ir ievietota"
+
+msgid "Card Number"
+msgstr "Kartes numurs"
+
+msgid "Card Problem - check card"
+msgstr "Kartes problēma, pārbaudiet karti"
+
+msgid "Card Type"
+msgstr "Kartes tips"
+
+msgid "Card is correct"
+msgstr "Karte ir pareiza"
+
+msgid "Change CA PIN failed."
+msgstr "CA PIN maiņa neizdevās"
+
+msgid "Change CA pin"
+msgstr "Mainīt CA pin"
+
+msgid "Change PIN"
+msgstr "Mainīt PIN"
+
+msgid "Change list numbering"
+msgstr "Mainīt saraksta numerāciju"
+
+msgid "Changing pin failed."
+msgstr "PIN maiņa neizdevās."
+
+msgid "Changing skin requires box reboot"
+msgstr "Dekoderis ir jārestartē, lai nomainītu ādiņu"
+
+msgid "Channel"
+msgstr "Kanāls"
+
+msgid "Channel Frequency [kHz]"
+msgstr "Kanāla frekvence [kHz]"
+
+msgid "Channel Installation"
+msgstr "Kanālu uzstādīšana"
+
+msgid "Channel Scanning"
+msgstr "Kanālu meklēšana"
+
+msgid "Channel Status"
+msgstr "Kanāla statuss"
+
+msgid "Channel not available"
+msgstr "Kanāls nav pieejams"
+
+msgid "Channel scanning"
+msgstr "Kanālu skanēšana"
+
+#, c-format
+msgid ""
+"Channel: %s\n"
+"Event: %s\n"
+"Time: %s-%s\n"
+msgstr ""
+"Kanāls: %s\n"
+"Notikums: %s\n"
+"Laiks: %s-%s\n"
+
+msgid "Checking compatibility..."
+msgstr "Pārbauda savietojamību..."
+
+msgid "Children's/Youth Programmes"
+msgstr "Bērnu/Jauniešu programmas"
+
+msgid "Chip ID"
+msgstr "Čipa ID"
+
+msgid "Chip id"
+msgstr "čipa id"
+
+msgid "Close"
+msgstr "Aizvērt"
+
+msgid "Communication error"
+msgstr "Komunikācijas kļūda"
+
+msgid "Compatible with PVR"
+msgstr "Savietojams ar PVR"
+
+msgid "Completed Recordings"
+msgstr "Pabeigtie ieraksti"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "Configuration"
+msgstr "Konfigurācija"
+
+msgid "Configure"
+msgstr "Konfigurēt"
+
+msgid "Confirm"
+msgstr "Apstiprināt"
+
+msgid "Confirmation Required"
+msgstr "Nepieciešams apstiprinājums"
+
+msgid "Continue"
+msgstr "Turpināt"
+
+msgid "Could not load channel list. Functionality may be limited."
+msgstr "Neizdevās ielādēt kanālu sarakstu. Funkcionalitāte var būt ierobežota."
+
+msgid "Could not stop device, please try again (error 2)"
+msgstr "Nevar apturēt iekārtu, mēģiniet vēlreiz (error 2)"
+
+msgid "Create new directory"
+msgstr "Izveidot jaunu mapi"
+
+msgid "Custom LNB"
+msgstr "Pielāgot LNB"
+
+msgid "DHCP"
+msgstr "DHCP"
+
+msgid "DLNA"
+msgstr "DLNA"
+
+msgid "DNS1"
+msgstr "DNS1"
+
+msgid "DNS2"
+msgstr "DNS2"
+
+#, c-format
+msgid "DRM error: %d"
+msgstr "DRM kļūda: %d"
+
+msgid "DVB Mode"
+msgstr "DVB režīms"
+
+msgid "DVB-C Automatic"
+msgstr "DVB-C Automātiski"
+
+msgid "DVB-C Manual"
+msgstr "DVB-C Manuāli"
+
+msgid "DVB-C NIT Automatic"
+msgstr "DVB-C NIT Automātiski"
+
+msgid "DVB-S/S2 Manual"
+msgstr "DVB-S/S2 Manuāli"
+
+msgid "DVB-S/S2 NIT Automatic"
+msgstr "DVB-S/S2 NIT Automātiski"
+
+msgid "DVB-T Automatic full scan"
+msgstr "DVB-T automātiskā meklēšana"
+
+msgid "DVB-T Manual"
+msgstr "DVB-T manuālā meklēšana"
+
+msgid "Daily"
+msgstr "Ikdienas"
+
+msgid "Danish"
+msgstr "Dāņu"
+
+msgid "Date"
+msgstr "Datums"
+
+msgid "Dec"
+msgstr "Decembris"
+
+#, c-format
+msgid "Decoder error: %d"
+msgstr "Dekodera kļūda: %d"
+
+msgid "Default"
+msgstr "Noklusētais"
+
+msgid "Default PVR Quota"
+msgstr "Noklusētā PVR kvota"
+
+#, c-format
+msgid "Delay start of the recording to %s"
+msgstr "Novilcināt ieraksta sākumu %s"
+
+msgid "Delete"
+msgstr "Dzēst"
+
+msgid "Delete all"
+msgstr "Dzēst visu"
+
+msgid "Delete all active"
+msgstr "Dzēst visus aktīvos"
+
+msgid "Delete all failed"
+msgstr "Dzēšana neizdevās"
+
+msgid "Delete all scheduled"
+msgstr "Dzēst visus uzstādītos"
+
+msgid "Delete file"
+msgstr "Dzēst failu"
+
+msgid "Device is not responding"
+msgstr "Iekārta neatbild"
+
+#, c-format
+msgid "DiSEqC Port %c"
+msgstr "DiSEqc Ports %c"
+
+msgid "DiSEqC Switch"
+msgstr "DiSEqC slēdzis"
+
+msgid "Digital Audio"
+msgstr "Digitālais audio"
+
+msgid "Directory name already exists"
+msgstr "Šads mapes nosaukums jau eksistē"
+
+msgid "Directory name cannot be empty"
+msgstr "Mapes nosaukums nedrīkst būt tukšs"
+
+msgid "Disable"
+msgstr "Atspējot"
+
+msgid "Disabled"
+msgstr "Atspējots"
+
+msgid "Display Format (HDMI)"
+msgstr "Ekrāna formāts (HDMI)"
+
+msgid "Display Format (SCART)"
+msgstr "Ekrāna formāts (SCART)"
+
+msgid "Do not turn off the STB during firmware update."
+msgstr "Neizslēdziet uztvērēju atjaunināšanas laikā!"
+
+msgid "Docs"
+msgstr "Dokumentālās"
+
+msgid "Done"
+msgstr "Darīts"
+
+msgid "Download now"
+msgstr "Lejupielādēt tagad"
+
+msgid "Drop"
+msgstr "Dzēst"
+
+msgid "Drop channels?"
+msgstr "Dzēst kanālus?"
+
+msgid "Dropping..."
+msgstr "Dzēšana..."
+
+msgid "EET / EEST"
+msgstr "EET / EEST"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "ERROR: Sending question to the smartcard failed"
+msgstr "KĻŪDA: Jautājuma nosūtīšana uz viedakarti neizdevās"
+
+msgid "Edit"
+msgstr "Rediģēt"
+
+msgid "Education/Science/Factual topics"
+msgstr "Mācības/zinātne"
+
+msgid "Empty folder"
+msgstr "Tukša mape"
+
+msgid "Enabled"
+msgstr "Iespējots"
+
+msgid "Enables also automatic time mode"
+msgstr "Iespējo arī laika automātisko režīmu"
+
+msgid "End Frequency"
+msgstr "Beigu frekvence"
+
+msgid "End time"
+msgstr "Beigu laiks"
+
+msgid "English"
+msgstr "Angļu"
+
+msgid "Entitled"
+msgstr "Pieejams"
+
+msgid "Error"
+msgstr "Kļūda"
+
+msgid "Error occured"
+msgstr "Radusies kļūda"
+
+msgid "Event Status"
+msgstr "Notikuma statuss"
+
+msgid "Extra"
+msgstr "Ekstra"
+
+msgid "Extras"
+msgstr "Ekstras"
+
+msgid "FATAL ERROR"
+msgstr "FATĀLA KĻŪDA"
+
+msgid "Failed Recordings"
+msgstr "Neizdevušies ieraksti"
+
+#, c-format
+msgid "Failed to get information from the card (error = 0x%x)"
+msgstr "Neizdavās iegūt informāciju no kartes (error = 0x%x"
+
+msgid "Favorites"
+msgstr "Favorīti"
+
+msgid "Favourites Numbering"
+msgstr "Favorītu numerācija"
+
+msgid "Feb"
+msgstr "Februāris"
+
+msgid "File not found"
+msgstr "Fails nav atrasts"
+
+#, c-format
+msgid "File not found: %d"
+msgstr "Fails nav atrasts: %d"
+
+msgid "Films"
+msgstr "Filmas"
+
+msgid "Finish"
+msgstr "Pabeigt"
+
+msgid "Finnish"
+msgstr "Somu"
+
+msgid "Firmware Version"
+msgstr "Firmware Versija"
+
+msgid "Firmware update"
+msgstr "Firmware atjaunināšana"
+
+msgid "Firmware update is required to make the STB work correctly."
+msgstr "Atjaunināšana ir nepieciešama uztvērēja korektai darbībai."
+
+msgid "First Time Installation"
+msgstr "Pirmā uzstādīšana"
+
+msgid "First time using VoD service?"
+msgstr "Pirmā reize, kad izmantojiet video nomas pakalpojumu?"
+
+msgid "For 12+ year old"
+msgstr "12+ veciem"
+
+msgid "For 16+ year old"
+msgstr "16+ gadus veciem"
+
+msgid "For 18+ year old"
+msgstr "18+ gadus veciem"
+
+msgid "For 6+ year old"
+msgstr "6+ gadus veciem"
+
+msgid "Format Hard Disk"
+msgstr "Formatēt cieto disku"
+
+#, c-format
+msgid "Format not supported: %d"
+msgstr "Formāts netiek atbalstīts: %d"
+
+msgid "Format successful"
+msgstr "Fomatēšana pabeigta"
+
+msgid "Formatting this disk will permanently erase all data on it. Do you want to continue?"
+msgstr "Diska formatēšana pilnībā izdzēsīs datus. Vai vēlaties turpināt?"
+
+msgid "Formatting..."
+msgstr "Formatē..."
+
+msgid "Frequency"
+msgstr "Frekvence"
+
+msgid "Frequency Range"
+msgstr "Frekvenču diapazons"
+
+#, c-format
+msgid "Frequency: %d.%02d MHz%s %s %s"
+msgstr "Frekvence: %d.%02d MHz%s %s %s"
+
+msgid "Frontpanel Clock In Standby"
+msgstr "Paneļa pulkstenis gaidīšanas režīmā"
+
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+msgid "G: General Audience"
+msgstr "G: Vispārēja auditorija"
+
+msgid "GMT"
+msgstr "GMT"
+
+msgid "GMT / BST"
+msgstr "GMT / BST"
+
+msgid "Gateway"
+msgstr "Vārteja"
+
+msgid "Go!"
+msgstr "Aiziet!"
+
+msgid "Greek"
+msgstr "Grieķu"
+
+msgid "Group Number"
+msgstr "Grupas numurs"
+
+msgid "Guide"
+msgstr ""
+
+msgid "HDMI Video Format"
+msgstr "HDMI Video Formāts"
+
+msgid "HFC MAC ID"
+msgstr "HFC MAC ID"
+
+msgid "Hard of Hearing"
+msgstr "Vājdzirdīgiem"
+
+msgid "Hard of Hearing Subtitles"
+msgstr "Subtitri vājdzirdīgiem"
+
+msgid "Helsinki, Athens, Kaliningrad"
+msgstr "Helsinki, Atēnas, Kaļiņingrada"
+
+msgid "Horizontal"
+msgstr "Horizontāls"
+
+msgid "Hybrid Mode"
+msgstr "Hibrīda režīms"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Mode"
+msgstr "IP režīms"
+
+msgid "IP Network"
+msgstr "IP Tīkls"
+
+msgid "In order to record selected program you need to stop one of the following recordings/schedules"
+msgstr "Lai skatītos izvēlēto programmu, ir jāpārtrauc ieraksts"
+
+msgid "Incorrect CA Card"
+msgstr "Nepareiza CA karte"
+
+msgid "Incorrect Card"
+msgstr "Nepareiza karte"
+
+msgid "Incorrect Conax Card"
+msgstr "Nepareiza Conax karte"
+
+msgid "Incorrect old PIN."
+msgstr "Nepareizs vecais PIN."
+
+msgid "Information"
+msgstr "Informācija"
+
+msgid ""
+"Install\n"
+"\n"
+"In order to perform automatical channel scanning press OK."
+msgstr ""
+"Uzstādīšana\n"
+"\n"
+"Lai veiktu automātisku kanālu meklēšanu, nospiediet OK."
+
+msgid "Install now"
+msgstr "Uzstādīt tagad"
+
+msgid "Instant Timeshift"
+msgstr "Tūlītējs Timeshift"
+
+msgid "Interface Version"
+msgstr "Interfeisa versija"
+
+msgid "International"
+msgstr "Internacionāls"
+
+msgid "Internet Radio"
+msgstr "Interneta Radio"
+
+msgid "Jan"
+msgstr "Janvāris"
+
+msgid "Jul"
+msgstr "Jūlijs"
+
+msgid "Jun"
+msgstr "Jūnijs"
+
+msgid "Keyword"
+msgstr "Atslēgvārds"
+
+msgid "Kids"
+msgstr "Bērni"
+
+msgid "Ku-band"
+msgstr "Ku-band"
+
+msgid "Ku-band BSS"
+msgstr "Ku-band BSS"
+
+msgid "Ku-band FSS"
+msgstr "Ku-band FSS"
+
+msgid "Ku-band Universal"
+msgstr "Universālais Ku-band"
+
+msgid "LNB Setup"
+msgstr "LNB uzstādijums"
+
+msgid "LNB Type"
+msgstr "LNB tips"
+
+msgid "Language"
+msgstr "Valoda"
+
+msgid "Languages"
+msgstr "Valodas"
+
+msgid "Latvian"
+msgstr "Latviešu "
+
+msgid "Leisure hobbies"
+msgstr "Hobiji"
+
+msgid "Letterbox"
+msgstr "Pastakaste"
+
+msgid "Lifestyle"
+msgstr "Dzīvesveids"
+
+msgid "List name already exists"
+msgstr "Saraksta nosaukums eksistē"
+
+msgid "List name cannot be empty"
+msgstr "Saraksts nevar būt tukšs"
+
+#, c-format
+msgid "List no. %u"
+msgstr "Saraksta Nr. %u"
+
+msgid "Loading..."
+msgstr "Ielādē..."
+
+msgid "Local"
+msgstr "Vietējs"
+
+msgid "Local Oscillator Frequency"
+msgstr "Lokālā oscilatora frekvence"
+
+msgid "Lock"
+msgstr "Slēgt"
+
+msgid "Lock status - NO SIGNAL"
+msgstr "Signāla statuss - NAV SIGNĀLA"
+
+msgid "Lock status - OK"
+msgstr "Signāla statuss - OK"
+
+msgid "Login"
+msgstr "Reģistrēties"
+
+msgid "London, Belfast"
+msgstr "Londona, Belfāsta"
+
+msgid "Lost tuner access"
+msgstr "Nav pieejas uztverējam"
+
+msgid "MAC address"
+msgstr "MAC adrese"
+
+msgid "MSK"
+msgstr "MSK"
+
+msgid "Manual"
+msgstr "Manuāli"
+
+msgid "Manual Channel Scanning"
+msgstr "Manuālā kanālu meklēšana "
+
+msgid "Manual Configuration"
+msgstr "Manuālā konfigurācija"
+
+msgid "Mar"
+msgstr "Marts"
+
+#, c-format
+msgid ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+msgstr ""
+"Maturity Lock\n"
+"\n"
+"Program rating: %s\n"
+"Card level: %s\n"
+"Enter CA PIN to unlock"
+
+msgid "Maturity Rating"
+msgstr "Vecuma reitings"
+
+msgid "May"
+msgstr "Maijs"
+
+msgid "Menu Language"
+msgstr "Izvēlnes valoda"
+
+msgid "Menu Transparency"
+msgstr "Izvēlnes transparentums"
+
+msgid "Message"
+msgstr "Ziņa"
+
+msgid "Message - NEW!"
+msgstr "Jauna ziņa!"
+
+msgid "Messages"
+msgstr "Paziņojumi"
+
+msgid "CubiTV Portal Connectivity"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Modulation"
+msgstr "Modulācija"
+
+#, c-format
+msgid "Modulation: %s"
+msgstr "Modulācija: %s"
+
+msgid "More info"
+msgstr "Vairāk info"
+
+msgid "Moscow, Saint Petersburg"
+msgstr "Maskava, Sanktpēterburga"
+
+msgid "Mounting..."
+msgstr "Pievieno..."
+
+msgid "Move"
+msgstr "Pārvietot"
+
+msgid "Movie/Drama"
+msgstr "Filmas/Drāma"
+
+msgid "Multichannel"
+msgstr "Multikanālu"
+
+msgid "Music"
+msgstr "Mūzika"
+
+msgid "Music/Ballet/Dance"
+msgstr "Mūzika/balets/Dejas"
+
+msgid "My Rentals"
+msgstr "Mana noma"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "NIT Automatic"
+msgstr ""
+
+msgid "NO SIGNAL"
+msgstr "NAV SIGNĀLA"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Netmask"
+msgstr "Netmask"
+
+msgid "Network Medium"
+msgstr "Tīkla vide"
+
+msgid "Network Name"
+msgstr "Tīkla nosaukums"
+
+msgid "Network Selection"
+msgstr "Tīkla izvēle"
+
+msgid "Network Settings"
+msgstr "Tīkla uzstādījumi"
+
+msgid "Network Type"
+msgstr "Tīkla veids"
+
+msgid "Network mask"
+msgstr "Network mask"
+
+msgid "New CA PIN confirmation field is not complete."
+msgstr "Jaunā CA PIN apstiprināšanas lauks nav aizpildīts"
+
+msgid "New CA PIN field is not complete"
+msgstr "Jaunā CA PIN lauks nav aizpildīts"
+
+msgid "New PIN confirmation field is not complete."
+msgstr "Jaunā PIN apstiprināšanas lauks nav aizpildīts"
+
+msgid "New PIN field is not complete."
+msgstr "Jaunā PIN lauks nav aizpildīts"
+
+msgid "New PIN:"
+msgstr "Jaunais PIN:"
+
+msgid "New application layout requires box reboot."
+msgstr "Lai jaunais aplikācijas izkārtojums stātos spēkā, nepieciešams dekodera restarts"
+
+#, c-format
+msgid "New firmware version %s from network %s is available."
+msgstr "Ir pieejama jauna firmware versija %s no operatora %s."
+
+#, c-format
+msgid "New firmware version %s is available."
+msgstr "Ir pieejama jauna Firmware versija %s."
+
+#, c-format
+msgid "New firmware version: %s"
+msgstr "Jaunā firmware versija: %s"
+
+msgid "New pins don't match."
+msgstr "PIN neatbilst."
+
+msgid "New recording cannot be scheduled due to many conflicts with previously scheduled recordings"
+msgstr "Jaunais ieraksts konfliktē ar esošo ierakstu sarakstu"
+
+msgid "News"
+msgstr "Ziņas"
+
+msgid "News/Cultural affairs"
+msgstr "Ziņas"
+
+msgid "No Access (error code 1)"
+msgstr "Nav pieejas (kļūdas kods 1)"
+
+msgid "No Access (error code 10)"
+msgstr "Nav pieejas (kļūdas kods 10)"
+
+msgid "No Access (error code 11)"
+msgstr "Nav pieejas (kļūdas kods 11)"
+
+msgid "No Access (error code 12)"
+msgstr "Nav pieejas (kļūdas kods 12)"
+
+msgid "No Access (error code 2)"
+msgstr "Nav pieejas (kļūdas kods 2)"
+
+msgid "No Access (error code 3)"
+msgstr "Nav pieejas (kļūdas kods 3)"
+
+msgid "No Access (error code 4)"
+msgstr "Nav pieejas (kļūdas kods 4)"
+
+msgid "No Access (error code 5)"
+msgstr "Nav pieejas (kļūdas kods 5)"
+
+msgid "No Access (error code 6)"
+msgstr "Nav pieejas (kļūdas kods 6)"
+
+msgid "No Access (error code 7)"
+msgstr "Nav pieejas (kļūdas kods 7)"
+
+msgid "No Access (error code 8)"
+msgstr "Nav pieejas (kļūdas kods 8)"
+
+msgid "No Access (error code 9)"
+msgstr "Nav pieejas (kļūdas kods 9)"
+
+msgid "No Card Inserted"
+msgstr "Nav ievietota karte"
+
+msgid "No DiSEqC"
+msgstr "Nav DiSEqC"
+
+msgid "No access"
+msgstr "Nav pieejas"
+
+#, c-format
+msgid "No access (error code %i)"
+msgstr "Nav pieejas (kļūdas kods %i)"
+
+msgid "No access - geographical blackout"
+msgstr "Nav pieejas - ģeogrāfiskais aptumšojums"
+
+msgid "No access - network block"
+msgstr "Nav pieejas - nobloķēts tīkls"
+
+msgid "No channel"
+msgstr "Nav kanālu"
+
+msgid ""
+"No channels installed.\n"
+"Channel scanning is needed."
+msgstr ""
+"Kanāli netika uzstādīti.\n"
+"Nepieciešams veikt kanālu meklēšanu."
+
+msgid "No credits"
+msgstr "Nav kredīta"
+
+msgid "No debits"
+msgstr "Nav debita"
+
+msgid "No entries"
+msgstr "Nav ierakstu"
+
+msgid "No events"
+msgstr "Nav notikumu"
+
+msgid "No items"
+msgstr "Nav vienību"
+
+msgid "No list"
+msgstr "Nav saraksta"
+
+msgid "No messages"
+msgstr "Nav ziņu"
+
+msgid "No purses"
+msgstr "No purses"
+
+msgid "No results"
+msgstr "Nav rezultātu"
+
+msgid "No subscriptions"
+msgstr "Nav abonementu"
+
+msgid "No title"
+msgstr "Nav nosaukuma"
+
+msgid "Non compatible storage device detected (error 1)"
+msgstr "Nesavietojama datu iekārta (error 1)"
+
+msgid "Non compatible storage device detected, (error 3)"
+msgstr "Nesavietojama datu iekārta, (error 3)"
+
+msgid "Normal"
+msgstr "Normāls"
+
+msgid "Norwegian"
+msgstr "Norvēģu"
+
+msgid "Not Entitled"
+msgstr "Nav pieejams"
+
+msgid "Not enough tokens - please recharge Your card"
+msgstr "Nepietiek žetonu - lūdzam papildināt Jūsu karti"
+
+msgid "Not entitled"
+msgstr "Nav tiesību"
+
+msgid "Nov"
+msgstr "Novembris"
+
+msgid "Number of Sessions"
+msgstr "Sesiju numurs"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OSD/Banner Display Time"
+msgstr "OSD/Banera laiks"
+
+msgid "Oct"
+msgstr "Oktobris"
+
+msgid "Off"
+msgstr "izslēgt"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Old CA PIN field is not complete"
+msgstr "Vecā CA PIN lauks nav aizpildīts"
+
+msgid "Old PIN field is not complete."
+msgstr "Vecā PIN lauks nav aizpildīts"
+
+msgid "Old PIN:"
+msgstr "Vecais PIN:"
+
+msgid "Old pin is invalid."
+msgstr "Vecais PIN ir nepareizs"
+
+msgid "On"
+msgstr "Ieslēgt"
+
+msgid "Ongoing Recordings"
+msgstr "Notiekošie ieraksti"
+
+msgid "Original Format"
+msgstr "Oriģinālais formāts"
+
+msgid "Other"
+msgstr "Citāds"
+
+msgid "Override"
+msgstr "Ignorēt"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "PG: Parental Guidance"
+msgstr "PG: Vecāku kontrole"
+
+#, c-format
+msgid "PIN authentication blocked for %d minute"
+msgid_plural "PIN authentication blocked for %d minutes"
+msgstr[0] "PIN autentikācija bloķēta %d minūti"
+msgstr[1] "PIN autentikācija bloķēta %d minūtes"
+msgstr[2] "PIN autentikācija bloķēta %d minūtes"
+
+msgid "PIN change"
+msgstr "PIN maiņa"
+
+msgid "PIN confirmation does not match."
+msgstr "PIN apstiprinājums nesakrīt"
+
+msgid "PIN:"
+msgstr "PIN:"
+
+msgid "PLPID"
+msgstr "PLPID"
+
+msgid "PVR"
+msgstr "PVR"
+
+msgid "PVR End Margin"
+msgstr "PVR beigu robeža"
+
+msgid "PVR Start Margin"
+msgstr "PVR sākuma robeža"
+
+msgid "Parental control"
+msgstr "Vecāku kontrole"
+
+msgid "Paris, Berlin, Warsaw, Rome"
+msgstr "Paris, Berlin, Warsaw, Rome"
+
+msgid "Password"
+msgstr "Parole"
+
+msgid "Pin change successful."
+msgstr "PIN nomaiņa ir veiksmīga"
+
+msgid "Play"
+msgstr "Atskaņot"
+
+msgid "Play Trailer"
+msgstr "Atskaņot treileri"
+
+msgid "Play from the beginning"
+msgstr "Rādīt no sākuma"
+
+#, c-format
+msgid "Playback failed with error code: %d"
+msgstr "Atskaņošanas kļūda: %d"
+
+msgid "Playlist error"
+msgstr "Saraksta kļūda"
+
+msgid "Please Wait"
+msgstr "Lūdzu gaidiet"
+
+msgid "Please confirm new CA PIN:"
+msgstr "Apstipriniet jauno CA PIN:"
+
+msgid "Please enter CA PIN"
+msgstr "Ievadiet CA PIN"
+
+msgid "Please enter CA PIN:"
+msgstr "Ievadiet CA PIN:"
+
+msgid "Please enter Conax PIN"
+msgstr "Ievadiet jauno Conax PIN"
+
+msgid "Please enter Conax PIN to play choosen content"
+msgstr "Lai skatītos, ievadiet CONAX PIN."
+
+msgid "Please enter Middleware PIN"
+msgstr "Ievadiet Middleware PIN"
+
+msgid "Please enter Middleware PIN to play choosen content"
+msgstr "Lai skatītos, ievadiet MIddleware PIN."
+
+msgid "Please enter WEP key"
+msgstr "Ievadiet WEP atslēgu"
+
+msgid "Please enter WPA password"
+msgstr "Ievadiet WPA paroli"
+
+msgid "Please enter WPA2 password"
+msgstr "Ievadiet WPA2 paroli"
+
+msgid "Please enter new CA PIN:"
+msgstr "Lūdzu ievadiet jauno CA PIN:"
+
+msgid "Please enter parental control PIN"
+msgstr "Ievadiet vecāku kontroles PIN"
+
+msgid "Please enter parental control PIN to play choosen content"
+msgstr "Ievadiet vecāku kontroles PIN, lai skatītos"
+
+msgid "Please enter parental control PIN to remove all recordings"
+msgstr "Lai izdzēstu visus ierakstus, ievadiet vecāku kontroles PIN"
+
+msgid "Please wait"
+msgstr "Lūdzu gaidiet"
+
+msgid "Please wait, loading…"
+msgstr "Gaidiet, ielādējas…"
+
+msgid "Please wait."
+msgstr "Lūdzu gaidiet"
+
+msgid "Please wait..."
+msgstr "Lūdzu gaidiet..."
+
+msgid "Polarization"
+msgstr "Polarizācija"
+
+msgid "Polish"
+msgstr "Poļu"
+
+msgid "Preferred Audio Track"
+msgstr "Noklusētais Audio celiņš"
+
+msgid "Press OK to browse"
+msgstr "Nospiediet OK, lai turpinātu"
+
+msgid "Press OK to browse or OPT to format for PVR"
+msgstr "Nospiediet Opt, lai pārlūkotu failus vai formatētu ierakstam"
+
+msgid "Press OPT to format for PVR"
+msgstr "Nospiediet OPT, lai formatētu ierakstam"
+
+msgid "Press Opt for more options"
+msgstr "Nospiediet Opt papildu iespējām"
+
+#, c-format
+msgid "Previous firmware version: %s"
+msgstr "Iepriekšējā firmware versija: %s"
+
+#, c-format
+msgid "Price: %i.%02i %s"
+msgstr "Cena: %i.%02i %s"
+
+#, c-format
+msgid "Price: %i.%02i%s"
+msgstr "Cena: %i.%02i%s"
+
+msgid "Primary Audio Language"
+msgstr "Primārā Audio valoda"
+
+msgid "Primary Subtitle Language"
+msgstr "Primārā Subtitru valoda"
+
+msgid "Proceed"
+msgstr "Turpināt"
+
+#, c-format
+msgid "Protocol not supported: %d"
+msgstr "Neatbalsta protokolu:%d"
+
+#, c-format
+msgid "Purse: %s"
+msgstr "Purse: %s"
+
+msgid "Quality"
+msgstr "Kvalitāte"
+
+msgid "Quota"
+msgstr "Kvota"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Radio"
+msgstr "Radio"
+
+msgid "Rearrange list"
+msgstr "Pārvietot sarakstu"
+
+msgid "Record"
+msgstr "Ieraksts"
+
+msgid "Record always"
+msgstr "Ierakstīt vienmēr"
+
+msgid "Record repeatedly"
+msgstr "Ierakstīt atkārtoti"
+
+msgid "Remind me"
+msgstr "Atgādināt"
+
+msgid "Reminder"
+msgstr "Atgādinājums"
+
+msgid "Reminders"
+msgstr "Atgādinājumi"
+
+msgid "Remove"
+msgstr "Dzēst"
+
+msgid "Remove dir"
+msgstr "Dzēst mapi"
+
+msgid "Remove list"
+msgstr "Dzēst sarakstu"
+
+msgid "Remove reminder"
+msgstr "Noņemt atgādinājumu"
+
+msgid "Rename dir"
+msgstr "Pārdēvēt mapi"
+
+msgid "Rename list"
+msgstr "Pārdēvēt sarakstu"
+
+msgid "Rent"
+msgstr "Nomāt"
+
+msgid "Rental period expired"
+msgstr "Nomas periods beidzies"
+
+#, fuzzy
+msgid "Rental period for this content has expired."
+msgstr "Šā satura nomas periods beidzies"
+
+#, c-format
+msgid "Rental period: %i %s"
+msgstr "Nomas laiks: %i %s"
+
+msgid "Repeat"
+msgstr "Atkārtot"
+
+msgid "Repeat new PIN:"
+msgstr "Atkārtot jauno PIN:"
+
+msgid "Requested EMM but not EMM was provided"
+msgstr "Pieprasīts EMM, bet EMM netika nodrošināts"
+
+msgid "Resolve conflicts"
+msgstr "Atrisināt konfliktus"
+
+msgid "Restart Device"
+msgstr "Pārstartēt iekārtu"
+
+msgid "Restore Factory Defaults"
+msgstr "Atjaunot rūpnīcas uzstādījumus"
+
+msgid "Results - Failure"
+msgstr "Rezultāts - neveiksmīgs"
+
+msgid "Results - Success"
+msgstr "Rezultāts - sekmīgs"
+
+msgid "Retrieving channel list"
+msgstr "Iegūst kanālu sarakstu"
+
+msgid "Reykjavík"
+msgstr "Reykjavík"
+
+msgid "Russian"
+msgstr "Krievu"
+
+msgid "S/PDIF A/V Sync"
+msgstr "S/PDIF A/V Sync"
+
+msgid "SCART Signal Type"
+msgstr "SCART signāla tips"
+
+msgid "Santiago"
+msgstr "Santiago"
+
+msgid "Satellite"
+msgstr "Satelīts"
+
+msgid "Satellite %s is not setup yet"
+msgstr "Satelīts %s nav vēl uzstādīts"
+
+msgid "Satellite Info"
+msgstr "Satelīta informācija"
+
+msgid "Satellite Name"
+msgstr "Satelīta nosaukums"
+
+msgid "Satellite Name:"
+msgstr "Satelīta nosaukums"
+
+msgid "Satellite Setup"
+msgstr "Satelīta uzstādīšana"
+
+msgid "Save"
+msgstr "Saglabāt"
+
+msgid "Saving..."
+msgstr "Saglabā..."
+
+msgid "Scan Type"
+msgstr "Skanēšanas veids"
+
+msgid "Scanning Standard"
+msgstr "Skanēšanas standarts"
+
+msgid "Scanning channels"
+msgstr "Kanālu meklēšana"
+
+msgid "Schedule keyword recording"
+msgstr "Uzstādīt ierakstu pēc atslēgvārda"
+
+msgid "Schedule manual recording"
+msgstr "Uzstādīt manuālu ierakstu"
+
+msgid "Scheduled Recordings"
+msgstr "Ierakstu saraksts"
+
+msgid "Screensaver Timeout"
+msgstr "Ekrānsaudzētāja laiks"
+
+msgid "Search"
+msgstr "Meklēšana"
+
+msgid "Search By Category"
+msgstr "Meklēt pēc kategorijas"
+
+msgid "Search By Name"
+msgstr "Meklēt pēc vārda"
+
+msgid "Search in progress..."
+msgstr "Meklēšana.."
+
+#, c-format
+msgid "Search: %d result"
+msgid_plural "Search: %d results"
+msgstr[0] "Meklēšana: %d resultāts"
+msgstr[1] "Meklēšana: %d resultāti"
+msgstr[2] "Meklēšana: %d resultāti"
+
+msgid "Searching for channels"
+msgstr "Meklē kanālus "
+
+msgid "Searching..."
+msgstr "Meklē..."
+
+msgid "Secondary Audio Language"
+msgstr "Otrā Audio valoda"
+
+msgid "Secondary Subtitle Language"
+msgstr "Otrā Subtitru valoda"
+
+msgid "See all from"
+msgstr "Apskatīties visu no"
+
+msgid "Select OK to remove all data from your disk."
+msgstr "Nospiediet OK, lai dzēstu visus datus."
+
+msgid "Select Time Zone"
+msgstr "Izvēlēties laika zonu"
+
+#, c-format
+msgid "Select audio delay on %s output"
+msgstr "Izvēlēties audio aizturi %s izejā"
+
+msgid "Select new Maturity Rating (CA PIN needed)"
+msgstr "Izvēlieties jauno vecuma cenzu (nepieciešams CA PIN)"
+
+msgid "Sep"
+msgstr "Septembris"
+
+#, c-format
+msgid "Server communication error: %d"
+msgstr "Servera komunikācijas kļūda: %d"
+
+msgid "Service Name"
+msgstr "Pakalpojuma nosaukums"
+
+msgid "Set Current Time"
+msgstr "Uzstādīt pašreizējo laiku"
+
+msgid "Setup"
+msgstr "Uzstādījumi"
+
+#, c-format
+msgid "Shorten recording to %s"
+msgstr "Saīsināt ierakstu par %s"
+
+msgid "Show similar"
+msgstr "Rādīt līdzīgos"
+
+msgid "Show/Game show"
+msgstr "Šovs"
+
+msgid "Sign Off"
+msgstr "Iziet"
+
+msgid "Signal - OK"
+msgstr "Signāls - OK"
+
+msgid "Signal Quality"
+msgstr "Signāla kvaitāte"
+
+msgid "Signal Strength"
+msgstr "Signāla stiprums"
+
+msgid "Signal lost - check cable"
+msgstr "Nav signāla, pārbaudiet kabeli"
+
+msgid "Social Media"
+msgstr "Sociālie tīkli"
+
+msgid "Social/Political issues/Economics"
+msgstr "Politika/ekonomika"
+
+msgid "Software"
+msgstr "Programmnodrošinājums"
+
+msgid "Software Update"
+msgstr "Programmnodrošinājuma atjaunināšana"
+
+msgid "Software Version"
+msgstr "Programmnodrošinājuma versija"
+
+msgid "Spanish"
+msgstr "Spāņu"
+
+#, fuzzy
+msgid "Special"
+msgstr "Īpašs"
+
+msgid "Sport"
+msgstr "Sports"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Standard"
+msgstr "Standarts"
+
+msgid "Start"
+msgstr "Sākt"
+
+msgid "Start Frequency"
+msgstr "Sākuma frekvence"
+
+msgid "Start date                End date"
+msgstr "Sākuma datums                Beigu datums"
+
+msgid "Start date      End date"
+msgstr "Sākuma datums      Beigu datums"
+
+msgid "Start time"
+msgstr "Sākuma laiks"
+
+#, c-format
+msgid ""
+"Start viewing\n"
+"%s\n"
+"Minutes viewing time left: %i\n"
+"Please enter CA PIN to start viewing:"
+msgstr ""
+"Sākt skatīšanos\n"
+"%s\n"
+"Atlikušais skatīšanās laiks: %i\n"
+"Ievadiet CA PIN, lai sāktu skatīties:"
+
+msgid "Static"
+msgstr "Statiska"
+
+#, c-format
+msgid "Status: %u%% downloaded"
+msgstr "Statuss: %u%% lejupielādēti"
+
+msgid "Status: Download scheduled"
+msgstr "Statuss: Ieplānota lejupielāde"
+
+msgid "Status: Not available"
+msgstr "Statuss: Nav pieejams"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stop channel recording"
+msgstr "Apturēt kanālu ierakstu"
+
+msgid "Stop keyword recording"
+msgstr "Apturēt ierakstu pēc atslēgvārda"
+
+msgid "Stop recording"
+msgstr "Apturēt ierakstu"
+
+msgid "Stop repeated recording"
+msgstr "Apturēt atkārtoto ierakstu"
+
+msgid "Stop using for PVR"
+msgstr "Apturēt PVR"
+
+msgid "Strength"
+msgstr "Stiprums"
+
+msgid "Stretched"
+msgstr "Izstiepts"
+
+msgid "Subscription Status"
+msgstr "Abonēšanas statuss"
+
+msgid "Subtitle Language"
+msgstr "Subtitru valoda"
+
+msgid "Swedish"
+msgstr "Zviedru"
+
+msgid "Switch to channel"
+msgstr "Pārslēgt uz kanālu"
+
+msgid "Symbol Rate"
+msgstr "Symbol Rate"
+
+#, c-format
+msgid "Symbol Rate: %d"
+msgstr "Symbol Rate: %d"
+
+msgid "System Information"
+msgstr "Sistēmas informācija"
+
+msgid "System Settings"
+msgstr "Sistēmas uzstādījumi"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "TV Aspect Ratio"
+msgstr "TV malu attiecība"
+
+msgid "TV Guide"
+msgstr "TV Gids"
+
+msgid "TV System"
+msgstr "TV sistēma"
+
+msgid "Terrestrial"
+msgstr "Virszemes"
+
+msgid "There are too many ongoing recordings. Please stop some to watch this channel again."
+msgstr "Pārāk daudz esošo ierakstu. Apturiet tos, lai skatītos kanālu."
+
+msgid "This action triggers device reboot. Are you sure?"
+msgstr "Šī darbība pārstartēs ierīci. Vai esat pārliecināts?"
+
+msgid "This reminder will override the following reminders:\n"
+msgstr "Šis atgādinājums ignorēs sekojošus atgādinājumus :\n"
+
+msgid "Time"
+msgstr "Laiks"
+
+msgid "Time Mode"
+msgstr "Laika režīms"
+
+msgid "Time Settings"
+msgstr "Laika uzstādījumi"
+
+msgid "Time Zone"
+msgstr "Laika zona"
+
+#, c-format
+msgid "Title: %s"
+msgstr "Nosaukums: %s"
+
+#, c-format
+msgid ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+msgstr ""
+"Token access\n"
+"%s\n"
+"%d token(s)%s\n"
+"Purse balance: %s %d tokens\n"
+"%s"
+
+msgid "Tokens Status"
+msgstr "Žetonu Statuss"
+
+#, c-format
+msgid "Tokens: %d"
+msgstr "Žetoni: %d"
+
+#, c-format
+msgid ""
+"Tokens: %d\n"
+"Last access: %s"
+msgstr ""
+"Žetoni: %d\n"
+"Pēdējā piekļuve: %s"
+
+msgid "Too many simultaneous recordings."
+msgstr "Pārāk daudz vienlaicīgu ierakstu."
+
+#, fuzzy, c-format
+msgid "Track %d"
+msgstr "Ieraksts %d"
+
+msgid "Trailer"
+msgstr "Treileris"
+
+msgid "Tuner Type"
+msgstr "Uztvērēja tips"
+
+msgid "Tuner is not available"
+msgstr "Uztvērējs nav pieejams"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Unable to change settings while recording is active"
+msgstr "Ieraksta gaitā uzstādījumus nevar mainīt."
+
+msgid "Unable to save. Keyword is too short."
+msgstr "Nevar saglabāt. Atslēgvārds ir parāk īss."
+
+#, c-format
+msgid "Unexpected server response: %d"
+msgstr "Neparedzēta servera atbilde: %d"
+
+msgid "Unfortunately VoD service is not available."
+msgstr "Diemžēl video nomas pakalpojums nav pieejams"
+
+msgid "Unknown"
+msgstr "Nezināms"
+
+msgid "Unlimited"
+msgstr "Neierobežots"
+
+msgid "Unlock"
+msgstr "Atslēgt"
+
+msgid "Unmounting..."
+msgstr "Atvieno..."
+
+msgid "Unread messages!"
+msgstr "Neizlasītas ziņas!"
+
+msgid "Update now"
+msgstr "Atjaunināt tagad"
+
+msgid "Update will take about 10 minutes. During this time screen may blink and you won't be able to use your STB."
+msgstr "Atjaunināšana aizņems 10 minūtes. Šajā laikā ekrāns var mirgot un uztvērējs Jums nebūs pieejams."
+
+msgid "Use NIT/SDT"
+msgstr "Lietot NIT/SDT"
+
+msgid "Use for PVR"
+msgstr "PVR lietošana"
+
+msgid "Used for PVR"
+msgstr "Izmantot PVR"
+
+msgid "User Interface"
+msgstr "Lietotāja saskarne"
+
+msgid "VOD"
+msgstr "VOD"
+
+#, c-format
+msgid "Version: %s"
+msgstr "Versija: %s"
+
+#, c-format
+msgid "Version: %s, Network: %s"
+msgstr "Versija: %s, Tīkls: %s"
+
+msgid "Vertical"
+msgstr "Vertikāls"
+
+msgid "Visually Impaired"
+msgstr "Vājredzīgiem"
+
+msgid "VoD unavailable"
+msgstr "Video noma nav pieejama"
+
+msgid "WEB on TV"
+msgstr "Internets TV"
+
+msgid "Waiting for channels"
+msgstr "Gaida kanālus"
+
+msgid "Waiting for channels..."
+msgstr "Gaida kanālus..."
+
+msgid "Warning"
+msgstr "Brīdinājums"
+
+msgid "Weekdays"
+msgstr "Darba dienās"
+
+msgid "Weekends"
+msgstr "Brīvdienās"
+
+msgid "Weekly"
+msgstr "Iknedēļas"
+
+msgid "WiFi Network Type"
+msgstr "WIFI tīkla tips"
+
+msgid "WiFi Password"
+msgstr "WIFI parole"
+
+msgid "WiFi Session ID"
+msgstr "WIFI sesijas ID"
+
+msgid "WiFi settings"
+msgstr "WIFI uzstādījumi"
+
+msgid "Wired (Ethernet)"
+msgstr "Vadu (Ethernet)"
+
+msgid "Wireless (WiFi)"
+msgstr "Bezvadu (WiFi)"
+
+msgid "Would You like to do it now?"
+msgstr "Vai vēlaties to darīt tagad?"
+
+msgid "Wrong CA PIN."
+msgstr "Nepareizs CA PIN."
+
+msgid "X: Erotic"
+msgstr "X: Erotika"
+
+msgid "You are not entitled to view this channel"
+msgstr "Nav pieejas kanālam"
+
+msgid "You are not entitled to view this content"
+msgstr "Jums nav pieejas šim saturam"
+
+msgid "You don't have enough free space to make a new recording."
+msgstr "Nepietiek vietas jaunam ierakstam."
+
+msgid "You got mail"
+msgstr "Ir pasta ziņojums"
+
+msgid "You have too many directories."
+msgstr "Pārāk daudz mapju"
+
+msgid "You have too many favorites lists."
+msgstr "Pārāk daudz favorītu sarakstu."
+
+msgid "You have too many keyword recordings."
+msgstr "Pārāk daudz ierakstu ar atslēgvārdiem."
+
+msgid "You have too many recordings."
+msgstr "Pārāk daudz ierakstu."
+
+msgid "You need to perform manual channel scanning to start using VoD service."
+msgstr "Lai sāktu izmantot video nomas pakalpojumu, jums ir jāveic manuālā kanālu meklēšana"
+
+#, fuzzy, c-format
+msgid "You will be soon zapped to %s."
+msgstr "You will be soon zapped to %s."
+
+#, c-format
+msgid "Your TV is currently connected to an inactive output on this set-top box. Please press VOUT button on your remote control to activate this output or connect your TV to the %s output."
+msgstr "Televizors ir pieslēgts neaktīvai video izejai. Uz pults Nospiediet VOUT poguun aktivizējiet šo izeju vai pieslēdziet TV pie %s izejas."
+
+#, c-format
+msgid ""
+"Your new recording conflicts with %i previously scheduled recording. Would you like to:\n"
+"\n"
+msgid_plural ""
+"Your new recording conflicts with %i previously scheduled recordings. Would you like to:\n"
+"\n"
+msgstr[0] ""
+"Jaunais ieraksts konfliktē ar %i esošo ierakstu. Vai vēlaties:\n"
+"\n"
+msgstr[1] ""
+"Jaunais ieraksts konfliktē ar %i esošajiem ierakstiem. Vai vēlaties:\n"
+"\n"
+msgstr[2] ""
+"Jaunais ieraksts konfliktē ar %i esošajiem ierakstiem. Vai vēlaties:\n"
+"\n"
+
+msgid "[completed]"
+msgstr "[pabeigts]"
+
+msgid "[failed]"
+msgstr "[neizdevies]"
+
+msgid "[interrupted]"
+msgstr "[pārtraukts]"
+
+msgid "[missed]"
+msgstr "[neveiksmīgs]"
+
+msgid "[recording]"
+msgstr "[ieraksts]"
+
+msgid "[scheduled]"
+msgstr "[uzstādīts]"
+
+msgid "[stopped manually]"
+msgstr "[apturēts manuāli]"
+
+msgid "[stopped – no source]"
+msgstr "[apturēts - nav avota]"
+
+msgid "[stopped – no space]"
+msgstr "[apturēts vietas trūkuma dēļ]"
+
+#, c-format
+msgid "about %d SD hour or "
+msgid_plural "about %d SD hours or "
+msgstr[0] "Apmēram %d SD stunda vai "
+msgstr[1] "Apmēram %d SD stundas vai "
+msgstr[2] "Apmēram %d SD stundas vai "
+
+#, c-format
+msgid "about %d hour left"
+msgid_plural "about %d hours left"
+msgstr[0] "palikusi %d stunda"
+msgstr[1] "palikušas %d stundas"
+msgstr[2] "palikušas %d stundas"
+
+msgid "automatic"
+msgstr "automātiski"
+
+msgid "chkflash"
+msgstr "Pārbauda Flash partīcijas"
+
+msgid "config"
+msgstr "Ieraksta konfigurāciju"
+
+msgid "done"
+msgstr "pabeigts"
+
+msgid "download"
+msgstr "lejupielādē pakotni"
+
+msgid "element"
+msgstr "elements"
+
+msgid "format_long"
+msgstr ""
+"Notiek diska formatēšana\n"
+"\n"
+"Diska formatēšana var aizņemt 3 līdz 5 minūtes.\n"
+"Lūdzu NEIZSLĒDZIET uztvērēju!\n"
+"\n"
+"Uztvērējs automātiski ieslēgsies\n"
+"pēc formatēšanas beigām."
+
+msgid "formating"
+msgstr "formatē"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "stunda"
+msgstr[1] "stundas"
+msgstr[2] "stundas"
+
+msgid "kernel"
+msgstr "Apstrādā KERNEL"
+
+msgid "less than HD hour left"
+msgstr "Palicis mazāk par vienu HD stundu"
+
+msgid "less than hour left"
+msgstr "palicis mazāk par stundu"
+
+msgid "logo"
+msgstr "Apstrādā LOGO"
+
+msgid "manual"
+msgstr "manuāli"
+
+msgid "new"
+msgstr "jauns"
+
+#, fuzzy
+msgid "off"
+msgstr "izslēgt"
+
+msgid "prev"
+msgstr "iepr"
+
+msgid "result"
+msgid_plural "results"
+msgstr[0] "rezultāts"
+msgstr[1] "rezultāti"
+msgstr[2] "rezultāti"
+
+msgid "rootfs"
+msgstr "Apstrādā ROOTFS"
+
+msgid "today"
+msgstr "šodien"
+
+msgid "tomorrow"
+msgstr "rīt"
+
+msgid "unknown"
+msgstr "nezināms"
+
+msgid "unlimited"
+msgstr "bez ierobežojuma"
+
+msgid "upgrade_long"
+msgstr ""
+"Firmware atjaunināšana var aizņemt 10 līdz 15 minūtes.\n"
+"Lūdzu NEIZSLĒDZIET uztvērēju.\n"
+"Uztvērējs pārstartēsies pēc programmnodrošinājuma atjaunināšanas."
+
+msgid "usr"
+msgstr "Apstrādā USR"
+
+msgid "verify"
+msgstr "pārbauda pakotni"
+
+msgid "writing"
+msgstr "Uzstāda Firmware"
+
+#~ msgid "%i.%02i %s"
+#~ msgstr "%i.%02i %s"
+
+#~ msgid "576p"
+#~ msgstr "576p"
+
+#~ msgid "Block channels"
+#~ msgstr "Bloķēt kanālus"
+
+#~ msgid "Cable modem"
+#~ msgstr "Kabeļmodems"
+
+#~ msgid "Changing application mode requires device reboot. Are you sure?"
+#~ msgstr ""
+#~ "Lai mainītu režīmu, nepieciešams pārstartēt iekārtu. Vai esat "
+#~ "pārliecināts?"
+
+#~ msgid "Español"
+#~ msgstr "Spāņu"
+
+#~ msgid "HDTV"
+#~ msgstr "HDTV"
+
+#~ msgid "Latviešu"
+#~ msgstr "Latvian"
+
+#~ msgid "MUST format storage for use, press OPT button"
+#~ msgstr "Lai lietotu ir jāformatē, nospiediet OPT taustiņu"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %d)"
+#~ msgstr ""
+#~ "No access\n"
+#~ "Not activated (error code %d)"
+
+#~ msgid ""
+#~ "No access\n"
+#~ "Not activated (error code %i)"
+#~ msgstr ""
+#~ "No access\n"
+#~ "Not activated (error code %i)"
+
+#~ msgid "Polski"
+#~ msgstr "Poļu"
+
+#~ msgid "Remove channel"
+#~ msgstr "Dzēst kanālu"
+
+#~ msgid "Scheduled recordings"
+#~ msgstr "Ierakstu grafiks"
+
+#~ msgid "Subscription status"
+#~ msgstr "Parakstīšanās statuss"
+
+#~ msgid "Suomi"
+#~ msgstr "Somu"
+
+#~ msgid "Svenska"
+#~ msgstr "Zviedru"
+
+#~ msgid "Transaction failed"
+#~ msgstr "Transakcija neizdevās"
+
+#~ msgid "Unknown error"
+#~ msgstr "Nezināma kļūda"
+
+#~ msgid "You have too many manual recordings."
+#~ msgstr "Pārāk daudz manuālo ierakstu."
+
+#~ msgid "You have too many recordings"
+#~ msgstr "Pārāk daudz ierakstu"
+
+#~ msgid "about %d SD hour"
+
+#~ msgid_plural "about %d SD hours"
+#~ msgstr[0] "apmēram %d SD stunda"
+#~ msgstr[1] "apmēram %d SD stundas"
+#~ msgstr[2] "apmēram %d SD stundas"

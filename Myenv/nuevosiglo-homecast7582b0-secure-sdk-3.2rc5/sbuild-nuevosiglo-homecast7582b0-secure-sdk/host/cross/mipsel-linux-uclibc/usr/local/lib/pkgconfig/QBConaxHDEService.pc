@@ -1,0 +1,6 @@
+Name: QBConaxHDEService
+Version: 1.0.0
+Requires: QBShellCmds SvCore SvFoundation SvQuirks fibers 
+Description: Utilities for handling Host Data Extensions
+Libs: -lQBConaxHDEService 
+CFlags: 

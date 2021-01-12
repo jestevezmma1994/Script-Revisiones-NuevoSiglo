@@ -1,0 +1,87 @@
+{
+    "credit": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "idKey": "personId",
+        "map": {
+            "personForPersonId": "person"
+          
+        },
+
+        "resolve": [
+            "person"
+        ]
+    },
+
+    "person": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "idKey": "personId"
+    },
+
+    "contentSummaryForPerson": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "type": "collection",
+        "idKey": "collectionId"
+    },
+
+    "mix": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "idKey": "mixId",
+        "typeKey": "leafObjectType",
+        "type": "service",
+        "map" : {
+            "gridItemType" : "collectionType"
+            }
+        
+    },
+
+
+    "offer": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "type": "collection",
+        "idKey": "collectionId",
+        "map" : {
+            "collectionTitle" : "title"
+            }
+    },
+
+
+    "contentGroup": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "idKey": "id"
+    },
+
+    "collection": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "idKey": "collectionId"
+    },
+
+    "content": {
+        "__jsonclass__": [
+            "ContentMapperDesc",
+            []
+                ],
+        "idKey": "contentId"
+    }
+}
+

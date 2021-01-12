@@ -1,0 +1,33 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+IPCPATH="/var/run/networking/QBNetworkManager_api"
+
+LOCAL_ADDR=`echo "$LOCAL_ADDR" | tr -cd '.[:digit:]'`
+LOCAL_PORT=`echo "$LOCAL_PORT" | tr -cd '.[:digit:]'`
+REMOTE_ADDR=`echo "$REMOTE_ADDR" | tr -cd '.[:digit:]'`
+REMOTE_PORT=`echo "$REMOTE_PORT" | tr -cd '.[:digit:]'`
+INTERNAL_ADDR4=`echo "$INTERNAL_ADDR4" | tr -cd '.[:digit:]'`
+INTERNAL_NETMASK4=`echo "$INTERNAL_NETMASK4" | tr -cd '.[:digit:]'`
+INTERNAL_DNS4=`echo "$INTERNAL_DNS4" | tr -cd '.[:digit:]'`
+
+QBIPCSend $IPCPATH "#ipSecVPNStatusChanged#disconnected#$LOCAL_ADDR#$LOCAL_PORT#$REMOTE_ADDR#$REMOTE_PORT#$INTERNAL_ADDR4#$INTERNAL_NETMASK4#$INTERNAL_DNS4#0#"
+
+setkey -F
+
+LOCAL="${LOCAL_ADDR}"
+REMOTE="${REMOTE_ADDR}"
+if [ "x${LOCAL_PORT}" != "x500" ]; then
+	LOCAL="${LOCAL}[${LOCAL_PORT}]"
+	REMOTE="${REMOTE}[${REMOTE_PORT}]"
+fi
+
+echo "
+deleteall ${REMOTE_ADDR} ${LOCAL_ADDR} esp;
+deleteall ${LOCAL_ADDR} ${REMOTE_ADDR} esp; 
+spddelete ${INTERNAL_ADDR4}/32[any] 0.0.0.0/0[any] any
+	-P out ipsec esp/tunnel/${LOCAL}-${REMOTE}/require;
+spddelete 0.0.0.0/0[any] ${INTERNAL_ADDR4}[any] any
+	-P in ipsec esp/tunnel/${REMOTE}-${LOCAL}/require;
+" | setkey -c
+

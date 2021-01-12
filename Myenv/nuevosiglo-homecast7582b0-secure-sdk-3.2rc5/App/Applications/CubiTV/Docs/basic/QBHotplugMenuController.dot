@@ -1,0 +1,7 @@
+digraph QBHotplugMenuController {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    QBHotplugMenuController [URL="\N.html" root=true]
+
+    QBHotplugMenuController -> ExternalPVRDisk
+}

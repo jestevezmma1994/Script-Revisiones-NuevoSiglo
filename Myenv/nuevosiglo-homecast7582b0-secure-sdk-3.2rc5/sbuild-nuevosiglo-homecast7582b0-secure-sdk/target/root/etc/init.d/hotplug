@@ -1,0 +1,24 @@
+#!/bin/sh
+
+umask 0007
+
+case $1 in
+    start)
+        mkdir -p /var/run/hotplug/
+        chown 0:1000 /var/run/hotplug
+
+        # this is specific to hotplug_app_messenger script
+        mkdir -p /var/run/hotplug/app/
+        chown 0:1000 /var/run/hotplug/app
+
+        QBHotplugDaemon /var/run/hotplug/daemon_socket </dev/null 1>/dev/null 2>/dev/null &
+        echo "/usr/local/bin/QBHotplugHandler" > /proc/sys/kernel/hotplug
+        ;;
+    stop)
+        echo "/sbin/hotplug" > /proc/sys/kernel/hotplug
+        killall QBHotplugDaemon
+        ;;
+    *)
+        echo "Usage: $0 [start|stop]"
+        ;;
+esac

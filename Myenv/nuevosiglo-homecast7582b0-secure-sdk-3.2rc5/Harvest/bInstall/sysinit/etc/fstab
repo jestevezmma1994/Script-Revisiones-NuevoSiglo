@@ -1,0 +1,5 @@
+/dev/root	/		squashfs	noatime		0 0
+nodev		/proc		proc		defaults	0 0
+nodev		/proc/bus/usb	usbdevfs	defaults	0 0
+nodev		/dev/pts	devpts		defaults	0 0
+nodev           /dev/shm	tmpfs		defaults,mode=770,uid=0,gid=1000	0 0

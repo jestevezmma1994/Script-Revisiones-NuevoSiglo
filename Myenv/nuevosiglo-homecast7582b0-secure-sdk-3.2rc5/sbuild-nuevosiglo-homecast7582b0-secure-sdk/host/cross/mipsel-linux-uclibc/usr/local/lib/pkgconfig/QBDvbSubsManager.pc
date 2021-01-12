@@ -1,0 +1,6 @@
+Name: QBDvbSubsManager
+Version: 1.0.0
+Requires: CUIT QBDvbSubs QBSubsManager QBTSParser SvPlayerControllers SvPlayerManager mpeg2 
+Description: manager for printing dvb subtitles
+Libs: -lQBDvbSubsManager 
+CFlags: 

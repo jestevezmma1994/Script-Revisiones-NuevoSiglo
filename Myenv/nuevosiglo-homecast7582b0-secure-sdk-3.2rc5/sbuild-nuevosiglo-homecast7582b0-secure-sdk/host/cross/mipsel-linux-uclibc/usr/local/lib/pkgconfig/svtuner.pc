@@ -1,0 +1,6 @@
+Name: svtuner
+Version: 1.0.0
+Requires: QBTSParser QBTuner QBTunerHAL SvCore SvProfile fibers mpeg2 sv-list 
+Description: Sentivision tuner wrapper
+Libs: -lsvtuner 
+CFlags: 

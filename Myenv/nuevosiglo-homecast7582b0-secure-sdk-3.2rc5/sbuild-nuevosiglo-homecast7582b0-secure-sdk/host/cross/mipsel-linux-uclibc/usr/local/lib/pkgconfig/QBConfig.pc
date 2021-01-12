@@ -1,0 +1,6 @@
+Name: QBConfig
+Version: 1.0.0
+Requires: QBConfigCore QBSecureLogManager SvFoundation 
+Description: Cubiware configuration storing library
+Libs: -lQBConfig 
+CFlags: 

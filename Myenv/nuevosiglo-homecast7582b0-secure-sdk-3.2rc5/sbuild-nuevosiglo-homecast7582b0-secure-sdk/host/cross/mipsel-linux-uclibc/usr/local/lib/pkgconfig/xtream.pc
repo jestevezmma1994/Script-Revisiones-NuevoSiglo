@@ -1,0 +1,6 @@
+Name: xtream
+Version: 1.0.0
+Requires: QBTextUtils SvCore SvProfile SvQuirks 
+Description: Fast storage library designed for raw disk IO
+Libs: -lxtream -lpthread 
+CFlags: 

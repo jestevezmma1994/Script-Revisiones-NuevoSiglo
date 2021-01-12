@@ -1,0 +1,6 @@
+Name: QBViewRightWeb
+Version: 1.0.0
+Requires: QBAppKit QBHlsKeyProvider SvCore SvFoundation viewrightweb 
+Description: Cubiware's wrapper for Verimatrix ViewRightWeb library. It provides keys for encrypted HLS content.
+Libs: -lQBViewRightWeb 
+CFlags: 

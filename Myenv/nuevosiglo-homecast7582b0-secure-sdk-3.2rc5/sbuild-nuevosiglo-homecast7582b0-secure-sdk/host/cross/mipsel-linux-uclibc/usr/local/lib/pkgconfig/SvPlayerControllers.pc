@@ -1,0 +1,6 @@
+Name: SvPlayerControllers
+Version: 1.0.0
+Requires: QBDecoder SvCore SvFoundation SvQuirks 
+Description: Player Controllers
+Libs: -lSvPlayerControllers 
+CFlags: 

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?><settings version="1.5" xmlns="http://cubiware.com/settings-v1-5.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="fonts.settings"/>
+
+    <widget name="TVPreview">
+        <common>
+            <param tag="textColor"><color>9e9e9eff</color></param>
+            <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+            <param tag="font">
+                <ref constant="NormalFont"/>
+            </param>
+        </common>
+        <param tag="xOffset"><int>811</int></param>
+        <param tag="yOffset"><int>78</int></param>
+        <param tag="width"><int>404</int></param>
+        <param tag="height"><int>232</int></param>
+        <param tag="border"><int>3</int></param>
+    </widget>
+</settings>

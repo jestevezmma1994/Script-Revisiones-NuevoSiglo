@@ -1,0 +1,12 @@
+[
+    {
+        "i18n_gettext": [ "text" ],
+        "id": "UTF-8",
+        "text": "UTF-8",
+
+        "__jsonclass__": [
+                "QBBasicPaneItemParams",
+                []
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+digraph Channels {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Channels [label="Channels" root=true]
+
+
+    operateScanningManager
+    QBBackgroundDVBScan
+    QBConaxPullEMMService
+    TVChannelSearchAgent
+    channelMetaStorage
+    channelStorage
+    epgMonitor
+    epgWatcher
+    playlistCursor
+    playlistManager
+    sdtMonitor
+
+
+    Channels -> operateScanningManager
+    Channels -> QBBackgroundDVBScan
+    Channels -> QBConaxPullEMMService
+    Channels -> TVChannelSearchAgent
+    Channels -> channelMetaStorage
+    Channels -> channelStorage
+    Channels -> epgMonitor
+    Channels -> epgWatcher
+    Channels -> playlistCursor
+    Channels -> playlistManager
+    Channels -> sdtMonitor
+}

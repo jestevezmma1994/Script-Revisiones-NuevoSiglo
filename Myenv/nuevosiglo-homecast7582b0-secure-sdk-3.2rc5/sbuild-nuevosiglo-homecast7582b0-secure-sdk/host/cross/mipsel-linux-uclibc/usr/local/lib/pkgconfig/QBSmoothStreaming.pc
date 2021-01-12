@@ -1,0 +1,6 @@
+Name: QBSmoothStreaming
+Version: 1.0.0
+Requires: QBStringUtils SvCore SvFoundation SvPlayerKit expat 
+Description: Cubiware Smooth Streaming library
+Libs: -lQBSmoothStreaming 
+CFlags: 

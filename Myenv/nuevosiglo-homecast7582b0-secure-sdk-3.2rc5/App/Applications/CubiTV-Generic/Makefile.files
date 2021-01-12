@@ -1,0 +1,202 @@
+SvName=CubiTV-Generic
+
+GENERIC_STARTER_SCRIPT ?= scripts/starter-generic
+GENERIC_CORE_UPLOADER_SCRIPT ?= scripts/core-uploader
+HINTS ?= Hints/hints.json
+SYSTEM_DEBUG ?= scripts/system_debug
+SYSTEM_DEBUG_DAEMON ?= scripts/system_debugd
+CABLE_MODEM_STATUS ?= scripts/cable_modem_status
+CABLE_MODEM_STATUS_DAEMON ?= scripts/cable_modem_statusd
+OTA_URI_DEFAULT ?= Configurations/ota-uri-default
+SKINS_DOWNLOADER_SCRIPT ?= scripts/skins_downloader
+S_INSTALL_UPGRADE_RETRY_TIMEOUT?=300
+S_INSTALL_UPGRADE_CONNECT_TIMEOUT?=300
+PREDEFINED_LNB ?= Configurations/LNB
+LOCAL_CONFIGURATIONS ?= Configurations/Local/* 
+
+LOCAL_PREFIX:=/usr/local
+DATA_PREFIX:=$(LOCAL_PREFIX)/share
+
+COMMA = ,
+BASEDIRS = $(subst $(COMMA), ,$(Q_RESOURCES_CUBITV_FORMAT))
+
+FILES_STARTER := $(wildcard $(GENERIC_STARTER_SCRIPT))
+install-starter:
+	@echo "Installing scripts: $(FILES_STARTER)"
+	@if [ "$(FILES_STARTER)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/gui.d/"; \
+	  install -m 0755 $(FILES_STARTER) "$(DESTDIR)/etc/gui.d/cubitv"; \
+	  rm -f "$(DESTDIR)/etc/gui.d/default"; \
+	  ln -s cubitv "$(DESTDIR)/etc/gui.d/default"; \
+	  sed -i -e "s/^export HDDSUPPORT=.*/export HDDSUPPORT=${HDDSUPPORT}/g" ${DESTDIR}/etc/gui.d/cubitv; \
+	fi; \
+
+ifeq ($(S_SECURE_BOOT_DRYRUN), yes)
+FILES_CORE_UPLOADER := $(wildcard $(GENERIC_CORE_UPLOADER_SCRIPT))
+endif
+install-core-uploader:
+	@echo "Installing scripts: $(FILES_CORE_UPLOADER)"
+	@if [ "$(FILES_CORE_UPLOADER)" != "" ]; then \
+	  install -d "$(DESTDIR)$(LOCAL_PREFIX)/sbin"; \
+	  install -m 0755 $(FILES_CORE_UPLOADER) "$(DESTDIR)$(LOCAL_PREFIX)/sbin/core-uploader"; \
+	fi; \
+
+install-misc: install-hints install-cable_modem_status install-cable_modem_status-daemon install-system_debug install-system_debug-daemon install-skins-downloader
+
+FILES_CABLE_MODEM_STATUS_DAEMON := $(wildcard $(CABLE_MODEM_STATUS_DAEMON))
+install-cable_modem_status-daemon:
+	@echo "Installing cable modem status monitor daemon: $(FILES_CABLE_MODEM_STATUS_DAEMON)"
+	@if [ "$(FILES_CABLE_MODEM_STATUS_DAEMON)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/init.d"; \
+	  install -m 0755 $(FILES_CABLE_MODEM_STATUS_DAEMON) "$(DESTDIR)/etc/init.d/cable_modem_statusd"; \
+	fi; \
+
+FILES_CABLE_MODEM_STATUS := $(wildcard $(CABLE_MODEM_STATUS))
+install-cable_modem_status:
+	@echo "Installing cable modem status monitor: $(FILES_CABLE_MODEM_STATUS)"
+	@if [ "$(FILES_CABLE_MODEM_STATUS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(LOCAL_PREFIX)/bin"; \
+	  install -m 0755 $(FILES_CABLE_MODEM_STATUS) "$(DESTDIR)$(LOCAL_PREFIX)/bin/cable_modem_status"; \
+	fi; \
+
+FILES_SYSTEM_DEBUG := $(wildcard $(SYSTEM_DEBUG))
+install-system_debug:
+	@echo "Installing system debug: $(FILES_SYSTEM_DEBUG)"
+	@if [ "$(FILES_SYSTEM_DEBUG)" != "" ]; then \
+	  install -d "$(DESTDIR)$(LOCAL_PREFIX)/bin"; \
+	  install -m 0755 $(FILES_SYSTEM_DEBUG) "$(DESTDIR)$(LOCAL_PREFIX)/bin/system_debug"; \
+	fi; \
+
+FILES_SYSTEM_DEBUG_DAEMON := $(wildcard $(SYSTEM_DEBUG_DAEMON))
+install-system_debug-daemon:
+	@echo "Installing system debug daemon: $(FILES_SYSTEM_DEBUG_DAEMON)"
+	@if [ "$(FILES_SYSTEM_DEBUG_DAEMON)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/init.d"; \
+	  install -m 0755 $(FILES_SYSTEM_DEBUG_DAEMON) "$(DESTDIR)/etc/init.d/system_debugd"; \
+	fi; \
+
+FILES_SKINS_DOWNLOADER := $(wildcard $(SKINS_DOWNLOADER_SCRIPT))
+install-skins-downloader:
+	@echo "Installing skins downloader: $(FILES_SKINS_DOWNLOADER)"
+	@if [ "$(FILES_SKINS_DOWNLOADER)" != "" ]; then \
+	  install -d "$(DESTDIR)/usr/local/bin"; \
+	  install -m 0755 $(FILES_SKINS_DOWNLOADER) "$(DESTDIR)/usr/local/bin/skins_downloader"; \
+	  sed -i "s/_UPGRADE_RETRY_TIMEOUT_/$(S_INSTALL_UPGRADE_RETRY_TIMEOUT)/g" $(DESTDIR)/usr/local/bin/skins_downloader; \
+	  sed -i "s/_UPGRADE_CONNECT_TIMEOUT_/$(S_INSTALL_UPGRADE_CONNECT_TIMEOUT)/g" $(DESTDIR)/usr/local/bin/skins_downloader; \
+	fi; \
+
+install-scripts: install-starter install-core-uploader $(install_misc)
+
+FILES_HINTS := $(wildcard $(HINTS))
+install-hints:
+	@echo "Installing hints: $(FILES_HINTS)"
+	@if [ "$(FILES_HINTS)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/hints"; \
+	  install -m 0644 $(FILES_HINTS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/hints/hints.json"; \
+	fi; \
+
+FILES_OTA_URI := $(wildcard $(OTA_URI_DEFAULT))
+install-ota_default:
+	@echo "Installing ota-defualt: $(FILES_OTA_URI)"
+	@if [ "$(FILES_OTA_URI)" != "" ]; then \
+	  install -d "$(DESTDIR)/etc/"; \
+	  install -m 0644 $(FILES_OTA_URI) "$(DESTDIR)/etc/"; \
+	fi; \
+
+FILES_MIGRATOR := $(wildcard migrator/*)
+install-migrator:
+	@echo "Installing migrations: $(FILES_MIGRATOR)"
+	@if [ "$(FILES_MIGRATOR)" != "" ]; then \
+	  install -d "$(DESTDIR)/usr/local/share/migrations/"; \
+	  install -m 0755 $(FILES_MIGRATOR) "$(DESTDIR)/usr/local/share/migrations/"; \
+	fi; \
+
+FILES_PREDEFINED_LNB := $(wildcard $(PREDEFINED_LNB))
+install-predefined-lnb:
+	@echo "Installing predefined LNB file: $(PREDEFINED_LNB)"
+	@if [ "$(FILES_PREDEFINED_LNB)" != "" ]; then \
+	  install -d "$(DESTDIR)$(DATA_PREFIX)/tuner"; \
+	  install -m 0644 $(FILES_PREDEFINED_LNB) "$(DESTDIR)$(DATA_PREFIX)/tuner/"; \
+	fi; \
+
+FILES_LOCAL_CONFIGURATIONS := $(wildcard $(LOCAL_CONFIGURATIONS))
+install-local-configurations:
+	@echo "Installing local configuration files: $(FILES_LOCAL_CONFIGURATIONS)"
+	@if [ "$(FILES_LOCAL_CONFIGURATIONS)" != "" ]; then \
+		install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/Local"; \
+		install -m 0644 $(LOCAL_CONFIGURATIONS) "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/Local/"; \
+	fi; \
+
+install-settings:
+	@echo "Need to install runtime data files:"; \
+	  APPMENUS=`find settings -name *.appmenu`; \
+	  if [ "$$APPMENUS" != "" ]; then \
+	    echo "  - appmenu"; \
+	    install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    for appmenu in $$APPMENUS; do \
+	      srm-host-run $(BUILD_ROOT)/bin/install-activetree $$appmenu "$(DESTDIR)$(DATA_PREFIX)/CubiTV/" || exit 1; \
+	    done; \
+	  fi; \
+	  XMLS=`find settings -name *.xml`; \
+	  if [ "$$XMLS" != ""  ]; then \
+	    echo "  - xml"; \
+	    install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    for xml in $$XMLS; do \
+	      install -m 0644 $$xml "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+		done; \
+	  fi; \
+	  JSONS=`find settings -name *.json`; \
+	  if [ "$$JSONS" != "" ]; then \
+	    echo "  - json"; \
+	    install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    for json in $$JSONS; do \
+	      srm-host-run $(BUILD_ROOT)/bin/lightjsonlint $$json >/dev/null || exit 1; \
+	      install -m 0644 $$json "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	    done; \
+	  fi; \
+	  MAPS=`find settings/ -name *.oskmap 2>/dev/null`; \
+	  if [ "$$MAPS" != "" ]; then \
+	    echo "  - oskmap"; \
+	    for map in $$MAPS; do \
+	      srm-host-run xmllint $$map >/dev/null || exit 1; \
+	    done; \
+	    install -m 0644 $$MAPS "$(DESTDIR)$(DATA_PREFIX)/CubiTV/"; \
+	  fi; \
+	  SETTINGS=`find settings/720p -name *.settings 2>/dev/null`; \
+  	  if [ "$$SETTINGS" != "" ]; then \
+  	  	echo "  - settings"; \
+  	    srm-host-run python $(BUILD_ROOT)/bin/install-settings.py $(DESTDIR)$(DATA_PREFIX)/CubiTV/data/ 720p $$SETTINGS; \
+	  fi; \
+
+FILES_CONF := $(filter-out $(wildcard Configurations/*.example) Configurations/ota-uri-default Configurations/LNB Configurations/Local, $(wildcard Configurations/*))
+install-configurations:
+	@echo "Installing configuration files:"
+	@if [ "$(FILES_CONF)" != "" ]; then \
+	    install -d "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations"; \
+	    for json in $(FILES_CONF); do \
+	        echo "  - installing $$json"; \
+	        if [ "$$json" != "Configurations/ota-uri-default" ]; then \
+	            srm-host-run $(BUILD_ROOT)/bin/lightjsonlint $$json >/dev/null || exit 1; \
+	        fi; \
+	        install -m 0644 $$json "$(DESTDIR)$(DATA_PREFIX)/CubiTV/Configurations/"; \
+	    done; \
+	fi
+
+install: install-settings install-starter install-core-uploader install-misc translate-orig install-ota_default install-predefined-lnb install-migrator install-configurations  install-local-configurations
+
+compile:
+
+clean:
+
+QBTranslateSettings=$(shell find settings/ -name '*.settings' -o -name '*.appmenu' -o -name '*.xml')
+
+QBTranslateJSON=$(shell find settings/ -name '*.json') \
+		$(shell find Configurations/ -type f | grep -v -E '.example$$' | xargs grep -l i18n_gettext)
+
+ifdef $(HINTS)
+    QBTranslateHints=$(HINTS)
+endif
+
+QBTranslatePODir=translations/
+
+include $(CROSS_ROOT)/usr/local/share/translations/Makefile.mk

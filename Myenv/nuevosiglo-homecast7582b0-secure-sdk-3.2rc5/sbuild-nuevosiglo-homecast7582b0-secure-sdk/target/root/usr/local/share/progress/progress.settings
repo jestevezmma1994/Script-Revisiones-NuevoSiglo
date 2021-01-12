@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><settings xmlns="http://cubiware.com/settings-v2.xsd"
+xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0">
+    <xi:include href="TextFont.settings"/>
+    <widget name="main">
+        <common>
+            <param tag="font"><ref constant="TextFont"/></param>
+        </common>
+
+        <widget name="mainbg">
+            <param tag="widthRatio"><double>1</double></param>
+            <param tag="heightRatio"><double>1</double></param>
+            <param tag="bgColor"><color>4f4f4fff</color></param>
+	    <param tag="bg">
+                <bitmap><path>bg_mainbg.png</path></bitmap>
+            </param>
+        </widget>
+
+        <widget name="newVersion">
+            <param tag="xOffsetRatio"><double>0.5</double></param>
+            <param tag="yOffsetRatio"><double>0.896</double></param>
+            <param tag="widthRatio"><double>0.433</double></param>
+            <param tag="heightRatio"><double>0.092</double></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="fontSizeRatio"><double>0.41</double></param>
+            <param tag="textAlign"><string>right</string></param>
+        </widget>
+
+        <widget name="oldVersion">
+            <param tag="xOffsetRatio"><double>0.067</double></param>
+            <param tag="yOffsetRatio"><double>0.896</double></param>
+            <param tag="widthRatio"><double>0.433</double></param>
+            <param tag="heightRatio"><double>0.092</double></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="fontSizeRatio"><double>0.41</double></param>
+            <param tag="textAlign"><string>left</string></param>
+        </widget>
+
+        <widget name="info">
+            <param tag="xOffsetRatio"><double>0</double></param>
+            <param tag="yOffsetRatio"><double>0.083</double></param>
+            <param tag="widthRatio"><double>1</double></param>
+            <param tag="heightRatio"><double>0.208</double></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="fontSizeRatio"><double>0.26</double></param>
+            <param tag="textAlign"><string>center</string></param>
+        </widget>
+
+        <widget name="infoLong">
+            <param tag="xOffsetRatio"><double>0</double></param>
+            <param tag="yOffsetRatio"><double>0.646</double></param>
+            <param tag="widthRatio"><double>1</double></param>
+            <param tag="heightRatio"><double>0.240</double></param>
+            <param tag="textColor"><color>efefefff</color></param>
+            <param tag="fontSizeRatio"><double>0.18</double></param>
+            <param tag="textAlign"><string>center</string></param>
+            <param tag="multiLine"><bool>true</bool></param>
+        </widget>
+
+        <widget name="time">
+            <param tag="time0"><int>16</int></param>
+            <param tag="time1"><int>8</int></param>
+            <param tag="time2"><int>8</int></param>
+        </widget>
+
+	<widget name ="gauge">
+	    <param tag="xOffsetRatio"><double>0.067</double></param>
+	    <param tag="yOffsetRatio"><double>0.559</double></param>
+	    <param tag="widthRatio"><double>0.878</double></param>
+	    <param tag="heightRatio"><double>0.062</double></param>
+	    <param tag="bg"><bitmap><path>bar_progress_empty.png</path></bitmap></param>
+	    <param tag="bar"><bitmap><path>bar_progress_full.png</path></bitmap></param>
+	</widget>
+
+	<widget name="CustomerLogo">
+	    <param tag="xOffsetRatio"><double>0.695</double></param>
+	    <param tag="yOffsetRatio"><double>0.036</double></param>
+	    <param tag="widthRatio"><double>0.257</double></param>
+	    <param tag="heightRatio"><double>0.069</double></param>
+	    <param tag="bg">
+		<bitmap><path>logo_long.png</path></bitmap>
+	    </param>
+	</widget>
+	<widget name="CustomerLogoTKP">
+	    <param tag="xOffsetRatio"><double>0.695</double></param>
+	    <param tag="yOffsetRatio"><double>0.036</double></param>
+	    <param tag="widthRatio"><double>0.257</double></param>
+	    <param tag="heightRatio"><double>0.069</double></param>
+	    <param tag="bg">
+		<bitmap><path>logo_inea.png</path></bitmap>
+	    </param>
+	</widget>
+	<widget name="CustomerLogoINEA">
+	    <param tag="xOffsetRatio"><double>0.695</double></param>
+	    <param tag="yOffsetRatio"><double>0.036</double></param>
+	    <param tag="widthRatio"><double>0.257</double></param>
+	    <param tag="heightRatio"><double>0.069</double></param>
+	    <param tag="bg">
+		<bitmap><path>logo_inea.png</path></bitmap>
+	    </param>
+	</widget>
+	<widget name="CustomerLogoPromax">
+	    <param tag="xOffsetRatio"><double>0.695</double></param>
+	    <param tag="yOffsetRatio"><double>0.036</double></param>
+	    <param tag="widthRatio"><double>0.257</double></param>
+	    <param tag="heightRatio"><double>0.069</double></param>
+	    <param tag="bg">
+		<bitmap><path>logo_promax.png</path></bitmap>
+	    </param>
+	</widget>
+	<widget name="CustomerLogoASTA-NET">
+	    <param tag="xOffsetRatio"><double>0.695</double></param>
+	    <param tag="yOffsetRatio"><double>0.036</double></param>
+	    <param tag="widthRatio"><double>0.257</double></param>
+	    <param tag="heightRatio"><double>0.069</double></param>
+	    <param tag="bg">
+		<bitmap><path>logo_astanet.png</path></bitmap>
+	    </param>
+	</widget>
+    </widget>
+
+    <widget name="Animation">
+        <param tag="widthRatio"><double>0.124</double></param>
+        <param tag="heightRatio"><double>0.185</double></param>
+        <param tag="xOffsetRatio"><double>0.438</double></param>
+        <param tag="yOffsetRatio"><double>0.323</double></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="stepDuration"><double>0.8</double></param>
+        <param tag="steps"><int>12</int></param>
+        <param tag="frame0">
+            <bitmap><path>animation/searching_10.png</path></bitmap>
+        </param>
+        <param tag="frame1">
+            <bitmap><path>animation/searching_20.png</path></bitmap>
+        </param>
+        <param tag="frame2">
+            <bitmap><path>animation/searching_30.png</path></bitmap>
+        </param>
+        <param tag="frame3">
+            <bitmap><path>animation/searching_40.png</path></bitmap>
+        </param>
+        <param tag="frame4">
+            <bitmap><path>animation/searching_50.png</path></bitmap>
+        </param>
+        <param tag="frame5">
+            <bitmap><path>animation/searching_60.png</path></bitmap>
+        </param>
+        <param tag="frame6">
+            <bitmap><path>animation/searching_70.png</path></bitmap>
+        </param>
+        <param tag="frame7">
+            <bitmap><path>animation/searching_80.png</path></bitmap>
+        </param>
+        <param tag="frame8">
+            <bitmap><path>animation/searching_90.png</path></bitmap>
+        </param>
+        <param tag="frame9">
+            <bitmap><path>animation/searching_100.png</path></bitmap>
+        </param>
+        <param tag="frame10">
+            <bitmap><path>animation/searching_110.png</path></bitmap>
+        </param>
+        <param tag="frame11">
+            <bitmap><path>animation/searching_120.png</path></bitmap>
+        </param>
+    </widget>
+
+</settings>

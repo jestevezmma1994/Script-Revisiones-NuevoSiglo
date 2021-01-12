@@ -1,0 +1,40 @@
+<perldata>
+ <hashref memory_address="0x2880140">
+  <item key="deps">
+   <hashref memory_address="0x17dcca0">
+   </hashref>
+  </item>
+  <item key="ivars">
+   <hashref memory_address="0x2aa80d8">
+   </hashref>
+  </item>
+  <item key="sources">
+   <hashref memory_address="0x16c5050">
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/Makefile.production">1a306a3f55f6278200f157191997136b</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/files-production/bgroupcert.dat">e9d5fbc89a741f5ca1e2a0915a8d71f4</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/files-production/cacert.pem">0a182d148906457c3622a4c4537be127</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/files-production/service.json">840cc31195180c2326a67db95785e794</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/production.comp">d7134d72c4ddbbb104ba889c2d64e43f</item>
+   </hashref>
+  </item>
+  <item key="string">Src/CxPlayReady-NuevoSiglo/homecast/7582/production.comp</item>
+  <item key="time">1605103331</item>
+  <item key="units">
+   <hashref memory_address="0x1e5e140">
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/Makefile.production">a</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/files-production/bgroupcert.dat">a</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/files-production/cacert.pem">a</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/files-production/service.json">a</item>
+    <item key="Src/CxPlayReady-NuevoSiglo/homecast/7582/production.comp">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/dev/core">a</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/playready/bgroupcert.dat">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/playready/cacert.pem">c</item>
+    <item key="sbuild-nuevosiglo-homecast7582b0-secure-sdk/target/root/etc/playready/service.json">c</item>
+   </hashref>
+  </item>
+  <item key="vars">
+   <arrayref memory_address="0x2359848">
+   </arrayref>
+  </item>
+ </hashref>
+</perldata>

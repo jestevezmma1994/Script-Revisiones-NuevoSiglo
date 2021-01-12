@@ -1,0 +1,45 @@
+#!/bin/sh
+
+if [ $# -lt 2 ]; then
+	echo "$0: invalid usage" >&2
+	exit 1
+fi
+
+schema1="${BUILD_ROOT}/usr/share/xml/settings-v1.xsd"
+schema11="${BUILD_ROOT}/usr/share/xml/settings-v1-1.xsd"
+schema12="${BUILD_ROOT}/usr/share/xml/settings-v1-2.xsd"
+schema15="${BUILD_ROOT}/usr/share/xml/settings-v1-5.xsd"
+schema2="${BUILD_ROOT}/usr/share/xml/settings-v2.xsd"
+dest_dir="$(eval echo "\${$#}")"
+
+schema=''
+while [ $# -gt 1 ]; do
+    grep -q 'http://cubiware.com/settings-v2.xsd' "$1" >/dev/null
+    if [ $? -eq 0 ]; then
+        schema="$schema2"
+    else
+        grep -q 'http://cubiware.com/settings-v1-5.xsd' "$1" >/dev/null
+        if [ $? -eq 0 ]; then
+            schema="$schema15"
+        else
+            grep -q 'http://cubiware.com/settings-v1-2.xsd' "$1" >/dev/null
+            if [ $? -eq 0 ]; then
+                schema="$schema12"
+            else
+                grep -q 'http://cubiware.com/settings-v1-1.xsd' "$1" >/dev/null
+                if [ $? -eq 0 ]; then
+                    schema="$schema11"
+                else
+                    schema="$schema1"
+                fi
+            fi
+        fi
+    fi
+	errors="$(xmllint --noout --schema "$schema" "$1" 2>&1)"
+	if [ $? -ne 0 ]; then
+		echo "$errors" >&2
+		exit 1
+	fi
+	install -m 0644 "$1" "$dest_dir" || exit 1
+	shift 1
+done

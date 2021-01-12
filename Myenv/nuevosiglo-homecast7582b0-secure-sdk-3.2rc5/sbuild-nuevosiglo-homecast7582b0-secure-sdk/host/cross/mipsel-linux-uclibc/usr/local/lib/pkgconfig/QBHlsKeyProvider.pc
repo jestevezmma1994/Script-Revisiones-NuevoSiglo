@@ -1,0 +1,6 @@
+Name: QBHlsKeyProvider
+Version: 1.0.0
+Requires: SvCore SvFoundation SvHTTPClient SvPlayerKit 
+Description: Cubiware HTTP Live Streaming provider library
+Libs: -lQBHlsKeyProvider 
+CFlags: 

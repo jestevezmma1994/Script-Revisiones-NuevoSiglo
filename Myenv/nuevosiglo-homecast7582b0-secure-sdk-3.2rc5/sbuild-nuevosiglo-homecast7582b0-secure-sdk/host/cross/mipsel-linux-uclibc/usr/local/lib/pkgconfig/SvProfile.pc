@@ -1,0 +1,6 @@
+Name: SvProfile
+Version: 1.0.0
+Requires: SvCore sv-list 
+Description: Sentivision Profiling Kit
+Libs: -lSvProfile 
+CFlags: 

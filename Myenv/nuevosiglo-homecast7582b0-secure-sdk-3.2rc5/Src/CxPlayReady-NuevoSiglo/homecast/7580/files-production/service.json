@@ -1,0 +1,6 @@
+{ "validationurl": "https://indsrv01.conax.com/stbvalidation",
+  "signatureurl": "https://indsrv01.conax.com/stbdevicesignature",
+  "drmclientversion":"1.0.1",
+  "drmclienttype" : "PR BCM7580",
+  "devicetype" : "Homecast HNC2200CO - Id2765"
+}

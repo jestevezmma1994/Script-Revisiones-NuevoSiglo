@@ -1,0 +1,6 @@
+Name: QBRPCInterfaces
+Version: 1.0.0
+Requires: QBRPC 
+Description: C version of RPC Interfaces. 
+Libs: -lQBRPCInterfaces 
+CFlags: 

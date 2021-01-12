@@ -1,0 +1,62 @@
+#!/bin/bash
+
+ROOT_DIR=${1}
+OUTPUT=${2}
+ENABLE_CONSOLE=${3}
+INIT=${4}
+
+DTBFILE=$SRM_ROOT/target/dtb.bin
+mkdir -p initramfs
+
+rm -f initramfs/rootfs.img
+mksquashfs4 ${ROOT_DIR} initramfs/rootfs.img
+install -m 755 ${INIT} initramfs/init
+
+pushd initramfs
+
+mkdir dev
+mknod dev/loop0 b 7 0
+mknod dev/fp c 127 0
+if [ "$ENABLE_CONSOLE" == "yes" ]; then
+    mknod dev/console c 5 1
+fi
+mkdir sys
+mkdir tmp
+mkdir tmp/root
+mkdir tmp/images
+mkdir -p ../bootimage
+find . | cpio -H newc -o > ../bootimage/initramfs.cpio
+cp $SRM_ROOT/target/vmlinuz ../bootimage/
+#TODO device tree support
+
+if [ -f $DTBFILE ]; then
+    echo "Add device tree binary to cpio image"
+    cp $DTBFILE ../bootimage/
+fi
+
+cd ../bootimage/
+dd if=/dev/zero of=appading bs=3848 count=1
+echo appading > bootimage.list
+echo initramfs.cpio >> bootimage.list
+echo vmlinuz >> bootimage.list
+if [ -f $DTBFILE ]; then
+    echo dtb.bin >> bootimage.list
+fi
+cat bootimage.list | cpio -H newc -o > ../bootimage.cpio
+rm bootimage.list
+cd ..
+rm -rf bootimage
+popd
+
+srm-host-run ${SRM_ROOT}/host/local/usr/bin/mkqbbinaryimage.py --mode static --encryption aes256-cbc ${S_INSTALL_KEYSERVER_SYM_ROOTFS_KEY_ID} ${S_INSTALL_KEYSERVER_RSA_BOOT_KEY_ID} bootimage.cpio ${OUTPUT}
+if [ "$?" != "0" ]
+then
+    "Cannot create QBBinaryImage!"
+    rm bootimage.cpio
+    rm -Rf initramfs
+    exit 1
+fi
+
+rm bootimage.cpio
+
+rm -Rf initramfs

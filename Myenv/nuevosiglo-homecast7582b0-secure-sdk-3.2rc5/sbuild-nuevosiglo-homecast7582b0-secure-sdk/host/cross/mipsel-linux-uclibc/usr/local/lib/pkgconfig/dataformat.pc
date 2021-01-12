@@ -1,0 +1,6 @@
+Name: dataformat
+Version: 1.0.0
+Requires: SvCore SvPlayerKit error_log 
+Description: types defining data formats for audio/video
+Libs: -ldataformat 
+CFlags: 

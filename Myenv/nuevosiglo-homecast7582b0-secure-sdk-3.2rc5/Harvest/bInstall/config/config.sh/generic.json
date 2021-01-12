@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if [ "$1" = "save" ]; then 
+  echo -n "storing configuration"
+  cd /tmp
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+  #add your storage code here if you want to store in pemanently
+  echo " OK"
+else 
+  if [ "$1" = "start" ]; then 
+	#add your restore code here if you want restore config from storage
+    if [ -e /tmp/config.tar.gz ]; then
+      echo loading configuration
+      tar xzf /tmp/config.tar.gz -C /tmp
+    fi
+    if [ ! -f /etc/vod/conf.json ]; then  
+      echo config was not restored, loading DEFAULT configuration
+      cp /etc/default-conf/* /etc/vod/
+      rm -f /etv/vod/LASTVERSION		# force on-upgrade cfg check
+    fi
+  fi
+  /usr/local/bin/svconf_ctl --export > /tmp/STB.cfg
+fi

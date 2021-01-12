@@ -1,0 +1,17 @@
+digraph Widgets {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Widgets [label="Widgets" root=true]
+
+    PlaybackWidgets [label="Playback"]
+    MainMenuWidgets [label="Main menu"]
+    MovieWidgets [label="Movie/File/RSS"]
+    PopupWidgets [label="Popup/Dialog"]
+    TimeWidgets
+
+    Widgets -> PlaybackWidgets
+    Widgets -> MovieWidgets
+    Widgets -> MainMenuWidgets
+    Widgets -> PopupWidgets
+    Widgets -> TimeWidgets
+}

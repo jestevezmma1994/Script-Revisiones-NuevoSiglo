@@ -1,0 +1,117 @@
+SERVER  sub-basic
+
+  connection.use_two = 0
+  connection.keep_udp_tunnel = 1
+
+  describe.unused = 0
+
+  setup.single_client_port = 0
+  setup.each_stream = 0
+  setup.tcp_add_unicast = 0
+  setup.use_orig_url = 0
+  setup.force_udp = 0
+  setup.force_dvb = 0
+  setup.force_rtp = 0
+  setup.force_mp2t = 0
+
+  play.dont_send_scale_1_0 = 0
+  play.no_npt_eq = 0
+  play.only_first_range = 0
+  play.high_speed = 0
+  play.negative_range_reversed = 0
+  play.stream_scaled = 0
+  play.timestamps_absolute = 0
+
+  pause.needed = 1
+  pause.always_discontinuous = 0
+
+  flush.needed = 0
+  flush.timeout_ms = 0
+
+  hb.set_parameter = 0
+  hb.get_parameter = 0
+  hb.ping = 0
+  hb.nonempty = 0
+  hb.not_needed_as_proxy = 0
+  hb.not_passing_as_proxy = 0
+  hb.handle_notice = 0
+  hb.min_delay_sec = 0 # no minimum
+
+
+SERVER  Cubiware
+  use sub-basic
+
+  connection.use_two = 1
+  play.high_speed = 1
+
+  hb.set_parameter = 1
+
+
+SERVER  Sentivision
+  use Cubiware
+
+
+SERVER  WMServer
+  use sub-basic
+
+  setup.each_stream = 1
+  setup.tcp_add_unicast = 1
+
+  hb.set_parameter = 1
+
+
+SERVER  sub-mp2t
+  use sub-basic
+
+  setup.single_client_port = 1
+  setup.use_orig_url = 1
+  setup.force_mp2t = 1
+
+  pause.needed = 1 # flush is needed, so pause is needed as well
+  flush.needed = 1
+  flush.timeout_ms = -1 # use default
+
+  play.negative_range_reversed = 1
+
+  hb.get_parameter = 1
+
+
+# eventis proxying something with dvb/mp2t
+SERVER  eventis_vod
+  use sub-mp2t
+
+  # Traxis proxy is not passing HB down to control server, so we have to do it ourselves
+  hb.not_passing_as_proxy = 1
+
+  setup.force_dvb = 1
+
+
+SERVER  Orbit2x
+  use sub-mp2t
+
+
+SERVER  Harmonic
+  use sub-mp2t
+
+  play.stream_scaled = 1
+  play.negative_range_reversed = 1
+
+  # weird features
+  describe.unused = 1
+  play.timestamps_absolute = 1
+
+
+SERVER  Broadpeak
+  use sub-mp2t
+
+  # weird features
+  describe.unused = 1
+
+  # server is passing EOS notice in heartbeat response
+  hb.handle_notice = 1
+  # poll for EOS frequently
+  hb.min_delay_sec = 8
+
+
+SERVER  default
+  use sub-mp2t

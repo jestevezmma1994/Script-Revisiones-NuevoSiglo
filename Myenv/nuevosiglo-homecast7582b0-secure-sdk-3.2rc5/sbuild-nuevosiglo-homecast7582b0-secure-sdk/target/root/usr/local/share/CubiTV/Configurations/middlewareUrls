@@ -1,0 +1,15 @@
+{
+    "middleware.vc.mw.columbuscdn.com": "Columbus: Saint Vincent",
+    "middleware.lc.mw.columbuscdn.com": "Columbus: Saint Lucia",
+    "middleware.tc.mw.columbuscdn.com": "Columbus: Turks and Caicos",
+    "middleware.ky.mw.columbuscdn.com": "Columbus: Cayman",
+    "middleware.bs.mw.columbuscdn.com": "Columbus: Bahamas",
+    "middleware.ai.mw.columbuscdn.com": "Columbus: Anguila",
+    "middleware.vg.mw.columbuscdn.com": "Columbus: British Virgin Islands",
+    "middleware.kn.mw.columbuscdn.com": "Columbus: Saint Kitts and Nevis",
+    "middleware.bb.mw.columbuscdn.com": "Columbus: Barbados",
+    "middleware.jm.mw.columbuscdn.com": "Columbus: Jamaica",
+    "middleware.an.mw.columbuscdn.com": "Columbus: Curacao",
+    "middleware.tt.mw.columbuscdn.com": "Columbus: Trinidad",
+    "middleware.lab.mw.columbuscdn.com": "Columbus: Lab Environment"
+}

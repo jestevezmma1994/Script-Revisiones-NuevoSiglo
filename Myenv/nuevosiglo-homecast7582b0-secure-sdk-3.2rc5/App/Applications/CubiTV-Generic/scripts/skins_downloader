@@ -1,0 +1,172 @@
+#!/bin/sh
+
+DEFAULT_SKIN_NAME=$(svconf_ctl -i /etc/default-conf/conf.json SKIN_NAME)
+
+error_exit()
+{
+    $LOGGER "ERROR, back to default skin"
+    svconf_ctl SKIN_NAME $DEFAULT_SKIN_NAME
+    svconf_ctl --set-null SKIN_URL
+    svconf_ctl --set-null SKIN_MANIFEST
+    exit 1
+}
+
+get_with_verify()
+{
+	if [ -z "$(grep "$2" $MANIFEST_FILE.data)" ]; then
+		$LOGGER "$2: File not in manifest"
+		return 1
+	fi
+
+	FILE_SIZE=$(grep "$2" $MANIFEST_FILE.data | cut -d " " -f 2)
+	if [ -z "$FILE_SIZE" ]; then
+		$LOGGER "$2: File size not in manifest"
+		return 1
+	fi
+
+	FILE_SIG=$(grep "$2" $MANIFEST_FILE.data | cut -d " " -f 3)
+	if [ -z "$FILE_SIG" ]; then
+		$LOGGER "$2: File signature not in manifest"
+		return 1
+	fi
+
+	if [ -z $3 ]; then
+		DEST_FILE=$2
+	else
+		DEST_FILE=$3
+	fi
+
+    if echo $1 | grep -i "^https://" > /dev/null; then
+        WGET_SKIN="$WGET_STDOUT $HTTPS"
+    else
+        WGET_SKIN="$WGET_STDOUT"
+    fi
+
+    $WGET_SKIN $1 2> /dev/null | head -c $FILE_SIZE | tee $DEST_FILE | openssl sha1 | grep $FILE_SIG > /dev/null
+	if [ $? -ne 0 ]; then
+        rm $DEST_FILE
+		return 1
+	else
+		return 0
+	fi
+}
+
+if [ -x /usr/bin/logger ]; then
+    LOGGER="/usr/bin/logger -s -p user.notice -t skins_downloader "
+else
+    LOGGER=echo
+fi
+
+if which curl > /dev/null; then
+	WGET="curl -L -f -v -O -g --speed-time 20 --speed-limit 1 --retry 5 --retry-delay 10 --retry-max-time _UPGRADE_RETRY_TIMEOUT_ --connect-timeout _UPGRADE_CONNECT_TIMEOUT_"
+	WGET_STDOUT="curl -L -f -g --speed-time 20 --speed-limit 1 --retry 5 --retry-delay 10 --retry-max-time _UPGRADE_RETRY_TIMEOUT_ --connect-timeout _UPGRADE_CONNECT_TIMEOUT_"
+	if [ ! -z $USERAGENT ]; then
+		WGET="$WGET --user-agent $USERAGENT"
+		WGET_STDOUT="$WGET_STDOUT --user-agent $USERAGENT"
+	fi
+    HTTPS="--cacert /etc/cacert.pem --cert /etc/cert.pem --key /etc/certkey.pem"
+else
+	WGET="wget"
+	WGET_STDOUT="wget -O -"
+    HTTPS="--ca-certificate /etc/cacert.pem"
+fi
+
+SKIN_NAME=$(svconf_ctl SKIN_NAME)
+if [ -z $SKIN_NAME ] ; then
+    $LOGGER "No skin name"
+    error_exit
+elif [ "$SKIN_NAME" = "$DEFAULT_SKIN_NAME" ] ; then
+    $LOGGER "Using default skin"
+    exit 0
+elif [ -d /usr/local/share/CubiTV/data/720p/$SKIN_NAME ] ; then
+    $LOGGER "Using built-in skin: $SKIN_NAME"
+    exit 0
+fi
+
+WORK_DIR=/tmp/skins/tmp
+DEST_DIR=/tmp/skins/$SKIN_NAME
+rm -rf $WORK_DIR
+mkdir -p $WORK_DIR
+cd $WORK_DIR
+
+SKIN_URL=$(svconf_ctl SKIN_URL)
+SKIN_FILE=$(basename $SKIN_URL)
+MANIFEST_URL=$(svconf_ctl SKIN_MANIFEST)
+MANIFEST_FILE=$(basename $MANIFEST_URL)
+KEY=/etc/id_rsa.skin.pub
+
+$LOGGER "Downloading upgrade manifest [$MANIFEST_URL]"
+if echo $MANIFEST_URL | grep -i "^https://" > /dev/null; then
+    WGET_MANIFEST="$WGET_STDOUT $HTTPS"
+else
+    WGET_MANIFEST="$WGET_STDOUT"
+fi
+$WGET_MANIFEST $MANIFEST_URL 2> /dev/null | head -c 4096 > $MANIFEST_FILE
+if [ $? -ne 0 ] ; then
+    $LOGGER "MANIFEST download failed"
+    error_exit
+fi
+dd if=$MANIFEST_FILE of=$MANIFEST_FILE.sig bs=1 count=256 2> /dev/null
+dd if=$MANIFEST_FILE of=$MANIFEST_FILE.data bs=1 skip=256 2> /dev/null
+rm $MANIFEST_FILE
+openssl sha1 -verify /etc/id_rsa.skin.pub -signature $MANIFEST_FILE.sig $MANIFEST_FILE.data > /dev/null
+if [ $? -ne 0 ]; then
+    $LOGGER "Manifest verification failed"
+    rm $MANIFEST_FILE.data
+    rm $MANIFEST_FILE.sig
+    error_exit
+fi
+rm $MANIFEST_FILE.sig
+
+if [ ! -e /etc/BUILD ] || [ ! -e /etc/VERSION ] || [ ! -e /etc/RC ] ; then
+    $LOGGER "Can't check app version"
+    error_exit
+else
+    BUILD=$(cat /etc/BUILD)
+    VER=$(cat /etc/VERSION)
+    if [ $BUILD = "" ] || [ $VER = "" ] ; then
+        $LOGGER "Can't check app version (BUILD=\"$BUILD\", VERSION=\"$VER\")"
+        error_exit
+    fi
+    RC=$(cat /etc/RC)
+    APP_VERSION=$BUILD-$VER
+    if [ "$RC" != "" ] ; then
+        APP_VERSION="$APP_VERSION"rc"$RC"
+    fi
+fi
+
+VERSION=$(grep "VERSION " $MANIFEST_FILE.data | cut -d " " -f 2)
+if [ -z "$VERSION" ]; then
+    $LOGGER "No application version in manifest"
+    error_exit
+fi
+
+if [ "$VERSION" != "$APP_VERSION" ] ; then
+    $LOGGER "Skin prepared for other application version [ $VERSION != $APP_VERSION ]"
+    error_exit
+fi
+
+$LOGGER "Downloading $SKIN_URL"
+get_with_verify $SKIN_URL $SKIN_FILE
+if [ $? -ne 0 ] ; then
+    $LOGGER "$SKIN_FILE download failed"
+    error_exit
+fi
+
+# TODO set proper max skin size
+MAX_SIZE=4000000
+TOTAL_SIZE=$(unzip -Z -t $SKIN_FILE | cut -d ' ' -f 3)
+if [ $TOTAL_SIZE -gt $MAX_SIZE ] ; then
+    $LOGGER "Archive too big"
+    rm $SKIN_FILE
+    error_exit
+fi
+
+unzip $SKIN_FILE > /dev/null
+rm $SKIN_FILE $MANIFEST_FILE.data
+rm -rf $DEST_DIR
+mv $WORK_DIR/skin $DEST_DIR
+rm -rf $WORK_DIR
+
+chown -R appuser:appgroup $DEST_DIR
+

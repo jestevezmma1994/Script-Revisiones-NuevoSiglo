@@ -1,0 +1,8 @@
+digraph epgMonitor {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    epgMonitor [label="QBEPGMonitor" URL="\N.html" root=true]
+
+    epgMonitor -> Events
+    epgMonitor -> Channels
+}

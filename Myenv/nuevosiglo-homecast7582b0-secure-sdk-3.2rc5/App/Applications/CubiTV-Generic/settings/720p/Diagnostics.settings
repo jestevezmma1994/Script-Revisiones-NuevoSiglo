@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<settings xmlns="http://cubiware.com/settings-v2.xsd" xmlns:i18n="http://cubiware.com/i18n-v1.xsd" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0">
+
+<xi:include href="fonts.settings"/>
+<xi:include href="Title.settings"/>
+<xi:include href="CustomerLogo.settings"/>
+
+<widget name="MenuItem">
+    <widget name="Item">
+        <param tag="xOffset"><int>80</int></param>
+        <param tag="yOffset"><int>36</int></param>
+        <param tag="width"><int>400</int></param>
+        <param tag="height"><int>66</int></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textColor"><color>efefefff</color></param>
+        <param tag="spacing"><int>10</int></param>
+        <param tag="leftPadding"><int>10</int></param>
+        <param tag="epgSpacing"><int>2</int></param>
+        <param tag="normalDim"><int>255</int></param>
+        <param tag="inactiveDim"><int>255</int></param>
+        <param tag="subFontSize"><ref constant="FontSize_Small"/></param>
+        <param tag="focusXOffset"><int>0</int></param>
+        <param tag="focusYOffset"><int>0</int></param>
+        <param tag="focusFadeTime"><double>0.3</double></param>
+        <param tag="showTime"><double>0.3</double></param>
+        <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+        <param tag="focusMinWidth"><int>237</int></param>
+        <param tag="hideInactiveText"><bool>true</bool></param>
+        <param tag="subcaptionSpacing"><int>6</int></param>
+    </widget>
+    <widget name="focus">
+        <param tag="bg"><bitmap><path>frame_xmb_focus.png</path></bitmap></param>
+        <param tag="minWidth"><int>237</int></param>
+        <param tag="maxWidth"><int>759</int></param>
+    </widget>
+    <widget name="disabledFocus">
+        <param tag="bg"><bitmap><path>frame_xmb_nonfocus.png</path></bitmap></param>
+        <param tag="minWidth"><int>237</int></param>
+        <param tag="maxWidth"><int>759</int></param>
+   </widget>
+</widget>
+
+<widget name="Diagnostics">
+    <common>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="inactiveTextColor"><color>7f7f7fff</color></param>
+        <param tag="disabledTextColor"><color>7f7f7fff</color></param>
+        <param tag="font">
+            <ref constant="NormalFont"/>
+        </param>
+    </common>
+
+    <param tag="width"><int>1280</int></param>
+    <param tag="height"><int>720</int></param>
+    <param tag="bg"> <bitmap><path>bg_mainbg.png</path></bitmap></param>
+
+    <widget name="DiagnosticsWidget">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>40</int></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>660</int></param>
+        
+        <widget name="ScrollBar">
+            <param tag="xOffset"><int>640</int></param>
+            <param tag="yOffset"><int>0</int></param>
+            <param tag="width"><int>530</int></param>
+            <param tag="height"><int>720</int></param>
+            <param tag="fadeDuration"><double>0.2</double></param>
+            <widget name="arrowHigh">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>590</int></param>
+                <param tag="active"><bitmap><path>arrow/arrow_down_active.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>arrow/arrow_down_inactive.png</path></bitmap></param>
+            </widget>
+            <widget name="arrowLow">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>40</int></param>
+                <param tag="active"><bitmap><path>arrow/arrow_up_active.png</path></bitmap></param>
+                <param tag="inactive"><bitmap><path>arrow/arrow_up_inactive.png</path></bitmap></param>
+            </widget>
+        </widget>
+        
+        <widget name="viewport">
+            <param tag="xOffset"><int>70</int></param>
+            <param tag="yOffset"><int>60</int></param>
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>530</int></param>
+            <param tag="xStep"><int>20</int></param>
+            <param tag="yStep"><int>20</int></param>
+            <param tag="yMaxVelocity"><double>1280</double></param>
+            <param tag="yAcceleration"><double>20</double></param>
+            <param tag="screenAcceleration"><double>100</double></param>
+        </widget>
+    
+        <widget name="content">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>530</int></param>
+            <param tag="spacing"><int>20</int></param>
+            <param tag="fitSize"><bool>true</bool></param>
+        </widget>
+    
+        <widget name="widget">
+            <param tag="width"><int>1280</int></param>
+            <param tag="height"><int>30</int></param>
+            <widget name="text">
+                <param tag="xOffset"><int>580</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>1200</int></param>
+                <param tag="font">
+                    <ref constant="NormalFont"/>
+                </param>
+                <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="textAlign"><string>left</string></param>
+                <param tag="multiline"><bool>true</bool></param>
+            </widget>
+            <widget name="label">
+                <param tag="xOffset"><int>0</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="width"><int>570</int></param>
+                <param tag="font">
+                    <ref constant="NormalFont"/>
+                </param>
+                <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+                <param tag="textColor"><color>ffffffff</color></param>
+                <param tag="textAlign"><string>right</string></param>
+            </widget>
+	        <widget name="Gauge">
+                <param tag="width"><int>280</int></param>
+                <param tag="height"><int>29</int></param>
+                <param tag="xOffset"><int>630</int></param>
+                <param tag="yOffset"><int>0</int></param>
+                <param tag="bg"><bitmap><path>bar_indicator_empty.png</path></bitmap></param>
+                <param tag="bar"><bitmap><path>bar_indicator_full.png</path></bitmap></param>
+	        </widget>
+        </widget>
+    </widget>
+
+    <widget name="info">
+        <param tag="xOffset"><int>0</int></param>
+        <param tag="yOffset"><int>660</int></param>
+        <param tag="width"><int>1280</int></param>
+        <param tag="height"><int>81</int></param>
+        <param tag="fadeDuration"><double>0.5</double></param>
+        <param tag="bgColor"><color>00000000</color></param>
+        <param tag="textColor"><color>ffffffff</color></param>
+        <param tag="font"><ref constant="NormalFont"/></param>
+        <param tag="fontSize"><ref constant="FontSize_Normal"/></param>
+        <param tag="textAlign"><string>center</string></param>
+        <param tag="multiline"><bool>true</bool></param>
+        <param tag="maxLines"><int>1</int></param>
+        <param tag="text"><string><i18n:gettext>Press Back to go to previous screen</i18n:gettext></string></param>
+    </widget>
+
+</widget> <!-- End of Diagnostics -->
+
+</settings>

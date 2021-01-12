@@ -1,0 +1,11 @@
+#!/bin/sh
+
+. /etc/profile
+
+USE_CABLE_MODEM=$(svconf_ctl -n USE_CABLE_MODEM)
+
+if [ "$USE_CABLE_MODEM" = "YES" ]; then
+    pioctl 3 1 OUT 1
+else
+    pioctl 3 1 OUT 0
+fi

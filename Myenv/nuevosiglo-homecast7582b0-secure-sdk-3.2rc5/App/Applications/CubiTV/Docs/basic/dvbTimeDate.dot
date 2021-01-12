@@ -1,0 +1,7 @@
+digraph dvbTimeDate {
+    node [URL="controlFlow/\N.html" shape=box]
+    graph [layout="circo"]
+    dvbTimeDate [URL="\N.html" root=true]
+
+    dvbTimeDate -> Time
+}

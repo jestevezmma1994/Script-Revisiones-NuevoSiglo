@@ -1,0 +1,6 @@
+Name: QBShellCmds
+Version: 1.0.0
+Requires: SvCore 
+Description: Cubiware Shell invocation utilities
+Libs: -lQBShellCmds 
+CFlags: 

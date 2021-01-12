@@ -1,0 +1,138 @@
+{
+    "bodyId": "tsn:74600019081EE47",
+    "count": "50",
+    "includeBroadband": "true",
+    "includeBroadcast": "true",
+    "includeEmptyTags": "true",
+    "includeFree": "true",
+    "includeIpVod": "false",
+    "includePaid": "true",
+    "includePersonSearch": "true",
+    "includeUnifiedItemType": [
+      "collection",
+      "content",
+      "channel",
+      "person"
+    ],
+    "includeVod": "true",
+    "keyword": "\"M*\"",
+    "levelOfDetail": "low",
+    "mergeOverridingCollections": "true",
+    "mergeOverridingContent": "true",
+    "minEndTime": "2013-07-10 00:17:50",
+    "noLineupFilterForType": "person",
+    "numRelevantItems": "100",
+    "offset": "0",
+    "orderBy": [
+      "relevance",
+      "strippedTitle"
+    ],
+    "responseTemplate": [
+      {
+        "fieldNumber": [
+          "1",
+          "4",
+          "5",
+          "7",
+          "9",
+          "28",
+          "10",
+          "24",
+          "27",
+          "19",
+          "22",
+          "25",
+          "40"
+        ],
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "296"
+      },
+      {
+        "fieldNumber": [
+          "7",
+          "8",
+          "10",
+          "11",
+          "18",
+          "21",
+          "22",
+          "62",
+          "23",
+          "26",
+          "27",
+          "28",
+          "35",
+          "65",
+          "78",
+          "34"
+        ],
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "320"
+      },
+      {
+        "fieldNumber": "3",
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "314"
+      },
+      {
+        "fieldInfo": {
+          "fieldNumber": "7",
+          "maxArity": "1",
+          "type": "responseTemplateFieldInfo"
+        },
+        "fieldNumber": [
+          "4",
+          "5",
+          "7",
+          "54",
+          "44",
+          "14",
+          "24"
+        ],
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "313"
+      },
+      {
+        "fieldNumber": [
+          "2",
+          "4",
+          "6",
+          "9"
+        ],
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "327"
+      },
+      {
+        "fieldNumber": [
+          "1",
+          "3",
+          "4",
+          "7",
+          "8",
+          "5"
+        ],
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "448"
+      },
+      {
+        "fieldNumber": "6",
+        "includeAllFields": "false",
+        "includeRequiredFields": "true",
+        "type": "responseTemplate",
+        "typeNumber": "644"
+      }
+    ],
+    "useLineup": "false"
+}

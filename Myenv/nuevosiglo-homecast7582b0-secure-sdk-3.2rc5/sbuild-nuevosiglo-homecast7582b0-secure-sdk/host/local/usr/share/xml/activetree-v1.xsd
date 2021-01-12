@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://cubiware.com/activetree-v1.xsd"
+           xmlns:activetree="http://cubiware.com/activetree-v1.xsd"
+           xmlns:i18n="http://cubiware.com/i18n-v1.xsd"
+           elementFormDefault="qualified">
+
+<xs:import namespace="http://cubiware.com/i18n-v1.xsd"
+           schemaLocation="i18n-v1.xsd"/>
+
+<!-- simple types -->
+
+<xs:simpleType name="id_t">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="name_t">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="attrtype_t">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="string"/>
+		<xs:enumeration value="int"/>
+		<xs:enumeration value="bool"/>
+		<xs:enumeration value="double"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<!-- complex types -->
+
+<xs:complexType name="attr_t">
+	<xs:complexContent>
+		<xs:extension base="i18n:string_t">
+			<xs:attribute name="name" use="required" type="activetree:name_t"/>
+			<xs:attribute name="type" use="optional" type="activetree:attrtype_t" default="string"/>
+		</xs:extension>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="node_t">
+	<xs:choice minOccurs="0" maxOccurs="unbounded">
+		<xs:element name="attr" type="activetree:attr_t"/>
+		<xs:element name="node" type="activetree:node_t">
+			<xs:key name="nodeAttrName">
+				<xs:selector xpath="activetree:attr"/>
+				<xs:field xpath="@name"/>
+			</xs:key>
+		</xs:element>
+	</xs:choice>
+	<xs:attribute name="id" use="optional" type="activetree:id_t"/>
+</xs:complexType>
+
+<!-- top-level activetree element -->
+
+<xs:element name="tree">
+	<xs:complexType>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="node" type="activetree:node_t">
+				<xs:key name="tlNodeAttrName">
+					<xs:selector xpath="activetree:attr"/>
+					<xs:field xpath="@name"/>
+				</xs:key>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="version" use="required" fixed="1.0"/>
+	</xs:complexType>
+	<xs:unique name="nodeID">
+		<xs:selector xpath=".//activetree:node"/>
+		<xs:field xpath="@id"/>
+	</xs:unique>
+</xs:element>
+
+</xs:schema>

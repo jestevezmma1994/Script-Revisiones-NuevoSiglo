@@ -1,0 +1,440 @@
+#!/bin/sh
+# Monitor all partitions.
+# Partitions should be mounted on /tmp/automount/<shortdev>/root.
+# Check if the partition is mounted (with /proc/mounts).
+# On 'remove': launch unmounting in the background (hotplug_unmounter).
+#              Report the lost mount point with hotplug_app_messenger.
+# On 'add': if the device is not mounted yet (we could be getting lots of redundant 'add' notifications),
+#           mount it immediately.
+#           Always report the mount point (and some meta-data) with hotplug_app_messenger.
+
+action=$ACTION
+
+# /block/sda -> sda
+# /block/sda/sda1 -> sda1
+short_dev=${DEVPATH#*/block/}
+
+. /etc/profile
+
+set +e
+
+log_error()
+{
+  logger -- "automounter > $@"
+  #[ 1 -eq 1 ] && echo -e "automounter[$short_dev][$action] > $@" >> /tmp/mymesg
+  return
+}
+
+log()
+{
+  logger -- "automounter > $@"
+  #[ 1 -eq 1 ] && echo -e "automounter[$short_dev][$action] > $@" >> /tmp/mymesg
+  return
+}
+
+call_()
+{
+  PASS=$1
+  shift 1;
+  log "calling $@" 1>&2
+
+  if [ "$PASS" == "yes" ]; then
+    $@
+    RES=$?
+  else
+    TEXT=`$@ 2>&1`
+    RES=$?
+    if [ $RES -ne 0 ]; then
+      log "ERROR: (res=$RES)" 1>&2
+      log "----------------------------" 1>&2
+      log $TEXT 1>&2
+      log "----------------------------" 1>&2
+    fi
+  fi
+}
+
+call()
+{
+  call_ no $@
+}
+
+call_v()
+{
+  call_ yes $@
+}
+
+
+if [ "$action" != "add" ] && [ "$action" != "remove" ]; then
+  log_error "  Invalid action [$action]"
+  exit 1
+fi
+
+if [ "$short_dev" == "${short_dev##*/}" ]; then
+  is_disk=1
+else
+  is_disk=0
+fi
+
+if [ -z "$DEVPATH" ]; then
+  log_error "  DEVPATH not set!"
+  exit 1
+fi
+if [ -z "$PHYSDEVPATH" ]; then
+  if [ $is_disk -eq 0 ]; then
+    PHYSDEVPATH=`readlink -f /sys/$DEVPATH/../device`
+  else
+    PHYSDEVPATH=`readlink -f /sys/$DEVPATH/device`
+  fi
+  PHYSDEVPATH=${PHYSDEVPATH#/sys}
+  if [ -z "$PHYSDEVPATH" ] && [ $ACTION != "remove" ]; then
+    log_error "  PHYSDEVPATH not set!"
+    exit 1
+  fi
+fi
+if [ -z "$MAJOR" ]; then
+  log_error "  MAJOR not set!"
+  exit 1
+fi
+if [ -z "$MINOR" ]; then
+  log_error "  MINOR not set!"
+  exit 1
+fi
+
+
+filtered=
+filter_device_path()
+{
+  full_name=$1
+  filter_dir=$2
+  #log "checking filters for full_name=[$full_name] in dir=[$filter_dir]";
+  #set +e
+
+  for filter_file in $filter_dir/*;
+  do
+    [ ! -f "$filter_file" ] && continue;
+    #log "  trying filter file [$filter_file]";
+
+    while read filter_prefix; do
+      #log "    trying filter [$filter_prefix]";
+      leftover=${full_name##$filter_prefix}
+      if [ "$leftover" != "$full_name" ]; then
+        filtered=yes
+        return;
+      fi
+    done < "$filter_file";
+
+  done;
+
+  #set -e
+  #log "checking filters for path [$full_name] -> ok, proceed";
+}
+
+if [ "$action" == "add" ]; then
+  # Filter-out devices that should not be mounted (e.g. internal sata/usb drives)
+  filter_device_path $PHYSDEVPATH /etc/hotplug_filters/block/
+  if [ ! -z "$filtered" ]; then
+    log "device [$full_name] has been filtered out"
+    exit 0
+  fi
+  # Filter-out devices that have been forced to "hidden" state
+  filter_device_path ${short_dev%/*} /tmp/automount/blacklist/
+  if [ ! -z "$filtered" ]; then
+    log "device [$short_dev] has been blacklisted -> removing"
+    action=blacklist
+  fi
+fi
+
+
+
+# stat gives major/minor in hex, so we need to do the conversion
+major_hex=`printf %x $MAJOR`
+minor_hex=`printf %x $MINOR`
+
+# check if it's already mounted
+find_mount()
+{
+  while read dev dir rest; do
+    #log "trying [dev dir] = [$dev  $dir]"
+    [ ! -e "$dev" ] && continue;
+    #log "trying [dev dir] = [$dev  $dir] -> exists"
+    major_minor=`stat -c "%t %T" $dev`
+    #log "trying [dev dir] = [$dev  $dir] -> major_minor=[$major_minor] (should be [$major_hex $minor_hex])"
+    [ "$major_minor" != "$major_hex $minor_hex" ] && [ "$dev" != "/dev/mapper/meta_$MAJOR"_"$MINOR" ] && continue;
+    [ "$dev" == "/dev/mapper/meta_$MAJOR"_"$MINOR" ] && return 2;
+    #log "  Found $dev  mounted on  $dir"
+    return 1;
+  done;
+  return 0;
+}
+
+cat /proc/mounts | find_mount
+case $? in
+  1)
+    is_mounted=yes
+    is_encrypted=
+    ;;
+  2)
+    is_mounted=yes
+    is_encrypted=1
+    ;;
+  *)
+    is_mounted=
+    is_encrypted=
+    ;;
+esac
+
+mkdir -p /tmp/automount
+chown 0:1000 /tmp/automount
+
+base_dir=/tmp/automount/${short_dev##*/}
+root=$base_dir/root
+
+# check if it's already used
+is_node_created=
+if [ -d "$base_dir" ] && [ -b "$base_dir/dev" ] ; then
+  is_node_created=yes
+fi
+
+log "action=[$action] -> is_node_created=[$is_node_created], is_mounted=[$is_mounted]"
+
+
+try_mount_dev()
+{
+  log "  trying to mount $base_dir/dev  on  $base_dir/root  [$MAJOR  $MINOR]"
+
+  call mkdir  -p  $root
+  [ $RES -ne 0 ] && return
+
+  # mounting read-only, so we can give the group full access rights
+  call chown  0:1000  $root
+  call chmod  g+w  $root
+
+  call mount  $mount_opts  $base_dir/dev  $root
+  if [ $RES -ne 0 ]; then
+
+    if [ "yes" == "yes" ]; then
+      META_SIZE=`cat /sys/dev/block/$MAJOR":"$MINOR/size`
+      echo "0 $META_SIZE crypt aes-ecb `cat /etc/keys/meta` 0 $base_dir/dev 0" | dmsetup create "meta_"$MAJOR"_"$MINOR
+      if [ $? -ne 0 ]; then
+        call rm -rf $root
+        return;
+      fi
+      META_DEV=/dev/mapper/"meta_"$MAJOR"_"$MINOR
+      call mount -r -o nodev,noexec $META_DEV  $root
+      if [ $RES -ne 0 ]; then
+        call dmsetup remove "meta_"$MAJOR"_"$MINOR
+        call rm -rf $root
+        return;
+      fi
+      call rm -rf $base_dir/dev
+      call cp -a /dev/mapper/"meta_"$MAJOR"_"$MINOR $base_dir/dev
+      return 2;
+    else
+      call rm -rf $root
+      return 0;
+    fi
+  fi
+
+  log "  mount $short_dev -> ok"
+  return 1;
+}
+
+umask 0027
+
+if [ "$action" == "add" ]; then
+
+  if [ -z "$is_node_created" ]; then
+    # need to add device
+    log "  trying to create $base_dir/dev  as  [$MAJOR  $MINOR]"
+
+    rm -rf $base_dir
+
+    call mkdir  -p  $base_dir
+    if [ $RES -ne 0 ]; then
+      exit 0;
+    fi
+    call chown  0:1000  $base_dir
+
+    call mknod  $base_dir/dev  b $MAJOR  $MINOR
+    if [ $RES -ne 0 ]; then
+      rm -rf $base_dir
+      exit 0;
+    fi
+    call chown  0:1000  $base_dir/dev
+    call chmod  g-w  $base_dir/dev
+  fi
+
+  type=`/sbin/blkid -s TYPE -o value $base_dir/dev`
+
+  log "file system type = $type"
+  if [ "$type" == "ntfs" ] || [ "$type" == "vfat" ]; then
+    mount_opts="-r -o nodev,noexec,uid=1000,gid=1000,umask=227,fmask=337,dmask=227"
+  elif [ "$type" == "ext3" ] || [ "$type" == "ext4" ]; then
+    mount_opts="-r -o nodev,noexec,barrier=1"
+  else
+    mount_opts="-r -o nodev,noexec"
+  fi
+
+  if [ "$type" == "vfat" ]; then
+    codepage=`/usr/local/bin/svconf_ctl VFATCODEPAGE`
+    log "codepage = $codepage"
+    [ ! -z "$codepage" ] && mount_opts="${mount_opts},codepage=${codepage},iocharset=utf8"
+  fi
+
+  if [ -z "$is_mounted" ]; then
+    try_mount_dev
+    case $? in
+      1)
+        is_mounted=yes
+        is_encrypted=
+        ;;
+      2)
+        is_mounted=yes
+        is_encrypted=1
+        ;;
+      *)
+        is_mounted=
+        is_encrypted=
+        ;;
+    esac
+  fi
+
+  if [ -f /sys/dev/block/$MAJOR:$MINOR/device/vendor ]; then
+    vendor=`cat /sys/dev/block/$MAJOR:$MINOR/device/vendor`
+    model=`cat /sys/dev/block/$MAJOR:$MINOR/device/model`
+    serial=`cat /sys/dev/block/$MAJOR:$MINOR/device/rev`
+  else
+    vendor=`cat /sys/block/${short_dev##*/}/device/vendor`
+    model=`cat /sys/block/${short_dev##*/}/device/model`
+    serial=`cat /sys/block/${short_dev##*/}/device/rev`
+  fi
+
+  size=`cat /sys/$DEVPATH/size`
+  size=$((size * 512))
+
+  echo $DEVPATH | grep -q /ata[[:digit:]]/ >/dev/null
+  if [ $? -eq 0 ]; then
+    is_internal=1
+  else 
+    is_internal=0
+  fi
+
+  if [ "$is_disk" == "1" ]; then
+    PART_PARAM="part_cnt=$(cat /proc/partitions | grep "${short_dev}[[:digit:]]" | wc -l)"
+  else
+    PART_PARAM="part_id=${short_dev}"
+  fi
+
+  # inform listeners that the device is now mounted
+  if [ ! -z "$is_mounted" ]; then
+    label=`/sbin/blkid -s LABEL -o value $base_dir/dev`
+    if [ -e $root/.qb_pvr_partition_config ]; then
+      if [ "$is_encrypted" == "1" ] || [ "yes" == "no" ]; then
+        type='pvrmeta'
+      fi
+    fi
+    log "blkid info: label=[$label], type=[$type]"
+    BLKID_INFO1="label=$label"
+    BLKID_INFO2="root=$root"
+  fi
+  if [ ! -z "$type" ]; then
+    if [ "$type" == "iso9660"  ]; then
+      if [ "$is_disk" == "0"  ] ; then
+        # don't mount iso9660 partition
+        exit 0;
+      else
+        # prevent making fake partition from iso9660 image
+        type=""
+        # decrement part_cnt
+        PART_PARAM=$(echo $PART_PARAM | awk -F"=" '/part_cnt/ {print $1"="$2-1}')
+      fi
+    else
+      BLKID_INFO3="partType=$type"
+    fi
+  fi
+  /usr/local/bin/hotplug_app_messenger storage add  "vendor=$vendor" "model=$model" "size=$size" "disk_id=${short_dev%/*}" "is_disk=$is_disk" "dev_node=$base_dir/dev" "dev_serial=$serial" "is_internal=$is_internal" "$PART_PARAM" "$BLKID_INFO1" "$BLKID_INFO2" "$BLKID_INFO3"
+  res=$?
+  if [ $res -ne 0 ]; then
+    log_error "calling hotplug_app_messenger failed with $res"
+  fi
+  if [ ! -z "$type" ] && [ "$is_disk" == "1" ]; then
+    # Add fake partition because FS occupies whole device
+    /usr/local/bin/hotplug_app_messenger storage add "vendor=$vendor" "model=$model" "size=$size" "disk_id=${short_dev%/*}" "is_disk=0" "dev_node=$base_dir/dev" "dev_serial=$serial" "part_id=${short_dev}/${short_dev}1" "$BLKID_INFO1" "$BLKID_INFO2" "$BLKID_INFO3"
+    res=$?
+    if [ $res -ne 0 ]; then
+      log_error "calling hotplug_app_messenger failed with $res"
+    fi
+  fi
+  exit 0
+fi
+
+if [ "$action" == "blacklist" ] && [ ! -z "$is_node_created" ]; then
+  type=`/sbin/blkid -s TYPE -o value $base_dir/dev`
+  if [ "$is_disk" == "1" ] && [ ! -z "$type" ]; then
+    # Remove fake partition
+    /usr/local/bin/hotplug_app_messenger  storage  remove  "rem_id=${short_dev}/${short_dev}1"
+    no_remove=1
+  elif [ "$is_disk" == "1" ]; then
+    no_remove=1
+  else
+    # Formatting or corrupted partition?
+    /usr/local/bin/hotplug_app_messenger  storage  remove  "rem_id=$short_dev"
+    no_remove=0
+  fi
+
+  res=$?
+  if [ $res -ne 0 ]; then
+      log_error "calling hotplug_app_messenger failed with $res"
+  fi
+
+  if [ ! -z "$is_mounted" ]; then
+    # need to unmount
+    (/usr/local/bin/hotplug_unmounter ${short_dev##*/} $no_remove 2>/dev/null 1>&2 </dev/null) &
+    res=$?
+    if [ $res -ne 0 ]; then
+      log_error "  failed to call hotplug_unmounter -> [$res]"
+      exit 0
+    fi
+  elif [ $no_remove -eq 0 ]; then
+    log removing $base_dir
+    call rm -rf $base_dir
+    if [ $RES -ne 0 ]; then
+      exit 0
+    fi
+  fi
+
+  exit 0
+fi
+
+if [ "$action" == "remove" ] && [ ! -z "$is_node_created" ]; then
+
+  if [ "$is_disk" == "0" ] && [ ! -e /sys/$DEVPATH/../device ]; then
+    # Partition was removed and there is no disk --> remove disk instead
+    /usr/local/bin/hotplug_app_messenger  storage  remove  "rem_id=${short_dev%/*}"
+  else
+    # Formatting or corrupted partition?
+    /usr/local/bin/hotplug_app_messenger  storage  remove  "rem_id=$short_dev"
+  fi
+  res=$?
+  if [ $res -ne 0 ]; then
+      log_error "calling hotplug_app_messenger failed with $res"
+  fi
+
+  if [ ! -z "$is_mounted" ]; then
+    # need to unmount
+    (/usr/local/bin/hotplug_unmounter  ${short_dev##*/} 0 $MAJOR $MINOR 2>/dev/null 1>&2 </dev/null) &
+    res=$?
+    if [ $res -ne 0 ]; then
+      log_error "  failed to call hotplug_unmounter -> [$res]"
+      exit 0
+    fi
+  else
+    log removing $base_dir
+    call rm -rf $base_dir
+    if [ $RES -ne 0 ]; then
+      exit 0
+    fi
+  fi
+
+  exit 0
+fi

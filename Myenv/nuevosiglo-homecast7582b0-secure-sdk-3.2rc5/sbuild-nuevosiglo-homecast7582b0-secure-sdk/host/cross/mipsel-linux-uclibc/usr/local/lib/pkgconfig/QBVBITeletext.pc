@@ -1,0 +1,6 @@
+Name: QBVBITeletext
+Version: 1.0.0
+Requires: QBTeletextManager 
+Description: library for displaying teletext via vbi
+Libs: -lQBVBITeletext 
+CFlags: 

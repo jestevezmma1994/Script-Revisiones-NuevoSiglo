@@ -1,0 +1,6 @@
+Name: QBICSmartcard
+Version: 1.0.0
+Requires: QBCAS QBConax2 QBConaxCustomHandlers QBContentSource QBDescramblerHAL QBSmartcard2-interface QBSmartcardTweaks QBStringUtils QBTextUtils SvCore SvFoundation SvPlayerKit SvPlayerManager dataformat fibers 
+Description: Cubiware wrapper for low-level QBConax smartcard interface - version 2
+Libs: -lQBICSmartcard 
+CFlags: 

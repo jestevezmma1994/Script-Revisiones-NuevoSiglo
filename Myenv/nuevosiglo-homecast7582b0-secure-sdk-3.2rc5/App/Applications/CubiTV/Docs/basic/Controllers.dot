@@ -1,0 +1,37 @@
+digraph Controllers {
+    node [URL="\N.html" shape=box]
+    graph [layout="circo"]
+    Controllers [label="Controllers" root=true]
+
+    Channel [label="Channel controller"]
+    AnyPlayer [label="Any/PVR player controller"]
+
+    QBChannelPlayer
+    QBDVBChannelPlayerController
+    QBChannelPlayerController
+    QBPlaybackStateController
+    QBTraxisAnyPlayerController
+    QBMWChannelPlayerController
+    QBPlaylistController
+    QBGenericAnyPlayerController
+    QBVoDAnyPlayerController
+    QBAnyPlayer
+    QBAnyPlayerController
+
+
+    Channel -> QBChannelPlayer
+    Channel -> QBDVBChannelPlayerController
+    Channel -> QBChannelPlayerController
+    Channel -> QBMWChannelPlayerController
+
+    AnyPlayer -> QBPlaybackStateController
+    AnyPlayer -> QBTraxisAnyPlayerController
+    AnyPlayer -> QBPlaylistController
+    AnyPlayer -> QBGenericAnyPlayerController
+    AnyPlayer -> QBVoDAnyPlayerController
+    AnyPlayer -> QBAnyPlayer
+    AnyPlayer -> QBAnyPlayerController
+
+    Controllers -> Channel 
+    Controllers -> AnyPlayer
+}
